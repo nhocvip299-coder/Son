@@ -1,0 +1,7565 @@
+[
+ {
+  "duration": 4.966666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Bất động sản",
+    "styles": [
+     {
+      "range": [
+       0,
+       12
+      ],
+      "size": 22,
+      "font": "UTM-Impact",
+      "fill": {
+       "solid": "#ff7c00"
+      }
+     }
+    ],
+    "font": "UTM-Impact",
+    "fontSize": 22.0,
+    "color": "#ff7c00",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": 0.0,
+    "y": 0.1038357222601537,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Tăng trưởng",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.2,
+      "id": "6873386301182185986"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Đáng sống",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 30.797489166259766,
+      "font": "SnellRoundhand",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "SnellRoundhand",
+    "fontSize": 30.797488625478927,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": 0.1940636752729985,
+    "y": -0.009300227936984484,
+    "scale": 0.6544447125787028,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "3D Glide In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7642256463754317076"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Game_06.wav",
+    "start": 0.1,
+    "duration": 0.933333,
+    "volume": 0.4708063006401062,
+    "file": "ff12852c4f994c6b90f6ccfba61ea908.wav"
+   },
+   {
+    "name": "8bit_08.wav",
+    "start": 0.033333,
+    "duration": 0.766667,
+    "volume": 0.2839708924293518,
+    "file": "03af7e7c8371a9dca4dd141b2341bda5.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.966666,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.18
+     ],
+     [
+      "effects_adjust_luminance",
+      0.24
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Compound clip2",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 4.966666
+   }
+  ],
+  "id": "Kobe Text 01",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 01/Kobe Text 01.jpeg"
+ },
+ {
+  "duration": 4.966666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "KOKI TRENDY",
+    "styles": [
+     {
+      "range": [
+       0,
+       11
+      ],
+      "size": 16,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 16.0,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": 0.0,
+    "y": -0.0078125,
+    "scale": 0.7988742112124183,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Nhiễu sóng",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.6,
+      "id": "7077812383946641921"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Glitch_06.wav",
+    "start": 0.0,
+    "duration": 0.633333,
+    "volume": 0.2918126881122589,
+    "file": "a604dc772b57b943cff956c3db6c23b7.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.966666,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.28
+     ],
+     [
+      "effects_adjust_size",
+      0.17
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 02",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 02/Kobe Text 02.jpeg"
+ },
+ {
+  "duration": 4.966666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "4 mùa",
+    "styles": [
+     {
+      "range": [
+       0,
+       5
+      ],
+      "size": 27.392854690551758,
+      "font": "SnellRoundhand",
+      "fill": {
+       "solid": "#fff200"
+      }
+     }
+    ],
+    "font": "SnellRoundhand",
+    "fontSize": 27.392855004789265,
+    "color": "#fff200",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.1368611235194097,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide Down",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.6,
+      "id": "6724921985282871816"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Shine Collect.wav",
+    "start": 0.166666,
+    "duration": 1.033334,
+    "volume": 0.2647538483142853,
+    "file": "147a604a1de47f0aeba405643408a36d.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.966666,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.16
+     ],
+     [
+      "effects_adjust_luminance",
+      0.26
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép1",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 4.966666
+   }
+  ],
+  "id": "Kobe Text 03",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 03/Kobe Text 03.jpeg"
+ },
+ {
+  "duration": 4.966666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "CĂN HỘ CAO CẤP",
+    "styles": [
+     {
+      "range": [
+       0,
+       14
+      ],
+      "size": 23,
+      "font": "font",
+      "fill": {
+       "solid": "#00efff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 23.0,
+    "color": "#00efff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.4094876129422114,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Lật!",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.7,
+      "id": "7221379732166676993"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Nâng tầm cuộc sống",
+    "styles": [
+     {
+      "range": [
+       0,
+       18
+      ],
+      "size": 23.344648361206055,
+      "font": "ZYVNA Serendipity",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "ZYVNA Serendipity",
+    "fontSize": 23.344647988505805,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.233333,
+    "duration": 4.733333,
+    "x": 0.10000100001,
+    "y": -0.10598184509452446,
+    "scale": 0.8995163198121154,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Gộp bên phải",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.7,
+      "id": "7145435431297880577"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Reverse Swish.mp3",
+    "start": 0.233333,
+    "duration": 1.733333,
+    "volume": 0.2340296357870102,
+    "file": "0a29dd670f58a6e76b05dff3974b7217.mp3"
+   },
+   {
+    "name": "Pop Bubbles 1.mp3",
+    "start": 0.066666,
+    "duration": 1.1,
+    "volume": 0.24339379370212555,
+    "file": "6ccf123b94d47e74639196623ab064b3.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.966666,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.14
+     ],
+     [
+      "effects_adjust_luminance",
+      0.2
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 04",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 04/Kobe Text 04.jpeg"
+ },
+ {
+  "duration": 4.966666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Capcut",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 15,
+      "font": "DTPhudu-Black",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "DTPhudu-Black",
+    "fontSize": 15.0,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": -0.06487980405155236,
+    "y": 0.05117765265754037,
+    "scale": 2.4829047226926164,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide Unfold",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.033333,
+      "id": "7643729651004787989"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Mobile",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 15,
+      "font": "Constane",
+      "fill": {
+       "solid": "#87ff00"
+      }
+     }
+    ],
+    "font": "Constane",
+    "fontSize": 15.0,
+    "color": "#87ff00",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.466666,
+    "duration": 4.5,
+    "x": 0.4445728514133118,
+    "y": -0.08741658746178649,
+    "scale": 1.7127664334957355,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Cursive Wisp",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.033333,
+      "id": "7613150184800816391"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Game_02.wav",
+    "start": 0.066666,
+    "duration": 0.533334,
+    "volume": 0.22587548196315765,
+    "file": "ba4305475aef40b2e4df6e8034fe04c9.wav"
+   },
+   {
+    "name": "Glitch_06.wav",
+    "start": 0.066666,
+    "duration": 0.633334,
+    "volume": 0.22587548196315765,
+    "file": "a604dc772b57b943cff956c3db6c23b7.wav"
+   },
+   {
+    "name": "Water drop",
+    "start": 0.866666,
+    "duration": 2.033334,
+    "volume": 0.4522276818752289,
+    "file": "db3d8637b673fc9501425964a6a07766.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.966666,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.21
+     ],
+     [
+      "effects_adjust_luminance",
+      0.29
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 05",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 05/Kobe Text 05.jpeg"
+ },
+ {
+  "duration": 4.966666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Khóa Học",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 31,
+      "font": "1FTV-VIP-Russo-One",
+      "fill": {
+       "solid": "#fff200"
+      }
+     }
+    ],
+    "font": "1FTV-VIP-Russo-One",
+    "fontSize": 31.0,
+    "color": "#fff200",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": 0.0,
+    "y": 0.1038357222601537,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide Up",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.166666,
+      "id": "7646376230287052040"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_20.wav",
+    "start": 0.0,
+    "duration": 1.4,
+    "volume": 0.4803387224674225,
+    "file": "2a5a924367739d9ba4b9d7c57716c91d.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.966666,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.25
+     ],
+     [
+      "effects_adjust_size",
+      0.14
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Compound clip1",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 4.966666
+   }
+  ],
+  "id": "Kobe Text 06",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 06/Kobe Text 06.jpeg"
+ },
+ {
+  "duration": 5.0,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Đánh Thức",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 15,
+      "font": "1FTV-VIP-Russo-One",
+      "fill": {
+       "solid": "#ff6700"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "1FTV-VIP-Russo-One",
+    "fontSize": 15.0,
+    "color": "#ff6700",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1.0,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.0,
+    "duration": 5.0,
+    "x": 0.0,
+    "y": 0.08834355828220863,
+    "scale": 1.7534728208342163,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "3D Glide In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7642256463754317076"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Tinh hoa",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 22.8326301574707,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 22.83262990900383,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.4,
+    "duration": 4.6,
+    "x": -0.4254222422726506,
+    "y": 0.22045403217969883,
+    "scale": 1.377172096816806,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "vị giác",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 23.470867156982422,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 23.470866977940094,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.4,
+    "duration": 4.6,
+    "x": 0.3772626989418799,
+    "y": -0.0059880239520957446,
+    "scale": 1.6580079426815937,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_23.wav",
+    "start": 0.333333,
+    "duration": 1.0,
+    "volume": 0.44729623198509216,
+    "file": "662342ee9bef56031b1b39e6e0e1aa8d.wav"
+   },
+   {
+    "name": "Pops Up.mp3",
+    "start": 0.0,
+    "duration": 1.166666,
+    "volume": 0.3698332607746124,
+    "file": "88ebcbefc5143c7ce4a98145b9355c24.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 5.0,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.19
+     ],
+     [
+      "effects_adjust_size",
+      0.13
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép12",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 5.0
+   }
+  ],
+  "id": "Kobe Text 07",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 07/Kobe Text 07.jpeg"
+ },
+ {
+  "duration": 5.0,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Cẩn Thận",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 17,
+      "font": "font",
+      "fill": {
+       "solid": "#ff0000"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 17.0,
+    "color": "#ff0000",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 5.0,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.15,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_20.wav",
+    "start": 0.033333,
+    "duration": 1.266667,
+    "volume": 0.3843019902706146,
+    "file": "2a5a924367739d9ba4b9d7c57716c91d.wav"
+   },
+   {
+    "name": "Knife / Sword",
+    "start": 0.6,
+    "duration": 2.133333,
+    "volume": 0.2240639626979828,
+    "file": "159d476e7f23303c6be6a542537c7368.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 5.0,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.12
+     ],
+     [
+      "effects_adjust_luminance",
+      0.18
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 08",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 08/Kobe Text 08.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Tiết kiệm",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 20.78310775756836,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 20.78310785060988,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": 0.0,
+    "y": 0.1487257972665148,
+    "scale": 1.5684114031616505,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Fold",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7131933414189437441"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "50 Triệu",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 25,
+      "font": "DTPhudu-Black",
+      "fill": {
+       "solid": "#00d4ff"
+      }
+     }
+    ],
+    "font": "DTPhudu-Black",
+    "fontSize": 25.0,
+    "color": "#00d4ff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.2417169474352725,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_21.wav",
+    "start": 0.0,
+    "duration": 1.366666,
+    "volume": 0.2819348871707916,
+    "file": "0615028766df2f1a0b20235fcca35ff0.wav"
+   },
+   {
+    "name": "Pop Bubbles 1.mp3",
+    "start": 0.2,
+    "duration": 1.1,
+    "volume": 0.1822696179151535,
+    "file": "6ccf123b94d47e74639196623ab064b3.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.1
+     ],
+     [
+      "effects_adjust_luminance",
+      0.16
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép43",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.001851851851851852,
+      "y": 0.0015625
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép42",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 09",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 09/Kobe Text 09.jpeg"
+ },
+ {
+  "duration": 4.966666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Tăng cao",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 31,
+      "font": "font",
+      "fill": {
+       "solid": "#ff3eaa"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 31.0,
+    "color": "#ff3eaa",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": 0.0,
+    "y": 0.1038357222601537,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Rebound In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.866666,
+      "id": "7232171569563308545"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Pop Bubbles 1.mp3",
+    "start": 0.0,
+    "duration": 1.1,
+    "volume": 0.2452775090932846,
+    "file": "6ccf123b94d47e74639196623ab064b3.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.966666,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.14
+     ],
+     [
+      "effects_adjust_luminance",
+      0.2
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Compound clip1",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 4.966666
+   }
+  ],
+  "id": "Kobe Text 10",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 10/Kobe Text 10.jpeg"
+ },
+ {
+  "duration": 5.0,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Capcut",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 31,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 31.0,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 5.0,
+    "x": 0.0,
+    "y": 0.1038357222601537,
+    "scale": 1.3998509617597128,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Rebound In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.866666,
+      "id": "7232171569563308545"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Pops Up.mp3",
+    "start": 0.0,
+    "duration": 1.166666,
+    "volume": 0.4233614504337311,
+    "file": "88ebcbefc5143c7ce4a98145b9355c24.mp3"
+   },
+   {
+    "name": "水面冒泡",
+    "start": 1.0,
+    "duration": 3.133333,
+    "volume": 0.5350847840309143,
+    "file": "aa53fdf77967039b12df196b477abf78.mp3"
+   },
+   {
+    "name": "PositiveTransition_20.wav",
+    "start": 0.0,
+    "duration": 1.266666,
+    "volume": 0.3627423048019409,
+    "file": "2a5a924367739d9ba4b9d7c57716c91d.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 5.0,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.21
+     ],
+     [
+      "effects_adjust_luminance",
+      0.28
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép24",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 1.133333,
+    "duration": 3.866667
+   }
+  ],
+  "id": "Kobe Text 11",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 11/Kobe Text 11.jpeg"
+ },
+ {
+  "duration": 4.966666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Đăng Ký",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 31,
+      "font": "font",
+      "fill": {
+       "solid": "#75ff3e"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 31.0,
+    "color": "#75ff3e",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": 0.0,
+    "y": 0.1038357222601537,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Rebound In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.866666,
+      "id": "7232171569563308545"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Ngay hôm nay",
+    "styles": [
+     {
+      "range": [
+       0,
+       12
+      ],
+      "size": 12.342283248901367,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 12.342283285440631,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.133333,
+    "duration": 4.833333,
+    "x": 0.22571332866087945,
+    "y": -0.009375093750937593,
+    "scale": 2.1043310726671134,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "3D Glide In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7642256463754317076"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Glitter sound 02 / magic / star / cute(884513)",
+    "start": 1.066666,
+    "duration": 1.866667,
+    "volume": 0.24115245044231415,
+    "file": "15668048392c091471f268f11572c393.mp3"
+   },
+   {
+    "name": "PositiveTransition_18.wav",
+    "start": 0.3,
+    "duration": 0.7,
+    "volume": 0.3594019114971161,
+    "file": "c7bde263762c1bc267f27c05c4a45551.wav"
+   },
+   {
+    "name": "HUD Interface_05.wav",
+    "start": 0.0,
+    "duration": 0.633333,
+    "volume": 0.3280368447303772,
+    "file": "66905a7ae4f5ec322930b4ae7b507129.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.966666,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.22
+     ],
+     [
+      "effects_adjust_size",
+      0.14
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép26",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 4.966666
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép27",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 4.966666
+   }
+  ],
+  "id": "Kobe Text 12",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 12/Kobe Text 12.jpeg"
+ },
+ {
+  "duration": 4.966666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Viral Edit",
+    "styles": [
+     {
+      "range": [
+       0,
+       10
+      ],
+      "size": 16.337913513183594,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 16.33791307471268,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 4.966666,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 2.044255619227465,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide Up",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.7,
+      "id": "7646376230287052040"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_20.wav",
+    "start": 0.0,
+    "duration": 1.266666,
+    "volume": 0.4340846240520478,
+    "file": "2a5a924367739d9ba4b9d7c57716c91d.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.966666,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.19
+     ],
+     [
+      "effects_adjust_luminance",
+      0.3
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 13",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 13/Kobe Text 13.jpeg"
+ },
+ {
+  "duration": 5.8,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Thay đổi màu sắc",
+    "styles": [
+     {
+      "range": [
+       0,
+       16
+      ],
+      "size": 19.953887939453125,
+      "font": "SF-Pro-Display-Medium",
+      "fill": {
+       "solid": "#f4c70f"
+      }
+     }
+    ],
+    "font": "LFAXDI",
+    "fontSize": 9.0,
+    "color": "#f4c70f",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 5.8,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide Up",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.7,
+      "id": "7646376230287052040"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_23.wav",
+    "start": 0.0,
+    "duration": 1.0,
+    "volume": 0.3109094500541687,
+    "file": "662342ee9bef56031b1b39e6e0e1aa8d.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 5.8,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.31
+     ],
+     [
+      "effects_adjust_size",
+      0.24
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 14",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 14/Kobe Text 14.jpeg"
+ },
+ {
+  "duration": 4.833333,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "?",
+    "styles": [
+     {
+      "range": [
+       0,
+       1
+      ],
+      "size": 20,
+      "font": "font",
+      "fill": {
+       "solid": "#d198ff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#000000"
+        },
+        "diffuse": 0.0022264630533754826,
+        "distance": 2.862595558166504,
+        "angle": -45,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 20.0,
+    "color": "#d198ff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#000000",
+     "alpha": 1.0,
+     "smoothing": 0.040076334960758686,
+     "distance": 2.862595558166504,
+     "angle": -45.0
+    },
+    "background": null,
+    "start": 0.0,
+    "duration": 4.833333,
+    "x": 0.5842789598108746,
+    "y": 0.025916916167664672,
+    "scale": 1.4081102841031168,
+    "rotation": 18.415347554975764,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Thu nhỏ",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "6724921217721045515"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Bí quyết",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 20,
+      "font": "font",
+      "fill": {
+       "solid": "#ae49ff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#000000"
+        },
+        "diffuse": 0.0022264630533754826,
+        "distance": 2.862595558166504,
+        "angle": -45,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 20.0,
+    "color": "#ae49ff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#000000",
+     "alpha": 1.0,
+     "smoothing": 0.040076334960758686,
+     "distance": 2.862595558166504,
+     "angle": -45.0
+    },
+    "background": null,
+    "start": 0.0,
+    "duration": 4.833333,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.46,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Released Spring",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.733332,
+      "id": "7577290996820561169"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_21.wav",
+    "start": 0.1,
+    "duration": 1.4,
+    "volume": 0.3087332248687744,
+    "file": "0615028766df2f1a0b20235fcca35ff0.wav"
+   },
+   {
+    "name": "Reverse Swish.mp3",
+    "start": 0.0,
+    "duration": 1.733333,
+    "volume": 0.2376254051923752,
+    "file": "0a29dd670f58a6e76b05dff3974b7217.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 4.833333,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.14
+     ],
+     [
+      "effects_adjust_luminance",
+      0.2
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép4",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 0.8,
+     "flip": {
+      "horizontal": true,
+      "vertical": false
+     },
+     "rotation": -24.88835920277091,
+     "scale": {
+      "x": 0.7818731398809498,
+      "y": 0.7818731398809498
+     },
+     "transform": {
+      "x": -0.5833333333333333,
+      "y": -0.046875
+     }
+    },
+    "start": 0.0,
+    "duration": 4.833333
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép31",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 4.833333
+   }
+  ],
+  "id": "Kobe Text 15",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 15/Kobe Text 15.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Tìm đúng",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 22.397579193115234,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 22.39758003048781,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": -0.2,
+    "y": 0.1625,
+    "scale": 0.8903048252279212,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "phù hợp",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 16.383113861083984,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 16.383113861083984,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.366666,
+    "duration": 2.833334,
+    "x": 0.2711201079622132,
+    "y": -0.15464123006833708,
+    "scale": 1.246086007692924,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Pops Up.mp3",
+    "start": 0.0,
+    "duration": 1.166666,
+    "volume": 0.444698303937912,
+    "file": "88ebcbefc5143c7ce4a98145b9355c24.mp3"
+   },
+   {
+    "name": "Game_02.wav",
+    "start": 0.266666,
+    "duration": 0.533334,
+    "volume": 0.34104564785957336,
+    "file": "ba4305475aef40b2e4df6e8034fe04c9.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.18
+     ],
+     [
+      "effects_adjust_size",
+      0.12
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép34",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 16",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 16/Kobe Text 16.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Cơ hội",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 15.905106544494629,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 15.905106707317072,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": -0.28247863247863225,
+    "y": 0.15953160592255133,
+    "scale": 2.3565811428406445,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Bobbing Up",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7646372047957822740"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Đầu Tư",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 17,
+      "font": "UTM-Impact",
+      "fill": {
+       "solid": "#dd0000"
+      }
+     }
+    ],
+    "font": "UTM-Impact",
+    "fontSize": 17.0,
+    "color": "#dd0000",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.5786986449850406,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Sinh lời",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 16.954395294189453,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 16.95439532520325,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.533333,
+    "duration": 2.666667,
+    "x": 0.34642375168690953,
+    "y": -0.1134609908883828,
+    "scale": 1.8929462835672048,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Sóng nảy",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.666666,
+      "id": "7314576117426295298"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Shine Collect.wav",
+    "start": 0.633333,
+    "duration": 1.033333,
+    "volume": 0.27183201909065247,
+    "file": "147a604a1de47f0aeba405643408a36d.wav"
+   },
+   {
+    "name": "PositiveTransition_20.wav",
+    "start": 0.0,
+    "duration": 1.333333,
+    "volume": 0.3627423048019409,
+    "file": "2a5a924367739d9ba4b9d7c57716c91d.wav"
+   },
+   {
+    "name": "Reverse Swish.mp3",
+    "start": 0.0,
+    "duration": 1.666666,
+    "volume": 0.25750675797462463,
+    "file": "0a29dd670f58a6e76b05dff3974b7217.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.14
+     ],
+     [
+      "effects_adjust_size",
+      0.1
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Compound clip1",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.001851851851851852,
+      "y": 0.0015625
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   },
+   {
+    "type": "video",
+    "name": "Compound clip2",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 17",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 17/Kobe Text 17.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "phát triển",
+    "styles": [
+     {
+      "range": [
+       0,
+       10
+      ],
+      "size": 18.39551544189453,
+      "font": "1FTVVIPClashGrotesk-LightIta",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "1FTVVIPClashGrotesk-LightIta",
+    "fontSize": 18.395515752032495,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": 0.0,
+    "y": 0.11293422551252852,
+    "scale": 1.025864860767235,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Drift Down",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.666666,
+      "id": "7648941380408053013"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Bản Thân",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 17,
+      "font": "font",
+      "fill": {
+       "solid": "#00d4ff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 17.0,
+    "color": "#00d4ff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.4908732769932134,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Pops Up.mp3",
+    "start": 0.0,
+    "duration": 1.166666,
+    "volume": 0.41290315985679626,
+    "file": "88ebcbefc5143c7ce4a98145b9355c24.mp3"
+   },
+   {
+    "name": "Shine Collect.wav",
+    "start": 0.4,
+    "duration": 1.033333,
+    "volume": 0.2125472128391266,
+    "file": "147a604a1de47f0aeba405643408a36d.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.14
+     ],
+     [
+      "effects_adjust_luminance",
+      0.21
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép36",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.001851851851851852,
+      "y": 0.0015625
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép37",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 18",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 18/Kobe Text 18.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Phong cách sống",
+    "styles": [
+     {
+      "range": [
+       0,
+       15
+      ],
+      "size": 17.03809356689453,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "bold": true
+     }
+    ],
+    "font": "font",
+    "fontSize": 17.038093877032512,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": -0.18611111111111112,
+    "y": 0.1046875,
+    "scale": 0.8,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide & Rise",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7506401698856979728"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Hiện Đại",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 17,
+      "font": "font",
+      "fill": {
+       "solid": "#ff9100"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 17.0,
+    "color": "#ff9100",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.6536791179182513,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slingshot",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "6862897343176380942"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Do bạn chọn",
+    "styles": [
+     {
+      "range": [
+       0,
+       11
+      ],
+      "size": 15.862947463989258,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "bold": true
+     }
+    ],
+    "font": "font",
+    "fontSize": 15.862947789634148,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.466666,
+    "duration": 2.733334,
+    "x": 0.2361111111111111,
+    "y": -0.10572916666666668,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide & Rise",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7506401698856979728"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_23.wav",
+    "start": 0.0,
+    "duration": 1.0,
+    "volume": 0.2638934254646301,
+    "file": "662342ee9bef56031b1b39e6e0e1aa8d.wav"
+   },
+   {
+    "name": "8bit_08.wav",
+    "start": 0.366666,
+    "duration": 0.766667,
+    "volume": 0.2668485641479492,
+    "file": "03af7e7c8371a9dca4dd141b2341bda5.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.21
+     ],
+     [
+      "effects_adjust_size",
+      0.16
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép40",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.001851851851851852,
+      "y": 0.0015625
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép39",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 19",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 19/Kobe Text 19.jpeg"
+ },
+ {
+  "duration": 5.1,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Đầu tư",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 31,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 31.0,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 5.1,
+    "x": 0.0,
+    "y": 0.1038357222601537,
+    "scale": 1.4571953420829176,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide Up",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.9,
+      "id": "7646376230287052040"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Sinh lời",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 14.547563552856445,
+      "font": "font",
+      "fill": {
+       "solid": "#ff3eaa"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 14.547563457854457,
+    "color": "#ff3eaa",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.266666,
+    "duration": 4.833334,
+    "x": 0.2558707643814029,
+    "y": -0.04856225049900176,
+    "scale": 1.728530781105471,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Sóng nảy",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7314576117426295298"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Shine Collect.wav",
+    "start": 0.466666,
+    "duration": 1.033334,
+    "volume": 0.20120827853679657,
+    "file": "147a604a1de47f0aeba405643408a36d.wav"
+   },
+   {
+    "name": "PositiveTransition_21.wav",
+    "start": 0.0,
+    "duration": 1.4,
+    "volume": 0.38820624351501465,
+    "file": "0615028766df2f1a0b20235fcca35ff0.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 5.1,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.24
+     ],
+     [
+      "effects_adjust_size",
+      0.14
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 20",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 20/Kobe Text 20.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Tiện ích",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 14,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "bold": true,
+      "italic": true
+     }
+    ],
+    "font": "font",
+    "fontSize": 14,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": 0.12777777777777777,
+    "y": 0.1331007972665148,
+    "scale": 1.5728090688077188,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Slide Up",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7646376230287052040"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Nổi Bật",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 17,
+      "font": "font",
+      "fill": {
+       "solid": "#00ff78"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0,
+        "distance": 2.0815043449401855,
+        "angle": 9.602678298950195,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 17,
+    "color": "#00ff78",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0,
+     "distance": 2.0815043449401855,
+     "angle": 9.602678298950195
+    },
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0,
+    "y": 0,
+    "scale": 2.0038038408838257,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Mouse Clicks.mp3",
+    "start": 0.0,
+    "duration": 1.2,
+    "volume": 0.3855549991130829,
+    "file": "76448e622ebca56e75288b3cc35eb50c.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.09
+     ],
+     [
+      "effects_adjust_luminance",
+      0.18
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép45",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 21",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 21/Kobe Text 21.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Kỹ năng",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 20.9688606262207,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 20.968861153455286,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": -0.34961763382816,
+    "y": 0.1518365603644647,
+    "scale": 1.4640526124506683,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Edit Video",
+    "styles": [
+     {
+      "range": [
+       0,
+       10
+      ],
+      "size": 20,
+      "font": "UTM-Impact",
+      "fill": {
+       "solid": "#0090ff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "UTM-Impact",
+    "fontSize": 20.0,
+    "color": "#0090ff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1.0,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0.0,
+    "y": 0.0,
+    "scale": 1.196649954181157,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide & Rise",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7506401698856979728"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "thứ bạn cần có",
+    "styles": [
+     {
+      "range": [
+       0,
+       14
+      ],
+      "size": 18.670684814453125,
+      "font": "SF-Pro-Display-Medium",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "SF-Pro-Display-Medium",
+    "fontSize": 18.67068407012208,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.466666,
+    "duration": 2.733334,
+    "x": 0.3333333333333333,
+    "y": -0.11041666666666666,
+    "scale": 0.8101104231767775,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Từng từ quay vào",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.866666,
+      "id": "7231119718713659905"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Kirarin glitter star Glocken 5",
+    "start": 0.433333,
+    "duration": 1.1,
+    "volume": 0.05673735216259957,
+    "file": "2149f9fd696be2eac547eddfd785b390.mp3"
+   },
+   {
+    "name": "Reverse Swish.mp3",
+    "start": 0.0,
+    "duration": 1.633333,
+    "volume": 0.12965749204158783,
+    "file": "0a29dd670f58a6e76b05dff3974b7217.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.13
+     ],
+     [
+      "effects_adjust_size",
+      0.07
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép47",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 22",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 22/Kobe Text 22.jpeg"
+ },
+ {
+  "duration": 3.333333,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Comment",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 20,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 20,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.333333,
+    "x": -0.3388888888888889,
+    "y": 0,
+    "scale": 1.1098761063582476,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Trượt vào",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7642256274268212498"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "\"Khóa học\"",
+    "styles": [
+     {
+      "range": [
+       0,
+       10
+      ],
+      "size": 25,
+      "font": "font",
+      "fill": {
+       "solid": "#00e6ff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 25,
+    "color": "#00e6ff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.333333,
+    "duration": 3.0,
+    "x": 0.11111111111111116,
+    "y": -0.10312499999999993,
+    "scale": 0.8991469500245912,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Sóng nảy",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7314576117426295298"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_18.wav",
+    "start": 0.0,
+    "duration": 0.7,
+    "volume": 0.3477720022201538,
+    "file": "c7bde263762c1bc267f27c05c4a45551.wav"
+   },
+   {
+    "name": "Game_06.wav",
+    "start": 0.333333,
+    "duration": 0.933333,
+    "volume": 0.5580226182937622,
+    "file": "ff12852c4f994c6b90f6ccfba61ea908.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.333333,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.12
+     ],
+     [
+      "effects_adjust_size",
+      0.1
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép49",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.333333,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 23",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 23/Kobe Text 23.jpeg"
+ },
+ {
+  "duration": 3.333333,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Comment",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 20,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 20,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.333333,
+    "x": 0,
+    "y": 0.109375,
+    "scale": 1.5828658473036643,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Slingshot",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "6862897343176380942"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "\"Báo Giá\"",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 25,
+      "font": "font",
+      "fill": {
+       "solid": "#f0ff00"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 25,
+    "color": "#f0ff00",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.333333,
+    "duration": 3.0,
+    "x": 0,
+    "y": -0.034375000000000044,
+    "scale": 1.0632496440152075,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Earn Coins.mp3",
+    "start": 0.333333,
+    "duration": 1.233333,
+    "volume": 0.09574173390865326,
+    "file": "25a5ba6e15f09f1ff2abfda254668d7e.mp3"
+   },
+   {
+    "name": "PositiveTransition_23.wav",
+    "start": 0.0,
+    "duration": 0.966666,
+    "volume": 0.337673544883728,
+    "file": "662342ee9bef56031b1b39e6e0e1aa8d.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.333333,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.16
+     ],
+     [
+      "effects_adjust_size",
+      0.11
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép51",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.333333,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 24",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 24/Kobe Text 24.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Phù Hợp",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 20,
+      "font": "font",
+      "fill": {
+       "solid": "#ff6ebd"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 20.0,
+    "color": "#ff6ebd",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1.0,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.266666,
+    "duration": 2.933334,
+    "x": 0.0,
+    "y": 0.06874999999999998,
+    "scale": 2.0854534521798707,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "với mọi khách hàng",
+    "styles": [
+     {
+      "range": [
+       0,
+       18
+      ],
+      "size": 14.504450798034668,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 14.504450798034668,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": 0.0,
+    "y": -0.07677249430523903,
+    "scale": 1.6181308171816844,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Pops Up.mp3",
+    "start": 0.0,
+    "duration": 1.166666,
+    "volume": 0.35511747002601624,
+    "file": "88ebcbefc5143c7ce4a98145b9355c24.mp3"
+   },
+   {
+    "name": "Transitions SFX_39.wav",
+    "start": 0.066666,
+    "duration": 1.066667,
+    "volume": 0.43924036622047424,
+    "file": "c72027a8bbd00a5f3638e3ec15bf70fb.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.12
+     ],
+     [
+      "effects_adjust_size",
+      0.09
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép53",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "rotation3d": [],
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.266666,
+    "duration": 2.933334
+   }
+  ],
+  "id": "Kobe Text 25",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 25/Kobe Text 25.jpeg"
+ },
+ {
+  "duration": 3.133333,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Kobe Media",
+    "styles": [
+     {
+      "range": [
+       0,
+       10
+      ],
+      "size": 18.17169952392578,
+      "font": "DTPhudu-Black",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "DTPhudu-Black",
+    "fontSize": 18.171700330284544,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.133333,
+    "x": 0.0,
+    "y": 0.11039785553047388,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Nâng ngẫu nhiên",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.766666,
+      "id": "7233662263805088314"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "is calling",
+    "styles": [
+     {
+      "range": [
+       0,
+       10
+      ],
+      "size": 8,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 8.0,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.133333,
+    "x": -0.013039117352056206,
+    "y": 0.029345372460496733,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Loại 2",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.7,
+      "id": "6724920636403094028"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "......",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 8,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 8.0,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.133333,
+    "x": 0.16950852557673013,
+    "y": 0.028995276271086112,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Loud Emphasis",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.266666,
+      "id": "7618800354288848129"
+     },
+     {
+      "name": "Balloons Pop",
+      "type": "out",
+      "start": 0.0,
+      "duration": 0.233333,
+      "id": "7568308318582754561"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Sound effect when telop etc. appear(1192551)",
+    "start": 2.266666,
+    "duration": 0.866667,
+    "volume": 0.3433320224285126,
+    "file": "689bdb9b98204aae6cce9319a1aa9cd1.mp3"
+   },
+   {
+    "name": "Sound when there is no answer on the phone(945638)",
+    "start": 0.0,
+    "duration": 3.133333,
+    "volume": 0.3654244840145111,
+    "file": "8d9db677038addac3aed5f10d6fa73c2.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.133333,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.13
+     ],
+     [
+      "effects_adjust_luminance",
+      0.21
+     ]
+    ]
+   }
+  ],
+  "stickers": [
+   {
+    "name": "Interface EN - Answer call",
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 0.4158890290037831,
+      "y": 0.4158890290037831
+     },
+     "transform": {
+      "x": -0.32196589769307926,
+      "y": -0.11738148984198649
+     }
+    }
+   }
+  ],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép55",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 2.3
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép55",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 2.3,
+    "duration": 0.466666
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép56",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 0.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 2.3,
+    "duration": 0.366666
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép57",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 0.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": -0.600802407221665,
+      "y": 0.0
+     }
+    },
+    "start": 2.5,
+    "duration": 0.633333
+   }
+  ],
+  "id": "Kobe Text 26",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 26/Kobe Text 26.jpeg"
+ },
+ {
+  "duration": 3.0,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "SEDAN HẠNG C",
+    "styles": [
+     {
+      "range": [
+       0,
+       12
+      ],
+      "size": 15,
+      "font": "UTM-Impact",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "UTM-Impact",
+    "fontSize": 15.0,
+    "color": "#FFFFFF",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.0,
+    "x": 0.05179282868525892,
+    "y": 0.0,
+    "scale": 1.0,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Tiếp xúc bên phải",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.6,
+      "id": "7149113362096329217"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Sang trọng",
+    "styles": [
+     {
+      "range": [
+       0,
+       10
+      ],
+      "size": 15,
+      "font": "font",
+      "fill": {
+       "solid": "#56b5ff"
+      },
+      "italic": true
+     }
+    ],
+    "font": "font",
+    "fontSize": 15.0,
+    "color": "#56b5ff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.466666,
+    "duration": 2.533334,
+    "x": -0.17975320938468342,
+    "y": -0.14192864271457095,
+    "scale": 1.0242195283864175,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Tiếp xúc bên phải",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.7,
+      "id": "7149113362096329217"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_23.wav",
+    "start": 0.0,
+    "duration": 0.933333,
+    "volume": 0.3715479373931885,
+    "file": "662342ee9bef56031b1b39e6e0e1aa8d.wav"
+   },
+   {
+    "name": "Transitions SFX_18.wav",
+    "start": 0.3,
+    "duration": 0.833333,
+    "volume": 0.4608309864997864,
+    "file": "1b75f075f8adeb63d085826f29f0af10.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.0,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.12
+     ],
+     [
+      "effects_adjust_luminance",
+      0.18
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 27",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 27/Kobe Text 27.jpeg"
+ },
+ {
+  "duration": 3.0,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Style Capcut",
+    "styles": [
+     {
+      "range": [
+       0,
+       12
+      ],
+      "size": 20,
+      "font": "font",
+      "fill": {
+       "solid": "#60ff00"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 20.0,
+    "color": "#60ff00",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1.0,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.0,
+    "duration": 3.0,
+    "x": 0.0,
+    "y": 0.0625,
+    "scale": 1.3473972666037246,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "3D Glide In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7642256463754317076"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "subtittle",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 7.31602382659912,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 7.316023826599121,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.4,
+    "duration": 2.6,
+    "x": -0.5916666666666667,
+    "y": -0.010416666666666666,
+    "scale": 1.01,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "animation",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 7.31602382659912,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 7.316023826599121,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.733333,
+    "duration": 2.266667,
+    "x": 0.07962962962962963,
+    "y": -0.010416666666666666,
+    "scale": 1.01,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "directly",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 7.31602382659912,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 7.316023826599121,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 1.066666,
+    "duration": 1.933334,
+    "x": 0.6046296296296296,
+    "y": -0.010416666666666666,
+    "scale": 1.01,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Pops Up.mp3",
+    "start": 0.0,
+    "duration": 1.166666,
+    "volume": 0.3711662292480469,
+    "file": "88ebcbefc5143c7ce4a98145b9355c24.mp3"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 0.4,
+    "duration": 0.5,
+    "volume": 0.2866593599319458,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 1.066666,
+    "duration": 0.5,
+    "volume": 0.2866593599319458,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 0.733333,
+    "duration": 0.5,
+    "volume": 0.2866593599319458,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.0,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.17
+     ],
+     [
+      "effects_adjust_size",
+      0.09
+     ]
+    ]
+   }
+  ],
+  "stickers": [
+   {
+    "name": "Sticker icon capcut",
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 9.918130165004444,
+     "scale": {
+      "x": 0.11861200084692868,
+      "y": 0.11861200084692868
+     },
+     "transform": {
+      "x": 0.3923717881465836,
+      "y": 0.11858803683384989
+     }
+    }
+   }
+  ],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép60",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 28",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 28/Kobe Text 28.jpeg"
+ },
+ {
+  "duration": 3.0,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Căn Hộ",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 20,
+      "font": "UTM-Impact",
+      "fill": {
+       "solid": "#fcff00"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "UTM-Impact",
+    "fontSize": 20,
+    "color": "#fcff00",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.0,
+    "duration": 3.0,
+    "x": 0,
+    "y": -0.052083333333333336,
+    "scale": 1.2969350295810107,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Letter Fade-In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7648937403646004500"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Tham quan",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 23.940547943115234,
+      "font": "SnellRoundhand",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "SnellRoundhand",
+    "fontSize": 23.9405487804878,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.466666,
+    "duration": 2.533334,
+    "x": 0,
+    "y": 0.07847182764542848,
+    "scale": 0.6628457003987814,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Script Emerge",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7646372683759848724"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "8bit_08.wav",
+    "start": 0.466666,
+    "duration": 0.766667,
+    "volume": 0.35648292303085327,
+    "file": "03af7e7c8371a9dca4dd141b2341bda5.wav"
+   },
+   {
+    "name": "Transitions SFX_39.wav",
+    "start": 0.0,
+    "duration": 0.9,
+    "volume": 0.3560922145843506,
+    "file": "c72027a8bbd00a5f3638e3ec15bf70fb.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.0,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.08
+     ],
+     [
+      "effects_adjust_luminance",
+      0.11
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép62",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.0,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 29",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 29/Kobe Text 29.jpeg"
+ },
+ {
+  "duration": 3.566666,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Sở hữu",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 16.307958602905273,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 16.307958587398375,
+    "color": "#FFFFFF",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.566666,
+    "x": 0.1845897341146241,
+    "y": 0.12165068041465066,
+    "scale": 2.240456526192512,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Không Gian Sống",
+    "styles": [
+     {
+      "range": [
+       0,
+       15
+      ],
+      "size": 20,
+      "font": "SF-Pro-Display-Medium",
+      "fill": {
+       "solid": "#8700ff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0,
+        "distance": 1.8064515590667725,
+        "angle": -45,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "SF-Pro-Display-Medium",
+    "fontSize": 20,
+    "color": "#8700ff",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0,
+     "distance": 1.8064515590667725,
+     "angle": -45
+    },
+    "background": null,
+    "start": 0.566666,
+    "duration": 3.0,
+    "x": 0,
+    "y": 0,
+    "scale": 1.051697631695084,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Smooth Slide-In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7642674234270960916"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "đẳng",
+    "styles": [
+     {
+      "range": [
+       0,
+       4
+      ],
+      "size": 19.8539924621582,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 19.85399199695122,
+    "color": "#FFFFFF",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 1.3,
+    "duration": 2.266666,
+    "x": -0.6728151627335865,
+    "y": -0.09605583554709908,
+    "scale": 1,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Text Fade In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7646375568455372053"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "cấp",
+    "styles": [
+     {
+      "range": [
+       0,
+       3
+      ],
+      "size": 19.8539924621582,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 19.85399199695122,
+    "color": "#FFFFFF",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 1.6,
+    "duration": 1.966666,
+    "x": -0.2846506692531452,
+    "y": -0.09605583554709908,
+    "scale": 1,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Text Fade In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7646375568455372053"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "cho",
+    "styles": [
+     {
+      "range": [
+       0,
+       3
+      ],
+      "size": 19.8539924621582,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 19.85399199695122,
+    "color": "#FFFFFF",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 1.833333,
+    "duration": 1.733333,
+    "x": 0.0443362916295028,
+    "y": -0.09605583554709908,
+    "scale": 1,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Text Fade In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7646375568455372053"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Bạn",
+    "styles": [
+     {
+      "range": [
+       0,
+       3
+      ],
+      "size": 7,
+      "font": "PublicSans-Italic",
+      "fill": {
+       "solid": "#ff0000"
+      },
+      "bold": true
+     }
+    ],
+    "font": "PublicSans-Italic",
+    "fontSize": 7,
+    "color": "#ff0000",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 2.066666,
+    "duration": 1.5,
+    "x": 0.5209667282239006,
+    "y": -0.10259274052454792,
+    "scale": 1.5786524995450923,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Text Fade In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7646375568455372053"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_20.wav",
+    "start": 0.433333,
+    "duration": 1.4,
+    "volume": 0.383249968290329,
+    "file": "2a5a924367739d9ba4b9d7c57716c91d.wav"
+   },
+   {
+    "name": "PositiveTransition_23.wav",
+    "start": 0.0,
+    "duration": 1.0,
+    "volume": 0.3183477520942688,
+    "file": "662342ee9bef56031b1b39e6e0e1aa8d.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 1.3,
+    "duration": 0.5,
+    "volume": 0.25075864791870117,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 1.833333,
+    "duration": 0.5,
+    "volume": 0.25075864791870117,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 1.6,
+    "duration": 0.5,
+    "volume": 0.25075864791870117,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 2.066666,
+    "duration": 0.5,
+    "volume": 0.25075864791870117,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Glow 2",
+    "start": 0.0,
+    "duration": 3.566666,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.1
+     ],
+     [
+      "effects_adjust_luminance",
+      0.12
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép64",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.566666,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 30",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 30/Kobe Text 30.jpeg"
+ },
+ {
+  "duration": 3.733333,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Hãy nắm bắt",
+    "styles": [
+     {
+      "range": [
+       0,
+       11
+      ],
+      "size": 21.474767684936523,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 21.474768165650406,
+    "color": "#FFFFFF",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.733333,
+    "x": -0.3262887853844938,
+    "y": 0.1339588036117384,
+    "scale": 1.0374994447855728,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Tiếp xúc bên phải",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.7,
+      "id": "7149113362096329217"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Cơ hội",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 38,
+      "font": "font",
+      "fill": {
+       "solid": "#edff00"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0,
+        "distance": 0.8064514994621277,
+        "angle": -45,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 38,
+    "color": "#edff00",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0,
+     "distance": 0.8064514994621277,
+     "angle": -45
+    },
+    "background": null,
+    "start": 0.5,
+    "duration": 3.233333,
+    "x": 0,
+    "y": 0,
+    "scale": 1.2434739696450487,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Smooth Slide-In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7642674234270960916"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Ngay bây giờ",
+    "styles": [
+     {
+      "range": [
+       0,
+       12
+      ],
+      "size": 24.126094818115234,
+      "font": "1FTVVIPClashGrotesk-LightIta",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "1FTVVIPClashGrotesk-LightIta",
+    "fontSize": 24.12609565548781,
+    "color": "#FFFFFF",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.933333,
+    "duration": 2.8,
+    "x": 0.17222222222222183,
+    "y": -0.131042422436632,
+    "scale": 0.6369671457114385,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Tiếp xúc bên trái",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.6,
+      "id": "7149113444279521793"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Reverse Swish.mp3",
+    "start": 0.0,
+    "duration": 1.6,
+    "volume": 0.21559114754199984,
+    "file": "0a29dd670f58a6e76b05dff3974b7217.mp3"
+   },
+   {
+    "name": "Reverse Swish.mp3",
+    "start": 0.933333,
+    "duration": 1.6,
+    "volume": 0.21559114754199984,
+    "file": "0a29dd670f58a6e76b05dff3974b7217.mp3"
+   },
+   {
+    "name": "Pop Bubbles 1.mp3",
+    "start": 0.5,
+    "duration": 1.1,
+    "volume": 0.22491009533405304,
+    "file": "6ccf123b94d47e74639196623ab064b3.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Glow 2",
+    "start": 0.0,
+    "duration": 3.733333,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.08
+     ],
+     [
+      "effects_adjust_luminance",
+      0.11
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép66",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.5,
+    "duration": 3.233333
+   }
+  ],
+  "id": "Kobe Text 31",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 31/Kobe Text 31.jpeg"
+ },
+ {
+  "duration": 3.333333,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Edit video",
+    "styles": [
+     {
+      "range": [
+       0,
+       10
+      ],
+      "size": 26.126506805419922,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#000000"
+        },
+        "diffuse": 0.002728799358010292,
+        "distance": 1.8816120624542236,
+        "angle": -45,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 26.12650680541992,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#000000",
+     "alpha": 1,
+     "smoothing": 0.04911838844418526,
+     "distance": 1.8816120624542236,
+     "angle": -45
+    },
+    "background": null,
+    "start": 0.333333,
+    "duration": 3.0,
+    "x": -0.2934915858687175,
+    "y": 0.05903639954853257,
+    "scale": 0.9044918083120084,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Tại sao?",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 15,
+      "font": "1FTVVIPClashGrotesk-LightIta",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#000000"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "1FTVVIPClashGrotesk-LightIta",
+    "fontSize": 15,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#000000",
+     "alpha": 1,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.0,
+    "duration": 3.333333,
+    "x": -0.481444332998997,
+    "y": 0.16930022573363435,
+    "scale": 1.181933834673959,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Catch Up",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7602620913355443461"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "lại",
+    "styles": [
+     {
+      "range": [
+       0,
+       3
+      ],
+      "size": 25.969879150390625,
+      "font": "SnellRoundhand",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#000000"
+        },
+        "diffuse": 0.00335852219723165,
+        "distance": 2.385390281677246,
+        "angle": -45,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "SnellRoundhand",
+    "fontSize": 25.96987951807229,
+    "color": "#FFFFFF",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#000000",
+     "alpha": 1,
+     "smoothing": 0.060453399550169706,
+     "distance": 2.385390281677246,
+     "angle": -45
+    },
+    "background": null,
+    "start": 0.866666,
+    "duration": 2.466667,
+    "x": 0.3806757509431156,
+    "y": 0.022073343763342357,
+    "scale": 0.6827102495676978,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Bobbing Up",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7646372047957822740"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "cần thiết",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 15.969879150390625,
+      "font": "SnellRoundhand",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#000000"
+        },
+        "diffuse": 0.00335852219723165,
+        "distance": 2.385390281677246,
+        "angle": -45,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "SnellRoundhand",
+    "fontSize": 15.969879150390623,
+    "color": "#FFFFFF",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#000000",
+     "alpha": 1,
+     "smoothing": 0.060453399550169706,
+     "distance": 2.385390281677246,
+     "angle": -45
+    },
+    "background": null,
+    "start": 1.266666,
+    "duration": 2.066667,
+    "x": 0.4066553424739252,
+    "y": -0.055170716116454965,
+    "scale": 1,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Bobbing Up",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7646372047957822740"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Turn the paper / page [note] # 1(182352)",
+    "start": 0.4,
+    "duration": 0.966666,
+    "volume": 0.2924633324146271,
+    "file": "1593fe3d68274014005abc08347e0090.mp3"
+   },
+   {
+    "name": "Shine Collect.wav",
+    "start": 0.1,
+    "duration": 1.033333,
+    "volume": 0.19953306019306183,
+    "file": "147a604a1de47f0aeba405643408a36d.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 1.266666,
+    "duration": 0.5,
+    "volume": 0.25075864791870117,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 0.866666,
+    "duration": 0.5,
+    "volume": 0.25075864791870117,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Glow 2",
+    "start": 0.0,
+    "duration": 3.333333,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.2
+     ],
+     [
+      "effects_adjust_size",
+      0.16
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 32",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 32/Kobe Text 32.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Vị Trí",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 27,
+      "font": "UTM-Impact",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#000000"
+        },
+        "diffuse": 0,
+        "distance": 1.0376174449920654,
+        "angle": -45,
+        "alpha": null
+       }
+      ],
+      "italic": true
+     }
+    ],
+    "font": "UTM-Impact",
+    "fontSize": 27,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": {
+     "color": "#000000",
+     "alpha": 1,
+     "smoothing": 0,
+     "distance": 1.0376174449920654,
+     "angle": -45
+    },
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0,
+    "y": 0.04062500000000002,
+    "scale": 1.3214780586341728,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "trung tâm đắc địa",
+    "styles": [
+     {
+      "range": [
+       0,
+       17
+      ],
+      "size": 16.026899337768555,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 16.026899136178862,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": 0,
+    "y": -0.14876671643250372,
+    "scale": 1.4237139229977789,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Lật!",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.8,
+      "id": "7221379732166676993"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Pops Up.mp3",
+    "start": 0.2,
+    "duration": 1.166666,
+    "volume": 0.268499493598938,
+    "file": "88ebcbefc5143c7ce4a98145b9355c24.mp3"
+   },
+   {
+    "name": "HUD Interface_05.wav",
+    "start": 0.0,
+    "duration": 0.633333,
+    "volume": 0.32641106843948364,
+    "file": "66905a7ae4f5ec322930b4ae7b507129.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.2
+     ],
+     [
+      "effects_adjust_size",
+      0.12
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [],
+  "id": "Kobe Text 33",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 33/Kobe Text 33.jpeg"
+ },
+ {
+  "duration": 6.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "5",
+    "styles": [
+     {
+      "range": [
+       0,
+       1
+      ],
+      "size": 29.629079818725586,
+      "font": "font",
+      "fill": {
+       "solid": "#f0ff00"
+      },
+      "italic": true
+     }
+    ],
+    "font": "font",
+    "fontSize": 29.629079818725582,
+    "color": "#f0ff00",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 6.2,
+    "x": -0.5851851851851851,
+    "y": 0.228125,
+    "scale": 1.9494343403132792,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Letter Reveal",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.033333,
+      "id": "7642244938968681749"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Hiệu ứng",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 33.44321823120117,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 33.443216463414636,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.2,
+    "duration": 6.0,
+    "x": -0.07446808510638303,
+    "y": 0.27245934238853375,
+    "scale": 0.6714779271181194,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Letter Reveal",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.033333,
+      "id": "7642244938968681749"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "có sẳn",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 33,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 33,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.4,
+    "duration": 5.8,
+    "x": 0.4462962962962963,
+    "y": 0.178125,
+    "scale": 0.668395013287074,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Letter Reveal",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.033333,
+      "id": "7642244938968681749"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "CapCut",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 30.06676483154297,
+      "font": "font",
+      "fill": {
+       "solid": "#ceff00"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 30.06676557863497,
+    "color": "#ceff00",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.6,
+    "duration": 5.6,
+    "x": 0,
+    "y": 0,
+    "scale": 0.9388743852888378,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_21.wav",
+    "start": 0.2,
+    "duration": 1.4,
+    "volume": 0.31074970960617065,
+    "file": "0615028766df2f1a0b20235fcca35ff0.wav"
+   },
+   {
+    "name": "8bit_08.wav",
+    "start": 0.6,
+    "duration": 0.766666,
+    "volume": 0.2601228952407837,
+    "file": "03af7e7c8371a9dca4dd141b2341bda5.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Blur",
+    "start": 0.6,
+    "duration": 5.6,
+    "params": [
+     [
+      "effects_adjust_blur",
+      0
+     ]
+    ]
+   },
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 6.2,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.07
+     ],
+     [
+      "effects_adjust_luminance",
+      0.14
+     ]
+    ]
+   }
+  ],
+  "stickers": [
+   {
+    "name": "Sticker icon capcut",
+    "clip": {
+     "scale": {
+      "x": 0.1041171492439665,
+      "y": 0.1041171492439665
+     },
+     "rotation": 9.171220944614335,
+     "transform": {
+      "x": 0.6037993408096638,
+      "y": -0.033409748433499864
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    }
+   }
+  ],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép11",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.0,
+    "duration": 6.2
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép83",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.6,
+    "duration": 5.6
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép82",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.6,
+    "duration": 5.6
+   }
+  ],
+  "id": "Kobe Text 34",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 34/Kobe Text 34.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Không",
+    "styles": [
+     {
+      "range": [
+       0,
+       5
+      ],
+      "size": 30.06676483154297,
+      "font": "font",
+      "fill": {
+       "solid": "#60ff00"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ],
+      "italic": true
+     }
+    ],
+    "font": "font",
+    "fontSize": 30.06676557863497,
+    "color": "#60ff00",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": -0.2686043479821392,
+    "y": 0.12086282809358592,
+    "scale": 1.00520673735531,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Gian",
+    "styles": [
+     {
+      "range": [
+       0,
+       4
+      ],
+      "size": 30.06676483154297,
+      "font": "font",
+      "fill": {
+       "solid": "#60ff00"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ],
+      "italic": true
+     }
+    ],
+    "font": "font",
+    "fontSize": 30.06676557863497,
+    "color": "#60ff00",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0.4156264464756356,
+    "y": 0.01587357828343272,
+    "scale": 1.0115123158430857,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "xanh",
+    "styles": [
+     {
+      "range": [
+       0,
+       4
+      ],
+      "size": 15,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "italic": true
+     }
+    ],
+    "font": "font",
+    "fontSize": 15,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.566666,
+    "duration": 2.633334,
+    "x": -0.30000000000000027,
+    "y": -0.04829855135356098,
+    "scale": 1.9326496828641977,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_23.wav",
+    "start": 0.566666,
+    "duration": 1.0,
+    "volume": 0.3088919222354889,
+    "file": "662342ee9bef56031b1b39e6e0e1aa8d.wav"
+   },
+   {
+    "name": "Game_06.wav",
+    "start": 0.0,
+    "duration": 0.933333,
+    "volume": 0.3335338234901428,
+    "file": "ff12852c4f994c6b90f6ccfba61ea908.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.11
+     ],
+     [
+      "effects_adjust_luminance",
+      0.19
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép8",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.0,
+    "duration": 3.2
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép70",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0.07222222222222197,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 35",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 35/Kobe Text 35.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Đừng mua",
+    "styles": [
+     {
+      "range": [
+       0,
+       8
+      ],
+      "size": 18.294872283935547,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 18.294873136815028,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": -0.1277777777777781,
+    "y": 0.12058681955383876,
+    "scale": 1.4382962155309589,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Text Fade In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7646375568455372053"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Dòng xe SUV",
+    "styles": [
+     {
+      "range": [
+       0,
+       11
+      ],
+      "size": 20,
+      "font": "font",
+      "fill": {
+       "solid": "#0090ff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 20,
+    "color": "#0090ff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.066666,
+    "duration": 3.133334,
+    "x": 0,
+    "y": 0,
+    "scale": 1.3547985027354237,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "3D Glide In",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7642256463754317076"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "nếu bạn",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 16.621124267578125,
+      "font": "1FTVVIPClashGrotesk-LightIta",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "1FTVVIPClashGrotesk-LightIta",
+    "fontSize": 16.621124182290117,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.533333,
+    "duration": 2.666667,
+    "x": -0.4994202034745995,
+    "y": -0.09734915711225713,
+    "scale": 0.9224679155272016,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "chưa biết gì",
+    "styles": [
+     {
+      "range": [
+       0,
+       12
+      ],
+      "size": 25.320598602294922,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 25.32059832317073,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": 0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.866666,
+    "duration": 2.333334,
+    "x": 0.305684217846792,
+    "y": -0.12121796929529484,
+    "scale": 1.1671497004670168,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Pops Up.mp3",
+    "start": 0.066666,
+    "duration": 1.166667,
+    "volume": 0.27558332681655884,
+    "file": "88ebcbefc5143c7ce4a98145b9355c24.mp3"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.14
+     ],
+     [
+      "effects_adjust_luminance",
+      0.18
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép72",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.066666,
+    "duration": 3.133334
+   }
+  ],
+  "id": "Kobe Text 36",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 36/Kobe Text 36.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Chỉnh Sửa",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 17,
+      "font": "Montserrat-Bold",
+      "fill": {
+       "solid": "#00ff78"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0,
+        "distance": 2.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "Montserrat-Bold",
+    "fontSize": 17.0,
+    "color": "#00ff78",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1.0,
+     "smoothing": 0.0,
+     "distance": 2.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0.0,
+    "y": -0.038922155688622784,
+    "scale": 1.519418552249453,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Mouse Clicks.mp3",
+    "start": 0.0,
+    "duration": 1.2,
+    "volume": 0.32933199405670166,
+    "file": "76448e622ebca56e75288b3cc35eb50c.mp3"
+   }
+  ],
+  "effects": [],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép9",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 3.2
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép74",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 37",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 37/Kobe Text 37.jpeg"
+ },
+ {
+  "duration": 3.033333,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "1",
+    "styles": [
+     {
+      "range": [
+       0,
+       1
+      ],
+      "size": 33.799224853515625,
+      "font": "UTM-Impact",
+      "fill": {
+       "solid": "#d636ff"
+      },
+      "italic": true
+     }
+    ],
+    "font": "UTM-Impact",
+    "fontSize": 33.79922510162602,
+    "color": "#d636ff",
+    "alpha": 1.0,
+    "letterSpacing": -0.1,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.033333,
+    "x": -0.5181755534499096,
+    "y": -0.020958083832335328,
+    "scale": 1.627757212973214,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Căn Hộ",
+    "styles": [
+     {
+      "range": [
+       0,
+       6
+      ],
+      "size": 20,
+      "font": "UTM-Impact",
+      "fill": {
+       "solid": "#cb00ff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "UTM-Impact",
+    "fontSize": 20.0,
+    "color": "#cb00ff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1.0,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.2,
+    "duration": 2.833333,
+    "x": 0.17021276595744683,
+    "y": 0.05988023952095811,
+    "scale": 1.2917750218289723,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Slide & Rise",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7506401698856979728"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "Đáng sống",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 28.15644073486328,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 28.156440548780616,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.466666,
+    "duration": 2.566667,
+    "x": 0.19754070118011913,
+    "y": -0.07513674246040969,
+    "scale": 1.4488542990089417,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "PositiveTransition_23.wav",
+    "start": 0.666666,
+    "duration": 1.0,
+    "volume": 0.279769629240036,
+    "file": "662342ee9bef56031b1b39e6e0e1aa8d.wav"
+   },
+   {
+    "name": "Transitions SFX_39.wav",
+    "start": 0.0,
+    "duration": 0.9,
+    "volume": 0.3152540624141693,
+    "file": "c72027a8bbd00a5f3638e3ec15bf70fb.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.033333,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.08
+     ],
+     [
+      "effects_adjust_size",
+      0.06
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép10",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.0,
+    "duration": 3.033333
+   },
+   {
+    "type": "video",
+    "name": "Clip ghép76",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.2,
+    "duration": 2.833333
+   }
+  ],
+  "id": "Kobe Text 38",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 38/Kobe Text 38.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "Trải nghiệm",
+    "styles": [
+     {
+      "range": [
+       0,
+       11
+      ],
+      "size": 17.79757308959961,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      }
+     }
+    ],
+    "font": "font",
+    "fontSize": 17.797573678861788,
+    "color": "#ffffff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": -0.13508282562439544,
+    "y": 0.12445110703309326,
+    "scale": 1,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Fold",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.5,
+      "id": "7131933414189437441"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "An Toàn",
+    "styles": [
+     {
+      "range": [
+       0,
+       7
+      ],
+      "size": 25,
+      "font": "font",
+      "fill": {
+       "solid": "#00d4ff"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0,
+        "distance": 2.0376174449920654,
+        "angle": -45,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "font",
+    "fontSize": 25,
+    "color": "#00d4ff",
+    "alpha": 1,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1,
+     "smoothing": 0,
+     "distance": 2.0376174449920654,
+     "angle": -45
+    },
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": 0.15957446808510634,
+    "y": 0,
+    "scale": 1,
+    "rotation": 0,
+    "opacity": 1,
+    "animations": [
+     {
+      "name": "Floating Line",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7648071553145490705"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Pops Up.mp3",
+    "start": 0.2,
+    "duration": 1.166666,
+    "volume": 0.3638003468513489,
+    "file": "88ebcbefc5143c7ce4a98145b9355c24.mp3"
+   },
+   {
+    "name": "Shine Collect.wav",
+    "start": 0.0,
+    "duration": 1.033333,
+    "volume": 0.35866376757621765,
+    "file": "147a604a1de47f0aeba405643408a36d.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_luminance",
+      0.08
+     ],
+     [
+      "effects_adjust_size",
+      0.06
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép78",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "scale": {
+      "x": 1,
+      "y": 1
+     },
+     "rotation": 0,
+     "transform": {
+      "x": 0,
+      "y": 0
+     },
+     "flip": {
+      "vertical": false,
+      "horizontal": false
+     },
+     "alpha": 1
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 39",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 39/Kobe Text 39.jpeg"
+ },
+ {
+  "duration": 3.2,
+  "canvas": [
+   1080,
+   1920
+  ],
+  "layers": [
+   {
+    "text": "trị",
+    "styles": [
+     {
+      "range": [
+       0,
+       3
+      ],
+      "size": 14.629079818725586,
+      "font": "Helvetica",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "italic": true
+     }
+    ],
+    "font": "Helvetica",
+    "fontSize": 14.629080118694365,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.0,
+    "duration": 3.2,
+    "x": -0.45909780857944815,
+    "y": 0.12761379291530828,
+    "scale": 1.0426520297668866,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "100 Triệu",
+    "styles": [
+     {
+      "range": [
+       0,
+       9
+      ],
+      "size": 20,
+      "font": "1FTV-VIP-Russo-One",
+      "fill": {
+       "solid": "#60ff00"
+      },
+      "shadows": [
+       {
+        "color": {
+         "solid": "#ffffff"
+        },
+        "diffuse": 0.0016666667070239782,
+        "distance": 1.0815043449401855,
+        "angle": 50.21943664550781,
+        "alpha": null
+       }
+      ]
+     }
+    ],
+    "font": "1FTV-VIP-Russo-One",
+    "fontSize": 20.0,
+    "color": "#60ff00",
+    "alpha": 1.0,
+    "letterSpacing": 0.0,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 0,
+    "border": null,
+    "shadow": {
+     "color": "#ffffff",
+     "alpha": 1.0,
+     "smoothing": 0.030000000726431608,
+     "distance": 1.0815043449401855,
+     "angle": 50.21943664550781
+    },
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": -0.10638297872340452,
+    "y": 0.0,
+    "scale": 1.3597115127981494,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 1.0,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "giá",
+    "styles": [
+     {
+      "range": [
+       0,
+       3
+      ],
+      "size": 15.316023826599121,
+      "font": "Helvetica",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "italic": true
+     }
+    ],
+    "font": "Helvetica",
+    "fontSize": 15.31602382659912,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.2,
+    "duration": 3.0,
+    "x": -0.22962962962962963,
+    "y": 0.12760416666666666,
+    "scale": 1.0426520297668866,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   },
+   {
+    "text": "đồng",
+    "styles": [
+     {
+      "range": [
+       0,
+       4
+      ],
+      "size": 15,
+      "font": "font",
+      "fill": {
+       "solid": "#ffffff"
+      },
+      "italic": true
+     }
+    ],
+    "font": "font",
+    "fontSize": 15.0,
+    "color": "#ffffff",
+    "alpha": 1.0,
+    "letterSpacing": -0.05,
+    "lineSpacing": 0.02,
+    "alignment": 1,
+    "italicDegree": 10,
+    "border": null,
+    "shadow": null,
+    "background": null,
+    "start": 0.6,
+    "duration": 2.6,
+    "x": 0.4631966577655269,
+    "y": -0.1386316205857081,
+    "scale": 1.4156295837779933,
+    "rotation": 0.0,
+    "opacity": 1.0,
+    "animations": [
+     {
+      "name": "Manifest",
+      "type": "in",
+      "start": 0.0,
+      "duration": 0.966666,
+      "id": "7647062672126561557"
+     }
+    ],
+    "effects": []
+   }
+  ],
+  "audio": [
+   {
+    "name": "Flat_03.wav",
+    "start": 0.1,
+    "duration": 0.5,
+    "volume": 0.25075864791870117,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 0.3,
+    "duration": 0.5,
+    "volume": 0.25075864791870117,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   },
+   {
+    "name": "Flat_03.wav",
+    "start": 0.6,
+    "duration": 0.5,
+    "volume": 0.25075864791870117,
+    "file": "5dfc65d3d13acc1c58a71b76bd0058fd.wav"
+   },
+   {
+    "name": "8bit_08.wav",
+    "start": 0.366666,
+    "duration": 0.766667,
+    "volume": 0.3039572536945343,
+    "file": "03af7e7c8371a9dca4dd141b2341bda5.wav"
+   }
+  ],
+  "effects": [
+   {
+    "name": "Phát sáng 2",
+    "start": 0.0,
+    "duration": 3.2,
+    "params": [
+     [
+      "effects_adjust_size",
+      0.07
+     ],
+     [
+      "effects_adjust_luminance",
+      0.1
+     ]
+    ]
+   }
+  ],
+  "stickers": [],
+  "videos": [
+   {
+    "type": "video",
+    "name": "Clip ghép80",
+    "w": 1080,
+    "h": 1920,
+    "clip": {
+     "alpha": 1.0,
+     "flip": {
+      "horizontal": false,
+      "vertical": false
+     },
+     "rotation": 0.0,
+     "scale": {
+      "x": 1.0,
+      "y": 1.0
+     },
+     "transform": {
+      "x": 0.0,
+      "y": 0.0
+     }
+    },
+    "start": 0.2,
+    "duration": 3.0
+   }
+  ],
+  "id": "Kobe Text 40",
+  "cover": "styles/text-presets/source-zip/Presets/Kobe Text 40/Kobe Text 40.jpeg"
+ }
+]

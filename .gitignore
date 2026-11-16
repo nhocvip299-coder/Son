@@ -9,3 +9,4 @@ samples/*.wav
 reference/*.mp4
 reference/*.MP4
 inputs/
+styles/text-presets/source-zip/

@@ -1,36 +1,35 @@
 ---
 name: text-presets-bds
-description: Thư viện 40 hiệu ứng chữ (text preset) cho video bất động sản dựng bằng Remotion, học từ bộ "40 Text Presets" người dùng gửi — font viết tay/serif/đậm, chữ phát sáng gradient, tracking-in, hiện từng ký tự, glitch, chữ viết tay hiện dần, gạch chân cong, gạch đỏ, chip nhãn, cuộc gọi đến, đổi màu — kèm âm thanh khi chữ xuất hiện. Dùng khi người dùng muốn chèn chữ hiệu ứng, chữ "kiểu CapCut", nhãn giá/diện tích/vị trí/tiện ích/CTA vào video BĐS, hoặc nhắc tới "text preset", "hiệu ứng chữ", "template chữ".
+description: Thư viện 40 hiệu ứng chữ (text preset) bất động sản dựng lại bằng Remotion TỪ DỮ LIỆU CAPCUT THẬT (Presets.zip "Kobe Text 01–40") — đúng văn bản, cỡ, màu, bóng, vị trí, animation, phát sáng, mask, âm thanh khi chữ xuất hiện, kèm khối hình (thẻ, khung, viên thuốc, elip, đường cong). Dùng khi người dùng muốn chèn chữ hiệu ứng/"kiểu CapCut"/template chữ vào video BĐS (giá, diện tích, vị trí, tiện ích, CTA, hook), nhắc "Kobe Text", "text preset", "hiệu ứng chữ", hoặc gửi preset CapCut mới cần chuyển sang Remotion.
 ---
 
-# Text Presets BĐS (40 hiệu ứng)
+# Text Presets BĐS — từ dữ liệu CapCut
 
-Nguồn: 2 video mẫu người dùng gửi (`inputs/source2.mov`, `inputs/source3.mov`, chỉ đọc) — 4 trang × 10 preset. Phân tích/so sánh: `styles/text-presets/analysis/`.
+Nguồn: `Presets.zip` người dùng gửi (giải nén chỉ đọc ở `styles/text-presets/source-zip/`), 40 thư mục `Kobe Text NN` (draft CapCut + ảnh bìa). Video mẫu đối chiếu: `inputs/source2.mov`, `inputs/source3.mov`.
 
-## Dùng nhanh
+## Dùng nhanh (chèn vào video)
 ```tsx
-import { TextPreset, presetCues } from "src/styles/textPresets/engine";
-import { presetById } from "src/styles/textPresets/presets40";
-<Sequence from={...}><div style={{position:"absolute", left:120, top:1050}}>
-  <TextPreset def={presetById("b02-tri-gia")} u={110} texts={["giá chỉ", "5,2 Tỷ", "đồng"]} />
-</div></Sequence>
-// am thanh: presetCues(def) -> SfxCue[] (frame@30, cong offset roi dua vao <SfxTrack>)
+import { CC_PRESETS, CapcutPreset } from "src/styles/textPresets/capcut/CapcutPreset";
+const p = CC_PRESETS.find((x) => x.id === "Kobe Text 40")!; // "tri gia 100 Trieu dong"
+<Sequence from={5 * fps} durationInFrames={3 * fps}>
+  <CapcutPreset preset={p} fit={{ cx: 540, cy: 1150, width: 820 }} texts={{ "100 Triệu": "5,2 Tỷ" }} />
+</Sequence>
 ```
-- `u` = cỡ chữ chính (px); `texts` ghi đè nội dung từng lớp theo thứ tự lớp.
-- Chọn preset theo cột "Dùng cho" trong `references/catalog.md` (40 dòng: id, nội dung mẫu, mục đích, chuyển động).
-- Xem tất cả: video `out/text-presets-40-danh-muc.mp4` (từng preset + âm thanh + mã số), `out/text-presets-40-trang.mp4` (4 trang như mẫu).
+- `fit`: đặt preset vào vùng (tâm + chiều rộng px); `"cover"` = khung như ảnh bìa CapCut. Giữ trong vùng an toàn TikTok (`src/lib/safeZone.ts`), tránh mặt người nói.
+- `texts`: thay chữ theo văn bản gốc (khóa = chữ gốc). Các lớp trùng chữ (lớp phát sáng/mask) đổi cùng nhau.
+- Âm thanh tự phát đúng thời điểm trong dữ liệu (`withAudio={false}` để tắt).
+- Chọn preset: `references/capcut-catalog.md` (40 dòng: chữ, animation, SFX, khối hình). Xem tất cả: `out/capcut-40-presets-bds.mp4` (mỗi preset 3 s, có mã số).
 
-## Quy tắc chèn vào video BĐS
-1. Một thời điểm chỉ một preset trong một vùng; đặt trong vùng an toàn TikTok (`src/lib/safeZone.ts`), tránh mặt người nói.
-2. Thời lượng mỗi preset 1.5–3 s; bắt đầu ~0.1 s trước khi người nói nhắc từ khóa.
-3. Hook đầu video: `b01-co-hoi`, `b06-dung-mua`, `d05-bi-quyet`, `a05-dang-goi`. Giá/số: `b02-tri-gia`, `c09-tiet-kiem`, `b08-1-can-ho`. Vị trí/tiện ích: `b03-vi-tri`, `a01-noi-bat`, `b05-khong-gian-xanh`. CTA: `d02-dang-ky`, `a06-bao-gia`, `a03-comment-so-hong`.
-4. Âm thanh: dùng `presetCues` (tối đa 3 tiếng/preset); khi có nhiều preset liền nhau, giảm `master` volume của SfxTrack.
+## Pipeline (thêm preset CapCut mới)
+1. Giải nén vào `styles/text-presets/source-zip/` (không chạy file trong gói).
+2. `python3 -I scripts/style/extract_capcut_presets.py <thu-muc-Presets> src/styles/textPresets/capcut_presets.json` — đệ quy clip ghép theo mã liên kết (extra_material_refs), gộp vị trí/tỉ lệ/lật/xoay, kế thừa animation/hiệu ứng/mask của clip cha, đo khung bao ảnh bìa.
+3. Nếu preset có khối hình: thêm vào `capcut/shapes.tsx` (đo trên ảnh bìa phóng to có lưới).
+4. Đối chiếu: render ảnh tĩnh (`work/cc_stills.mjs`) + `work/cc_compare.py` → `styles/text-presets/analysis/cc_compare_*.jpg`.
 
-## Thành phần
-- `engine.tsx`: bộ máy dựng theo cấu hình (lớp chữ + trang trí: swoosh, strike, ellipse, bar, phone) + gán SFX.
-- `presets40.ts`: dữ liệu 40 preset. Thêm preset mới = thêm 1 object.
-- `primitives.tsx`: TrackIn, CharPop, GlitchChars, ScriptWipe, DrawPath, ChipBox, glowFill.
-- SFX tự tổng hợp: `public/sfx/` (pop, glitch, write, swish, click, ring, shimmer, hit, typing...), tạo bởi `scripts/make_sfx.py`.
+## Đã xác minh / ước đoán
+- **Xác minh (từ dữ liệu):** văn bản, cỡ tương đối, màu, giãn chữ, bóng (góc/khoảng cách/độ mờ), vị trí/tỉ lệ/xoay/lật, thời điểm, tên + thời lượng animation, tham số "Phát sáng 2", mask Filmstrip, tên + thời điểm + âm lượng SFX.
+- **Ước đoán:** font (CapCut chỉ lưu mã → bảng `FONT_MAP` trong `CapcutPreset.tsx`); hình dạng chuyển động theo tên animation (34 loại → `animStyle`); cách vẽ mask; âm thanh thay bằng SFX tự tổng hợp cùng loại (file gốc không có trong gói, bảng `SFX_MAP`); khối hình đo từ ảnh bìa.
+- Cỡ tuyệt đối không suy được từ ảnh bìa (CapCut tự căn giữa + phóng vừa) → luôn dùng `fit`.
 
-## Mức xác minh
-Xem `references/spec.md` (đặc điểm chung, chuyển động [XM]/[UD]) và `references/catalog.md`.
+## Thành phần cũ
+`engine.tsx` + `presets40.ts` là bản ước đoán trước khi có dữ liệu — giữ để tham khảo, ưu tiên dùng `capcut/`.

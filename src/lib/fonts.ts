@@ -18,6 +18,10 @@ import "@fontsource/playfair-display/500-italic.css";
 import "@fontsource/oswald/700.css";
 import "@fontsource/nunito/900.css";
 import "@fontsource/nunito/900-italic.css";
+import "@fontsource/nunito/800.css";
+import "@fontsource/great-vibes/400.css";
+import "@fontsource/public-sans/300-italic.css";
+import "@fontsource/montserrat/800-italic.css";
 
 export const FONTS = {
   body: "'Be Vietnam Pro'",
@@ -29,6 +33,8 @@ export const FONTS = {
   serif: "'Playfair Display'",
   condensed: "'Oswald'",
   rounded: "'Nunito'",
+  elegant: "'Great Vibes'",
+  grotesk: "'Public Sans'",
 } as const;
 
 export type FontKey = keyof typeof FONTS;
@@ -51,6 +57,9 @@ const SPECS: Array<[number, string, string?]> = [
   [900, "Nunito"],
   [500, "Playfair Display", "italic"],
   [900, "Nunito", "italic"],
+  [800, "Nunito"],
+  [400, "Great Vibes"],
+  [300, "Public Sans", "italic"],
 ];
 // Chuoi mau phu ca 3 subset (latin, latin-ext, vietnamese) de trinh duyet tai du file
 const SAMPLE = "AaBb09 ĂăÂâĐđÊêÔôƠơƯư ẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặ ỆệỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ ŁłŚś₫";

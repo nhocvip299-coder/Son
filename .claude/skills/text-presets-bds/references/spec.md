@@ -1,3 +1,5 @@
+**Cập nhật:** đã có dữ liệu CapCut thật (Presets.zip) — xem `capcut-catalog.md` và SKILL.md. Nội dung dưới đây là phân tích ban đầu từ video mẫu.
+
 # Đặc tả Text Presets (học từ video mẫu)
 
 **[XM]** xác minh trên khung (0,1 s/khung) · **[UD]** ước đoán.

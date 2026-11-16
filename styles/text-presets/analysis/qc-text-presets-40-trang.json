@@ -1,0 +1,96 @@
+{
+  "file": "out/text-presets-40-trang.mp4",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "name": "Co luong video",
+      "ok": true,
+      "detail": "h264 High",
+      "severity": "error"
+    },
+    {
+      "name": "Kich thuoc",
+      "ok": true,
+      "detail": "1080x1920 (mong doi 1080x1920)",
+      "severity": "error"
+    },
+    {
+      "name": "FPS",
+      "ok": true,
+      "detail": "30.000 fps",
+      "severity": "error"
+    },
+    {
+      "name": "Pixel format",
+      "ok": true,
+      "detail": "yuv420p (yuv420p de tuong thich TikTok/iPhone)",
+      "severity": "error"
+    },
+    {
+      "name": "So khung hinh",
+      "ok": true,
+      "detail": "384 khung / 12.800s",
+      "severity": "error"
+    },
+    {
+      "name": "Bitrate",
+      "ok": false,
+      "detail": "1110 kbps tong",
+      "severity": "warn"
+    },
+    {
+      "name": "Co luong am thanh",
+      "ok": true,
+      "detail": "aac 48000Hz 2ch 336kbps",
+      "severity": "error"
+    },
+    {
+      "name": "Thoi luong",
+      "ok": true,
+      "detail": "12.800s (mong doi 12.8s)",
+      "severity": "error"
+    },
+    {
+      "name": "Dong bo do dai hinh/tieng",
+      "ok": true,
+      "detail": "lech 0.000s",
+      "severity": "error"
+    },
+    {
+      "name": "Giai ma khong loi",
+      "ok": true,
+      "detail": "0 loi",
+      "severity": "error"
+    },
+    {
+      "name": "Khong co doan den > 0.5s",
+      "ok": true,
+      "detail": "khong",
+      "severity": "warn"
+    },
+    {
+      "name": "Khong dong hinh > 1.5s",
+      "ok": false,
+      "detail": "bat dau tai 1.56667, 4.36667, 7.86667, 10.9333s",
+      "severity": "warn"
+    },
+    {
+      "name": "Am luong tich hop",
+      "ok": true,
+      "detail": "-14.1 LUFS (muc tieu mang xa hoi ~ -14)",
+      "severity": "warn"
+    },
+    {
+      "name": "True peak khong vo tieng",
+      "ok": true,
+      "detail": "-1.5 dBTP",
+      "severity": "warn"
+    },
+    {
+      "name": "Khong im lang > 1s",
+      "ok": true,
+      "detail": "khong",
+      "severity": "warn"
+    }
+  ]
+}

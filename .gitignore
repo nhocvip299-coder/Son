@@ -1,0 +1,8 @@
+node_modules/
+.venv/
+whisper.cpp/
+out/
+work/
+public/inputs/
+samples/*.wav
+*.log

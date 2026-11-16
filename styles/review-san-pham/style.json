@@ -1,0 +1,10 @@
+{
+  "id": "review-san-pham", "name": "Review sản phẩm", "status": "placeholder",
+  "description": "KHUNG CHỜ — chưa học từ video mẫu. Mặc định: sạch, tương phản cao, nhấn tính năng/giá/ưu-nhược.",
+  "theme": {"fontHeadline":"impact","fontCaption":"body","text":"#FFFFFF","accent":"#3DDC97","accentText":"#08140F","extrude":"#106B45","stroke":"#000000","shadow":"rgba(0,0,0,0.6)","neon":"#3DDC97"},
+  "captions": {"enabled": true, "uppercase": false, "combineMs": 1100},
+  "titles": {"effects":["popBounce","slideMask","typewriter"], "hookEffect":"zoomPunch", "maxPerMinute": 8, "minGapMs": 4000, "keywords": ["giá","pin","camera","ưu điểm","nhược điểm","đáng mua","bảo hành","chất lượng"]},
+  "pacing": {"cutSilenceMs": 450, "padMs": 120, "jumpZoom": 1.1},
+  "sfx": {"cutWhoosh": true, "volume": 0.8, "musicVolume": 0.12},
+  "grade": {"contrast": 1.06, "saturate": 1.05, "brightness": 1.0, "vignette": 0.3}
+}

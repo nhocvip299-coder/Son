@@ -1,0 +1,10 @@
+{
+  "id": "cyberpunk-hologram", "name": "Cyberpunk Hologram", "status": "placeholder",
+  "description": "KHUNG CHỜ — chưa học từ video mẫu. Mặc định: neon cyan/magenta, glitch, scanline.",
+  "theme": {"fontHeadline":"tech","fontCaption":"tech","text":"#E8FDFF","accent":"#00E5FF","accentText":"#00121A","extrude":"#7A00FF","stroke":"#00060F","shadow":"rgba(0,0,0,0.7)","neon":"#00E5FF"},
+  "captions": {"enabled": true, "uppercase": true, "combineMs": 1000},
+  "titles": {"effects":["neonGlitch","zoomPunch"], "hookEffect":"neonGlitch", "maxPerMinute": 10, "minGapMs": 3500, "keywords": ["AI","tương lai","công nghệ","hệ thống","dữ liệu"]},
+  "pacing": {"cutSilenceMs": 380, "padMs": 100, "jumpZoom": 1.12},
+  "sfx": {"cutWhoosh": true, "volume": 0.85, "musicVolume": 0.14},
+  "grade": {"contrast": 1.12, "saturate": 1.15, "brightness": 0.96, "vignette": 0.5}
+}

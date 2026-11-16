@@ -1,0 +1,10 @@
+{
+  "id": "bat-dong-san-chuyen-gia", "name": "Bất động sản Chuyên Gia", "status": "placeholder",
+  "description": "KHUNG CHỜ — chưa học từ video mẫu. Mặc định: sang trọng, xanh navy + vàng, nhịp vừa, nhấn số liệu/diện tích/giá.",
+  "theme": {"fontHeadline":"clean","fontCaption":"clean","text":"#FFFFFF","accent":"#E9C46A","accentText":"#0B1D3A","extrude":"#0B1D3A","stroke":"#06122A","shadow":"rgba(0,0,0,0.55)","neon":"#E9C46A"},
+  "captions": {"enabled": true, "uppercase": false, "combineMs": 1300},
+  "titles": {"effects":["slideMask","typewriter"], "hookEffect":"slideMask", "maxPerMinute": 6, "minGapMs": 5000, "keywords": ["m2","m²","tỷ","triệu","sổ","pháp lý","lợi nhuận","vị trí","mặt tiền","căn hộ","đất","dự án"]},
+  "pacing": {"cutSilenceMs": 600, "padMs": 150, "jumpZoom": 1.06},
+  "sfx": {"cutWhoosh": false, "volume": 0.6, "musicVolume": 0.1},
+  "grade": {"contrast": 1.04, "saturate": 1.0, "brightness": 1.02, "vignette": 0.3}
+}

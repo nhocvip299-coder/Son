@@ -249,4 +249,59 @@ hit = np.sin(2 * np.pi * np.cumsum(80 * np.exp(-tt * 9) + 45) / SR) * env(len(tt
 hit += 0.5 * lp(rng.standard_normal(len(tt)), 5000) * env(len(tt), 0.0005, 0.05, 5)
 save("hit", stereo(hit, width=0.5))
 
+
+# ---- SFX bam ten am thanh trong preset CapCut (tu tong hop, to + ro hon) ----
+def sq(f, tt):
+    return np.sign(np.sin(2 * np.pi * f * tt))
+
+def note(m, d, wave="sine", dec=8.0):
+    tt = t(d)
+    f = 440 * 2 ** ((m - 69) / 12)
+    w = np.sin(2 * np.pi * f * tt) if wave == "sine" else sq(f, tt) * 0.5
+    return w * np.exp(-tt * dec) * np.minimum(1, tt / 0.003)
+
+def seq(parts):
+    n = max(int(o * SR) + len(x) for o, x in parts)
+    out = np.zeros(n)
+    for o, x in parts:
+        i = int(o * SR)
+        out[i:i + len(x)] += x
+    return out
+
+# positive: hop am di len sang + shimmer (PositiveTransition_*)
+pos = seq([(i * 0.06, note(m, 0.6, dec=5) * (0.9 - i * 0.1)) for i, m in enumerate([72, 76, 79, 84, 88])])
+pos += 0.25 * np.resize(bp(rng.standard_normal(len(pos)), 6000, 12000), len(pos)) * np.exp(-np.arange(len(pos)) / SR * 4)
+save("positive", stereo(pos, width=0.6))
+# shine: lap lanh sang, nhieu not cao ngau nhien (Shine Collect / glitter / star)
+sh = seq([(rng.uniform(0, 0.35), note(rng.integers(90, 104), 0.35, dec=14) * rng.uniform(0.4, 1)) for _ in range(16)])
+save("shine", stereo(sh, width=0.8))
+# reverse-swish: noise phong to dan roi cat (Reverse Swish)
+d = 0.6
+r = sweep_noise(d, 600, 6000, 0.35) * np.linspace(0, 1, int(SR * d)) ** 2.5
+save("reverse-swish", stereo(r, pan_sweep=True))
+# flat: tieng "tac" mem, go nhe (Flat_03)
+tt = t(0.12)
+fl = np.sin(2 * np.pi * np.cumsum(420 * np.exp(-tt * 25) + 180) / SR) * np.exp(-tt * 40) + 0.4 * bp(rng.standard_normal(len(tt)), 1500, 5000) * np.exp(-tt * 120)
+save("flat", fl)
+# blip8: 2 not vuong 8-bit (8bit_08)
+save("blip8", stereo(seq([(0, note(84, 0.07, "sq", 10)), (0.07, note(91, 0.12, "sq", 10))]), width=0.2))
+# game: arpeggio 8-bit di len (Game_02/06)
+save("game", stereo(seq([(i * 0.05, note(m, 0.08, "sq", 12)) for i, m in enumerate([72, 76, 79, 84, 88, 91])]), width=0.2))
+# pops: chuoi bong bong noi (Pops Up / Pop Bubbles / 水面冒泡 / water drop)
+def bub(f0):
+    tt = t(0.07)
+    return np.sin(2 * np.pi * np.cumsum(f0 * (1 + 1.8 * tt / 0.07)) / SR) * np.exp(-tt * 45)
+save("pops", stereo(seq([(i * 0.06 + rng.uniform(0, 0.02), bub(rng.uniform(500, 1100))) for i in range(5)]), width=0.4))
+# hud: beep so hoa ngan (HUD Interface)
+save("hud", stereo(seq([(0, note(96, 0.05, "sq", 30) * 0.6), (0.06, note(100, 0.05, "sq", 30) * 0.6), (0.12, note(103, 0.1, "sine", 20))]), width=0.3))
+# mouse: double click (Mouse Clicks)
+cl = bp(rng.standard_normal(int(SR * 0.012)), 2000, 9000) * np.exp(-np.arange(int(SR * 0.012)) / SR * 400)
+save("mouse", seq([(0, cl), (0.09, cl * 0.8)]))
+# coin: 2 not chuong (Earn Coins)
+save("coin", stereo(seq([(0, note(88, 0.09, dec=20)), (0.08, note(95, 0.5, dec=6))]), width=0.3))
+# paper: lat giay (Turn the paper)
+d = 0.35
+pa = bp(rng.standard_normal(int(SR * d)), 1500, 8000) * np.sin(np.pi * np.linspace(0, 1, int(SR * d))) ** 3
+save("paper", stereo(pa, pan_sweep=True))
+
 make_bed()

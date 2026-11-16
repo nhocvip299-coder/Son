@@ -23,25 +23,25 @@ export const CC_PRESETS = DATA as CcPreset[];
 export const CC_SIZE_K = 5.1;
 
 /** Anh xa font: ten file / ma thu vien CapCut -> font mien phi co tieng Viet [UD, doi chieu anh bia]. */
-const FONT_MAP: Record<string, { family: string; weight: number; italic?: boolean; spacing?: number }> = {
+const FONT_MAP: Record<string, { family: string; weight: number; italic?: boolean; spacing?: number; k?: number }> = {
   "UTM-Impact": { family: FONTS.impact, weight: 400 },
-  SnellRoundhand: { family: FONTS.elegant, weight: 400 },
-  "ZYVNA Serendipity": { family: FONTS.elegant, weight: 400 },
+  SnellRoundhand: { family: FONTS.elegant, weight: 400, k: 0.8 },
+  "ZYVNA Serendipity": { family: FONTS.elegant, weight: 400, k: 0.8 },
   "1FTVVIPClashGrotesk-LightIta": { family: FONTS.grotesk, weight: 300, italic: true },
   "PublicSans-Italic": { family: FONTS.grotesk, weight: 300, italic: true },
   "DTPhudu-Black": { family: FONTS.geo, weight: 900 },
   "1FTV-VIP-Russo-One": { family: FONTS.tech, weight: 700 },
   "SF-Pro-Display-Medium": { family: FONTS.body, weight: 500 },
   Helvetica: { family: FONTS.body, weight: 500 },
-  Constane: { family: FONTS.serif, weight: 700 },
+  Constane: { family: FONTS.serif, weight: 500, k: 0.88 },
   LFAXDI: { family: FONTS.body, weight: 700 },
   "Montserrat-Bold": { family: FONTS.geo, weight: 800 },
-  "cc:7546119100993473793": { family: FONTS.serif, weight: 500 }, // serif: Co hoi, trung tam dac dia
+  "cc:7546119100993473793": { family: FONTS.times, weight: 400, k: 0.82 }, // serif manh kieu Times: trung tam dac dia, Trai nghiem, Edit video
   "cc:7569930061634080001": { family: FONTS.condensed, weight: 700 }, // dam hep: Can Than, KOKI TRENDY
-  "cc:7582814327179201808": { family: FONTS.elegant, weight: 400 }, // viet tay manh: Tiet kiem, Dang song
-  "cc:7563907294598024449": { family: FONTS.elegant, weight: 400 }, // viet tay: Tinh hoa, Sinh loi
-  "cc:7652286612683967760": { family: FONTS.elegant, weight: 400 }, // dong, Sang trong
-  "cc:7533525380490136849": { family: FONTS.elegant, weight: 400 }, // voi moi khach hang
+  "cc:7582814327179201808": { family: FONTS.elegant, weight: 400, k: 0.8 }, // viet tay manh: Tiet kiem, Dang song
+  "cc:7563907294598024449": { family: FONTS.elegant, weight: 400, k: 0.8 }, // viet tay: Tinh hoa, Sinh loi
+  "cc:7652286612683967760": { family: FONTS.elegant, weight: 400, k: 0.8 }, // dong, Sang trong
+  "cc:7533525380490136849": { family: FONTS.elegant, weight: 400, k: 0.8 }, // voi moi khach hang
   "cc:7542214368361057553": { family: FONTS.rounded, weight: 900 }, // tron dam: Dau tu, Dang Ky
   "cc:7541311300924755201": { family: FONTS.rounded, weight: 900 }, // Bi quyet, "Khoa hoc"
   "cc:7533523458274151681": { family: FONTS.rounded, weight: 800 }, // Noi Bat, Ban Than
@@ -53,15 +53,25 @@ const fontOf = (key: string) => FONT_MAP[key] ?? { family: FONTS.body, weight: 7
 
 /** Ten SFX CapCut -> SFX tu tong hop (public/sfx). Thoi diem lay dung tu du lieu. */
 const SFX_MAP: Array<[RegExp, string]> = [
-  [/pop|bubble|telop|冒泡|water/i, "pop"],
-  [/positive|shine|glitter|kirarin|star|coin/i, "sparkle"],
+  [/positive/i, "positive"],
+  [/shine|glitter|kirarin|star/i, "shine"],
+  [/coin/i, "coin"],
+  [/reverse swish/i, "reverse-swish"],
   [/swish|knife|sword/i, "swish"],
-  [/transition/i, "whoosh"],
+  [/transitions sfx|transition/i, "whoosh"],
+  [/pops? up|bubble|冒泡|water|drop/i, "pops"],
+  [/telop|appear/i, "pop"],
   [/glitch/i, "glitch"],
-  [/8bit|game|hud|click|flat/i, "click"],
+  [/8bit/i, "blip8"],
+  [/game/i, "game"],
+  [/hud/i, "hud"],
+  [/mouse|click/i, "mouse"],
+  [/flat/i, "flat"],
   [/phone|answer/i, "ring"],
-  [/paper|page/i, "swoosh-down"],
+  [/paper|page/i, "paper"],
 ];
+/** Am luong SFX: CapCut luu muc thap (0.2-0.4) vi tron voi nhac; giong noi video BDS rat to -> nang len de nghe ro. */
+export const sfxGain = (v: number) => Math.min(1, Math.max(0.55, v * 2.6));
 export const sfxFor = (name: string) => SFX_MAP.find(([r]) => r.test(name))?.[1] ?? "pop";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -115,14 +125,19 @@ const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | nu
   // lop phu (co mask) dung dung font + co cua lop goc de chong khit (font thay the co do rong khac nhau)
   const st = twin && (l as { mask?: unknown }).mask ? { ...l.styles[0], font: twin.styles[0].font, size: twin.styles[0].size } : l.styles[0];
   const fm = fontOf(st.font || l.font);
-  const px = (st.size ?? l.fontSize ?? 15) * CC_SIZE_K * (width / 1080);
+  const px = (st.size ?? l.fontSize ?? 15) * CC_SIZE_K * (fm.k ?? 1) * (width / 1080);
   const color = (st.fill as { solid?: string } | null)?.solid ?? l.color ?? "#fff";
   const content = text ?? l.text;
   const inAnims = l.animations.filter((a) => a.type === "in");
   const outAnims = l.animations.filter((a) => a.type === "out");
   // hieu ung phat sang (Phat sang 2 / Glow 2): drop-shadow cung mau, do lon theo tham so
-  const g = glow ? `drop-shadow(0 0 ${(glow.size * 28).toFixed(1)}px ${color}cc) drop-shadow(0 0 ${(glow.size * 70).toFixed(1)}px ${color}66) brightness(${1 + glow.lum * 0.3})` : "";
+  // "Phat sang 2": quang sang rong cung mau + loi sang (hieu chinh tren video quay man hinh CapCut)
+  const g = glow
+    ? `drop-shadow(0 0 ${(glow.size * 45).toFixed(1)}px ${color}) drop-shadow(0 0 ${(glow.size * 110).toFixed(1)}px ${color}bb) drop-shadow(0 0 ${(glow.size * 220).toFixed(1)}px ${color}55) brightness(${1 + glow.lum * 0.8})`
+    : "";
   const outP = outAnims.length ? interpolate(t, [l.duration - outAnims[0].duration, l.duration], [1, 0], clamp) : 1;
+  // nghieng theo du lieu (italic_degree, mac dinh 10 do khi style italic) -> skew giong CapCut
+  const italicDeg = (st as { italic?: boolean }).italic || (l.italicDegree ?? 0) > 0 ? (l.italicDegree || 10) : 0;
   const textStyle: React.CSSProperties = {
     fontFamily: fm.family,
     fontWeight: fm.weight,
@@ -133,6 +148,7 @@ const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | nu
     lineHeight: 1 + (l.lineSpacing ?? 0),
     whiteSpace: "pre",
     textShadow: shadowCss(l, px),
+    transform: italicDeg ? `skewX(${-italicDeg}deg)` : undefined,
     opacity: (l.alpha ?? 1) * (l.opacity ?? 1) * outP,
   };
   const perChar = inAnims.find((a) => PER_CHAR.test(a.name));
@@ -190,7 +206,7 @@ const useUnionBox = (preset: CcPreset, texts?: Record<string, string>) => {
   for (const l of preset.layers) {
     const st = l.styles[0];
     const fm = fontOf(st.font || l.font);
-    const px = (st.size ?? l.fontSize ?? 15) * CC_SIZE_K * (width / 1080);
+    const px = (st.size ?? l.fontSize ?? 15) * CC_SIZE_K * (fm.k ?? 1) * (width / 1080);
     const m = measureText({ text: texts?.[l.text] ?? l.text, fontFamily: fm.family, fontSize: px, fontWeight: String(fm.weight), letterSpacing: `${l.letterSpacing ?? 0}em`, validateFontIsLoaded: false });
     const w = m.width * l.scale;
     const h = px * 1.05 * l.scale;
@@ -254,7 +270,7 @@ export const CapcutPreset: React.FC<{ preset: CcPreset; texts?: Record<string, s
       {withAudio
         ? preset.audio.map((a, i) => (
             <Sequence key={`a${i}`} from={Math.round(a.start * fps)} durationInFrames={Math.max(1, Math.round(a.duration * fps))} layout="none">
-              <Audio src={staticFile(`sfx/${sfxFor(a.name ?? "")}.wav`)} volume={Math.min(1, (a.volume ?? 1) * 0.6)} />
+              <Audio src={staticFile(`sfx/${sfxFor(a.name ?? "")}.wav`)} volume={sfxGain(a.volume ?? 0.4)} />
             </Sequence>
           ))
         : null}

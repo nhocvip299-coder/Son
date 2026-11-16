@@ -1,0 +1,1419 @@
+{
+ "source": "inputs/source-drive-1080.mp4",
+ "fps": 60,
+ "segments": [
+  {
+   "srcStartMs": 0,
+   "srcEndMs": 8100,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 8100,
+   "srcEndMs": 9918,
+   "zoom": 1.1
+  },
+  {
+   "srcStartMs": 10195,
+   "srcEndMs": 13653,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 13968,
+   "srcEndMs": 16667,
+   "zoom": 1.1
+  },
+  {
+   "srcStartMs": 16667,
+   "srcEndMs": 25383,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 25383,
+   "srcEndMs": 29083,
+   "zoom": 1.1
+  },
+  {
+   "srcStartMs": 29083,
+   "srcEndMs": 32517,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 32517,
+   "srcEndMs": 42667,
+   "zoom": 1.1
+  },
+  {
+   "srcStartMs": 42667,
+   "srcEndMs": 51067,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 51067,
+   "srcEndMs": 56771,
+   "zoom": 1.1
+  }
+ ],
+ "items": [
+  {
+   "preset": "Kobe Text 31",
+   "startMs": 0,
+   "durationMs": 3900,
+   "texts": {
+    "Hãy nắm bắt": "Căn liền kề",
+    "Cơ hội": "Vừa ở",
+    "Ngay bây giờ": "vừa kinh doanh"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 760
+   },
+   "note": "hook"
+  },
+  {
+   "preset": "Kobe Text 01",
+   "startMs": 5480,
+   "durationMs": 2600,
+   "texts": {
+    "Bất động sản": "San Hô 09-2",
+    "Đáng sống": "Căn liền kề"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 820
+   },
+   "note": "ten can"
+  },
+  {
+   "preset": "Kobe Text 33",
+   "startMs": 9260,
+   "durationMs": 1600,
+   "texts": {
+    "Vị Trí": "Căn Góc",
+    "trung tâm đắc địa": "vị trí đẹp"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 640
+   },
+   "note": "can goc"
+  },
+  {
+   "preset": "Kobe Text 40",
+   "startMs": 10903,
+   "durationMs": 2300,
+   "texts": {
+    "trị": "diện",
+    "giá": "tích đất",
+    "100 Triệu": "132 m²",
+    "đồng": "đất"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 820
+   },
+   "note": "dt dat"
+  },
+  {
+   "preset": "Kobe Text 09",
+   "startMs": 13428,
+   "durationMs": 2400,
+   "texts": {
+    "Tiết kiệm": "Xây dựng",
+    "50 TRIỆU": "486,5 M²",
+    "50 Triệu": "486,5 m²"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 820
+   },
+   "note": "dt xay dung"
+  },
+  {
+   "preset": "Kobe Text 16",
+   "startMs": 17658,
+   "durationMs": 2000,
+   "texts": {
+    "Tìm đúng": "Thiết kế",
+    "CĂN HỘ": "4 TẦNG",
+    "phù hợp": "+ 1 tum"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 620
+   },
+   "note": "tang"
+  },
+  {
+   "preset": "Kobe Text 34",
+   "startMs": 20478,
+   "durationMs": 2500,
+   "texts": {
+    "5": "8",
+    "Hiệu ứng": "mét",
+    "có sẳn": "mặt tiền",
+    "CapCut": "Ngã 3"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 700
+   },
+   "note": "mat tien"
+  },
+  {
+   "preset": "Kobe Text 21",
+   "startMs": 23068,
+   "durationMs": 1600,
+   "texts": {
+    "Tiện ích": "Tầng 1",
+    "Nổi Bật": "Kinh Doanh"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 760
+   },
+   "note": "kinh doanh"
+  },
+  {
+   "preset": "Kobe Text 20",
+   "startMs": 26568,
+   "durationMs": 2300,
+   "texts": {
+    "Đầu tư": "Homestay"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 760
+   },
+   "note": "homestay"
+  },
+  {
+   "preset": "Kobe Text 39",
+   "startMs": 29408,
+   "durationMs": 2000,
+   "texts": {
+    "Trải nghiệm": "Bàn giao",
+    "An Toàn": "Thô"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 560
+   },
+   "note": "ban giao"
+  },
+  {
+   "preset": "Kobe Text 02",
+   "startMs": 32168,
+   "durationMs": 1250,
+   "texts": {
+    "KOKI TRENDY": "SIÊU ĐẶC ĐỊA"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 820
+   },
+   "note": "dac dia"
+  },
+  {
+   "preset": "Kobe Text 12",
+   "startMs": 33958,
+   "durationMs": 1700,
+   "texts": {
+    "Đăng Ký": "300m",
+    "Ngay hôm nay": "Kinh Đô Ánh Sáng"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 760
+   },
+   "note": "300m"
+  },
+  {
+   "preset": "Kobe Text 18",
+   "startMs": 35798,
+   "durationMs": 2000,
+   "texts": {
+    "phát triển": "Vincom Mega Mall",
+    "Bản Thân": "500m"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 700
+   },
+   "note": "500m"
+  },
+  {
+   "preset": "Kobe Text 35",
+   "startMs": 38548,
+   "durationMs": 2750,
+   "texts": {
+    "Không": "Wonder",
+    "Gian": "Park",
+    "xanh": "400m"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 760
+   },
+   "note": "400m"
+  },
+  {
+   "preset": "Kobe Text 36",
+   "startMs": 42868,
+   "durationMs": 4300,
+   "texts": {
+    "Đừng mua": "Thanh toán",
+    "Dòng xe SUV": "Linh Hoạt",
+    "nếu bạn": "đầy đủ",
+    "chưa biết gì": "3 phương án"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 820
+   },
+   "note": "thanh toan"
+  },
+  {
+   "preset": "Kobe Text 10",
+   "startMs": 48818,
+   "durationMs": 1600,
+   "texts": {
+    "Tăng cao": "2 trong 1"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 700
+   },
+   "note": "2 trong 1"
+  },
+  {
+   "preset": "Kobe Text 19",
+   "startMs": 52208,
+   "durationMs": 1500,
+   "texts": {
+    "Phong cách sống": "Tọa lạc tại",
+    "Hiện Đại": "Ocean Park 2",
+    "Do bạn chọn": "Vinhomes"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1080,
+    "width": 840
+   },
+   "note": "ocean park"
+  },
+  {
+   "preset": "Kobe Text 26",
+   "startMs": 53778,
+   "durationMs": 2400,
+   "texts": {
+    "Kobe Media": "EM SƠN BĐS",
+    "is calling": "đang gọi cho bạn"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1040,
+    "width": 760
+   },
+   "note": "cta"
+  }
+ ],
+ "watermark": {
+  "line1": "Em Sơn",
+  "line2": "Tư vấn BĐS"
+ },
+ "words": [
+  {
+   "text": "Nếu",
+   "startMs": 0,
+   "endMs": 270
+  },
+  {
+   "text": "như",
+   "startMs": 270,
+   "endMs": 400
+  },
+  {
+   "text": "anh",
+   "startMs": 400,
+   "endMs": 530
+  },
+  {
+   "text": "chị",
+   "startMs": 530,
+   "endMs": 750
+  },
+  {
+   "text": "đang",
+   "startMs": 750,
+   "endMs": 990
+  },
+  {
+   "text": "tìm",
+   "startMs": 990,
+   "endMs": 1160
+  },
+  {
+   "text": "một",
+   "startMs": 1160,
+   "endMs": 1390
+  },
+  {
+   "text": "căn",
+   "startMs": 1390,
+   "endMs": 1590
+  },
+  {
+   "text": "liền",
+   "startMs": 1590,
+   "endMs": 1830
+  },
+  {
+   "text": "kề",
+   "startMs": 1830,
+   "endMs": 2080
+  },
+  {
+   "text": "vừa",
+   "startMs": 2080,
+   "endMs": 2390
+  },
+  {
+   "text": "để",
+   "startMs": 2390,
+   "endMs": 2710
+  },
+  {
+   "text": "ở",
+   "startMs": 2710,
+   "endMs": 2920
+  },
+  {
+   "text": "mà",
+   "startMs": 2920,
+   "endMs": 3040
+  },
+  {
+   "text": "vừa",
+   "startMs": 3020,
+   "endMs": 3180
+  },
+  {
+   "text": "phù",
+   "startMs": 3180,
+   "endMs": 3330
+  },
+  {
+   "text": "hợp",
+   "startMs": 3330,
+   "endMs": 3490
+  },
+  {
+   "text": "với",
+   "startMs": 3490,
+   "endMs": 3630
+  },
+  {
+   "text": "kinh",
+   "startMs": 3630,
+   "endMs": 3770
+  },
+  {
+   "text": "doanh",
+   "startMs": 3770,
+   "endMs": 3980
+  },
+  {
+   "text": "thì",
+   "startMs": 3980,
+   "endMs": 4160
+  },
+  {
+   "text": "hôm",
+   "startMs": 4160,
+   "endMs": 4280
+  },
+  {
+   "text": "nay",
+   "startMs": 4270,
+   "endMs": 4390
+  },
+  {
+   "text": "em",
+   "startMs": 4380,
+   "endMs": 4500
+  },
+  {
+   "text": "Sơn",
+   "startMs": 4450,
+   "endMs": 4580
+  },
+  {
+   "text": "giới",
+   "startMs": 4580,
+   "endMs": 4800
+  },
+  {
+   "text": "thiệu",
+   "startMs": 4800,
+   "endMs": 5050
+  },
+  {
+   "text": "với",
+   "startMs": 5050,
+   "endMs": 5230
+  },
+  {
+   "text": "anh",
+   "startMs": 5230,
+   "endMs": 5370
+  },
+  {
+   "text": "chị",
+   "startMs": 5370,
+   "endMs": 5580
+  },
+  {
+   "text": "căn",
+   "startMs": 5580,
+   "endMs": 5700
+  },
+  {
+   "text": "liền",
+   "startMs": 5660,
+   "endMs": 5900
+  },
+  {
+   "text": "kề",
+   "startMs": 5900,
+   "endMs": 6120
+  },
+  {
+   "text": "San Hô",
+   "startMs": 6120,
+   "endMs": 6750
+  },
+  {
+   "text": "09-2",
+   "startMs": 6750,
+   "endMs": 8020
+  },
+  {
+   "text": "Căn",
+   "startMs": 8020,
+   "endMs": 8300
+  },
+  {
+   "text": "liền",
+   "startMs": 8300,
+   "endMs": 8660
+  },
+  {
+   "text": "kề",
+   "startMs": 8660,
+   "endMs": 8910
+  },
+  {
+   "text": "này",
+   "startMs": 8910,
+   "endMs": 9170
+  },
+  {
+   "text": "là",
+   "startMs": 9170,
+   "endMs": 9360
+  },
+  {
+   "text": "căn",
+   "startMs": 9360,
+   "endMs": 9610
+  },
+  {
+   "text": "góc",
+   "startMs": 9610,
+   "endMs": 9910
+  },
+  {
+   "text": "tích",
+   "startMs": 10293,
+   "endMs": 10613
+  },
+  {
+   "text": "đất",
+   "startMs": 10613,
+   "endMs": 11003
+  },
+  {
+   "text": "là",
+   "startMs": 11003,
+   "endMs": 11233
+  },
+  {
+   "text": "132 m²",
+   "startMs": 11233,
+   "endMs": 12323
+  },
+  {
+   "text": "diện",
+   "startMs": 12323,
+   "endMs": 12723
+  },
+  {
+   "text": "tích",
+   "startMs": 12723,
+   "endMs": 13113
+  },
+  {
+   "text": "xây",
+   "startMs": 13113,
+   "endMs": 13413
+  },
+  {
+   "text": "là",
+   "startMs": 13528,
+   "endMs": 13798
+  },
+  {
+   "text": "486,5 m²",
+   "startMs": 13798,
+   "endMs": 15208
+  },
+  {
+   "text": "Hiện",
+   "startMs": 15208,
+   "endMs": 15578
+  },
+  {
+   "text": "tại",
+   "startMs": 15578,
+   "endMs": 15888
+  },
+  {
+   "text": "đang",
+   "startMs": 15888,
+   "endMs": 16198
+  },
+  {
+   "text": "xây",
+   "startMs": 16198,
+   "endMs": 16448
+  },
+  {
+   "text": "dựng",
+   "startMs": 16448,
+   "endMs": 16818
+  },
+  {
+   "text": "theo",
+   "startMs": 16818,
+   "endMs": 17118
+  },
+  {
+   "text": "thiết",
+   "startMs": 17118,
+   "endMs": 17508
+  },
+  {
+   "text": "kế",
+   "startMs": 17508,
+   "endMs": 17758
+  },
+  {
+   "text": "là",
+   "startMs": 17758,
+   "endMs": 17948
+  },
+  {
+   "text": "4",
+   "startMs": 17948,
+   "endMs": 18138
+  },
+  {
+   "text": "tầng",
+   "startMs": 18138,
+   "endMs": 18558
+  },
+  {
+   "text": "và",
+   "startMs": 18558,
+   "endMs": 18698
+  },
+  {
+   "text": "1",
+   "startMs": 18698,
+   "endMs": 18888
+  },
+  {
+   "text": "tum",
+   "startMs": 18888,
+   "endMs": 19368
+  },
+  {
+   "text": "nằm",
+   "startMs": 19368,
+   "endMs": 19588
+  },
+  {
+   "text": "giữa",
+   "startMs": 19588,
+   "endMs": 19918
+  },
+  {
+   "text": "ngã",
+   "startMs": 19918,
+   "endMs": 20078
+  },
+  {
+   "text": "3",
+   "startMs": 20078,
+   "endMs": 20248
+  },
+  {
+   "text": "với",
+   "startMs": 20248,
+   "endMs": 20578
+  },
+  {
+   "text": "mặt",
+   "startMs": 20578,
+   "endMs": 20798
+  },
+  {
+   "text": "tiền",
+   "startMs": 20798,
+   "endMs": 21128
+  },
+  {
+   "text": "lên",
+   "startMs": 21128,
+   "endMs": 21358
+  },
+  {
+   "text": "tới",
+   "startMs": 21358,
+   "endMs": 21638
+  },
+  {
+   "text": "8m",
+   "startMs": 21638,
+   "endMs": 22058
+  },
+  {
+   "text": "rất",
+   "startMs": 22058,
+   "endMs": 22288
+  },
+  {
+   "text": "phù",
+   "startMs": 22288,
+   "endMs": 22468
+  },
+  {
+   "text": "hợp",
+   "startMs": 22468,
+   "endMs": 22678
+  },
+  {
+   "text": "cho",
+   "startMs": 22678,
+   "endMs": 22848
+  },
+  {
+   "text": "anh",
+   "startMs": 22848,
+   "endMs": 22968
+  },
+  {
+   "text": "chị",
+   "startMs": 22938,
+   "endMs": 23168
+  },
+  {
+   "text": "kinh",
+   "startMs": 23168,
+   "endMs": 23408
+  },
+  {
+   "text": "doanh",
+   "startMs": 23408,
+   "endMs": 23688
+  },
+  {
+   "text": "ở",
+   "startMs": 23688,
+   "endMs": 23808
+  },
+  {
+   "text": "phía",
+   "startMs": 23748,
+   "endMs": 23908
+  },
+  {
+   "text": "tầng",
+   "startMs": 23908,
+   "endMs": 24168
+  },
+  {
+   "text": "1",
+   "startMs": 24168,
+   "endMs": 24428
+  },
+  {
+   "text": "Các",
+   "startMs": 24428,
+   "endMs": 24688
+  },
+  {
+   "text": "tầng",
+   "startMs": 24688,
+   "endMs": 24958
+  },
+  {
+   "text": "phía",
+   "startMs": 24958,
+   "endMs": 25238
+  },
+  {
+   "text": "trên",
+   "startMs": 25238,
+   "endMs": 25518
+  },
+  {
+   "text": "thì",
+   "startMs": 25518,
+   "endMs": 25728
+  },
+  {
+   "text": "anh",
+   "startMs": 25728,
+   "endMs": 26018
+  },
+  {
+   "text": "chị",
+   "startMs": 26018,
+   "endMs": 26178
+  },
+  {
+   "text": "có",
+   "startMs": 26178,
+   "endMs": 26348
+  },
+  {
+   "text": "thể",
+   "startMs": 26348,
+   "endMs": 26668
+  },
+  {
+   "text": "khai",
+   "startMs": 26668,
+   "endMs": 26848
+  },
+  {
+   "text": "thác",
+   "startMs": 26848,
+   "endMs": 27118
+  },
+  {
+   "text": "cho",
+   "startMs": 27118,
+   "endMs": 27288
+  },
+  {
+   "text": "thuê",
+   "startMs": 27288,
+   "endMs": 27568
+  },
+  {
+   "text": "homestay",
+   "startMs": 27568,
+   "endMs": 28108
+  },
+  {
+   "text": "Tình",
+   "startMs": 28108,
+   "endMs": 28378
+  },
+  {
+   "text": "trạng",
+   "startMs": 28378,
+   "endMs": 28708
+  },
+  {
+   "text": "căn",
+   "startMs": 28708,
+   "endMs": 28908
+  },
+  {
+   "text": "này",
+   "startMs": 28908,
+   "endMs": 29108
+  },
+  {
+   "text": "thì",
+   "startMs": 29108,
+   "endMs": 29308
+  },
+  {
+   "text": "sẽ",
+   "startMs": 29308,
+   "endMs": 29508
+  },
+  {
+   "text": "bàn",
+   "startMs": 29508,
+   "endMs": 29708
+  },
+  {
+   "text": "giao",
+   "startMs": 29708,
+   "endMs": 29908
+  },
+  {
+   "text": "thô",
+   "startMs": 29908,
+   "endMs": 30108
+  },
+  {
+   "text": "cho",
+   "startMs": 30108,
+   "endMs": 30258
+  },
+  {
+   "text": "anh",
+   "startMs": 30258,
+   "endMs": 30408
+  },
+  {
+   "text": "chị",
+   "startMs": 30408,
+   "endMs": 30658
+  },
+  {
+   "text": "là",
+   "startMs": 30658,
+   "endMs": 30808
+  },
+  {
+   "text": "có",
+   "startMs": 30808,
+   "endMs": 30958
+  },
+  {
+   "text": "cầu",
+   "startMs": 30958,
+   "endMs": 31208
+  },
+  {
+   "text": "thang",
+   "startMs": 31208,
+   "endMs": 31608
+  },
+  {
+   "text": "tọa",
+   "startMs": 31608,
+   "endMs": 31808
+  },
+  {
+   "text": "lạc",
+   "startMs": 31808,
+   "endMs": 32008
+  },
+  {
+   "text": "tại",
+   "startMs": 32008,
+   "endMs": 32268
+  },
+  {
+   "text": "vị",
+   "startMs": 32268,
+   "endMs": 32388
+  },
+  {
+   "text": "trí",
+   "startMs": 32378,
+   "endMs": 32538
+  },
+  {
+   "text": "siêu",
+   "startMs": 32538,
+   "endMs": 32738
+  },
+  {
+   "text": "đặc",
+   "startMs": 32738,
+   "endMs": 32978
+  },
+  {
+   "text": "địa",
+   "startMs": 32978,
+   "endMs": 33308
+  },
+  {
+   "text": "cách",
+   "startMs": 33308,
+   "endMs": 33488
+  },
+  {
+   "text": "quảng",
+   "startMs": 33488,
+   "endMs": 33738
+  },
+  {
+   "text": "trường",
+   "startMs": 33738,
+   "endMs": 34058
+  },
+  {
+   "text": "Kinh",
+   "startMs": 34058,
+   "endMs": 34198
+  },
+  {
+   "text": "Đô",
+   "startMs": 34198,
+   "endMs": 34408
+  },
+  {
+   "text": "Ánh",
+   "startMs": 34408,
+   "endMs": 34528
+  },
+  {
+   "text": "Sáng",
+   "startMs": 34478,
+   "endMs": 34758
+  },
+  {
+   "text": "khoảng",
+   "startMs": 34758,
+   "endMs": 34938
+  },
+  {
+   "text": "tầm",
+   "startMs": 34938,
+   "endMs": 35108
+  },
+  {
+   "text": "300m",
+   "startMs": 35108,
+   "endMs": 35568
+  },
+  {
+   "text": "Cách",
+   "startMs": 35568,
+   "endMs": 35898
+  },
+  {
+   "text": "Vincom",
+   "startMs": 35898,
+   "endMs": 36298
+  },
+  {
+   "text": "Mega Mall",
+   "startMs": 36298,
+   "endMs": 36758
+  },
+  {
+   "text": "500m",
+   "startMs": 36758,
+   "endMs": 37478
+  },
+  {
+   "text": "và",
+   "startMs": 37478,
+   "endMs": 37628
+  },
+  {
+   "text": "cách",
+   "startMs": 37628,
+   "endMs": 37968
+  },
+  {
+   "text": "công",
+   "startMs": 37968,
+   "endMs": 38308
+  },
+  {
+   "text": "viên",
+   "startMs": 38308,
+   "endMs": 38648
+  },
+  {
+   "text": "Wonder",
+   "startMs": 38648,
+   "endMs": 39248
+  },
+  {
+   "text": "Park",
+   "startMs": 39248,
+   "endMs": 39518
+  },
+  {
+   "text": "chỉ",
+   "startMs": 39518,
+   "endMs": 39858
+  },
+  {
+   "text": "khoảng",
+   "startMs": 39858,
+   "endMs": 40398
+  },
+  {
+   "text": "tầm",
+   "startMs": 40398,
+   "endMs": 40718
+  },
+  {
+   "text": "400m",
+   "startMs": 40718,
+   "endMs": 41528
+  },
+  {
+   "text": "Hiện",
+   "startMs": 41528,
+   "endMs": 41808
+  },
+  {
+   "text": "tại",
+   "startMs": 41808,
+   "endMs": 42038
+  },
+  {
+   "text": "thì",
+   "startMs": 42038,
+   "endMs": 42228
+  },
+  {
+   "text": "căn",
+   "startMs": 42228,
+   "endMs": 42408
+  },
+  {
+   "text": "này",
+   "startMs": 42408,
+   "endMs": 42618
+  },
+  {
+   "text": "đang",
+   "startMs": 42618,
+   "endMs": 42828
+  },
+  {
+   "text": "có",
+   "startMs": 42828,
+   "endMs": 42968
+  },
+  {
+   "text": "phương",
+   "startMs": 42968,
+   "endMs": 43338
+  },
+  {
+   "text": "án",
+   "startMs": 43338,
+   "endMs": 43468
+  },
+  {
+   "text": "thanh",
+   "startMs": 43468,
+   "endMs": 43768
+  },
+  {
+   "text": "toán",
+   "startMs": 43768,
+   "endMs": 43928
+  },
+  {
+   "text": "cực",
+   "startMs": 43928,
+   "endMs": 44148
+  },
+  {
+   "text": "kỳ",
+   "startMs": 44148,
+   "endMs": 44318
+  },
+  {
+   "text": "linh",
+   "startMs": 44318,
+   "endMs": 44528
+  },
+  {
+   "text": "hoạt",
+   "startMs": 44528,
+   "endMs": 44878
+  },
+  {
+   "text": "đầy",
+   "startMs": 44878,
+   "endMs": 45138
+  },
+  {
+   "text": "đủ",
+   "startMs": 45138,
+   "endMs": 45368
+  },
+  {
+   "text": "cả",
+   "startMs": 45368,
+   "endMs": 45548
+  },
+  {
+   "text": "3",
+   "startMs": 45548,
+   "endMs": 45698
+  },
+  {
+   "text": "phương",
+   "startMs": 45698,
+   "endMs": 46108
+  },
+  {
+   "text": "án",
+   "startMs": 46108,
+   "endMs": 46388
+  },
+  {
+   "text": "Nếu",
+   "startMs": 46388,
+   "endMs": 46658
+  },
+  {
+   "text": "như",
+   "startMs": 46658,
+   "endMs": 46788
+  },
+  {
+   "text": "anh",
+   "startMs": 46788,
+   "endMs": 46918
+  },
+  {
+   "text": "chị",
+   "startMs": 46918,
+   "endMs": 47148
+  },
+  {
+   "text": "mà",
+   "startMs": 47148,
+   "endMs": 47278
+  },
+  {
+   "text": "quan",
+   "startMs": 47278,
+   "endMs": 47478
+  },
+  {
+   "text": "tâm",
+   "startMs": 47478,
+   "endMs": 47628
+  },
+  {
+   "text": "đến",
+   "startMs": 47628,
+   "endMs": 47978
+  },
+  {
+   "text": "những",
+   "startMs": 47978,
+   "endMs": 48218
+  },
+  {
+   "text": "dòng",
+   "startMs": 48218,
+   "endMs": 48438
+  },
+  {
+   "text": "sản",
+   "startMs": 48438,
+   "endMs": 48658
+  },
+  {
+   "text": "phẩm",
+   "startMs": 48658,
+   "endMs": 48918
+  },
+  {
+   "text": "vừa",
+   "startMs": 48918,
+   "endMs": 49138
+  },
+  {
+   "text": "kinh",
+   "startMs": 49138,
+   "endMs": 49308
+  },
+  {
+   "text": "doanh",
+   "startMs": 49308,
+   "endMs": 49528
+  },
+  {
+   "text": "vừa",
+   "startMs": 49528,
+   "endMs": 49748
+  },
+  {
+   "text": "để",
+   "startMs": 49748,
+   "endMs": 49998
+  },
+  {
+   "text": "ở",
+   "startMs": 49998,
+   "endMs": 50348
+  },
+  {
+   "text": "tọa",
+   "startMs": 50348,
+   "endMs": 50558
+  },
+  {
+   "text": "lạc",
+   "startMs": 50558,
+   "endMs": 50768
+  },
+  {
+   "text": "tại",
+   "startMs": 50768,
+   "endMs": 50978
+  },
+  {
+   "text": "vị",
+   "startMs": 50978,
+   "endMs": 51158
+  },
+  {
+   "text": "trí",
+   "startMs": 51158,
+   "endMs": 51328
+  },
+  {
+   "text": "cực",
+   "startMs": 51328,
+   "endMs": 51518
+  },
+  {
+   "text": "kỳ",
+   "startMs": 51518,
+   "endMs": 51678
+  },
+  {
+   "text": "đặc",
+   "startMs": 51678,
+   "endMs": 51968
+  },
+  {
+   "text": "địa",
+   "startMs": 51968,
+   "endMs": 52308
+  },
+  {
+   "text": "tại",
+   "startMs": 52308,
+   "endMs": 52548
+  },
+  {
+   "text": "Vinhomes",
+   "startMs": 52548,
+   "endMs": 52828
+  },
+  {
+   "text": "Ocean Park",
+   "startMs": 52828,
+   "endMs": 53158
+  },
+  {
+   "text": "2",
+   "startMs": 53158,
+   "endMs": 53368
+  },
+  {
+   "text": "thì",
+   "startMs": 53368,
+   "endMs": 53628
+  },
+  {
+   "text": "có",
+   "startMs": 53628,
+   "endMs": 53748
+  },
+  {
+   "text": "thể",
+   "startMs": 53668,
+   "endMs": 53878
+  },
+  {
+   "text": "liên",
+   "startMs": 53878,
+   "endMs": 54088
+  },
+  {
+   "text": "hệ",
+   "startMs": 54088,
+   "endMs": 54258
+  },
+  {
+   "text": "trực",
+   "startMs": 54258,
+   "endMs": 54508
+  },
+  {
+   "text": "tiếp",
+   "startMs": 54508,
+   "endMs": 54768
+  },
+  {
+   "text": "cho",
+   "startMs": 54768,
+   "endMs": 54958
+  },
+  {
+   "text": "em",
+   "startMs": 54958,
+   "endMs": 55078
+  },
+  {
+   "text": "Sơn",
+   "startMs": 54978,
+   "endMs": 55148
+  },
+  {
+   "text": "theo",
+   "startMs": 55148,
+   "endMs": 55318
+  },
+  {
+   "text": "số",
+   "startMs": 55318,
+   "endMs": 55488
+  },
+  {
+   "text": "điện",
+   "startMs": 55488,
+   "endMs": 55788
+  },
+  {
+   "text": "thoại",
+   "startMs": 55788,
+   "endMs": 56168
+  }
+ ],
+ "wordsY": 1365,
+ "accentRe": "^(\\d|San|Hô|góc|tầng|tum|Homestay|Vinhomes|Ocean|Park|Mega|Mall|Wonder|Vincom|Sơn)"
+}

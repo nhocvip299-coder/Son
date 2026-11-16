@@ -20,6 +20,17 @@ const p = CC_PRESETS.find((x) => x.id === "Kobe Text 40")!; // "tri gia 100 Trie
 - Âm thanh tự phát đúng thời điểm trong dữ liệu (`withAudio={false}` để tắt).
 - Chọn preset: `references/capcut-catalog.md` (40 dòng: chữ, animation, SFX, khối hình). Xem tất cả: `out/capcut-40-presets-bds.mp4` (mỗi preset 3 s, có mã số).
 
+## Bắt buộc khi xuất video
+- Luôn có **2 bản**: thường + **chạy chữ từng chữ** (`plan.words` → `WordByWord`, preset dời lên ~80px để không chồng).
+- SFX phải nghe rõ: `sfxGain` (≥0.55); kiểm năng lượng >3 kHz quanh mốc SFX sau render.
+- Mỗi preset có thoát mượt 0.3s (`ExitFade` trong `CapcutEdit`) + nền tối mềm (`Backdrop`) khi chèn lên video sáng.
+
+## Hiệu chỉnh đã làm (so với video quay màn hình CapCut, trang B)
+- Phát sáng "Phát sáng 2": 3 lớp drop-shadow (45/110/220 × size) + brightness(1+lum×0.8).
+- Nghiêng theo dữ liệu (`italic_degree`, mặc định 10°) bằng skewX.
+- Hệ số cỡ theo font thay thế `FONT_MAP.k`: serif Noto 0.82, viết tay Great Vibes 0.8, Playfair 0.88.
+- Còn lệch: "1 Căn Hộ", "Không Gian" (font CapCut chưa có bản tương đương).
+
 ## Pipeline (thêm preset CapCut mới)
 1. Giải nén vào `styles/text-presets/source-zip/` (không chạy file trong gói).
 2. `python3 -I scripts/style/extract_capcut_presets.py <thu-muc-Presets> src/styles/textPresets/capcut_presets.json` — đệ quy clip ghép theo mã liên kết (extra_material_refs), gộp vị trí/tỉ lệ/lật/xoay, kế thừa animation/hiệu ứng/mask của clip cha, đo khung bao ảnh bìa.

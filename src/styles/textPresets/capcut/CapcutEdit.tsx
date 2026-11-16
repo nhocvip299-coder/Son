@@ -3,6 +3,7 @@ import { AbsoluteFill, Sequence, interpolate, staticFile, useCurrentFrame, useVi
 import { Video } from "@remotion/media";
 import { HdWatermark } from "../../hongDang/components";
 import { CC_PRESETS, CapcutPreset, type CcFit } from "./CapcutPreset";
+import { WordByWord, type WbwWord } from "./WordByWord";
 
 /** Dung video BDS: cat canh theo plan + chen preset CapCut tai cac moc loi noi. */
 export type CcEditPlan = {
@@ -11,8 +12,20 @@ export type CcEditPlan = {
   segments: Array<{ srcStartMs: number; srcEndMs: number; zoom: number }>;
   items: Array<{ preset: string; startMs: number; durationMs: number; texts?: Record<string, string>; fit: CcFit; note?: string }>;
   watermark?: { line1: string; line2?: string };
+  words?: WbwWord[]; // co -> ban "chay chu tung chu"
+  wordsY?: number;
+  accentRe?: string;
 };
 export const ccPlanDurationMs = (p: CcEditPlan) => p.segments.reduce((a, s) => a + s.srcEndMs - s.srcStartMs, 0);
+
+/** Thoat muot: 0.3s cuoi mo dan + thu nhe (tranh bien mat dot ngot). */
+const ExitFade: React.FC<{ dur: number; children: React.ReactNode }> = ({ dur, children }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const n = Math.round(0.3 * fps);
+  const p = interpolate(f, [dur - n, dur], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  return <AbsoluteFill style={{ opacity: p, scale: 0.96 + 0.04 * p }}>{children}</AbsoluteFill>;
+};
 
 /** Lop toi mem hinh bau duc sau preset: giu chu dan nho doc duoc tren nen sang (troi, tuong vang). */
 const Backdrop: React.FC<{ fit: CcFit; dur: number }> = ({ fit, dur }) => {
@@ -49,10 +62,13 @@ export const CapcutEdit: React.FC<{ plan: CcEditPlan }> = ({ plan }) => {
         return (
           <Sequence key={i} from={toF(it.startMs)} durationInFrames={toF(it.durationMs)} name={`${it.preset}: ${it.note ?? ""}`}>
             <Backdrop fit={it.fit} dur={toF(it.durationMs)} />
-            <CapcutPreset preset={p} texts={it.texts} fit={it.fit} />
+            <ExitFade dur={toF(it.durationMs)}>
+              <CapcutPreset preset={p} texts={it.texts} fit={it.fit} />
+            </ExitFade>
           </Sequence>
         );
       })}
+      {plan.words ? <WordByWord words={plan.words} y={plan.wordsY} accentRe={plan.accentRe} /> : null}
       {plan.watermark ? <HdWatermark line1={plan.watermark.line1} line2={plan.watermark.line2} /> : null}
     </AbsoluteFill>
   );

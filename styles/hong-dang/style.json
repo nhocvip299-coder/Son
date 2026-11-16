@@ -1,10 +1,49 @@
 {
-  "id": "hong-dang", "name": "Mẫu Hồng Đăng", "status": "placeholder",
-  "description": "KHUNG CHỜ — chưa học từ video mẫu. Thông số hiện tại là giá trị mặc định kiểu talking-head năng động, cần hiệu chỉnh theo video mẫu thật.",
-  "theme": {"fontHeadline":"impact","fontCaption":"body","text":"#FFFFFF","accent":"#FFD400","accentText":"#111111","extrude":"#B8860B","stroke":"#000000","shadow":"rgba(0,0,0,0.6)","neon":"#00E5FF"},
-  "captions": {"enabled": true, "uppercase": false, "combineMs": 1100},
-  "titles": {"effects":["popBounce","slideMask","typewriter"], "hookEffect":"zoomPunch", "maxPerMinute": 8, "minGapMs": 4000, "keywords": []},
-  "pacing": {"cutSilenceMs": 450, "padMs": 120, "jumpZoom": 1.1},
-  "sfx": {"cutWhoosh": true, "volume": 0.8, "musicVolume": 0.12},
-  "grade": {"contrast": 1.06, "saturate": 1.08, "brightness": 1.0, "vignette": 0.35}
+  "id": "hong-dang",
+  "name": "Mẫu Hồng Đăng",
+  "status": "calibrating",
+  "description": "Đang hiệu chỉnh từ 2 video mẫu (reference/). Xem .claude/skills/mau-hong-dang và references/style-spec.md. Màu/vị trí đã xác minh, font ước lượng.",
+  "theme": {
+    "fontHeadline": "geo",
+    "fontCaption": "body",
+    "text": "#FFFFFF",
+    "accent": "#04EFFB",
+    "accentText": "#001018",
+    "extrude": "#0796B8",
+    "stroke": "#000000",
+    "shadow": "rgba(0,0,0,0.6)",
+    "neon": "#04EFFB"
+  },
+  "captions": {
+    "enabled": false,
+    "uppercase": false,
+    "combineMs": 1100
+  },
+  "titles": {
+    "effects": [
+      "popBounce",
+      "slideMask",
+      "typewriter"
+    ],
+    "hookEffect": "zoomPunch",
+    "maxPerMinute": 6,
+    "minGapMs": 4000,
+    "keywords": []
+  },
+  "pacing": {
+    "cutSilenceMs": 450,
+    "padMs": 120,
+    "jumpZoom": 1.1
+  },
+  "sfx": {
+    "cutWhoosh": true,
+    "volume": 0.8,
+    "musicVolume": 0.12
+  },
+  "grade": {
+    "contrast": 1.06,
+    "saturate": 1.08,
+    "brightness": 1.0,
+    "vignette": 0.35
+  }
 }

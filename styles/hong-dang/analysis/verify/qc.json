@@ -1,0 +1,96 @@
+{
+  "file": "out/mau-hong-dang-verify.mp4",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "name": "Co luong video",
+      "ok": true,
+      "detail": "h264 High",
+      "severity": "error"
+    },
+    {
+      "name": "Kich thuoc",
+      "ok": true,
+      "detail": "1080x1920 (mong doi 1080x1920)",
+      "severity": "error"
+    },
+    {
+      "name": "FPS",
+      "ok": true,
+      "detail": "30.000 fps",
+      "severity": "error"
+    },
+    {
+      "name": "Pixel format",
+      "ok": true,
+      "detail": "yuv420p (yuv420p de tuong thich TikTok/iPhone)",
+      "severity": "error"
+    },
+    {
+      "name": "So khung hinh",
+      "ok": true,
+      "detail": "240 khung / 8.000s",
+      "severity": "error"
+    },
+    {
+      "name": "Bitrate",
+      "ok": true,
+      "detail": "2919 kbps tong",
+      "severity": "warn"
+    },
+    {
+      "name": "Co luong am thanh",
+      "ok": true,
+      "detail": "aac 48000Hz 2ch 131kbps",
+      "severity": "error"
+    },
+    {
+      "name": "Thoi luong",
+      "ok": true,
+      "detail": "8.000s (mong doi 8s)",
+      "severity": "error"
+    },
+    {
+      "name": "Dong bo do dai hinh/tieng",
+      "ok": true,
+      "detail": "lech 0.000s",
+      "severity": "error"
+    },
+    {
+      "name": "Giai ma khong loi",
+      "ok": true,
+      "detail": "0 loi",
+      "severity": "error"
+    },
+    {
+      "name": "Khong co doan den > 0.5s",
+      "ok": true,
+      "detail": "khong",
+      "severity": "warn"
+    },
+    {
+      "name": "Khong dong hinh > 1.5s",
+      "ok": true,
+      "detail": "khong",
+      "severity": "warn"
+    },
+    {
+      "name": "Am luong tich hop",
+      "ok": true,
+      "detail": "-13.7 LUFS (muc tieu mang xa hoi ~ -14)",
+      "severity": "warn"
+    },
+    {
+      "name": "True peak khong vo tieng",
+      "ok": true,
+      "detail": "-1.5 dBTP",
+      "severity": "warn"
+    },
+    {
+      "name": "Khong im lang > 1s",
+      "ok": false,
+      "detail": "tai 0.947208s",
+      "severity": "warn"
+    }
+  ]
+}

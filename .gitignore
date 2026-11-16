@@ -6,3 +6,5 @@ work/
 public/inputs/
 samples/*.wav
 *.log
+reference/*.mp4
+reference/*.MP4

@@ -1,0 +1,198 @@
+{
+ "source": "reference/ref1.mp4",
+ "size": 7998250,
+ "duration": 71.59,
+ "video": {
+  "codec": "hevc",
+  "w": 1080,
+  "h": 1920,
+  "fps": "2997/50"
+ },
+ "cuts": {
+  "count": 17,
+  "times": [
+   6.3,
+   8.3,
+   12.4,
+   17.2,
+   22.0,
+   25.5,
+   27.3,
+   29.3,
+   31.9,
+   37.8,
+   42.2,
+   44.6,
+   48.4,
+   49.5,
+   56.4,
+   63.7,
+   66.1
+  ],
+  "avg_shot_s": 3.98,
+  "median_shot_s": 3.95,
+  "per_min": 14.2
+ },
+ "text_events": {
+  "count": 2,
+  "per_min": 1.7,
+  "times": [
+   53.4,
+   66.5
+  ]
+ },
+ "edge_density_by_band_top_to_bottom": [
+  0.017,
+  0.0184,
+  0.0586,
+  0.0422,
+  0.0731,
+  0.1183,
+  0.091,
+  0.0642,
+  0.0632,
+  0.0368
+ ],
+ "palette": [
+  {
+   "hex": "#a18d76",
+   "share": 0.283
+  },
+  {
+   "hex": "#bbb6b2",
+   "share": 0.238
+  },
+  {
+   "hex": "#262322",
+   "share": 0.131
+  },
+  {
+   "hex": "#7b664a",
+   "share": 0.122
+  },
+  {
+   "hex": "#0c0b0c",
+   "share": 0.12
+  },
+  {
+   "hex": "#443b34",
+   "share": 0.106
+  }
+ ],
+ "accent_colors": [
+  "#9a7339",
+  "#04effb",
+  "#07d1f3",
+  "#f4f205",
+  "#07b0f2"
+ ],
+ "brightness_flashes": [],
+ "audio": {
+  "onsets_count": 51,
+  "onsets_per_min": 42.7,
+  "cut_onset_sync_ratio": 0.24,
+  "onsets": [
+   0.03,
+   0.15,
+   0.76,
+   1.58,
+   1.73,
+   2.07,
+   4.13,
+   6.3,
+   7.26,
+   8.26,
+   11.15,
+   11.38,
+   12.66,
+   14.65,
+   17.41,
+   20.74,
+   20.92,
+   23.75,
+   23.97,
+   25.87,
+   26.97,
+   28.35,
+   35.43,
+   36.13,
+   36.28,
+   38.9,
+   39.26,
+   39.41,
+   44.68,
+   48.26,
+   49.05,
+   49.63,
+   50.63,
+   51.96,
+   52.85,
+   54.7,
+   55.03,
+   55.32,
+   57.8,
+   58.46,
+   60.38,
+   60.54,
+   61.4,
+   61.54,
+   63.75,
+   64.71,
+   66.66,
+   67.25,
+   68.03,
+   68.66,
+   68.99
+  ]
+ },
+ "keyframes": [
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k00_006.70s.jpg",
+   "t": 6.7
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k01_008.70s.jpg",
+   "t": 8.7
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k02_012.80s.jpg",
+   "t": 12.8
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k03_017.60s.jpg",
+   "t": 17.6
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k04_022.40s.jpg",
+   "t": 22.4
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k05_025.90s.jpg",
+   "t": 25.9
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k06_032.30s.jpg",
+   "t": 32.3
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k07_038.20s.jpg",
+   "t": 38.2
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k08_045.00s.jpg",
+   "t": 45.0
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k09_049.90s.jpg",
+   "t": 49.9
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k10_056.80s.jpg",
+   "t": 56.8
+  },
+  {
+   "file": "styles/hong-dang/analysis/ref1/keyframes/k11_066.50s.jpg",
+   "t": 66.5
+  }
+ ]
+}

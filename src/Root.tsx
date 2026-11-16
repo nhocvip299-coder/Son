@@ -2,6 +2,7 @@ import React from "react";
 import { Composition } from "remotion";
 import { AutoEdit } from "./compositions/AutoEdit";
 import { Demo } from "./compositions/Demo";
+import { HongDangVerify } from "./styles/hongDang/Verify";
 import { EMPTY_PLAN, planDurationMs, type EditPlan } from "./compositions/plan";
 
 export const RemotionRoot: React.FC = () => {
@@ -9,6 +10,7 @@ export const RemotionRoot: React.FC = () => {
     <>
       <Composition id="Demo" component={Demo} durationInFrames={450} fps={30} width={1080} height={1920} />
       <Composition id="Demo60" component={Demo} durationInFrames={900} fps={60} width={1080} height={1920} />
+      <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="AutoEdit"
         component={AutoEdit}

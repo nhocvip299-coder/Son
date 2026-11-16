@@ -8,6 +8,7 @@ import { AbsoluteFill, Easing, Img, interpolate, random, spring, useVideoConfig 
 import { evolvePath } from "@remotion/paths";
 import { FONTS } from "../../lib/fonts";
 import { useFrame30 } from "../../lib/theme";
+import { useFitOneLine } from "../../lib/useFit";
 
 export const HD = {
   cyanTop: "#04EFFB", // [XM] do tu accent_colors ref1/ref2
@@ -45,10 +46,14 @@ export const HdKeywordReveal: React.FC<{
   charEvery?: number; // frame@30 giua cac ky tu [UD ~2]
   duration: number; // frame@30
   icon?: React.ReactNode;
-}> = ({ lead, keyword, y = 0.62, x = 0.5, size = 128, color = "cyan", charEvery = 2, duration, icon }) => {
+}> = ({ lead, keyword, y = 0.62, x = 0.5, size: sizeMax = 128, color = "cyan", charEvery = 2, duration, icon }) => {
   const f = useFrame30();
-  const { height } = useVideoConfig();
+  const { height, width } = useVideoConfig();
   const chars = [...keyword.toUpperCase()];
+  // tu co co chu de 1 dong vua 80% chieu ngang (khong tran, khong chong)
+  const size = useFitOneLine(keyword, FONTS.geo, 900, width * 0.8, sizeMax, { textTransform: "uppercase", letterSpacing: "0.01em" });
+  const leadFit = useFitOneLine(lead ?? " ", FONTS.body, 600, width * 0.84, Math.max(36, Math.min(sizeMax * 0.36, size * 0.5)));
+  const leadSize = leadFit;
   const leadIn = interpolate(f, [0, 6], [0, 1], { ...clamp, easing: easeOut });
   const kwStart = lead ? 4 : 0;
   const exit = interpolate(f, [duration - 6, duration], [1, 0], clamp);
@@ -70,10 +75,12 @@ export const HdKeywordReveal: React.FC<{
           <div
             style={{
               fontFamily: FONTS.body,
-              fontWeight: 500,
-              fontSize: size * 0.34,
+              fontWeight: 600,
+              fontSize: leadSize,
               color: HD.white,
-              textShadow: HD.shadow,
+              whiteSpace: "nowrap",
+              // bong dam hon de doc duoc tren nen troi/tuong sang
+              textShadow: "0 2px 4px rgba(0,0,0,0.85), 0 0 16px rgba(0,0,0,0.55)",
               opacity: leadIn,
               translate: `0 ${interpolate(leadIn, [0, 1], [12, 0])}px`,
               marginBottom: size * 0.02,
@@ -219,9 +226,10 @@ export const HdQuestionCard: React.FC<{ line1: string; line2?: string; y?: numbe
 };
 
 /** Hieu ung 4 [XM vi tri+mau / UD easing] — Con so lon vang gradient (vd "5 TỶ") bat len o vung tren. */
-export const HdBigNumber: React.FC<{ text: string; y?: number; size?: number; duration: number }> = ({ text, y = 0.2, size = 170, duration }) => {
+export const HdBigNumber: React.FC<{ text: string; y?: number; size?: number; duration: number }> = ({ text, y = 0.2, size: sizeMax = 170, duration }) => {
   const f = useFrame30();
-  const { height } = useVideoConfig();
+  const { height, width } = useVideoConfig();
+  const size = useFitOneLine(text, FONTS.geo, 900, width * 0.82, sizeMax, { textTransform: "uppercase" });
   const s = spring({ frame: f, fps: 30, config: { damping: 10, stiffness: 180, mass: 0.6 } });
   const exit = interpolate(f, [duration - 6, duration], [1, 0], clamp);
   return (
@@ -242,7 +250,7 @@ export const HdBigNumber: React.FC<{ text: string; y?: number; size?: number; du
         filter: "drop-shadow(0 4px 0 #8a6a00) drop-shadow(0 12px 18px rgba(0,0,0,0.55))",
       }}
     >
-      <span style={gradientText("#FFF06A", HD.yellowDeep)}>{text}</span>
+      <span style={gradientText("#FFF06A", HD.yellowDeep)}>{text.toUpperCase()}</span>
     </div>
   );
 };

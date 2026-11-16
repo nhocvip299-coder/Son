@@ -8,3 +8,4 @@ samples/*.wav
 *.log
 reference/*.mp4
 reference/*.MP4
+inputs/

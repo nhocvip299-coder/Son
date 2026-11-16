@@ -1,0 +1,31 @@
+{
+  "_note": "Kich ban dung theo mau Hong Dang. at = chi so tu trong captions.json; dur = giay. Ten rieng da sua tay (ASR nghe sai).",
+  "source": "inputs/source-drive-1080.mp4",
+  "fps": 60,
+  "watermark": { "line1": "Em Sơn", "line2": "Tư vấn BĐS" },
+  "cut": { "silenceMs": 450, "padMs": 130, "punchIn": 1.1 },
+  "items": [
+    { "type": "card", "at": 0, "dur": 3.9, "line1": "Vừa ở, vừa kinh doanh", "line2": "căn liền kề cho anh chị" },
+    { "type": "keyword", "at": 30, "dur": 2.6, "lead": "Căn liền kề", "keyword": "San Hô 09-2" },
+    { "type": "keyword", "at": 40, "dur": 1.6, "lead": "Vị trí", "keyword": "Căn góc" },
+    { "type": "big", "at": 46, "dur": 2.3, "text": "132 m²" },
+    { "type": "card", "at": 46, "dur": 2.3, "line1": "Diện tích đất" },
+    { "type": "big", "at": 52, "dur": 2.4, "text": "486,5 m²" },
+    { "type": "card", "at": 52, "dur": 2.4, "line1": "Diện tích xây dựng" },
+    { "type": "keyword", "at": 62, "dur": 2.0, "lead": "Thiết kế", "keyword": "4 tầng + 1 tum" },
+    { "type": "big", "at": 73, "dur": 2.5, "text": "8M" },
+    { "type": "card", "at": 73, "dur": 2.5, "line1": "Mặt tiền rộng", "line2": "nằm giữa ngã 3" },
+    { "type": "keyword", "at": 84, "dur": 1.6, "lead": "Tầng 1", "keyword": "Kinh doanh" },
+    { "type": "keyword", "at": 99, "dur": 2.3, "lead": "Tầng trên cho thuê", "keyword": "Homestay", "icon": { "glyph": "$", "arrow": "up" } },
+    { "type": "keyword", "at": 110, "dur": 2.0, "lead": "Tình trạng", "keyword": "Bàn giao thô" },
+    { "type": "card", "at": 123, "dur": 1.2, "line1": "Vị trí siêu đặc địa" },
+    { "type": "keyword", "at": 131, "dur": 1.7, "lead": "Quảng trường Kinh Đô Ánh Sáng", "keyword": "300M" },
+    { "type": "keyword", "at": 139, "dur": 2.0, "lead": "Vincom Mega Mall", "keyword": "500M" },
+    { "type": "keyword", "at": 146, "dur": 2.75, "lead": "Công viên Wonder Park", "keyword": "400M" },
+    { "type": "card", "at": 159, "dur": 3.4, "line1": "Thanh toán linh hoạt", "line2": "đầy đủ cả 3 phương án" },
+    { "type": "big", "at": 170, "dur": 1.5, "text": "3 phương án" },
+    { "type": "keyword", "at": 185, "dur": 1.6, "lead": "Vừa kinh doanh, vừa để ở", "keyword": "2 trong 1" },
+    { "type": "keyword", "at": 200, "dur": 1.5, "lead": "Vinhomes", "keyword": "Ocean Park 2" },
+    { "type": "card", "at": 207, "dur": 99, "line1": "Liên hệ em Sơn", "line2": "để được tư vấn trực tiếp" }
+  ]
+}

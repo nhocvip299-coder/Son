@@ -1,0 +1,96 @@
+{
+  "file": "out/capcut-40-presets-bds.mp4",
+  "verdict": "PASS",
+  "checks": [
+    {
+      "name": "Co luong video",
+      "ok": true,
+      "detail": "h264 High",
+      "severity": "error"
+    },
+    {
+      "name": "Kich thuoc",
+      "ok": true,
+      "detail": "1080x1920 (mong doi 1080x1920)",
+      "severity": "error"
+    },
+    {
+      "name": "FPS",
+      "ok": true,
+      "detail": "30.000 fps",
+      "severity": "error"
+    },
+    {
+      "name": "Pixel format",
+      "ok": true,
+      "detail": "yuv420p (yuv420p de tuong thich TikTok/iPhone)",
+      "severity": "error"
+    },
+    {
+      "name": "So khung hinh",
+      "ok": true,
+      "detail": "3600 khung / 120.000s",
+      "severity": "error"
+    },
+    {
+      "name": "Bitrate",
+      "ok": false,
+      "detail": "527 kbps tong",
+      "severity": "warn"
+    },
+    {
+      "name": "Co luong am thanh",
+      "ok": true,
+      "detail": "aac 48000Hz 2ch 67kbps",
+      "severity": "error"
+    },
+    {
+      "name": "Thoi luong",
+      "ok": true,
+      "detail": "120.000s (mong doi 120s)",
+      "severity": "error"
+    },
+    {
+      "name": "Dong bo do dai hinh/tieng",
+      "ok": true,
+      "detail": "lech 0.000s",
+      "severity": "error"
+    },
+    {
+      "name": "Giai ma khong loi",
+      "ok": true,
+      "detail": "0 loi",
+      "severity": "error"
+    },
+    {
+      "name": "Khong co doan den > 0.5s",
+      "ok": true,
+      "detail": "khong",
+      "severity": "warn"
+    },
+    {
+      "name": "Khong dong hinh > 1.5s",
+      "ok": false,
+      "detail": "bat dau tai 1, 3.5, 6.56667, 9.66667, 12.8333, 15.9, 19, 21.5667, 24.9, 28.1667, 31.1333, 37.0333, 39.9, 42.5, 45.8667, 49, 52.0667, 54.7, 58.2333, 60.6667, 63.8667, 66.7, 69.8, 75.6333, 78.9667, 82.2667, 84.9667, 91.4333, 96.8, 100.033, 103.133, 106.467, 108.667, 112.067, 114.833, 118s",
+      "severity": "warn"
+    },
+    {
+      "name": "Am luong tich hop",
+      "ok": true,
+      "detail": "-13.5 LUFS (muc tieu mang xa hoi ~ -14)",
+      "severity": "warn"
+    },
+    {
+      "name": "True peak khong vo tieng",
+      "ok": true,
+      "detail": "-1.4 dBTP",
+      "severity": "warn"
+    },
+    {
+      "name": "Khong im lang > 1s",
+      "ok": false,
+      "detail": "tai 0.102271, 3.34994, 7.00421, 9.50812, 12.8811, 15.8463, 19.1815, 21.8826, 24.8329, 27.0138, 31.0144, 34.8855, 36.8462, 39.8337, 42.9333, 45.2687, 49.4577, 52.2317, 54.8345, 58.2758, 60.0027, 64.1939, 66.7029, 70.1013, 72.6132, 75.8842, 78.8468, 82.0687, 84.5465, 91.2073, 94.2677, 96.2144, 100.034, 103.403, 105.081, 108.002, 112.492, 114.84, 117.602s",
+      "severity": "warn"
+    }
+  ]
+}

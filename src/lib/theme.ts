@@ -38,7 +38,12 @@ export type SfxName =
   | "click"
   | "glitch"
   | "typing"
-  | "sparkle";
+  | "sparkle"
+  | "write"
+  | "swish"
+  | "shimmer"
+  | "ring"
+  | "hit";
 
 export type TypoProps = {
   text: string;

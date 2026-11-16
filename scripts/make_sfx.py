@@ -210,4 +210,43 @@ def make_bed(seconds=16.0, bpm=96):
     print("wrote music/bed-ambient", seconds, "s")
 
 
+
+# ---- SFX bo sung cho Text Presets ----
+# 11. write: tieng but viet tren giay (noise loc + bien do theo net)
+d = 0.55
+n = int(SR * d)
+tt = np.arange(n) / SR
+strokes = np.clip(np.sin(2 * np.pi * 7.5 * tt) * 0.5 + 0.6 + 0.3 * rng.standard_normal(n).cumsum() / np.sqrt(n), 0, 1)
+w = bp(rng.standard_normal(n), 2500, 9000) * strokes * np.minimum(1, tt / 0.03) * np.minimum(1, (d - tt) / 0.08)
+save("write", stereo(w * 0.7, width=0.3))
+
+# 12. swish: vut nhe, ngan (ve duong cong / gach)
+d = 0.28
+w = sweep_noise(d, 1500, 7000, 0.3)
+w *= np.sin(np.pi * np.linspace(0, 1, len(w))) ** 2
+save("swish", stereo(w, pan_sweep=True))
+
+# 13. shimmer: lap lanh doi mau (arpeggio sine cao)
+d = 0.9
+n = int(SR * d)
+sh = np.zeros(n)
+for i, m in enumerate([84, 88, 91, 96, 100]):
+    s0 = int(i * 0.07 * SR)
+    tt = np.arange(n - s0) / SR
+    sh[s0:] += np.sin(2 * np.pi * 440 * 2 ** ((m - 69) / 12) * tt) * np.exp(-tt * 6) * 0.4
+save("shimmer", stereo(sh, width=0.6))
+
+# 14. ring: chuong dien thoai ngan (2 hoi)
+d = 1.0
+tt = t(d)
+gate = ((tt % 0.5) < 0.38).astype(float)
+ring = (np.sin(2 * np.pi * 440 * tt) + np.sin(2 * np.pi * 480 * tt)) * (0.6 + 0.4 * np.sign(np.sin(2 * np.pi * 20 * tt))) * gate
+save("ring", stereo(lp(ring, 4000) * 0.6))
+
+# 15. hit: tieng "dap" khi ca trang chu xuat hien (sub + noise burst ngan)
+tt = t(0.6)
+hit = np.sin(2 * np.pi * np.cumsum(80 * np.exp(-tt * 9) + 45) / SR) * env(len(tt), 0.001, 0.35, 4)
+hit += 0.5 * lp(rng.standard_normal(len(tt)), 5000) * env(len(tt), 0.0005, 0.05, 5)
+save("hit", stereo(hit, width=0.5))
+
 make_bed()

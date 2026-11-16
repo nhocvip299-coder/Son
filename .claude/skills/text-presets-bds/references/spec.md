@@ -15,6 +15,10 @@
 - Đường cong gạch chân / nét bay ("CAPCUT Mobile", "100 Triệu", "1 Căn Hộ").
 - Gạch ngang đỏ, chữ chuyển đỏ ("Cẩn Thận").
 
+## Âm thanh
+- [XM] Tiếng "hit" mạnh đúng lúc mỗi trang chữ xuất hiện (0,39 / 3,6 / 6,92 / 9,39 s…).
+- [UD] Âm riêng từng chữ: không tách được khỏi nhạc nền (onset đều ~0,25–0,33 s là nhịp nhạc). Đã gán theo chuyển động: pop (hiện ký tự), glitch, write (viết tay), swish (đường vẽ/tracking), click (chip), ring (cuộc gọi), shimmer (đổi màu). Tất cả SFX tự tổng hợp, không dùng âm thanh của video mẫu.
+
 ## Khác biệt còn lại
 - Font viết tay mẫu mềm mại hơn (kiểu Great Vibes) [UD].
 - Mẫu có glow mạnh hơn, chữ to hơn để lấp đầy ô.

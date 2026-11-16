@@ -1,0 +1,340 @@
+{
+ "source": "inputs/source-drive-1080.mp4",
+ "fps": 60,
+ "segments": [
+  {
+   "srcStartMs": 0,
+   "srcEndMs": 8100,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 8100,
+   "srcEndMs": 9918,
+   "zoom": 1.1
+  },
+  {
+   "srcStartMs": 10195,
+   "srcEndMs": 13653,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 13968,
+   "srcEndMs": 16667,
+   "zoom": 1.1
+  },
+  {
+   "srcStartMs": 16667,
+   "srcEndMs": 25383,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 25383,
+   "srcEndMs": 29083,
+   "zoom": 1.1
+  },
+  {
+   "srcStartMs": 29083,
+   "srcEndMs": 32517,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 32517,
+   "srcEndMs": 42667,
+   "zoom": 1.1
+  },
+  {
+   "srcStartMs": 42667,
+   "srcEndMs": 51067,
+   "zoom": 1
+  },
+  {
+   "srcStartMs": 51067,
+   "srcEndMs": 56771,
+   "zoom": 1.1
+  }
+ ],
+ "items": [
+  {
+   "preset": "Kobe Text 31",
+   "startMs": 0,
+   "durationMs": 3900,
+   "texts": {
+    "Hãy nắm bắt": "Căn liền kề",
+    "Cơ hội": "Vừa ở",
+    "Ngay bây giờ": "vừa kinh doanh"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 760
+   },
+   "note": "hook"
+  },
+  {
+   "preset": "Kobe Text 01",
+   "startMs": 5480,
+   "durationMs": 2600,
+   "texts": {
+    "Bất động sản": "San Hô 09-2",
+    "Đáng sống": "Căn liền kề"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 820
+   },
+   "note": "ten can"
+  },
+  {
+   "preset": "Kobe Text 33",
+   "startMs": 9260,
+   "durationMs": 1600,
+   "texts": {
+    "Vị Trí": "Căn Góc",
+    "trung tâm đắc địa": "vị trí đẹp"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 640
+   },
+   "note": "can goc"
+  },
+  {
+   "preset": "Kobe Text 40",
+   "startMs": 10903,
+   "durationMs": 2300,
+   "texts": {
+    "trị": "diện",
+    "giá": "tích đất",
+    "100 Triệu": "132 m²",
+    "đồng": "đất"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 820
+   },
+   "note": "dt dat"
+  },
+  {
+   "preset": "Kobe Text 09",
+   "startMs": 13428,
+   "durationMs": 2400,
+   "texts": {
+    "Tiết kiệm": "Xây dựng",
+    "50 TRIỆU": "486,5 M²",
+    "50 Triệu": "486,5 m²"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 820
+   },
+   "note": "dt xay dung"
+  },
+  {
+   "preset": "Kobe Text 16",
+   "startMs": 17658,
+   "durationMs": 2000,
+   "texts": {
+    "Tìm đúng": "Thiết kế",
+    "CĂN HỘ": "4 TẦNG",
+    "phù hợp": "+ 1 tum"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 620
+   },
+   "note": "tang"
+  },
+  {
+   "preset": "Kobe Text 34",
+   "startMs": 20478,
+   "durationMs": 2500,
+   "texts": {
+    "5": "8",
+    "Hiệu ứng": "mét",
+    "có sẳn": "mặt tiền",
+    "CapCut": "Ngã 3"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 700
+   },
+   "note": "mat tien"
+  },
+  {
+   "preset": "Kobe Text 21",
+   "startMs": 23068,
+   "durationMs": 1600,
+   "texts": {
+    "Tiện ích": "Tầng 1",
+    "Nổi Bật": "Kinh Doanh"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 760
+   },
+   "note": "kinh doanh"
+  },
+  {
+   "preset": "Kobe Text 20",
+   "startMs": 26568,
+   "durationMs": 2300,
+   "texts": {
+    "Đầu tư": "Homestay"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 760
+   },
+   "note": "homestay"
+  },
+  {
+   "preset": "Kobe Text 39",
+   "startMs": 29408,
+   "durationMs": 2000,
+   "texts": {
+    "Trải nghiệm": "Bàn giao",
+    "An Toàn": "Thô"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 560
+   },
+   "note": "ban giao"
+  },
+  {
+   "preset": "Kobe Text 02",
+   "startMs": 32168,
+   "durationMs": 1250,
+   "texts": {
+    "KOKI TRENDY": "SIÊU ĐẶC ĐỊA"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 820
+   },
+   "note": "dac dia"
+  },
+  {
+   "preset": "Kobe Text 12",
+   "startMs": 33958,
+   "durationMs": 1700,
+   "texts": {
+    "Đăng Ký": "300m",
+    "Ngay hôm nay": "Kinh Đô Ánh Sáng"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 760
+   },
+   "note": "300m"
+  },
+  {
+   "preset": "Kobe Text 18",
+   "startMs": 35798,
+   "durationMs": 2000,
+   "texts": {
+    "phát triển": "Vincom Mega Mall",
+    "Bản Thân": "500m"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 700
+   },
+   "note": "500m"
+  },
+  {
+   "preset": "Kobe Text 35",
+   "startMs": 38548,
+   "durationMs": 2750,
+   "texts": {
+    "Không": "Wonder",
+    "Gian": "Park",
+    "xanh": "400m"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 760
+   },
+   "note": "400m"
+  },
+  {
+   "preset": "Kobe Text 36",
+   "startMs": 42868,
+   "durationMs": 4300,
+   "texts": {
+    "Đừng mua": "Thanh toán",
+    "Dòng xe SUV": "Linh Hoạt",
+    "nếu bạn": "đầy đủ",
+    "chưa biết gì": "3 phương án"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 820
+   },
+   "note": "thanh toan"
+  },
+  {
+   "preset": "Kobe Text 10",
+   "startMs": 48818,
+   "durationMs": 1600,
+   "texts": {
+    "Tăng cao": "2 trong 1"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 700
+   },
+   "note": "2 trong 1"
+  },
+  {
+   "preset": "Kobe Text 19",
+   "startMs": 52208,
+   "durationMs": 1500,
+   "texts": {
+    "Phong cách sống": "Tọa lạc tại",
+    "Hiện Đại": "Ocean Park 2",
+    "Do bạn chọn": "Vinhomes"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1160,
+    "width": 840
+   },
+   "note": "ocean park"
+  },
+  {
+   "preset": "Kobe Text 26",
+   "startMs": 53778,
+   "durationMs": 2400,
+   "texts": {
+    "Kobe Media": "EM SƠN BĐS",
+    "is calling": "đang gọi cho bạn"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1120,
+    "width": 760
+   },
+   "note": "cta"
+  }
+ ],
+ "watermark": {
+  "line1": "Em Sơn",
+  "line2": "Tư vấn BĐS"
+ }
+}

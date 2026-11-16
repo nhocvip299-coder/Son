@@ -6,6 +6,7 @@ import { HongDangVerify } from "./styles/hongDang/Verify";
 import { TextPresetsGallery } from "./styles/textPresets/Gallery";
 import { TextPresetsCatalog40, TextPresetsGallery40 } from "./styles/textPresets/Gallery40";
 import { CapcutCatalog } from "./styles/textPresets/capcut/CapcutCatalog";
+import { CapcutEdit, ccPlanDurationMs, type CcEditPlan } from "./styles/textPresets/capcut/CapcutEdit";
 import { HongDangEdit, hdPlanDurationMs, type HdPlan } from "./styles/hongDang/HongDangEdit";
 import { EMPTY_PLAN, planDurationMs, type EditPlan } from "./compositions/plan";
 
@@ -14,6 +15,16 @@ export const RemotionRoot: React.FC = () => {
     <>
       <Composition id="Demo" component={Demo} durationInFrames={450} fps={30} width={1080} height={1920} />
       <Composition id="Demo60" component={Demo} durationInFrames={900} fps={60} width={1080} height={1920} />
+      <Composition
+        id="CapcutEdit"
+        component={CapcutEdit}
+        durationInFrames={60}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{ plan: { source: "demo/bg.mp4", fps: 30, segments: [{ srcStartMs: 0, srcEndMs: 2000, zoom: 1 }], items: [] } as CcEditPlan }}
+        calculateMetadata={({ props }) => ({ fps: props.plan.fps, durationInFrames: Math.max(1, Math.round((ccPlanDurationMs(props.plan) / 1000) * props.plan.fps)) })}
+      />
       <Composition id="CapcutCatalog" component={CapcutCatalog} durationInFrames={3600} fps={30} width={1080} height={1920} defaultProps={{ showLabel: true }} />
       <Composition id="TextPresetsGallery40" component={TextPresetsGallery40} durationInFrames={384} fps={30} width={1080} height={1920} />
       <Composition id="TextPresetsCatalog40" component={TextPresetsCatalog40} durationInFrames={2160} fps={30} width={1080} height={1920} />

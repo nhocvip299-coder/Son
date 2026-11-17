@@ -35,6 +35,14 @@ Học từ 2 video TikTok (skill `hoc-mau-bds`). Phân tích: `styles/quyet-tran
 
 Ví dụ ghép đầy đủ: `src/styles/quyetTranLux/Verify.tsx` (composition `QuyetTranLuxVerify` / `QuyetTranLuxVerify60`).
 
+## Dựng video thật — composition `QuyetTranLuxEdit`
+Mẫu kế hoạch: `projects/san-ho-09-2/lux-plan.json` (item neo theo chỉ số từ `at` hoặc giây `atSec`; loại: title, tracking, number, heading, cards, flash, dip; mỗi item có `sfx`).
+1. Proxy 60fps vào `public/inputs/`, phiên âm (đường dẫn tuyệt đối), áp `asr-fixes.json` → `work/<du-an>/words.json`.
+2. Ghép props: `{ plan: { ...lux-plan, words, durationSec, captions: "phrase" | "wbw" } }` → 2 file props.
+3. Xem trước: `node scripts/style/stills.mjs QuyetTranLuxEdit <props> <thư-mục> 2.5 7 10.9 ...` (đừng chạy nhiều `remotion still` song song — tràn RAM).
+4. Render 2 bản → `master-audio` → `qc` → `hf_peaks.py` ở các mốc SFX.
+Ảnh cho `cards` lấy từ b-roll của chính footage người dùng (không dùng ảnh kênh mẫu).
+
 ## Quy tắc khi dựng
 1. Một khoảnh khắc — một khối chữ. Không chồng tiêu đề lên phụ đề cùng vùng.
 2. Giữ chữ trong `src/lib/safeZone.ts`; tiêu đề trên dùng y≥0.2H để không bị thanh TikTok che.

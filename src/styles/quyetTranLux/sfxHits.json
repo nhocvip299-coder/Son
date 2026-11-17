@@ -1,5 +1,5 @@
 {
- "qtl-sparkle": 0.0,
+ "qtl-sparkle": 0.302,
  "qtl-sparkle-whoosh": 0.065,
  "qtl-sparkle-whoosh-2": 0.116,
  "qtl-sparkle-sweep": 0.069,
@@ -12,7 +12,7 @@
  "lux-pop": 0.03,
  "lux-shutter": 0.289,
  "lux-tick": 0.007,
- "lux-whip": 0.0,
+ "lux-whip": 0.305,
  "lux-boom": 0.414,
  "qtl-pop-whoosh-hot": 0.112
 }

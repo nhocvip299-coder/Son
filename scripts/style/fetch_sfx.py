@@ -46,6 +46,14 @@ for name, (mid, ss, dur, note) in SFX.items():
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", str(tmp), "-af",
                     f"atrim=start={ss}:duration={dur},afade=t=out:st={max(0, dur - 0.12)}:d=0.12,loudnorm=I=-12:TP=-0.5:LRA=11,aresample=48000",
                     "-ac", "2", str(OUT / f"{name}.wav")], check=True)
+    # loudnorm doi khi tra ve IM LANG voi doan cat ngan (vd 869) -> du phong: chuan hoa theo dinh -1 dBFS
+    vd = subprocess.run(["ffmpeg", "-nostdin", "-i", str(OUT / f"{name}.wav"), "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True).stderr
+    mv = vd.split("max_volume: ")[1].split(" dB")[0] if "max_volume: " in vd else "-inf"
+    if mv == "-inf" or float(mv) < -60:
+        mx = float(subprocess.run(["ffmpeg", "-nostdin", "-ss", str(ss), "-t", str(dur), "-i", str(tmp), "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True).stderr.split("max_volume: ")[1].split(" dB")[0])
+        subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-ss", str(ss), "-t", str(dur), "-i", str(tmp), "-af",
+                        f"afade=t=out:st={max(0, dur - 0.12)}:d=0.12,volume={-1 - mx}dB,aresample=48000", "-ac", "2", str(OUT / f"{name}.wav")], check=True)
+        print("  (du phong chuan hoa dinh)", name)
     # diem dinh (hit point): cuc dai nang luong lam muot 50ms -> cue = moc chu - hit
     import numpy as np
     a = np.frombuffer(subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", str(OUT / f"{name}.wav"), "-ac", "1", "-ar", "16000", "-f", "f32le", "-"], capture_output=True).stdout, np.float32)

@@ -20,3 +20,5 @@ reference/**/*.mov
 styles/*/analysis/frames/*.png
 models/
 styles/*/analysis/*/text/ocr_frames/
+# SFX Mixkit (tai lai bang scripts/style/fetch_sfx.py)
+public/sfx/real/

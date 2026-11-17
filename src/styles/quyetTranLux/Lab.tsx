@@ -4,6 +4,10 @@ import { SfxTrack } from "../../compositions/shared";
 import type { SfxCue } from "../../lib/theme";
 import { QtBehindText, QtGrade, QtLightLeak, QtPersonFront, QtWindowText } from "./components";
 import { QtKRun, QtTrack } from "./kinetic";
+import HITS from "./sfxHits.json";
+
+/** Dat SFX sao cho DIEM DINH (hit) trung luc chu "toi" (moc + 0.08s). */
+const hitOf = (sfx: string) => (HITS as Record<string, number>)[sfx.replace("real/", "")] ?? 0;
 
 /**
  * Clip THU NGHIEM v3 cho nguoi dung duyet (chua dua vao ban dung San Ho).
@@ -33,15 +37,15 @@ const SCENES: Scene[] = [
         { align: "right", pieces: [{ text: "vừa", kind: "lead", t: rel(2.95) }, { text: "KINH DOANH", kind: "main", t: rel(3.55) }] },
       ]} />
     ),
-    sfx: [[1.33, "sparkle", 0.9], [1.34, "impact", 0.35], [3.53, "swish", 0.9]],
+    sfx: [[1.35, "real/qtl-sparkle-whoosh-2", 1], [1.35, "real/qtl-impact", 0.4], [3.55, "real/qtl-pop-whoosh", 1]],
   },
   {
     from: 5.45, to: 8.05, label: "2 chu trong suot + vet anh kim",
     render: (rel, len) => (
       <QtWindowText id="s1" lead="căn liền kề" lines={["SAN HÔ", "09-2"]} lineAt={[rel(6.1), rel(6.75)]} y={0.16} size={190}
-        fill={{ src: staticFile(SRC), startFrom: 30.5 }} duration={len} />
+        fill={{ src: "", kind: "liquid" }} duration={len} tint="gold" />
     ),
-    sfx: [[6.05, "sparkle", 0.9], [6.7, "sparkle", 0.8]],
+    sfx: [[6.1, "real/qtl-sparkle-sweep", 1], [6.75, "real/qtl-sparkle-whoosh-2", 0.9]],
   },
   {
     from: 10.1, to: 12.6, label: "3 chu don to theo loi nhan, sau lung nguoi", person: true,
@@ -51,15 +55,15 @@ const SCENES: Scene[] = [
         <QtBehindText lines={["132M²"]} lineAt={[rel(11.45)]} y={0.36} size={300} duration={len} />
       </>
     ),
-    sfx: [[11.43, "swish", 0.9], [11.44, "impact", 0.35]],
+    sfx: [[11.45, "real/qtl-sparkle-whoosh-2", 1], [11.45, "real/qtl-sparkle-sweep", 0.6], [11.45, "real/qtl-impact", 0.45]],
   },
   {
     from: 19.6, to: 21.05, label: "4 hai dong cheo nhau trong suot",
     render: (rel, len) => (
-      <QtWindowText id="s3" lines={["NẰM GIỮA", "NGÃ 3"]} lineAt={[rel(19.7), rel(20.4)]} y={0.24} size={170} rot={[8, -8]} dx={[-0.04, 0.08]}
-        fill={{ src: staticFile(SRC), startFrom: 8.6 }} duration={len} />
+      <QtWindowText id="s3" lines={["NẰM GIỮA", "NGÃ 3"]} lineAt={[rel(19.7), rel(20.4)]} y={0.24} size={170} rot={[8, -8]} dx={[-0.06, 0.14]}
+        fill={{ src: "", kind: "liquid" }} duration={len} tint="teal" />
     ),
-    sfx: [[19.65, "sparkle", 0.9], [20.35, "swish", 0.7]],
+    sfx: [[19.7, "real/qtl-sparkle-sweep", 1], [20.4, "real/qtl-pop-whoosh", 0.9]],
   },
   {
     from: 43.4, to: 47.0, label: "5 chu sau dau + chu chay duoi cam (tranh mat)", person: true,
@@ -72,15 +76,15 @@ const SCENES: Scene[] = [
         ]} />
       </>
     ),
-    sfx: [[44.83, "sparkle", 0.9], [44.84, "impact", 0.3], [46.03, "swish", 0.85]],
+    sfx: [[44.85, "real/qtl-sparkle-whoosh-2", 1], [44.85, "real/qtl-sparkle-sweep", 0.6], [44.85, "real/qtl-impact", 0.4], [46.05, "real/qtl-pop-whoosh", 1]],
   },
   {
     from: 52.9, to: 54.6, label: "6 chu trong suot sau lung nguoi", person: true,
     render: (rel, len) => (
       <QtWindowText id="s5" lines={["OCEAN", "PARK 2"]} lineAt={[rel(53.35), rel(53.75)]} y={0.22} size={230}
-        fill={{ src: staticFile(SRC), startFrom: 37.0 }} duration={len} />
+        fill={{ src: "", kind: "liquid" }} duration={len} tint="gold" />
     ),
-    sfx: [[53.3, "sparkle", 0.9], [53.7, "swish", 0.7]],
+    sfx: [[53.35, "real/qtl-sparkle-sweep", 1], [53.75, "real/qtl-transition", 0.8]],
   },
 ];
 export const QTL_LAB_SEC = SCENES.reduce((a, s) => a + (s.to - s.from), 0);
@@ -103,7 +107,8 @@ const useTrack = () => {
   return track;
 };
 
-export const QtlLab: React.FC = () => {
+/** stem: "all" binh thuong | "sfx" chi SFX | "voice" chi giong (de do SFX co ro tren giong khong). */
+export const QtlLab: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem = "all" }) => {
   const { fps } = useVideoConfig();
   const track = useTrack();
   if (!track) return null;
@@ -114,20 +119,20 @@ export const QtlLab: React.FC = () => {
     const len = sc.to - sc.from;
     acc += len;
     const rel = (s: number) => s - sc.from;
-    sc.sfx.forEach(([s, sfx, v]) => cues.push({ frame: Math.round((start + rel(s)) * fps), sfx, volume: v }));
-    if (i > 0) cues.push({ frame: Math.round((start - 0.15) * fps), sfx: "swish", volume: 0.9 }, { frame: Math.round((start - 0.05) * fps), sfx: "sparkle", volume: 0.6 });
+    sc.sfx.forEach(([s, sfx, v]) => cues.push({ frame: Math.round((start + rel(s) + 0.08 - hitOf(sfx)) * fps), sfx, volume: v }));
+    if (i > 0) cues.push({ frame: Math.round((start + 0.1 - hitOf("real/qtl-transition")) * fps), sfx: "real/qtl-transition", volume: 1 }, { frame: Math.round((start + 0.1 - hitOf("real/qtl-sparkle-sweep")) * fps), sfx: "real/qtl-sparkle-sweep", volume: 0.55 });
     return (
       <Sequence key={i} from={Math.round(start * fps)} durationInFrames={Math.round(len * fps)} name={sc.label}>
         <QtGrade>
           <Sequence from={-Math.round(sc.from * fps)} layout="none">
-            <OffthreadVideo src={staticFile(SRC)} />
+            <OffthreadVideo src={staticFile(SRC)} muted={stem === "sfx"} />
           </Sequence>
         </QtGrade>
         <QtTrack track={track} srcAt={sc.from}>
           {sc.render(rel, len)}
         </QtTrack>
         {sc.person ? <QtPersonFront src={staticFile(MATTE)} startFrom={sc.from} /> : null}
-        <div style={{ position: "absolute", left: 24, bottom: 40, color: "#ff0", fontSize: 28, fontFamily: "sans-serif", background: "rgba(0,0,0,0.5)", padding: "4px 10px" }}>THỬ v3 · {sc.label}</div>
+        <div style={{ position: "absolute", left: 24, bottom: 40, color: "#ff0", fontSize: 28, fontFamily: "sans-serif", background: "rgba(0,0,0,0.5)", padding: "4px 10px" }}>THỬ v4 · {sc.label}</div>
         {i > 0 ? <QtLightLeak /> : null}
       </Sequence>
     );
@@ -135,7 +140,7 @@ export const QtlLab: React.FC = () => {
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {blocks}
-      <SfxTrack cues={cues} />
+      {stem === "voice" ? null : <SfxTrack cues={cues} />}
     </AbsoluteFill>
   );
 };

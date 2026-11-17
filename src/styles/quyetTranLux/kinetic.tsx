@@ -15,7 +15,8 @@ import { AbsoluteFill, Easing, interpolate, staticFile, useCurrentFrame, useVide
 import { QT } from "./components";
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
-const expoOut = Easing.bezier(0.16, 1, 0.3, 1);
+// v4 "mem mai": giam toc duoi dai (easeOutQuint), nhoe giam theo binh phuong -> duoi ro net, khong giat
+const expoOut = Easing.bezier(0.22, 1, 0.36, 1);
 export type EnterKind = "slide" | "chroma" | "swing" | "pop" | "fade";
 
 /** f30 = so khung @30fps ke tu dau Sequence. */
@@ -25,7 +26,8 @@ const useF30 = () => {
   return (f * 30) / fps;
 };
 
-const ENTER_FRAMES: Record<EnterKind, number> = { slide: 4, chroma: 5, swing: 5, pop: 3, fade: 3 };
+const ENTER_FRAMES: Record<EnterKind, number> = { slide: 8, chroma: 8, swing: 9, pop: 6, fade: 6 };
+const EXIT_FRAMES = 6;
 
 /**
  * 1 manh chu co hieu ung vao/ra do tu mau.
@@ -44,16 +46,26 @@ export const QtKPiece: React.FC<{
   const a = at * 30;
   const n = ENTER_FRAMES[kind];
   const p = interpolate(f30, [a, a + n], [0, 1], { ...clamp, easing: expoOut });
-  const out = interpolate(f30, [end * 30 - 2, end * 30], [1, 0], clamp);
+  // thoat mem 6 khung: mo + nhoe + truot nhe sang trai
+  const out = interpolate(f30, [end * 30 - EXIT_FRAMES, end * 30], [1, 0], { ...clamp, easing: Easing.in(Easing.quad) });
   if (f30 < a || out <= 0) return <span style={{ ...style, opacity: 0, display: "inline-block", whiteSpace: "pre" }}>{text}</span>;
-  const base: React.CSSProperties = { ...style, display: "inline-block", whiteSpace: "pre", opacity: out };
-  if (kind === "fade") return <span style={{ ...base, opacity: p * out }}>{text}</span>;
+  const base: React.CSSProperties = {
+    ...style,
+    display: "inline-block",
+    whiteSpace: "pre",
+    opacity: out,
+    filter: out < 1 ? `blur(${(1 - out) * 8}px)` : undefined,
+    translate: out < 1 ? `${-(1 - out) * 24}px 0` : undefined,
+  };
+  const q = 1 - p; // con lai
+  if (kind === "fade")
+    return <span style={{ ...base, opacity: Math.min(1, p * 1.6) * out, translate: `${q * 18 - (1 - out) * 24}px 0`, filter: `blur(${q * q * 6 + (1 - out) * 8}px)` }}>{text}</span>;
   if (kind === "pop")
-    return <span style={{ ...base, opacity: Math.min(1, p * 2) * out, scale: `${1 + (1 - p) * 0.18}` }}>{text}</span>;
+    return <span style={{ ...base, opacity: Math.min(1, p * 2) * out, scale: `${1 + q * q * 0.25}`, filter: `blur(${q * q * 10 + (1 - out) * 8}px)` }}>{text}</span>;
   if (kind === "slide") {
     // vi tri: lao tu +0.45W ve 0; vet nhoe: SVG blur ngang ti le toc do
-    const x = (1 - p) * width * 0.45;
-    const speed = (1 - p) * 60; // do nhoe
+    const x = q * width * 0.45;
+    const speed = q * q * 70; // nhoe theo binh phuong -> duoi ro net
     return (
       <span style={{ ...base, position: "relative" }}>
         <svg width={0} height={0} style={{ position: "absolute" }}>
@@ -61,18 +73,18 @@ export const QtKPiece: React.FC<{
             <feGaussianBlur stdDeviation={`${speed} 0`} />
           </filter>
         </svg>
-        <span style={{ display: "inline-block", translate: `${x}px 0`, filter: speed > 0.5 ? `url(#mb-${id})` : undefined, opacity: Math.min(1, 0.35 + p) }}>{text}</span>
+        <span style={{ display: "inline-block", translate: `${x}px 0`, filter: speed > 0.5 ? `url(#mb-${id})` : undefined, opacity: Math.min(1, p * 2.2) }}>{text}</span>
       </span>
     );
   }
   if (kind === "chroma") {
     // 3 ban sao R/G/B lech doc + nhoe doc, hoi tu; khung cuoi ve mau that
-    const off = (1 - p) * 22;
-    const vb = (1 - p) * 14;
+    const off = q * q * 26;
+    const vb = q * q * 16;
     const ch = (c: string, dx: number, dy: number) => (
       <span style={{ position: "absolute", left: 0, top: 0, color: c, mixBlendMode: "screen", translate: `${dx}px ${dy}px`, filter: `url(#vb-${id})`, opacity: 0.9 }}>{text}</span>
     );
-    return p >= 0.98 ? (
+    return p >= 0.97 ? (
       <span style={base}>{text}</span>
     ) : (
       <span style={{ ...base, position: "relative", color: "transparent", textShadow: "none" }}>
@@ -89,9 +101,9 @@ export const QtKPiece: React.FC<{
     );
   }
   // swing: xoay quanh truc doc tu 75deg ve 0, tu ben trai, nhoe ngang
-  const rot = (1 - p) * 75;
-  const x = -(1 - p) * width * 0.25;
-  const speed = (1 - p) * 40;
+  const rot = q * 70;
+  const x = -q * width * 0.25;
+  const speed = q * q * 45;
   return (
     <span style={{ ...base, position: "relative", perspective: 900 }}>
       <svg width={0} height={0} style={{ position: "absolute" }}>

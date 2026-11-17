@@ -45,7 +45,16 @@ export type SfxName =
   | "ring"
   | "hit"
   | "shine"
-  | "reverse-swish";
+  | "reverse-swish"
+  // SFX thu that (Mixkit) — tai bang scripts/style/fetch_sfx.py
+  | "real/qtl-sparkle"
+  | "real/qtl-sparkle-whoosh"
+  | "real/qtl-sparkle-whoosh-2"
+  | "real/qtl-sparkle-sweep"
+  | "real/qtl-pop-whoosh"
+  | "real/qtl-transition"
+  | "real/qtl-swoosh"
+  | "real/qtl-impact";
 
 export type TypoProps = {
   text: string;

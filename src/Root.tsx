@@ -57,7 +57,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{ plan: { source: "demo/bg.mp4", fps: 60, items: [], words: [], durationSec: 1, captions: "phrase" } as QtlPlan }}
         calculateMetadata={({ props }) => ({ fps: props.plan.fps, durationInFrames: Math.max(1, Math.round(props.plan.durationSec * props.plan.fps)) })}
       />
-      <Composition id="QtlLab" component={QtlLab} durationInFrames={Math.round(QTL_LAB_SEC * 60)} fps={60} width={1080} height={1920} />
+      <Composition id="QtlLab" component={QtlLab} durationInFrames={Math.round(QTL_LAB_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

@@ -606,7 +606,29 @@ export const QtNegative: React.FC<{
  * Chu hien TRANG truoc (+ quang sang), roi tung ky tu TRAI -> PHAI tan thanh trong suot (lo video ben trong).
  * Cai dat: SVG <clipPath> chua <text>; video lap day bi cat theo hinh chu.
  * ==================================================================================== */
-export type QtFill = { src: string; startFrom?: number; kind?: "video" | "image"; zoom?: number };
+export type QtFill = { src: string; startFrom?: number; kind?: "video" | "image" | "liquid"; zoom?: number };
+/** v4: "anh kim long" chuyen dong lam ruot chu trong suot (mau: "HOÀNG MAI" lo dai den vang) — mau luon sach, ruc. */
+const LiquidFill: React.FC<{ tint: "gold" | "teal" | "none"; t: number }> = ({ tint, t }) => {
+  const C =
+    tint === "teal"
+      ? ["#0b4f5c", "#1fb5c4", "#8ff5ec", "#ffffff", "#0e7f95"]
+      : ["#5a3208", "#c9861f", "#ffd77a", "#fff6dc", "#a8650f"];
+  const a = t * 40;
+  return (
+    <AbsoluteFill style={{ background: C[0] }}>
+      <AbsoluteFill style={{ background: `linear-gradient(${115 + Math.sin(t * 1.3) * 12}deg, ${C[0]} 0%, ${C[1]} 30%, ${C[2]} 48%, ${C[4]} 62%, ${C[1]} 80%, ${C[0]} 100%)`, backgroundSize: "200% 100%", backgroundPosition: `${(a % 200) - 50}% 0` }} />
+      <AbsoluteFill style={{ background: `radial-gradient(ellipse 30% 18% at ${30 + Math.sin(t * 2.1) * 25}% ${22 + Math.cos(t * 1.7) * 8}%, ${C[3]} 0%, rgba(255,255,255,0) 70%)`, mixBlendMode: "screen" }} />
+      <AbsoluteFill style={{ background: `radial-gradient(ellipse 22% 12% at ${70 + Math.cos(t * 1.6) * 22}% ${30 + Math.sin(t * 2.4) * 10}%, ${C[3]} 0%, rgba(255,255,255,0) 70%)`, mixBlendMode: "screen", opacity: 0.8 }} />
+    </AbsoluteFill>
+  );
+};
+/** v4: mau cho chu trong suot (mau: "HOÀNG MAI" anh vang kim, "CỰC KỲ HIẾM" xanh ngoc) */
+export type QtTint = "gold" | "teal" | "none";
+const TINTS: Record<QtTint, { overlay: string; glow: string; edge: string }> = {
+  gold: { overlay: "linear-gradient(160deg, #fff1c9 0%, #ffc95e 35%, #e0902a 65%, #fff0c4 100%)", glow: "rgba(255,200,110,0.95)", edge: "rgba(255,246,220,0.95)" },
+  teal: { overlay: "linear-gradient(160deg, #d9fffb 0%, #4fe3d6 40%, #1aa6b8 70%, #d6fbff 100%)", glow: "rgba(110,240,230,0.9)", edge: "rgba(225,255,252,0.95)" },
+  none: { overlay: "none", glow: "rgba(255,255,255,0.9)", edge: "rgba(255,255,255,0.9)" },
+};
 export const QtWindowText: React.FC<{
   lines: string[];
   lineAt?: number[]; // giay (tuong doi) bat dau moi dong
@@ -620,25 +642,27 @@ export const QtWindowText: React.FC<{
   lead?: string;
   duration: number;
   id: string;
-}> = ({ lines, lineAt, fill, x = 0.5, y = 0.2, size = 150, rot, dx, weight = 900, lead, duration, id }) => {
+  tint?: QtTint;
+}> = ({ lines, lineAt, fill, x = 0.5, y = 0.2, size = 150, rot, dx, weight = 900, lead, duration, id, tint = "gold" }) => {
+  const TT = TINTS[tint];
   const { t, fps } = useT();
   const { width, height } = useVideoConfig();
-  // v3 [XM tung khung]: tat gon 2 khung (khong mo dan)
-  const out = interpolate(t, [duration - 0.07, duration], [1, 0], clamp);
+  // v4: thoat mem 0.2s
+  const out = interpolate(t, [duration - 0.2, duration], [1, 0], { ...clamp, easing: Easing.in(Easing.quad) });
   const at = lineAt ?? lines.map((_, i) => i * 0.4);
   const sizes = lines.map((l) => Math.min(size, (width * 0.9) / (Math.max(3, l.length) * 0.74)));
-  const lineY = (i: number) => y * height + lines.slice(0, i).reduce((a, _l, k) => a + sizes[k] * 0.98, 0);
+  const lineY = (i: number) => y * height + lines.slice(0, i).reduce((a, _l, k) => a + sizes[k] * (rot ? 1.25 : 0.98), 0);
   const tr = (i: number) => `rotate(${rot?.[i] ?? 0} ${x * width + (dx?.[i] ?? 0) * width} ${lineY(i)})`;
   // moi ky tu: hien trang (0.12s, xuat hien roi rac), giu trang ~0.35s, roi tan thanh trong suot theo thu tu trai->phai
   const chars = (l: string, i: number) =>
     [...l].map((c, k) => {
       // v3: ky tu bat ra trong ~3 khung (rai 0.1s), giu trang ngan, roi tan trong suot trai->phai trong ~0.35s
       const s0 = at[i] + random(`${id}a${i}${k}`) * 0.1;
-      const appear = interpolate(t, [s0, s0 + 0.07], [0, 1], clamp);
+      const appear = interpolate(t, [s0, s0 + 0.16], [0, 1], { ...clamp, easing: Easing.out(Easing.quad) });
       const wipe = interpolate(t, [at[i] + 0.3 + (k / Math.max(1, l.length)) * 0.3, at[i] + 0.45 + (k / Math.max(1, l.length)) * 0.3], [1, 0], clamp);
       return { c, appear, white: appear * wipe };
     });
-  const textEl = (i: number, l: string, mode: "clip" | "white" | "glow") => (
+  const textEl = (i: number, l: string, mode: "clip" | "white" | "glow" | "edge") => (
     <text
       key={`${mode}${i}`}
       x={x * width + (dx?.[i] ?? 0) * width}
@@ -651,8 +675,11 @@ export const QtWindowText: React.FC<{
       {chars(l, i).map((ch, k) => (
         <tspan
           key={k}
-          fill={mode === "glow" ? "#fff" : "#fff"}
-          fillOpacity={mode === "clip" ? (ch.appear > 0.5 ? 1 : 0) : mode === "white" ? ch.white : ch.appear * 0.9}
+          fill={mode === "glow" ? TT.glow : mode === "edge" ? "none" : "#fff"}
+          stroke={mode === "edge" ? TT.edge : undefined}
+          strokeWidth={mode === "edge" ? 3 : undefined}
+          strokeOpacity={mode === "edge" ? ch.appear * 0.9 : undefined}
+          fillOpacity={mode === "clip" ? (ch.appear > 0.5 ? 1 : 0) : mode === "white" ? ch.white : mode === "edge" ? 0 : ch.appear * 0.9}
         >
           {ch.c}
         </tspan>
@@ -668,7 +695,7 @@ export const QtWindowText: React.FC<{
         </div>
       ) : null}
       {/* quang sang (glow) theo hinh chu */}
-      <svg width={width} height={height} style={{ position: "absolute", inset: 0, filter: "blur(10px)", opacity: 0.55 }}>
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0, filter: "blur(14px)", opacity: 0.8 }}>
         {lines.map((l, i) => textEl(i, l, "glow"))}
       </svg>
       {/* lop video nhin qua ruot chu */}
@@ -680,8 +707,10 @@ export const QtWindowText: React.FC<{
         </defs>
       </svg>
       <AbsoluteFill style={{ clipPath: `url(#qtclip-${id})` }}>
-        <AbsoluteFill style={{ scale: `${fill.zoom ?? 1.15}`, filter: "brightness(1.12) contrast(1.05)" }}>
-          {fill.kind === "image" ? (
+        <AbsoluteFill style={{ scale: `${fill.zoom ?? 1.15}`, filter: "brightness(1.15) contrast(1.15) saturate(1.7)" }}>
+          {fill.kind === "liquid" ? (
+            <LiquidFill tint={tint} t={t} />
+          ) : fill.kind === "image" ? (
             <Img src={fill.src} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
           ) : (
             <Sequence from={-fillStart} layout="none">
@@ -690,6 +719,12 @@ export const QtWindowText: React.FC<{
           )}
         </AbsoluteFill>
       </AbsoluteFill>
+      {/* v4: nhuom mau (vang kim / xanh ngoc) ben trong chu trong suot */}
+      {tint !== "none" && fill.kind !== "liquid" ? (
+        <AbsoluteFill style={{ clipPath: `url(#qtclip-${id})`, mixBlendMode: "overlay", opacity: 0.85 }}>
+          <AbsoluteFill style={{ background: TT.overlay }} />
+        </AbsoluteFill>
+      ) : null}
       {/* v3 [XM ref01 "HOÀNG MAI"]: vet anh kim chay qua ruot chu trong suot */}
       <AbsoluteFill style={{ clipPath: `url(#qtclip-${id})`, mixBlendMode: "screen", opacity: 0.75 }}>
         <AbsoluteFill
@@ -701,6 +736,10 @@ export const QtWindowText: React.FC<{
           }}
         />
       </AbsoluteFill>
+      {/* v4: vien kinh sang quanh chu */}
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
+        {lines.map((l, i) => textEl(i, l, "edge"))}
+      </svg>
       {/* lop trang dang tan dan */}
       <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
         {lines.map((l, i) => textEl(i, l, "white"))}

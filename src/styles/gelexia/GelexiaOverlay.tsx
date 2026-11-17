@@ -8,6 +8,7 @@ import {
 import type { Caption } from "@remotion/captions";
 import { STYLE as S } from "./style";
 import { gelexiaAutoSfx } from "./sfx";
+import { WordByWord } from "../textPresets/capcut/WordByWord";
 
 export type Page = { startMs: number; endMs: number; lines: Caption[][] };
 export type Callout = {
@@ -24,6 +25,8 @@ export type GelexiaProject = {
   sfx?: { atMs: number; file: string; volume?: number }[];
   /** true: tự gắn SFX CC0 theo vai trò (sfx.ts) khi không khai báo sfx[]. */
   autoSfx?: boolean;
+  /** Bản "chạy chữ từng chữ" (CLAUDE.md): thay khối phụ đề bằng WordByWord CapCut, mỗi lần 1 từ. */
+  wordByWord?: { y?: number; accentRe?: string };
 };
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -99,7 +102,10 @@ export const GelexiaOverlay: React.FC<{ project: GelexiaProject }> = ({ project 
             )}
           </div>
         )}
-        {page && (
+        {project.wordByWord && (
+          <WordByWord words={project.pages.flatMap((p) => p.lines.flat()).map((w) => ({ text: w.text.trim(), startMs: w.startMs, endMs: w.endMs }))} y={project.wordByWord.y ?? 1300} accentRe={project.wordByWord.accentRe} />
+        )}
+        {page && !project.wordByWord && (
           <div style={{ position: "absolute", left: S.caption.left, right: S.caption.right, bottom: S.caption.bottom, textAlign: "center" }}>
             <div data-gelexia="caption-group" style={{ ...heavy, ...entryState(((ms - page.startMs) / 1000) * fps, ((page.endMs - page.startMs) / 1000) * fps, fps, "caption"), display: "inline-block", boxSizing: "border-box", maxWidth: "100%", background: S.panel, borderRadius: S.caption.radius, padding: `${S.caption.padY}px ${S.caption.padX}px`, fontSize: S.caption.size, lineHeight: S.caption.lineHeight }}>
               {page.lines.map((line, i) => (

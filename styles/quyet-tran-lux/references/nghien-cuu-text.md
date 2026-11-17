@@ -47,3 +47,36 @@ Mẫu chèn b-roll MỖI KHI nhắc tới thứ người xem không thấy: ngu�
 | "ĐỂ" khổng lồ (ref02 17.9 s) | bật ra | **bám theo camera** (lệch qua lại cùng khuôn mặt, ±20 px@540) | tắt gọn 2 khung |
 Quy tắc: vào 3–5 khung, KHÔNG trôi lơ lửng, KHÔNG mờ dần chậm; chữ lớn luôn nằm SAU lớp người.
 Cài đặt: `src/styles/quyetTranLux/kinetic.tsx` (QtKPiece slide/chroma/swing/pop/fade, QtKRun, QtTrack), `scripts/style/camera_track.py`, `scripts/style/frames_zoom.py`.
+
+## 6. Danh mục KEYFRAME từ 6 video kênh (ref01–ref06, ~18 phút) — `analysis/keyframes/*.jpg`
+Mỗi hàng ảnh = 1 khối chữ lớn: 10 khung lúc VÀO (1/30 s) + 6 khung lúc RA.
+| Kiểu vào | Ví dụ | Thời lượng | Hay dùng cho |
+|---|---|---|---|
+| Quét mềm trái→phải (mép quét nhòe) | "CHOÁNG NGỢP", "THÔNG TẦNG" (ref03) | ~0.27 s | tính từ/cảm xúc chữ lớn |
+| Lấy nét (nhòe→rõ, thu nhẹ) | "Đường kênh", "Đảm bảo" (ref05) | 0.2–0.3 s | danh từ ngắn, dòng phụ |
+| Lao ngang + nhòe chuyển động | "SỰ THẬT LÀ" (ref01) | 0.1–0.17 s | câu mở |
+| Tách màu RGB | "HÀ NỘI" | 0.17 s | địa danh |
+| Xoay lao vào từ trái | "HỒ HOÀN KIẾM" | 0.17 s | dòng chốt |
+| Ký tự bay ráp | "CHỖ ĐỖ XE ĐỊNH DANH" | 0.3 s | tiêu đề tính năng |
+| Trắng → trong suốt có màu | "HOÀNG MAI", "AEDAS" | 0.4 s | tên riêng |
+| Chữ nằm trên mặt đất bám flycam | "KIẾN TRÚC TÂN CỔ ĐIỂN" (ref06) | — | nhãn trên ảnh flycam |
+| Sóng màu chạy qua chữ khi đứng | "Uppingham School" (ref05) | liên tục | tên tiện ích |
+Ra: nhòe + mờ 0.2–0.3 s (phổ biến nhất), chớp sáng vàng/trắng, hoặc theo nhát cắt.
+Trực quan: 3 thẻ ảnh so sánh (GARDEN/DUPLEX/PENTHOUSE), thẻ thông số nền xám, mặt bằng tầng, khối "CƠ CẤU SẢN PHẨM" gạch đầu dòng, nhãn bám trên flycam.
+
+## 7. Storyboard trực quan đề xuất cho San Hô 09-2 (chờ duyệt)
+| Giây | Lời nói | Hình + chữ |
+|---|---|---|
+| 0–4.4 | "tìm một căn liền kề vừa để ở mà vừa phù hợp kinh doanh" | hook: dòng nhỏ lấy nét; "CĂN LIỀN KỀ" vào từ trái; "KINH DOANH" vào từ phải; tránh mặt (trên đầu) |
+| 5.5–8 | "căn liền kề San Hô 09-2" | chữ kính vàng "SAN HÔ / 09-2" từ dưới lên, phóng to |
+| 8–15.8 | "căn góc, đất 132m², xây dựng 486,5m²" | thẻ thông số 2 dòng (đất / xây dựng) số đếm lên + viền lô góc |
+| 16.7–19.6 | "4 tầng và 1 tum" | mặt cắt tòa nhà, tầng sáng dần T1→T4 + tum |
+| 19.6–22.9 | "nằm giữa ngã 3, mặt tiền 8m" | sơ đồ NGÃ 3 (đường tự vẽ, lô góc nhấp nháy, kích thước 8M) |
+| 23.6–29 | "tầng 1 kinh doanh, tầng trên homestay" | mặt cắt: T1 vàng KINH DOANH, T2–T4 xanh HOMESTAY (dải trống trên đầu) |
+| 29–32 | "bàn giao thô, có cầu thang" | trang ghép 3 ảnh b-roll + "BÀN GIAO THÔ" |
+| 32–34 | "vị trí siêu đặc địa" | chữ kính "SIÊU ĐẶC ĐỊA" sau lưng người |
+| 34–42 | "cách 300m / 500m / 400m" | danh sách ghim, số mét đếm lên |
+| 42–47 | "phương án thanh toán linh hoạt, đủ 3 phương án" | "LINH HOẠT" sau đầu + 3 thẻ 01/02/03 lật vào |
+| 47–51 | "vừa kinh doanh vừa để ở" | biểu tượng cửa hàng ⇄ ngôi nhà ghép thành 1 (2 TRONG 1) |
+| 51–54 | "Vinhomes Ocean Park 2" | chữ kính vàng sau lưng người |
+| 54–57 | "liên hệ em Sơn" | thẻ liên hệ (tên kênh người dùng) |

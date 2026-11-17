@@ -1,0 +1,3722 @@
+[
+ {
+  "start": 0.0,
+  "end": 0.33,
+  "text": "PA Z2 2Z",
+  "y": 0.455,
+  "y2": 0.839,
+  "x": 0.017,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 0.33,
+  "end": 1.33,
+  "text": "Căn hộ thì hiều.. IVE đc",
+  "y": 0.295,
+  "y2": 0.727,
+  "x": 0.0,
+  "maxh": 108,
+  "nframes": 3
+ },
+ {
+  "start": 1.33,
+  "end": 1.66,
+  "text": "nhưng mà v2,",
+  "y": 0.516,
+  "y2": 0.846,
+  "x": 0.356,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 1.67,
+  "end": 2.0,
+  "text": "MRIVE lựa những",
+  "y": 0.44,
+  "y2": 0.539,
+  "x": 0.0,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 2.0,
+  "end": 2.66,
+  "text": "PALM RIV kL dòng phẩm.",
+  "y": 0.445,
+  "y2": 0.545,
+  "x": 0.035,
+  "maxh": 56,
+  "nframes": 2
+ },
+ {
+  "start": 2.67,
+  "end": 3.0,
+  "text": "AL rất _ỶÏ",
+  "y": 0.448,
+  "y2": 0.944,
+  "x": 0.164,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 3.0,
+  "end": 3.33,
+  "text": "PA Trường",
+  "y": 0.453,
+  "y2": 0.546,
+  "x": 0.214,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 3.33,
+  "end": 3.66,
+  "text": "trên thị rường trên HHị kệ",
+  "y": 0.337,
+  "y2": 0.794,
+  "x": 0.264,
+  "maxh": 148,
+  "nframes": 1
+ },
+ {
+  "start": 3.67,
+  "end": 4.0,
+  "text": "trên thị trường là đó",
+  "y": 0.319,
+  "y2": 0.55,
+  "x": 0.263,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 4.0,
+  "end": 4.66,
+  "text": "mm RIVER",
+  "y": 0.402,
+  "y2": 0.519,
+  "x": 0.431,
+  "maxh": 224,
+  "nframes": 2
+ },
+ {
+  "start": 4.67,
+  "end": 5.0,
+  "text": "EN",
+  "y": 0.191,
+  "y2": 0.212,
+  "x": 0.258,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 5.0,
+  "end": 5.33,
+  "text": "SE FE",
+  "y": 0.2,
+  "y2": 0.222,
+  "x": 0.635,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 5.33,
+  "end": 6.33,
+  "text": "PE JSE J1R SỰ CBIỆT",
+  "y": 0.191,
+  "y2": 0.547,
+  "x": 0.132,
+  "maxh": 90,
+  "nframes": 3
+ },
+ {
+  "start": 6.33,
+  "end": 7.0,
+  "text": "PE JSE lÑ SỰ KHÁC BIỆT đó là làø? gì? là",
+  "y": 0.191,
+  "y2": 0.717,
+  "x": 0.132,
+  "maxh": 94,
+  "nframes": 2
+ },
+ {
+  "start": 7.0,
+  "end": 8.0,
+  "text": "Má» đừng vội lựa lựaŠ",
+  "y": 0.478,
+  "y2": 0.545,
+  "x": 0.165,
+  "maxh": 51,
+  "nframes": 3
+ },
+ {
+  "start": 8.0,
+  "end": 8.66,
+  "text": "như chưa có „ÁN",
+  "y": 0.518,
+  "y2": 0.613,
+  "x": 0.336,
+  "maxh": 40,
+  "nframes": 2
+ },
+ {
+  "start": 8.67,
+  "end": 9.33,
+  "text": "ếu nếu như ch số",
+  "y": 0.515,
+  "y2": 0.612,
+  "x": 0.251,
+  "maxh": 54,
+  "nframes": 2
+ },
+ {
+  "start": 9.33,
+  "end": 10.0,
+  "text": "chỉ tiết về",
+  "y": 0.518,
+  "y2": 0.539,
+  "x": 0.403,
+  "maxh": 40,
+  "nframes": 2
+ },
+ {
+  "start": 10.0,
+  "end": 10.33,
+  "text": "SÀN",
+  "y": 0.483,
+  "y2": 0.525,
+  "x": 0.293,
+  "maxh": 81,
+  "nframes": 1
+ },
+ {
+  "start": 10.67,
+  "end": 11.33,
+  "text": "Na đạc biẹt DỊ);",
+  "y": 0.384,
+  "y2": 0.608,
+  "x": 0.269,
+  "maxh": 57,
+  "nframes": 2
+ },
+ {
+  "start": 11.33,
+  "end": 11.66,
+  "text": "Lễ",
+  "y": 0.356,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 1236,
+  "nframes": 1
+ },
+ {
+  "start": 11.67,
+  "end": 12.0,
+  "text": "đừng quên",
+  "y": 0.518,
+  "y2": 0.551,
+  "x": 0.418,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 12.0,
+  "end": 12.33,
+  "text": "c2 út lưu video đây",
+  "y": 0.332,
+  "y2": 0.545,
+  "x": 0.388,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 12.33,
+  "end": 13.0,
+  "text": "lưu lỨt deo đây",
+  "y": 0.515,
+  "y2": 0.555,
+  "x": 0.439,
+  "maxh": 76,
+  "nframes": 2
+ },
+ {
+  "start": 13.0,
+  "end": 13.33,
+  "text": "lưu đâ video để",
+  "y": 0.515,
+  "y2": 0.698,
+  "x": 0.439,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 13.33,
+  "end": 13.66,
+  "text": "AV xem lại anh chị nhá",
+  "y": 0.422,
+  "y2": 0.539,
+  "x": 0.343,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 13.67,
+  "end": 14.0,
+  "text": "em Lạnh chị nhá 9⁄8",
+  "y": 0.514,
+  "y2": 0.695,
+  "x": 0.361,
+  "maxh": 92,
+  "nframes": 1
+ },
+ {
+  "start": 14.0,
+  "end": 14.33,
+  "text": "lại anh chị nhá bộ",
+  "y": 0.517,
+  "y2": 0.702,
+  "x": 0.443,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 14.33,
+  "end": 16.0,
+  "text": "Ni sẽ là đài đây video dài cài này",
+  "y": 0.407,
+  "y2": 0.548,
+  "x": 0.276,
+  "maxh": 64,
+  "nframes": 5
+ },
+ {
+  "start": 17.0,
+  "end": 17.66,
+  "text": "g4 Sản phẩm",
+  "y": 0.468,
+  "y2": 0.576,
+  "x": 0.535,
+  "maxh": 78,
+  "nframes": 2
+ },
+ {
+  "start": 18.33,
+  "end": 18.66,
+  "text": "mm bị Hị I*3",
+  "y": 0.375,
+  "y2": 0.553,
+  "x": 0.0,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 18.67,
+  "end": 19.0,
+  "text": "1M EỊ TT",
+  "y": 0.529,
+  "y2": 0.557,
+  "x": 0.228,
+  "maxh": 24,
+  "nframes": 1
+ },
+ {
+  "start": 19.0,
+  "end": 19.33,
+  "text": "Ong: Hị Hì",
+  "y": 0.523,
+  "y2": 0.562,
+  "x": 0.412,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 19.33,
+  "end": 19.66,
+  "text": "Lễ rr Mùi lk",
+  "y": 0.385,
+  "y2": 0.683,
+  "x": 0.244,
+  "maxh": 16,
+  "nframes": 1
+ },
+ {
+  "start": 19.67,
+  "end": 20.0,
+  "text": "1222 THỊ di LÍ l3: sự",
+  "y": 0.396,
+  "y2": 0.637,
+  "x": 0.542,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 20.0,
+  "end": 20.33,
+  "text": "nan sĩ lên Eí sảx LẠ",
+  "y": 0.284,
+  "y2": 0.745,
+  "x": 0.44,
+  "maxh": 27,
+  "nframes": 1
+ },
+ {
+  "start": 20.67,
+  "end": 21.0,
+  "text": "khách hàng lạt tì",
+  "y": 0.271,
+  "y2": 0.766,
+  "x": 0.512,
+  "maxh": 98,
+  "nframes": 1
+ },
+ {
+  "start": 21.33,
+  "end": 21.66,
+  "text": "rr IƠI L_Í",
+  "y": 0.475,
+  "y2": 0.762,
+  "x": 0.615,
+  "maxh": 30,
+  "nframes": 1
+ },
+ {
+  "start": 22.0,
+  "end": 22.33,
+  "text": "lạ LE lãi lý Sân:",
+  "y": 0.458,
+  "y2": 0.591,
+  "x": 0.449,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 22.33,
+  "end": 22.66,
+  "text": "Ji TIM TH",
+  "y": 0.463,
+  "y2": 0.592,
+  "x": 0.629,
+  "maxh": 18,
+  "nframes": 1
+ },
+ {
+  "start": 22.67,
+  "end": 23.0,
+  "text": "lếc ƯỢC tr Sẽ sẻ",
+  "y": 0.463,
+  "y2": 0.614,
+  "x": 0.188,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 23.0,
+  "end": 23.33,
+  "text": "được AI",
+  "y": 0.505,
+  "y2": 0.636,
+  "x": 0.315,
+  "maxh": 118,
+  "nframes": 1
+ },
+ {
+  "start": 23.33,
+  "end": 23.66,
+  "text": "Ly rP l1",
+  "y": 0.08,
+  "y2": 0.928,
+  "x": 0.0,
+  "maxh": 212,
+  "nframes": 1
+ },
+ {
+  "start": 23.67,
+  "end": 24.0,
+  "text": "TT TTT rP L8 IẾT",
+  "y": 0.463,
+  "y2": 0.927,
+  "x": 0.0,
+  "maxh": 216,
+  "nframes": 1
+ },
+ {
+  "start": 24.0,
+  "end": 24.33,
+  "text": "LJ EI L8",
+  "y": 0.465,
+  "y2": 0.916,
+  "x": 0.0,
+  "maxh": 154,
+  "nframes": 1
+ },
+ {
+  "start": 24.33,
+  "end": 24.66,
+  "text": "XI. bị",
+  "y": 0.111,
+  "y2": 0.452,
+  "x": 0.806,
+  "maxh": 94,
+  "nframes": 1
+ },
+ {
+  "start": 24.67,
+  "end": 25.0,
+  "text": "TT kí l5",
+  "y": 0.553,
+  "y2": 0.885,
+  "x": 0.257,
+  "maxh": 78,
+  "nframes": 1
+ },
+ {
+  "start": 25.0,
+  "end": 25.33,
+  "text": "IÍ lự Mĩ Mĩ ấT",
+  "y": 0.384,
+  "y2": 0.877,
+  "x": 0.265,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 25.33,
+  "end": 25.66,
+  "text": "TTm Chợ r9!) Mi LÌ",
+  "y": 0.288,
+  "y2": 0.866,
+  "x": 0.051,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 25.67,
+  "end": 26.0,
+  "text": "va",
+  "y": 0.523,
+  "y2": 0.539,
+  "x": 0.34,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 26.0,
+  "end": 26.33,
+  "text": "đây",
+  "y": 0.517,
+  "y2": 0.545,
+  "x": 0.586,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 26.33,
+  "end": 26.66,
+  "text": "iết một Số cÓ Xe.",
+  "y": 0.512,
+  "y2": 0.721,
+  "x": 0.037,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 26.67,
+  "end": 27.0,
+  "text": "Sỉ",
+  "y": 0.438,
+  "y2": 0.463,
+  "x": 0.636,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 27.0,
+  "end": 27.66,
+  "text": "so sánh nhanh sứ",
+  "y": 0.509,
+  "y2": 0.663,
+  "x": 0.081,
+  "maxh": 93,
+  "nframes": 2
+ },
+ {
+  "start": 27.67,
+  "end": 28.0,
+  "text": "lòng sản phẩm",
+  "y": 0.511,
+  "y2": 0.548,
+  "x": 0.383,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 28.0,
+  "end": 28.33,
+  "text": "3dò wẹ",
+  "y": 0.502,
+  "y2": 0.598,
+  "x": 0.089,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 28.33,
+  "end": 29.33,
+  "text": "tr đó là EN",
+  "y": 0.501,
+  "y2": 0.552,
+  "x": 0.318,
+  "maxh": 46,
+  "nframes": 3
+ },
+ {
+  "start": 29.33,
+  "end": 29.66,
+  "text": "ÚC",
+  "y": 0.548,
+  "y2": 0.562,
+  "x": 0.432,
+  "maxh": 27,
+  "nframes": 1
+ },
+ {
+  "start": 29.67,
+  "end": 30.0,
+  "text": "Lãi",
+  "y": 0.619,
+  "y2": 0.636,
+  "x": 0.797,
+  "maxh": 33,
+  "nframes": 1
+ },
+ {
+  "start": 30.0,
+  "end": 31.0,
+  "text": "EX PEI USE ISE",
+  "y": 0.527,
+  "y2": 0.555,
+  "x": 0.55,
+  "maxh": 54,
+  "nframes": 3
+ },
+ {
+  "start": 31.0,
+  "end": 33.0,
+  "text": "Anh cổ chị có cái nhìn: TIET HO HQ HỊ: lù tà",
+  "y": 0.445,
+  "y2": 0.629,
+  "x": 0.128,
+  "maxh": 125,
+  "nframes": 6
+ },
+ {
+  "start": 33.33,
+  "end": 34.0,
+  "text": "chí lớn là với đó đifiêu rY —mmm",
+  "y": 0.514,
+  "y2": 0.784,
+  "x": 0.0,
+  "maxh": 82,
+  "nframes": 2
+ },
+ {
+  "start": 34.67,
+  "end": 36.66,
+  "text": "ca Tệp khách hàng của la mỗi dòng dòng, xế lu",
+  "y": 0.244,
+  "y2": 0.702,
+  "x": 0.075,
+  "maxh": 84,
+  "nframes": 6
+ },
+ {
+  "start": 36.67,
+  "end": 39.33,
+  "text": "Lá FƑ la Tệp khách hàng của mỗi dòng. dòng, dòng SẼ khác Sự biệt trong cách làm dừ dự CDT án của bự",
+  "y": 0.152,
+  "y2": 0.682,
+  "x": 0.203,
+  "maxh": 82,
+  "nframes": 8
+ },
+ {
+  "start": 39.67,
+  "end": 40.0,
+  "text": "XE",
+  "y": 0.515,
+  "y2": 0.54,
+  "x": 0.533,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 40.0,
+  "end": 41.33,
+  "text": "xế: và quan trọng hơn hết là ŠS",
+  "y": 0.466,
+  "y2": 0.689,
+  "x": 0.103,
+  "maxh": 186,
+  "nframes": 4
+ },
+ {
+  "start": 41.33,
+  "end": 43.0,
+  "text": "mỗi sản phẩm sở hữu dòng này ày",
+  "y": 0.511,
+  "y2": 0.548,
+  "x": 0.218,
+  "maxh": 70,
+  "nframes": 5
+ },
+ {
+  "start": 43.0,
+  "end": 43.33,
+  "text": "mộtn",
+  "y": 0.517,
+  "y2": 0.543,
+  "x": 0.292,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 43.33,
+  "end": 43.66,
+  "text": "anh chị",
+  "y": 0.518,
+  "y2": 0.551,
+  "x": 0.568,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 44.0,
+  "end": 44.33,
+  "text": "rải qua",
+  "y": 0.458,
+  "y2": 0.553,
+  "x": 0.303,
+  "maxh": 183,
+  "nframes": 1
+ },
+ {
+  "start": 44.33,
+  "end": 45.0,
+  "text": "2m thế nào hư",
+  "y": 0.465,
+  "y2": 0.57,
+  "x": 0.303,
+  "maxh": 70,
+  "nframes": 2
+ },
+ {
+  "start": 45.0,
+  "end": 46.0,
+  "text": "có và cuối cùng đó cùng,đó là PP",
+  "y": 0.487,
+  "y2": 0.55,
+  "x": 0.108,
+  "maxh": 70,
+  "nframes": 3
+ },
+ {
+  "start": 46.0,
+  "end": 46.66,
+  "text": "yếu tố cực kỳ quan trọng là",
+  "y": 0.509,
+  "y2": 0.548,
+  "x": 0.196,
+  "maxh": 75,
+  "nframes": 2
+ },
+ {
+  "start": 47.0,
+  "end": 47.33,
+  "text": "yếu tố cực kỳ quan",
+  "y": 0.512,
+  "y2": 0.548,
+  "x": 0.196,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 47.67,
+  "end": 48.0,
+  "text": "NỈ NẠI",
+  "y": 0.477,
+  "y2": 0.722,
+  "x": 0.718,
+  "maxh": 171,
+  "nframes": 1
+ },
+ {
+  "start": 48.0,
+  "end": 48.33,
+  "text": "để anh quyết đính",
+  "y": 0.538,
+  "y2": 0.597,
+  "x": 0.228,
+  "maxh": 112,
+  "nframes": 1
+ },
+ {
+  "start": 48.67,
+  "end": 49.0,
+  "text": "chị Ìà",
+  "y": 0.536,
+  "y2": 0.727,
+  "x": 0.053,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 49.0,
+  "end": 49.33,
+  "text": "quyết",
+  "y": 0.539,
+  "y2": 0.572,
+  "x": 0.494,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 49.33,
+  "end": 49.66,
+  "text": "8m.",
+  "y": 0.35,
+  "y2": 0.366,
+  "x": 0.767,
+  "maxh": 30,
+  "nframes": 1
+ },
+ {
+  "start": 50.0,
+  "end": 50.33,
+  "text": "lời",
+  "y": 0.795,
+  "y2": 0.83,
+  "x": 0.46,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 50.33,
+  "end": 50.66,
+  "text": "4z DEI là Garden",
+  "y": 0.529,
+  "y2": 0.837,
+  "x": 0.107,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 50.67,
+  "end": 51.0,
+  "text": "SARD lé 222A (CÓ là lồng (arden",
+  "y": 0.297,
+  "y2": 0.825,
+  "x": 0.326,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 51.0,
+  "end": 52.0,
+  "text": "GAFF SARD mm. lé 222A HỘ l2 Con sôr Sản vườn",
+  "y": 0.297,
+  "y2": 0.83,
+  "x": 0.278,
+  "maxh": 72,
+  "nframes": 3
+ },
+ {
+  "start": 52.0,
+  "end": 52.33,
+  "text": "đi RDEN vườn",
+  "y": 0.362,
+  "y2": 0.83,
+  "x": 0.176,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 52.67,
+  "end": 53.33,
+  "text": "tệp khách hàng",
+  "y": 0.798,
+  "y2": 0.824,
+  "x": 0.346,
+  "maxh": 51,
+  "nframes": 2
+ },
+ {
+  "start": 53.33,
+  "end": 54.33,
+  "text": "hợp với rất phù những nh Cử",
+  "y": 0.792,
+  "y2": 0.844,
+  "x": 0.158,
+  "maxh": 99,
+  "nframes": 3
+ },
+ {
+  "start": 54.33,
+  "end": 56.33,
+  "text": "rêng g7. 2/24 dù GARDEN z2 EN DEN TYPEC 3ì E5 tích thích có một khoảng sân vườn riêng",
+  "y": 0.302,
+  "y2": 0.824,
+  "x": 0.126,
+  "maxh": 84,
+  "nframes": 6
+ },
+ {
+  "start": 56.33,
+  "end": 57.33,
+  "text": "zz Qx CITY ngay khi ra khỏi cửa",
+  "y": 0.048,
+  "y2": 0.824,
+  "x": 0.243,
+  "maxh": 128,
+  "nframes": 3
+ },
+ {
+  "start": 57.33,
+  "end": 58.33,
+  "text": "CITY mà Không Cần phải xuống",
+  "y": 0.065,
+  "y2": 0.824,
+  "x": 0.246,
+  "maxh": 56,
+  "nframes": 3
+ },
+ {
+  "start": 58.33,
+  "end": 59.0,
+  "text": "CITY khu tiện ích chung",
+  "y": 0.054,
+  "y2": 0.824,
+  "x": 0.271,
+  "maxh": 50,
+  "nframes": 2
+ },
+ {
+  "start": 59.0,
+  "end": 60.0,
+  "text": "CITY Của dỰ án toàn",
+  "y": 0.047,
+  "y2": 0.827,
+  "x": 0.267,
+  "maxh": 63,
+  "nframes": 3
+ },
+ {
+  "start": 60.0,
+  "end": 60.33,
+  "text": "Xanh trỚC di",
+  "y": 0.795,
+  "y2": 0.827,
+  "x": 0.386,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 60.67,
+  "end": 61.0,
+  "text": "TÌ",
+  "y": 0.77,
+  "y2": 0.787,
+  "x": 0.633,
+  "maxh": 34,
+  "nframes": 1
+ },
+ {
+  "start": 61.0,
+  "end": 61.33,
+  "text": "wt lý",
+  "y": 0.542,
+  "y2": 0.595,
+  "x": 0.117,
+  "maxh": 22,
+  "nframes": 1
+ },
+ {
+  "start": 61.33,
+  "end": 61.66,
+  "text": "1⁄4 r1. dân",
+  "y": 0.434,
+  "y2": 0.827,
+  "x": 0.297,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 61.67,
+  "end": 62.0,
+  "text": "đi",
+  "y": 0.295,
+  "y2": 0.305,
+  "x": 0.022,
+  "maxh": 21,
+  "nframes": 1
+ },
+ {
+  "start": 62.0,
+  "end": 62.33,
+  "text": "V7, ng căn",
+  "y": 0.426,
+  "y2": 0.824,
+  "x": 0.486,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 62.33,
+  "end": 62.66,
+  "text": "II ÑV 445",
+  "y": 0.377,
+  "y2": 0.996,
+  "x": 0.042,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 62.67,
+  "end": 63.0,
+  "text": "À2 kh lj",
+  "y": 0.71,
+  "y2": 0.848,
+  "x": 0.04,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 63.0,
+  "end": 63.33,
+  "text": "II Lả",
+  "y": 0.369,
+  "y2": 0.927,
+  "x": 0.035,
+  "maxh": 33,
+  "nframes": 1
+ },
+ {
+  "start": 63.33,
+  "end": 63.66,
+  "text": "TUỔI Ki",
+  "y": 0.791,
+  "y2": 0.823,
+  "x": 0.225,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 63.67,
+  "end": 64.0,
+  "text": "Ui",
+  "y": 0.795,
+  "y2": 0.819,
+  "x": 0.726,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 64.0,
+  "end": 64.33,
+  "text": "th",
+  "y": 0.423,
+  "y2": 0.49,
+  "x": 0.714,
+  "maxh": 129,
+  "nframes": 1
+ },
+ {
+  "start": 64.33,
+  "end": 64.66,
+  "text": "gạiở tầng Gao CÀO",
+  "y": 0.799,
+  "y2": 0.835,
+  "x": 0.371,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 64.67,
+  "end": 65.0,
+  "text": "VÀ",
+  "y": 0.744,
+  "y2": 0.752,
+  "x": 0.349,
+  "maxh": 16,
+  "nframes": 1
+ },
+ {
+  "start": 65.0,
+  "end": 65.33,
+  "text": "cao",
+  "y": 0.803,
+  "y2": 0.819,
+  "x": 0.581,
+  "maxh": 30,
+  "nframes": 1
+ },
+ {
+  "start": 65.33,
+  "end": 65.66,
+  "text": "an, Thột nơi",
+  "y": 0.557,
+  "y2": 0.833,
+  "x": 0.297,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 65.67,
+  "end": 66.66,
+  "text": "ĐÓ có một nơi",
+  "y": 0.787,
+  "y2": 0.841,
+  "x": 0.454,
+  "maxh": 98,
+  "nframes": 3
+ },
+ {
+  "start": 66.67,
+  "end": 67.0,
+  "text": "tông gối cớ",
+  "y": 0.783,
+  "y2": 0.852,
+  "x": 0.454,
+  "maxh": 134,
+  "nframes": 1
+ },
+ {
+  "start": 67.0,
+  "end": 67.33,
+  "text": "IM ĐH mu Xu Z2.",
+  "y": 0.474,
+  "y2": 0.867,
+  "x": 0.56,
+  "maxh": 170,
+  "nframes": 1
+ },
+ {
+  "start": 67.33,
+  "end": 67.66,
+  "text": "lý trồng P4",
+  "y": 0.752,
+  "y2": 0.875,
+  "x": 0.424,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 67.67,
+  "end": 68.0,
+  "text": "II II lý; 22",
+  "y": 0.02,
+  "y2": 0.838,
+  "x": 0.078,
+  "maxh": 170,
+  "nframes": 1
+ },
+ {
+  "start": 68.0,
+  "end": 68.33,
+  "text": "lW Hình c6 thể",
+  "y": 0.534,
+  "y2": 0.827,
+  "x": 0.185,
+  "maxh": 106,
+  "nframes": 1
+ },
+ {
+  "start": 68.33,
+  "end": 68.66,
+  "text": "mm LÝ",
+  "y": 0.21,
+  "y2": 0.578,
+  "x": 0.097,
+  "maxh": 96,
+  "nframes": 1
+ },
+ {
+  "start": 68.67,
+  "end": 69.0,
+  "text": "lỀ Và nuôi cá",
+  "y": 0.506,
+  "y2": 0.819,
+  "x": 0.19,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 69.0,
+  "end": 70.0,
+  "text": "EN",
+  "y": 0.452,
+  "y2": 0.47,
+  "x": 0.297,
+  "maxh": 34,
+  "nframes": 3
+ },
+ {
+  "start": 70.0,
+  "end": 79.66,
+  "text": "Diện 85, 125, tích: 157m2 lý Đơn giá iá 159tr/m2 rumor: từ: 13,5 tỷ 25 tỷ/căn tt",
+  "y": 0.449,
+  "y2": 0.55,
+  "x": 0.222,
+  "maxh": 78,
+  "nframes": 29
+ },
+ {
+  "start": 79.67,
+  "end": 80.0,
+  "text": "Nưz",
+  "y": 0.405,
+  "y2": 0.721,
+  "x": 0.0,
+  "maxh": 608,
+  "nframes": 1
+ },
+ {
+  "start": 80.0,
+  "end": 80.33,
+  "text": "RH II LÍ] ho Vài",
+  "y": 0.071,
+  "y2": 0.947,
+  "x": 0.542,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 80.33,
+  "end": 80.66,
+  "text": "ITNT TÂN 7T III LỊ. một điểm để khách hàng",
+  "y": 0.076,
+  "y2": 0.824,
+  "x": 0.251,
+  "maxh": 176,
+  "nframes": 1
+ },
+ {
+  "start": 80.67,
+  "end": 81.0,
+  "text": "Xu.",
+  "y": 0.286,
+  "y2": 0.323,
+  "x": 0.269,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 81.0,
+  "end": 81.33,
+  "text": "HH 13 5ä. la cai là",
+  "y": 0.043,
+  "y2": 0.966,
+  "x": 0.108,
+  "maxh": 100,
+  "nframes": 1
+ },
+ {
+  "start": 81.33,
+  "end": 81.66,
+  "text": "j1 IR",
+  "y": 0.074,
+  "y2": 0.177,
+  "x": 0.0,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 81.67,
+  "end": 82.0,
+  "text": "IE lữ lạ 1E đáng nhắc căn đó cân",
+  "y": 0.08,
+  "y2": 0.828,
+  "x": 0.188,
+  "maxh": 92,
+  "nframes": 1
+ },
+ {
+  "start": 82.0,
+  "end": 82.33,
+  "text": "1a 1Ì TT Tà va đó là những căn”",
+  "y": 0.167,
+  "y2": 0.825,
+  "x": 0.062,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 82.33,
+  "end": 82.66,
+  "text": "Ni Q7 LTj 1i nằmở",
+  "y": 0.002,
+  "y2": 0.82,
+  "x": 0.351,
+  "maxh": 164,
+  "nframes": 1
+ },
+ {
+  "start": 82.67,
+  "end": 83.0,
+  "text": "tua IR =MW Ji S22",
+  "y": 0.023,
+  "y2": 0.382,
+  "x": 0.0,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 83.0,
+  "end": 83.33,
+  "text": "lá lề ấp Se",
+  "y": 0.09,
+  "y2": 0.824,
+  "x": 0.292,
+  "maxh": 108,
+  "nframes": 1
+ },
+ {
+  "start": 83.33,
+  "end": 83.66,
+  "text": "Mi 1Ị ww",
+  "y": 0.097,
+  "y2": 0.654,
+  "x": 0.201,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 83.67,
+  "end": 84.0,
+  "text": "TT IRB lŠ Garden Sẽ",
+  "y": 0.087,
+  "y2": 0.838,
+  "x": 0.135,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 84.0,
+  "end": 87.66,
+  "text": "lạng: Tâ Tài háp loor PI Bị MẶT MÃ BẰNG NG TẦNG GARDEN RDEN PALM ALM RIVER",
+  "y": 0.296,
+  "y2": 0.649,
+  "x": 0.021,
+  "maxh": 54,
+  "nframes": 11
+ },
+ {
+  "start": 87.67,
+  "end": 88.0,
+  "text": "Tầng 3A Tháp Tâng RIVER",
+  "y": 0.3,
+  "y2": 0.65,
+  "x": 0.174,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 88.0,
+  "end": 88.33,
+  "text": "ME FT lại mm T1 C7 Lư",
+  "y": 0.196,
+  "y2": 0.902,
+  "x": 0.297,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 88.33,
+  "end": 88.66,
+  "text": "IÌNE 18 ĐỂ ká ES",
+  "y": 0.47,
+  "y2": 0.795,
+  "x": 0.333,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 88.67,
+  "end": 89.0,
+  "text": "li. IEr ƠI: HH _NI. L1 tứổi ToäcnhữngS XU Tụ lh ft",
+  "y": 0.472,
+  "y2": 0.95,
+  "x": 0.119,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 89.0,
+  "end": 89.33,
+  "text": "LÍ jd NT TT FT] mm tị",
+  "y": 0.378,
+  "y2": 0.994,
+  "x": 0.0,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 89.33,
+  "end": 89.66,
+  "text": "tâ— BỘ tì 11",
+  "y": 0.263,
+  "y2": 0.586,
+  "x": 0.331,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 89.67,
+  "end": 90.0,
+  "text": "Lí Lái 11T sang TT] FT TỊj 8E",
+  "y": 0.245,
+  "y2": 0.629,
+  "x": 0.032,
+  "maxh": 28,
+  "nframes": 1
+ },
+ {
+  "start": 90.0,
+  "end": 90.33,
+  "text": "Lị muT IP mi tứ [TY Y1 la",
+  "y": 0.241,
+  "y2": 0.847,
+  "x": 0.006,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 90.33,
+  "end": 90.66,
+  "text": "Mr” ta L5mm TÌ L.J hưng!",
+  "y": 0.23,
+  "y2": 0.824,
+  "x": 0.078,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 90.67,
+  "end": 91.0,
+  "text": "LỊ Lãi duc 71 Mà Tầng caÐ, xi",
+  "y": 0.471,
+  "y2": 0.97,
+  "x": 0.128,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 91.0,
+  "end": 91.33,
+  "text": "xế TỶ 4B Xị HH",
+  "y": 0.245,
+  "y2": 0.973,
+  "x": 0.0,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 91.33,
+  "end": 91.66,
+  "text": "TT r1 -Bí BỊ 1519 “r1 T4 là",
+  "y": 0.252,
+  "y2": 0.826,
+  "x": 0.0,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 91.67,
+  "end": 92.0,
+  "text": "Z4 lại di EET ïï- san. vá xế",
+  "y": 0.265,
+  "y2": 0.946,
+  "x": 0.115,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 92.0,
+  "end": 92.33,
+  "text": "Rhin Trì lễ, Kí li 'i1 mang 1L",
+  "y": 0.163,
+  "y2": 0.562,
+  "x": 0.056,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 92.33,
+  "end": 92.66,
+  "text": "hoại",
+  "y": 0.778,
+  "y2": 0.829,
+  "x": 0.26,
+  "maxh": 98,
+  "nframes": 1
+ },
+ {
+  "start": 92.67,
+  "end": 94.0,
+  "text": "th chờ thị thái THOY/",
+  "y": 0.781,
+  "y2": 0.83,
+  "x": 0.454,
+  "maxh": 93,
+  "nframes": 4
+ },
+ {
+  "start": 94.0,
+  "end": 95.0,
+  "text": "đó là DUPLEX",
+  "y": 0.798,
+  "y2": 0.825,
+  "x": 0.574,
+  "maxh": 52,
+  "nframes": 3
+ },
+ {
+  "start": 95.0,
+  "end": 96.0,
+  "text": "LE3 LE) UÌ LE` ul Hi thứ là DUPLEX",
+  "y": 0.294,
+  "y2": 0.822,
+  "x": 0.407,
+  "maxh": 214,
+  "nframes": 3
+ },
+ {
+  "start": 96.33,
+  "end": 96.66,
+  "text": "ìm xã VÌ 11. LI",
+  "y": 0.387,
+  "y2": 0.649,
+  "x": 0.068,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 96.67,
+  "end": 97.0,
+  "text": "đã",
+  "y": 0.798,
+  "y2": 0.835,
+  "x": 0.412,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 97.0,
+  "end": 97.33,
+  "text": "ây hànđở nh",
+  "y": 0.779,
+  "y2": 0.828,
+  "x": 0.286,
+  "maxh": 94,
+  "nframes": 1
+ },
+ {
+  "start": 97.33,
+  "end": 98.33,
+  "text": "NA là lià 1H đã gã giã Sở Hữu sản nhữ",
+  "y": 0.119,
+  "y2": 0.827,
+  "x": 0.0,
+  "maxh": 116,
+  "nframes": 3
+ },
+ {
+  "start": 98.33,
+  "end": 98.66,
+  "text": "lì thường thông",
+  "y": 0.339,
+  "y2": 0.825,
+  "x": 0.061,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 98.67,
+  "end": 99.0,
+  "text": "NÊN lì la căn",
+  "y": 0.264,
+  "y2": 0.829,
+  "x": 0.072,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 99.0,
+  "end": 99.33,
+  "text": "NA LÝ La thôngth",
+  "y": 0.151,
+  "y2": 0.824,
+  "x": 0.046,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 99.33,
+  "end": 99.66,
+  "text": "k2 những lại",
+  "y": 0.768,
+  "y2": 0.824,
+  "x": 0.347,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 99.67,
+  "end": 100.0,
+  "text": "nhưng luôn",
+  "y": 0.798,
+  "y2": 0.824,
+  "x": 0.347,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 100.0,
+  "end": 101.0,
+  "text": "Nâng âng hàng Cao f1",
+  "y": 0.278,
+  "y2": 0.828,
+  "x": 0.181,
+  "maxh": 160,
+  "nframes": 3
+ },
+ {
+  "start": 101.0,
+  "end": 101.66,
+  "text": "ang cao nghiệm ngày",
+  "y": 0.295,
+  "y2": 0.824,
+  "x": 0.283,
+  "maxh": 158,
+  "nframes": 2
+ },
+ {
+  "start": 101.67,
+  "end": 102.0,
+  "text": "mm. lÍ",
+  "y": 0.318,
+  "y2": 0.4,
+  "x": 0.011,
+  "maxh": 34,
+  "nframes": 1
+ },
+ {
+  "start": 102.0,
+  "end": 108.33,
+  "text": "28- T4 14 háp DI4 BÚ Bị 1U) TU) kê MẶT BẰNG TẦNG LÍ Ni PALM RIVER PA",
+  "y": 0.312,
+  "y2": 0.64,
+  "x": 0.069,
+  "maxh": 75,
+  "nframes": 19
+ },
+ {
+  "start": 108.67,
+  "end": 116.0,
+  "text": "86,125, 86, 85, 125, 157m2 EN GIẢN Diện tích: 65, Đơn sai 159tr/m2 159t/m2 159W/m2 SEN gá 1590/1712 rumor: numor: 25 Giá từ: tà 13,5 tỷ- tỷ ty/căn 43 ÚC DU tích 102m 102m2 167m2 iá lá 32 39",
+  "y": 0.183,
+  "y2": 0.534,
+  "x": 0.199,
+  "maxh": 111,
+  "nframes": 22
+ },
+ {
+  "start": 116.0,
+  "end": 116.33,
+  "text": "đt",
+  "y": 0.797,
+  "y2": 0.82,
+  "x": 0.499,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 116.67,
+  "end": 117.0,
+  "text": "là",
+  "y": 0.795,
+  "y2": 0.83,
+  "x": 0.296,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 117.0,
+  "end": 117.33,
+  "text": "tì Tát hiều",
+  "y": 0.628,
+  "y2": 0.822,
+  "x": 0.185,
+  "maxh": 290,
+  "nframes": 1
+ },
+ {
+  "start": 117.33,
+  "end": 117.66,
+  "text": "hiều thích kỉ",
+  "y": 0.795,
+  "y2": 0.825,
+  "x": 0.272,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 117.67,
+  "end": 118.0,
+  "text": "hiều ki ích",
+  "y": 0.795,
+  "y2": 0.82,
+  "x": 0.272,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 118.0,
+  "end": 118.66,
+  "text": "giác Cảm ch 66016",
+  "y": 0.794,
+  "y2": 0.841,
+  "x": 0.325,
+  "maxh": 90,
+  "nframes": 2
+ },
+ {
+  "start": 118.67,
+  "end": 119.0,
+  "text": "là Cam Gó",
+  "y": 0.795,
+  "y2": 0.83,
+  "x": 0.215,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 119.0,
+  "end": 119.66,
+  "text": "CHOANG NG NGỢP đó là cảm giác choáng",
+  "y": 0.466,
+  "y2": 0.827,
+  "x": 0.083,
+  "maxh": 116,
+  "nframes": 2
+ },
+ {
+  "start": 119.67,
+  "end": 120.33,
+  "text": "choáng NGỢP môi mỗi khi mở cử: cvào",
+  "y": 0.406,
+  "y2": 0.827,
+  "x": 0.083,
+  "maxh": 333,
+  "nframes": 2
+ },
+ {
+  "start": 120.33,
+  "end": 121.0,
+  "text": "mỗi mối mỗi khi mở cửa bước vào nhà",
+  "y": 0.517,
+  "y2": 0.829,
+  "x": 0.176,
+  "maxh": 94,
+  "nframes": 2
+ },
+ {
+  "start": 121.0,
+  "end": 121.33,
+  "text": "khi mà ng tầng",
+  "y": 0.795,
+  "y2": 0.824,
+  "x": 0.246,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 121.67,
+  "end": 122.0,
+  "text": "Rã 210)",
+  "y": 0.014,
+  "y2": 0.827,
+  "x": 0.476,
+  "maxh": 332,
+  "nframes": 1
+ },
+ {
+  "start": 122.0,
+  "end": 123.33,
+  "text": "TÂNG THÔNG giúp cho căn nhà đón gió",
+  "y": 0.464,
+  "y2": 0.824,
+  "x": 0.175,
+  "maxh": 116,
+  "nframes": 4
+ },
+ {
+  "start": 123.33,
+  "end": 123.66,
+  "text": "NG TẦNG TỊ",
+  "y": 0.421,
+  "y2": 0.551,
+  "x": 0.133,
+  "maxh": 249,
+  "nframes": 1
+ },
+ {
+  "start": 123.67,
+  "end": 124.33,
+  "text": "nắng năng tự nhiên",
+  "y": 0.794,
+  "y2": 0.824,
+  "x": 0.365,
+  "maxh": 58,
+  "nframes": 2
+ },
+ {
+  "start": 124.33,
+  "end": 125.0,
+  "text": "TẢ đại không gia",
+  "y": 0.412,
+  "y2": 0.824,
+  "x": 0.417,
+  "maxh": 72,
+  "nframes": 2
+ },
+ {
+  "start": 125.0,
+  "end": 125.33,
+  "text": "tá dì",
+  "y": 0.658,
+  "y2": 0.823,
+  "x": 0.336,
+  "maxh": 195,
+  "nframes": 1
+ },
+ {
+  "start": 125.67,
+  "end": 126.0,
+  "text": "No",
+  "y": 0.798,
+  "y2": 0.821,
+  "x": 0.311,
+  "maxh": 44,
+  "nframes": 1
+ },
+ {
+  "start": 126.33,
+  "end": 126.66,
+  "text": "V2 QC",
+  "y": 0.629,
+  "y2": 0.82,
+  "x": 0.244,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 126.67,
+  "end": 127.0,
+  "text": "j1",
+  "y": 0.669,
+  "y2": 0.684,
+  "x": 0.454,
+  "maxh": 28,
+  "nframes": 1
+ },
+ {
+  "start": 127.33,
+  "end": 127.66,
+  "text": "HỒI Liệu,",
+  "y": 0.798,
+  "y2": 0.963,
+  "x": 0.0,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 127.67,
+  "end": 128.0,
+  "text": "phòng",
+  "y": 0.798,
+  "y2": 0.824,
+  "x": 0.614,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 128.0,
+  "end": 128.33,
+  "text": "QHO ái HỘI) giữa",
+  "y": 0.795,
+  "y2": 0.828,
+  "x": 0.139,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 128.33,
+  "end": 128.66,
+  "text": "ssm trên: sofa êm ái",
+  "y": 0.289,
+  "y2": 0.819,
+  "x": 0.128,
+  "maxh": 274,
+  "nframes": 1
+ },
+ {
+  "start": 128.67,
+  "end": 129.0,
+  "text": "LỊ| RỊ nhìn ra ngöài",
+  "y": 0.015,
+  "y2": 0.824,
+  "x": 0.106,
+  "maxh": 132,
+  "nframes": 1
+ },
+ {
+  "start": 129.0,
+  "end": 129.33,
+  "text": "mm rang 71]",
+  "y": 0.46,
+  "y2": 0.91,
+  "x": 0.147,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 129.33,
+  "end": 129.66,
+  "text": "II mẹi",
+  "y": 0.237,
+  "y2": 0.974,
+  "x": 0.19,
+  "maxh": 110,
+  "nframes": 1
+ },
+ {
+  "start": 129.67,
+  "end": 130.0,
+  "text": "kì trời lớn",
+  "y": 0.363,
+  "y2": 0.82,
+  "x": 0.438,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 130.0,
+  "end": 130.33,
+  "text": "Cai lớn sai mm",
+  "y": 0.795,
+  "y2": 0.998,
+  "x": 0.25,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 130.33,
+  "end": 130.66,
+  "text": "mụ cả trời lớn đại tạ",
+  "y": 0.066,
+  "y2": 0.998,
+  "x": 0.271,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 130.67,
+  "end": 131.0,
+  "text": "\"18",
+  "y": 0.644,
+  "y2": 0.656,
+  "x": 0.722,
+  "maxh": 24,
+  "nframes": 1
+ },
+ {
+  "start": 131.0,
+  "end": 131.33,
+  "text": "8M",
+  "y": 0.728,
+  "y2": 0.752,
+  "x": 0.922,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 131.33,
+  "end": 131.66,
+  "text": "sa L2 tế “c4",
+  "y": 0.005,
+  "y2": 0.978,
+  "x": 0.321,
+  "maxh": 112,
+  "nframes": 1
+ },
+ {
+  "start": 131.67,
+  "end": 133.66,
+  "text": "DENTHOUSE tim là: CUOI loi se tOUse đặc biệt Cì thouse",
+  "y": 0.297,
+  "y2": 0.823,
+  "x": 0.139,
+  "maxh": 108,
+  "nframes": 6
+ },
+ {
+  "start": 133.67,
+  "end": 134.0,
+  "text": "NITT+ lÌ Diệt",
+  "y": 0.297,
+  "y2": 0.823,
+  "x": 0.358,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 134.0,
+  "end": 134.33,
+  "text": "L1 125188 lệ lê đây là",
+  "y": 0.363,
+  "y2": 0.824,
+  "x": 0.301,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 134.33,
+  "end": 135.0,
+  "text": "Lạ tị th HE: [TT BÍ) và khan hiếm Sử TVmm",
+  "y": 0.359,
+  "y2": 0.935,
+  "x": 0.172,
+  "maxh": 58,
+  "nframes": 2
+ },
+ {
+  "start": 135.0,
+  "end": 135.33,
+  "text": "ST FT Trị Hì l3 Ec và khan bào)",
+  "y": 0.411,
+  "y2": 0.935,
+  "x": 0.172,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 135.33,
+  "end": 135.66,
+  "text": "Sa Lễ Và khan hiếm TE",
+  "y": 0.289,
+  "y2": 0.933,
+  "x": 0.172,
+  "maxh": 81,
+  "nframes": 1
+ },
+ {
+  "start": 135.67,
+  "end": 136.0,
+  "text": "lại 112 Mễ LẺ hì lÍ chứ kiôngnên ẦM TRTVTE",
+  "y": 0.427,
+  "y2": 0.93,
+  "x": 0.339,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 136.33,
+  "end": 137.0,
+  "text": "37 l2 Ter l2 Palm",
+  "y": 0.456,
+  "y2": 0.819,
+  "x": 0.279,
+  "maxh": 45,
+  "nframes": 2
+ },
+ {
+  "start": 137.0,
+  "end": 137.66,
+  "text": "là tị S4",
+  "y": 0.539,
+  "y2": 1.0,
+  "x": 0.531,
+  "maxh": 156,
+  "nframes": 2
+ },
+ {
+  "start": 137.67,
+  "end": 138.0,
+  "text": "tr Hị th tH he alm",
+  "y": 0.392,
+  "y2": 0.819,
+  "x": 0.264,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 138.0,
+  "end": 138.33,
+  "text": "ÿ©u thíc|",
+  "y": 0.784,
+  "y2": 0.83,
+  "x": 0.571,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 138.33,
+  "end": 138.66,
+  "text": "LÊD 0g",
+  "y": 0.793,
+  "y2": 0.83,
+  "x": 0.257,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 139.0,
+  "end": 139.33,
+  "text": "là ¡ng",
+  "y": 0.794,
+  "y2": 0.825,
+  "x": 0.529,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 139.33,
+  "end": 139.66,
+  "text": "ngg",
+  "y": 0.804,
+  "y2": 0.823,
+  "x": 0.66,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 140.0,
+  "end": 140.33,
+  "text": "CEO)",
+  "y": 0.798,
+  "y2": 0.82,
+  "x": 0.681,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 141.0,
+  "end": 141.33,
+  "text": "21",
+  "y": 0.046,
+  "y2": 0.197,
+  "x": 0.669,
+  "maxh": 290,
+  "nframes": 1
+ },
+ {
+  "start": 141.33,
+  "end": 141.66,
+  "text": "gia",
+  "y": 0.803,
+  "y2": 0.824,
+  "x": 0.535,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 142.33,
+  "end": 142.66,
+  "text": "II z4 những người mà cần",
+  "y": 0.126,
+  "y2": 0.824,
+  "x": 0.247,
+  "maxh": 168,
+  "nframes": 1
+ },
+ {
+  "start": 142.67,
+  "end": 144.0,
+  "text": "HÀ gian sống li I4 không gian sống riêng tí từ",
+  "y": 0.437,
+  "y2": 0.824,
+  "x": 0.16,
+  "maxh": 108,
+  "nframes": 4
+ },
+ {
+  "start": 144.0,
+  "end": 144.33,
+  "text": "ALMR gần như tuyệt dối",
+  "y": 0.056,
+  "y2": 0.837,
+  "x": 0.403,
+  "maxh": 74,
+  "nframes": 1
+ },
+ {
+  "start": 144.33,
+  "end": 145.0,
+  "text": "ALMR ALM NINH INH tuyệt đối gần như, tuyệt Gối",
+  "y": 0.049,
+  "y2": 0.843,
+  "x": 0.403,
+  "maxh": 129,
+  "nframes": 2
+ },
+ {
+  "start": 145.0,
+  "end": 146.33,
+  "text": "RỊ ALM NINH NN tuyệt đối năng lượng đề để tái tạo",
+  "y": 0.042,
+  "y2": 0.849,
+  "x": 0.263,
+  "maxh": 129,
+  "nframes": 4
+ },
+ {
+  "start": 146.33,
+  "end": 146.66,
+  "text": "tư lừng đầu dài",
+  "y": 0.795,
+  "y2": 0.83,
+  "x": 0.335,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 146.67,
+  "end": 147.0,
+  "text": "À5",
+  "y": 0.767,
+  "y2": 0.795,
+  "x": 0.431,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 147.0,
+  "end": 147.33,
+  "text": "hay nhữngnh",
+  "y": 0.798,
+  "y2": 0.825,
+  "x": 0.204,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 147.33,
+  "end": 147.66,
+  "text": "12 đầu đài hà tư m1",
+  "y": 0.673,
+  "y2": 0.827,
+  "x": 0.453,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 147.67,
+  "end": 148.0,
+  "text": "nhữn Z3 nhìn",
+  "y": 0.795,
+  "y2": 0.819,
+  "x": 0.249,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 148.0,
+  "end": 148.33,
+  "text": "nh CO LCÌ",
+  "y": 0.798,
+  "y2": 0.819,
+  "x": 0.249,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 148.67,
+  "end": 149.0,
+  "text": "Bị lỊ rất TH: tạ kí",
+  "y": 0.392,
+  "y2": 0.961,
+  "x": 0.0,
+  "maxh": 106,
+  "nframes": 1
+ },
+ {
+  "start": 149.67,
+  "end": 150.33,
+  "text": "lạ Xà của la quỹ đất",
+  "y": 0.47,
+  "y2": 0.828,
+  "x": 0.492,
+  "maxh": 122,
+  "nframes": 2
+ },
+ {
+  "start": 150.33,
+  "end": 150.66,
+  "text": "quy",
+  "y": 0.532,
+  "y2": 0.562,
+  "x": 0.388,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 150.67,
+  "end": 151.0,
+  "text": "Es S8",
+  "y": 0.387,
+  "y2": 0.818,
+  "x": 0.292,
+  "maxh": 22,
+  "nframes": 1
+ },
+ {
+  "start": 151.0,
+  "end": 151.33,
+  "text": "QUận2",
+  "y": 0.798,
+  "y2": 0.82,
+  "x": 0.492,
+  "maxh": 44,
+  "nframes": 1
+ },
+ {
+  "start": 151.33,
+  "end": 151.66,
+  "text": "và lì kiếm những Every pulsing with",
+  "y": 0.795,
+  "y2": 0.913,
+  "x": 0.204,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 151.67,
+  "end": 152.0,
+  "text": "Fy Curre! g3 with vi:",
+  "y": 0.887,
+  "y2": 0.91,
+  "x": 0.326,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 152.0,
+  "end": 152.33,
+  "text": "lŠ những qc",
+  "y": 0.247,
+  "y2": 0.911,
+  "x": 0.394,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 152.33,
+  "end": 152.66,
+  "text": "hình lì \"NẠI ỊP ÂN đời",
+  "y": 0.243,
+  "y2": 0.82,
+  "x": 0.221,
+  "maxh": 86,
+  "nframes": 1
+ },
+ {
+  "start": 152.67,
+  "end": 153.0,
+  "text": "sà 2⁄2 sƯỦ đời",
+  "y": 0.003,
+  "y2": 0.823,
+  "x": 0.408,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 153.0,
+  "end": 153.33,
+  "text": "IM bày) Là lợn",
+  "y": 0.305,
+  "y2": 0.822,
+  "x": 0.44,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 153.33,
+  "end": 153.66,
+  "text": "XẾ âm lạ TỶ",
+  "y": 0.175,
+  "y2": 0.845,
+  "x": 0.515,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 153.67,
+  "end": 154.0,
+  "text": "lạ tăng một",
+  "y": 0.148,
+  "y2": 0.834,
+  "x": 0.032,
+  "maxh": 88,
+  "nframes": 1
+ },
+ {
+  "start": 154.0,
+  "end": 154.33,
+  "text": "trị địá trị địa LỤ",
+  "y": 0.259,
+  "y2": 0.941,
+  "x": 0.126,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 154.33,
+  "end": 155.66,
+  "text": "giá tị gia tăng an vã qN „anh chị GịnH lá trị gia ốn đi định",
+  "y": 0.248,
+  "y2": 0.833,
+  "x": 0.247,
+  "maxh": 86,
+  "nframes": 4
+ },
+ {
+  "start": 155.67,
+  "end": 156.0,
+  "text": "Ưng",
+  "y": 0.775,
+  "y2": 0.787,
+  "x": 0.651,
+  "maxh": 22,
+  "nframes": 1
+ },
+ {
+  "start": 156.0,
+  "end": 156.33,
+  "text": "Cờ",
+  "y": 0.562,
+  "y2": 0.583,
+  "x": 0.025,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 156.67,
+  "end": 157.0,
+  "text": "my am",
+  "y": 0.13,
+  "y2": 0.791,
+  "x": 0.506,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 157.0,
+  "end": 160.66,
+  "text": "GIẢN Diện tích: 85, 125, 65, 125; 157m2 Đơn 159t/m2 159tr/m2 giá rumor: 25 bào Giá từ: 13,5 tỷ ty/căn NN EX Diện tích: 102m2 167m2 lá từ: 32 tỷ 39 tỷ PEN PEI 297 336 386m2 396m2 3986m2 T1 II",
+  "y": 0.199,
+  "y2": 0.756,
+  "x": 0.161,
+  "maxh": 78,
+  "nframes": 11
+ },
+ {
+  "start": 160.67,
+  "end": 161.0,
+  "text": "HUONGVIE THÁP THÁP Thụ In Khu View: kép TTTT NRC Giồng Ông ROOF TOP",
+  "y": 0.214,
+  "y2": 0.727,
+  "x": 0.144,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 161.0,
+  "end": 161.33,
+  "text": "Zzz THÁP Viewr",
+  "y": 0.2,
+  "y2": 0.623,
+  "x": 0.464,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 162.0,
+  "end": 162.33,
+  "text": "IUONGVÍII Z2 THÁP THÁP PENT",
+  "y": 0.076,
+  "y2": 0.499,
+  "x": 0.165,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 162.33,
+  "end": 164.66,
+  "text": "Diện tích: 85, 65, 125, 125; 157m2 lý Đơn giá 159t/m2 rumor: Giá từ: 13,5 tỷ 25 EX DU Diện tích: 102m2 167m2 Giá lá từ: 32 tỷ 39 tỷ PEI PEN Diện tích: 297 336 386m2 Giá từ: tì: 62 tỷ 80 II Hi",
+  "y": 0.198,
+  "y2": 0.772,
+  "x": 0.161,
+  "maxh": 80,
+  "nframes": 7
+ },
+ {
+  "start": 164.67,
+  "end": 165.0,
+  "text": "tị 1C II TỊ at: \"ng I1 8ñ 3k, rất",
+  "y": 0.327,
+  "y2": 0.704,
+  "x": 0.126,
+  "maxh": 44,
+  "nframes": 1
+ },
+ {
+  "start": 165.0,
+  "end": 165.33,
+  "text": "m1 EE I.rm 'iirm tr SE",
+  "y": 0.241,
+  "y2": 0.822,
+  "x": 0.169,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 165.33,
+  "end": 165.66,
+  "text": "BA #21 81m 48 re TẾ Bị FTIPSI lã Mang",
+  "y": 0.3,
+  "y2": 0.623,
+  "x": 0.128,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 165.67,
+  "end": 166.0,
+  "text": "rT 11501 SỈ LN] Mã EI 1ñ =T1 TỊ l8 TIỊ",
+  "y": 0.314,
+  "y2": 0.675,
+  "x": 0.263,
+  "maxh": 44,
+  "nframes": 1
+ },
+ {
+  "start": 166.0,
+  "end": 166.33,
+  "text": "mi 198 mm PE IRỊ tì LT] Là chi Thả",
+  "y": 0.245,
+  "y2": 0.828,
+  "x": 0.046,
+  "maxh": 96,
+  "nframes": 1
+ },
+ {
+  "start": 166.33,
+  "end": 166.66,
+  "text": "em T9. 22 18 188 MPI LNI PENIH ung: FT 345",
+  "y": 0.273,
+  "y2": 0.82,
+  "x": 0.025,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 166.67,
+  "end": 167.0,
+  "text": "l1 Em LTÌ TP J8 PENTH TP T1 Trị mỊ=L TỊ FL II là cô",
+  "y": 0.263,
+  "y2": 0.82,
+  "x": 0.007,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 167.0,
+  "end": 167.33,
+  "text": "mm tị ME BỊ xã! 1Ị 1m PENTH PT] T1 4Í nh nha anh chị nhá:",
+  "y": 0.279,
+  "y2": 0.834,
+  "x": 0.085,
+  "maxh": 114,
+  "nframes": 1
+ },
+ {
+  "start": 167.33,
+  "end": 167.66,
+  "text": "đi] I5 ri xã TT th 1Ị LHỊ thứ Rfồng là",
+  "y": 0.248,
+  "y2": 0.831,
+  "x": 0.022,
+  "maxh": 106,
+  "nframes": 1
+ },
+ {
+  "start": 167.67,
+  "end": 168.0,
+  "text": "L1 mĩ] 47 1h 5Í nh NTH la LHỊ Thị FE",
+  "y": 0.232,
+  "y2": 0.654,
+  "x": 0.192,
+  "maxh": 192,
+  "nframes": 1
+ },
+ {
+  "start": 168.0,
+  "end": 168.33,
+  "text": "#83 1411 mĩ] aR_ L2 CE HỊ ENTH UPLEX 11 Mã Mã hi 17113 LT] chứ không phải",
+  "y": 0.193,
+  "y2": 0.824,
+  "x": 0.14,
+  "maxh": 92,
+  "nframes": 1
+ },
+ {
+  "start": 168.33,
+  "end": 168.66,
+  "text": "II LỊ I1 NHI tì-\" LHỊ 11 LTT kể chứ không là",
+  "y": 0.28,
+  "y2": 0.824,
+  "x": 0.103,
+  "maxh": 146,
+  "nframes": 1
+ },
+ {
+  "start": 168.67,
+  "end": 169.0,
+  "text": "66 TT 16, mĩ! LÍ: M8 II [TMI Mm Tị MB E8 LTT ly trên một Sàn",
+  "y": 0.145,
+  "y2": 0.823,
+  "x": 0.203,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 169.0,
+  "end": 169.33,
+  "text": "Hì lạ Bộ Bì lạ Mã Ƒ1J",
+  "y": 0.266,
+  "y2": 0.644,
+  "x": 0.361,
+  "maxh": 86,
+  "nframes": 1
+ },
+ {
+  "start": 169.33,
+  "end": 169.66,
+  "text": "KH LẺ nênlà đây",
+  "y": 0.255,
+  "y2": 0.824,
+  "x": 0.271,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 169.67,
+  "end": 173.33,
+  "text": "PALM PALMRI RỊ RI RIVI OLISE SE SE<4 L1/ Er lÍ T1 1RỊ T4 T2 T3 Z2 =sh AN ÂN th TẾ D3 Rhông đọn HẸP ân hộ vi HHột ách số: HH PENIHOUSL TT HỆ: HỆ ¿Le GIÀN ĐĂNH( ANH( KHÔNG NG GIAN SÓNG SỐNG SỐNG. ĐÀN SỐ PHIẾN PHIÊN PI BẢN GIỚI HẠN ĐĂNG CẤP. CẤP DÀNH CHO HO và SỐÍT ÍT Nếu nh hú lầm Tâm nhn ml hàn 50 Kho 0U tà 42 CĂN DUPLEX len thuái tích lớn. là đơn thuần một mộ diện liền điện lên. lớn SÂN PHẨM 8cÃĂ CĂN mà mù một phòng phong lành ảnh ìn nh chị họ chờ nằm TỔ thôi” ôi đều chỉ nên có là perthouSe độc quyền đây thôi nhất",
+  "y": 0.248,
+  "y2": 0.832,
+  "x": 0.139,
+  "maxh": 118,
+  "nframes": 11
+ },
+ {
+  "start": 173.33,
+  "end": 173.66,
+  "text": "LÝ thị",
+  "y": 0.385,
+  "y2": 0.827,
+  "x": 0.64,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 173.67,
+  "end": 174.0,
+  "text": "là TT",
+  "y": 0.333,
+  "y2": 0.358,
+  "x": 0.275,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 174.0,
+  "end": 174.33,
+  "text": "IẾI nO",
+  "y": 0.546,
+  "y2": 0.821,
+  "x": 0.175,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 174.67,
+  "end": 175.0,
+  "text": "lƒ CÓ",
+  "y": 0.487,
+  "y2": 0.816,
+  "x": 0.433,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 175.0,
+  "end": 175.33,
+  "text": "CO",
+  "y": 0.803,
+  "y2": 0.819,
+  "x": 0.428,
+  "maxh": 30,
+  "nframes": 1
+ },
+ {
+  "start": 175.33,
+  "end": 175.66,
+  "text": "II mí lều Tiêng",
+  "y": 0.401,
+  "y2": 0.824,
+  "x": 0.364,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 176.0,
+  "end": 178.33,
+  "text": "Typical Floor Plan Tower t6 li TT âm ELEVATIONOPENSUPDISTINCTIVE APRVATE Typical Floor Plan Tower s6 HE 'MOMENT GP CRAFTED REALM, TO",
+  "y": 0.102,
+  "y2": 0.909,
+  "x": 0.144,
+  "maxh": 160,
+  "nframes": 7
+ },
+ {
+  "start": 178.67,
+  "end": 180.0,
+  "text": "HO DOI tô \\wŸ llu Z2",
+  "y": 0.248,
+  "y2": 0.64,
+  "x": 0.11,
+  "maxh": 125,
+  "nframes": 4
+ },
+ {
+  "start": 180.0,
+  "end": 180.33,
+  "text": "227;",
+  "y": 0.627,
+  "y2": 0.64,
+  "x": 0.108,
+  "maxh": 24,
+  "nframes": 1
+ },
+ {
+  "start": 180.33,
+  "end": 180.66,
+  "text": "vi với: òng Khác cao vứt",
+  "y": 0.65,
+  "y2": 0.825,
+  "x": 0.351,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 181.0,
+  "end": 181.33,
+  "text": "phỏnQ Cao vứt",
+  "y": 0.796,
+  "y2": 0.827,
+  "x": 0.296,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 182.33,
+  "end": 182.66,
+  "text": "Rà",
+  "y": 0.616,
+  "y2": 0.644,
+  "x": 0.454,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 183.0,
+  "end": 183.33,
+  "text": "và",
+  "y": 0.803,
+  "y2": 0.819,
+  "x": 0.407,
+  "maxh": 30,
+  "nframes": 1
+ },
+ {
+  "start": 184.33,
+  "end": 184.66,
+  "text": "cau ta",
+  "y": 0.798,
+  "y2": 0.826,
+  "x": 0.307,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 184.67,
+  "end": 185.0,
+  "text": "cầu thang điêu",
+  "y": 0.796,
+  "y2": 0.827,
+  "x": 0.304,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 185.0,
+  "end": 185.33,
+  "text": "câu điê thang Kñn",
+  "y": 0.795,
+  "y2": 0.828,
+  "x": 0.296,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 185.33,
+  "end": 185.66,
+  "text": "cầu tỉ",
+  "y": 0.8,
+  "y2": 0.816,
+  "x": 0.319,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 185.67,
+  "end": 186.0,
+  "text": "thang Sầu",
+  "y": 0.791,
+  "y2": 0.825,
+  "x": 0.311,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 186.0,
+  "end": 186.33,
+  "text": "1f PP",
+  "y": 0.756,
+  "y2": 0.871,
+  "x": 0.335,
+  "maxh": 120,
+  "nframes": 1
+ },
+ {
+  "start": 186.33,
+  "end": 187.0,
+  "text": "S4 trị dã. wị* Là sa với gt 35",
+  "y": 0.516,
+  "y2": 0.83,
+  "x": 0.0,
+  "maxh": 66,
+  "nframes": 2
+ },
+ {
+  "start": 187.0,
+  "end": 187.33,
+  "text": "Mi sân",
+  "y": 0.544,
+  "y2": 0.83,
+  "x": 0.031,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 187.33,
+  "end": 187.66,
+  "text": "trúc",
+  "y": 0.79,
+  "y2": 0.821,
+  "x": 0.526,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 187.67,
+  "end": 188.0,
+  "text": "W$Y -ài",
+  "y": 0.513,
+  "y2": 0.584,
+  "x": 0.496,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 188.0,
+  "end": 188.33,
+  "text": "lị là",
+  "y": 0.406,
+  "y2": 0.57,
+  "x": 0.26,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 188.67,
+  "end": 189.0,
+  "text": "làđễ GUA",
+  "y": 0.798,
+  "y2": 0.82,
+  "x": 0.174,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 189.0,
+  "end": 189.33,
+  "text": "ng strải mỗi ngày Nò",
+  "y": 0.795,
+  "y2": 0.998,
+  "x": 0.174,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 189.33,
+  "end": 190.0,
+  "text": "trải nghiệm sống mì ngày đâ",
+  "y": 0.798,
+  "y2": 0.825,
+  "x": 0.199,
+  "maxh": 52,
+  "nframes": 2
+ },
+ {
+  "start": 190.0,
+  "end": 190.33,
+  "text": "là. mỗi ngày iệm sống đây lạ",
+  "y": 0.711,
+  "y2": 0.932,
+  "x": 0.347,
+  "maxh": 141,
+  "nframes": 1
+ },
+ {
+  "start": 190.33,
+  "end": 190.66,
+  "text": "Tiệm sống môi ngày dây",
+  "y": 0.798,
+  "y2": 0.824,
+  "x": 0.333,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 190.67,
+  "end": 191.0,
+  "text": "vị",
+  "y": 0.272,
+  "y2": 0.308,
+  "x": 0.818,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 191.67,
+  "end": 192.0,
+  "text": "TP lý JÌ mg)",
+  "y": 0.268,
+  "y2": 0.633,
+  "x": 0.269,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 192.33,
+  "end": 192.66,
+  "text": "kính",
+  "y": 0.798,
+  "y2": 0.819,
+  "x": 0.432,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 192.67,
+  "end": 193.0,
+  "text": "không Chỉ mở rộng biên độ gian chỉ IPP",
+  "y": 0.77,
+  "y2": 0.999,
+  "x": 0.25,
+  "maxh": 285,
+  "nframes": 1
+ },
+ {
+  "start": 193.0,
+  "end": 194.0,
+  "text": "MỞ RỘNG khôñgg không chỉ mở rộng biên độ không gian QỌ Theo chiều dọc",
+  "y": 0.448,
+  "y2": 0.844,
+  "x": 0.117,
+  "maxh": 164,
+  "nframes": 3
+ },
+ {
+  "start": 194.0,
+  "end": 194.33,
+  "text": "TỦ MƠ biên độ gian Ghi {01© dO dỌ xxx",
+  "y": 0.002,
+  "y2": 0.981,
+  "x": 0.131,
+  "maxh": 183,
+  "nframes": 1
+ },
+ {
+  "start": 194.33,
+  "end": 195.0,
+  "text": "biên độ gian Không đến Diên độ không Ghiều dọc Q.Cï",
+  "y": 0.519,
+  "y2": 0.836,
+  "x": 0.381,
+  "maxh": 88,
+  "nframes": 2
+ },
+ {
+  "start": 195.33,
+  "end": 196.0,
+  "text": "còn căn HỘ ma giúp",
+  "y": 0.774,
+  "y2": 0.836,
+  "x": 0.307,
+  "maxh": 118,
+  "nframes": 2
+ },
+ {
+  "start": 196.33,
+  "end": 196.66,
+  "text": "ƠI",
+  "y": 0.801,
+  "y2": 0.82,
+  "x": 0.774,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 196.67,
+  "end": 197.0,
+  "text": "lỗ đón trộn QIO",
+  "y": 0.652,
+  "y2": 0.826,
+  "x": 0.168,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 197.0,
+  "end": 198.0,
+  "text": "đón trọn Vẹn SaHO Của OIO ƯỜI sứ",
+  "y": 0.798,
+  "y2": 0.873,
+  "x": 0.089,
+  "maxh": 52,
+  "nframes": 3
+ },
+ {
+  "start": 198.0,
+  "end": 198.33,
+  "text": "4V Sự kết Hợp Hy",
+  "y": 0.697,
+  "y2": 0.827,
+  "x": 0.263,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 198.67,
+  "end": 199.0,
+  "text": "lãi kết hợp Sự",
+  "y": 0.793,
+  "y2": 0.827,
+  "x": 0.26,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 199.0,
+  "end": 199.33,
+  "text": "cảm giác hài",
+  "y": 0.797,
+  "y2": 0.824,
+  "x": 0.342,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 199.33,
+  "end": 199.66,
+  "text": "bề Giác thế",
+  "y": 0.792,
+  "y2": 0.826,
+  "x": 0.442,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 199.67,
+  "end": 200.33,
+  "text": "mặt đất như một căn",
+  "y": 0.772,
+  "y2": 0.827,
+  "x": 0.207,
+  "maxh": 105,
+  "nframes": 2
+ },
+ {
+  "start": 200.33,
+  "end": 201.0,
+  "text": "nhữ một thự",
+  "y": 0.798,
+  "y2": 0.823,
+  "x": 0.206,
+  "maxh": 50,
+  "nframes": 2
+ },
+ {
+  "start": 201.0,
+  "end": 201.33,
+  "text": "lại SƠ.",
+  "y": 0.795,
+  "y2": 0.828,
+  "x": 0.469,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 202.0,
+  "end": 202.33,
+  "text": "Lấn",
+  "y": 0.745,
+  "y2": 0.843,
+  "x": 0.333,
+  "maxh": 188,
+  "nframes": 1
+ },
+ {
+  "start": 202.67,
+  "end": 203.33,
+  "text": "RIÊNG] SỰ RIENG Illl",
+  "y": 0.466,
+  "y2": 0.773,
+  "x": 0.153,
+  "maxh": 201,
+  "nframes": 2
+ },
+ {
+  "start": 203.33,
+  "end": 203.66,
+  "text": "sỰ RIÊNG tuyệt",
+  "y": 0.419,
+  "y2": 0.57,
+  "x": 0.158,
+  "maxh": 228,
+  "nframes": 1
+ },
+ {
+  "start": 204.33,
+  "end": 204.66,
+  "text": "42 đáng",
+  "y": 0.709,
+  "y2": 0.824,
+  "x": 0.239,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 205.0,
+  "end": 205.33,
+  "text": "mmm",
+  "y": 0.527,
+  "y2": 0.623,
+  "x": 0.492,
+  "maxh": 184,
+  "nframes": 1
+ },
+ {
+  "start": 205.67,
+  "end": 206.0,
+  "text": "dòng perthouse đó là",
+  "y": 0.798,
+  "y2": 0.824,
+  "x": 0.286,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 206.0,
+  "end": 206.33,
+  "text": "Zœ Sỹ",
+  "y": 0.654,
+  "y2": 0.853,
+  "x": 0.0,
+  "maxh": 108,
+  "nframes": 1
+ },
+ {
+  "start": 206.33,
+  "end": 206.66,
+  "text": "đã dòng đó là",
+  "y": 0.542,
+  "y2": 0.827,
+  "x": 0.286,
+  "maxh": 189,
+  "nframes": 1
+ },
+ {
+  "start": 206.67,
+  "end": 207.0,
+  "text": "số lượng nó sẽ",
+  "y": 0.779,
+  "y2": 0.827,
+  "x": 0.329,
+  "maxh": 93,
+  "nframes": 1
+ },
+ {
+  "start": 207.0,
+  "end": 207.33,
+  "text": "ống can cỗ kí",
+  "y": 0.45,
+  "y2": 0.63,
+  "x": 0.388,
+  "maxh": 135,
+  "nframes": 1
+ },
+ {
+  "start": 207.33,
+  "end": 207.66,
+  "text": "Se€Tt SO",
+  "y": 0.801,
+  "y2": 0.83,
+  "x": 0.342,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 207.67,
+  "end": 208.0,
+  "text": "sự! CO",
+  "y": 0.449,
+  "y2": 0.811,
+  "x": 0.301,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 208.0,
+  "end": 208.33,
+  "text": "SỐ lửy mnieu SẼ KCf] se",
+  "y": 0.444,
+  "y2": 0.85,
+  "x": 0.276,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 208.33,
+  "end": 209.0,
+  "text": "số lưọ lượng Ieu ông la SG Chị 2z",
+  "y": 0.441,
+  "y2": 0.963,
+  "x": 0.056,
+  "maxh": 105,
+  "nframes": 2
+ },
+ {
+  "start": 209.0,
+  "end": 209.66,
+  "text": "Khách lách SỐ hơn anh CHỊ",
+  "y": 0.791,
+  "y2": 0.835,
+  "x": 0.299,
+  "maxh": 80,
+  "nframes": 2
+ },
+ {
+  "start": 209.67,
+  "end": 210.0,
+  "text": "ph zÌ",
+  "y": 0.799,
+  "y2": 0.824,
+  "x": 0.406,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 210.0,
+  "end": 210.33,
+  "text": "aI",
+  "y": 0.803,
+  "y2": 0.816,
+  "x": 0.512,
+  "maxh": 26,
+  "nframes": 1
+ },
+ {
+  "start": 211.67,
+  "end": 212.0,
+  "text": "tì",
+  "y": 0.506,
+  "y2": 0.538,
+  "x": 0.411,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 212.67,
+  "end": 213.0,
+  "text": "sì Kind \"5E",
+  "y": 0.223,
+  "y2": 0.841,
+  "x": 0.15,
+  "maxh": 125,
+  "nframes": 1
+ },
+ {
+  "start": 213.33,
+  "end": 213.66,
+  "text": "lÌ cá",
+  "y": 0.402,
+  "y2": 0.819,
+  "x": 0.0,
+  "maxh": 93,
+  "nframes": 1
+ },
+ {
+  "start": 213.67,
+  "end": 214.0,
+  "text": "114 TU 3E",
+  "y": 0.62,
+  "y2": 0.877,
+  "x": 0.042,
+  "maxh": 78,
+  "nframes": 1
+ },
+ {
+  "start": 214.0,
+  "end": 214.33,
+  "text": "lÌ Thế",
+  "y": 0.32,
+  "y2": 0.578,
+  "x": 0.186,
+  "maxh": 147,
+  "nframes": 1
+ },
+ {
+  "start": 214.33,
+  "end": 214.66,
+  "text": "Lầu TỐ",
+  "y": 0.492,
+  "y2": 0.83,
+  "x": 0.394,
+  "maxh": 206,
+  "nframes": 1
+ },
+ {
+  "start": 214.67,
+  "end": 215.0,
+  "text": "II Nƒ sac",
+  "y": 0.29,
+  "y2": 0.902,
+  "x": 0.2,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 215.0,
+  "end": 215.33,
+  "text": "ết dựng",
+  "y": 0.787,
+  "y2": 0.833,
+  "x": 0.504,
+  "maxh": 88,
+  "nframes": 1
+ },
+ {
+  "start": 215.33,
+  "end": 216.0,
+  "text": "So q47 cản: lề dòng",
+  "y": 0.0,
+  "y2": 0.828,
+  "x": 0.451,
+  "maxh": 278,
+  "nframes": 2
+ },
+ {
+  "start": 216.0,
+  "end": 216.33,
+  "text": "ILEAR Tỉ vã phẩm những",
+  "y": 0.451,
+  "y2": 0.834,
+  "x": 0.0,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 216.33,
+  "end": 217.0,
+  "text": "HUB trùng và Xi Xã",
+  "y": 0.47,
+  "y2": 0.882,
+  "x": 0.457,
+  "maxh": 70,
+  "nframes": 2
+ },
+ {
+  "start": 217.33,
+  "end": 217.66,
+  "text": "chủ",
+  "y": 0.949,
+  "y2": 1.0,
+  "x": 0.221,
+  "maxh": 98,
+  "nframes": 1
+ },
+ {
+  "start": 217.67,
+  "end": 218.0,
+  "text": "s4",
+  "y": 0.834,
+  "y2": 0.864,
+  "x": 0.496,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 218.0,
+  "end": 218.33,
+  "text": "II Quyết",
+  "y": 0.45,
+  "y2": 0.551,
+  "x": 0.568,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 218.33,
+  "end": 218.66,
+  "text": "sx-",
+  "y": 0.547,
+  "y2": 0.563,
+  "x": 0.263,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 219.0,
+  "end": 219.33,
+  "text": "xế",
+  "y": 0.887,
+  "y2": 0.952,
+  "x": 0.529,
+  "maxh": 126,
+  "nframes": 1
+ },
+ {
+  "start": 219.33,
+  "end": 219.66,
+  "text": "em Quyết sẽ",
+  "y": 0.517,
+  "y2": 0.562,
+  "x": 0.5,
+  "maxh": 86,
+  "nframes": 1
+ },
+ {
+  "start": 219.67,
+  "end": 220.0,
+  "text": "nưa",
+  "y": 0.523,
+  "y2": 0.539,
+  "x": 0.585,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 220.0,
+  "end": 220.33,
+  "text": "la tÍ",
+  "y": 0.541,
+  "y2": 0.669,
+  "x": 0.194,
+  "maxh": 142,
+  "nframes": 1
+ },
+ {
+  "start": 220.33,
+  "end": 220.66,
+  "text": "tiết hợn nữ;",
+  "y": 0.512,
+  "y2": 0.554,
+  "x": 0.426,
+  "maxh": 81,
+  "nframes": 1
+ },
+ {
+  "start": 220.67,
+  "end": 221.0,
+  "text": "chính sáể LÊ Củ ÖÒ›",
+  "y": 0.289,
+  "y2": 0.959,
+  "x": 0.083,
+  "maxh": 156,
+  "nframes": 1
+ },
+ {
+  "start": 221.0,
+  "end": 221.33,
+  "text": "Pninn LÍ",
+  "y": 0.295,
+  "y2": 0.687,
+  "x": 0.25,
+  "maxh": 108,
+  "nframes": 1
+ },
+ {
+  "start": 221.33,
+  "end": 221.66,
+  "text": "Se",
+  "y": 0.292,
+  "y2": 0.329,
+  "x": 0.429,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 221.67,
+  "end": 222.0,
+  "text": "ĐA",
+  "y": 0.488,
+  "y2": 0.513,
+  "x": 0.681,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 222.0,
+  "end": 222.33,
+  "text": "Chiết",
+  "y": 0.315,
+  "y2": 0.377,
+  "x": 0.178,
+  "maxh": 118,
+  "nframes": 1
+ },
+ {
+  "start": 222.33,
+  "end": 222.66,
+  "text": "thất Chỉ",
+  "y": 0.305,
+  "y2": 0.38,
+  "x": 0.178,
+  "maxh": 144,
+  "nframes": 1
+ },
+ {
+  "start": 222.67,
+  "end": 223.33,
+  "text": "Ch để anh chị có được",
+  "y": 0.315,
+  "y2": 0.543,
+  "x": 0.178,
+  "maxh": 117,
+  "nframes": 2
+ },
+ {
+  "start": 223.33,
+  "end": 224.0,
+  "text": "lÌ tổng hìn quan mì",
+  "y": 0.499,
+  "y2": 0.713,
+  "x": 0.165,
+  "maxh": 141,
+  "nframes": 2
+ },
+ {
+  "start": 224.33,
+  "end": 224.66,
+  "text": "tổng quan",
+  "y": 0.519,
+  "y2": 0.544,
+  "x": 0.479,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 224.67,
+  "end": 225.33,
+  "text": "tị những. thể va của La",
+  "y": 0.338,
+  "y2": 0.573,
+  "x": 0.297,
+  "maxh": 106,
+  "nframes": 2
+ },
+ {
+  "start": 225.33,
+  "end": 226.0,
+  "text": "dònđ đặc ặc biệt nà mi EÐ",
+  "y": 0.515,
+  "y2": 0.86,
+  "x": 0.015,
+  "maxh": 166,
+  "nframes": 2
+ },
+ {
+  "start": 226.0,
+  "end": 226.33,
+  "text": "Tụ đặt lòng biệt nàý mi",
+  "y": 0.316,
+  "y2": 0.659,
+  "x": 0.008,
+  "maxh": 159,
+  "nframes": 1
+ },
+ {
+  "start": 226.33,
+  "end": 227.0,
+  "text": "zmŨ Tụ anh chị nhá",
+  "y": 0.311,
+  "y2": 0.548,
+  "x": 0.382,
+  "maxh": 66,
+  "nframes": 2
+ },
+ {
+  "start": 227.0,
+  "end": 227.33,
+  "text": "À4 Quyết",
+  "y": 0.42,
+  "y2": 0.545,
+  "x": 0.126,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 227.33,
+  "end": 227.66,
+  "text": "em làQuyết",
+  "y": 0.512,
+  "y2": 0.564,
+  "x": 0.354,
+  "maxh": 100,
+  "nframes": 1
+ },
+ {
+  "start": 227.67,
+  "end": 228.66,
+  "text": "bất ên gi động sản ¬vì",
+  "y": 0.515,
+  "y2": 0.573,
+  "x": 0.354,
+  "maxh": 51,
+  "nframes": 3
+ },
+ {
+  "start": 228.67,
+  "end": 229.33,
+  "text": "tẩm Sài Gỗn ng",
+  "y": 0.506,
+  "y2": 0.565,
+  "x": 0.374,
+  "maxh": 112,
+  "nframes": 2
+ },
+ {
+  "start": 229.33,
+  "end": 230.0,
+  "text": "Im quyết Tì 1a",
+  "y": 0.518,
+  "y2": 0.545,
+  "x": 0.34,
+  "maxh": 50,
+  "nframes": 2
+ },
+ {
+  "start": 230.0,
+  "end": 230.33,
+  "text": "quyết Trần tìm số",
+  "y": 0.511,
+  "y2": 0.548,
+  "x": 0.429,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 230.33,
+  "end": 231.0,
+  "text": "I5 đẹp quyết Tì",
+  "y": 0.514,
+  "y2": 0.545,
+  "x": 0.392,
+  "maxh": 52,
+  "nframes": 2
+ },
+ {
+  "start": 231.33,
+  "end": 231.66,
+  "text": "se tà",
+  "y": 0.515,
+  "y2": 0.611,
+  "x": 0.253,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 231.67,
+  "end": 232.0,
+  "text": "tìm",
+  "y": 0.515,
+  "y2": 0.547,
+  "x": 0.287,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 232.0,
+  "end": 232.33,
+  "text": "Quyết Trần luôn an",
+  "y": 0.512,
+  "y2": 0.548,
+  "x": 0.261,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 232.67,
+  "end": 233.0,
+  "text": "Tìn ết",
+  "y": 0.518,
+  "y2": 0.539,
+  "x": 0.189,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 233.0,
+  "end": 233.33,
+  "text": "Trần tìm Quyết",
+  "y": 0.515,
+  "y2": 0.542,
+  "x": 0.19,
+  "maxh": 46,
+  "nframes": 1
+ }
+]

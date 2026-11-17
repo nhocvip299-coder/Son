@@ -6,5 +6,6 @@
  "qtl-pop-whoosh": 0.112,
  "qtl-transition": 0.18,
  "qtl-swoosh": 0.171,
- "qtl-impact": 0.039
+ "qtl-impact": 0.039,
+ "qtl-pop-whoosh-hot": 0.112
 }

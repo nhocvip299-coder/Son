@@ -17,14 +17,14 @@ const SRC = "inputs/san-ho-lux-1080.mp4";
 const MATTE = "inputs/sanho-matte/person.webm";
 const hitOf = (s: string) => (HITS as Record<string, number>)[s.replace("real/", "")] ?? 0;
 type Cue = [number, SfxCue["sfx"], number];
-type Scene = { from: number; to: number; label: string; person?: boolean; render: (r: (s: number) => number, e: number) => React.ReactNode; sfx: Cue[]; exitAt?: number };
+type Scene = { from: number; to: number; label: string; person?: boolean; render: (r: (s: number) => number, e: number) => React.ReactNode; sfx: Cue[]; exitAt?: number; outSfx?: SfxCue["sfx"] };
 const W = 1080, H = 1920;
 const Lead: React.FC<{ x: number; y: number; at: number; end: number; exit?: KfOut; anchor?: "start" | "middle" | "end"; children: string }> = ({ x, y, at, end, exit = "blurUp", anchor = "middle", children }) => (
   <svg width={W} height={H} style={{ position: "absolute", inset: 0 }}>
     <KText x={x * W} y={y * H} at={at} end={end} enter="blurIn" exit={exit} size={44} weight={600} italic fill="#fff" anchor={anchor}>{children}</KText>
   </svg>
 );
-const TXT = "real/qtl-sparkle-whoosh-2" as const, GLS = "real/qtl-sparkle-sweep" as const, OUT = "real/qtl-pop-whoosh" as const; // OUT: swoosh 1478 thieu cao tan -> bi giong lap
+const TXT = "real/qtl-sparkle-whoosh-2" as const, GLS = "real/qtl-sparkle-sweep" as const, OUT = "real/qtl-pop-whoosh-hot" as const; // OUT: swoosh 1478 thieu cao tan -> bi giong lap
 
 // e = thoi diem bat dau RA (giay tuong doi) = do dai canh - 0.6
 const SCENES: Scene[] = [
@@ -92,6 +92,7 @@ const SCENES: Scene[] = [
       </>
     ),
     sfx: [[23.85, TXT, 1], [27.0, OUT, 0.6], [27.75, TXT, 1]],
+    outSfx: TXT, // giong noi to o diem ra -> dung tieng lap lanh manh
   },
   {
     from: 34.0, to: 42.1, label: "6 tung tien ich: icon net manh + ten + so met; ra moi muc",
@@ -136,7 +137,7 @@ export const QtlLab8: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem = "
     const r = (s: number) => s - sc.from;
     const e = len - 0.6;
     sc.sfx.forEach(([s, sfx, v]) => cues.push({ frame: Math.max(0, Math.round((start + r(s) + 0.08 - hitOf(sfx)) * fps)), sfx, volume: v }));
-    cues.push({ frame: Math.round((start + e + 0.05 - hitOf(OUT)) * fps), sfx: OUT, volume: 0.75 }); // chu ra
+    cues.push({ frame: Math.round((start + e + 0.05 - hitOf(sc.outSfx ?? OUT)) * fps), sfx: sc.outSfx ?? OUT, volume: 1 }); // chu ra
     if (i > 0) cues.push({ frame: Math.round((start + 0.1 - hitOf("real/qtl-transition")) * fps), sfx: "real/qtl-transition", volume: 1 });
     return (
       <Sequence key={i} from={Math.round(start * fps)} durationInFrames={Math.round(len * fps)} name={sc.label}>

@@ -40,4 +40,7 @@ for name, (mid, ss, dur, note) in SFX.items():
     hits[name] = round(float(env.argmax() / 16000), 3)
     print("OK", name, "<-", mid, "hit", hits[name], "s |", note)
 
+# Ban "hot" (+6 dB, gioi han -0.5 dBTP) cho tieng chu RA — pop-whoosh nang luong thap, bi giong noi to lap
+subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", str(OUT / "qtl-pop-whoosh.wav"), "-af", "volume=6dB,alimiter=limit=0.94:level=disabled", str(OUT / "qtl-pop-whoosh-hot.wav")], check=True)
+hits["qtl-pop-whoosh-hot"] = hits["qtl-pop-whoosh"]
 json.dump(hits, open(ROOT / "src/styles/quyetTranLux/sfxHits.json", "w"), indent=1)

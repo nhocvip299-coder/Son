@@ -52,6 +52,7 @@ export type SfxName =
   | "real/qtl-sparkle-whoosh-2"
   | "real/qtl-sparkle-sweep"
   | "real/qtl-pop-whoosh"
+  | "real/qtl-pop-whoosh-hot"
   | "real/qtl-transition"
   | "real/qtl-swoosh"
   | "real/qtl-impact";

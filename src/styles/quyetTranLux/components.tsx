@@ -63,6 +63,8 @@ export const QtTitle: React.FC<{
   const { width, height } = useVideoConfig();
   const out = duration - 0.32;
   const col = dark ? QT.ink : QT.white;
+  // vua 1 dong: Montserrat 800 nghieng IN HOA ~0.7em/ky tu
+  size = Math.min(size, (width - 140) / (Math.max(4, main.length) * 0.7));
   const box: React.CSSProperties =
     align === "center"
       ? { position: "absolute", left: 60, right: 60, textAlign: "center" }
@@ -120,7 +122,8 @@ export const QtTrackingReveal: React.FC<{ lead?: string; main: string; y?: numbe
   seed = "qt",
 }) => {
   const { t } = useT();
-  const { height } = useVideoConfig();
+  const { width, height } = useVideoConfig();
+  size = Math.min(size, (width - 160) / (Math.max(4, main.length) * 0.72));
   const out = interpolate(t, [duration - 0.32, duration], [1, 0], { ...clamp, easing: easeIn });
   const p = interpolate(t, [0, 0.75], [0, 1], { ...clamp, easing: easeOut });
   const chars = (txt: string, s: string, base: number) =>

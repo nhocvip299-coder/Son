@@ -4,6 +4,7 @@ import { AutoEdit } from "./compositions/AutoEdit";
 import { Demo } from "./compositions/Demo";
 import { HongDangVerify } from "./styles/hongDang/Verify";
 import { QuyetTranLuxVerify, QTL_VERIFY_SEC } from "./styles/quyetTranLux/Verify";
+import { QuyetTranLuxEdit, type QtlPlan } from "./styles/quyetTranLux/QuyetTranLuxEdit";
 import { TextPresetsGallery } from "./styles/textPresets/Gallery";
 import { TextPresetsCatalog40, TextPresetsGallery40 } from "./styles/textPresets/Gallery40";
 import { CapcutCatalog } from "./styles/textPresets/capcut/CapcutCatalog";
@@ -45,6 +46,16 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="TextPresetsGallery" component={TextPresetsGallery} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition id="QuyetTranLuxVerify" component={QuyetTranLuxVerify} durationInFrames={Math.round(QTL_VERIFY_SEC * 30)} fps={30} width={1080} height={1920} />
       <Composition id="QuyetTranLuxVerify60" component={QuyetTranLuxVerify} durationInFrames={Math.round(QTL_VERIFY_SEC * 60)} fps={60} width={1080} height={1920} />
+      <Composition
+        id="QuyetTranLuxEdit"
+        component={QuyetTranLuxEdit}
+        durationInFrames={60}
+        fps={60}
+        width={1080}
+        height={1920}
+        defaultProps={{ plan: { source: "demo/bg.mp4", fps: 60, items: [], words: [], durationSec: 1, captions: "phrase" } as QtlPlan }}
+        calculateMetadata={({ props }) => ({ fps: props.plan.fps, durationInFrames: Math.max(1, Math.round(props.plan.durationSec * props.plan.fps)) })}
+      />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

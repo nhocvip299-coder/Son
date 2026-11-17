@@ -40,12 +40,16 @@ Ra `analysis.json` (điểm cắt/phút, shot trung vị, thời điểm sự ki
 Phiên âm mẫu bằng `node scripts/pipeline/transcribe.mjs <đường-dẫn-tuyệt-đối-video> <thư-mục-tuyệt-đối>` (đường dẫn tương đối làm whisper.cpp lỗi tham số; nếu chưa có model và Node tải lỗi `ENOTFOUND`, tải bằng `curl -L` từ `huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo.bin` vào `whisper.cpp/`). Chạy nền vì ~4 phút audio mất vài phút CPU. Mục đích: biết **chữ trên màn hình ứng với lời nói nào** — đây là phần "tư duy nhấn mạnh" của kênh (họ chèn chữ ở con số? địa danh? câu hỏi?).
 
 ## Bước 3 — Nhìn kỹ và đo animation
+**Luôn cắt dải khung dày 10–15 giây ĐẦU của mỗi mẫu** (`ffmpeg -t 12 -vf fps=4,...,tile=14x3`) — đoạn hook là nơi kênh dồn nhiều hiệu ứng nhất, mà keyframe tự động thường bỏ qua (bài học `mau-quyet-tran-lux`: sót chữ âm bản, 2 dòng chéo nhau, chữ chạy theo lời nói ở 0–10 s, người dùng phải chỉ ra).
+
 Đọc contact sheet và từng keyframe (Read ảnh). Liệt kê **các loại thành phần đồ hoạ** lặp lại (chữ khoá, thẻ câu hỏi, số lớn, bản đồ, PiP, icon, khung giá, CTA, watermark, thanh tiến trình…). Thường 4–8 loại.
 
 Mỗi loại, cắt dải khung dày quanh lúc nó xuất hiện để thấy cách vào/thoát:
 ```bash
 python3 -I scripts/style/strip.py reference/<id>/refNN_proxy.mp4 <t> styles/<id>/analysis/strips/<ten>_<t>.jpg --crop 0.5:0.8
 ```
+Đối chiếu từng khối chữ với transcript (mốc từng từ): chữ có hiện **dần theo lời nói** không (chữ chạy), dòng nào nhỏ/nghiêng, dòng nào lớn/thẳng, căn trái hay phải. Kiểm tra cả **chế độ hòa trộn**: ruột chữ có đảo màu nền không (âm bản = `mix-blend-mode: difference`), có lấy texture video không. Hướng/độ nghiêng của dòng chữ có minh họa nghĩa lời nói không ("giao nhau" → 2 dòng chéo nhau).
+
 Từ dải khung suy ra: thời lượng vào (số khung đến khi ổn định), kiểu vào (pop/trượt/gõ từng ký tự/mask), có overshoot không, thoát thế nào, giữ bao lâu.
 
 Kiểm SFX của mẫu: `python3 -I scripts/style/hf_peaks.py <proxy> <các mốc flash/text_events>` — mốc nào > +12 dB là có SFX rõ; dòng "nền" cho biết có nhạc nền suốt video không.

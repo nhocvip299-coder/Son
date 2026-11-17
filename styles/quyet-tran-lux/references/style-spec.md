@@ -29,6 +29,15 @@ Sang trọng, tiết chế, "điện ảnh": footage đẹp (mô hình sa bàn �
 | Trang ghép ảnh | nền gradient xám tối (#3a3a3c→#0e0e10), 3 thẻ ảnh 0.81W × 0.258H, khe 0.008H, viền trắng ~3px; tiêu đề IN HOA dọc trên-trái thẻ 1 ("TRẦN / CAO / 6.8 m"), nhãn nhỏ dưới-phải thẻ 2 ("HỒ BƠI RIÊNG") | [XM] |
 | Màn chữ trên nền tối | gradient đen-xám, chữ nhỏ giữa màn ("như là") | [XM] |
 
+## Hook 0–10 s (ref01) — bổ sung sau góp ý người dùng [XM]
+| Mốc | Hiệu ứng |
+|---|---|
+| 0.7–1.9 s | **Chữ chạy theo lời nói**: "Có một" (nhỏ nghiêng trắng) → "SỰ THẬT LÀ" (lớn đứng thẳng, kem #E8E6D6 đo pixel) → "ở phía nam" (nhỏ, cuối dòng) → "HÀ NỘI" (lớn, căn phải, hiện nhòe/âm bản rồi rõ); mỗi mảnh trễ ≤0.1 s so với lời |
+| 2.5–4.3 s | "Khu vực giao giữa" + **"HOÀNG MAI - HAI BÀ TRƯNG" âm bản** (ruột chữ đảo màu nền), sát trên trái 0.1H |
+| 5.6–7.0 s | **"ĐIỂM GIAO NHAU" (nghiêng xuống ~+7°) / "VÔ CÙNG SÔI ĐỘNG" (nghiêng lên ~-7°)**: 2 dòng chéo nhau minh họa chữ "giao nhau", âm bản + quầng trắng, hiện từng ký tự rải rác |
+| 7.6–9.6 s | "Chỉ mất chưa đến **10 PHÚT** / để đến / **HỒ HOÀN KIẾM**": chữ chạy; dòng cuối lao từ trái vào, nhòe chuyển động, ánh âm bản xanh |
+| 10.0 s | nháy trắng + whoosh sang b-roll |
+
 ## Chuyển động
 | Hiệu ứng | Mô tả | Mức |
 |---|---|---|

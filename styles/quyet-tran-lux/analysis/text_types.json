@@ -1,0 +1,21 @@
+{
+ "_note": "Kiem ke bang mat tu bang anh analysis/events/*.jpg + transcript. type: run=chu chay theo loi; trans=chu trong suot (am ban); behind=chu sau lung nguoi; giant=1 tu khong lo theo loi nhan; cross=2 dong cheo; scatter=ky tu bay rap; stack=tu xep doc; bullet=gach dau dong; card=chu tren nen trang/xam; icon=bieu tuong; tr_leak=chuyen canh vet sang cam; tr_zoom=chuyen canh zoom nhoe; tr_flash=nhay trang",
+ "ref01": [
+  [0.7,"run","SỰ THẬT LÀ"],[1.8,"run","HÀ NỘI"],[3.3,"trans","HOÀNG MAI - HAI BÀ TRƯNG"],[5.6,"cross","ĐIỂM GIAO NHAU / VÔ CÙNG SÔI ĐỘNG"],
+  [8.4,"run","10 PHÚT"],[9.3,"run","HỒ HOÀN KIẾM (lao vao)"],[10.0,"tr_leak",""],[14.2,"tr_zoom",""],[21.6,"tr_leak",""],
+  [27.0,"behind","LỜI GIẢI KHÁ"],[33.2,"trans","GIÁ TRỊ ĐỘC BẢN"],[37.5,"behind","RIVEA RESIDENCES"],[43.0,"run","CHỦ ĐẦU TƯ MEYGROUP"],
+  [48.2,"run","NHỮNG ÔNG LỚN CỦA THẾ GIỚI"],[50.3,"run","DANH SÁCH ĐƠN VỊ TƯ VẤN"],[54.5,"trans","AEDAS"],[60.5,"run","YDILLUMINATION"],
+  [74.2,"behind","ĐIỀU THỨ HAI"],[77.2,"run","LÀM MỘT DỰ ÁN"],[78.5,"behind","ALL IN ONE"],[81.0,"run","RẤT KHAN HIẾM"],
+  [129.6,"tr_zoom","613 CĂN"],[135.7,"trans","CỰC KỲ HIẾM TRÊN THỊ TRƯỜNG"],[139.8,"run","CĂN DUPLEX ... CỰC KỲ HIẾM"],[143.4,"run","GIỚI HẠN VỀ CHIỀU CAO"],
+  [145.5,"run","MỘT CĂN DUPLEX THÔNG TẦNG"],[147.6,"run","MẤT ĐI"],[151.2,"run","DOANH THU THƯƠNG MẠI"],[155.5,"trans","96 CĂN DUPLEX / THE KEY EDITION"],
+  [160.5,"run","224 - 300 m²"],[162.4,"tr_leak",""],[167.0,"scatter","CHỖ ĐỖ XE ĐỊNH DANH"],[171.0,"run","BIỆT THỰ MẶT ĐẤT"],
+  [178.8,"run","SỰ CHỊU CHI"],[183.5,"run","SỰ CHÚ TÂM"],[194.2,"stack","TÒA NHÀ BIỂU TƯỢNG"],[198.8,"bullet","TỐI ƯU ÁNH SÁNG"],[200.3,"bullet","ĐẢM BẢO CÁCH ÂM"],
+  [203.2,"run","TẦNG 20 TRỞ LÊN"],[211.3,"run","EM QUYẾT ẤN TƯỢNG"]
+ ],
+ "ref02": [
+  [5.0,"behind","NHƯ LÀ / CẢM XÚC"],[6.0,"run","THIÊN NHIÊN"],[8.9,"giant","thực sự (trong suot)"],[18.0,"giant","ĐỂ"],[18.3,"run","THỰC SỰ"],
+  [20.0,"run","LỰA CHỌN (kinetic)"],[23.5,"run","BẢN VẼ"],[29.8,"tr_flash",""],[32.5,"run","63 CĂN"],[43.6,"behind","BÓC TÁCH"],[48.3,"icon","? CÓ XỨNG ĐÁNG"],
+  [62.4,"card","SỨC KHỎE & CÂN BẰNG"],[65.5,"run","bữa sáng mọi lúc mọi nơi"],[92.3,"run","1 TIẾNG 30 PHÚT"],[96.7,"tr_flash",""],[101.2,"card","ĂN TIỀN NHẤT"],
+  [107.0,"run","11.000 HA"],[116.0,"behind","10 TRIỆU ĐÔ"],[120.6,"tr_flash",""],[128.6,"behind","164 HA"],[131.0,"run","THE BLUFFS"],[132.5,"icon","Top 35 thế giới + quả địa cầu"],[172.0,"behind","58M2"]
+ ]
+}

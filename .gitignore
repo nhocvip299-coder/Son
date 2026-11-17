@@ -18,3 +18,4 @@ reference/**/*.mkv
 reference/**/*.mov
 # Khung PNG full-size trich tu video mau (chi de do, khong dua len Git)
 styles/*/analysis/frames/*.png
+models/

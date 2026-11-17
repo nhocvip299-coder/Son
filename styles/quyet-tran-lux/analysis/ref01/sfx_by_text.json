@@ -1,0 +1,642 @@
+[
+ {
+  "t": 0.7,
+  "type": "run",
+  "text": "SỰ THẬT LÀ",
+  "onset": 1.01,
+  "hf_rise_db": 28.1,
+  "vhf_rise_db": 40.7,
+  "low_rise_db": 18.8,
+  "dur_s": 0.34,
+  "attack_s": 0.19,
+  "centroid_hz": [
+   1404,
+   561
+  ],
+  "sfx": "impact/boom (tram manh)"
+ },
+ {
+  "t": 1.8,
+  "type": "run",
+  "text": "HÀ NỘI",
+  "onset": 2.15,
+  "hf_rise_db": 22.3,
+  "vhf_rise_db": 25.7,
+  "low_rise_db": 8.4,
+  "dur_s": 0.25,
+  "attack_s": 0.4,
+  "centroid_hz": [
+   1684,
+   1091
+  ],
+  "sfx": "riser/whoosh len (tang dan)"
+ },
+ {
+  "t": 3.3,
+  "type": "trans",
+  "text": "HOÀNG MAI - HAI BÀ TRƯNG",
+  "onset": 2.84,
+  "hf_rise_db": 21.9,
+  "vhf_rise_db": 30.7,
+  "low_rise_db": 8.5,
+  "dur_s": 0.38,
+  "attack_s": 0.25,
+  "centroid_hz": [
+   1885,
+   3289
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 5.6,
+  "type": "cross",
+  "text": "ĐIỂM GIAO NHAU / VÔ CÙNG SÔI ĐỘNG",
+  "onset": 5.25,
+  "hf_rise_db": 34.7,
+  "vhf_rise_db": 51.9,
+  "low_rise_db": 4.1,
+  "dur_s": 0.49,
+  "attack_s": 0.34,
+  "centroid_hz": [
+   1749,
+   2074
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 8.4,
+  "type": "run",
+  "text": "10 PHÚT",
+  "onset": 8.03,
+  "hf_rise_db": 34.3,
+  "vhf_rise_db": 28.3,
+  "low_rise_db": 6.6,
+  "dur_s": 0.4,
+  "attack_s": 0.05,
+  "centroid_hz": [
+   3107,
+   694
+  ],
+  "sfx": "swoosh xuong (quet xuong)"
+ },
+ {
+  "t": 9.3,
+  "type": "run",
+  "text": "HỒ HOÀN KIẾM (lao vao)",
+  "onset": 9.37,
+  "hf_rise_db": 29.9,
+  "vhf_rise_db": 42.6,
+  "low_rise_db": 8.6,
+  "dur_s": 0.37,
+  "attack_s": 0.06,
+  "centroid_hz": [
+   1592,
+   944
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 10.0,
+  "type": "tr_leak",
+  "text": "",
+  "onset": 9.91,
+  "hf_rise_db": 29.2,
+  "vhf_rise_db": 44.8,
+  "low_rise_db": 2.6,
+  "dur_s": 0.38,
+  "attack_s": 0.16,
+  "centroid_hz": [
+   738,
+   3167
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 14.2,
+  "type": "tr_zoom",
+  "text": "",
+  "onset": 13.85,
+  "hf_rise_db": 24.8,
+  "vhf_rise_db": 32.0,
+  "low_rise_db": 9.6,
+  "dur_s": 0.52,
+  "attack_s": 0.35,
+  "centroid_hz": [
+   660,
+   670
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 21.6,
+  "type": "tr_leak",
+  "text": "",
+  "onset": 21.72,
+  "hf_rise_db": 33.8,
+  "vhf_rise_db": 43.7,
+  "low_rise_db": 5.8,
+  "dur_s": 0.52,
+  "attack_s": 0.65,
+  "centroid_hz": [
+   3064,
+   1914
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 27.0,
+  "type": "behind",
+  "text": "LỜI GIẢI KHÁ",
+  "onset": 26.79,
+  "hf_rise_db": 5.7,
+  "vhf_rise_db": 0.6,
+  "low_rise_db": 6.3,
+  "dur_s": 0.0,
+  "attack_s": 0.05,
+  "centroid_hz": [
+   1032,
+   1285
+  ],
+  "sfx": "khong ro / chim duoi giong"
+ },
+ {
+  "t": 33.2,
+  "type": "trans",
+  "text": "GIÁ TRỊ ĐỘC BẢN",
+  "onset": 32.76,
+  "hf_rise_db": 11.3,
+  "vhf_rise_db": 13.7,
+  "low_rise_db": 13.6,
+  "dur_s": 0.08,
+  "attack_s": 0.13,
+  "centroid_hz": [
+   743,
+   395
+  ],
+  "sfx": "impact/boom (tram manh)"
+ },
+ {
+  "t": 37.5,
+  "type": "behind",
+  "text": "RIVEA RESIDENCES",
+  "onset": 37.73,
+  "hf_rise_db": -0.9,
+  "vhf_rise_db": -17.4,
+  "low_rise_db": 1.2,
+  "dur_s": 0.0,
+  "attack_s": 0.65,
+  "centroid_hz": [
+   1069,
+   906
+  ],
+  "sfx": "khong ro / chim duoi giong"
+ },
+ {
+  "t": 43.0,
+  "type": "run",
+  "text": "CHỦ ĐẦU TƯ MEYGROUP",
+  "onset": 43.31,
+  "hf_rise_db": 30.5,
+  "vhf_rise_db": 25.8,
+  "low_rise_db": 1.5,
+  "dur_s": 0.45,
+  "attack_s": 0.52,
+  "centroid_hz": [
+   726,
+   1055
+  ],
+  "sfx": "riser/whoosh len (tang dan)"
+ },
+ {
+  "t": 48.2,
+  "type": "run",
+  "text": "NHỮNG ÔNG LỚN CỦA THẾ GIỚI",
+  "onset": 48.39,
+  "hf_rise_db": 32.6,
+  "vhf_rise_db": 47.3,
+  "low_rise_db": -4.3,
+  "dur_s": 0.57,
+  "attack_s": 0.13,
+  "centroid_hz": [
+   3120,
+   1612
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 50.3,
+  "type": "run",
+  "text": "DANH SÁCH ĐƠN VỊ TƯ VẤN",
+  "onset": 50.29,
+  "hf_rise_db": 51.7,
+  "vhf_rise_db": 69.2,
+  "low_rise_db": 8.1,
+  "dur_s": 0.7,
+  "attack_s": 0.03,
+  "centroid_hz": [
+   5628,
+   1948
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 54.5,
+  "type": "trans",
+  "text": "AEDAS",
+  "onset": 54.09,
+  "hf_rise_db": 37.8,
+  "vhf_rise_db": 49.5,
+  "low_rise_db": 7.6,
+  "dur_s": 0.64,
+  "attack_s": 0.38,
+  "centroid_hz": [
+   730,
+   1771
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 60.5,
+  "type": "run",
+  "text": "YDILLUMINATION",
+  "onset": 60.78,
+  "hf_rise_db": 12.0,
+  "vhf_rise_db": 11.0,
+  "low_rise_db": 10.1,
+  "dur_s": 0.03,
+  "attack_s": 0.69,
+  "centroid_hz": [
+   1007,
+   793
+  ],
+  "sfx": "impact/boom (tram manh)"
+ },
+ {
+  "t": 74.2,
+  "type": "behind",
+  "text": "ĐIỀU THỨ HAI",
+  "onset": 74.21,
+  "hf_rise_db": 35.5,
+  "vhf_rise_db": 36.4,
+  "low_rise_db": 10.4,
+  "dur_s": 0.3,
+  "attack_s": 0.14,
+  "centroid_hz": [
+   3287,
+   1599
+  ],
+  "sfx": "impact/boom (tram manh)"
+ },
+ {
+  "t": 77.2,
+  "type": "run",
+  "text": "LÀM MỘT DỰ ÁN",
+  "onset": 77.2,
+  "hf_rise_db": 31.9,
+  "vhf_rise_db": 36.6,
+  "low_rise_db": 6.2,
+  "dur_s": 0.49,
+  "attack_s": 0.08,
+  "centroid_hz": [
+   5164,
+   1287
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 78.5,
+  "type": "behind",
+  "text": "ALL IN ONE",
+  "onset": 78.19,
+  "hf_rise_db": 38.5,
+  "vhf_rise_db": 46.3,
+  "low_rise_db": 8.8,
+  "dur_s": 0.32,
+  "attack_s": 0.16,
+  "centroid_hz": [
+   3218,
+   1355
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 81.0,
+  "type": "run",
+  "text": "RẤT KHAN HIẾM",
+  "onset": 81.41,
+  "hf_rise_db": 13.7,
+  "vhf_rise_db": 14.7,
+  "low_rise_db": 12.4,
+  "dur_s": 0.35,
+  "attack_s": 0.59,
+  "centroid_hz": [
+   746,
+   543
+  ],
+  "sfx": "impact/boom (tram manh)"
+ },
+ {
+  "t": 129.6,
+  "type": "tr_zoom",
+  "text": "613 CĂN",
+  "onset": 129.93,
+  "hf_rise_db": 25.2,
+  "vhf_rise_db": 16.5,
+  "low_rise_db": 7.2,
+  "dur_s": 0.31,
+  "attack_s": 0.16,
+  "centroid_hz": [
+   1376,
+   1099
+  ],
+  "sfx": "whoosh (gio luot)"
+ },
+ {
+  "t": 135.7,
+  "type": "trans",
+  "text": "CỰC KỲ HIẾM TRÊN THỊ TRƯỜNG",
+  "onset": 135.57,
+  "hf_rise_db": 27.4,
+  "vhf_rise_db": 30.2,
+  "low_rise_db": 11.1,
+  "dur_s": 0.55,
+  "attack_s": 0.13,
+  "centroid_hz": [
+   3097,
+   3408
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 139.8,
+  "type": "run",
+  "text": "CĂN DUPLEX ... CỰC KỲ HIẾM",
+  "onset": 139.44,
+  "hf_rise_db": 32.6,
+  "vhf_rise_db": 33.2,
+  "low_rise_db": 7.3,
+  "dur_s": 0.62,
+  "attack_s": 0.04,
+  "centroid_hz": [
+   5797,
+   3064
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 143.4,
+  "type": "run",
+  "text": "GIỚI HẠN VỀ CHIỀU CAO",
+  "onset": 143.79,
+  "hf_rise_db": 6.8,
+  "vhf_rise_db": -8.1,
+  "low_rise_db": 1.8,
+  "dur_s": 0.04,
+  "attack_s": 0.61,
+  "centroid_hz": [
+   1145,
+   703
+  ],
+  "sfx": "pop/click (ngan, dot ngot)"
+ },
+ {
+  "t": 145.5,
+  "type": "run",
+  "text": "MỘT CĂN DUPLEX THÔNG TẦNG",
+  "onset": 145.9,
+  "hf_rise_db": 20.4,
+  "vhf_rise_db": 29.8,
+  "low_rise_db": 5.4,
+  "dur_s": 0.5,
+  "attack_s": 0.33,
+  "centroid_hz": [
+   2704,
+   1072
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 147.6,
+  "type": "run",
+  "text": "MẤT ĐI",
+  "onset": 147.27,
+  "hf_rise_db": 16.0,
+  "vhf_rise_db": 15.3,
+  "low_rise_db": 7.4,
+  "dur_s": 0.24,
+  "attack_s": 0.33,
+  "centroid_hz": [
+   2068,
+   719
+  ],
+  "sfx": "riser/whoosh len (tang dan)"
+ },
+ {
+  "t": 151.2,
+  "type": "run",
+  "text": "DOANH THU THƯƠNG MẠI",
+  "onset": 150.88,
+  "hf_rise_db": 14.8,
+  "vhf_rise_db": 17.9,
+  "low_rise_db": 11.7,
+  "dur_s": 0.25,
+  "attack_s": 0.06,
+  "centroid_hz": [
+   4544,
+   828
+  ],
+  "sfx": "impact/boom (tram manh)"
+ },
+ {
+  "t": 155.5,
+  "type": "trans",
+  "text": "96 CĂN DUPLEX / THE KEY EDITION",
+  "onset": 155.26,
+  "hf_rise_db": 12.6,
+  "vhf_rise_db": 9.3,
+  "low_rise_db": 9.6,
+  "dur_s": 0.08,
+  "attack_s": 0.63,
+  "centroid_hz": [
+   1061,
+   1255
+  ],
+  "sfx": "pop/click (ngan, dot ngot)"
+ },
+ {
+  "t": 160.5,
+  "type": "run",
+  "text": "224 - 300 m²",
+  "onset": 160.76,
+  "hf_rise_db": 4.9,
+  "vhf_rise_db": 7.5,
+  "low_rise_db": 2.0,
+  "dur_s": 0.0,
+  "attack_s": 0.32,
+  "centroid_hz": [
+   2128,
+   1901
+  ],
+  "sfx": "khong ro / chim duoi giong"
+ },
+ {
+  "t": 162.4,
+  "type": "tr_leak",
+  "text": "",
+  "onset": 162.52,
+  "hf_rise_db": 22.4,
+  "vhf_rise_db": 21.3,
+  "low_rise_db": 9.7,
+  "dur_s": 0.34,
+  "attack_s": 0.13,
+  "centroid_hz": [
+   3300,
+   1925
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 167.0,
+  "type": "scatter",
+  "text": "CHỖ ĐỖ XE ĐỊNH DANH",
+  "onset": 166.82,
+  "hf_rise_db": 25.3,
+  "vhf_rise_db": 32.5,
+  "low_rise_db": 4.2,
+  "dur_s": 0.46,
+  "attack_s": 0.03,
+  "centroid_hz": [
+   3927,
+   4771
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 171.0,
+  "type": "run",
+  "text": "BIỆT THỰ MẶT ĐẤT",
+  "onset": 170.61,
+  "hf_rise_db": 18.3,
+  "vhf_rise_db": 25.6,
+  "low_rise_db": 7.3,
+  "dur_s": 0.44,
+  "attack_s": 0.21,
+  "centroid_hz": [
+   2514,
+   2903
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 178.8,
+  "type": "run",
+  "text": "SỰ CHỊU CHI",
+  "onset": 178.48,
+  "hf_rise_db": 31.0,
+  "vhf_rise_db": 29.5,
+  "low_rise_db": 10.9,
+  "dur_s": 0.68,
+  "attack_s": 0.6,
+  "centroid_hz": [
+   5193,
+   1705
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ },
+ {
+  "t": 183.5,
+  "type": "run",
+  "text": "SỰ CHÚ TÂM",
+  "onset": 183.61,
+  "hf_rise_db": 7.8,
+  "vhf_rise_db": 6.6,
+  "low_rise_db": 9.5,
+  "dur_s": 0.03,
+  "attack_s": 0.05,
+  "centroid_hz": [
+   1582,
+   646
+  ],
+  "sfx": "pop/click (ngan, dot ngot)"
+ },
+ {
+  "t": 194.2,
+  "type": "stack",
+  "text": "TÒA NHÀ BIỂU TƯỢNG",
+  "onset": 194.61,
+  "hf_rise_db": 1.1,
+  "vhf_rise_db": 3.4,
+  "low_rise_db": 5.0,
+  "dur_s": 0.0,
+  "attack_s": 0.06,
+  "centroid_hz": [
+   2290,
+   1555
+  ],
+  "sfx": "khong ro / chim duoi giong"
+ },
+ {
+  "t": 198.8,
+  "type": "bullet",
+  "text": "TỐI ƯU ÁNH SÁNG",
+  "onset": 198.64,
+  "hf_rise_db": 16.8,
+  "vhf_rise_db": 22.4,
+  "low_rise_db": 16.6,
+  "dur_s": 0.24,
+  "attack_s": 0.06,
+  "centroid_hz": [
+   6499,
+   1369
+  ],
+  "sfx": "impact/boom (tram manh)"
+ },
+ {
+  "t": 200.3,
+  "type": "bullet",
+  "text": "ĐẢM BẢO CÁCH ÂM",
+  "onset": 199.94,
+  "hf_rise_db": 16.8,
+  "vhf_rise_db": 25.3,
+  "low_rise_db": 4.5,
+  "dur_s": 0.18,
+  "attack_s": 0.06,
+  "centroid_hz": [
+   2689,
+   1387
+  ],
+  "sfx": "swoosh xuong (quet xuong)"
+ },
+ {
+  "t": 203.2,
+  "type": "run",
+  "text": "TẦNG 20 TRỞ LÊN",
+  "onset": 202.73,
+  "hf_rise_db": 18.7,
+  "vhf_rise_db": 19.0,
+  "low_rise_db": 5.8,
+  "dur_s": 0.12,
+  "attack_s": 0.09,
+  "centroid_hz": [
+   2405,
+   1253
+  ],
+  "sfx": "pop/click (ngan, dot ngot)"
+ },
+ {
+  "t": 211.3,
+  "type": "run",
+  "text": "EM QUYẾT ẤN TƯỢNG",
+  "onset": 211.11,
+  "hf_rise_db": 34.4,
+  "vhf_rise_db": 38.5,
+  "low_rise_db": 3.6,
+  "dur_s": 0.43,
+  "attack_s": 0.13,
+  "centroid_hz": [
+   3695,
+   1659
+  ],
+  "sfx": "shimmer/sparkle (cao tan sang, ngan nga)"
+ }
+]

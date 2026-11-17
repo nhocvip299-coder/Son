@@ -5,7 +5,7 @@
  * KHONG tai tao logo/watermark "Q" cua kenh mau.
  */
 import React from "react";
-import { AbsoluteFill, Easing, Img, interpolate, random, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Easing, Img, OffthreadVideo, Sequence, interpolate, random, useCurrentFrame, useVideoConfig } from "remotion";
 
 export const QT = {
   white: "#F8F9FD", // [XM] mau chu do tu khung 33.4s/131.9s
@@ -595,6 +595,177 @@ export const QtNegative: React.FC<{
           <div style={{ ...lineBox(l, i), color: "#fff", mixBlendMode: "difference" }}>{letters(l, i, at[i])}</div>
         </React.Fragment>
       ))}
+    </AbsoluteFill>
+  );
+};
+
+/* ======================================================================================
+ * 13 [XM] CHU TRONG SUOT (am ban dung nghia) — ref01 3.3s "HOÀNG MAI", 6.9s "VÔ CÙNG SÔI ĐỘNG", 54.5s "AEDAS":
+ * ruot chu la CUA SO nhin xuong mot lop video KHAC (b-roll / canh truoc), khong phai dao mau.
+ * Chu hien TRANG truoc (+ quang sang), roi tung ky tu TRAI -> PHAI tan thanh trong suot (lo video ben trong).
+ * Cai dat: SVG <clipPath> chua <text>; video lap day bi cat theo hinh chu.
+ * ==================================================================================== */
+export type QtFill = { src: string; startFrom?: number; kind?: "video" | "image"; zoom?: number };
+export const QtWindowText: React.FC<{
+  lines: string[];
+  lineAt?: number[]; // giay (tuong doi) bat dau moi dong
+  fill: QtFill; // lop video/anh nhin qua ruot chu
+  x?: number; // tam ngang (ti le W)
+  y?: number; // tam doc dong dau (ti le H)
+  size?: number;
+  rot?: number[]; // do nghieng moi dong (vd [7,-7] = cheo nhau)
+  dx?: number[]; // lech ngang moi dong (ti le W)
+  weight?: number;
+  lead?: string;
+  duration: number;
+  id: string;
+}> = ({ lines, lineAt, fill, x = 0.5, y = 0.2, size = 150, rot, dx, weight = 900, lead, duration, id }) => {
+  const { t, fps } = useT();
+  const { width, height } = useVideoConfig();
+  const out = interpolate(t, [duration - 0.3, duration], [1, 0], { ...clamp, easing: easeIn });
+  const at = lineAt ?? lines.map((_, i) => i * 0.4);
+  const sizes = lines.map((l) => Math.min(size, (width * 0.9) / (Math.max(3, l.length) * 0.74)));
+  const lineY = (i: number) => y * height + lines.slice(0, i).reduce((a, _l, k) => a + sizes[k] * 0.98, 0);
+  const tr = (i: number) => `rotate(${rot?.[i] ?? 0} ${x * width + (dx?.[i] ?? 0) * width} ${lineY(i)})`;
+  // moi ky tu: hien trang (0.12s, xuat hien roi rac), giu trang ~0.35s, roi tan thanh trong suot theo thu tu trai->phai
+  const chars = (l: string, i: number) =>
+    [...l].map((c, k) => {
+      const s0 = at[i] + random(`${id}a${i}${k}`) * 0.25;
+      const appear = interpolate(t, [s0, s0 + 0.12], [0, 1], clamp);
+      const wipe = interpolate(t, [at[i] + 0.45 + (k / Math.max(1, l.length)) * 0.5, at[i] + 0.75 + (k / Math.max(1, l.length)) * 0.5], [1, 0], clamp);
+      return { c, appear, white: appear * wipe };
+    });
+  const textEl = (i: number, l: string, mode: "clip" | "white" | "glow") => (
+    <text
+      key={`${mode}${i}`}
+      x={x * width + (dx?.[i] ?? 0) * width}
+      y={lineY(i)}
+      textAnchor="middle"
+      dominantBaseline="middle"
+      transform={tr(i)}
+      style={{ fontFamily: QT.font, fontWeight: weight, fontSize: sizes[i], letterSpacing: "0.01em" }}
+    >
+      {chars(l, i).map((ch, k) => (
+        <tspan
+          key={k}
+          fill={mode === "glow" ? "#fff" : "#fff"}
+          fillOpacity={mode === "clip" ? (ch.appear > 0.5 ? 1 : 0) : mode === "white" ? ch.white : ch.appear * 0.9}
+        >
+          {ch.c}
+        </tspan>
+      ))}
+    </text>
+  );
+  const fillStart = Math.round((fill.startFrom ?? 0) * fps);
+  return (
+    <AbsoluteFill style={{ opacity: out }}>
+      {lead ? (
+        <div style={{ position: "absolute", left: 0, right: 0, top: y * height - sizes[0] * 0.8, translate: "0 -100%", textAlign: "center", fontFamily: QT.font, fontStyle: "italic", fontWeight: 600, fontSize: Math.max(40, sizes[0] * 0.3), color: QT.white, textShadow: QT.shadow, ...blurRise(t, 0, duration, duration, 8, 0.25) }}>
+          {lead}
+        </div>
+      ) : null}
+      {/* quang sang (glow) theo hinh chu */}
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0, filter: "blur(10px)", opacity: 0.55 }}>
+        {lines.map((l, i) => textEl(i, l, "glow"))}
+      </svg>
+      {/* lop video nhin qua ruot chu */}
+      <svg width={0} height={0} style={{ position: "absolute" }}>
+        <defs>
+          <clipPath id={`qtclip-${id}`} clipPathUnits="userSpaceOnUse">
+            {lines.map((l, i) => textEl(i, l, "clip"))}
+          </clipPath>
+        </defs>
+      </svg>
+      <AbsoluteFill style={{ clipPath: `url(#qtclip-${id})` }}>
+        <AbsoluteFill style={{ scale: `${fill.zoom ?? 1.15}`, filter: "brightness(1.12) contrast(1.05)" }}>
+          {fill.kind === "image" ? (
+            <Img src={fill.src} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          ) : (
+            <Sequence from={-fillStart} layout="none">
+              <OffthreadVideo src={fill.src} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </Sequence>
+          )}
+        </AbsoluteFill>
+      </AbsoluteFill>
+      {/* lop trang dang tan dan */}
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
+        {lines.map((l, i) => textEl(i, l, "white"))}
+      </svg>
+    </AbsoluteFill>
+  );
+};
+
+/* ======================================================================================
+ * 14 [XM] LOP NGUOI DUNG TRUOC CHU (3D) — ref01 37.5s "RIVEA RESIDENCES", ref02 5.0s "CẢM XÚC", 116s "10 TRIỆU ĐÔ":
+ * dat SAU cac lop chu: video nguoi da tach nen (VP9 alpha, scripts/style/person_matte.py).
+ * Chu dat sau lung bat buoc DAM, DAY (Montserrat 900, co lon) de van doc duoc khi bi che mot phan.
+ * ==================================================================================== */
+export const QtPersonFront: React.FC<{ src: string; startFrom?: number }> = ({ src, startFrom = 0 }) => {
+  const { fps } = useVideoConfig();
+  return (
+    <Sequence from={-Math.round(startFrom * fps)} layout="none">
+      <AbsoluteFill>
+        <OffthreadVideo src={src} transparent muted style={{ width: "100%", height: "100%" }} />
+      </AbsoluteFill>
+    </Sequence>
+  );
+};
+
+/** Chu DAM DAY dat sau lung nguoi (dung cung QtPersonFront). Mau kem, bong rat nhe (nguoi da tao chieu sau). */
+export const QtBehindText: React.FC<{ lines: string[]; lineAt?: number[]; y?: number; size?: number; color?: string; duration: number }> = ({
+  lines,
+  lineAt,
+  y = 0.3,
+  size = 230,
+  color = QT.cream,
+  duration,
+}) => {
+  const { t } = useT();
+  const { width, height } = useVideoConfig();
+  const out = duration - 0.3;
+  const at = lineAt ?? lines.map((_, i) => i * 0.25);
+  return (
+    <AbsoluteFill>
+      {lines.map((l, i) => {
+        const sz = Math.min(size, (width * 0.94) / (Math.max(3, l.length) * 0.74));
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: 0,
+              right: 0,
+              top: y * height + i * size * 0.9,
+              translate: "0 -50%",
+              textAlign: "center",
+              fontFamily: QT.font,
+              fontWeight: 900,
+              fontSize: sz,
+              letterSpacing: "-0.01em",
+              color,
+              whiteSpace: "nowrap",
+              textShadow: "0 6px 24px rgba(0,0,0,0.25)",
+              ...blurRise(t, at[i], duration, out, 40, 0.45),
+              ...viPad,
+            }}
+          >
+            {l}
+          </div>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+/** 15 [XM] Chuyen canh VET SANG CAM (light leak) — ref01 10.0s, 21.6s, 162.4s (khong phai nhay trang). ~0.5s, kem whoosh sang. */
+export const QtLightLeak: React.FC<{ dur?: number }> = ({ dur = 0.55 }) => {
+  const { t } = useT();
+  const p = interpolate(t, [0, dur * 0.45, dur], [0, 1, 0], { ...clamp, easing: Easing.inOut(Easing.quad) });
+  const sweep = interpolate(t, [0, dur], [-0.3, 1.2], clamp);
+  return (
+    <AbsoluteFill style={{ mixBlendMode: "screen", opacity: p }}>
+      <AbsoluteFill style={{ background: `radial-gradient(ellipse 70% 45% at ${sweep * 100}% 70%, rgba(255,170,60,1) 0%, rgba(255,110,20,0.85) 35%, rgba(255,60,0,0) 75%)` }} />
+      <AbsoluteFill style={{ background: `radial-gradient(ellipse 50% 35% at ${100 - sweep * 80}% 30%, rgba(255,240,200,0.95) 0%, rgba(255,190,90,0.5) 40%, rgba(255,120,0,0) 75%)` }} />
     </AbsoluteFill>
   );
 };

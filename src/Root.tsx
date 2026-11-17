@@ -12,6 +12,7 @@ import { CapcutEdit, ccPlanDurationMs, type CcEditPlan } from "./styles/textPres
 import { HongDangEdit, hdPlanDurationMs, type HdPlan } from "./styles/hongDang/HongDangEdit";
 import { GelexiaOverlay, type GelexiaProject } from "./styles/gelexia/GelexiaOverlay";
 import { GelexiaCover } from "./styles/gelexia/Cover";
+import { ThumbBold } from "./styles/gelexia/ThumbBold";
 import gelexiaDemo from "./styles/gelexia/demo-project.json";
 import { EMPTY_PLAN, planDurationMs, type EditPlan } from "./compositions/plan";
 
@@ -68,6 +69,15 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         defaultProps={{ images: ["inputs/hang-kim-chi/cover/vi.jpg"], kicker: "REVIEW ĐỒ NƯỚNG HÀN", highlight: "604K", title: "CẢ BÀN\nCÓ ĐÁNG?", name: "HẰNG KIM CHI", address: "Khu 4,3ha · TT Văn Giang" }}
+      />
+      <Composition
+        id="ThumbBold"
+        component={ThumbBold}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{ image: "inputs/hang-kim-chi/cover/vi2.jpg", imageShiftY: 420, imageScale: 1, sharpFromPct: 22, pill: "HẰNG KIM CHI • KHU 4,3HA", line: "VĂN GIANG", price: "604K", sub: "CẢ BÀN NƯỚNG", question: "CÓ ĐÁNG THỬ?" }}
       />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition

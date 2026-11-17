@@ -10,3 +10,9 @@ reference/*.mp4
 reference/*.MP4
 inputs/
 styles/text-presets/source-zip/
+
+# Video mau tai tu mang (skill hoc-mau-bds)
+reference/**/*.mp4
+reference/**/*.webm
+reference/**/*.mkv
+reference/**/*.mov

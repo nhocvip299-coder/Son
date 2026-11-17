@@ -10,6 +10,7 @@ import { QtlLab5, QTL_LAB5_SEC } from "./styles/quyetTranLux/Lab5";
 import { QtlLab6, QTL_LAB6_SEC } from "./styles/quyetTranLux/Lab6";
 import { IconStyles } from "./styles/quyetTranLux/IconStyles";
 import { QtlLab8, QTL_LAB8_SEC } from "./styles/quyetTranLux/Lab8";
+import { SanHoLuxFull, SANHO_FULL_SEC, type SanHoFullProps } from "./styles/quyetTranLux/SanHoLuxFull";
 import { TextPresetsGallery } from "./styles/textPresets/Gallery";
 import { TextPresetsCatalog40, TextPresetsGallery40 } from "./styles/textPresets/Gallery40";
 import { CapcutCatalog } from "./styles/textPresets/capcut/CapcutCatalog";
@@ -66,6 +67,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="QtlLab6" component={QtlLab6} durationInFrames={Math.round(QTL_LAB6_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
       <Composition id="IconStyles" component={IconStyles} durationInFrames={1} fps={30} width={1080} height={1350} />
       <Composition id="QtlLab8" component={QtlLab8} durationInFrames={Math.round(QTL_LAB8_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
+      <Composition id="SanHoLuxFull" component={SanHoLuxFull} durationInFrames={Math.round(SANHO_FULL_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ captions: "phrase", words: [], stem: "all" } as SanHoFullProps} />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

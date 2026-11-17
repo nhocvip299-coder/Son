@@ -7,6 +7,7 @@ import {
 } from "remotion";
 import type { Caption } from "@remotion/captions";
 import { STYLE as S } from "./style";
+import { gelexiaAutoSfx } from "./sfx";
 
 export type Page = { startMs: number; endMs: number; lines: Caption[][] };
 export type Callout = {
@@ -21,6 +22,8 @@ export type GelexiaProject = {
   background?: { video: string; startFromSec?: number; muted?: boolean };
   voice?: string;
   sfx?: { atMs: number; file: string; volume?: number }[];
+  /** true: tự gắn SFX CC0 theo vai trò (sfx.ts) khi không khai báo sfx[]. */
+  autoSfx?: boolean;
 };
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -76,7 +79,7 @@ export const GelexiaOverlay: React.FC<{ project: GelexiaProject }> = ({ project 
           startFrom={Math.round((project.background.startFromSec ?? 0) * fps)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
       )}
       {project.voice && <Audio src={staticFile(project.voice)} />}
-      {project.sfx?.map((s, i) => (
+      {(project.sfx ?? (project.autoSfx ? gelexiaAutoSfx(project) : [])).map((s, i) => (
         <Sequence key={i} from={Math.round((s.atMs / 1000) * fps)} durationInFrames={Math.round(2 * fps)}>
           <Audio src={staticFile(s.file)} volume={s.volume ?? 1} />
         </Sequence>

@@ -146,5 +146,6 @@
  ],
  "background": {
   "video": "demo/bg.mp4"
- }
+ },
+ "autoSfx": true
 }

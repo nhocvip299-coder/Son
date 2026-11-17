@@ -1,0 +1,1 @@
+Fluent Emoji 3D — (c) Microsoft Corporation, MIT License. Nguon: npm @lobehub/fluent-emoji-3d 1.1.0 (https://github.com/microsoft/fluentui-emoji).

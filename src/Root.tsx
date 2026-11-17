@@ -7,6 +7,7 @@ import { QuyetTranLuxVerify, QTL_VERIFY_SEC } from "./styles/quyetTranLux/Verify
 import { QuyetTranLuxEdit, type QtlPlan } from "./styles/quyetTranLux/QuyetTranLuxEdit";
 import { QtlLab, QTL_LAB_SEC } from "./styles/quyetTranLux/Lab";
 import { QtlLab5, QTL_LAB5_SEC } from "./styles/quyetTranLux/Lab5";
+import { QtlLab6, QTL_LAB6_SEC } from "./styles/quyetTranLux/Lab6";
 import { TextPresetsGallery } from "./styles/textPresets/Gallery";
 import { TextPresetsCatalog40, TextPresetsGallery40 } from "./styles/textPresets/Gallery40";
 import { CapcutCatalog } from "./styles/textPresets/capcut/CapcutCatalog";
@@ -60,6 +61,7 @@ export const RemotionRoot: React.FC = () => {
       />
       <Composition id="QtlLab" component={QtlLab} durationInFrames={Math.round(QTL_LAB_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
       <Composition id="QtlLab5" component={QtlLab5} durationInFrames={Math.round(QTL_LAB5_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
+      <Composition id="QtlLab6" component={QtlLab6} durationInFrames={Math.round(QTL_LAB6_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

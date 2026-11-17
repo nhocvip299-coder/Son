@@ -9,6 +9,7 @@ import { AbsoluteFill, Easing, Img, interpolate, random, useCurrentFrame, useVid
 
 export const QT = {
   white: "#F8F9FD", // [XM] mau chu do tu khung 33.4s/131.9s
+  cream: "#E8E6D6", // [XM] chu lon dung thang "SỰ THẬT LÀ" (ref01 1.0s) — trang nga vang nhat
   ink: "#111214", // [XM] chu toi tren nen sang ("SUC KHOE & CAN BANG")
   gold: "#E9B24C", // [XM] accent_colors ref01 (anh den am) — dung rat it
   bgTop: "#3a3a3c", // [XM] nen gradient trang anh ghep (ref01 163s)
@@ -78,7 +79,7 @@ export const QtTitle: React.FC<{
               ...viPad,
               fontFamily: QT.font,
               fontStyle: "italic",
-              fontWeight: 500,
+              fontWeight: 600,
               fontSize: size * 0.66,
               color: col,
               textShadow: dark ? "none" : QT.shadow,
@@ -157,7 +158,7 @@ export const QtTrackingReveal: React.FC<{ lead?: string; main: string; y?: numbe
           filter: `blur(${(1 - out) * 8}px)`,
         }}
       >
-        {lead ? line(lead, "l", 0, { fontWeight: 500, fontSize: size * 0.72 }) : null}
+        {lead ? line(lead, "l", 0, { fontWeight: 600, fontSize: size * 0.72 }) : null}
         {line(main, "m", 0.12, { fontWeight: 800, fontSize: size })}
       </div>
     </AbsoluteFill>
@@ -181,7 +182,7 @@ export const QtNumber: React.FC<{ lead?: string; value: string; unit?: string; x
     <AbsoluteFill>
       <div style={{ position: "absolute", left: x * width, top: y * height, translate: "0 -100%", fontFamily: QT.font, color: QT.white, textShadow: QT.shadow }}>
         {lead ? (
-          <div style={{ ...viPad, fontStyle: "italic", fontWeight: 500, fontSize: size * 0.3, opacity: 0.85, ...blurRise(t, 0, duration, out, 10, 0.3) }}>{lead}</div>
+          <div style={{ ...viPad, fontStyle: "italic", fontWeight: 600, fontSize: size * 0.36, opacity: 0.95, ...blurRise(t, 0, duration, out, 10, 0.3) }}>{lead}</div>
         ) : null}
         <div style={{ ...viPad, fontWeight: 800, fontSize: size, whiteSpace: "nowrap", ...blurRise(t, 0.15, duration, out, 26) }}>
           {value}
@@ -207,8 +208,8 @@ export const QtSubtitle: React.FC<{ text: string; y?: number; duration: number; 
         translate: "0 -50%",
         textAlign: "center",
         fontFamily: QT.fontSub,
-        fontWeight: 400,
-        fontSize: 38,
+        fontWeight: 600,
+        fontSize: 42,
         color: dark ? QT.ink : QT.white,
         textShadow: dark ? "none" : "0 1px 3px rgba(0,0,0,0.85), 0 0 10px rgba(0,0,0,0.4)",
         opacity: o,
@@ -236,7 +237,7 @@ export const QtHeading: React.FC<{ text: string; lead?: string; y?: number; size
   return (
     <div style={{ position: "absolute", left: 60, right: 60, top: y * height, translate: "0 -100%", textAlign: "center", fontFamily: QT.font, color: col }}>
       {lead ? (
-        <div style={{ ...viPad, fontStyle: "italic", fontWeight: 500, fontSize: size * 0.9, textShadow: dark ? "none" : QT.shadow, ...blurRise(t, 0, duration, out, 10, 0.3) }}>{lead}</div>
+        <div style={{ ...viPad, fontStyle: "italic", fontWeight: 600, fontSize: size * 0.9, textShadow: dark ? "none" : QT.shadow, ...blurRise(t, 0, duration, out, 10, 0.3) }}>{lead}</div>
       ) : null}
       <div
         style={{
@@ -424,8 +425,8 @@ const QtSubtitleAt: React.FC<{ text: string; y: number; t: number; duration: num
         translate: "0 -50%",
         textAlign: "center",
         fontFamily: QT.fontSub,
-        fontWeight: 400,
-        fontSize: 38,
+        fontWeight: 600,
+        fontSize: 42,
         color: QT.white,
         textShadow: "0 1px 3px rgba(0,0,0,0.85), 0 0 10px rgba(0,0,0,0.4)",
         opacity: o,
@@ -434,5 +435,166 @@ const QtSubtitleAt: React.FC<{ text: string; y: number; t: number; duration: num
     >
       {text}
     </div>
+  );
+};
+
+/* ======================================================================================
+ * 11 [XM] CHU CHAY THEO LOI NOI — "Có một / SỰ THẬT LÀ ở phía nam / HÀ NỘI" (ref01 0.1–2.2s),
+ * "Chỉ mất chưa đến 10 PHÚT / để đến / HỒ HOÀN KIẾM" (ref01 7.6–9.6s).
+ * Khoi chu xay dan theo bac thang: moi manh hien DUNG luc tu do duoc noi (lech <=0.1s).
+ * - lead: chu nho NGHIENG trang (Montserrat 600i, ~0.42x)
+ * - main: chu lon DUNG THANG mau kem #E8E6D6 (Montserrat 800)
+ * - dong cuoi thuong CAN PHAI; manh `fx:"slide"` lao vao tu trai + nhoe chuyen dong ("HỒ HOÀN KIẾM");
+ *   `fx:"neg"` = chu am ban.
+ * ==================================================================================== */
+export type QtRunPiece = { text: string; kind: "lead" | "main"; t: number; fx?: "slide" | "neg" };
+export type QtRunLine = { align?: "left" | "right" | "center"; pieces: QtRunPiece[] };
+
+const RunPiece: React.FC<{ p: QtRunPiece; t: number; size: number; out: number }> = ({ p, t, size, out }) => {
+  const k = interpolate(t, [p.t, p.t + (p.fx === "slide" ? 0.28 : 0.2)], [0, 1], { ...clamp, easing: easeOut });
+  const lead = p.kind === "lead";
+  const neg = p.fx === "neg" || (p.fx === "slide" && k < 1);
+  const style: React.CSSProperties = {
+    display: "inline-block",
+    whiteSpace: "pre",
+    fontFamily: QT.font,
+    fontStyle: lead ? "italic" : "normal",
+    fontWeight: lead ? 600 : 800,
+    fontSize: lead ? size * 0.46 : size,
+    letterSpacing: lead ? "0" : "0.005em",
+    color: lead ? QT.white : QT.cream,
+    textShadow: lead ? "0 1px 3px rgba(0,0,0,0.85), 0 0 12px rgba(0,0,0,0.4)" : "0 3px 10px rgba(0,0,0,0.55), 0 0 28px rgba(0,0,0,0.35)",
+    opacity: k * out,
+    filter: `blur(${(1 - k) * (p.fx === "slide" ? 3 : 8) + (1 - out) * 8}px)`,
+    translate: p.fx === "slide" ? `${(1 - k) * -220}px 0` : `0 ${(1 - k) * 10}px`,
+    transform: p.fx === "slide" ? `skewX(${(1 - k) * -14}deg) scaleX(${1 + (1 - k) * 0.25})` : undefined,
+    margin: lead ? "0 0.25em" : "0",
+    lineHeight: 1.0,
+    verticalAlign: "baseline",
+  };
+  if (neg) {
+    // am ban: lop chu trang tron "difference" -> dao mau video ben duoi
+    return (
+      <span style={{ ...style, color: "#fff", textShadow: "none", mixBlendMode: "difference" }}>{p.text}</span>
+    );
+  }
+  return <span style={style}>{p.text}</span>;
+};
+
+export const QtRunText: React.FC<{
+  lines: QtRunLine[];
+  y?: number; // dinh khoi chu (ti le H)
+  x0?: number; // le trai (ti le W)
+  x1?: number; // le phai (ti le W)
+  size?: number; // co chu main (px)
+  duration: number;
+}> = ({ lines, y = 0.56, x0 = 0.12, x1 = 0.12, size = 104, duration }) => {
+  const { t } = useT();
+  const { width, height } = useVideoConfig();
+  const out = interpolate(t, [duration - 0.3, duration], [1, 0], { ...clamp, easing: easeIn });
+  const avail = width * (1 - x0 - x1);
+  return (
+    <AbsoluteFill>
+      <div style={{ position: "absolute", left: width * x0, width: avail, top: y * height }}>
+        {lines.map((ln, i) => {
+          // vua 1 dong: uoc luong be rong (main 0.7em/ky tu, lead 0.42*0.55em)
+          const est = ln.pieces.reduce((a, p) => a + (p.kind === "main" ? p.text.length * 0.7 : p.text.length * 0.46 * 0.56 + 0.2), 0);
+          const sz = Math.min(size, avail / Math.max(1, est));
+          return (
+            <div key={i} style={{ textAlign: ln.align ?? "left", fontSize: sz, lineHeight: 1.22, marginTop: i ? -sz * 0.08 : 0, whiteSpace: "nowrap" }}>
+              {ln.pieces.map((p, k) => (
+                <RunPiece key={k} p={p} t={t} size={sz} out={out} />
+              ))}
+            </div>
+          );
+        })}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+/* ======================================================================================
+ * 12 [XM] CHU AM BAN — "Khu vực giao giữa / HOÀNG MAI - HAI BÀ TRƯNG" (ref01 3.3s),
+ * "ĐIỂM GIAO NHAU / VÔ CÙNG SÔI ĐỘNG" (ref01 5.6–7.0s): ruot chu DAO MAU nen (difference) + quang sang trang,
+ * hien tung ky tu roi rac ~0.4s. `cross` = 2 dong nghieng NGUOC CHIEU cat nhau (dong 1 ~+8°, dong 2 ~-8°)
+ * — dung khi loi noi co y "giao nhau / ngã 3 / kết nối".
+ * ==================================================================================== */
+export const QtNegative: React.FC<{
+  lead?: string; // dong dan nho nghieng (khong am ban)
+  lines: string[]; // 1–2 dong chu am ban IN HOA
+  lineAt?: number[]; // giay (tuong doi) moi dong bat dau, theo loi noi
+  cross?: boolean;
+  y?: number; // tam khoi (ti le H)
+  x?: number; // le trai khi khong cross
+  size?: number;
+  duration: number;
+  seed?: string;
+}> = ({ lead, lines, lineAt, cross, y = 0.14, x = 0.08, size = 92, duration, seed = "neg" }) => {
+  const { t } = useT();
+  const { width, height } = useVideoConfig();
+  const out = interpolate(t, [duration - 0.3, duration], [1, 0], { ...clamp, easing: easeIn });
+  const at = lineAt ?? lines.map((_, i) => (lead ? 0.25 : 0) + i * 0.6);
+  const sizes = lines.map((l) => Math.min(size, (width * (cross ? 0.86 : 0.84)) / (Math.max(4, l.length) * 0.7)));
+  const letters = (txt: string, li: number, st: number) =>
+    [...txt].map((c, i) => {
+      const s0 = st + random(`${seed}${li}${i}`) * 0.35;
+      const q = interpolate(t, [s0, s0 + 0.12], [0, 1], clamp);
+      return (
+        <span key={i} style={{ opacity: q, display: "inline-block", whiteSpace: "pre" }}>
+          {c}
+        </span>
+      );
+    });
+  const lineBox = (txt: string, i: number): React.CSSProperties => {
+    // cross [XM ref01 6.5s]: dong 1 tu tren-trai di XUONG, dong 2 tu duoi-trai di LEN, 2 dong tien sat nhau o ben phai
+    const rot = cross ? (i === 0 ? 7 : -7) : 0;
+    const cy = y * height + (cross ? (i === 0 ? -sizes[0] * 0.62 : sizes[1] * 0.62) : i * sizes[i] * 1.05);
+    return {
+      position: "absolute",
+      left: cross ? (i === 0 ? width * 0.05 : width * 0.2) : width * x,
+      top: cy,
+      translate: "0 -50%",
+      rotate: `${rot}deg`,
+      transformOrigin: "left center",
+      fontFamily: QT.font,
+      fontWeight: 800,
+      fontSize: sizes[i],
+      whiteSpace: "nowrap",
+      ...viPad,
+    };
+  };
+  return (
+    <AbsoluteFill style={{ opacity: out }}>
+      {lead ? (
+        <div
+          style={{
+            position: "absolute",
+            left: width * x,
+            top: y * height - sizes[0] * 0.78,
+            translate: "0 -100%",
+            fontFamily: QT.font,
+            fontStyle: "italic",
+            fontWeight: 600,
+            fontSize: sizes[0] * 0.48,
+            color: QT.white,
+            textShadow: QT.shadow,
+            ...blurRise(t, 0, duration, duration, 8, 0.25),
+            ...viPad,
+          }}
+        >
+          {lead}
+        </div>
+      ) : null}
+      {lines.map((l, i) => (
+        <React.Fragment key={i}>
+          {/* quang sang trang (lop thuong) */}
+          <div style={{ ...lineBox(l, i), color: "transparent", textShadow: "0 0 10px rgba(255,255,255,0.9), 0 0 28px rgba(255,255,255,0.5)" }}>
+            {letters(l, i, at[i])}
+          </div>
+          {/* ruot chu am ban */}
+          <div style={{ ...lineBox(l, i), color: "#fff", mixBlendMode: "difference" }}>{letters(l, i, at[i])}</div>
+        </React.Fragment>
+      ))}
+    </AbsoluteFill>
   );
 };

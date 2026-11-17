@@ -4,11 +4,19 @@ import { Audio, Video } from "@remotion/media";
 import { SfxTrack } from "../../compositions/shared";
 import type { SfxCue, SfxName } from "../../lib/theme";
 import { WordByWord } from "../textPresets/capcut/WordByWord";
-import { QtCardStack, QtDip, QtFlash, QtGrade, QtHeading, QtNumber, QtPhraseCaptions, QtTitle, QtTrackingReveal, type QtWord } from "./components";
+import { QtCardStack, QtDip, QtFlash, QtGrade, QtHeading, QtNegative, QtNumber, QtPhraseCaptions, QtRunText, QtTitle, QtTrackingReveal, type QtWord } from "./components";
 
 /** Ke hoach dung "Mau Quyet Tran Lux": item neo theo chi so tu (at) hoac giay (atSec). */
 export type QtlItem = {
-  type: "title" | "tracking" | "number" | "heading" | "cards" | "flash" | "dip";
+  type: "title" | "tracking" | "number" | "heading" | "cards" | "flash" | "dip" | "run" | "neg";
+  /** run: cac dong, moi manh neo theo chi so tu (at) */
+  lines?: Array<{ align?: "left" | "right" | "center"; pieces: Array<{ text: string; kind: "lead" | "main"; at: number; fx?: "slide" | "neg" }> }>;
+  /** neg: cac dong am ban + chi so tu bat dau moi dong */
+  negLines?: string[];
+  negAt?: number[];
+  cross?: boolean;
+  x?: number;
+  size?: number;
   at?: number;
   atSec?: number;
   dur?: number;
@@ -36,7 +44,12 @@ export type QtlPlan = {
   captions: "phrase" | "wbw";
 };
 
-export const qtlItemStart = (it: QtlItem, words: QtWord[]) => (it.atSec ?? (words[it.at ?? 0]?.startMs ?? 0) / 1000) - 0.05;
+const wSec = (words: QtWord[], i: number) => (words[i]?.startMs ?? 0) / 1000;
+export const qtlItemStart = (it: QtlItem, words: QtWord[]) => {
+  if (it.atSec !== undefined) return it.atSec - 0.05;
+  if (it.type === "run" && it.lines) return Math.min(...it.lines.flatMap((l) => l.pieces.map((p) => wSec(words, p.at)))) - 0.08;
+  return wSec(words, it.at ?? 0) - 0.05;
+};
 
 export const QuyetTranLuxEdit: React.FC<{ plan: QtlPlan }> = ({ plan }) => {
   const { fps } = useVideoConfig();
@@ -75,6 +88,29 @@ export const QuyetTranLuxEdit: React.FC<{ plan: QtlPlan }> = ({ plan }) => {
               return <QtHeading lead={it.lead} text={it.text ?? ""} y={it.y} duration={dur} />;
             case "cards":
               return <QtCardStack images={(it.images ?? []).map((p) => staticFile(p))} title={it.title} label={it.label} duration={dur} />;
+            case "run":
+              return (
+                <QtRunText
+                  y={it.y}
+                  size={it.size}
+                  duration={dur}
+                  lines={(it.lines ?? []).map((l) => ({ align: l.align, pieces: l.pieces.map((p) => ({ text: p.text, kind: p.kind, fx: p.fx, t: wSec(plan.words, p.at) - st - 0.05 })) }))}
+                />
+              );
+            case "neg":
+              return (
+                <QtNegative
+                  lead={it.lead}
+                  lines={it.negLines ?? []}
+                  lineAt={(it.negAt ?? []).map((a) => wSec(plan.words, a) - st - 0.03)}
+                  cross={it.cross}
+                  y={it.y}
+                  x={it.x}
+                  size={it.size}
+                  duration={dur}
+                  seed={String(i)}
+                />
+              );
             case "flash":
               return <QtFlash />;
             case "dip":

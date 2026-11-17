@@ -30,6 +30,8 @@ import "@fontsource/montserrat/600.css";
 import "@fontsource/montserrat/700.css";
 import "@fontsource/montserrat/700-italic.css";
 import "@fontsource/be-vietnam-pro/400.css";
+import "@fontsource/be-vietnam-pro/600.css";
+import "@fontsource/montserrat/600-italic.css";
 
 export const FONTS = {
   body: "'Be Vietnam Pro'",
@@ -78,6 +80,8 @@ const SPECS: Array<[number, string, string?]> = [
   [700, "Montserrat"],
   [700, "Montserrat", "italic"],
   [400, "Be Vietnam Pro"],
+  [600, "Be Vietnam Pro"],
+  [600, "Montserrat", "italic"],
 ];
 // Chuoi mau phu ca 3 subset (latin, latin-ext, vietnamese) de trinh duyet tai du file
 const SAMPLE = "AaBb09 ĂăÂâĐđÊêÔôƠơƯư ẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặ ỆệỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ ŁłŚś₫";

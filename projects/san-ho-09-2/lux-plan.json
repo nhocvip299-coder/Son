@@ -1,30 +1,531 @@
 {
-  "_note": "Kich ban dung theo mau Quyet Tran Lux. at = chi so tu trong work/san-ho-lux/words.json (da sua ten rieng); dur = giay. Anh the lay tu chinh footage b-roll toa nha.",
-  "source": "inputs/san-ho-lux-1080.mp4",
-  "fps": 60,
-  "captionY": 0.70,
-  "music": { "src": "music/bed-ambient.wav", "volume": 0.12 },
-  "items": [
-    { "type": "title", "at": 7, "dur": 2.6, "lead": "Căn liền kề", "main": "VỪA Ở, VỪA KINH DOANH", "y": 0.62, "sfx": "sparkle" },
-    { "type": "tracking", "at": 30, "dur": 2.4, "lead": "căn liền kề", "main": "SAN HÔ 09-2", "y": 0.2, "sfx": "swish" },
-    { "type": "flash", "atSec": 8.05, "sfx": "whoosh" },
-    { "type": "title", "at": 40, "dur": 0.85, "lead": "Vị trí", "main": "CĂN GÓC", "y": 0.62, "sfx": "swish" },
-    { "type": "number", "at": 43, "dur": 2.35, "lead": "Diện tích đất", "value": "132", "unit": "m²", "sfx": "sparkle" },
-    { "type": "number", "at": 48, "dur": 3.0, "lead": "Diện tích xây dựng", "value": "486,5", "unit": "m²", "sfx": "swish" },
-    { "type": "title", "at": 62, "dur": 1.6, "lead": "Thiết kế", "main": "4 TẦNG + 1 TUM", "y": 0.62, "sfx": "sparkle" },
-    { "type": "number", "at": 73, "dur": 1.6, "lead": "Mặt tiền rộng", "value": "8", "unit": "m", "sfx": "swish" },
-    { "type": "heading", "at": 84, "dur": 1.3, "lead": "kinh doanh", "text": "TẦNG 1", "y": 0.27, "sfx": "sparkle" },
-    { "type": "tracking", "at": 101, "dur": 1.9, "lead": "tầng trên cho thuê", "main": "HOMESTAY", "y": 0.2, "sfx": "swish" },
-    { "type": "cards", "at": 110, "dur": 2.3, "images": ["inputs/sanho-card-18.0.jpg", "inputs/sanho-card-21.0.jpg", "inputs/sanho-card-24.0.jpg"], "title": ["BÀN", "GIAO", "THÔ"], "label": "CÓ CẦU THANG", "sfx": "whoosh" },
-    { "type": "dip", "atSec": 32.15 , "sfx": "swoosh-down"},
-    { "type": "heading", "at": 123, "dur": 1.0, "text": "VỊ TRÍ SIÊU ĐẶC ĐỊA", "y": 0.27, "sfx": "sparkle" },
-    { "type": "number", "at": 129, "dur": 2.05, "lead": "Quảng trường Kinh Đô Ánh Sáng", "value": "300", "unit": "m", "sfx": "swish" },
-    { "type": "number", "at": 138, "dur": 2.0, "lead": "Vincom Mega Mall", "value": "500", "unit": "m", "sfx": "swish" },
-    { "type": "number", "at": 143, "dur": 3.8, "lead": "Công viên Wonder Park", "value": "400", "unit": "m", "sfx": "swish" },
-    { "type": "flash", "atSec": 42.65, "sfx": "whoosh" },
-    { "type": "title", "at": 161, "dur": 2.9, "lead": "Thanh toán linh hoạt", "main": "ĐỦ 3 PHƯƠNG ÁN", "y": 0.66, "sfx": "sparkle" },
-    { "type": "title", "at": 185, "dur": 1.4, "lead": "Vừa kinh doanh", "main": "VỪA ĐỂ Ở", "y": 0.66, "sfx": "swish" },
-    { "type": "tracking", "at": 201, "dur": 1.4, "lead": "Vinhomes", "main": "OCEAN PARK 2", "y": 0.2, "sfx": "sparkle" },
-    { "type": "heading", "at": 207, "dur": 99, "lead": "Liên hệ trực tiếp", "text": "EM SƠN", "y": 0.27, "sfx": "swish" }
-  ]
+ "_note": "v2 theo gop y: chu chay theo loi noi (run), chu am ban (neg), 2 dong cheo nhau o 'nằm giữa ngã 3'. at = chi so tu trong work/san-ho-lux/words.json.",
+ "source": "inputs/san-ho-lux-1080.mp4",
+ "fps": 60,
+ "captionY": 0.72,
+ "music": {
+  "src": "music/bed-ambient.wav",
+  "volume": 0.16
+ },
+ "items": [
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "Nếu anh chị đang tìm một",
+       "kind": "lead",
+       "at": 0
+      }
+     ]
+    },
+    {
+     "pieces": [
+      {
+       "text": "CĂN LIỀN KỀ",
+       "kind": "main",
+       "at": 7
+      },
+      {
+       "text": "vừa để ở",
+       "kind": "lead",
+       "at": 10
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "vừa",
+       "kind": "lead",
+       "at": 14
+      },
+      {
+       "text": "KINH DOANH",
+       "kind": "main",
+       "at": 18
+      }
+     ]
+    }
+   ],
+   "y": 0.56,
+   "sfx": "sparkle",
+   "dur": 4.53
+  },
+  {
+   "type": "neg",
+   "lead": "căn liền kề",
+   "negLines": [
+    "SAN HÔ 09-2"
+   ],
+   "negAt": [
+    33
+   ],
+   "at": 30,
+   "y": 0.17,
+   "x": 0.08,
+   "sfx": "swish",
+   "dur": 2.42
+  },
+  {
+   "type": "flash",
+   "atSec": 8.05,
+   "sfx": "whoosh"
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "Căn liền kề này là",
+       "kind": "lead",
+       "at": 35
+      }
+     ]
+    },
+    {
+     "pieces": [
+      {
+       "text": "CĂN GÓC",
+       "kind": "main",
+       "at": 40
+      },
+      {
+       "text": "diện tích đất",
+       "kind": "lead",
+       "at": 43
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "132 M²",
+       "kind": "main",
+       "at": 47
+      }
+     ]
+    }
+   ],
+   "y": 0.56,
+   "sfx": "sparkle",
+   "dur": 4.56
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "diện tích xây dựng",
+       "kind": "lead",
+       "at": 48
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "486,5 M²",
+       "kind": "main",
+       "at": 53,
+       "fx": "slide"
+      }
+     ]
+    }
+   ],
+   "y": 0.56,
+   "sfx": "swish",
+   "dur": 3.23
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "thiết kế",
+       "kind": "lead",
+       "at": 59
+      }
+     ]
+    },
+    {
+     "pieces": [
+      {
+       "text": "4 TẦNG",
+       "kind": "main",
+       "at": 63
+      },
+      {
+       "text": "và",
+       "kind": "lead",
+       "at": 65
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "1 TUM",
+       "kind": "main",
+       "at": 66
+      }
+     ]
+    }
+   ],
+   "y": 0.56,
+   "sfx": "sparkle",
+   "dur": 2.33
+  },
+  {
+   "type": "neg",
+   "negLines": [
+    "NẰM GIỮA",
+    "NGÃ 3"
+   ],
+   "negAt": [
+    68,
+    70
+   ],
+   "cross": true,
+   "at": 68,
+   "y": 0.24,
+   "size": 120,
+   "sfx": "whoosh",
+   "dur": 1.32
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "mặt tiền lên tới",
+       "kind": "lead",
+       "at": 73
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "8M",
+       "kind": "main",
+       "at": 77,
+       "fx": "slide"
+      }
+     ]
+    }
+   ],
+   "y": 0.56,
+   "sfx": "swish",
+   "size": 130,
+   "dur": 1.92
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "kinh doanh ở",
+       "kind": "lead",
+       "at": 84
+      }
+     ]
+    },
+    {
+     "pieces": [
+      {
+       "text": "TẦNG 1",
+       "kind": "main",
+       "at": 88
+      }
+     ]
+    }
+   ],
+   "y": 0.56,
+   "sfx": "sparkle",
+   "dur": 1.32
+  },
+  {
+   "type": "tracking",
+   "at": 101,
+   "dur": 1.9,
+   "lead": "tầng trên cho thuê",
+   "main": "HOMESTAY",
+   "y": 0.2,
+   "sfx": "swish"
+  },
+  {
+   "type": "cards",
+   "at": 110,
+   "dur": 2.3,
+   "images": [
+    "inputs/sanho-card-18.0.jpg",
+    "inputs/sanho-card-21.0.jpg",
+    "inputs/sanho-card-24.0.jpg"
+   ],
+   "title": [
+    "BÀN",
+    "GIAO",
+    "THÔ"
+   ],
+   "label": "CÓ CẦU THANG",
+   "sfx": "whoosh"
+  },
+  {
+   "type": "dip",
+   "atSec": 32.15,
+   "sfx": "swoosh-down"
+  },
+  {
+   "type": "neg",
+   "lead": "tọa lạc tại vị trí",
+   "negLines": [
+    "SIÊU ĐẶC ĐỊA"
+   ],
+   "negAt": [
+    125
+   ],
+   "at": 120,
+   "y": 0.2,
+   "x": 0.08,
+   "sfx": "sparkle",
+   "dur": 1.85
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "cách quảng trường",
+       "kind": "lead",
+       "at": 128
+      }
+     ]
+    },
+    {
+     "pieces": [
+      {
+       "text": "KINH ĐÔ ÁNH SÁNG",
+       "kind": "main",
+       "at": 131
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "khoảng tầm",
+       "kind": "lead",
+       "at": 135
+      },
+      {
+       "text": "300M",
+       "kind": "main",
+       "at": 137,
+       "fx": "slide"
+      }
+     ]
+    }
+   ],
+   "y": 0.56,
+   "sfx": "sparkle",
+   "dur": 2.33
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "cách",
+       "kind": "lead",
+       "at": 138
+      }
+     ]
+    },
+    {
+     "pieces": [
+      {
+       "text": "VINCOM MEGA MALL",
+       "kind": "main",
+       "at": 139
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "500M",
+       "kind": "main",
+       "at": 141,
+       "fx": "slide"
+      }
+     ]
+    }
+   ],
+   "y": 0.56,
+   "sfx": "swish",
+   "dur": 2.02
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "cách công viên",
+       "kind": "lead",
+       "at": 143
+      }
+     ]
+    },
+    {
+     "pieces": [
+      {
+       "text": "WONDER PARK",
+       "kind": "main",
+       "at": 146
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "chỉ khoảng tầm",
+       "kind": "lead",
+       "at": 148
+      },
+      {
+       "text": "400M",
+       "kind": "main",
+       "at": 151,
+       "fx": "slide"
+      }
+     ]
+    }
+   ],
+   "y": 0.56,
+   "sfx": "sparkle",
+   "dur": 3.86
+  },
+  {
+   "type": "flash",
+   "atSec": 42.65,
+   "sfx": "whoosh"
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "phương án thanh toán",
+       "kind": "lead",
+       "at": 159
+      }
+     ]
+    },
+    {
+     "pieces": [
+      {
+       "text": "LINH HOẠT",
+       "kind": "main",
+       "at": 165
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "đầy đủ cả",
+       "kind": "lead",
+       "at": 167
+      },
+      {
+       "text": "3 PHƯƠNG ÁN",
+       "kind": "main",
+       "at": 170
+      }
+     ]
+    }
+   ],
+   "y": 0.6,
+   "sfx": "sparkle",
+   "dur": 3.47
+  },
+  {
+   "type": "neg",
+   "negLines": [
+    "VỪA KINH DOANH",
+    "VỪA ĐỂ Ở"
+   ],
+   "negAt": [
+    185,
+    188
+   ],
+   "at": 185,
+   "y": 0.2,
+   "x": 0.06,
+   "sfx": "swish",
+   "dur": 1.39
+  },
+  {
+   "type": "neg",
+   "lead": "Vinhomes",
+   "negLines": [
+    "OCEAN PARK 2"
+   ],
+   "negAt": [
+    202
+   ],
+   "at": 201,
+   "y": 0.2,
+   "x": 0.08,
+   "sfx": "sparkle",
+   "dur": 1.31
+  },
+  {
+   "type": "run",
+   "lines": [
+    {
+     "pieces": [
+      {
+       "text": "liên hệ trực tiếp cho",
+       "kind": "lead",
+       "at": 207
+      }
+     ]
+    },
+    {
+     "align": "right",
+     "pieces": [
+      {
+       "text": "EM SƠN",
+       "kind": "main",
+       "at": 212
+      }
+     ]
+    }
+   ],
+   "y": 0.6,
+   "sfx": "sparkle",
+   "dur": 2.61
+  }
+ ]
 }

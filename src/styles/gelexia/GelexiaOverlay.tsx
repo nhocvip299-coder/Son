@@ -85,16 +85,20 @@ export const GelexiaOverlay: React.FC<{ project: GelexiaProject }> = ({ project 
         </Sequence>
       ))}
       <div style={{ position: "absolute", width: S.logicalWidth, height: S.logicalHeight, transformOrigin: "top left", transform: `scale(${width / S.logicalWidth},${height / S.logicalHeight})` }}>
-        {project.brand.showAddress !== false && (
-          <div data-gelexia="header" style={{ position: "absolute", left: S.header.left, top: S.header.top, display: "flex", alignItems: "center", gap: 12, opacity: headerOpacity, translate: `${headerX}px 0px` }}>
-            <Pin />
-            <div style={{ background: S.panel, borderRadius: 10, padding: "10px 20px", maxWidth: 620 }}>
-              <div style={{ ...heavy, fontSize: S.header.titleSize, lineHeight: 1.1, color: S.yellow, textShadow: S.goldShadow }}>{project.brand.name}</div>
-              <div style={{ ...secondary, fontSize: S.header.addressSize, lineHeight: 1.35, marginTop: 5 }}>{project.brand.address}</div>
-            </div>
+        {(project.brand.showAddress !== false || project.brand.logoFile) && (
+          <div data-gelexia="header" style={{ position: "absolute", left: S.header.left, right: S.header.right, top: S.header.top, display: "flex", justifyContent: "center", alignItems: "center", gap: 12, opacity: headerOpacity, translate: `${headerX}px 0px` }}>
+            {project.brand.logoFile && <Img src={staticFile(project.brand.logoFile)} style={{ width: S.logoSize, height: S.logoSize, objectFit: "contain", flexShrink: 0 }} />}
+            {project.brand.showAddress !== false && (
+              <>
+                <Pin />
+                <div style={{ background: S.panel, borderRadius: 10, padding: "10px 20px", minWidth: 0, textAlign: "left" }}>
+                  <div style={{ ...heavy, fontSize: S.header.titleSize, lineHeight: 1.1, color: S.yellow, textShadow: S.goldShadow }}>{project.brand.name}</div>
+                  <div style={{ ...secondary, fontSize: S.header.addressSize, lineHeight: 1.35, marginTop: 5 }}>{project.brand.address}</div>
+                </div>
+              </>
+            )}
           </div>
         )}
-        {project.brand.logoFile && <Img src={staticFile(project.brand.logoFile)} style={{ position: "absolute", right: 230, top: 255, width: 170, height: 170, objectFit: "contain", opacity: headerOpacity }} />}
         {page && (
           <div style={{ position: "absolute", left: S.caption.left, right: S.caption.right, bottom: S.caption.bottom, textAlign: "center" }}>
             <div data-gelexia="caption-group" style={{ ...heavy, ...entryState(((ms - page.startMs) / 1000) * fps, ((page.endMs - page.startMs) / 1000) * fps, fps, "caption"), display: "inline-block", boxSizing: "border-box", maxWidth: "100%", background: S.panel, borderRadius: S.caption.radius, padding: `${S.caption.padY}px ${S.caption.padX}px`, fontSize: S.caption.size, lineHeight: S.caption.lineHeight }}>

@@ -8,6 +8,8 @@ Layout dưới đây ghi lại từ quy trình Gelexia và đối chiếu hình.
 
 ## Token layout (sân khấu 1080×1920)
 
+> **Cập nhật 17/11 (yêu cầu Sơn, ưu tiên hơn bảng dưới):** toàn bộ chữ căn giữa màn hình, lề trái/phải đối xứng 150 (thay 90/230; header 90→150 và căn giữa; CTA 100/230→150/150). Vùng an toàn chung TikTok+Reels: trên 220, dưới 520, hai bên 150 (`src/lib/safeZone.ts`). Logo (nếu được giao) 96px đứng trước ghim trong cùng hàng header căn giữa. Giữ nguyên top/bottom và cỡ chữ.
+
 | Vai trò | Chuẩn |
 |---|---|
 | Phụ đề | trái 90/phải 230/đáy 574; max-width 760; Phudu 56, weight 800; line-height 1.12; tối đa 2 dòng |

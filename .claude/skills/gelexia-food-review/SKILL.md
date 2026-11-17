@@ -22,7 +22,7 @@ description: "Edit review quán ăn của Sơn theo mẫu Gelexia đã chốt: P
 4. Cho **nền + chữ chính + chữ phụ nằm trong cùng wrapper chuyển động**. Cùng scale, translate, opacity khi vào/giữ/ra. Không phóng chữ trên nền đứng yên.
 5. Dùng nền xám mờ bo góc đo theo nội dung, có max-width. Không biến câu ngắn thành bảng rộng cố định.
 6. Phân biệt bốn vai trò: mở đầu, nhãn đường, nhấn món, thẻ kết. Không áp một thẻ tiêu đề vàng + giải thích trắng cho mọi câu. Xen khoảng nghỉ chỉ có phụ đề.
-7. Ghim tên và địa chỉ ở phía trên, chừa UI TikTok/Reels bên phải/dưới. Trượt cả cụm vào rồi giữ yên; không xuất hiện lại mỗi lần đổi cảnh.
+7. Ghim tên và địa chỉ ở phía trên, **căn giữa** (cập nhật 17/11 theo yêu cầu Sơn: mọi khối chữ căn giữa đối xứng, lề 150/150, nằm trong vùng an toàn chung TikTok+Reels trên 220 / dưới 520 / hai bên 150 — thay lề lệch trái 90/230 của mẫu gốc). Trượt cả cụm vào rồi giữ yên; không xuất hiện lại mỗi lần đổi cảnh.
 8. Tách phong cách khỏi danh tính: logo trong nguồn chỉ là tham khảo. Chỉ thêm logo được giao cho tập mới; không tự chèn Mõ Làng/Cô Bé Ham Ăn.
 9. Chỉ kể cảnh, món, giá, trải nghiệm và đường đi có căn cứ. Không mang lộ trình Gelexia sang tập mới. Lệnh riêng mỗi tập ưu tiên hơn mẫu; ví dụ tập Adam/Felix đã yêu cầu bỏ cảnh vỉ sườn, nhưng đó không phải lệnh cấm cho mọi tập tương lai.
 

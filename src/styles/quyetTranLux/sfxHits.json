@@ -1,10 +1,10 @@
 {
  "qtl-sparkle": 0.0,
- "qtl-sparkle-whoosh": 0.66,
+ "qtl-sparkle-whoosh": 0.065,
  "qtl-sparkle-whoosh-2": 0.116,
  "qtl-sparkle-sweep": 0.069,
- "qtl-pop-whoosh": 0.451,
+ "qtl-pop-whoosh": 0.112,
  "qtl-transition": 0.18,
  "qtl-swoosh": 0.171,
- "qtl-impact": 0.703
+ "qtl-impact": 0.039
 }

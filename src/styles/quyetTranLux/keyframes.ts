@@ -9,17 +9,18 @@
 import { Easing, interpolate } from "remotion";
 
 export type KfIn = "riseUp" | "fromLeft" | "fromRight" | "dropDown" | "scaleIn" | "zoomOut" | "swingIn" | "fadeIn" | "blurIn";
-export type KfOut = "blurUp" | "toLeft" | "toRight" | "scaleOut" | "fadeDown" | "cut";
+export type KfOut = "blurUp" | "toLeft" | "toRight" | "scaleOut" | "fadeDown" | "dropOut" | "cut";
 export type KfState = { tx: number; ty: number; rot: number; sx: number; sy: number; opacity: number; blur: number; hidden: boolean };
 
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const outCubic = Easing.bezier(0.33, 1, 0.68, 1);
 const outQuint = Easing.bezier(0.22, 1, 0.36, 1);
 const outBack = Easing.bezier(0.34, 1.35, 0.64, 1); // vuot nhe 3-4% roi ve
-const inCubic = Easing.bezier(0.32, 0, 0.67, 0);
+const inCubic = Easing.bezier(0.55, 0, 0.75, 0.2); // tang toc mem khi ra
 
 export const IN_DUR: Record<KfIn, number> = { riseUp: 0.45, fromLeft: 0.42, fromRight: 0.42, dropDown: 0.45, scaleIn: 0.4, zoomOut: 0.5, swingIn: 0.5, fadeIn: 0.3, blurIn: 0.32 };
-export const OUT_DUR: Record<KfOut, number> = { blurUp: 0.3, toLeft: 0.3, toRight: 0.3, scaleOut: 0.28, fadeDown: 0.3, cut: 0.04 };
+// v8: keyframe RA ro rang hon (nguoi dung: "chua co hieu ung keyframe chu khi ra")
+export const OUT_DUR: Record<KfOut, number> = { blurUp: 0.42, toLeft: 0.4, toRight: 0.4, scaleOut: 0.4, fadeDown: 0.4, dropOut: 0.4, cut: 0.04 };
 
 /** Trang thai tai thoi diem t (giay, tuong doi). at = luc bat dau vao; end = luc bat dau ra. */
 export const kf = (kin: KfIn, kout: KfOut, t: number, at: number, end: number, _fps: number, W = 1080): KfState => {
@@ -57,11 +58,12 @@ export const kf = (kin: KfIn, kout: KfOut, t: number, at: number, end: number, _
     const r = interpolate(t, [end, end + OUT_DUR[kout]], [0, 1], { ...C, easing: inCubic });
     s.opacity *= 1 - r;
     switch (kout) {
-      case "blurUp": s.ty -= r * 40; s.blur += r * 10; break;
-      case "toLeft": s.tx -= r * W * 0.25; s.blur += r * 12; break;
-      case "toRight": s.tx += r * W * 0.25; s.blur += r * 12; break;
-      case "scaleOut": s.sx *= 1 + r * 0.25; s.sy *= 1 + r * 0.25; s.blur += r * 10; break;
-      case "fadeDown": s.ty += r * 30; s.blur += r * 6; break;
+      case "blurUp": s.ty -= r * 90; s.blur += r * 18; break;
+      case "toLeft": s.tx -= r * W * 0.45; s.blur += r * 18; break;
+      case "toRight": s.tx += r * W * 0.45; s.blur += r * 18; break;
+      case "scaleOut": s.sx *= 1 + r * 0.45; s.sy *= 1 + r * 0.45; s.blur += r * 16; break;
+      case "fadeDown": s.ty += r * 60; s.blur += r * 10; break;
+      case "dropOut": s.ty += r * 160; s.sx *= 1 - r * 0.25; s.sy *= 1 - r * 0.25; s.blur += r * 8; break;
       case "cut": break;
     }
   }

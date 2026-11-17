@@ -22,12 +22,12 @@ const TEAL = "#5fe3d6";
 const PANEL = "rgba(14,16,20,0.55)";
 
 /** Chu SVG co keyframe (dung chung cho cac so do). */
-export const KText: React.FC<{ x: number; y: number; at: number; end: number; enter?: KfIn; size: number; weight?: number; italic?: boolean; fill?: string; anchor?: "start" | "middle" | "end"; children: string }> = ({
-  x, y, at, end, enter = "riseUp", size, weight = 800, italic, fill = QT.cream, anchor = "start", children,
+export const KText: React.FC<{ x: number; y: number; at: number; end: number; enter?: KfIn; exit?: import("./keyframes").KfOut; size: number; weight?: number; italic?: boolean; fill?: string; anchor?: "start" | "middle" | "end"; children: string }> = ({
+  x, y, at, end, enter = "riseUp", exit = "blurUp", size, weight = 800, italic, fill = QT.cream, anchor = "start", children,
 }) => {
   const t = useT();
   const { fps } = useVideoConfig();
-  const k = kf(enter, "blurUp", t, at, end, fps);
+  const k = kf(enter, exit, t, at, end, fps);
   if (k.hidden) return null;
   return (
     <g transform={`translate(${x + k.tx} ${y + k.ty}) scale(${k.sx} ${k.sy})`} opacity={k.opacity} style={k.blur > 0.2 ? { filter: `blur(${k.blur}px)` } : undefined}>

@@ -12,14 +12,15 @@ OUT = ROOT / "public/sfx/real"
 OUT.mkdir(parents=True, exist_ok=True)
 # ten -> (id mixkit, cat tu giay, do dai giay, ghi chu) — chon theo do khop pho cao tan voi SFX video mau
 SFX = {
-    "qtl-sparkle": (2589, 1.45, 1.2, "Fairy magic sparkle — doan bung sang (1.7s goc)"),
-    "qtl-sparkle-whoosh": (1345, 0.0, 1.3, "Fairy sparkle whoosh — whoosh DANG LEN, dinh ~0.65s -> dat som"),
-    "qtl-sparkle-whoosh-2": (867, 0.0, 1.2, "Fairy sparkle whoosh — sang ngay, tat dan"),
-    "qtl-sparkle-sweep": (3082, 0.0, 1.4, "Sparkle hybrid transition — sang ngay, chu trong suot"),
-    "qtl-pop-whoosh": (2350, 0.0, 1.2, "Explainer video pops whoosh light pop"),
-    "qtl-transition": (3062, 0.0, 1.1, "Fairy sparkle whoosh — chuyen canh vet sang"),
-    "qtl-swoosh": (1478, 0.0, 0.5, "Quick swoosh accent — chu khong lo"),
-    "qtl-impact": (1287, 0.05, 1.8, "Cool impact movie trailer — tham tram"),
+    # v8 "gon": cat ngan 0.3-0.45s, fade-out 0.1s (nguoi dung: am thanh hoi dai dong)
+    "qtl-sparkle": (2589, 1.55, 0.45, "Fairy magic sparkle — doan bung sang"),
+    "qtl-sparkle-whoosh": (1345, 0.35, 0.5, "Fairy sparkle whoosh — phan dinh"),
+    "qtl-sparkle-whoosh-2": (867, 0.0, 0.42, "Fairy sparkle whoosh — sang ngay (chu chinh)"),
+    "qtl-sparkle-sweep": (3082, 0.0, 0.45, "Sparkle hybrid transition — sang ngay (chu kinh)"),
+    "qtl-pop-whoosh": (2350, 0.22, 0.4, "Explainer pops whoosh — pop gon (icon)"),
+    "qtl-transition": (3062, 0.0, 0.45, "Fairy sparkle whoosh — chuyen canh"),
+    "qtl-swoosh": (1478, 0.0, 0.35, "Quick swoosh accent — chu ra/nho"),
+    "qtl-impact": (1287, 0.45, 0.6, "Cool impact — tham tram ngan"),
 }
 items = json.load(open(Path(__file__).with_name("mixkit_items.json"))) if Path(__file__).with_name("mixkit_items.json").exists() else {}
 hits = {}
@@ -30,7 +31,7 @@ for name, (mid, ss, dur, note) in SFX.items():
         subprocess.run(["curl", "-sSL", "-m", "60", "-o", str(tmp), url], check=True)
     # cat tu diem bat dau that (bo im lang dau), chuan hoa dinh -1 dBFS, fade out 60ms
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", str(tmp), "-af",
-                    f"atrim=start={ss}:duration={dur},afade=t=out:st={max(0, dur - 0.06)}:d=0.06,loudnorm=I=-12:TP=-0.5:LRA=11,aresample=48000",
+                    f"atrim=start={ss}:duration={dur},afade=t=out:st={max(0, dur - 0.12)}:d=0.12,loudnorm=I=-12:TP=-0.5:LRA=11,aresample=48000",
                     "-ac", "2", str(OUT / f"{name}.wav")], check=True)
     # diem dinh (hit point): cuc dai nang luong lam muot 50ms -> cue = moc chu - hit
     import numpy as np

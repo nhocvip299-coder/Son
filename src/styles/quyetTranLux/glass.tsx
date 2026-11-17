@@ -12,7 +12,8 @@ import { kf, type KfIn, type KfOut } from "./keyframes";
 
 export type GlassTint = "gold" | "teal" | "pearl";
 const STOPS: Record<GlassTint, [string, string, string, string, string]> = {
-  gold: ["#7a4a12", "#d79a2b", "#ffe39a", "#fff8e6", "#b8741a"],
+  // v8 "vang champagne" sang, sang trong (nguoi dung: mau chu chua dep — bo vang nau toi)
+  gold: ["#a8742a", "#dcae52", "#fff0c4", "#fffaf0", "#c28c34"],
   teal: ["#0d5563", "#22b8c6", "#9ff7ef", "#ffffff", "#118096"],
   pearl: ["#8d8a80", "#d9d4c4", "#f5f1e6", "#ffffff", "#b7b1a0"],
 };
@@ -39,7 +40,7 @@ export const QtGlassText: React.FC<{
   const S = STOPS[tint];
   const sizes = lines.map((l) => Math.min(size, (width * 0.9) / (Math.max(3, l.length) * 0.72)));
   const cy = (i: number) => y * height + lines.slice(0, i).reduce((a, _l, k) => a + sizes[k] * gap, 0);
-  const shift = ((t * 0.35) % 1) * 2 - 0.5; // anh kim chay
+  const shift = ((t * 0.22) % 1) * 2 - 0.5; // anh kim chay cham, sang trong
   return (
     <AbsoluteFill>
       <svg width={width} height={height} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
@@ -57,6 +58,9 @@ export const QtGlassText: React.FC<{
             <stop offset="0.45" stopColor="#fff" stopOpacity="0" />
             <stop offset="1" stopColor="#000" stopOpacity="0.25" />
           </linearGradient>
+          <filter id={`sh-${id}`} x="-10%" y="-20%" width="120%" height="140%">
+            <feGaussianBlur stdDeviation="3" />
+          </filter>
           <filter id={`glow-${id}`} x="-20%" y="-40%" width="140%" height="180%">
             <feGaussianBlur stdDeviation="12" />
           </filter>
@@ -85,8 +89,11 @@ export const QtGlassText: React.FC<{
                   {txt(`url(#w-${id}-${i})`)}
                 </mask>
               </defs>
-              {/* quang sang cung mau */}
-              <g filter={`url(#glow-${id})`} opacity={0.55}>{txt(S[2])}</g>
+              {/* bong toi mem (doc ro tren tuong/troi sang) + quang sang cung mau */}
+              <g filter={`url(#glow-${id})`} opacity={0.45} transform="translate(0 6)">{txt("#2a1c08")}</g>
+              {/* bong sac nho -> net chu ro tren nen sang */}
+              <g filter={`url(#sh-${id})`} opacity={0.6} transform="translate(0 4)">{txt("#1a1206")}</g>
+              <g filter={`url(#glow-${id})`} opacity={0.4}>{txt(S[2])}</g>
               {/* lop TRANG (luc moi vao) */}
               {txt("#fffdf6")}
               {/* lop MAU anh kim, lo dan theo mat na mem */}

@@ -21,7 +21,9 @@ export const QtIcon3D: React.FC<{
   enter?: IconEnter;
   tilt?: number; // goc nghieng nghi (do)
   glow?: string;
-}> = ({ name, x, y, size = 260, at, end, enter = "pop", tilt = -6, glow = "rgba(255,210,122,0.55)" }) => {
+  /** Kieu A (nguoi dung chon): doi khoi 3D sang chat lieu VANG KIM (tuong ma vang). false = mau goc. */
+  gold?: boolean;
+}> = ({ name, x, y, size = 260, at, end, enter = "pop", tilt = -6, glow = "rgba(255,210,122,0.55)", gold = true }) => {
   const f = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const t = f / fps;
@@ -59,7 +61,7 @@ export const QtIcon3D: React.FC<{
           height: size,
           transform: `rotate(${rot}deg) scale(${sc})`,
           opacity: op,
-          filter: `drop-shadow(0 18px 28px rgba(0,0,0,0.45))${blur > 0.3 ? ` blur(${blur}px)` : ""}`,
+          filter: `${gold ? "grayscale(1) contrast(1.35) brightness(1.05) sepia(1) saturate(2.4) hue-rotate(-10deg) drop-shadow(0 0 14px rgba(255,200,110,0.55)) " : ""}drop-shadow(0 18px 28px rgba(0,0,0,0.45))${blur > 0.3 ? ` blur(${blur}px)` : ""}`,
         }}
       />
     </AbsoluteFill>

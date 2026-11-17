@@ -20,6 +20,14 @@ Học từ 2 video TikTok (skill `hoc-mau-bds`). Phân tích: `styles/quyet-tran
 - Nhạc nền suốt video (ambient/piano nhẹ, ~0.18) dưới giọng nói.
 - Chỉnh màu ấm nhẹ + vignette mềm (`QtGrade`).
 
+## Lựa chọn ĐÃ DUYỆT của người dùng (ưu tiên cao nhất)
+- **Chữ kính vàng** (`glass.tsx` → `QtGlassText`): SVG tô gradient vàng kim trực tiếp, trắng → vàng bằng mặt nạ mềm — KHÔNG dùng clip-path (răng cưa). Toàn video một tông VÀNG KIM.
+- **Trực quan = ICON 3D VÀNG KIM (kiểu A)** (`icon3d.tsx` → `QtIcon3D`, mặc định `gold`): Fluent Emoji 3D đổi chất liệu vàng, bật/lướt vào, lơ lửng, bóng đổ. KHÔNG dùng sơ đồ vẽ phẳng (mặt cắt, sơ đồ ngã 3, danh sách ghim) — người dùng đã từ chối; KHÔNG dùng icon màu hoạt hình.
+- **SFX thu thật** (`scripts/style/fetch_sfx.py`, Mixkit) + **canh điểm đỉnh** (`sfxHits.json`): cue = mốc chữ + 0.08 s − hit. Chỉ dùng SFX sáng cao tần cho chữ; kiểm bằng stem tách (`sfx_vs_voice.py`, ≥ +3 dB).
+- **Keyframe đa dạng, mềm** (`keyframes.ts`): vào từ dưới lên / từ 2 bên / lấy nét / phóng to, có keyframe RA; chọn theo bố cục cảnh.
+- **Không đặt chữ/icon lên mặt**: đo `faces.json` từng đoạn, dùng dải trống trên đầu hoặc 2 bên; chữ lớn có thể nằm SAU lưng người (`QtPersonFront`), chữ sau lưng phải ĐẬM, DÀY.
+- **Hỏi trước khi sửa** bản dựng: làm clip thử (`QtlLab6`) → người dùng duyệt → mới dựng bản thật.
+
 ## Components — `src/styles/quyetTranLux/components.tsx` (timing theo giây, đúng ở 30/60 fps)
 | Component | Dùng cho |
 |---|---|

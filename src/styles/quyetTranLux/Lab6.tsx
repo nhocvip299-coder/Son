@@ -69,9 +69,9 @@ const SCENES: Scene[] = [
         <QtIcon3D name="motorway" x={0.5} y={0.2} size={280} at={r(19.7)} end={r(21.9)} enter="pop" />
         <Lead x={0.5} y={0.32} at={r(19.7)} end={r(21.9)}>nằm giữa</Lead>
         <QtGlassText id="g4" lines={["NGÃ 3"]} lineAt={[r(20.4)]} end={r(21.9)} y={0.39} size={200} enter={["fromLeft"]} tint="gold" />
-        <QtIcon3D name="ruler-tri" x={0.27} y={0.27} size={240} at={r(22.0)} end={len - 0.3} enter="fromLeft" glow="rgba(95,227,214,0.5)" />
+        <QtIcon3D name="ruler-tri" x={0.27} y={0.27} size={240} at={r(22.0)} end={len - 0.3} enter="fromLeft"  />
         <Lead x={0.66} y={0.2} at={r(21.95)} end={len - 0.3}>mặt tiền rộng</Lead>
-        <QtGlassText id="g4b" lines={["8M"]} lineAt={[r(22.2)]} end={len - 0.3} x={0.66} y={0.28} size={220} enter={["scaleIn"]} tint="teal" />
+        <QtGlassText id="g4b" lines={["8M"]} lineAt={[r(22.2)]} end={len - 0.3} x={0.66} y={0.28} size={220} enter={["scaleIn"]} tint="gold" />
       </>
     ),
     sfx: [[19.7, POP, 0.8], [20.4, SPK, 1], [22.0, POP, 0.7], [22.2, SWP, 1]],
@@ -83,10 +83,10 @@ const SCENES: Scene[] = [
         <QtIcon3D name="store" x={0.17} y={0.15} size={210} at={r(23.8)} end={r(27.3)} enter="pop" />
         <Lead x={0.6} y={0.08} at={r(23.8)} end={r(27.3)}>tầng 1</Lead>
         <QtGlassText id="g5" lines={["KINH DOANH"]} lineAt={[r(23.85)]} end={r(27.3)} x={0.6} y={0.15} size={110} enter={["fromRight"]} tint="gold" />
-        <QtIcon3D name="bed" x={0.17} y={0.15} size={210} at={r(27.6)} end={len - 0.3} enter="pop" glow="rgba(95,227,214,0.5)" />
-        <QtIcon3D name="luggage" x={0.31} y={0.2} size={130} at={r(27.8)} end={len - 0.3} enter="drop" glow="rgba(95,227,214,0.4)" />
+        <QtIcon3D name="bed" x={0.17} y={0.15} size={210} at={r(27.6)} end={len - 0.3} enter="pop"  />
+        <QtIcon3D name="luggage" x={0.31} y={0.2} size={130} at={r(27.8)} end={len - 0.3} enter="drop"  />
         <Lead x={0.62} y={0.08} at={r(27.4)} end={len - 0.3}>tầng trên cho thuê</Lead>
-        <QtGlassText id="g5b" lines={["HOMESTAY"]} lineAt={[r(27.75)]} end={len - 0.3} x={0.62} y={0.15} size={110} enter={["fromRight"]} tint="teal" />
+        <QtGlassText id="g5b" lines={["HOMESTAY"]} lineAt={[r(27.75)]} end={len - 0.3} x={0.62} y={0.15} size={110} enter={["fromRight"]} tint="gold" />
       </>
     ),
     sfx: [[23.8, POP, 0.7], [23.85, SPK, 1], [27.6, POP, 0.7], [27.75, SPK, 1]],
@@ -121,7 +121,7 @@ const SCENES: Scene[] = [
 /** Lop TREN nguoi cua canh 7 (icon + chu duoi cam) */
 const OVER7 = (r: (s: number) => number, len: number) => (
   <>
-    <QtIcon3D name="card" x={0.84} y={0.6} size={170} at={r(45.9)} end={len - 0.3} enter="fromRight" glow="rgba(95,227,214,0.5)" />
+    <QtIcon3D name="card" x={0.84} y={0.6} size={170} at={r(45.9)} end={len - 0.3} enter="fromRight"  />
     <Lead x={0.1} y={0.64} at={r(43.55)} end={len - 0.3} anchor="start">phương án thanh toán</Lead>
     <QtGlassText id="g7" lines={["3 PHƯƠNG ÁN"]} lineAt={[r(46.05)]} end={len - 0.3} x={0.42} y={0.7} size={110} enter={["fromLeft"]} tint="gold" />
   </>
@@ -149,7 +149,7 @@ export const QtlLab6: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem = "
         {sc.render(r, len)}
         {sc.person ? <QtPersonFront src={staticFile(MATTE)} startFrom={sc.from} /> : null}
         {i === 6 ? OVER7(r, len) : null}
-        <div style={{ position: "absolute", left: 24, bottom: 40, color: "#ff0", fontSize: 26, fontFamily: "sans-serif", background: "rgba(0,0,0,0.5)", padding: "4px 10px" }}>THỬ v6 · {sc.label}</div>
+        <div style={{ position: "absolute", left: 24, bottom: 40, color: "#ff0", fontSize: 26, fontFamily: "sans-serif", background: "rgba(0,0,0,0.5)", padding: "4px 10px" }}>THỬ v7 · {sc.label}</div>
         {i > 0 ? <QtLightLeak /> : null}
       </Sequence>
     );

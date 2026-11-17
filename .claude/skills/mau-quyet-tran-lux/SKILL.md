@@ -46,7 +46,7 @@ Mẫu kế hoạch: `projects/san-ho-09-2/lux-plan.json` (item neo theo chỉ s�
 ## Quy tắc khi dựng
 1. Một khoảnh khắc — một khối chữ. Không chồng tiêu đề lên phụ đề cùng vùng.
 2. Giữ chữ trong `src/lib/safeZone.ts`; tiêu đề trên dùng y≥0.2H để không bị thanh TikTok che.
-3. Mỗi tiêu đề/nháy trắng có SFX (shimmer/swish/whoosh/shine) — kiểm năng lượng cao tần quanh mốc trên giọng nói.
+3. Mỗi tiêu đề/nháy trắng có SFX — tiêu đề: `sparkle` hoặc `swish` (KHÔNG dùng `shimmer`: gần như không có cao tần, bị giọng nói lấp); nháy trắng: `whoosh` + `shine`. Kiểm bằng `hf_peaks.py` (> +12 dB).
 4. **Không** dùng logo "Q", tên kênh hay khuôn mặt của kênh mẫu; watermark (nếu có) là tên kênh người dùng.
 5. Bản thường dùng `QtPhraseCaptions` (đúng mẫu). Theo CLAUDE.md luôn xuất thêm bản chạy chữ từng chữ (`WordByWord`) thay cho phụ đề cụm; với style này đặt chữ ~0.62H, trắng (giữ tinh thần tiết chế).
 6. Render 60fps → `master-audio` (-14 LUFS) → `qc`; bản xem nhanh ~60 MB gửi qua SendUserFile.

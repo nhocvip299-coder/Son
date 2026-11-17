@@ -36,3 +36,14 @@ Mẫu chèn b-roll MỖI KHI nhắc tới thứ người xem không thấy: ngu�
 - KHÔNG đặt chữ lên mặt. Dùng `scripts/style/place_text.py` (vị trí mặt từng khung từ `person_matte.py`) — ưu tiên khoảng trống, rồi dưới cằm, rồi trên đầu, cuối cùng là SAU LƯNG.
 - Chữ sau lưng nhân vật bắt buộc ĐẬM, DÀY (Montserrat 900, cỡ lớn) để vẫn đọc được khi bị che.
 - Chữ âm bản đơn, to: đặt đúng các từ nhân vật NHẤN (đo âm lượng + cao độ + độ kéo dài so với ±3 s xung quanh).
+
+## 5. Chuyển động chữ — đo TỪNG KHUNG (1/30 s) — `analysis/motion/z_*.jpg`
+| Mẫu | Vào | Khi đứng | Ra |
+|---|---|---|---|
+| "SỰ THẬT LÀ" (ref01 0.70 s) | lao ngang từ PHẢI, vệt nhòe chuyển động ngang dài, ổn định sau **3 khung** | đứng yên; **bàn tay nhân vật đi ngang phía trước chữ** | theo nhát cắt |
+| "HÀ NỘI" (1.70 s) | **tách màu RGB** + nhòe dọc, rõ sau **5 khung** | đứng yên | theo nhát cắt |
+| "HỒ HOÀN KIẾM" (9.45 s) | **xoay 3D lao vào từ TRÁI** + nhòe, phẳng sau 5 khung; "HỒ" ánh xanh trong suốt | đứng yên | — |
+| "HOÀNG MAI" (3.3 s) | ký tự bật ra | đứng yên; **vệt ánh kim vàng chạy qua ruột chữ** liên tục | — |
+| "ĐỂ" khổng lồ (ref02 17.9 s) | bật ra | **bám theo camera** (lệch qua lại cùng khuôn mặt, ±20 px@540) | tắt gọn 2 khung |
+Quy tắc: vào 3–5 khung, KHÔNG trôi lơ lửng, KHÔNG mờ dần chậm; chữ lớn luôn nằm SAU lớp người.
+Cài đặt: `src/styles/quyetTranLux/kinetic.tsx` (QtKPiece slide/chroma/swing/pop/fade, QtKRun, QtTrack), `scripts/style/camera_track.py`, `scripts/style/frames_zoom.py`.

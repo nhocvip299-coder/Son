@@ -6,6 +6,7 @@
  */
 import React from "react";
 import { AbsoluteFill, Easing, Img, OffthreadVideo, Sequence, interpolate, random, useCurrentFrame, useVideoConfig } from "remotion";
+import { QtKPiece } from "./kinetic";
 
 export const QT = {
   white: "#F8F9FD", // [XM] mau chu do tu khung 33.4s/131.9s
@@ -622,7 +623,8 @@ export const QtWindowText: React.FC<{
 }> = ({ lines, lineAt, fill, x = 0.5, y = 0.2, size = 150, rot, dx, weight = 900, lead, duration, id }) => {
   const { t, fps } = useT();
   const { width, height } = useVideoConfig();
-  const out = interpolate(t, [duration - 0.3, duration], [1, 0], { ...clamp, easing: easeIn });
+  // v3 [XM tung khung]: tat gon 2 khung (khong mo dan)
+  const out = interpolate(t, [duration - 0.07, duration], [1, 0], clamp);
   const at = lineAt ?? lines.map((_, i) => i * 0.4);
   const sizes = lines.map((l) => Math.min(size, (width * 0.9) / (Math.max(3, l.length) * 0.74)));
   const lineY = (i: number) => y * height + lines.slice(0, i).reduce((a, _l, k) => a + sizes[k] * 0.98, 0);
@@ -630,9 +632,10 @@ export const QtWindowText: React.FC<{
   // moi ky tu: hien trang (0.12s, xuat hien roi rac), giu trang ~0.35s, roi tan thanh trong suot theo thu tu trai->phai
   const chars = (l: string, i: number) =>
     [...l].map((c, k) => {
-      const s0 = at[i] + random(`${id}a${i}${k}`) * 0.25;
-      const appear = interpolate(t, [s0, s0 + 0.12], [0, 1], clamp);
-      const wipe = interpolate(t, [at[i] + 0.45 + (k / Math.max(1, l.length)) * 0.5, at[i] + 0.75 + (k / Math.max(1, l.length)) * 0.5], [1, 0], clamp);
+      // v3: ky tu bat ra trong ~3 khung (rai 0.1s), giu trang ngan, roi tan trong suot trai->phai trong ~0.35s
+      const s0 = at[i] + random(`${id}a${i}${k}`) * 0.1;
+      const appear = interpolate(t, [s0, s0 + 0.07], [0, 1], clamp);
+      const wipe = interpolate(t, [at[i] + 0.3 + (k / Math.max(1, l.length)) * 0.3, at[i] + 0.45 + (k / Math.max(1, l.length)) * 0.3], [1, 0], clamp);
       return { c, appear, white: appear * wipe };
     });
   const textEl = (i: number, l: string, mode: "clip" | "white" | "glow") => (
@@ -660,7 +663,7 @@ export const QtWindowText: React.FC<{
   return (
     <AbsoluteFill style={{ opacity: out }}>
       {lead ? (
-        <div style={{ position: "absolute", left: 0, right: 0, top: y * height - sizes[0] * 0.8, translate: "0 -100%", textAlign: "center", fontFamily: QT.font, fontStyle: "italic", fontWeight: 600, fontSize: Math.max(40, sizes[0] * 0.3), color: QT.white, textShadow: QT.shadow, ...blurRise(t, 0, duration, duration, 8, 0.25) }}>
+        <div style={{ position: "absolute", left: 0, right: 0, top: y * height - sizes[0] * 0.8, translate: "0 -100%", textAlign: "center", fontFamily: QT.font, fontStyle: "italic", fontWeight: 600, fontSize: Math.max(40, sizes[0] * 0.3), color: QT.white, textShadow: QT.shadow, opacity: interpolate(t, [0, 0.1], [0, 1], clamp) }}>
           {lead}
         </div>
       ) : null}
@@ -686,6 +689,17 @@ export const QtWindowText: React.FC<{
             </Sequence>
           )}
         </AbsoluteFill>
+      </AbsoluteFill>
+      {/* v3 [XM ref01 "HOÀNG MAI"]: vet anh kim chay qua ruot chu trong suot */}
+      <AbsoluteFill style={{ clipPath: `url(#qtclip-${id})`, mixBlendMode: "screen", opacity: 0.75 }}>
+        <AbsoluteFill
+          style={{
+            background: (() => {
+              const pos = ((t * 66) % 260) - 80;
+              return `linear-gradient(105deg, rgba(0,0,0,0) ${pos - 30}%, rgba(255,200,90,0.9) ${pos - 8}%, rgba(255,248,225,1) ${pos}%, rgba(190,130,30,0.9) ${pos + 10}%, rgba(0,0,0,0) ${pos + 32}%)`;
+            })(),
+          }}
+        />
       </AbsoluteFill>
       {/* lop trang dang tan dan */}
       <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
@@ -722,7 +736,6 @@ export const QtBehindText: React.FC<{ lines: string[]; lineAt?: number[]; y?: nu
 }) => {
   const { t } = useT();
   const { width, height } = useVideoConfig();
-  const out = duration - 0.3;
   const at = lineAt ?? lines.map((_, i) => i * 0.25);
   return (
     <AbsoluteFill>
@@ -745,11 +758,12 @@ export const QtBehindText: React.FC<{ lines: string[]; lineAt?: number[]; y?: nu
               color,
               whiteSpace: "nowrap",
               textShadow: "0 6px 24px rgba(0,0,0,0.25)",
-              ...blurRise(t, at[i], duration, out, 40, 0.45),
+              opacity: interpolate(t, [duration - 0.07, duration], [1, 0], clamp),
               ...viPad,
             }}
           >
-            {l}
+            {/* v3: lao ngang tu phai + nhoe chuyen dong (4 khung), dung yen, tat gon */}
+            <QtKPiece id={`bh${i}${l.length}`} text={l} at={at[i]} end={duration} kind="slide" style={{}} />
           </div>
         );
       })}

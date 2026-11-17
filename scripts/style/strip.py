@@ -23,7 +23,7 @@ w = 270
 vf = (f"fps={1/step},scale={w}:-2,crop=iw:ih*{y1 - y0}:0:ih*{y0},"
       f"drawtext=text='%{{pts\\:hms\\:{start}}}':x=6:y=6:fontsize=18:fontcolor=yellow:box=1:boxcolor=black@0.6,"
       f"tile={cols}x{rows}:padding=4:color=black")
-r = subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{start:.3f}", "-t", f"{dur + before:.3f}", "-i", src,
+r = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-ss", f"{start:.3f}", "-t", f"{dur + before:.3f}", "-i", src,
                     "-vf", vf, "-frames:v", "1", "-q:v", "3", out], capture_output=True, text=True)
 if r.returncode:
     sys.exit(r.stderr[-500:])

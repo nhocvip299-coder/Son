@@ -1,0 +1,435 @@
+/**
+ * Bo hieu ung "Mau Quyet Tran Lux" (BDS cao cap, dien anh) — dung lai tu 2 video mau TikTok.
+ * Timing tinh bang GIAY (t = frame/fps) -> chay dung o 30 va 60 FPS.
+ * [XM] = da do tren khung hinh; [UD] = uoc doan. Chi tiet: styles/quyet-tran-lux/references/style-spec.md
+ * KHONG tai tao logo/watermark "Q" cua kenh mau.
+ */
+import React from "react";
+import { AbsoluteFill, Easing, Img, interpolate, random, useCurrentFrame, useVideoConfig } from "remotion";
+
+export const QT = {
+  white: "#F8F9FD", // [XM] mau chu do tu khung 33.4s/131.9s
+  ink: "#111214", // [XM] chu toi tren nen sang ("SUC KHOE & CAN BANG")
+  gold: "#E9B24C", // [XM] accent_colors ref01 (anh den am) — dung rat it
+  bgTop: "#3a3a3c", // [XM] nen gradient trang anh ghep (ref01 163s)
+  bgBottom: "#0e0e10",
+  font: "'Montserrat'",
+  fontSub: "'Be Vietnam Pro'",
+  // bong mem, khong vien [XM hinh dang / UD thong so]
+  shadow: "0 2px 6px rgba(0,0,0,0.55), 0 0 18px rgba(0,0,0,0.35)",
+};
+
+const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+const easeOut = Easing.bezier(0.16, 1, 0.3, 1);
+const easeIn = Easing.bezier(0.7, 0, 0.84, 0);
+
+/** Thoi gian (giay) trong Sequence hien tai. */
+const useT = () => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  return { t: f / fps, fps };
+};
+
+/** Vao: mo + nho -> ro (blur) + troi len nhe. Thoat: mo + blur. [XM] strip r2_63can, r2_bluffs */
+const blurRise = (t: number, start: number, dur: number, outAt: number, rise = 26, inDur = 0.42) => {
+  const p = interpolate(t, [start, start + inDur], [0, 1], { ...clamp, easing: easeOut });
+  const o = interpolate(t, [outAt, outAt + 0.3], [1, 0], { ...clamp, easing: easeIn });
+  return {
+    opacity: p * o,
+    filter: `blur(${(1 - p) * 10 + (1 - o) * 8}px)`,
+    translate: `0 ${(1 - p) * rise}px`,
+    scale: `${1 + (1 - p) * 0.06}`,
+  } as React.CSSProperties;
+};
+
+// Dau tieng Viet (Ầ, Ỗ...) khong bi cat o dong tren
+const viPad: React.CSSProperties = { paddingTop: "0.22em", marginTop: "-0.22em", lineHeight: 1.12 };
+
+/**
+ * 1 [XM] Tieu de 2 dong: dong dan nho (nghieng, chu thuong) + TU KHOA lon (dam, nghieng, IN HOA).
+ * Vi du "IXORA 2 có / 63 CĂN", "sân golf / THE BLUFFS". Can giua; y mac dinh 0.62H (mau: 0.57/0.62H).
+ */
+export const QtTitle: React.FC<{
+  lead?: string;
+  main: string;
+  y?: number; // tam dong main, ti le chieu cao
+  size?: number; // co chu main (px @1080)
+  align?: "center" | "left";
+  x?: number; // le trai khi align=left (ti le W)
+  dark?: boolean; // chu toi tren nen sang
+  duration: number; // giay
+}> = ({ lead, main, y = 0.62, size = 108, align = "center", x = 0.22, dark, duration }) => {
+  const { t } = useT();
+  const { width, height } = useVideoConfig();
+  const out = duration - 0.32;
+  const col = dark ? QT.ink : QT.white;
+  const box: React.CSSProperties =
+    align === "center"
+      ? { position: "absolute", left: 60, right: 60, textAlign: "center" }
+      : { position: "absolute", left: x * width, right: 60, textAlign: "left" };
+  return (
+    <AbsoluteFill>
+      <div style={{ ...box, top: y * height, translate: "0 -100%" }}>
+        {lead ? (
+          <div
+            style={{
+              ...viPad,
+              fontFamily: QT.font,
+              fontStyle: "italic",
+              fontWeight: 500,
+              fontSize: size * 0.66,
+              color: col,
+              textShadow: dark ? "none" : QT.shadow,
+              ...blurRise(t, 0, duration, out, 14, 0.36),
+            }}
+          >
+            {lead}
+          </div>
+        ) : null}
+        <div
+          style={{
+            ...viPad,
+            fontFamily: QT.font,
+            fontStyle: "italic",
+            fontWeight: 800,
+            fontSize: size,
+            letterSpacing: "0.01em",
+            color: col,
+            whiteSpace: "nowrap",
+            textShadow: dark ? "none" : QT.shadow,
+            ...blurRise(t, lead ? 0.18 : 0, duration, out, 30),
+          }}
+        >
+          {main}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+/**
+ * 2 [XM] Hien tung ky tu roi rac + gian chu khep lai (strip r2_bluffs 130.9–131.6s: ~0.6s).
+ * Moi ky tu bat dau ngau nhien trong 0.35s, mo dan + het blur; letter-spacing 0.45em -> 0.02em.
+ */
+export const QtTrackingReveal: React.FC<{ lead?: string; main: string; y?: number; size?: number; duration: number; seed?: string }> = ({
+  lead,
+  main,
+  y = 0.2,
+  size = 98,
+  duration,
+  seed = "qt",
+}) => {
+  const { t } = useT();
+  const { height } = useVideoConfig();
+  const out = interpolate(t, [duration - 0.32, duration], [1, 0], { ...clamp, easing: easeIn });
+  const p = interpolate(t, [0, 0.75], [0, 1], { ...clamp, easing: easeOut });
+  const chars = (txt: string, s: string, base: number) =>
+    [...txt].map((c, i) => {
+      const st = base + random(`${seed}${s}${i}`) * 0.35;
+      const q = interpolate(t, [st, st + 0.3], [0, 1], { ...clamp, easing: easeOut });
+      return (
+        <span key={i} style={{ opacity: q, filter: `blur(${(1 - q) * 6}px)`, display: "inline-block", whiteSpace: "pre" }}>
+          {c}
+        </span>
+      );
+    });
+  const line = (txt: string, s: string, base: number, st: React.CSSProperties) => (
+    <div style={{ ...viPad, letterSpacing: `${0.45 * (1 - p) + 0.02}em`, whiteSpace: "nowrap", ...st }}>{chars(txt, s, base)}</div>
+  );
+  return (
+    <AbsoluteFill>
+      <div
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: y * height,
+          translate: "0 -100%",
+          textAlign: "center",
+          fontFamily: QT.font,
+          fontStyle: "italic",
+          color: QT.white,
+          textShadow: QT.shadow,
+          opacity: out,
+          filter: `blur(${(1 - out) * 8}px)`,
+        }}
+      >
+        {lead ? line(lead, "l", 0, { fontWeight: 500, fontSize: size * 0.72 }) : null}
+        {line(main, "m", 0.12, { fontWeight: 800, fontSize: size })}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+/** 3 [XM] So lieu can trai: dong dan nho mo + SO LON dam co don vi mu ("Mỗi căn rộng từ / 224 - 300 m²"). */
+export const QtNumber: React.FC<{ lead?: string; value: string; unit?: string; x?: number; y?: number; size?: number; duration: number }> = ({
+  lead,
+  value,
+  unit,
+  x = 0.2,
+  y = 0.6,
+  size = 108,
+  duration,
+}) => {
+  const { t } = useT();
+  const { width, height } = useVideoConfig();
+  const out = duration - 0.32;
+  return (
+    <AbsoluteFill>
+      <div style={{ position: "absolute", left: x * width, top: y * height, translate: "0 -100%", fontFamily: QT.font, color: QT.white, textShadow: QT.shadow }}>
+        {lead ? (
+          <div style={{ ...viPad, fontStyle: "italic", fontWeight: 500, fontSize: size * 0.3, opacity: 0.85, ...blurRise(t, 0, duration, out, 10, 0.3) }}>{lead}</div>
+        ) : null}
+        <div style={{ ...viPad, fontWeight: 800, fontSize: size, whiteSpace: "nowrap", ...blurRise(t, 0.15, duration, out, 26) }}>
+          {value}
+          {unit ? <span style={{ fontSize: size * 0.3, verticalAlign: "1.1em", marginLeft: 8, textTransform: "uppercase" }}>{unit}</span> : null}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+/** 4 [XM] Phu de nho kieu "dien anh": cum tu ngan, chu thuong, trang, ~32px, mo vao/ra 0.15s. */
+export const QtSubtitle: React.FC<{ text: string; y?: number; duration: number; dark?: boolean }> = ({ text, y = 0.6, duration, dark }) => {
+  const { t } = useT();
+  const { height } = useVideoConfig();
+  const o = interpolate(t, [0, 0.15, duration - 0.15, duration], [0, 1, 1, 0], clamp);
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: 80,
+        right: 80,
+        top: y * height,
+        translate: "0 -50%",
+        textAlign: "center",
+        fontFamily: QT.fontSub,
+        fontWeight: 400,
+        fontSize: 38,
+        color: dark ? QT.ink : QT.white,
+        textShadow: dark ? "none" : "0 1px 3px rgba(0,0,0,0.85), 0 0 10px rgba(0,0,0,0.4)",
+        opacity: o,
+        ...viPad,
+      }}
+    >
+      {text}
+    </div>
+  );
+};
+
+/** 5 [XM] Tieu de muc IN HOA dam vua, khong nghieng ("DANH SÁCH ĐƠN VỊ TƯ VẤN", "SỨC KHỎE & CÂN BẰNG"). */
+export const QtHeading: React.FC<{ text: string; lead?: string; y?: number; size?: number; dark?: boolean; duration: number }> = ({
+  text,
+  lead,
+  y = 0.24,
+  size = 54,
+  dark,
+  duration,
+}) => {
+  const { t } = useT();
+  const { height } = useVideoConfig();
+  const out = duration - 0.3;
+  const col = dark ? QT.ink : QT.white;
+  return (
+    <div style={{ position: "absolute", left: 60, right: 60, top: y * height, translate: "0 -100%", textAlign: "center", fontFamily: QT.font, color: col }}>
+      {lead ? (
+        <div style={{ ...viPad, fontStyle: "italic", fontWeight: 500, fontSize: size * 0.9, textShadow: dark ? "none" : QT.shadow, ...blurRise(t, 0, duration, out, 10, 0.3) }}>{lead}</div>
+      ) : null}
+      <div
+        style={{
+          ...viPad,
+          fontWeight: 800,
+          fontSize: size,
+          letterSpacing: "0",
+          whiteSpace: "nowrap",
+          textShadow: dark ? "none" : QT.shadow,
+          ...blurRise(t, lead ? 0.15 : 0, duration, out, 16, 0.35),
+        }}
+      >
+        {text}
+      </div>
+    </div>
+  );
+};
+
+/**
+ * 6 [XM] Trang anh ghep: nen gradient xam toi, 3 the anh xep doc vien trang manh,
+ * tieu de IN HOA dam tung dong goc tren-trai the 1, nhan nho goc duoi-phai the 2.
+ * [UD] cach vao cua the (mau co nhay trang luc 162.4s nen khong thay ro) -> truot len + mo, so le 0.12s.
+ */
+export const QtCardStack: React.FC<{
+  images: string[]; // 1-3 anh (staticFile hoac url)
+  title?: string[]; // vd ["TRẦN", "CAO", "6.8 m"]
+  label?: string; // vd "HỒ BƠI RIÊNG" (hien sau 1.6s, the 2)
+  renderCard?: (i: number) => React.ReactNode; // thay anh bang node (demo)
+  duration: number;
+}> = ({ images, title = [], label, renderCard, duration }) => {
+  const { t } = useT();
+  const { width, height } = useVideoConfig();
+  const n = Math.max(images.length, renderCard ? 3 : 0);
+  const cw = width * 0.81;
+  const ch = height * 0.258;
+  const gap = height * 0.008;
+  const top0 = (height - (n * ch + (n - 1) * gap)) / 2;
+  const out = interpolate(t, [duration - 0.3, duration], [1, 0], clamp);
+  return (
+    <AbsoluteFill style={{ background: `radial-gradient(ellipse at 70% 10%, ${QT.bgTop} 0%, #1d1d20 55%, ${QT.bgBottom} 100%)`, opacity: out }}>
+      {Array.from({ length: n }).map((_, i) => {
+        const p = interpolate(t, [i * 0.12, i * 0.12 + 0.5], [0, 1], { ...clamp, easing: easeOut });
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: (width - cw) / 2,
+              top: top0 + i * (ch + gap),
+              width: cw,
+              height: ch,
+              border: "3px solid rgba(255,255,255,0.92)",
+              overflow: "hidden",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
+              opacity: p,
+              translate: `0 ${(1 - p) * 60}px`,
+            }}
+          >
+            {renderCard ? renderCard(i) : <Img src={images[i]} style={{ width: "100%", height: "100%", objectFit: "cover", scale: `${1.08 - 0.06 * Math.min(1, t / duration)}` }} />}
+            {i === 0 && title.length ? (
+              <div style={{ position: "absolute", left: 22, top: 18, fontFamily: QT.font, fontWeight: 800, fontSize: 78, color: QT.white, lineHeight: 1.0, textShadow: QT.shadow }}>
+                {title.map((l, k) => (
+                  <div key={k} style={{ ...viPad, lineHeight: 1.22, ...blurRise(t, 0.35 + k * 0.22, duration, duration, 18, 0.32), fontSize: k === title.length - 1 && title.length > 1 ? 68 : 78 }}>
+                    {l}
+                  </div>
+                ))}
+              </div>
+            ) : null}
+            {i === 1 && label ? (
+              <div style={{ position: "absolute", right: 22, bottom: 18, fontFamily: QT.font, fontWeight: 800, fontSize: 34, color: QT.white, textShadow: QT.shadow, ...blurRise(t, 1.6, duration, duration, 10, 0.3) }}>
+                {label}
+              </div>
+            ) : null}
+          </div>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+/** 7 [XM] Nhay trang chuyen canh (~1.5 lan/phut, luon kem SFX). Dat o diem cat; dinh tai `peak` giay. */
+export const QtFlash: React.FC<{ peak?: number; strength?: number; color?: string }> = ({ peak = 0.12, strength = 0.95, color = "#fffaf0" }) => {
+  const { t } = useT();
+  const o = interpolate(t, [0, peak, peak + 0.4], [0, strength, 0], { ...clamp, easing: Easing.out(Easing.quad) });
+  return <AbsoluteFill style={{ backgroundColor: color, opacity: o, mixBlendMode: "screen" }} />;
+};
+
+/** 8 [XM] Dip qua den (chuyen doan): toi dan 0.25s -> den -> sang lai 0.4s (strip r2_suckhoe 63.4s). */
+export const QtDip: React.FC<{ hold?: number; color?: string }> = ({ hold = 0.1, color = "#000" }) => {
+  const { t } = useT();
+  const o = interpolate(t, [0, 0.25, 0.25 + hold, 0.65 + hold], [0, 1, 1, 0], { ...clamp, easing: Easing.inOut(Easing.quad) });
+  return <AbsoluteFill style={{ backgroundColor: color, opacity: o }} />;
+};
+
+/** 9 [XM] Man hinh chu tren nen toi gradient (ref01 87.2s "như là"): dung cho cau dan/chuyen y. */
+export const QtDarkCard: React.FC<{ text: string; duration: number }> = ({ text, duration }) => {
+  const { t } = useT();
+  const o = interpolate(t, [0, 0.25, duration - 0.25, duration], [0, 1, 1, 0], clamp);
+  return (
+    <AbsoluteFill style={{ background: `radial-gradient(ellipse at 80% 0%, #4a4a4c 0%, #202022 45%, ${QT.bgBottom} 100%)`, opacity: o }}>
+      <QtSubtitle text={text} y={0.5} duration={duration} />
+    </AbsoluteFill>
+  );
+};
+
+/** Chinh mau nhe kieu dien anh am (UD): tuong phan + am nhe, vignette mem. Boc ngoai footage. */
+export const QtGrade: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <AbsoluteFill>
+    <AbsoluteFill style={{ filter: "contrast(1.06) saturate(1.05) sepia(0.06) brightness(1.0)" }}>{children}</AbsoluteFill>
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,0.28) 100%)" }} />
+  </AbsoluteFill>
+);
+
+/**
+ * 10 [XM] Phu de chay theo CUM TU (3–6 tu) — dac trung cua mau: hien dung luc tu dau cum duoc noi
+ * (do tren transcript ref01: "Trong khi đó"@10.0s, "Anh chị hãy nhìn vào"@49.6s), vi tri ~0.53H.
+ * Bi an trong cac khoang `mute` (luc dang co tieu de lon thay the).
+ */
+export type QtWord = { text: string; startMs: number; endMs: number };
+// Tu mo dau menh de (Whisper viet hoa khi bat dau cau) -> diem ngat cum tu nhien
+const STARTERS = /^(Trong|Anh|Chị|Như|Thế|Và|Nhưng|Thì|Còn|Đây|Đó|Bởi|Vì|Nếu|Khi|Tại|Với|Chỉ|Ngoài|Không|Có|Mỗi|Hãy|Ở|Đặc|Điều|Nên|Vậy|Sau|Rồi|Mà|Cho|Để|Là|Một|Các|Những|Toàn|Tất|Hơn|Kiến|Cảnh|Ánh)$/;
+const isCap = (t: string) => /^\p{Lu}/u.test(t.trim());
+export const groupPhrases = (words: QtWord[], maxWords = 6, gapMs = 280) => {
+  const out: { text: string; startMs: number; endMs: number }[] = [];
+  let cur: QtWord[] = [];
+  const flush = () => {
+    if (cur.length) out.push({ text: cur.map((w) => w.text.trim()).join(" ").replace(/[,.]$/, ""), startMs: cur[0].startMs, endMs: cur[cur.length - 1].endMs });
+    cur = [];
+  };
+  words.forEach((w, i) => {
+    const prev = words[i - 1];
+    const t = w.text.trim();
+    // ngat truoc tu mo dau menh de (Whisper viet hoa); tu viet hoa khac = ten rieng -> khong ngat
+    const capBreak = isCap(t) && STARTERS.test(t);
+    const gap = prev ? w.startMs - prev.endMs : 0;
+    // cum dai: chi ngat o cho co khoang nghi nho giua 2 am tiet (tranh tach "danh | sách")
+    const last = cur[cur.length - 1]?.text.trim() ?? "";
+    const longBreak = cur.length >= maxWords && (!isCap(t) || !isCap(last)) && (gap > 40 || cur.length >= maxWords + 2);
+    if (cur.length && (capBreak || gap > gapMs || longBreak || cur.length >= maxWords + 4)) flush();
+    cur.push(w);
+    if (/[,.!?:;]$/.test(t) && cur.length >= 2) flush();
+  });
+  flush();
+  // gop cum 1 tu le vao cum truoc (vd "Kiếm" bi tach khoi "Hồ Hoàng")
+  return out.reduce<typeof out>((acc, p) => {
+    const q = acc[acc.length - 1];
+    if (q && !p.text.includes(" ") && p.startMs - q.endMs < 300 && q.text.split(" ").length < maxWords + 5 && !STARTERS.test(p.text)) {
+      q.text += " " + p.text;
+      q.endMs = p.endMs;
+    } else acc.push({ ...p });
+    return acc;
+  }, []);
+};
+
+export const QtPhraseCaptions: React.FC<{ words: QtWord[]; y?: number; mute?: Array<[number, number]>; maxWords?: number }> = ({
+  words,
+  y = 0.53,
+  mute = [],
+  maxWords = 6,
+}) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const ms = (f / fps) * 1000;
+  const phrases = groupPhrases(words, maxWords);
+  const i = phrases.findIndex((p, k) => ms >= p.startMs - 60 && ms < Math.min(p.endMs + 500, phrases[k + 1]?.startMs ?? Infinity));
+  if (i < 0) return null;
+  const p = phrases[i];
+  if (mute.some(([a, b]) => p.startMs < b && p.endMs > a)) return null;
+  const end = Math.min(p.endMs + 500, phrases[i + 1]?.startMs ?? Infinity);
+  const local = (ms - (p.startMs - 60)) / 1000;
+  return <QtSubtitleAt text={p.text} y={y} t={local} duration={(end - p.startMs + 60) / 1000} />;
+};
+
+/** Ban QtSubtitle nhan thoi gian ngoai (dung trong QtPhraseCaptions, khong can Sequence). */
+const QtSubtitleAt: React.FC<{ text: string; y: number; t: number; duration: number }> = ({ text, y, t, duration }) => {
+  const { height } = useVideoConfig();
+  const o = interpolate(t, [0, 0.12, duration - 0.12, duration], [0, 1, 1, 0], clamp);
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: 80,
+        right: 80,
+        top: y * height,
+        translate: "0 -50%",
+        textAlign: "center",
+        fontFamily: QT.fontSub,
+        fontWeight: 400,
+        fontSize: 38,
+        color: QT.white,
+        textShadow: "0 1px 3px rgba(0,0,0,0.85), 0 0 10px rgba(0,0,0,0.4)",
+        opacity: o,
+        ...viPad,
+      }}
+    >
+      {text}
+    </div>
+  );
+};

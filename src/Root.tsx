@@ -3,6 +3,7 @@ import { Composition } from "remotion";
 import { AutoEdit } from "./compositions/AutoEdit";
 import { Demo } from "./compositions/Demo";
 import { HongDangVerify } from "./styles/hongDang/Verify";
+import { QuyetTranLuxVerify, QTL_VERIFY_SEC } from "./styles/quyetTranLux/Verify";
 import { TextPresetsGallery } from "./styles/textPresets/Gallery";
 import { TextPresetsCatalog40, TextPresetsGallery40 } from "./styles/textPresets/Gallery40";
 import { CapcutCatalog } from "./styles/textPresets/capcut/CapcutCatalog";
@@ -42,6 +43,8 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="TextPresetsGallery40" component={TextPresetsGallery40} durationInFrames={384} fps={30} width={1080} height={1920} />
       <Composition id="TextPresetsCatalog40" component={TextPresetsCatalog40} durationInFrames={2160} fps={30} width={1080} height={1920} />
       <Composition id="TextPresetsGallery" component={TextPresetsGallery} durationInFrames={240} fps={30} width={1080} height={1920} />
+      <Composition id="QuyetTranLuxVerify" component={QuyetTranLuxVerify} durationInFrames={Math.round(QTL_VERIFY_SEC * 30)} fps={30} width={1080} height={1920} />
+      <Composition id="QuyetTranLuxVerify60" component={QuyetTranLuxVerify} durationInFrames={Math.round(QTL_VERIFY_SEC * 60)} fps={60} width={1080} height={1920} />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

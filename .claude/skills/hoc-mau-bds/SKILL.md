@@ -12,7 +12,7 @@ description: Học phong cách hình ảnh từ video mẫu bất động sản 
 3. `.claude/skills/mau-<id>/SKILL.md` — skill mới để lần sau chỉ cần nói "dựng kiểu <tên>"
 4. Video demo trên footage người dùng: bản thường **và** bản chạy chữ từng chữ (yêu cầu cố định trong CLAUDE.md)
 
-Mẫu tham khảo đã làm xong theo đúng quy trình này: skill `mau-hong-dang`. Mở nó ra xem trước khi viết — nó là thước đo "xong" trông như thế nào.
+Mẫu tham khảo đã làm xong theo đúng quy trình này: skill `mau-hong-dang` và `mau-quyet-tran-lux` (học từ 2 link TikTok bằng chính skill này). Mở nó ra xem trước khi viết — nó là thước đo "xong" trông như thế nào.
 
 ## Vì sao làm theo trình tự này
 Phong cách nằm ở chi tiết đo được (màu hex, vị trí theo % chiều cao, thời gian vào/thoát, nhịp cắt), không nằm ở ấn tượng chung. Nếu nhìn 1–2 keyframe rồi viết component ngay, kết quả thường "na ná" nhưng người dùng thấy ngay là sai. Vì vậy: tải → đo → nhìn kỹ → ghi đặc tả có mức độ chắc chắn → dựng → so cạnh nhau với mẫu → sửa.
@@ -23,7 +23,11 @@ python3 -I scripts/style/fetch_reference.py <style-id> <link1> [<link2> ...]
 ```
 - `<style-id>`: chữ thường-gạch-nối, theo tên kênh/phong cách người dùng gọi (vd `kenh-abc`). Hỏi lại nếu không rõ.
 - Lưu vào `reference/<id>/` (đã bị `.gitignore` — video của người khác **không bao giờ đưa lên Git**), kèm `sources.json` (link, tiêu đề, kênh) và proxy H.264 1080x1920 (Chromium không giải mã HEVC).
-- Nếu in `MANG_BI_CHAN`: môi trường chưa cho truy cập TikTok/YouTube/FB. Báo người dùng một dòng và đề nghị cách nhanh nhất: tải video về điện thoại → up Google Drive (chia sẻ "bất kỳ ai có link") → gửi link Drive; script nhận link Drive như bình thường. Không tự bịa phân tích khi chưa có video.
+- Nếu in `MANG_BI_CHAN`: môi trường chưa cho truy cập trang đó. Mạng chỉ thêm được **tên miền chính xác** (không wildcard), và video nằm trên CDN có tên riêng, nên làm 2 nhịp:
+  1. Thêm trang chính (vd `vt.tiktok.com`, `www.tiktok.com`) → chạy lại; trang đọc được nhưng tải file lỗi 403.
+  2. Xem host CDN thật: `yt-dlp -J <link>` → lấy hostname trong `formats[].url` (TikTok VN hay ra `v16-webapp-prime.us.tiktok.com`, `v19-webapp-prime.us.tiktok.com`, `v19.tiktokcdn-us.com`) → thêm đúng các host đó → chạy lại.
+  Mỗi lần thêm là một thẻ người dùng phải duyệt; nói trước một câu lý do. Nếu người dùng không muốn mở mạng: tải video về điện thoại → up Google Drive (chia sẻ "bất kỳ ai có link") → gửi link Drive. Không tự bịa phân tích khi chưa có video.
+- TikTok tách tiếng ra host riêng (`v16m.tiktokcdn-us.com`); nếu host đó bị chặn, script tự lấy video 1080p (không tiếng) + tiếng từ bản 540p ghép sẵn rồi trộn lại — kiểm `ffprobe` thấy có cả `video` và `audio`.
 - Video ngang 16:9 vẫn học được (proxy có viền đen) nhưng ghi chú vào đặc tả là bố cục khác.
 
 ## Bước 2 — Đo tự động
@@ -33,7 +37,7 @@ python3 -I scripts/style/analyze_reference.py reference/<id>/refNN_proxy.mp4 sty
 ```
 Ra `analysis.json` (điểm cắt/phút, shot trung vị, thời điểm sự kiện chữ, mật độ chữ theo dải dọc, bảng màu, màu nhấn, nháy sáng, onset âm thanh, tỉ lệ SFX trùng điểm cắt) + `contact_sheet.jpg` + `keyframes/`.
 
-Phiên âm mẫu (whisper, như quy trình chuẩn) để biết **chữ trên màn hình ứng với lời nói nào** — đây là phần "tư duy nhấn mạnh" của kênh (họ chèn chữ ở con số? địa danh? câu hỏi?).
+Phiên âm mẫu bằng `node scripts/pipeline/transcribe.mjs <đường-dẫn-tuyệt-đối-video> <thư-mục-tuyệt-đối>` (đường dẫn tương đối làm whisper.cpp lỗi tham số; nếu chưa có model và Node tải lỗi `ENOTFOUND`, tải bằng `curl -L` từ `huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo.bin` vào `whisper.cpp/`). Chạy nền vì ~4 phút audio mất vài phút CPU. Mục đích: biết **chữ trên màn hình ứng với lời nói nào** — đây là phần "tư duy nhấn mạnh" của kênh (họ chèn chữ ở con số? địa danh? câu hỏi?).
 
 ## Bước 3 — Nhìn kỹ và đo animation
 Đọc contact sheet và từng keyframe (Read ảnh). Liệt kê **các loại thành phần đồ hoạ** lặp lại (chữ khoá, thẻ câu hỏi, số lớn, bản đồ, PiP, icon, khung giá, CTA, watermark, thanh tiến trình…). Thường 4–8 loại.
@@ -43,6 +47,11 @@ Mỗi loại, cắt dải khung dày quanh lúc nó xuất hiện để thấy c
 python3 -I scripts/style/strip.py reference/<id>/refNN_proxy.mp4 <t> styles/<id>/analysis/strips/<ten>_<t>.jpg --crop 0.5:0.8
 ```
 Từ dải khung suy ra: thời lượng vào (số khung đến khi ổn định), kiểu vào (pop/trượt/gõ từng ký tự/mask), có overshoot không, thoát thế nào, giữ bao lâu.
+
+Kiểm SFX của mẫu: `python3 -I scripts/style/hf_peaks.py <proxy> <các mốc flash/text_events>` — mốc nào > +12 dB là có SFX rõ; dòng "nền" cho biết có nhạc nền suốt video không.
+
+`text_events` tự động cũng bắt cả logo kênh xoay/nhấp nháy — loại các mốc đó (nhìn strip), và không tái tạo logo.
+Khi trích nhiều khung bằng ffmpeg trong vòng `while read`, thêm `-nostdin` (nếu không ffmpeg nuốt stdin, chỉ chạy dòng đầu).
 
 Đo màu bằng pixel (đọc giá trị trong vùng chữ bằng ffmpeg/numpy), không đoán bằng mắt. Font: so dáng chữ với các font đã cài (`package.json` → `@fontsource/*`) và ghi là ước đoán.
 
@@ -63,7 +72,7 @@ Tạo `src/styles/<camelId>/Verify.tsx` (đăng ký trong `src/Root.tsx`) tái h
 ```bash
 python3 -I scripts/style/compare.py reference/<id>/ref01_proxy.mp4 out/<id>-verify.mp4 styles/<id>/analysis/verify/compare_round1.jpg 6.7:1.0 12.8:4.0 ...
 ```
-Xem ảnh so sánh, ghi các sai khác (vị trí, cỡ, màu, độ dày bóng) rồi sửa; thường 2 vòng là đủ. Lưu ảnh mỗi vòng (`compare_roundN.jpg`) — gửi vòng cuối cho người dùng xem.
+Xem ảnh so sánh, ghi các sai khác (vị trí, cỡ, màu, độ dày bóng) rồi sửa. Lỗi hay gặp ở vòng 1: chữ chính nhỏ hơn mẫu 15–20 %, dòng dẫn quá nhỏ, độ đậm thấp hơn một bậc — so kỹ chiều cao chữ trong ảnh. Kiểm SFX bản dựng: `hf_peaks.py out/<verify>.mp4 <các mốc cue>`; thường 2 vòng là đủ. Lưu ảnh mỗi vòng (`compare_roundN.jpg`) — gửi vòng cuối cho người dùng xem.
 
 ## Bước 7 — Đóng gói skill mới
 Viết `.claude/skills/mau-<id>/SKILL.md` theo khuôn `mau-hong-dang`: frontmatter (name, description "dựng kiểu <tên>…"), Nguyên tắc phong cách (đã xác minh), Cách dùng (components, composition, lệnh render), Quy tắc khi dựng, trỏ tới `style-spec.md` (copy sang `references/` của skill).

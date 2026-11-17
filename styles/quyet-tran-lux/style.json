@@ -1,0 +1,28 @@
+{
+  "id": "quyet-tran-lux",
+  "name": "Mẫu Quyết Trần Lux (BĐS cao cấp điện ảnh)",
+  "status": "calibrating",
+  "description": "Học từ 2 video TikTok (reference/quyet-tran-lux, không lên Git). Chữ trắng Montserrat nghiêng mảnh+đậm, mờ-nhòe-trồi lên, phụ đề nhỏ kiểu điện ảnh, nháy trắng + SFX, trang ghép ảnh nền xám tối. Xem .claude/skills/mau-quyet-tran-lux.",
+  "theme": {
+    "fontHeadline": "geo",
+    "fontCaption": "body",
+    "text": "#F8F9FD",
+    "accent": "#E9B24C",
+    "accentText": "#111214",
+    "extrude": "#6b4a33",
+    "stroke": "#000000",
+    "shadow": "rgba(0,0,0,0.55)",
+    "neon": "#FFFAF0"
+  },
+  "captions": { "enabled": true, "uppercase": false, "combineMs": 1400 },
+  "titles": {
+    "effects": ["slideMask", "typewriter"],
+    "hookEffect": "slideMask",
+    "maxPerMinute": 4,
+    "minGapMs": 6000,
+    "keywords": ["căn", "ha", "m²", "tỷ", "golf", "biển", "hồ bơi", "trần cao", "beachfront", "villa"]
+  },
+  "pacing": { "cutSilenceMs": 500, "padMs": 150, "jumpZoom": 1.0 },
+  "sfx": { "cutWhoosh": true, "volume": 0.7, "musicBed": "music/bed-ambient.wav", "musicVolume": 0.18 },
+  "grade": { "contrast": 1.06, "saturate": 1.05, "brightness": 1.0, "vignette": 0.28 }
+}

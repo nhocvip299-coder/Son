@@ -52,6 +52,24 @@ def fetch(url, dest_stem):
     r = sh(["yt-dlp", "--no-playlist", "-f", "bv*[height<=1920]+ba/b", "--merge-output-format", "mp4",
             "--write-info-json", "-o", tmpl, url])
     if r.returncode:
+        # Du phong: host audio rieng bi chan (vd TikTok mp3 o v16m.tiktokcdn-us.com) ->
+        # lay video tot nhat (khong tieng) + am thanh tu ban ghep san (co tieng) roi tron lai.
+        v = sh(["yt-dlp", "--no-playlist", "-f", "bv*[height<=1920]", "--write-info-json", "-o", str(dest_stem) + "_v.%(ext)s", url])
+        a = sh(["yt-dlp", "--no-playlist", "-f", "b[acodec!=none][vcodec!=none]/b[acodec!=none]", "-o", str(dest_stem) + "_a.%(ext)s", url])
+        if not v.returncode and not a.returncode:
+            vf = next(dest_stem.parent.glob(dest_stem.name + "_v.*[!n]"))
+            af = next(dest_stem.parent.glob(dest_stem.name + "_a.*"))
+            out = dest_stem.with_suffix(".mp4")
+            m = sh(["ffmpeg", "-v", "error", "-y", "-i", str(vf), "-i", str(af), "-map", "0:v:0", "-map", "1:a:0", "-c", "copy",
+                    "-shortest", str(out)])
+            if not m.returncode:
+                vf.unlink(); af.unlink()
+                ip = Path(str(dest_stem) + "_v.info.json")
+                ip.rename(str(dest_stem) + ".info.json") if ip.exists() else None
+                r = m
+        for p in list(dest_stem.parent.glob(dest_stem.name + "*.part")) + list(dest_stem.parent.glob(dest_stem.name + ".f*")):
+            p.unlink()
+    if r.returncode:
         err = r.stderr[-800:]
         if "403" in err or "CONNECT" in err or "Unable to download webpage" in err:
             sys.exit("MANG_BI_CHAN: moi truong khong cho truy cap trang nay.\n"

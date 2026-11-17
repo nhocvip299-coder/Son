@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "title": "",
+  "style_skill": "gelexia-food-review",
+  "style_reference_library_id": "libfile_a475e3731a648191967b2d9bf9aec164",
+  "typography_reference_library_id": "libfile_80893891912481919282acb3577e18c1",
+  "inputs": [],
+  "derived": [],
+  "outputs": ["output/final.mp4"],
+  "shots": [],
+  "audio": {"voice_speed": 1, "mute_source_when_voice_present": true},
+  "render": {"composition": "GelexiaOverlay", "settings_file": "public/project.json"},
+  "decisions": []
+}

@@ -1,10 +1,10 @@
 {
-  "id": "gelexia-food-review", "name": "Gelexia Food Review", "status": "placeholder",
-  "description": "KHUNG CHỜ — chưa học từ video mẫu. Mặc định: màu ấm, nhấn món ăn/giá tiền, nhịp nhanh.",
-  "theme": {"fontHeadline":"impact","fontCaption":"body","text":"#FFFFFF","accent":"#FF6B2C","accentText":"#FFFFFF","extrude":"#8A2B06","stroke":"#2B0F00","shadow":"rgba(0,0,0,0.6)","neon":"#FFB703"},
-  "captions": {"enabled": true, "uppercase": false, "combineMs": 1000},
-  "titles": {"effects":["popBounce","typewriter","slideMask"], "hookEffect":"zoomPunch", "maxPerMinute": 10, "minGapMs": 3500, "keywords": ["ngon","giá","k","nghìn","đồng","vị","giòn","béo","cay","ngọt","quán","món"]},
-  "pacing": {"cutSilenceMs": 400, "padMs": 110, "jumpZoom": 1.12},
-  "sfx": {"cutWhoosh": true, "volume": 0.85, "musicVolume": 0.14},
-  "grade": {"contrast": 1.08, "saturate": 1.2, "brightness": 1.02, "vignette": 0.3}
+  "id": "gelexia-food-review", "name": "Gelexia Food Review (Mõ Làng Review)", "status": "calibrating",
+  "description": "Đã học từ skill gelexia-food-review: Phudu 800 vàng ấm #ffdd66/trắng, viền tối mảnh + cạnh 3D ngắn, nền xám mờ bo góc, phụ đề highlight từng từ, 4 vai trò intro/route/food/cta. Dựng bằng composition GelexiaEdit (src/styles/gelexia), KHÔNG dùng theme chung này.",
+  "theme": {"fontHeadline":"impact","fontCaption":"body","text":"#FFFFFF","accent":"#FFDD66","accentText":"#FFFFFF","extrude":"#2D2B21","stroke":"#181914","shadow":"rgba(0,0,0,0.72)","neon":"#FFDD66"},
+  "captions": {"enabled": true, "uppercase": true, "combineMs": 1000},
+  "titles": {"effects":["popBounce"], "hookEffect":"popBounce", "maxPerMinute": 8, "minGapMs": 3500, "keywords": ["ngon","giá","k","nghìn","đồng","vị","giòn","béo","cay","ngọt","quán","món"]},
+  "pacing": {"cutSilenceMs": 400, "padMs": 110, "jumpZoom": 1.0},
+  "sfx": {"cutWhoosh": false, "volume": 0.85, "musicVolume": 0.14},
+  "grade": {"contrast": 1.0, "saturate": 1.0, "brightness": 1.0, "vignette": 0}
 }

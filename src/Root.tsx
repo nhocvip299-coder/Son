@@ -10,6 +10,8 @@ import { CapcutPageCompare } from "./styles/textPresets/capcut/CapcutPageCompare
 import { CapcutSamples } from "./styles/textPresets/capcut/CapcutSamples";
 import { CapcutEdit, ccPlanDurationMs, type CcEditPlan } from "./styles/textPresets/capcut/CapcutEdit";
 import { HongDangEdit, hdPlanDurationMs, type HdPlan } from "./styles/hongDang/HongDangEdit";
+import { GelexiaOverlay, type GelexiaProject } from "./styles/gelexia/GelexiaOverlay";
+import gelexiaDemo from "./styles/gelexia/demo-project.json";
 import { EMPTY_PLAN, planDurationMs, type EditPlan } from "./compositions/plan";
 
 export const RemotionRoot: React.FC = () => {
@@ -42,6 +44,21 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="TextPresetsGallery40" component={TextPresetsGallery40} durationInFrames={384} fps={30} width={1080} height={1920} />
       <Composition id="TextPresetsCatalog40" component={TextPresetsCatalog40} durationInFrames={2160} fps={30} width={1080} height={1920} />
       <Composition id="TextPresetsGallery" component={TextPresetsGallery} durationInFrames={240} fps={30} width={1080} height={1920} />
+      <Composition
+        id="GelexiaEdit"
+        component={GelexiaOverlay}
+        durationInFrames={60}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{ project: gelexiaDemo as GelexiaProject }}
+        calculateMetadata={({ props }) => ({
+          fps: props.project.fps,
+          width: props.project.width,
+          height: props.project.height,
+          durationInFrames: Math.ceil(props.project.durationSeconds * props.project.fps),
+        })}
+      />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

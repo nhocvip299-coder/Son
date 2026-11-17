@@ -1,0 +1,110 @@
+{
+ "note": "Bản cắt ghép review Hằng Kim Chi. src = file trong work/hang-kim-chi/raw (Drive folder 1YQ5plOgOaf01mzEbMdYI2W9QP-kTvQX1). Âm gốc tắt (dùng giọng ElevenLabs).",
+ "shots": [
+  {
+   "id": 1,
+   "src": "IMG_0043",
+   "in": 2.0,
+   "out": 5.5,
+   "scene": "Mặt tiền, biển HẰNG KIM CHI sáng đèn"
+  },
+  {
+   "id": 2,
+   "src": "IMG_0030",
+   "in": 0.0,
+   "out": 3.0,
+   "scene": "Không gian trong quán, ống hút khói từng bàn"
+  },
+  {
+   "id": 3,
+   "src": "IMG_0029",
+   "in": 0.0,
+   "out": 3.0,
+   "scene": "Menu giấy rất dài"
+  },
+  {
+   "id": 4,
+   "src": "IMG_0031",
+   "in": 0.0,
+   "out": 5.0,
+   "scene": "Bàn bày tôm, hàu, chân gà, thịt ướp"
+  },
+  {
+   "id": 5,
+   "src": "IMG_0032",
+   "in": 7.0,
+   "out": 10.5,
+   "scene": "Cận đĩa tôm sốt"
+  },
+  {
+   "id": 6,
+   "src": "IMG_0033",
+   "in": 4.5,
+   "out": 8.5,
+   "scene": "Cận hàu mỡ hành"
+  },
+  {
+   "id": 7,
+   "src": "IMG_0033",
+   "in": 0.0,
+   "out": 3.0,
+   "scene": "Cận chân gà sốt"
+  },
+  {
+   "id": 8,
+   "src": "IMG_0031",
+   "in": 16.0,
+   "out": 19.5,
+   "scene": "Thịt ướp đỏ trên lá xà lách"
+  },
+  {
+   "id": 9,
+   "src": "IMG_0034",
+   "in": 3.0,
+   "out": 8.0,
+   "scene": "Nướng trên vỉ: thịt, tôm, hàu; chén sốt"
+  },
+  {
+   "id": 10,
+   "src": "IMG_0040",
+   "in": 0.5,
+   "out": 3.5,
+   "scene": "Rót coca vào cốc đá, phía sau vỉ nướng"
+  },
+  {
+   "id": 11,
+   "src": "IMG_0036",
+   "in": 0.0,
+   "out": 5.0,
+   "scene": "Cơm trộn niêu đá, xắn lòng đỏ trứng"
+  },
+  {
+   "id": 12,
+   "src": "IMG_0036",
+   "in": 13.5,
+   "out": 16.0,
+   "scene": "Trộn đều cơm niêu"
+  },
+  {
+   "id": 13,
+   "src": "IMG_0037",
+   "in": 5.0,
+   "out": 8.0,
+   "scene": "Toàn cảnh bàn ăn đầy món"
+  },
+  {
+   "id": 14,
+   "src": "IMG_0044",
+   "in": 1.0,
+   "out": 4.5,
+   "scene": "Hóa đơn 604.000đ"
+  },
+  {
+   "id": 15,
+   "src": "IMG_0043",
+   "in": 6.0,
+   "out": 10.9,
+   "scene": "Lùi ra phố, biển quán — kết"
+  }
+ ]
+}

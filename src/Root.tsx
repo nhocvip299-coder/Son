@@ -11,6 +11,7 @@ import { CapcutSamples } from "./styles/textPresets/capcut/CapcutSamples";
 import { CapcutEdit, ccPlanDurationMs, type CcEditPlan } from "./styles/textPresets/capcut/CapcutEdit";
 import { HongDangEdit, hdPlanDurationMs, type HdPlan } from "./styles/hongDang/HongDangEdit";
 import { GelexiaOverlay, type GelexiaProject } from "./styles/gelexia/GelexiaOverlay";
+import { GelexiaCover } from "./styles/gelexia/Cover";
 import gelexiaDemo from "./styles/gelexia/demo-project.json";
 import { EMPTY_PLAN, planDurationMs, type EditPlan } from "./compositions/plan";
 
@@ -58,6 +59,15 @@ export const RemotionRoot: React.FC = () => {
           height: props.project.height,
           durationInFrames: Math.ceil(props.project.durationSeconds * props.project.fps),
         })}
+      />
+      <Composition
+        id="GelexiaCover"
+        component={GelexiaCover}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{ images: ["inputs/hang-kim-chi/cover/vi.jpg"], kicker: "REVIEW ĐỒ NƯỚNG HÀN", highlight: "604K", title: "CẢ BÀN\nCÓ ĐÁNG?", name: "HẰNG KIM CHI", address: "Khu 4,3ha · TT Văn Giang" }}
       />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition

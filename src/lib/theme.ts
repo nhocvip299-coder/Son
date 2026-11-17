@@ -55,7 +55,14 @@ export type SfxName =
   | "real/qtl-pop-whoosh-hot"
   | "real/qtl-transition"
   | "real/qtl-swoosh"
-  | "real/qtl-impact";
+  | "real/qtl-impact"
+  | "real/lux-ting"
+  | "real/lux-ding"
+  | "real/lux-pop"
+  | "real/lux-shutter"
+  | "real/lux-tick"
+  | "real/lux-whip"
+  | "real/lux-boom";
 
 export type TypoProps = {
   text: string;

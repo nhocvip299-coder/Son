@@ -8,7 +8,7 @@
  */
 import { Easing, interpolate } from "remotion";
 
-export type KfIn = "riseUp" | "fromLeft" | "fromRight" | "dropDown" | "scaleIn" | "zoomOut" | "swingIn" | "fadeIn" | "blurIn";
+export type KfIn = "riseUp" | "fromLeft" | "fromRight" | "dropDown" | "scaleIn" | "zoomOut" | "swingIn" | "fadeIn" | "blurIn" | "zoomSettle";
 export type KfOut = "blurUp" | "toLeft" | "toRight" | "scaleOut" | "fadeDown" | "dropOut" | "cut";
 export type KfState = { tx: number; ty: number; rot: number; sx: number; sy: number; opacity: number; blur: number; hidden: boolean };
 
@@ -18,7 +18,7 @@ const outQuint = Easing.bezier(0.22, 1, 0.36, 1);
 const outBack = Easing.bezier(0.34, 1.35, 0.64, 1); // vuot nhe 3-4% roi ve
 const inCubic = Easing.bezier(0.55, 0, 0.75, 0.2); // tang toc mem khi ra
 
-export const IN_DUR: Record<KfIn, number> = { riseUp: 0.45, fromLeft: 0.42, fromRight: 0.42, dropDown: 0.45, scaleIn: 0.4, zoomOut: 0.5, swingIn: 0.5, fadeIn: 0.3, blurIn: 0.32 };
+export const IN_DUR: Record<KfIn, number> = { riseUp: 0.45, fromLeft: 0.42, fromRight: 0.42, dropDown: 0.45, scaleIn: 0.4, zoomOut: 0.5, swingIn: 0.5, fadeIn: 0.3, blurIn: 0.32, zoomSettle: 0.4 };
 // v8: keyframe RA ro rang hon (nguoi dung: "chua co hieu ung keyframe chu khi ra")
 export const OUT_DUR: Record<KfOut, number> = { blurUp: 0.42, toLeft: 0.4, toRight: 0.4, scaleOut: 0.4, fadeDown: 0.4, dropOut: 0.4, cut: 0.04 };
 
@@ -52,6 +52,8 @@ export const kf = (kin: KfIn, kout: KfOut, t: number, at: number, end: number, _
       s.ty = q * 14; s.blur = vel * 6; break;
     case "blurIn": // [XM ref05 "Đường kênh" 67.15s] lay net: nhoe -> ro, thu nhe 8%
       s.sx = s.sy = 1 + q * 0.08; s.blur = q * 16; break;
+    case "zoomSettle": // [ref08 "THƯỚC ĐO" 21.0s, ref07 "Đầu tiên" 19.4s] to + nhoe + lech duoi -> dat xuong dung cho
+      s.sx = s.sy = 1 + q * 0.3; s.ty = q * 26; s.blur = q * 14; break;
   }
   // ---- RA
   if (t > end) {

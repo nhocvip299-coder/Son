@@ -21,6 +21,14 @@ SFX = {
     "qtl-transition": (3062, 0.0, 0.45, "Fairy sparkle whoosh — chuyen canh"),
     "qtl-swoosh": (1478, 0.0, 0.35, "Quick swoosh accent — chu ra/nho"),
     "qtl-impact": (1287, 0.45, 0.6, "Cool impact — tham tram ngan"),
+    # bds-luxury (3 style moi tu ref07-09). ss=None -> tu do diem bat dau that (bo im lang dau)
+    "lux-ting": (939, None, 0.45, "Christmas magic bell hit — tieu de bac ha (ref08 'ting')"),
+    "lux-ding": (586, None, 0.4, "Attention bell ding — dong 2 / so lieu"),
+    "lux-pop": (2364, None, 0.3, "Hard pop click — card anh bat len"),
+    "lux-shutter": (1432, None, 0.35, "Camera digital shutter — dong bang khung / anh tinh"),
+    "lux-tick": (1125, None, 0.12, "Typewriter soft click — so chay / go chu"),
+    "lux-whip": (869, 1.05, 0.5, "Flying fast swoosh (doan dinh, sang) — chuyen canh lia may"),
+    "lux-boom": (2650, None, 0.9, "Movie whoosh impact — tieu de dien anh letterbox"),
 }
 items = json.load(open(Path(__file__).with_name("mixkit_items.json"))) if Path(__file__).with_name("mixkit_items.json").exists() else {}
 hits = {}
@@ -29,6 +37,11 @@ for name, (mid, ss, dur, note) in SFX.items():
     tmp = OUT / f"_{mid}.mp3"
     if not tmp.exists():
         subprocess.run(["curl", "-sSL", "-m", "60", "-o", str(tmp), url], check=True)
+    if ss is None:  # diem bat dau that: lan dau vuot -30 dB so voi dinh
+        import numpy as np
+        raw = np.frombuffer(subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", str(tmp), "-ac", "1", "-ar", "16000", "-f", "f32le", "-"], capture_output=True).stdout, np.float32)
+        ev = np.convolve(raw ** 2, np.ones(160) / 160, "same")
+        ss = max(0.0, float(np.argmax(ev > ev.max() * 1e-3)) / 16000 - 0.01)
     # cat tu diem bat dau that (bo im lang dau), chuan hoa dinh -1 dBFS, fade out 60ms
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", str(tmp), "-af",
                     f"atrim=start={ss}:duration={dur},afade=t=out:st={max(0, dur - 0.12)}:d=0.12,loudnorm=I=-12:TP=-0.5:LRA=11,aresample=48000",

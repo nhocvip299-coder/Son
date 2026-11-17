@@ -1,0 +1,203 @@
+{
+ "source": "reference/quyet-tran-lux/ref07_proxy.mp4",
+ "size": 41781392,
+ "duration": 79.9,
+ "video": {
+  "codec": "h264",
+  "w": 1080,
+  "h": 1920,
+  "fps": "30/1"
+ },
+ "cuts": {
+  "count": 17,
+  "times": [
+   2.9,
+   6.6,
+   10.7,
+   23.0,
+   26.6,
+   34.8,
+   39.7,
+   41.0,
+   42.4,
+   44.9,
+   47.0,
+   53.0,
+   54.6,
+   56.0,
+   59.0,
+   61.0,
+   73.9
+  ],
+  "avg_shot_s": 4.44,
+  "median_shot_s": 3.3,
+  "per_min": 12.8
+ },
+ "text_events": {
+  "count": 9,
+  "per_min": 6.8,
+  "times": [
+   2.5,
+   7.2,
+   11.0,
+   30.9,
+   45.1,
+   53.2,
+   58.3,
+   58.5,
+   58.7
+  ]
+ },
+ "edge_density_by_band_top_to_bottom": [
+  0.0798,
+  0.1268,
+  0.1441,
+  0.1306,
+  0.1475,
+  0.1475,
+  0.1423,
+  0.194,
+  0.0706,
+  0.0428
+ ],
+ "palette": [
+  {
+   "hex": "#a79e98",
+   "share": 0.251
+  },
+  {
+   "hex": "#797269",
+   "share": 0.192
+  },
+  {
+   "hex": "#2f4251",
+   "share": 0.182
+  },
+  {
+   "hex": "#c6c8cb",
+   "share": 0.166
+  },
+  {
+   "hex": "#1f1b19",
+   "share": 0.109
+  },
+  {
+   "hex": "#3973af",
+   "share": 0.1
+  }
+ ],
+ "accent_colors": [
+  "#1a6ca8",
+  "#2870ab",
+  "#1a659b",
+  "#3251b1",
+  "#326bcb"
+ ],
+ "brightness_flashes": [
+  2.9
+ ],
+ "audio": {
+  "onsets_count": 31,
+  "onsets_per_min": 23.3,
+  "cut_onset_sync_ratio": 0.24,
+  "onsets": [
+   0.4,
+   3.56,
+   4.23,
+   6.61,
+   8.69,
+   9.48,
+   10.16,
+   10.72,
+   12.29,
+   16.18,
+   16.95,
+   18.72,
+   28.42,
+   31.54,
+   35.63,
+   41.73,
+   44.01,
+   46.73,
+   54.05,
+   54.99,
+   59.21,
+   60.91,
+   64.18,
+   64.84,
+   67.19,
+   69.13,
+   73.04,
+   73.34,
+   73.87,
+   76.39,
+   77.71
+  ]
+ },
+ "keyframes": [
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k00_003.30s.jpg",
+   "t": 3.3
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k01_007.00s.jpg",
+   "t": 7.0
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k02_011.10s.jpg",
+   "t": 11.1
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k03_023.40s.jpg",
+   "t": 23.4
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k04_027.00s.jpg",
+   "t": 27.0
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k05_035.20s.jpg",
+   "t": 35.2
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k06_040.10s.jpg",
+   "t": 40.1
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k07_041.40s.jpg",
+   "t": 41.4
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k08_042.80s.jpg",
+   "t": 42.8
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k09_045.30s.jpg",
+   "t": 45.3
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k10_047.40s.jpg",
+   "t": 47.4
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k11_055.00s.jpg",
+   "t": 55.0
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k12_056.40s.jpg",
+   "t": 56.4
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k13_059.40s.jpg",
+   "t": 59.4
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k14_061.40s.jpg",
+   "t": 61.4
+  },
+  {
+   "file": "styles/quyet-tran-lux/analysis/ref07/keyframes/k15_074.30s.jpg",
+   "t": 74.3
+  }
+ ]
+}

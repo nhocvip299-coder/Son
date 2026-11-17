@@ -1,0 +1,5602 @@
+[
+ {
+  "start": 0.25,
+  "end": 0.5,
+  "text": "vượng\"",
+  "y": 0.0,
+  "y2": 0.164,
+  "x": 0.0,
+  "maxh": 315,
+  "nframes": 1
+ },
+ {
+  "start": 1.0,
+  "end": 1.25,
+  "text": "ột TLA",
+  "y": 0.558,
+  "y2": 0.624,
+  "x": 0.263,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 1.5,
+  "end": 1.75,
+  "text": "ột ẠT LA nai",
+  "y": 0.558,
+  "y2": 0.621,
+  "x": 0.263,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 1.75,
+  "end": 2.25,
+  "text": "ột 1L na HA",
+  "y": 0.558,
+  "y2": 0.676,
+  "x": 0.263,
+  "maxh": 80,
+  "nframes": 2
+ },
+ {
+  "start": 2.75,
+  "end": 3.0,
+  "text": "Y7",
+  "y": 0.947,
+  "y2": 0.964,
+  "x": 0.072,
+  "maxh": 33,
+  "nframes": 1
+ },
+ {
+  "start": 3.0,
+  "end": 4.5,
+  "text": "Khu vực giao giữ giữa hQ#. HÀNG MA lái số vò xà",
+  "y": 0.2,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 96,
+  "nframes": 6
+ },
+ {
+  "start": 4.5,
+  "end": 5.0,
+  "text": "xá đã lâu là ca",
+  "y": 0.379,
+  "y2": 0.622,
+  "x": 0.085,
+  "maxh": 128,
+  "nframes": 2
+ },
+ {
+  "start": 5.0,
+  "end": 5.5,
+  "text": "trong nhữi nhữn",
+  "y": 0.596,
+  "y2": 0.617,
+  "x": 0.435,
+  "maxh": 40,
+  "nframes": 2
+ },
+ {
+  "start": 6.0,
+  "end": 6.25,
+  "text": "xả",
+  "y": 0.641,
+  "y2": 0.721,
+  "x": 0.901,
+  "maxh": 153,
+  "nframes": 1
+ },
+ {
+  "start": 6.25,
+  "end": 6.5,
+  "text": "ÀU võ CV",
+  "y": 0.208,
+  "y2": 0.334,
+  "x": 0.275,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 6.5,
+  "end": 6.75,
+  "text": "SỐ CÈ vô",
+  "y": 0.251,
+  "y2": 0.32,
+  "x": 0.272,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 6.75,
+  "end": 7.0,
+  "text": "cÙNG VÕ",
+  "y": 0.263,
+  "y2": 0.319,
+  "x": 0.272,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 7.0,
+  "end": 7.25,
+  "text": "thònh",
+  "y": 0.596,
+  "y2": 0.612,
+  "x": 0.449,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 7.25,
+  "end": 7.5,
+  "text": "ÂU",
+  "y": 0.199,
+  "y2": 0.234,
+  "x": 0.531,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 7.5,
+  "end": 7.75,
+  "text": "Ội ủa",
+  "y": 0.227,
+  "y2": 0.613,
+  "x": 0.399,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 8.0,
+  "end": 8.25,
+  "text": "đến mãi",
+  "y": 0.602,
+  "y2": 0.618,
+  "x": 0.26,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 8.25,
+  "end": 8.5,
+  "text": "mất",
+  "y": 0.598,
+  "y2": 0.618,
+  "x": 0.26,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 8.75,
+  "end": 9.0,
+  "text": "1OPH",
+  "y": 0.589,
+  "y2": 0.64,
+  "x": 0.514,
+  "maxh": 98,
+  "nframes": 1
+ },
+ {
+  "start": 9.0,
+  "end": 9.25,
+  "text": "PHÚ 1O en",
+  "y": 0.58,
+  "y2": 0.632,
+  "x": 0.46,
+  "maxh": 100,
+  "nframes": 1
+ },
+ {
+  "start": 9.25,
+  "end": 9.5,
+  "text": "đến để vị",
+  "y": 0.602,
+  "y2": 0.677,
+  "x": 0.439,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 9.5,
+  "end": 10.0,
+  "text": "PH hỉ mất chưa đến để KIẾM. HOÀN KIÊM",
+  "y": 0.589,
+  "y2": 0.739,
+  "x": 0.221,
+  "maxh": 166,
+  "nframes": 2
+ },
+ {
+  "start": 10.0,
+  "end": 10.25,
+  "text": "mm",
+  "y": 0.537,
+  "y2": 0.55,
+  "x": 0.831,
+  "maxh": 24,
+  "nframes": 1
+ },
+ {
+  "start": 10.25,
+  "end": 10.5,
+  "text": "kí M4 lÌ fFà KHI! lÈ:§",
+  "y": 0.3,
+  "y2": 0.974,
+  "x": 0.235,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 10.5,
+  "end": 10.75,
+  "text": "kí lý: Rậ",
+  "y": 0.302,
+  "y2": 1.0,
+  "x": 0.146,
+  "maxh": 141,
+  "nframes": 1
+ },
+ {
+  "start": 10.75,
+  "end": 11.0,
+  "text": "„mP W1",
+  "y": 0.367,
+  "y2": 0.483,
+  "x": 0.269,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 11.0,
+  "end": 11.25,
+  "text": "kí M4 từ kí ng LÌ",
+  "y": 0.303,
+  "y2": 0.911,
+  "x": 0.274,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 11.25,
+  "end": 11.5,
+  "text": "Mái tụ L1 tý kị ng hả NI. VI",
+  "y": 0.318,
+  "y2": 0.936,
+  "x": 0.215,
+  "maxh": 148,
+  "nframes": 1
+ },
+ {
+  "start": 11.5,
+  "end": 11.75,
+  "text": "kẹt lh thị ng Rá",
+  "y": 0.305,
+  "y2": 0.918,
+  "x": 0.079,
+  "maxh": 108,
+  "nframes": 1
+ },
+ {
+  "start": 11.75,
+  "end": 12.0,
+  "text": "lÌ ki ng vá",
+  "y": 0.596,
+  "y2": 0.766,
+  "x": 0.151,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 12.0,
+  "end": 12.25,
+  "text": "th kín Hà tụ lì lì gu án,oao t3",
+  "y": 0.307,
+  "y2": 0.676,
+  "x": 0.207,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 12.25,
+  "end": 12.5,
+  "text": "tự lh lì kj ỦI nguồn án,oao mm",
+  "y": 0.383,
+  "y2": 0.79,
+  "x": 0.05,
+  "maxh": 105,
+  "nframes": 1
+ },
+ {
+  "start": 12.5,
+  "end": 12.75,
+  "text": "(41 \"N1 IÚ AI lìn AI Ha guồn: tạ“ hộ kị",
+  "y": 0.349,
+  "y2": 0.977,
+  "x": 0.019,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 12.75,
+  "end": 13.0,
+  "text": "TH lù gì li cqo nguồn: ón lạ",
+  "y": 0.345,
+  "y2": 0.747,
+  "x": 0.0,
+  "maxh": 93,
+  "nframes": 1
+ },
+ {
+  "start": 13.0,
+  "end": 13.25,
+  "text": "hịt thuy, tự 19 nguồ ủnt cao là YY,",
+  "y": 0.316,
+  "y2": 0.788,
+  "x": 0.0,
+  "maxh": 102,
+  "nframes": 1
+ },
+ {
+  "start": 13.25,
+  "end": 13.5,
+  "text": "l4 lÌ lì: lũ lốp đây 2ƒ",
+  "y": 0.404,
+  "y2": 0.94,
+  "x": 0.044,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 13.5,
+  "end": 13.75,
+  "text": "tị LÌ VU 3ì tự tự gã \\hủ đây TÀI HIẾU",
+  "y": 0.173,
+  "y2": 0.71,
+  "x": 0.061,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 13.75,
+  "end": 14.0,
+  "text": "Tụ tị 2/4) Mi gã ốp đây lý",
+  "y": 0.428,
+  "y2": 0.83,
+  "x": 0.0,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 14.0,
+  "end": 14.25,
+  "text": "sĩ J1! gạ hữ ấp đây lạ",
+  "y": 0.337,
+  "y2": 1.0,
+  "x": 0.25,
+  "maxh": 129,
+  "nframes": 1
+ },
+ {
+  "start": 14.25,
+  "end": 14.5,
+  "text": "bề sự số lề lề lề „8Ñ 7“Ñ lề Enö TÀI L1 #25 “2ã -568 t8 z8",
+  "y": 0.234,
+  "y2": 0.823,
+  "x": 0.175,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 14.5,
+  "end": 14.75,
+  "text": "xế ca 6i lề r1] Nà “58” H4 LHh 78 r1: L8 12 L1 1⁄9",
+  "y": 0.426,
+  "y2": 0.798,
+  "x": 0.175,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 14.75,
+  "end": 15.0,
+  "text": "Pù xà sơ àj là đỔ 1ˆ Z5, HỆ HH L1 12 đz/ x2",
+  "y": 0.435,
+  "y2": 0.983,
+  "x": 0.087,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 15.0,
+  "end": 15.25,
+  "text": "„zlÍ ày f8 ZÍ 1ˆ HP là. 1ˆ H1 r14 Z2 139 H2 r1 r1 r2 1P H2",
+  "y": 0.472,
+  "y2": 0.764,
+  "x": 0.2,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 15.25,
+  "end": 15.5,
+  "text": "là hề 628“ H1 717 11⁄1 H2 828 1⁄22 22 12 L1 244",
+  "y": 0.548,
+  "y2": 0.851,
+  "x": 0.197,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 15.5,
+  "end": 15.75,
+  "text": "pià 12 b2? lề Mà là nữ 12 “1.8 H1 là 12 t2 12 1242",
+  "y": 0.358,
+  "y2": 0.816,
+  "x": 0.21,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 15.75,
+  "end": 16.0,
+  "text": "Nề« sà Mà 1192 12 112 L1) LH z8 42 121222 t3 122 22",
+  "y": 0.52,
+  "y2": 0.823,
+  "x": 0.265,
+  "maxh": 44,
+  "nframes": 1
+ },
+ {
+  "start": 16.0,
+  "end": 16.25,
+  "text": "r7 5855 lại lí a9! N3 So Š`z HỆ lề T2 L1 VÀ 1⁄42 HP 111 Z8 H1 r7 1142 1⁄5 2⁄4 1112 H411 1⁄02 111 “24 Z5 L1 21 záP",
+  "y": 0.454,
+  "y2": 0.847,
+  "x": 0.09,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 16.25,
+  "end": 16.5,
+  "text": "xế KG r3 hồ lồ là r1 H7 H1 H2 H2 Z2 H2 12 L1 H7 Z1 12 Z8 11221411122 65712 +12 24” l1 11 T14 212 122 1⁄2 252",
+  "y": 0.402,
+  "y2": 0.827,
+  "x": 0.14,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 16.5,
+  "end": 16.75,
+  "text": "sử» kà- z5 z5 xà r3 8z1-E Mộ H1 HH1 [111 Z8, là« L1 1221121 là H7 z2 M4 L1 42 1421 LÝ L4 Z5“ 11⁄2 ⁄1⁄8 z1“",
+  "y": 0.246,
+  "y2": 0.863,
+  "x": 0.149,
+  "maxh": 44,
+  "nframes": 1
+ },
+ {
+  "start": 16.75,
+  "end": 17.0,
+  "text": "“xế KG Àc đ1 r2 r3 gi 1147: g55“ Hị H1 1912 1250 L8 1Ì 112 r1 l1 12 LƑ 42 1112 12x12 Ø6",
+  "y": 0.351,
+  "y2": 0.881,
+  "x": 0.156,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 17.0,
+  "end": 17.25,
+  "text": "NỀ s8 là lhị 257/7 Z5 H27 NA 825 FT: 111122 Z12 141 H71 12 119 M4 H2 22212",
+  "y": 0.476,
+  "y2": 0.837,
+  "x": 0.214,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 17.25,
+  "end": 17.5,
+  "text": "sử xø he ZZ lồ H2 là HẠ H8 1ÿ 11% 212 21 122 1711) 71⁄0 H1 t4 4121",
+  "y": 0.254,
+  "y2": 0.836,
+  "x": 0.172,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 17.5,
+  "end": 17.75,
+  "text": "hé 6n) s5! L2 là Nì 12423 Mề H2 111141 111 71 14 122 L1 121 L1 H4 Hi 1.111 2100 “z8 Z2 yì V2",
+  "y": 0.338,
+  "y2": 0.963,
+  "x": 0.0,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 17.75,
+  "end": 18.0,
+  "text": "sử» cx NÀ và H1 2214 L1 th 587 H21) 92 42 T11 122 L1 421",
+  "y": 0.253,
+  "y2": 0.855,
+  "x": 0.081,
+  "maxh": 33,
+  "nframes": 1
+ },
+ {
+  "start": 18.0,
+  "end": 18.25,
+  "text": "sử» và IS vì tụ lề ZZ 12 và 11 H1 )cóff sặc NA H2 H2 HÀ 21 VÀ (17 4127 H21 H2 112 L7 112 111771171 vÀ 92 1119: 121111 21 1⁄2 Z2",
+  "y": 0.253,
+  "y2": 0.863,
+  "x": 0.089,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 18.25,
+  "end": 18.5,
+  "text": "tụ Hôn VÀ 4112 L3: 2/177 62125 1110 126 2111 15 21911 Z2 4114 s24",
+  "y": 0.434,
+  "y2": 0.873,
+  "x": 0.0,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 18.5,
+  "end": 18.75,
+  "text": "1Ÿ gìÌ NÀ lề H1 12 VÀ 62 Nà H111 17 114 LHM1 z128 LẦN L1 8/177 117 Nài 112 Nà",
+  "y": 0.373,
+  "y2": 0.84,
+  "x": 0.096,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 18.75,
+  "end": 19.0,
+  "text": "H1 Z8: ĐỀ H11? LúP VÀ H21 11 11 52; L2? 12177 Z1/ 1⁄7 7z.",
+  "y": 0.548,
+  "y2": 0.884,
+  "x": 0.124,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 19.0,
+  "end": 19.25,
+  "text": "x7» lÌ ng ZZ z4 117 sía ÀN, H2 và LH M1 142 6187125, z8 t7 111171 tì HAI L1 111! 212 17 VN yì 2⁄4",
+  "y": 0.248,
+  "y2": 0.902,
+  "x": 0.122,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 19.25,
+  "end": 19.5,
+  "text": "ZZ kề 124 lề H7 và tr 21 vÀ 1⁄2 NÌ 11124 Nà, 411 L1 4114 RN tý",
+  "y": 0.467,
+  "y2": 0.948,
+  "x": 0.111,
+  "maxh": 30,
+  "nframes": 1
+ },
+ {
+  "start": 19.5,
+  "end": 19.75,
+  "text": "vết LŠ zZ ly và F222 1N LM% Mà 117 LŸ 1⁄17 71⁄5 117 si H4 1111 t1 Nà Hỗ M1 SN",
+  "y": 0.31,
+  "y2": 0.97,
+  "x": 0.017,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 19.75,
+  "end": 20.0,
+  "text": "z2 1244 v2 L2 12 nể QỦ 26 H1 r2 NÌ 11111 LÝ 111 11 tải M1 H11) M4 41117 tý r?Z",
+  "y": 0.458,
+  "y2": 1.0,
+  "x": 0.199,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 20.0,
+  "end": 20.25,
+  "text": "zø 25 “lu 72 1242 NM Si r9 L12 T7 Nà 1111 M442 1110 219 111 1421111 l2 Nà LẦN",
+  "y": 0.454,
+  "y2": 0.798,
+  "x": 0.16,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 20.25,
+  "end": 20.5,
+  "text": "22 14 H1 he MS dần LỄ tr: 11 Nà 19 H12 HẬU A11 2/77 L1 (2/2 éNề tý",
+  "y": 0.401,
+  "y2": 0.936,
+  "x": 0.0,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 20.5,
+  "end": 20.75,
+  "text": "A5: cá Tự ZZ L2” ly dồn Z4 Mi L1 hề [219 l1 11 I1",
+  "y": 0.267,
+  "y2": 0.841,
+  "x": 0.0,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 20.75,
+  "end": 21.0,
+  "text": "Z2 t1 ZZ b3 và 11 lì chu 12 NI 107 Bài H211 1111 NỊ NỈ L9 10 HẢ 12 NÌ M1111 H2 Nề NỀ L1 H1 J1 5242",
+  "y": 0.467,
+  "y2": 0.871,
+  "x": 0.006,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 21.0,
+  "end": 21.25,
+  "text": "kà- „Ífa Số: 1244 đñ đi về àụ VÀ M714 11 NỊ 1⁄7 Xà PA",
+  "y": 0.348,
+  "y2": 0.791,
+  "x": 0.131,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 21.25,
+  "end": 21.5,
+  "text": "đi t2 gÉ Số SIỆ V4 Mì M1 M1) NÌ",
+  "y": 0.416,
+  "y2": 0.818,
+  "x": 0.314,
+  "maxh": 33,
+  "nframes": 1
+ },
+ {
+  "start": 21.75,
+  "end": 22.25,
+  "text": "vậy Chính vì",
+  "y": 0.577,
+  "y2": 0.617,
+  "x": 0.396,
+  "maxh": 76,
+  "nframes": 2
+ },
+ {
+  "start": 22.75,
+  "end": 23.0,
+  "text": "ất hiện của",
+  "y": 0.601,
+  "y2": 0.617,
+  "x": 0.221,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 23.0,
+  "end": 23.25,
+  "text": "uất",
+  "y": 0.602,
+  "y2": 0.617,
+  "x": 0.2,
+  "maxh": 28,
+  "nframes": 1
+ },
+ {
+  "start": 23.25,
+  "end": 23.75,
+  "text": "xuất hiện của RIVEA La#",
+  "y": 0.598,
+  "y2": 0.975,
+  "x": 0.128,
+  "maxh": 60,
+  "nframes": 2
+ },
+ {
+  "start": 23.75,
+  "end": 24.25,
+  "text": "uất hiện của EA RIVEA RESIDENCES Lạ",
+  "y": 0.601,
+  "y2": 0.981,
+  "x": 0.128,
+  "maxh": 90,
+  "nframes": 2
+ },
+ {
+  "start": 24.5,
+  "end": 25.0,
+  "text": "Không chỉ là ca",
+  "y": 0.6,
+  "y2": 0.755,
+  "x": 0.225,
+  "maxh": 39,
+  "nframes": 2
+ },
+ {
+  "start": 25.25,
+  "end": 25.75,
+  "text": "Không chỉ là MỘT DỰ ÁN MỚI 3W 8B mR wW 3W",
+  "y": 0.6,
+  "y2": 0.974,
+  "x": 0.0,
+  "maxh": 93,
+  "nframes": 2
+ },
+ {
+  "start": 26.0,
+  "end": 26.25,
+  "text": "34",
+  "y": 0.389,
+  "y2": 0.413,
+  "x": 0.533,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 26.25,
+  "end": 26.5,
+  "text": "s3 GIẢI LỜI màia",
+  "y": 0.304,
+  "y2": 0.621,
+  "x": 0.175,
+  "maxh": 128,
+  "nframes": 1
+ },
+ {
+  "start": 26.5,
+  "end": 27.25,
+  "text": "A4 ỜI GIẢI ƠI",
+  "y": 0.427,
+  "y2": 0.621,
+  "x": 0.333,
+  "maxh": 80,
+  "nframes": 3
+ },
+ {
+  "start": 27.25,
+  "end": 27.75,
+  "text": "33 GIẢI LỜI KHÁT ƠN",
+  "y": 0.322,
+  "y2": 0.711,
+  "x": 0.29,
+  "maxh": 135,
+  "nframes": 2
+ },
+ {
+  "start": 27.75,
+  "end": 28.0,
+  "text": "8w 51 tí 4c LƯU",
+  "y": 0.177,
+  "y2": 0.622,
+  "x": 0.118,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 28.0,
+  "end": 29.25,
+  "text": "lÌ LAI SốNG chiên r1 THƯỢNG ƯỢNG GIAN IAN TH LƯU",
+  "y": 0.471,
+  "y2": 0.641,
+  "x": 0.067,
+  "maxh": 122,
+  "nframes": 5
+ },
+ {
+  "start": 29.25,
+  "end": 30.25,
+  "text": "lÏ ll lÍ lÍ SỐNG THƯỢNG g1 V7 GIAN LƯU TỊ lòng di dị sản số LỆ",
+  "y": 0.467,
+  "y2": 0.871,
+  "x": 0.053,
+  "maxh": 56,
+  "nframes": 4
+ },
+ {
+  "start": 30.5,
+  "end": 30.75,
+  "text": "thì",
+  "y": 0.596,
+  "y2": 0.613,
+  "x": 0.517,
+  "maxh": 33,
+  "nframes": 1
+ },
+ {
+  "start": 30.75,
+  "end": 31.0,
+  "text": "ĐÂU m'1 Ññ",
+  "y": 0.307,
+  "y2": 0.832,
+  "x": 0.007,
+  "maxh": 128,
+  "nframes": 1
+ },
+ {
+  "start": 31.0,
+  "end": 31.25,
+  "text": "SỰ Tị",
+  "y": 0.297,
+  "y2": 0.699,
+  "x": 0.144,
+  "maxh": 268,
+  "nframes": 1
+ },
+ {
+  "start": 31.25,
+  "end": 31.5,
+  "text": "KHAC",
+  "y": 0.306,
+  "y2": 0.373,
+  "x": 0.274,
+  "maxh": 129,
+  "nframes": 1
+ },
+ {
+  "start": 31.5,
+  "end": 31.75,
+  "text": "BIẾT",
+  "y": 0.307,
+  "y2": 0.373,
+  "x": 0.324,
+  "maxh": 128,
+  "nframes": 1
+ },
+ {
+  "start": 31.75,
+  "end": 32.0,
+  "text": "m'1",
+  "y": 0.502,
+  "y2": 0.544,
+  "x": 0.021,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 33.25,
+  "end": 35.25,
+  "text": "BẢN ĐỘC TRỊ VỊ| rốt trườn ác bit ọẹ TC",
+  "y": 0.305,
+  "y2": 1.0,
+  "x": 0.221,
+  "maxh": 128,
+  "nframes": 8
+ },
+ {
+  "start": 35.25,
+  "end": 36.75,
+  "text": "ÍẤ TRỊ ĐỘC BẢN RỊ J2) C7 trên thị trười ki kả cẢ",
+  "y": 0.286,
+  "y2": 0.711,
+  "x": 0.069,
+  "maxh": 170,
+  "nframes": 6
+ },
+ {
+  "start": 36.75,
+  "end": 37.0,
+  "text": "¡£.TRỊ ĐỌC BAN",
+  "y": 0.32,
+  "y2": 0.363,
+  "x": 0.157,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 37.0,
+  "end": 37.25,
+  "text": "ĐỘC LAI ỂE Ep ĐENCES",
+  "y": 0.282,
+  "y2": 0.674,
+  "x": 0.104,
+  "maxh": 177,
+  "nframes": 1
+ },
+ {
+  "start": 37.25,
+  "end": 37.75,
+  "text": "14 ĐỘC TRỊ ĐỌC LAI TRỊ RE",
+  "y": 0.125,
+  "y2": 0.673,
+  "x": 0.042,
+  "maxh": 177,
+  "nframes": 2
+ },
+ {
+  "start": 37.75,
+  "end": 38.0,
+  "text": "ĐỌC mm IÑ—",
+  "y": 0.32,
+  "y2": 0.785,
+  "x": 0.428,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 38.0,
+  "end": 38.25,
+  "text": "ĐỘC LAN kí VÀ DENCE",
+  "y": 0.281,
+  "y2": 0.652,
+  "x": 0.103,
+  "maxh": 178,
+  "nframes": 1
+ },
+ {
+  "start": 38.25,
+  "end": 38.75,
+  "text": "Á.TRỊ ĐỘC kí lo “chờ",
+  "y": 0.277,
+  "y2": 0.612,
+  "x": 0.183,
+  "maxh": 218,
+  "nframes": 2
+ },
+ {
+  "start": 38.75,
+  "end": 39.25,
+  "text": "£_TRỊ ĐỌC TRỊ LAN TẾ kí đến",
+  "y": 0.32,
+  "y2": 0.609,
+  "x": 0.037,
+  "maxh": 80,
+  "nframes": 2
+ },
+ {
+  "start": 39.25,
+  "end": 39.75,
+  "text": "ĐỌC BAN LAN Tế rđể để mí em RE )ENCES",
+  "y": 0.32,
+  "y2": 0.662,
+  "x": 0.103,
+  "maxh": 112,
+  "nframes": 2
+ },
+ {
+  "start": 39.75,
+  "end": 40.0,
+  "text": "TRỊ ĐỘC BẤN để mí œni",
+  "y": 0.32,
+  "y2": 0.662,
+  "x": 0.133,
+  "maxh": 122,
+  "nframes": 1
+ },
+ {
+  "start": 40.0,
+  "end": 40.25,
+  "text": "_AÑ TRỊ ĐỌC ENCES",
+  "y": 0.0,
+  "y2": 0.653,
+  "x": 0.272,
+  "maxh": 303,
+  "nframes": 1
+ },
+ {
+  "start": 40.75,
+  "end": 41.5,
+  "text": "Điểm chơi chịu đề",
+  "y": 0.588,
+  "y2": 0.617,
+  "x": 0.296,
+  "maxh": 46,
+  "nframes": 3
+ },
+ {
+  "start": 41.5,
+  "end": 41.75,
+  "text": "nằm cứ",
+  "y": 0.601,
+  "y2": 0.62,
+  "x": 0.399,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 43.0,
+  "end": 44.0,
+  "text": "ĐẦU TƯ TƯM ME tập ập đoàn Tân Đợi Ti TỊ",
+  "y": 0.591,
+  "y2": 0.659,
+  "x": 0.231,
+  "maxh": 54,
+  "nframes": 4
+ },
+ {
+  "start": 44.0,
+  "end": 44.25,
+  "text": "ÂU TƯM oàn Tên Đợi VÀ",
+  "y": 0.591,
+  "y2": 0.696,
+  "x": 0.324,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 44.5,
+  "end": 45.0,
+  "text": "tất",
+  "y": 0.598,
+  "y2": 0.613,
+  "x": 0.59,
+  "maxh": 28,
+  "nframes": 2
+ },
+ {
+  "start": 45.0,
+  "end": 45.25,
+  "text": "Mội",
+  "y": 0.594,
+  "y2": 0.621,
+  "x": 0.59,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 47.0,
+  "end": 47.25,
+  "text": "tay",
+  "y": 0.564,
+  "y2": 0.583,
+  "x": 0.351,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 48.25,
+  "end": 48.5,
+  "text": "với",
+  "y": 0.565,
+  "y2": 0.579,
+  "x": 0.419,
+  "maxh": 27,
+  "nframes": 1
+ },
+ {
+  "start": 48.5,
+  "end": 48.75,
+  "text": "LỠ NG gc",
+  "y": 0.59,
+  "y2": 0.645,
+  "x": 0.362,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 48.75,
+  "end": 49.0,
+  "text": "cáa với LỚN CỦA ho",
+  "y": 0.321,
+  "y2": 0.645,
+  "x": 0.11,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 49.0,
+  "end": 49.5,
+  "text": "ỞN CỦA TH THỂ hứ ch hẩt,",
+  "y": 0.593,
+  "y2": 0.645,
+  "x": 0.463,
+  "maxh": 45,
+  "nframes": 2
+ },
+ {
+  "start": 49.5,
+  "end": 49.75,
+  "text": "TH TH tụ,",
+  "y": 0.439,
+  "y2": 0.619,
+  "x": 0.208,
+  "maxh": 18,
+  "nframes": 1
+ },
+ {
+  "start": 49.75,
+  "end": 50.25,
+  "text": "Anh chị hãy nhìn Vũ HT hr tìm HỈ HH} LÍ tụ» Hệ, rÌ",
+  "y": 0.25,
+  "y2": 0.731,
+  "x": 0.237,
+  "maxh": 42,
+  "nframes": 2
+ },
+ {
+  "start": 50.25,
+  "end": 50.5,
+  "text": "Mì Tn v1 Xứ là",
+  "y": 0.491,
+  "y2": 0.73,
+  "x": 0.235,
+  "maxh": 27,
+  "nframes": 1
+ },
+ {
+  "start": 50.5,
+  "end": 50.75,
+  "text": "DANH TH, Pm LỊO ng",
+  "y": 0.248,
+  "y2": 0.661,
+  "x": 0.139,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 50.75,
+  "end": 51.5,
+  "text": "SÁCH DANH ĐƠN ZTL1R HỆ TT TH +22. hị LỄ HẠ lê l2",
+  "y": 0.241,
+  "y2": 0.73,
+  "x": 0.051,
+  "maxh": 57,
+  "nframes": 3
+ },
+ {
+  "start": 51.5,
+  "end": 51.75,
+  "text": "im TIẾT, AL LH",
+  "y": 0.362,
+  "y2": 0.723,
+  "x": 0.246,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 52.0,
+  "end": 52.25,
+  "text": "TẾ TT) mm H1 sai",
+  "y": 0.514,
+  "y2": 0.712,
+  "x": 0.069,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 52.5,
+  "end": 52.75,
+  "text": "th ải TT) TT mm ví",
+  "y": 0.479,
+  "y2": 0.704,
+  "x": 0.226,
+  "maxh": 26,
+  "nframes": 1
+ },
+ {
+  "start": 52.75,
+  "end": 53.0,
+  "text": "aa le",
+  "y": 0.148,
+  "y2": 0.194,
+  "x": 0.307,
+  "maxh": 20,
+  "nframes": 1
+ },
+ {
+  "start": 53.0,
+  "end": 53.25,
+  "text": "UÍ Cừ TH th 1ã ví",
+  "y": 0.215,
+  "y2": 0.703,
+  "x": 0.285,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 53.25,
+  "end": 53.5,
+  "text": "J9 HT) mm l2 ỰẠ",
+  "y": 0.222,
+  "y2": 0.919,
+  "x": 0.282,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 53.5,
+  "end": 53.75,
+  "text": "AS LŨ TH HÀ ĐC ỰẠ",
+  "y": 0.148,
+  "y2": 0.916,
+  "x": 0.283,
+  "maxh": 92,
+  "nframes": 1
+ },
+ {
+  "start": 53.75,
+  "end": 54.0,
+  "text": "GđỐ mãn lí HIỆ— ví",
+  "y": 0.223,
+  "y2": 0.701,
+  "x": 0.239,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 54.0,
+  "end": 54.25,
+  "text": "LŨ xà Tên ỰẠ",
+  "y": 0.222,
+  "y2": 0.883,
+  "x": 0.231,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 54.25,
+  "end": 54.5,
+  "text": "GđỔ LŨ HAì/ mm Tả",
+  "y": 0.222,
+  "y2": 0.701,
+  "x": 0.182,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 54.5,
+  "end": 54.75,
+  "text": "LŨ ĐẦU THỂ GIỎ ỰẠ",
+  "y": 0.222,
+  "y2": 0.874,
+  "x": 0.376,
+  "maxh": 125,
+  "nframes": 1
+ },
+ {
+  "start": 54.75,
+  "end": 55.25,
+  "text": "ký GđỔ HÀNG ÀNG ĐẦU GIỚI IỚI THỂ TỊ THỊ",
+  "y": 0.171,
+  "y2": 0.539,
+  "x": 0.179,
+  "maxh": 116,
+  "nframes": 2
+ },
+ {
+  "start": 55.25,
+  "end": 55.5,
+  "text": "F2 13 là 15 5M 1S Mới",
+  "y": 0.061,
+  "y2": 0.901,
+  "x": 0.01,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 55.5,
+  "end": 55.75,
+  "text": "2ónñ lờ LÊ. 13 13 IS 1M 15 IS",
+  "y": 0.211,
+  "y2": 0.409,
+  "x": 0.015,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 55.75,
+  "end": 56.0,
+  "text": "FP LỊ tú 3135 1M MỊ Em",
+  "y": 0.015,
+  "y2": 0.441,
+  "x": 0.0,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 56.0,
+  "end": 56.25,
+  "text": "BẾ Mã lš 1M 13 E5 MS HH BÍ 1H MI 115 Em Nà",
+  "y": 0.067,
+  "y2": 1.0,
+  "x": 0.015,
+  "maxh": 120,
+  "nframes": 1
+ },
+ {
+  "start": 56.25,
+  "end": 56.5,
+  "text": "HỊ đt 15 Bị 1M 135 1M BE LN EB hư HỆ VĂN",
+  "y": 0.067,
+  "y2": 0.904,
+  "x": 0.024,
+  "maxh": 160,
+  "nframes": 1
+ },
+ {
+  "start": 56.5,
+  "end": 56.75,
+  "text": "IM BI là ONG KONG 11 15 1M tà",
+  "y": 0.159,
+  "y2": 0.834,
+  "x": 0.004,
+  "maxh": 135,
+  "nframes": 1
+ },
+ {
+  "start": 56.75,
+  "end": 57.0,
+  "text": "Bí MU lề 1M ẾP 3M IS EE HE ti",
+  "y": 0.109,
+  "y2": 0.819,
+  "x": 0.018,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 57.0,
+  "end": 57.25,
+  "text": "LÌ H3 BI 13 lề 1M 13 IS MI 3H ME",
+  "y": 0.065,
+  "y2": 0.371,
+  "x": 0.049,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 57.25,
+  "end": 57.5,
+  "text": "EI IL số nh rầt, 13 1M EM ẤP 3M ME",
+  "y": 0.02,
+  "y2": 0.362,
+  "x": 0.057,
+  "maxh": 94,
+  "nframes": 1
+ },
+ {
+  "start": 57.5,
+  "end": 57.75,
+  "text": "M5 lễ na MẸ 3M M3 EM Mã ng",
+  "y": 0.15,
+  "y2": 0.464,
+  "x": 0.076,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 57.75,
+  "end": 58.0,
+  "text": "tô 0Ø Nà\\",
+  "y": 0.443,
+  "y2": 0.845,
+  "x": 0.101,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 58.0,
+  "end": 58.25,
+  "text": "từ tớ t8 5ˆ",
+  "y": 0.295,
+  "y2": 0.509,
+  "x": 0.086,
+  "maxh": 81,
+  "nframes": 1
+ },
+ {
+  "start": 58.25,
+  "end": 58.5,
+  "text": "81 từ 'lợ",
+  "y": 0.227,
+  "y2": 0.802,
+  "x": 0.361,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 58.5,
+  "end": 58.75,
+  "text": "tà giải tớ gi VN tụ",
+  "y": 0.234,
+  "y2": 0.794,
+  "x": 0.046,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 58.75,
+  "end": 59.0,
+  "text": "với Ahhs ángÏò Vi tế số",
+  "y": 0.187,
+  "y2": 0.716,
+  "x": 0.051,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 59.0,
+  "end": 59.25,
+  "text": "xà tụ lãi số sŸ BR",
+  "y": 0.139,
+  "y2": 0.875,
+  "x": 0.093,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 59.25,
+  "end": 59.5,
+  "text": "lò giã tổ. Lj",
+  "y": 0.3,
+  "y2": 0.723,
+  "x": 0.285,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 59.5,
+  "end": 59.75,
+  "text": "1Ì... “vt ON tí mì",
+  "y": 0.186,
+  "y2": 0.668,
+  "x": 0.037,
+  "maxh": 141,
+  "nframes": 1
+ },
+ {
+  "start": 59.75,
+  "end": 60.0,
+  "text": "tổ tổ sạ WÌ",
+  "y": 0.553,
+  "y2": 0.798,
+  "x": 0.419,
+  "maxh": 110,
+  "nframes": 1
+ },
+ {
+  "start": 60.0,
+  "end": 60.25,
+  "text": "JON ve mì",
+  "y": 0.323,
+  "y2": 0.654,
+  "x": 0.358,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 60.25,
+  "end": 60.5,
+  "text": "nH tỳ",
+  "y": 0.457,
+  "y2": 0.857,
+  "x": 0.794,
+  "maxh": 138,
+  "nframes": 1
+ },
+ {
+  "start": 60.5,
+  "end": 60.75,
+  "text": "sị 1a s8 tô J8 194 sạ",
+  "y": 0.0,
+  "y2": 0.724,
+  "x": 0.269,
+  "maxh": 106,
+  "nframes": 1
+ },
+ {
+  "start": 60.75,
+  "end": 61.0,
+  "text": "1Ì m7 1l I8 l5 x6 1n",
+  "y": 0.624,
+  "y2": 0.802,
+  "x": 0.442,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 61.0,
+  "end": 61.25,
+  "text": "113 IÑ 1u 18 In 18",
+  "y": 0.219,
+  "y2": 0.806,
+  "x": 0.439,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 61.25,
+  "end": 61.75,
+  "text": "lại ựi 1u TT 18 L1 HINH 11 dã I8 13 CÚ",
+  "y": 0.255,
+  "y2": 0.883,
+  "x": 0.268,
+  "maxh": 52,
+  "nframes": 2
+ },
+ {
+  "start": 61.75,
+  "end": 62.0,
+  "text": "118 ÍÏ RIIR TÌM mã JJ RIIR 18 18 1N mi",
+  "y": 0.253,
+  "y2": 0.861,
+  "x": 0.228,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 62.0,
+  "end": 62.25,
+  "text": "1ì 11 Hồ vớ Mã 18 18 1n 18g 75 1N ly",
+  "y": 0.22,
+  "y2": 0.888,
+  "x": 0.342,
+  "maxh": 98,
+  "nframes": 1
+ },
+ {
+  "start": 62.25,
+  "end": 62.5,
+  "text": "giẾ lý Vội mãi LỄ Ty lãi EIII mụ L1 L1] đề;",
+  "y": 0.097,
+  "y2": 0.895,
+  "x": 0.26,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 62.5,
+  "end": 62.75,
+  "text": "J8 18 1H IR TW 48 18 dây",
+  "y": 0.575,
+  "y2": 0.9,
+  "x": 0.264,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 62.75,
+  "end": 63.0,
+  "text": "lý FT 48 18 l8 I8 “1⁄2",
+  "y": 0.31,
+  "y2": 0.889,
+  "x": 0.319,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 63.0,
+  "end": 63.25,
+  "text": "fI lý II LÍ LiR LÌ II J8 L1 1N 1n ll TU",
+  "y": 0.25,
+  "y2": 0.946,
+  "x": 0.157,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 63.25,
+  "end": 63.5,
+  "text": "1u Đøñ LI 11 18 F7 212 1T",
+  "y": 0.219,
+  "y2": 0.824,
+  "x": 0.113,
+  "maxh": 144,
+  "nframes": 1
+ },
+ {
+  "start": 63.5,
+  "end": 63.75,
+  "text": "KẾ Đøñ TỶ lý mm lá mI J8 II 15 PT] LÌ lài rấU lÌ",
+  "y": 0.105,
+  "y2": 0.964,
+  "x": 0.037,
+  "maxh": 146,
+  "nframes": 1
+ },
+ {
+  "start": 63.75,
+  "end": 64.0,
+  "text": "THÍ đổ 4N II 18 1H ki. j8 Lj ra.“ 18 1E lÌ",
+  "y": 0.284,
+  "y2": 0.963,
+  "x": 0.042,
+  "maxh": 146,
+  "nframes": 1
+ },
+ {
+  "start": 66.25,
+  "end": 66.5,
+  "text": "Xa",
+  "y": 0.528,
+  "y2": 0.544,
+  "x": 0.603,
+  "maxh": 30,
+  "nframes": 1
+ },
+ {
+  "start": 68.5,
+  "end": 68.75,
+  "text": "lị= anh ho ch",
+  "y": 0.554,
+  "y2": 0.638,
+  "x": 0.578,
+  "maxh": 160,
+  "nframes": 1
+ },
+ {
+  "start": 69.0,
+  "end": 69.25,
+  "text": "hch",
+  "y": 0.584,
+  "y2": 0.623,
+  "x": 0.675,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 69.25,
+  "end": 69.5,
+  "text": "lị: ơnh cho ch",
+  "y": 0.556,
+  "y2": 0.634,
+  "x": 0.558,
+  "maxh": 150,
+  "nframes": 1
+ },
+ {
+  "start": 69.5,
+  "end": 69.75,
+  "text": "ưa cho anh chị",
+  "y": 0.596,
+  "y2": 0.612,
+  "x": 0.503,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 69.75,
+  "end": 71.25,
+  "text": "lấy nhốt thờ sự tiện lên lợi thời tự",
+  "y": 0.567,
+  "y2": 0.808,
+  "x": 0.372,
+  "maxh": 150,
+  "nframes": 6
+ },
+ {
+  "start": 71.25,
+  "end": 72.5,
+  "text": "xứ TỐ) ly lấp mà lò là gió trị tòi tồi tài sản",
+  "y": 0.398,
+  "y2": 0.638,
+  "x": 0.335,
+  "maxh": 134,
+  "nframes": 5
+ },
+ {
+  "start": 72.5,
+  "end": 73.5,
+  "text": "lếy vững theo thời gi gia px",
+  "y": 0.57,
+  "y2": 0.752,
+  "x": 0.167,
+  "maxh": 140,
+  "nframes": 4
+ },
+ {
+  "start": 74.25,
+  "end": 75.0,
+  "text": "lên HAI HỨ mà Quyết mò em ỰC SỰ ÂN TƯỢNG",
+  "y": 0.585,
+  "y2": 0.713,
+  "x": 0.322,
+  "maxh": 142,
+  "nframes": 3
+ },
+ {
+  "start": 75.25,
+  "end": 75.5,
+  "text": "là",
+  "y": 0.616,
+  "y2": 0.633,
+  "x": 0.362,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 75.75,
+  "end": 76.5,
+  "text": "ẤT NỘI là ĐẤT ĐÔ S3",
+  "y": 0.603,
+  "y2": 0.708,
+  "x": 0.296,
+  "maxh": 160,
+  "nframes": 3
+ },
+ {
+  "start": 77.25,
+  "end": 79.75,
+  "text": "thể hể rr ÁN MỘT MMỘT DỰ kiểu như là LẺ NON",
+  "y": 0.601,
+  "y2": 0.769,
+  "x": 0.303,
+  "maxh": 125,
+  "nframes": 10
+ },
+ {
+  "start": 79.75,
+  "end": 80.0,
+  "text": "sựlà",
+  "y": 0.613,
+  "y2": 0.637,
+  "x": 0.401,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 80.25,
+  "end": 80.5,
+  "text": "sựlà tú",
+  "y": 0.613,
+  "y2": 0.829,
+  "x": 0.4,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 80.75,
+  "end": 81.25,
+  "text": "sựlà ực HIẾM KHAN HIEM",
+  "y": 0.613,
+  "y2": 0.681,
+  "x": 0.342,
+  "maxh": 81,
+  "nframes": 2
+ },
+ {
+  "start": 81.25,
+  "end": 81.5,
+  "text": "9g ườ",
+  "y": 0.614,
+  "y2": 0.645,
+  "x": 0.446,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 81.5,
+  "end": 81.75,
+  "text": "47 an",
+  "y": 0.191,
+  "y2": 0.633,
+  "x": 0.211,
+  "maxh": 22,
+  "nframes": 1
+ },
+ {
+  "start": 81.75,
+  "end": 82.0,
+  "text": "SÀ Thôngt ng cức",
+  "y": 0.555,
+  "y2": 0.641,
+  "x": 0.287,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 82.0,
+  "end": 82.25,
+  "text": "an",
+  "y": 0.621,
+  "y2": 0.633,
+  "x": 0.672,
+  "maxh": 22,
+  "nframes": 1
+ },
+ {
+  "start": 82.25,
+  "end": 82.5,
+  "text": "-để không 3⁄4",
+  "y": 0.595,
+  "y2": 0.834,
+  "x": 0.3,
+  "maxh": 88,
+  "nframes": 1
+ },
+ {
+  "start": 82.5,
+  "end": 82.75,
+  "text": "2s AÀ)",
+  "y": 0.439,
+  "y2": 0.615,
+  "x": 0.075,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 82.75,
+  "end": 83.0,
+  "text": "sỉ ve zÌ không giảm đề đủ c5 và",
+  "y": 0.398,
+  "y2": 0.984,
+  "x": 0.054,
+  "maxh": 116,
+  "nframes": 1
+ },
+ {
+  "start": 83.0,
+  "end": 83.25,
+  "text": "để AÀ)",
+  "y": 0.616,
+  "y2": 0.633,
+  "x": 0.3,
+  "maxh": 33,
+  "nframes": 1
+ },
+ {
+  "start": 83.25,
+  "end": 83.5,
+  "text": "khai mộ đñ r3 đà",
+  "y": 0.616,
+  "y2": 0.905,
+  "x": 0.444,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 83.5,
+  "end": 83.75,
+  "text": "7ÿ Ột",
+  "y": 0.605,
+  "y2": 0.633,
+  "x": 0.131,
+  "maxh": 28,
+  "nframes": 1
+ },
+ {
+  "start": 83.75,
+  "end": 84.0,
+  "text": "z3 Mì triển",
+  "y": 0.508,
+  "y2": 0.633,
+  "x": 0.094,
+  "maxh": 28,
+  "nframes": 1
+ },
+ {
+  "start": 84.0,
+  "end": 84.25,
+  "text": "SẼ triển Xà sẽ Sử",
+  "y": 0.423,
+  "y2": 0.965,
+  "x": 0.354,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 84.25,
+  "end": 84.5,
+  "text": "một kín",
+  "y": 0.618,
+  "y2": 0.644,
+  "x": 0.087,
+  "maxh": 28,
+  "nframes": 1
+ },
+ {
+  "start": 84.5,
+  "end": 84.75,
+  "text": "xa lột 1y.",
+  "y": 0.402,
+  "y2": 0.655,
+  "x": 0.072,
+  "maxh": 30,
+  "nframes": 1
+ },
+ {
+  "start": 85.0,
+  "end": 85.25,
+  "text": "hườn ba sẽ",
+  "y": 0.616,
+  "y2": 0.805,
+  "x": 0.414,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 85.25,
+  "end": 85.5,
+  "text": "sẽ ðng sử",
+  "y": 0.613,
+  "y2": 0.823,
+  "x": 0.457,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 85.5,
+  "end": 85.75,
+  "text": "Họ phải \\2j 1Œ",
+  "y": 0.536,
+  "y2": 0.705,
+  "x": 0.001,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 85.75,
+  "end": 86.0,
+  "text": "chút một xí Vú cm",
+  "y": 0.613,
+  "y2": 0.947,
+  "x": 0.147,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 86.0,
+  "end": 86.25,
+  "text": "đirã IXở It xíu S4",
+  "y": 0.616,
+  "y2": 0.802,
+  "x": 0.286,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 86.25,
+  "end": 86.5,
+  "text": "sÄ txíư Z4",
+  "y": 0.599,
+  "y2": 0.653,
+  "x": 0.0,
+  "maxh": 28,
+  "nframes": 1
+ },
+ {
+  "start": 86.5,
+  "end": 86.75,
+  "text": "tỆ lột: xíu:",
+  "y": 0.401,
+  "y2": 0.633,
+  "x": 0.026,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 86.75,
+  "end": 87.25,
+  "text": "như là",
+  "y": 0.491,
+  "y2": 0.509,
+  "x": 0.45,
+  "maxh": 34,
+  "nframes": 2
+ },
+ {
+  "start": 87.5,
+  "end": 88.25,
+  "text": "Gia Lâm hoặc là",
+  "y": 0.483,
+  "y2": 0.519,
+  "x": 0.282,
+  "maxh": 68,
+  "nframes": 3
+ },
+ {
+  "start": 88.25,
+  "end": 89.0,
+  "text": "Xã sẽ Nam Từ Liêm “A4",
+  "y": 0.325,
+  "y2": 0.771,
+  "x": 0.249,
+  "maxh": 63,
+  "nframes": 3
+ },
+ {
+  "start": 89.0,
+  "end": 89.5,
+  "text": "thì mới có thể “A4",
+  "y": 0.488,
+  "y2": 0.771,
+  "x": 0.249,
+  "maxh": 38,
+  "nframes": 2
+ },
+ {
+  "start": 89.5,
+  "end": 89.75,
+  "text": "đủ không gian 277:",
+  "y": 0.491,
+  "y2": 0.696,
+  "x": 0.378,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 89.75,
+  "end": 90.25,
+  "text": "đúng không 2277: “A4",
+  "y": 0.491,
+  "y2": 0.771,
+  "x": 0.249,
+  "maxh": 40,
+  "nframes": 2
+ },
+ {
+  "start": 90.25,
+  "end": 90.5,
+  "text": "li{ II L1) lì Ly m1 su! đà.",
+  "y": 0.402,
+  "y2": 1.0,
+  "x": 0.004,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 90.5,
+  "end": 90.75,
+  "text": "JI 1L II E1 IRE RII JM 11 nhứn la lÌ Nà ạu",
+  "y": 0.291,
+  "y2": 1.0,
+  "x": 0.006,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 90.75,
+  "end": 91.0,
+  "text": "IRE RE TT do 8B: sĩ 7c",
+  "y": 0.451,
+  "y2": 0.707,
+  "x": 0.214,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 91.0,
+  "end": 91.25,
+  "text": "Lái II độ Z1 1RE II IN mm MI M1 do bị LL) tì) 13 Lùn sẾ",
+  "y": 0.304,
+  "y2": 0.993,
+  "x": 0.068,
+  "maxh": 112,
+  "nframes": 1
+ },
+ {
+  "start": 91.25,
+  "end": 91.5,
+  "text": "lại II lÌ r1 dị) điể 17.88 BE hít tứ",
+  "y": 0.258,
+  "y2": 0.938,
+  "x": 0.126,
+  "maxh": 130,
+  "nframes": 1
+ },
+ {
+  "start": 91.5,
+  "end": 91.75,
+  "text": "5s.” KT TW BI 1A, hệ BI RE ME",
+  "y": 0.32,
+  "y2": 0.698,
+  "x": 0.039,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 91.75,
+  "end": 92.0,
+  "text": "21 TT BI hế iäo 95, L3 11]",
+  "y": 0.294,
+  "y2": 0.749,
+  "x": 0.056,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 92.0,
+  "end": 92.25,
+  "text": "II Ki BỊ L1) MB lđi Bà L1) lạ, lÌ tự a1 a1",
+  "y": 0.358,
+  "y2": 1.0,
+  "x": 0.008,
+  "maxh": 86,
+  "nframes": 1
+ },
+ {
+  "start": 92.25,
+  "end": 92.5,
+  "text": "II JI II mm! IR 11 L1) 5E 1.3 [TR Bà LT] JÌ||! hy tụ a1 “T1 ¿09",
+  "y": 0.301,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 92.5,
+  "end": 92.75,
+  "text": "JI r1 IRE mm L1] HE L1) Bà m1 IE „L1 LL3",
+  "y": 0.357,
+  "y2": 0.728,
+  "x": 0.004,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 92.75,
+  "end": 93.0,
+  "text": "“77 r1 II ME [T1 BE xi lị",
+  "y": 0.245,
+  "y2": 1.0,
+  "x": 0.013,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 93.0,
+  "end": 93.25,
+  "text": "15. mg ME rồi Bò TT 24",
+  "y": 0.493,
+  "y2": 0.834,
+  "x": 0.136,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 93.25,
+  "end": 93.5,
+  "text": "là NI {II HE hợ LL [TT Sỳ lì)",
+  "y": 0.377,
+  "y2": 0.93,
+  "x": 0.019,
+  "maxh": 108,
+  "nframes": 1
+ },
+ {
+  "start": 93.5,
+  "end": 93.75,
+  "text": "lì hã r1 LI „i1! TT BỊ hộp le thợpz mũ BE 1T) LỊ] BI 8S LL L1] HỊ Tụ lu CÁ",
+  "y": 0.405,
+  "y2": 0.998,
+  "x": 0.0,
+  "maxh": 78,
+  "nframes": 1
+ },
+ {
+  "start": 93.75,
+  "end": 94.0,
+  "text": "lẤ IR L1I HỆ ¡BE IF K1 HMỊ 31 mộ TT BỊ tt Tà L1! LL] lỊ",
+  "y": 0.301,
+  "y2": 0.998,
+  "x": 0.003,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 94.0,
+  "end": 94.5,
+  "text": "IR lš II II I8 li „ill Lm 1E ME th 11 mg MỊ M1 mmỊ H.m têP Mi 8i 5m) W1 BÌ BỊ LTI M1: LL [TẾ 1ý BI LL BÌ làn Tư st ni mg TỶ de IT]",
+  "y": 0.334,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 52,
+  "nframes": 2
+ },
+ {
+  "start": 94.5,
+  "end": 94.75,
+  "text": "LJ lÍ li Em L1 THỊ] IE NI 11 L1) Min LT] —11 LL BH, BI LẺ va Nụ 31",
+  "y": 0.338,
+  "y2": 0.952,
+  "x": 0.05,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 94.75,
+  "end": 95.0,
+  "text": "IIR 11) II II ng 1U BỊ Hánoi ra: BÍ BI LT] TRL, 4t G6",
+  "y": 0.439,
+  "y2": 1.0,
+  "x": 0.011,
+  "maxh": 86,
+  "nframes": 1
+ },
+ {
+  "start": 95.0,
+  "end": 95.25,
+  "text": "hai IR TP 11 BỊ BỊ Hdnoi 111 BÍ BỊ BI am. Đa BỊ LÍ tà lì s8",
+  "y": 0.285,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 95.25,
+  "end": 95.5,
+  "text": ";ESID [VÌ si",
+  "y": 0.408,
+  "y2": 0.695,
+  "x": 0.572,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 95.5,
+  "end": 95.75,
+  "text": "đốt",
+  "y": 0.596,
+  "y2": 0.622,
+  "x": 0.694,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 95.75,
+  "end": 96.0,
+  "text": "lỉ",
+  "y": 0.745,
+  "y2": 0.788,
+  "x": 0.049,
+  "maxh": 81,
+  "nframes": 1
+ },
+ {
+  "start": 96.0,
+  "end": 96.25,
+  "text": "[VÌ đốt",
+  "y": 0.44,
+  "y2": 0.612,
+  "x": 0.589,
+  "maxh": 27,
+  "nframes": 1
+ },
+ {
+  "start": 96.25,
+  "end": 96.5,
+  "text": "85 giR EIR gã",
+  "y": 0.692,
+  "y2": 0.942,
+  "x": 0.003,
+  "maxh": 92,
+  "nframes": 1
+ },
+ {
+  "start": 96.5,
+  "end": 96.75,
+  "text": "sa [VÌ đốt ¡RE BÍ",
+  "y": 0.425,
+  "y2": 0.78,
+  "x": 0.0,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 96.75,
+  "end": 97.25,
+  "text": "[VI RE là",
+  "y": 0.449,
+  "y2": 0.929,
+  "x": 0.0,
+  "maxh": 80,
+  "nframes": 2
+ },
+ {
+  "start": 97.25,
+  "end": 97.75,
+  "text": "Lái 18 bốn nội đô là",
+  "y": 0.408,
+  "y2": 0.924,
+  "x": 0.239,
+  "maxh": 140,
+  "nframes": 2
+ },
+ {
+  "start": 98.25,
+  "end": 98.5,
+  "text": "r1 x4 VỤ",
+  "y": 0.434,
+  "y2": 0.627,
+  "x": 0.404,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 98.5,
+  "end": 98.75,
+  "text": "Lãi LÐ",
+  "y": 0.598,
+  "y2": 0.862,
+  "x": 0.692,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 99.0,
+  "end": 99.25,
+  "text": "rˆ rÌ tị",
+  "y": 0.455,
+  "y2": 0.58,
+  "x": 0.644,
+  "maxh": 16,
+  "nframes": 1
+ },
+ {
+  "start": 99.25,
+  "end": 99.5,
+  "text": "VE¿\\ r1 tị tị tải TÍ",
+  "y": 0.32,
+  "y2": 0.712,
+  "x": 0.239,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 99.5,
+  "end": 99.75,
+  "text": "LÐ",
+  "y": 0.84,
+  "y2": 0.866,
+  "x": 0.757,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 99.75,
+  "end": 100.0,
+  "text": "lÌÍ VEA DE TH ly IỞ TÍ LỆ",
+  "y": 0.184,
+  "y2": 0.877,
+  "x": 0.26,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 100.0,
+  "end": 100.25,
+  "text": "VE lôi LỨC",
+  "y": 0.327,
+  "y2": 0.61,
+  "x": 0.26,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 100.25,
+  "end": 100.5,
+  "text": "VEA Cũ 2-4 tạ) tì TÍ",
+  "y": 0.327,
+  "y2": 0.713,
+  "x": 0.26,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 100.5,
+  "end": 100.75,
+  "text": "'tQ 14t)",
+  "y": 0.602,
+  "y2": 0.624,
+  "x": 0.333,
+  "maxh": 16,
+  "nframes": 1
+ },
+ {
+  "start": 100.75,
+  "end": 101.0,
+  "text": "VEA tQ 19 Hải TÍ",
+  "y": 0.327,
+  "y2": 0.712,
+  "x": 0.258,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 101.0,
+  "end": 101.25,
+  "text": "VEA tị tị 1108 đồ FE tu",
+  "y": 0.327,
+  "y2": 0.628,
+  "x": 0.257,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 101.25,
+  "end": 101.75,
+  "text": "VEA ESiD (CI rời",
+  "y": 0.327,
+  "y2": 0.466,
+  "x": 0.257,
+  "maxh": 51,
+  "nframes": 2
+ },
+ {
+  "start": 101.75,
+  "end": 102.25,
+  "text": "IVEA ES Bề bì VỚI: TÍ LÐ",
+  "y": 0.327,
+  "y2": 0.862,
+  "x": 0.224,
+  "maxh": 51,
+  "nframes": 2
+ },
+ {
+  "start": 102.25,
+  "end": 102.5,
+  "text": "RESIDENG tị VỚI.",
+  "y": 0.327,
+  "y2": 0.614,
+  "x": 0.225,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 102.5,
+  "end": 102.75,
+  "text": "II",
+  "y": 0.751,
+  "y2": 0.975,
+  "x": 0.438,
+  "maxh": 430,
+  "nframes": 1
+ },
+ {
+  "start": 102.75,
+  "end": 103.0,
+  "text": "Ay ÌÌ",
+  "y": 0.364,
+  "y2": 0.427,
+  "x": 0.303,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 103.0,
+  "end": 103.25,
+  "text": "Hi HIÌÌ) Đị thổi Z2 lÍ",
+  "y": 0.373,
+  "y2": 0.824,
+  "x": 0.135,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 103.25,
+  "end": 103.5,
+  "text": "lÌ 7224 Jl",
+  "y": 0.438,
+  "y2": 0.745,
+  "x": 0.406,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 103.5,
+  "end": 103.75,
+  "text": "2⁄4 AI",
+  "y": 0.644,
+  "y2": 0.897,
+  "x": 0.192,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 103.75,
+  "end": 104.0,
+  "text": "lÌ HỘI.",
+  "y": 0.42,
+  "y2": 0.581,
+  "x": 0.333,
+  "maxh": 34,
+  "nframes": 1
+ },
+ {
+  "start": 104.0,
+  "end": 104.5,
+  "text": "HHỊ| lÏ Z2 J2 if",
+  "y": 0.373,
+  "y2": 0.827,
+  "x": 0.194,
+  "maxh": 138,
+  "nframes": 2
+ },
+ {
+  "start": 104.5,
+  "end": 104.75,
+  "text": "lÌ|| li lÑ Z2 J2",
+  "y": 0.378,
+  "y2": 0.683,
+  "x": 0.158,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 104.75,
+  "end": 105.0,
+  "text": "ll 24M J2",
+  "y": 0.383,
+  "y2": 0.683,
+  "x": 0.278,
+  "maxh": 78,
+  "nframes": 1
+ },
+ {
+  "start": 105.0,
+  "end": 105.25,
+  "text": "Ly ÌI SỐ",
+  "y": 0.373,
+  "y2": 0.599,
+  "x": 0.333,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 105.25,
+  "end": 106.0,
+  "text": "Ly ÌI đề: JIll) lÍ 0ý",
+  "y": 0.373,
+  "y2": 0.85,
+  "x": 0.333,
+  "maxh": 122,
+  "nframes": 3
+ },
+ {
+  "start": 106.0,
+  "end": 106.25,
+  "text": "lÑ ai lÍ đà",
+  "y": 0.475,
+  "y2": 0.858,
+  "x": 0.101,
+  "maxh": 122,
+  "nframes": 1
+ },
+ {
+  "start": 106.25,
+  "end": 106.75,
+  "text": "ai MI DA Olympi Chấn",
+  "y": 0.545,
+  "y2": 0.622,
+  "x": 0.101,
+  "maxh": 52,
+  "nframes": 2
+ },
+ {
+  "start": 106.75,
+  "end": 107.0,
+  "text": "ÌI THÍ \\DÀI",
+  "y": 0.42,
+  "y2": 0.598,
+  "x": 0.333,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 107.0,
+  "end": 108.0,
+  "text": "THÍ ÀI lun J2 JUU lÍ I8",
+  "y": 0.509,
+  "y2": 0.85,
+  "x": 0.339,
+  "maxh": 122,
+  "nframes": 4
+ },
+ {
+  "start": 108.0,
+  "end": 108.25,
+  "text": "GöLF ÌI MÙ J2 I8",
+  "y": 0.299,
+  "y2": 0.85,
+  "x": 0.333,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 108.25,
+  "end": 108.5,
+  "text": "lÌ MI Cuốn",
+  "y": 0.388,
+  "y2": 0.62,
+  "x": 0.293,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 108.5,
+  "end": 108.75,
+  "text": "GOLF lu, lÌ| lz GẦN 9M lÍ",
+  "y": 0.324,
+  "y2": 0.827,
+  "x": 0.217,
+  "maxh": 118,
+  "nframes": 1
+ },
+ {
+  "start": 108.75,
+  "end": 110.75,
+  "text": "GOLF SD= lÌ ll LÍ hụ lui llý THÍ nh MI DAI SỐ Cuốn GAN 9M lỆ Ấy",
+  "y": 0.324,
+  "y2": 0.824,
+  "x": 0.211,
+  "maxh": 100,
+  "nframes": 8
+ },
+ {
+  "start": 110.75,
+  "end": 111.0,
+  "text": "sắ GOLF 3D= z2 lì SỈ ĐÓ GẦN ANH",
+  "y": 0.257,
+  "y2": 0.697,
+  "x": 0.242,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 111.0,
+  "end": 111.25,
+  "text": "lÍ số 21",
+  "y": 0.184,
+  "y2": 0.636,
+  "x": 0.463,
+  "maxh": 276,
+  "nframes": 1
+ },
+ {
+  "start": 112.0,
+  "end": 112.25,
+  "text": "à»g",
+  "y": 0.16,
+  "y2": 0.241,
+  "x": 0.117,
+  "maxh": 154,
+  "nframes": 1
+ },
+ {
+  "start": 112.75,
+  "end": 113.0,
+  "text": "xe",
+  "y": 0.106,
+  "y2": 0.186,
+  "x": 0.364,
+  "maxh": 153,
+  "nframes": 1
+ },
+ {
+  "start": 113.0,
+  "end": 113.25,
+  "text": "II",
+  "y": 0.342,
+  "y2": 0.434,
+  "x": 0.739,
+  "maxh": 176,
+  "nframes": 1
+ },
+ {
+  "start": 113.25,
+  "end": 113.5,
+  "text": "1Í",
+  "y": 0.381,
+  "y2": 0.535,
+  "x": 0.542,
+  "maxh": 296,
+  "nframes": 1
+ },
+ {
+  "start": 114.0,
+  "end": 114.25,
+  "text": "~áÍ",
+  "y": 0.228,
+  "y2": 0.281,
+  "x": 0.0,
+  "maxh": 102,
+  "nframes": 1
+ },
+ {
+  "start": 114.25,
+  "end": 114.5,
+  "text": "45 ng đỗ xôy",
+  "y": 0.099,
+  "y2": 0.616,
+  "x": 0.2,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 114.5,
+  "end": 114.75,
+  "text": "Lầu ¡nạ Số mm tại tại mm",
+  "y": 0.071,
+  "y2": 0.462,
+  "x": 0.271,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 114.75,
+  "end": 115.0,
+  "text": "48 mg xạ thương N1",
+  "y": 0.203,
+  "y2": 0.716,
+  "x": 0.146,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 115.0,
+  "end": 115.25,
+  "text": "phố",
+  "y": 0.596,
+  "y2": 0.616,
+  "x": 0.275,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 115.25,
+  "end": 115.5,
+  "text": "Lểu 08 73 mm lia L1 Rì Xây ph W1 gí II",
+  "y": 0.052,
+  "y2": 1.0,
+  "x": 0.013,
+  "maxh": 86,
+  "nframes": 1
+ },
+ {
+  "start": 115.5,
+  "end": 115.75,
+  "text": "04 lá ng xã cái lại",
+  "y": 0.156,
+  "y2": 0.408,
+  "x": 0.144,
+  "maxh": 212,
+  "nframes": 1
+ },
+ {
+  "start": 115.75,
+  "end": 116.0,
+  "text": "đề việt xí tt Xây",
+  "y": 0.315,
+  "y2": 0.616,
+  "x": 0.2,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 116.0,
+  "end": 116.5,
+  "text": "lu mg... ấu mm h1 xây",
+  "y": 0.141,
+  "y2": 0.621,
+  "x": 0.193,
+  "maxh": 168,
+  "nframes": 2
+ },
+ {
+  "start": 116.5,
+  "end": 116.75,
+  "text": "“49 44 H8 4Ì",
+  "y": 0.12,
+  "y2": 0.766,
+  "x": 0.008,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 116.75,
+  "end": 117.0,
+  "text": "IHE “hgoy bên HỊ HỆ su",
+  "y": 0.503,
+  "y2": 1.0,
+  "x": 0.031,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 117.0,
+  "end": 117.25,
+  "text": "mu jjB bên cạn n8 II HE EM",
+  "y": 0.441,
+  "y2": 1.0,
+  "x": 0.039,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 117.25,
+  "end": 117.5,
+  "text": "lề cọnh bên 8u EM HỆ BỊ H1 BỊ J1 Nl M8 HỆ II",
+  "y": 0.477,
+  "y2": 1.0,
+  "x": 0.069,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 117.5,
+  "end": 117.75,
+  "text": "IM dị. đôi Rived Resi lia IE IH NI 1U HỆ HH TE EU",
+  "y": 0.305,
+  "y2": 1.0,
+  "x": 0.147,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 117.75,
+  "end": 118.0,
+  "text": "Km luá Resi EU BỊ 18 1N",
+  "y": 0.372,
+  "y2": 1.0,
+  "x": 0.533,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 118.0,
+  "end": 118.25,
+  "text": "HN HE: ki H4: I5 lth ôi 65) EM MB EE MỊ HỆ HE EU HỆ HỆ 431430101 IN3 L1 su EM",
+  "y": 0.37,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 118.25,
+  "end": 118.5,
+  "text": "i18 at EU IH BỊ HỊ 4n 4H gu 24 su",
+  "y": 0.543,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 118.5,
+  "end": 118.75,
+  "text": "In\" HỊ EU HỆ HỆ IH 1B EM BE",
+  "y": 0.758,
+  "y2": 1.0,
+  "x": 0.147,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 118.75,
+  "end": 119.0,
+  "text": "35 tổng 4M In j1 EM mỊ Nà",
+  "y": 0.597,
+  "y2": 0.963,
+  "x": 0.163,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 119.0,
+  "end": 119.25,
+  "text": "k4 ao 35 BI HỆ HỆ HỆ BỊ II 4t",
+  "y": 0.404,
+  "y2": 1.0,
+  "x": 0.303,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 119.25,
+  "end": 119.5,
+  "text": "II La „am ¡mm II còo 35 tồn MỊN IB_- EM 1U B1 BỊ I8 n1 Na BỊ",
+  "y": 0.432,
+  "y2": 0.97,
+  "x": 0.0,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 119.5,
+  "end": 119.75,
+  "text": "IH ĐH BH B8 BI la Ls š8 :1a fụ",
+  "y": 0.173,
+  "y2": 0.832,
+  "x": 0.237,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 119.75,
+  "end": 120.0,
+  "text": "IHEN BI EB M1 H8 HE T7 lá Mã lá lạ",
+  "y": 0.059,
+  "y2": 0.457,
+  "x": 0.2,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 120.0,
+  "end": 120.25,
+  "text": "mụ HẠ H8 lá Mã s8 Ö—m... mí",
+  "y": 0.115,
+  "y2": 0.766,
+  "x": 0.167,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 120.25,
+  "end": 120.5,
+  "text": "HE T1 11 mu FB Mã M8. IH HỆ EB BE B1 Bí Mã L7 lá lạ ti tưy",
+  "y": 0.059,
+  "y2": 0.97,
+  "x": 0.076,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 120.5,
+  "end": 120.75,
+  "text": "HỆ Mỹ mu_- EH BỊ BỊ 11 mu 17 J8 BÍ là s8 LỆ",
+  "y": 0.06,
+  "y2": 0.767,
+  "x": 0.031,
+  "maxh": 74,
+  "nframes": 1
+ },
+ {
+  "start": 120.75,
+  "end": 121.0,
+  "text": "lỗ Im ITMR T1 11 mg EB EB BE BÍ lá Mã lÍ",
+  "y": 0.0,
+  "y2": 0.573,
+  "x": 0.0,
+  "maxh": 88,
+  "nframes": 1
+ },
+ {
+  "start": 121.0,
+  "end": 121.25,
+  "text": "TWN T1 Mỹ BI B1 tà J8 li ta",
+  "y": 0.081,
+  "y2": 0.893,
+  "x": 0.006,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 121.25,
+  "end": 121.5,
+  "text": "ME. BI bị EB 1N J8 BH th",
+  "y": 0.077,
+  "y2": 0.977,
+  "x": 0.0,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 121.5,
+  "end": 121.75,
+  "text": "Im TW II M8 IR Tì 38 \"VN BI li cử TT/",
+  "y": 0.0,
+  "y2": 0.664,
+  "x": 0.0,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 121.75,
+  "end": 122.0,
+  "text": "Im TÌ BI BI mg_- IN 3188 898 mi mã bị: 4Ÿ",
+  "y": 0.002,
+  "y2": 0.995,
+  "x": 0.025,
+  "maxh": 128,
+  "nframes": 1
+ },
+ {
+  "start": 122.0,
+  "end": 122.25,
+  "text": "HH HE mg BI T1 BI 38 BI IV Mu mm ng TT?",
+  "y": 0.052,
+  "y2": 0.665,
+  "x": 0.05,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 122.25,
+  "end": 122.5,
+  "text": "m5 HE II BI am M5 mm pm tì",
+  "y": 0.054,
+  "y2": 0.827,
+  "x": 0.011,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 122.5,
+  "end": 122.75,
+  "text": "I8... BI IB IBI 38 B1 ca B1 mm",
+  "y": 0.094,
+  "y2": 0.458,
+  "x": 0.0,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 122.75,
+  "end": 123.0,
+  "text": "BI BI số 38 88 LÝ BI 8U 9B B1 TIn sự",
+  "y": 0.104,
+  "y2": 0.691,
+  "x": 0.15,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 123.0,
+  "end": 123.25,
+  "text": "BI BI B1 BỊ 4ñ Bí MN B1 I8 B1 BE (14 VÀN Wai",
+  "y": 0.134,
+  "y2": 0.632,
+  "x": 0.047,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 123.25,
+  "end": 123.5,
+  "text": "18118 HỆ IR BI B1 BI IB NI J8 B1 IB 3E H1 Z1 JÐ PB GĐAT-TAI",
+  "y": 0.004,
+  "y2": 0.619,
+  "x": 0.0,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 123.5,
+  "end": 124.0,
+  "text": "1L BE IB NI HỊ II B1 BI BỊ HỊ BỊ BH IB BỊ A8 38 B1 1B BỊ RE B1 B1 18 B1 HỆ PB CŨ XỊc VÉ “AM",
+  "y": 0.004,
+  "y2": 1.0,
+  "x": 0.132,
+  "maxh": 102,
+  "nframes": 2
+ },
+ {
+  "start": 124.0,
+  "end": 124.25,
+  "text": "SN",
+  "y": 0.29,
+  "y2": 0.31,
+  "x": 0.767,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 124.75,
+  "end": 125.0,
+  "text": "si",
+  "y": 0.825,
+  "y2": 0.849,
+  "x": 0.912,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 125.0,
+  "end": 125.25,
+  "text": "đố... 22 Bị “vị",
+  "y": 0.423,
+  "y2": 0.845,
+  "x": 0.367,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 125.5,
+  "end": 125.75,
+  "text": "22",
+  "y": 0.795,
+  "y2": 0.807,
+  "x": 0.589,
+  "maxh": 22,
+  "nframes": 1
+ },
+ {
+  "start": 125.75,
+  "end": 126.0,
+  "text": "IV/ 2⁄2 24 ụt",
+  "y": 0.6,
+  "y2": 0.817,
+  "x": 0.261,
+  "maxh": 165,
+  "nframes": 1
+ },
+ {
+  "start": 126.0,
+  "end": 126.25,
+  "text": "gi! I1",
+  "y": 0.43,
+  "y2": 0.508,
+  "x": 0.55,
+  "maxh": 44,
+  "nframes": 1
+ },
+ {
+  "start": 126.25,
+  "end": 126.5,
+  "text": "qu) VÀ ụt",
+  "y": 0.601,
+  "y2": 0.82,
+  "x": 0.072,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 126.5,
+  "end": 126.75,
+  "text": "dt I1 lở \\Ột đủ) z4",
+  "y": 0.438,
+  "y2": 0.637,
+  "x": 0.269,
+  "maxh": 88,
+  "nframes": 1
+ },
+ {
+  "start": 126.75,
+  "end": 127.0,
+  "text": "ấu)",
+  "y": 0.929,
+  "y2": 1.0,
+  "x": 0.151,
+  "maxh": 136,
+  "nframes": 1
+ },
+ {
+  "start": 127.0,
+  "end": 127.25,
+  "text": "vô",
+  "y": 0.584,
+  "y2": 0.627,
+  "x": 0.514,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 127.25,
+  "end": 127.5,
+  "text": "aA",
+  "y": 0.588,
+  "y2": 0.613,
+  "x": 0.928,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 127.75,
+  "end": 128.0,
+  "text": "mm. mm",
+  "y": 0.418,
+  "y2": 0.55,
+  "x": 0.397,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 128.5,
+  "end": 128.75,
+  "text": "ĐATN",
+  "y": 0.641,
+  "y2": 0.683,
+  "x": 0.388,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 128.75,
+  "end": 129.0,
+  "text": "xã",
+  "y": 0.665,
+  "y2": 0.687,
+  "x": 0.939,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 129.0,
+  "end": 129.25,
+  "text": "NH AT",
+  "y": 0.631,
+  "y2": 0.692,
+  "x": 0.613,
+  "maxh": 117,
+  "nframes": 1
+ },
+ {
+  "start": 129.5,
+  "end": 129.75,
+  "text": "LỆ r1 li IR Bi IR mi MU BE BỊ BỊ I1 MUP [TL là hy l5",
+  "y": 0.315,
+  "y2": 1.0,
+  "x": 0.015,
+  "maxh": 108,
+  "nframes": 1
+ },
+ {
+  "start": 129.75,
+  "end": 130.0,
+  "text": "22... 4H IR L1 Bi LII_ 1Ì LTÌ LE MỊ TT I1 BỊ BỊ Bì LT] [TL",
+  "y": 0.243,
+  "y2": 0.783,
+  "x": 0.044,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 130.0,
+  "end": 130.25,
+  "text": "II r1 IR IIR L2 IR CÓ FT] Eí IỊ 1U _L1 L1) [TL sj Ha",
+  "y": 0.323,
+  "y2": 0.97,
+  "x": 0.004,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 130.25,
+  "end": 130.5,
+  "text": "r1 Iiii BÍ BÍ HE HE LT] mã",
+  "y": 0.334,
+  "y2": 0.73,
+  "x": 0.108,
+  "maxh": 27,
+  "nframes": 1
+ },
+ {
+  "start": 130.5,
+  "end": 130.75,
+  "text": "r1 BI IR TÌ CƠ mì CĂN\" BỊ LÍ MB; LL tạ Hạ",
+  "y": 0.318,
+  "y2": 0.977,
+  "x": 0.19,
+  "maxh": 118,
+  "nframes": 1
+ },
+ {
+  "start": 130.75,
+  "end": 131.0,
+  "text": "r1 Lri r1 IR Bi LiIL, IIR BI L3 TÌ l4 JIE NI NE ME EÍ MỊ L1) tận",
+  "y": 0.317,
+  "y2": 1.0,
+  "x": 0.09,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 131.0,
+  "end": 131.25,
+  "text": "gai: IR r1 IR 15 LÌ~ TỶ IR IR L1 HI IIE NI L1) NH HE BỊ BỊ l7. [TL",
+  "y": 0.3,
+  "y2": 0.782,
+  "x": 0.064,
+  "maxh": 74,
+  "nframes": 1
+ },
+ {
+  "start": 131.25,
+  "end": 131.5,
+  "text": "JZ Kh 1Ì L1 Tị Hi có NI LỊ] CS mã: BỊ BI BỊ LT] IL Thay Sni vì",
+  "y": 0.335,
+  "y2": 0.941,
+  "x": 0.075,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 131.5,
+  "end": 132.0,
+  "text": "mà nhung nhưng có mm ph MỸ",
+  "y": 0.552,
+  "y2": 0.916,
+  "x": 0.071,
+  "maxh": 69,
+  "nframes": 2
+ },
+ {
+  "start": 132.0,
+  "end": 132.5,
+  "text": "sa nhưng mò có mm 8W lí TE Mĩ",
+  "y": 0.489,
+  "y2": 0.925,
+  "x": 0.0,
+  "maxh": 76,
+  "nframes": 2
+ },
+ {
+  "start": 132.5,
+  "end": 132.75,
+  "text": "mà nhưng 'DUP, mm TẾ ưư",
+  "y": 0.555,
+  "y2": 0.916,
+  "x": 0.142,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 132.75,
+  "end": 133.0,
+  "text": "nhưn DUP mm Z2",
+  "y": 0.555,
+  "y2": 0.777,
+  "x": 0.042,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 133.0,
+  "end": 133.25,
+  "text": "lt si nhưng mà T1 mm JZ 'rựt",
+  "y": 0.425,
+  "y2": 0.941,
+  "x": 0.042,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 133.25,
+  "end": 133.5,
+  "text": "lạ» DUP, sa",
+  "y": 0.354,
+  "y2": 0.939,
+  "x": 0.226,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 133.5,
+  "end": 133.75,
+  "text": "nhưn§ mm mm sœ cm",
+  "y": 0.555,
+  "y2": 0.977,
+  "x": 0.142,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 133.75,
+  "end": 134.25,
+  "text": "ta: nh ĂN DU Ma Ns 'lA sẽ tự",
+  "y": 0.386,
+  "y2": 1.0,
+  "x": 0.036,
+  "maxh": 96,
+  "nframes": 2
+ },
+ {
+  "start": 134.25,
+  "end": 134.5,
+  "text": "58 Mãi TÌ TT TÌ TỶ TT li Bí TÌ TT TÌ HỆ GÌ. TT T111 T1 mm mn IH IM= [THỊ",
+  "y": 0.48,
+  "y2": 1.0,
+  "x": 0.067,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 134.5,
+  "end": 135.0,
+  "text": "TT TT Tì xT1 TỶ TT TT xT1 HỆ H1 TT TÌ r1 vc [TY TẾ lừng IH 1H 23 la PB",
+  "y": 0.506,
+  "y2": 1.0,
+  "x": 0.015,
+  "maxh": 68,
+  "nframes": 2
+ },
+ {
+  "start": 135.0,
+  "end": 135.25,
+  "text": "b5 TÌ TT TI TH TT TT KT lội lệ",
+  "y": 0.312,
+  "y2": 0.614,
+  "x": 0.057,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 135.25,
+  "end": 135.5,
+  "text": "lộ TT TT cK T1 1U IJI TI II",
+  "y": 0.43,
+  "y2": 0.998,
+  "x": 0.022,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 135.5,
+  "end": 135.75,
+  "text": "sa mm TT ẤT TH TT TH",
+  "y": 0.316,
+  "y2": 0.595,
+  "x": 0.071,
+  "maxh": 16,
+  "nframes": 1
+ },
+ {
+  "start": 135.75,
+  "end": 136.0,
+  "text": "co TH T12 t1 THỊ bịT LỆ bu TẾ",
+  "y": 0.308,
+  "y2": 0.809,
+  "x": 0.033,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 136.0,
+  "end": 136.5,
+  "text": "TRÊN TRƯỜNG THỊ T1 T11 tấ TI FTE BE ỤJ líi",
+  "y": 0.229,
+  "y2": 0.997,
+  "x": 0.093,
+  "maxh": 153,
+  "nframes": 2
+ },
+ {
+  "start": 136.5,
+  "end": 137.0,
+  "text": "lZ\\Z Lao mm TRÊN THỊ TRƯỜ TRU TT TT TT mn 5n IỊT",
+  "y": 0.166,
+  "y2": 0.993,
+  "x": 0.093,
+  "maxh": 158,
+  "nframes": 2
+ },
+ {
+  "start": 137.0,
+  "end": 137.25,
+  "text": "la",
+  "y": 0.314,
+  "y2": 0.344,
+  "x": 0.0,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 137.25,
+  "end": 138.25,
+  "text": "AJ All là. biết An Anh có vì saø mà xa lụt lạt ng Tạ,",
+  "y": 0.37,
+  "y2": 0.972,
+  "x": 0.0,
+  "maxh": 106,
+  "nframes": 4
+ },
+ {
+  "start": 138.25,
+  "end": 138.5,
+  "text": "ÚPLEX Ne tứ",
+  "y": 0.592,
+  "y2": 0.879,
+  "x": 0.265,
+  "maxh": 86,
+  "nframes": 1
+ },
+ {
+  "start": 138.5,
+  "end": 138.75,
+  "text": "DUPLEX tro tà:",
+  "y": 0.595,
+  "y2": 0.977,
+  "x": 0.329,
+  "maxh": 96,
+  "nframes": 1
+ },
+ {
+  "start": 138.75,
+  "end": 139.0,
+  "text": "CA LEX lạt tử tần",
+  "y": 0.595,
+  "y2": 0.994,
+  "x": 0.163,
+  "maxh": 60,
+  "nframes": 1
+ },
+ {
+  "start": 139.0,
+  "end": 139.25,
+  "text": "la CĂN DUPLEX uự tử",
+  "y": 0.562,
+  "y2": 0.948,
+  "x": 0.058,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 139.25,
+  "end": 139.5,
+  "text": "„7P ào tụt",
+  "y": 0.864,
+  "y2": 0.98,
+  "x": 0.472,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 139.5,
+  "end": 139.75,
+  "text": "LEX HỆ liệu!",
+  "y": 0.577,
+  "y2": 0.677,
+  "x": 0.471,
+  "maxh": 128,
+  "nframes": 1
+ },
+ {
+  "start": 139.75,
+  "end": 140.5,
+  "text": "DỤPLEX UPLEX trong nội đô KỲ HIẾM CỰC thường là",
+  "y": 0.57,
+  "y2": 0.688,
+  "x": 0.222,
+  "maxh": 138,
+  "nframes": 3
+ },
+ {
+  "start": 140.5,
+  "end": 140.75,
+  "text": "ĂN DUP ng nội HIE thường HẾ IIẾ TP. lạt lạt",
+  "y": 0.587,
+  "y2": 0.981,
+  "x": 0.036,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 140.75,
+  "end": 141.0,
+  "text": "DỤPLEX KỲ HIẾ tương lại lạt",
+  "y": 0.595,
+  "y2": 0.968,
+  "x": 0.188,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 141.0,
+  "end": 141.25,
+  "text": "ta óc dự JU “sáu",
+  "y": 0.216,
+  "y2": 0.73,
+  "x": 0.007,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 141.25,
+  "end": 141.5,
+  "text": "tịn lị LH lì AÊ gì",
+  "y": 0.332,
+  "y2": 0.756,
+  "x": 0.082,
+  "maxh": 166,
+  "nframes": 1
+ },
+ {
+  "start": 141.5,
+  "end": 141.75,
+  "text": "1L{1 mỊ rễ [N7 T7 Rị 74 A2 sử",
+  "y": 0.226,
+  "y2": 0.834,
+  "x": 0.0,
+  "maxh": 44,
+  "nframes": 1
+ },
+ {
+  "start": 141.75,
+  "end": 142.0,
+  "text": "WI 1111 FT) 11411 [1ÿ mm to lu 18",
+  "y": 0.385,
+  "y2": 0.813,
+  "x": 0.232,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 142.0,
+  "end": 142.25,
+  "text": "1i GA là HÍ 18 tan",
+  "y": 0.297,
+  "y2": 0.626,
+  "x": 0.033,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 142.25,
+  "end": 142.5,
+  "text": "lÌ Lam lễ thùnh ph Hạ gf sf øƒ",
+  "y": 0.426,
+  "y2": 0.957,
+  "x": 0.429,
+  "maxh": 64,
+  "nframes": 1
+ },
+ {
+  "start": 142.5,
+  "end": 142.75,
+  "text": "L1 bắc NN MÌ",
+  "y": 0.436,
+  "y2": 0.832,
+  "x": 0.143,
+  "maxh": 118,
+  "nframes": 1
+ },
+ {
+  "start": 142.75,
+  "end": 143.0,
+  "text": "4L” LG Lx Lí BI T5 xi",
+  "y": 0.322,
+  "y2": 0.615,
+  "x": 0.108,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 143.0,
+  "end": 143.25,
+  "text": "BI n5 Hi hì sẽ LL mĩ 1ó",
+  "y": 0.503,
+  "y2": 0.995,
+  "x": 0.149,
+  "maxh": 76,
+  "nframes": 1
+ },
+ {
+  "start": 143.25,
+  "end": 143.5,
+  "text": "mg mu Bị mị BÍ LT) BÍ ÉT mi a8. lị",
+  "y": 0.286,
+  "y2": 0.95,
+  "x": 0.096,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 143.5,
+  "end": 144.0,
+  "text": "Z3 CHIỀU HẠN CHIẾ VỀ LJ mã mm",
+  "y": 0.311,
+  "y2": 0.855,
+  "x": 0.271,
+  "maxh": 148,
+  "nframes": 2
+ },
+ {
+  "start": 144.0,
+  "end": 144.25,
+  "text": "IỂU CH r5",
+  "y": 0.566,
+  "y2": 0.918,
+  "x": 0.0,
+  "maxh": 120,
+  "nframes": 1
+ },
+ {
+  "start": 144.5,
+  "end": 144.75,
+  "text": "4A SỐ",
+  "y": 0.649,
+  "y2": 0.921,
+  "x": 0.053,
+  "maxh": 74,
+  "nframes": 1
+ },
+ {
+  "start": 144.75,
+  "end": 145.0,
+  "text": "lời Ty",
+  "y": 0.613,
+  "y2": 0.729,
+  "x": 0.076,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 145.0,
+  "end": 145.25,
+  "text": "ve Nƒ",
+  "y": 0.643,
+  "y2": 0.661,
+  "x": 0.165,
+  "maxh": 34,
+  "nframes": 1
+ },
+ {
+  "start": 145.25,
+  "end": 145.5,
+  "text": "ÔNG lạ",
+  "y": 0.624,
+  "y2": 0.719,
+  "x": 0.04,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 145.5,
+  "end": 145.75,
+  "text": "JJ UPLE ND La 12",
+  "y": 0.284,
+  "y2": 0.871,
+  "x": 0.076,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 145.75,
+  "end": 146.25,
+  "text": "làm TẦNG/~ CĂN DUPLEX ke „4z",
+  "y": 0.612,
+  "y2": 0.948,
+  "x": 0.117,
+  "maxh": 57,
+  "nframes": 2
+ },
+ {
+  "start": 146.25,
+  "end": 146.5,
+  "text": "mạ”",
+  "y": 0.82,
+  "y2": 0.833,
+  "x": 0.049,
+  "maxh": 24,
+  "nframes": 1
+ },
+ {
+  "start": 146.5,
+  "end": 146.75,
+  "text": "ĐI tứ",
+  "y": 0.593,
+  "y2": 0.86,
+  "x": 0.522,
+  "maxh": 50,
+  "nframes": 1
+ },
+ {
+  "start": 146.75,
+  "end": 147.0,
+  "text": "ĐĨ,",
+  "y": 0.584,
+  "y2": 0.63,
+  "x": 0.543,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 147.0,
+  "end": 147.25,
+  "text": "MẤT øI Chủ \\Xà",
+  "y": 0.58,
+  "y2": 0.716,
+  "x": 0.147,
+  "maxh": 74,
+  "nframes": 1
+ },
+ {
+  "start": 147.25,
+  "end": 147.5,
+  "text": "[177 ĐI chủ đầu `Xà",
+  "y": 0.28,
+  "y2": 0.714,
+  "x": 0.147,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 147.5,
+  "end": 147.75,
+  "text": "T1 JJ ĐI tớ",
+  "y": 0.281,
+  "y2": 0.972,
+  "x": 0.199,
+  "maxh": 100,
+  "nframes": 1
+ },
+ {
+  "start": 147.75,
+  "end": 148.25,
+  "text": "Tì MẤT ĐI lượn” đầu tư sẽ sử ^ea UZ",
+  "y": 0.282,
+  "y2": 0.966,
+  "x": 0.133,
+  "maxh": 108,
+  "nframes": 2
+ },
+ {
+  "start": 148.25,
+  "end": 148.5,
+  "text": "12; ĐI hủ đã ĂN xã nở",
+  "y": 0.29,
+  "y2": 0.894,
+  "x": 0.169,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 148.5,
+  "end": 148.75,
+  "text": "12; MẤT ĐI ĂN| 1UO nở JVÃ",
+  "y": 0.291,
+  "y2": 1.0,
+  "x": 0.086,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 148.75,
+  "end": 149.0,
+  "text": "ĐI chú ĂN HỘ mm nở",
+  "y": 0.593,
+  "y2": 0.891,
+  "x": 0.153,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 149.0,
+  "end": 149.25,
+  "text": "Hi II lc về việ TT gi LÍ F14 g5. 1i",
+  "y": 0.445,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 105,
+  "nframes": 1
+ },
+ {
+  "start": 149.25,
+  "end": 149.5,
+  "text": "lÍ LÌM., li IHE TT: đó vỗi LÍ T1 z2: LŨ xất.",
+  "y": 0.308,
+  "y2": 1.0,
+  "x": 0.335,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 149.5,
+  "end": 149.75,
+  "text": "LỆ 1Ì TT I1 LỄ II đó 14 BÍ",
+  "y": 0.308,
+  "y2": 0.83,
+  "x": 0.283,
+  "maxh": 61,
+  "nframes": 1
+ },
+ {
+  "start": 149.75,
+  "end": 150.0,
+  "text": "IT NI: Jj NHÿ BE. LJ",
+  "y": 0.381,
+  "y2": 0.927,
+  "x": 0.069,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 150.0,
+  "end": 150.25,
+  "text": "TÌ ng mỹ LÌ MẸ BÍ r1",
+  "y": 0.534,
+  "y2": 1.0,
+  "x": 0.282,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 150.25,
+  "end": 150.5,
+  "text": "Bí IHN JE HƯƠNG DOAN TT LÌ HIẾP",
+  "y": 0.393,
+  "y2": 0.758,
+  "x": 0.0,
+  "maxh": 81,
+  "nframes": 1
+ },
+ {
+  "start": 150.5,
+  "end": 150.75,
+  "text": "LÍ ANH MAI 8E LÌ",
+  "y": 0.54,
+  "y2": 0.713,
+  "x": 0.033,
+  "maxh": 114,
+  "nframes": 1
+ },
+ {
+  "start": 150.75,
+  "end": 151.0,
+  "text": "\"luu mã HI HI TT” HH g8: Lj",
+  "y": 0.312,
+  "y2": 0.973,
+  "x": 0.151,
+  "maxh": 125,
+  "nframes": 1
+ },
+ {
+  "start": 151.0,
+  "end": 151.25,
+  "text": "mị Nì mũ IN Mì TH ƯƠNGMAI HH EE",
+  "y": 0.296,
+  "y2": 0.844,
+  "x": 0.21,
+  "maxh": 125,
+  "nframes": 1
+ },
+ {
+  "start": 151.25,
+  "end": 151.5,
+  "text": "“ma mm BỂ TL mũ MB ƯƠNET MẠI NÀO\", \"LÍ LÌ EÍ",
+  "y": 0.185,
+  "y2": 0.92,
+  "x": 0.0,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 151.5,
+  "end": 151.75,
+  "text": "mị HE HHN NÀO HẦN FT",
+  "y": 0.361,
+  "y2": 0.77,
+  "x": 0.136,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 151.75,
+  "end": 152.0,
+  "text": "1L Nì Bị HỆ LÍ MẠI",
+  "y": 0.281,
+  "y2": 0.645,
+  "x": 0.212,
+  "maxh": 92,
+  "nframes": 1
+ },
+ {
+  "start": 152.0,
+  "end": 152.5,
+  "text": "mũ 7T IHHN NI BI HƯƠNG MẠI GIỚI NÀO Bí FT EBE EÍ BÍ LÍ",
+  "y": 0.29,
+  "y2": 0.934,
+  "x": 0.099,
+  "maxh": 130,
+  "nframes": 2
+ },
+ {
+  "start": 152.5,
+  "end": 152.75,
+  "text": "BỂ Mái Meygroup IIIIIIIIII",
+  "y": 0.35,
+  "y2": 0.983,
+  "x": 0.46,
+  "maxh": 140,
+  "nframes": 1
+ },
+ {
+  "start": 152.75,
+  "end": 153.0,
+  "text": "Lam mm Meygroup",
+  "y": 0.543,
+  "y2": 0.616,
+  "x": 0.485,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 153.0,
+  "end": 153.25,
+  "text": "me NHANH xá tam xe=",
+  "y": 0.403,
+  "y2": 0.632,
+  "x": 0.475,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 153.25,
+  "end": 153.5,
+  "text": "x4 IE",
+  "y": 0.493,
+  "y2": 0.85,
+  "x": 0.472,
+  "maxh": 92,
+  "nframes": 1
+ },
+ {
+  "start": 153.5,
+  "end": 153.75,
+  "text": "LÍ t1 LR la",
+  "y": 0.291,
+  "y2": 0.943,
+  "x": 0.846,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 153.75,
+  "end": 154.0,
+  "text": "v4 lr ònh tới mu ME m1 lạ",
+  "y": 0.489,
+  "y2": 1.0,
+  "x": 0.119,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 154.0,
+  "end": 154.25,
+  "text": "IM ònh tới 1M \"HT LÌ LÍ EH",
+  "y": 0.477,
+  "y2": 0.891,
+  "x": 0.0,
+  "maxh": 110,
+  "nframes": 1
+ },
+ {
+  "start": 154.25,
+  "end": 154.5,
+  "text": "mm In\" xá EU HỊ MỸ MI HE EE HW HỸ",
+  "y": 0.12,
+  "y2": 0.904,
+  "x": 0.121,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 154.5,
+  "end": 154.75,
+  "text": "DUP LEX F1 LU LH ME BE mu EE HE",
+  "y": 0.145,
+  "y2": 0.886,
+  "x": 0.142,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 154.75,
+  "end": 155.0,
+  "text": "x4 la LE mI tí HE",
+  "y": 0.476,
+  "y2": 0.896,
+  "x": 0.208,
+  "maxh": 102,
+  "nframes": 1
+ },
+ {
+  "start": 155.0,
+  "end": 155.25,
+  "text": "ru LT HỊ x4 L1 BM mã PL]",
+  "y": 0.33,
+  "y2": 0.877,
+  "x": 0.1,
+  "maxh": 87,
+  "nframes": 1
+ },
+ {
+  "start": 155.25,
+  "end": 155.5,
+  "text": "nã tui LF LH x4 H1 FD vân LL u_m1 mỹ",
+  "y": 0.263,
+  "y2": 0.782,
+  "x": 0.193,
+  "maxh": 148,
+  "nframes": 1
+ },
+ {
+  "start": 155.5,
+  "end": 155.75,
+  "text": "CĂN DUPLE% EM H133 LD HH LH xá ED EH mg EHM m1 mu xí PL]",
+  "y": 0.14,
+  "y2": 0.846,
+  "x": 0.004,
+  "maxh": 136,
+  "nframes": 1
+ },
+ {
+  "start": 155.75,
+  "end": 156.0,
+  "text": "DUPLEX \"bu min bá xI |RR FIB IE BE HW BE lề",
+  "y": 0.15,
+  "y2": 0.804,
+  "x": 0.154,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 156.0,
+  "end": 156.25,
+  "text": "CAN DUPLEX L1 Lã LD —Mu LD v4 LH me BH |Iu I8",
+  "y": 0.15,
+  "y2": 0.784,
+  "x": 0.046,
+  "maxh": 111,
+  "nframes": 1
+ },
+ {
+  "start": 156.25,
+  "end": 156.5,
+  "text": "CAN DUPLEX Mỹ me: SE si gu Lá #44 mm TA SG",
+  "y": 0.15,
+  "y2": 1.0,
+  "x": 0.062,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 156.5,
+  "end": 157.0,
+  "text": "DUPLEX CĂN EDI Lãi LH xế LH H1 tr mg IEN m1 MMZ/ mm",
+  "y": 0.128,
+  "y2": 0.851,
+  "x": 0.076,
+  "maxh": 114,
+  "nframes": 2
+ },
+ {
+  "start": 157.0,
+  "end": 157.25,
+  "text": "DUPLEX _96 EDI 1L. tá tr IBM 98 mm",
+  "y": 0.138,
+  "y2": 0.82,
+  "x": 0.026,
+  "maxh": 116,
+  "nframes": 1
+ },
+ {
+  "start": 157.25,
+  "end": 157.5,
+  "text": "96 DUPLEX \"HH SỊ lô IBN L5 EB LTD mm son",
+  "y": 0.15,
+  "y2": 0.923,
+  "x": 0.114,
+  "maxh": 93,
+  "nframes": 1
+ },
+ {
+  "start": 157.5,
+  "end": 157.75,
+  "text": "DUPLEX 96 CĂN t1 L1 lá L1 mí",
+  "y": 0.145,
+  "y2": 0.796,
+  "x": 0.121,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 157.75,
+  "end": 158.0,
+  "text": "96 CAN DUPLEX “ai 20- 1188 TN) Mì 12",
+  "y": 0.148,
+  "y2": 0.933,
+  "x": 0.104,
+  "maxh": 96,
+  "nframes": 1
+ },
+ {
+  "start": 158.0,
+  "end": 158.25,
+  "text": "96 CAN DUPLEX mm rị mg 118, ET 1E mt",
+  "y": 0.15,
+  "y2": 0.777,
+  "x": 0.011,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 158.25,
+  "end": 158.5,
+  "text": "96 CAN SN. \"I8 LÍ BỊ. EH \"in lật: LT] LN F7",
+  "y": 0.15,
+  "y2": 0.809,
+  "x": 0.0,
+  "maxh": 177,
+  "nframes": 1
+ },
+ {
+  "start": 158.5,
+  "end": 158.75,
+  "text": "96 CAN nam Hà 18 F1",
+  "y": 0.15,
+  "y2": 0.683,
+  "x": 0.14,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 158.75,
+  "end": 159.0,
+  "text": "96 CAN DUPLEX \"ấu 20- số LLỊ LL] mg côn",
+  "y": 0.15,
+  "y2": 0.643,
+  "x": 0.14,
+  "maxh": 93,
+  "nframes": 1
+ },
+ {
+  "start": 159.0,
+  "end": 159.25,
+  "text": "LL Mai ¡IMI LÍ",
+  "y": 0.163,
+  "y2": 0.881,
+  "x": 0.308,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 159.25,
+  "end": 159.5,
+  "text": "lái li [11",
+  "y": 0.36,
+  "y2": 0.651,
+  "x": 0.585,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 159.5,
+  "end": 159.75,
+  "text": "11 mu lãi",
+  "y": 0.528,
+  "y2": 0.824,
+  "x": 0.451,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 159.75,
+  "end": 160.0,
+  "text": "Lñ Jj I1 iu",
+  "y": 0.323,
+  "y2": 0.826,
+  "x": 0.896,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 160.0,
+  "end": 160.25,
+  "text": "lim lR Mai li IINI IIM HÌ LÍ EBEE",
+  "y": 0.148,
+  "y2": 0.941,
+  "x": 0.232,
+  "maxh": 177,
+  "nframes": 1
+ },
+ {
+  "start": 160.25,
+  "end": 160.5,
+  "text": "II IIRI lI IINII",
+  "y": 0.442,
+  "y2": 0.827,
+  "x": 0.847,
+  "maxh": 74,
+  "nframes": 1
+ },
+ {
+  "start": 160.5,
+  "end": 160.75,
+  "text": "lì tr Em II 322 TITR",
+  "y": 0.152,
+  "y2": 0.791,
+  "x": 0.24,
+  "maxh": 166,
+  "nframes": 1
+ },
+ {
+  "start": 160.75,
+  "end": 161.0,
+  "text": "¡3M II li 3w LÊ 4N",
+  "y": 0.279,
+  "y2": 0.975,
+  "x": 0.497,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 161.0,
+  "end": 161.5,
+  "text": "lÏ IÍ 300.: II _TIIM _IM g.B: NT",
+  "y": 0.254,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 93,
+  "nframes": 2
+ },
+ {
+  "start": 161.5,
+  "end": 161.75,
+  "text": "gu II II IIR tả mỹI 1-0",
+  "y": 0.218,
+  "y2": 0.886,
+  "x": 0.031,
+  "maxh": 159,
+  "nframes": 1
+ },
+ {
+  "start": 161.75,
+  "end": 162.0,
+  "text": "yy LÍ II lị Tỉ",
+  "y": 0.087,
+  "y2": 0.874,
+  "x": 0.078,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 162.0,
+  "end": 162.25,
+  "text": "Làn TH J1 II g.Ẽ dai",
+  "y": 0.273,
+  "y2": 0.945,
+  "x": 0.003,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 162.25,
+  "end": 162.5,
+  "text": "LR la II 1E 300 mĩi LÌ 4Ñ",
+  "y": 0.208,
+  "y2": 0.969,
+  "x": 0.232,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 162.75,
+  "end": 163.0,
+  "text": "TR CA 8m",
+  "y": 0.195,
+  "y2": 0.337,
+  "x": 0.119,
+  "maxh": 58,
+  "nframes": 1
+ },
+ {
+  "start": 163.0,
+  "end": 166.75,
+  "text": "TR TRA CA 6.8m Rà CÁ. LÌ lÍ Kế",
+  "y": 0.195,
+  "y2": 0.887,
+  "x": 0.119,
+  "maxh": 219,
+  "nframes": 15
+ },
+ {
+  "start": 167.0,
+  "end": 168.5,
+  "text": "ĐẶC QUYỀN RIÊNG BIỆT QUYÊN KHÔNG DÀNH CHO SỐ ĐÔNG Mi lryc CHỖ ĐỖ ĐÓ XE ĐỊNH DANH chỉlà đủ, Không chỉ là đủ đủ. đủ... THỰCTẾLA TẾLÀ THƯA THỪA THỰCTẾLÀ A4 100% TẦNG HẦM ĐÔ THÔNG MINH",
+  "y": 0.259,
+  "y2": 0.806,
+  "x": 0.085,
+  "maxh": 76,
+  "nframes": 6
+ },
+ {
+  "start": 168.5,
+  "end": 168.75,
+  "text": "nam. _Th lam FT] RE In L1]",
+  "y": 0.352,
+  "y2": 0.817,
+  "x": 0.178,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 168.75,
+  "end": 169.0,
+  "text": "cm mì hộ mm EH HÀ IH",
+  "y": 0.0,
+  "y2": 0.864,
+  "x": 0.0,
+  "maxh": 130,
+  "nframes": 1
+ },
+ {
+  "start": 169.0,
+  "end": 169.25,
+  "text": "hộ LT] EH MB IE LL1 LL",
+  "y": 0.586,
+  "y2": 0.932,
+  "x": 0.128,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 169.25,
+  "end": 169.5,
+  "text": "t5 IE In EH In EH MEEE mg",
+  "y": 0.498,
+  "y2": 0.923,
+  "x": 0.236,
+  "maxh": 104,
+  "nframes": 1
+ },
+ {
+  "start": 169.5,
+  "end": 170.0,
+  "text": "TA L1... mì 5i Mi 58 nã còn hộ mg: BỊ am IE IE BỊ IE BỊ BỊ BỊ BH In EH H1 LỊ BỊ 1m HH BỊ IENI Hà Ht BE",
+  "y": 0.155,
+  "y2": 0.962,
+  "x": 0.035,
+  "maxh": 164,
+  "nframes": 2
+ },
+ {
+  "start": 170.0,
+  "end": 170.25,
+  "text": "BI L1... LÍ mm ME H1 174 HỆ BH H1 lẽ 1n lá lẽ l6 mã lẽ g§H lẽ mm",
+  "y": 0.283,
+  "y2": 0.952,
+  "x": 0.001,
+  "maxh": 228,
+  "nframes": 1
+ },
+ {
+  "start": 170.25,
+  "end": 170.75,
+  "text": "\"ii HR 4jí EE BE BỊ BI IE BI BỊ IE BỊ BỊ TỰ BỊ BỊ 11 BỊ BỊ BI BỊ mm",
+  "y": 0.284,
+  "y2": 0.952,
+  "x": 0.142,
+  "maxh": 54,
+  "nframes": 2
+ },
+ {
+  "start": 170.75,
+  "end": 171.0,
+  "text": "mi LL] IE BỊ In mí IR IN¬ In EH mỊ BỊ",
+  "y": 0.284,
+  "y2": 0.852,
+  "x": 0.282,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 171.0,
+  "end": 171.25,
+  "text": "BIẾT THỰ MẬT ĐẤT... In mu BE EH H8 1E. BI va lÌ",
+  "y": 0.2,
+  "y2": 0.941,
+  "x": 0.158,
+  "maxh": 86,
+  "nframes": 1
+ },
+ {
+  "start": 171.25,
+  "end": 171.5,
+  "text": "BH LIÊN 1a IEB BI BỊ mg BI BỊ BI IE BI BỊ IE BỊ BỊ HỊ LL] BỊ BỊ",
+  "y": 0.328,
+  "y2": 0.859,
+  "x": 0.021,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 171.5,
+  "end": 171.75,
+  "text": "THỰ nã BI BỊ BI BỊ Nà BI BỊ BI BỊ BI BỊ sịm HỊ BỊ",
+  "y": 0.2,
+  "y2": 0.851,
+  "x": 0.0,
+  "maxh": 135,
+  "nframes": 1
+ },
+ {
+  "start": 171.75,
+  "end": 172.0,
+  "text": "MẶT. mm INI IN HE 1E Mộ BỊ l6 31H Ị8",
+  "y": 0.196,
+  "y2": 0.854,
+  "x": 0.157,
+  "maxh": 90,
+  "nframes": 1
+ },
+ {
+  "start": 172.0,
+  "end": 172.25,
+  "text": "MÃ ẤT THỰ IC lên kết lễ 14 1E 1E IE",
+  "y": 0.187,
+  "y2": 0.828,
+  "x": 0.0,
+  "maxh": 168,
+  "nframes": 1
+ },
+ {
+  "start": 172.25,
+  "end": 172.5,
+  "text": "TÑ Buo lên mu mm „mm 1B. am ca BI BỊ BỊ BỊ BI BỊ BI BI BỊ BI BỊ BỊ",
+  "y": 0.264,
+  "y2": 0.878,
+  "x": 0.106,
+  "maxh": 108,
+  "nframes": 1
+ },
+ {
+  "start": 172.5,
+  "end": 172.75,
+  "text": "IẸT TH len LÍ 3-4 Iã ca mÍ `w`mm BI 3H HE IE BE",
+  "y": 0.205,
+  "y2": 0.851,
+  "x": 0.156,
+  "maxh": 88,
+  "nframes": 1
+ },
+ {
+  "start": 172.75,
+  "end": 173.0,
+  "text": "CÁ mị ke LỄ-",
+  "y": 0.259,
+  "y2": 0.764,
+  "x": 0.006,
+  "maxh": 74,
+  "nframes": 1
+ },
+ {
+  "start": 173.0,
+  "end": 173.5,
+  "text": "Để phẩm sản nòy rd ra đời",
+  "y": 0.593,
+  "y2": 0.616,
+  "x": 0.293,
+  "maxh": 45,
+  "nframes": 2
+ },
+ {
+  "start": 173.5,
+  "end": 174.5,
+  "text": "dị 14 si giữa lõi Hà Hò Nội bị bụ 18 g1",
+  "y": 0.341,
+  "y2": 0.855,
+  "x": 0.014,
+  "maxh": 63,
+  "nframes": 4
+ },
+ {
+  "start": 174.5,
+  "end": 174.75,
+  "text": "đỗ tư bụ",
+  "y": 0.155,
+  "y2": 0.845,
+  "x": 0.004,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 174.75,
+  "end": 176.25,
+  "text": "đầu AT CHỊU CHI chủ đấu tư tử từ đã để đổi lấy am a1 làng 5a 18 Lư đi",
+  "y": 0.148,
+  "y2": 0.919,
+  "x": 0.076,
+  "maxh": 54,
+  "nframes": 6
+ },
+ {
+  "start": 176.25,
+  "end": 177.75,
+  "text": "HỊU JU CHI Chủ chu đau tử lo) để đổi lấy SỰĐẲNG ĐẲNG CẤP THỰC SỰ THỰẾSỰ co cho gia z3 xã mã. mã am 19 n5\" g1 lị 18 1181",
+  "y": 0.148,
+  "y2": 0.823,
+  "x": 0.029,
+  "maxh": 106,
+  "nframes": 6
+ },
+ {
+  "start": 177.75,
+  "end": 178.0,
+  "text": "SG",
+  "y": 0.585,
+  "y2": 0.634,
+  "x": 0.254,
+  "maxh": 94,
+  "nframes": 1
+ },
+ {
+  "start": 178.0,
+  "end": 178.25,
+  "text": "HẠ hết tà “HÀ,",
+  "y": 0.55,
+  "y2": 1.0,
+  "x": 0.097,
+  "maxh": 186,
+  "nframes": 1
+ },
+ {
+  "start": 178.25,
+  "end": 178.5,
+  "text": "cđêu vÌ:",
+  "y": 0.596,
+  "y2": 0.952,
+  "x": 0.403,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 178.5,
+  "end": 178.75,
+  "text": "LŨ",
+  "y": 0.938,
+  "y2": 0.948,
+  "x": 0.749,
+  "maxh": 21,
+  "nframes": 1
+ },
+ {
+  "start": 178.75,
+  "end": 182.25,
+  "text": "SỰ CHỊU CHI của dựớn dựán dựón dự nằm còn NHỮNG TIẾT NHỎ xa s4 tý sẽ TA. IS La mm 77 zZ7 zZ Z2",
+  "y": 0.179,
+  "y2": 1.0,
+  "x": 0.0,
+  "maxh": 202,
+  "nframes": 14
+ },
+ {
+  "start": 182.25,
+  "end": 182.5,
+  "text": "1m mm thấy, mo",
+  "y": 0.244,
+  "y2": 0.734,
+  "x": 0.0,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 182.5,
+  "end": 182.75,
+  "text": "LÊ. ho thấy Ta Tạ TL øŸ",
+  "y": 0.463,
+  "y2": 0.995,
+  "x": 0.029,
+  "maxh": 125,
+  "nframes": 1
+ },
+ {
+  "start": 182.75,
+  "end": 183.0,
+  "text": "Xi",
+  "y": 0.982,
+  "y2": 0.997,
+  "x": 0.093,
+  "maxh": 28,
+  "nframes": 1
+ },
+ {
+  "start": 183.0,
+  "end": 183.25,
+  "text": "LÊ BÌNH 1J a1",
+  "y": 0.461,
+  "y2": 0.92,
+  "x": 0.015,
+  "maxh": 68,
+  "nframes": 1
+ },
+ {
+  "start": 183.25,
+  "end": 183.5,
+  "text": "LÊ ly K7 số",
+  "y": 0.464,
+  "y2": 0.983,
+  "x": 0.015,
+  "maxh": 70,
+  "nframes": 1
+ },
+ {
+  "start": 183.5,
+  "end": 184.75,
+  "text": "CHÚ TÂM SỰ để kiến tạo ra một Lý l4 rể mm",
+  "y": 0.152,
+  "y2": 0.917,
+  "x": 0.164,
+  "maxh": 226,
+  "nframes": 5
+ },
+ {
+  "start": 185.0,
+  "end": 185.75,
+  "text": "SỰC của chủ đầu tư SỐNG KHÔNG 6ỐNG GIAN nụ CẤP để kiến một tạo ra LẺ Nh: tr",
+  "y": 0.157,
+  "y2": 0.961,
+  "x": 0.011,
+  "maxh": 102,
+  "nframes": 3
+ },
+ {
+  "start": 185.75,
+  "end": 186.0,
+  "text": "THỊ lx TM LH kế sĩ Mi gi",
+  "y": 0.364,
+  "y2": 0.904,
+  "x": 0.14,
+  "maxh": 56,
+  "nframes": 1
+ },
+ {
+  "start": 186.0,
+  "end": 186.25,
+  "text": "II HỆ LH độ ấI",
+  "y": 0.434,
+  "y2": 0.822,
+  "x": 0.096,
+  "maxh": 54,
+  "nframes": 1
+ },
+ {
+  "start": 186.25,
+  "end": 186.5,
+  "text": "LTT II II Triết kế. s1",
+  "y": 0.434,
+  "y2": 0.671,
+  "x": 0.14,
+  "maxh": 78,
+  "nframes": 1
+ },
+ {
+  "start": 186.5,
+  "end": 186.75,
+  "text": "LỄ lÌ ILETI II kế Hà ấI 9ˆ tuy",
+  "y": 0.446,
+  "y2": 0.883,
+  "x": 0.04,
+  "maxh": 40,
+  "nframes": 1
+ },
+ {
+  "start": 186.75,
+  "end": 187.0,
+  "text": "TÚ TR kế là xe lq",
+  "y": 0.505,
+  "y2": 0.883,
+  "x": 0.083,
+  "maxh": 36,
+  "nframes": 1
+ },
+ {
+  "start": 187.0,
+  "end": 187.25,
+  "text": "ĐI Thiết kế",
+  "y": 0.584,
+  "y2": 0.625,
+  "x": 0.0,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 187.25,
+  "end": 187.5,
+  "text": "tì tì LEI ïthác cv tha",
+  "y": 0.303,
+  "y2": 0.883,
+  "x": 0.042,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 187.5,
+  "end": 187.75,
+  "text": "L2 ng Z1",
+  "y": 0.385,
+  "y2": 0.699,
+  "x": 0.157,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 187.75,
+  "end": 188.0,
+  "text": "tị lj Lá 18 77",
+  "y": 0.48,
+  "y2": 0.813,
+  "x": 0.146,
+  "maxh": 27,
+  "nframes": 1
+ },
+ {
+  "start": 188.0,
+  "end": 188.25,
+  "text": "TT wx thúc LÍ)",
+  "y": 0.329,
+  "y2": 0.923,
+  "x": 0.268,
+  "maxh": 33,
+  "nframes": 1
+ },
+ {
+  "start": 188.25,
+  "end": 188.5,
+  "text": "1ì TT TẾ] tơ",
+  "y": 0.327,
+  "y2": 0.752,
+  "x": 0.133,
+  "maxh": 18,
+  "nframes": 1
+ },
+ {
+  "start": 188.5,
+  "end": 189.5,
+  "text": "RIVDA RE kết nối và được với LÍ",
+  "y": 0.508,
+  "y2": 0.64,
+  "x": 0.125,
+  "maxh": 81,
+  "nframes": 4
+ },
+ {
+  "start": 189.5,
+  "end": 190.25,
+  "text": "(bằng bằng một côy cổ “Tế",
+  "y": 0.593,
+  "y2": 0.785,
+  "x": 0.179,
+  "maxh": 64,
+  "nframes": 3
+ },
+ {
+  "start": 190.25,
+  "end": 190.75,
+  "text": "r2 mong tên là lò II",
+  "y": 0.496,
+  "y2": 0.839,
+  "x": 0.014,
+  "maxh": 42,
+  "nframes": 2
+ },
+ {
+  "start": 191.0,
+  "end": 191.25,
+  "text": "RIVE/ ỞI II",
+  "y": 0.506,
+  "y2": 0.741,
+  "x": 0.049,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 191.25,
+  "end": 191.5,
+  "text": "+—ri",
+  "y": 0.349,
+  "y2": 0.359,
+  "x": 0.165,
+  "maxh": 20,
+  "nframes": 1
+ },
+ {
+  "start": 191.75,
+  "end": 192.0,
+  "text": "1M 9⁄3 tụ",
+  "y": 0.639,
+  "y2": 0.861,
+  "x": 0.074,
+  "maxh": 34,
+  "nframes": 1
+ },
+ {
+  "start": 192.0,
+  "end": 192.25,
+  "text": "co sử",
+  "y": 0.779,
+  "y2": 0.865,
+  "x": 0.143,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 192.25,
+  "end": 192.5,
+  "text": "ĐA LZ giẾ!:",
+  "y": 0.266,
+  "y2": 0.898,
+  "x": 0.136,
+  "maxh": 48,
+  "nframes": 1
+ },
+ {
+  "start": 192.5,
+  "end": 193.0,
+  "text": "Đa 2O, lÍ Ø1 27",
+  "y": 0.265,
+  "y2": 0.875,
+  "x": 0.06,
+  "maxh": 57,
+  "nframes": 2
+ },
+ {
+  "start": 193.0,
+  "end": 193.25,
+  "text": "H4 MS",
+  "y": 0.454,
+  "y2": 0.614,
+  "x": 0.203,
+  "maxh": 34,
+  "nframes": 1
+ },
+ {
+  "start": 193.25,
+  "end": 194.25,
+  "text": "TÓA BIEU TƯƠNG 48. TU LB LN l8. Mu",
+  "y": 0.245,
+  "y2": 0.7,
+  "x": 0.011,
+  "maxh": 84,
+  "nframes": 4
+ },
+ {
+  "start": 194.25,
+  "end": 194.75,
+  "text": "TÓA BIEU TƯỢNG TƯƠNG- TỦ TP giữa lòng trung tâm 1U",
+  "y": 0.242,
+  "y2": 0.58,
+  "x": 0.172,
+  "maxh": 84,
+  "nframes": 2
+ },
+ {
+  "start": 194.75,
+  "end": 195.0,
+  "text": "PP TÓA LẺ giữã †rung tâm J2",
+  "y": 0.237,
+  "y2": 0.856,
+  "x": 0.01,
+  "maxh": 81,
+  "nframes": 1
+ },
+ {
+  "start": 195.0,
+  "end": 195.25,
+  "text": "\"TÓA tý tr lòng trung tâm A11 tà",
+  "y": 0.242,
+  "y2": 0.89,
+  "x": 0.167,
+  "maxh": 94,
+  "nframes": 1
+ },
+ {
+  "start": 195.25,
+  "end": 195.5,
+  "text": "ĐA II BIEU TƯỢNG vá lòng tâm",
+  "y": 0.21,
+  "y2": 0.56,
+  "x": 0.004,
+  "maxh": 194,
+  "nframes": 1
+ },
+ {
+  "start": 195.5,
+  "end": 195.75,
+  "text": "Ba TÓA BIỂU TƯỢNG Ïƒ giữa tấm THÀNH PHỐI BÀ của NỘI sẽ J7 íg",
+  "y": 0.209,
+  "y2": 0.948,
+  "x": 0.006,
+  "maxh": 112,
+  "nframes": 1
+ },
+ {
+  "start": 196.0,
+  "end": 196.25,
+  "text": "ĐÔ. tí",
+  "y": 0.592,
+  "y2": 0.806,
+  "x": 0.103,
+  "maxh": 52,
+  "nframes": 1
+ },
+ {
+  "start": 196.25,
+  "end": 196.5,
+  "text": "bộ còn tý",
+  "y": 0.576,
+  "y2": 0.814,
+  "x": 0.136,
+  "maxh": 96,
+  "nframes": 1
+ },
+ {
+  "start": 197.25,
+  "end": 197.5,
+  "text": "r4",
+  "y": 0.642,
+  "y2": 0.662,
+  "x": 0.103,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 197.75,
+  "end": 198.0,
+  "text": "lệ Hãi",
+  "y": 0.251,
+  "y2": 0.618,
+  "x": 0.799,
+  "maxh": 78,
+  "nframes": 1
+ },
+ {
+  "start": 198.25,
+  "end": 198.5,
+  "text": "lệ",
+  "y": 0.258,
+  "y2": 0.299,
+  "x": 0.894,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 198.5,
+  "end": 198.75,
+  "text": "OW-E",
+  "y": 0.594,
+  "y2": 0.616,
+  "x": 0.164,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 198.75,
+  "end": 200.0,
+  "text": "TỐ TỐI ƯU ÁNH SÁNG se vn",
+  "y": 0.176,
+  "y2": 0.401,
+  "x": 0.042,
+  "maxh": 63,
+  "nframes": 5
+ },
+ {
+  "start": 200.0,
+  "end": 200.25,
+  "text": "TÔIƯU ẢNH SANG",
+  "y": 0.183,
+  "y2": 0.205,
+  "x": 0.075,
+  "maxh": 44,
+  "nframes": 1
+ },
+ {
+  "start": 200.25,
+  "end": 201.75,
+  "text": "TỐI TỔIƯU ƯU ÁNH SÁNG ĐẢM BẢO CÁCH ÂM CÁCH NHIỆT se tự",
+  "y": 0.176,
+  "y2": 0.593,
+  "x": 0.043,
+  "maxh": 61,
+  "nframes": 6
+ },
+ {
+  "start": 201.75,
+  "end": 202.0,
+  "text": "29) BI là L_L® HHg mm",
+  "y": 0.295,
+  "y2": 0.922,
+  "x": 0.053,
+  "maxh": 144,
+  "nframes": 1
+ },
+ {
+  "start": 202.0,
+  "end": 202.25,
+  "text": "LÍ) NHI LÌ 3N kì \"em NI ng",
+  "y": 0.351,
+  "y2": 1.0,
+  "x": 0.143,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 202.25,
+  "end": 202.5,
+  "text": "BE \"1M IN lữ Mã Lj LÍ LÌ mm",
+  "y": 0.589,
+  "y2": 0.967,
+  "x": 0.428,
+  "maxh": 116,
+  "nframes": 1
+ },
+ {
+  "start": 202.5,
+  "end": 202.75,
+  "text": "\"El BE z1 [II LÝ HE HÌ m.H",
+  "y": 0.468,
+  "y2": 0.91,
+  "x": 0.083,
+  "maxh": 84,
+  "nframes": 1
+ },
+ {
+  "start": 202.75,
+  "end": 203.0,
+  "text": "LR Bế. Lj Lj LỊ mm",
+  "y": 0.339,
+  "y2": 0.915,
+  "x": 0.578,
+  "maxh": 72,
+  "nframes": 1
+ },
+ {
+  "start": 203.0,
+  "end": 203.25,
+  "text": "Vd lo) EN BH Rb MH",
+  "y": 0.252,
+  "y2": 0.795,
+  "x": 0.14,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 203.25,
+  "end": 203.5,
+  "text": "Và TT mm Mã TTỊ BI HỊ L1 lý mm",
+  "y": 0.252,
+  "y2": 0.94,
+  "x": 0.107,
+  "maxh": 78,
+  "nframes": 1
+ },
+ {
+  "start": 203.5,
+  "end": 203.75,
+  "text": "Và LIÊN miấk LR EM Bí NHE ng BI HỊ",
+  "y": 0.252,
+  "y2": 0.891,
+  "x": 0.106,
+  "maxh": 99,
+  "nframes": 1
+ },
+ {
+  "start": 203.75,
+  "end": 204.0,
+  "text": "VY. Vài xi lí: vì Mũ TTỊ BM II IE LÍ HỊ LÍ L_H \"mm:",
+  "y": 0.211,
+  "y2": 0.927,
+  "x": 0.111,
+  "maxh": 63,
+  "nframes": 1
+ },
+ {
+  "start": 204.0,
+  "end": 204.5,
+  "text": "Mỗi th sóng",
+  "y": 0.587,
+  "y2": 0.62,
+  "x": 0.342,
+  "maxh": 64,
+  "nframes": 2
+ },
+ {
+  "start": 204.5,
+  "end": 204.75,
+  "text": "lá xe dậy Mỗi sóng:",
+  "y": 0.252,
+  "y2": 0.622,
+  "x": 0.107,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 204.75,
+  "end": 205.0,
+  "text": "l2 dgy",
+  "y": 0.562,
+  "y2": 0.614,
+  "x": 0.103,
+  "maxh": 21,
+  "nframes": 1
+ },
+ {
+  "start": 205.0,
+  "end": 207.0,
+  "text": "mm tí FÍ kau gnh trọn dòng số sông anh CHÍ thể thu dõi Hồ an chị có trộn sôngH ông tự “Sẽ VÀ",
+  "y": 0.106,
+  "y2": 0.845,
+  "x": 0.156,
+  "maxh": 96,
+  "nframes": 8
+ },
+ {
+  "start": 207.25,
+  "end": 208.0,
+  "text": "Lh 7ø LŨ LE phố cổ trong tầm mốt mắt 72",
+  "y": 0.235,
+  "y2": 0.757,
+  "x": 0.221,
+  "maxh": 57,
+  "nframes": 3
+ },
+ {
+  "start": 208.0,
+  "end": 208.25,
+  "text": "trị di sản",
+  "y": 0.596,
+  "y2": 0.613,
+  "x": 0.515,
+  "maxh": 33,
+  "nframes": 1
+ },
+ {
+  "start": 208.5,
+  "end": 208.75,
+  "text": "i8: IIIIIII",
+  "y": 0.423,
+  "y2": 0.717,
+  "x": 0.246,
+  "maxh": 51,
+  "nframes": 1
+ },
+ {
+  "start": 208.75,
+  "end": 209.0,
+  "text": "27,",
+  "y": 0.23,
+  "y2": 0.25,
+  "x": 0.342,
+  "maxh": 38,
+  "nframes": 1
+ },
+ {
+  "start": 209.0,
+  "end": 209.25,
+  "text": "là) (4271! hô thể",
+  "y": 0.158,
+  "y2": 0.612,
+  "x": 0.335,
+  "maxh": 46,
+  "nframes": 1
+ },
+ {
+  "start": 209.25,
+  "end": 209.5,
+  "text": "la tự PT E1 hồng Doo giờ",
+  "y": 0.148,
+  "y2": 0.612,
+  "x": 0.194,
+  "maxh": 144,
+  "nframes": 1
+ },
+ {
+  "start": 209.5,
+  "end": 209.75,
+  "text": "“ii",
+  "y": 0.703,
+  "y2": 0.717,
+  "x": 0.16,
+  "maxh": 27,
+  "nframes": 1
+ },
+ {
+  "start": 210.0,
+  "end": 210.25,
+  "text": "xị II IIM",
+  "y": 0.52,
+  "y2": 0.576,
+  "x": 0.144,
+  "maxh": 75,
+  "nframes": 1
+ },
+ {
+  "start": 211.25,
+  "end": 211.5,
+  "text": "iều mò làm cho",
+  "y": 0.606,
+  "y2": 0.627,
+  "x": 0.167,
+  "maxh": 39,
+  "nframes": 1
+ },
+ {
+  "start": 211.5,
+  "end": 212.25,
+  "text": "NTƯỢNG VTƯỢNG Điều mà mè làm cho, QUYẾT ẤN EM",
+  "y": 0.599,
+  "y2": 0.717,
+  "x": 0.139,
+  "maxh": 226,
+  "nframes": 3
+ },
+ {
+  "start": 212.25,
+  "end": 213.25,
+  "text": "NTƯỢNG mò làm cho ẤN QUYẾT TƯỢNG MGUYET RESIDE VỚi CEs",
+  "y": 0.599,
+  "y2": 0.777,
+  "x": 0.181,
+  "maxh": 204,
+  "nframes": 4
+ },
+ {
+  "start": 213.5,
+  "end": 213.75,
+  "text": "là không chỉ",
+  "y": 0.605,
+  "y2": 0.634,
+  "x": 0.397,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 213.75,
+  "end": 215.25,
+  "text": "sấ nhoóng nh những con số hào nhoáng kả",
+  "y": 0.583,
+  "y2": 0.92,
+  "x": 0.139,
+  "maxh": 57,
+  "nframes": 6
+ },
+ {
+  "start": 215.5,
+  "end": 215.75,
+  "text": "Uƒ",
+  "y": 0.655,
+  "y2": 0.816,
+  "x": 0.143,
+  "maxh": 309,
+  "nframes": 1
+ },
+ {
+  "start": 216.0,
+  "end": 216.25,
+  "text": "V2 DŨNG CÂM- “48",
+  "y": 0.419,
+  "y2": 0.986,
+  "x": 0.0,
+  "maxh": 82,
+  "nframes": 1
+ },
+ {
+  "start": 216.25,
+  "end": 216.5,
+  "text": "GẮM SỰ DŨNG lý!",
+  "y": 0.624,
+  "y2": 0.916,
+  "x": 0.131,
+  "maxh": 69,
+  "nframes": 1
+ },
+ {
+  "start": 216.75,
+  "end": 217.0,
+  "text": "đầu tư của",
+  "y": 0.643,
+  "y2": 0.661,
+  "x": 0.562,
+  "maxh": 34,
+  "nframes": 1
+ },
+ {
+  "start": 217.0,
+  "end": 217.25,
+  "text": "GẢ chủ đồ",
+  "y": 0.624,
+  "y2": 0.659,
+  "x": 0.407,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 217.25,
+  "end": 217.5,
+  "text": "của chủ đầu tử týt tứ 5W\"",
+  "y": 0.641,
+  "y2": 1.0,
+  "x": 0.099,
+  "maxh": 42,
+  "nframes": 1
+ },
+ {
+  "start": 217.5,
+  "end": 217.75,
+  "text": "_SỰ đầu tư",
+  "y": 0.616,
+  "y2": 0.67,
+  "x": 0.092,
+  "maxh": 104,
+  "nframes": 1
+ },
+ {
+  "start": 217.75,
+  "end": 218.25,
+  "text": "CẢ DŨNG ủa chủ đầu tư: ĐI THÈO KHÔNG LỐI MÒN",
+  "y": 0.617,
+  "y2": 0.728,
+  "x": 0.136,
+  "maxh": 126,
+  "nframes": 2
+ },
+ {
+  "start": 218.25,
+  "end": 218.75,
+  "text": "học CẢM SỰ CAM đầu của tư KHÔNG: THEO I6 ĐI",
+  "y": 0.298,
+  "y2": 0.736,
+  "x": 0.136,
+  "maxh": 120,
+  "nframes": 2
+ },
+ {
+  "start": 218.75,
+  "end": 219.0,
+  "text": "go",
+  "y": 0.601,
+  "y2": 0.617,
+  "x": 0.287,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 219.0,
+  "end": 219.25,
+  "text": "2z",
+  "y": 0.72,
+  "y2": 0.734,
+  "x": 0.072,
+  "maxh": 27,
+  "nframes": 1
+ },
+ {
+  "start": 219.25,
+  "end": 219.5,
+  "text": "những cói NA",
+  "y": 0.596,
+  "y2": 1.0,
+  "x": 0.385,
+  "maxh": 45,
+  "nframes": 1
+ },
+ {
+  "start": 219.5,
+  "end": 219.75,
+  "text": "Ing cởi sử",
+  "y": 0.601,
+  "y2": 0.617,
+  "x": 0.447,
+  "maxh": 32,
+  "nframes": 1
+ },
+ {
+  "start": 220.25,
+  "end": 220.75,
+  "text": "PIÊT HAC ÁC CHO BIET RƯỜNG CAN AN THỊ",
+  "y": 0.584,
+  "y2": 0.688,
+  "x": 0.222,
+  "maxh": 116,
+  "nframes": 2
+ },
+ {
+  "start": 220.75,
+  "end": 221.0,
+  "text": "KHÁC BIFT CHO ƯỜNG TOẠN",
+  "y": 0.605,
+  "y2": 0.691,
+  "x": 0.176,
+  "maxh": 66,
+  "nframes": 1
+ },
+ {
+  "start": 221.0,
+  "end": 221.25,
+  "text": "KHÁ CHO TRƯỜN",
+  "y": 0.596,
+  "y2": 0.699,
+  "x": 0.231,
+  "maxh": 123,
+  "nframes": 1
+ },
+ {
+  "start": 221.25,
+  "end": 222.5,
+  "text": "¡Z1 LA c7 cv lạ ta Nếu kiếm như ơnh anh chị đang tìm",
+  "y": 0.189,
+  "y2": 0.629,
+  "x": 0.144,
+  "maxh": 132,
+  "nframes": 5
+ },
+ {
+  "start": 222.75,
+  "end": 223.75,
+  "text": "LÀ ta tá MỘT CĂN HỘ HẠNG SANG Mỹ",
+  "y": 0.445,
+  "y2": 0.859,
+  "x": 0.165,
+  "maxh": 68,
+  "nframes": 4
+ },
+ {
+  "start": 223.75,
+  "end": 226.75,
+  "text": "1N t2 tì SANG. MỘT MỘ CĂN ĂN HỘ HẠNG SANG ngay ngoy ngay&rong trọng trong nội đô HÀNH với TẾ tiêu chuẩn VẬN HÃNH QUỐC cả TY",
+  "y": 0.302,
+  "y2": 0.829,
+  "x": 0.158,
+  "maxh": 102,
+  "nframes": 12
+ },
+ {
+  "start": 226.75,
+  "end": 227.25,
+  "text": "để thì hãy",
+  "y": 0.593,
+  "y2": 0.616,
+  "x": 0.414,
+  "maxh": 39,
+  "nframes": 2
+ },
+ {
+  "start": 227.25,
+  "end": 227.5,
+  "text": "VẸA RESIDENCE kả 19%",
+  "y": 0.593,
+  "y2": 0.879,
+  "x": 0.219,
+  "maxh": 80,
+  "nframes": 1
+ },
+ {
+  "start": 227.5,
+  "end": 228.0,
+  "text": "120 RESIDENCES VEA",
+  "y": 0.177,
+  "y2": 0.637,
+  "x": 0.114,
+  "maxh": 112,
+  "nframes": 2
+ },
+ {
+  "start": 228.25,
+  "end": 228.75,
+  "text": "RIVEA RESIDENCES mí",
+  "y": 0.59,
+  "y2": 0.834,
+  "x": 0.161,
+  "maxh": 76,
+  "nframes": 2
+ },
+ {
+  "start": 228.75,
+  "end": 229.0,
+  "text": "j1 RES ENCES",
+  "y": 0.348,
+  "y2": 0.633,
+  "x": 0.396,
+  "maxh": 88,
+  "nframes": 1
+ },
+ {
+  "start": 229.0,
+  "end": 229.25,
+  "text": "RI RESI trả anh chị nhá kả",
+  "y": 0.59,
+  "y2": 0.81,
+  "x": 0.161,
+  "maxh": 57,
+  "nframes": 1
+ },
+ {
+  "start": 229.25,
+  "end": 230.0,
+  "text": "cv rỆ RESIDENCES anh nh chị nhá tr trụ",
+  "y": 0.331,
+  "y2": 0.654,
+  "x": 0.168,
+  "maxh": 183,
+  "nframes": 3
+ }
+]

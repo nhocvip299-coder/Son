@@ -1,0 +1,18 @@
+{
+  "canonical_library_file_id": "libfile_a475e3731a648191967b2d9bf9aec164",
+  "version": 2,
+  "file_name": "Mo_Lang_Review_Com_Tam_Suon_Khoi_4K60.mp4",
+  "sha256": "f6cf0c57878f9870d4561ccdd081f3361aa854cf92f14436bfc63896183753dc",
+  "width": 2160,
+  "height": 3840,
+  "fps": 60,
+  "duration_seconds": 53.5,
+  "status": "Canonical style reference selected by user. Adam derivatives were criticized; never use them as style approval.",
+  "proxy": "assets/reference/gelexia-reference-540p30.mp4",
+  "latest_typography_reference": {
+    "library_file_id": "libfile_80893891912481919282acb3577e18c1",
+    "file_name": "IMG_7589.jpeg",
+    "asset": "assets/reference/IMG_7589-user-reference.jpeg",
+    "status": "User supplied visual reference; compare actual text, not the iOS chrome or the streetlight shadow."
+  }
+}

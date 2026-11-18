@@ -7,7 +7,8 @@ import { Backdrop, ExitFade } from "../textPresets/capcut/CapcutEdit";
 import { WordByWord, type WbwWord } from "../textPresets/capcut/WordByWord";
 
 /**
- * Style "gelexia-food-review": vlog am thuc doc, nhip nhanh.
+ * Bien the CapCut cho video food review (composition GelexiaCapcutEdit) — KHONG phai mau Gelexia that.
+ * Mau Gelexia that (Mo Lang Review) la GelexiaOverlay + skill .claude/skills/gelexia-food-review.
  * - Cat canh theo plan, moi canh Ken Burns (zoom/troi nhe) + "punch-in" luc vao canh + whoosh.
  * - Chuyen canh: flash trang ngan hoac zoom blur.
  * - Grade am (contrast/saturate tu style.json + phu cam nhe + vignette).

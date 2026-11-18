@@ -10,3 +10,5 @@ reference/*.mp4
 reference/*.MP4
 inputs/
 styles/text-presets/source-zip/
+.claude/skills/gelexia-food-review/assets/reference/*.mp4
+reference/**/*.mp4

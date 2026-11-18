@@ -1,0 +1,23 @@
+{
+  "note": "v2 — căn theo giọng ElevenLabs (voice.mp3 53,39s, kịch bản do Sơn sửa). src = work/hang-kim-chi/raw (Drive folder 1YQ5plOgOaf01mzEbMdYI2W9QP-kTvQX1). Âm gốc tắt.",
+  "shots": [
+    {"id": 1, "src": "IMG_0037", "in": 3.0, "out": 8.6, "voice": "604 nghìn mà bày được nguyên bàn… lột ví đây", "scene": "Toàn cảnh bàn đầy món"},
+    {"id": 2, "src": "IMG_0043", "in": 1.5, "out": 4.25, "voice": "Hôm nay tao mò đến Hằng Kim Chi…", "scene": "Mặt tiền biển HẰNG KIM CHI"},
+    {"id": 3, "src": "IMG_0030", "in": 0.0, "out": 3.6, "voice": "Quán rộng vãi chưởng, bàn nào cũng có ống hút khói", "scene": "Trong quán"},
+    {"id": 4, "src": "IMG_0041", "in": 0.0, "out": 1.5, "voice": "…đi hun người đâu", "scene": "Bàn bày rau, ống hút khói"},
+    {"id": 5, "src": "IMG_0029", "in": 0.0, "out": 3.65, "voice": "Thực đơn dài như sớ táo quân…", "scene": "Menu"},
+    {"id": 6, "src": "IMG_0032", "in": 7.0, "out": 11.0, "voice": "Tôm 89 nghìn… như vừa đi spa", "scene": "Cận tôm"},
+    {"id": 7, "src": "IMG_0033", "in": 4.8, "out": 8.05, "voice": "Hàu mỡ hành 69 nghìn, hành phi phủ kín mặt", "scene": "Cận hàu"},
+    {"id": 8, "src": "IMG_0033", "in": 0.0, "out": 3.4, "voice": "chân gà đỏ chót… cãi nhau với tao", "scene": "Cận chân gà"},
+    {"id": 9, "src": "IMG_0031", "in": 17.0, "out": 19.0, "voice": "Thịt ướp sẵn cứ quẳng lên vỉ", "scene": "Thịt ướp"},
+    {"id": 10, "src": "IMG_0034", "in": 3.0, "out": 5.1, "voice": "…mà nướng, không biết thì về úp mì đi", "scene": "Nướng trên vỉ"},
+    {"id": 11, "src": "IMG_0031", "in": 12.0, "out": 14.4, "voice": "Hai bát sốt chấm, một cay, một đậm", "scene": "Chén sốt cạnh vỉ"},
+    {"id": 12, "src": "IMG_0040", "in": 1.0, "out": 2.55, "voice": "coca 15 nghìn một lon", "scene": "Rót coca"},
+    {"id": 13, "src": "IMG_0036", "in": 0.0, "out": 5.0, "voice": "Cuối cùng là cơm trộn niêu đá… trứng lòng đào xắn ra", "scene": "Cơm trộn niêu đá"},
+    {"id": 14, "src": "IMG_0036", "in": 13.5, "out": 15.2, "voice": "…nhìn cũng cuốn phết", "scene": "Trộn cơm"},
+    {"id": 15, "src": "IMG_0044", "in": 0.8, "out": 3.8, "voice": "Chốt cả bàn 604 nghìn, ngon đến đâu", "scene": "Hóa đơn"},
+    {"id": 16, "src": "IMG_0034", "in": 6.0, "out": 8.0, "voice": "…tùy mồm chúng mày, tao không thần thánh hóa nhá", "scene": "Vỉ nướng"},
+    {"id": 17, "src": "IMG_0043", "in": 4.25, "out": 7.25, "voice": "Hằng Kim Chi, khu 4,3 héc-ta, thị trấn Văn Giang", "scene": "Biển quán"},
+    {"id": 18, "src": "IMG_0043", "in": 7.25, "out": 10.95, "voice": "Đứa nào ăn rồi vào khai thật…", "scene": "Lùi ra phố — kết"}
+  ]
+}

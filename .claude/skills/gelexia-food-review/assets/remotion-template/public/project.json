@@ -1,0 +1,15 @@
+{
+ "mode":"demo","durationSeconds":12,"fps":30,"width":1080,"height":1920,
+ "brand":{"name":"QUÁN MẪU","address":"Địa chỉ mới do người dùng cung cấp","showAddress":true},
+ "pages":[
+  {"startMs":0,"endMs":1800,"lines":[[{"text":"HÔM","startMs":0,"endMs":300,"timestampMs":150,"confidence":null},{"text":" NAY","startMs":300,"endMs":600,"timestampMs":450,"confidence":null},{"text":" ĂN","startMs":600,"endMs":1000,"timestampMs":800,"confidence":null},{"text":" GÌ?","startMs":1000,"endMs":1800,"timestampMs":1400,"confidence":null}]]},
+  {"startMs":3200,"endMs":5000,"lines":[[{"text":"ĐI","startMs":3200,"endMs":3600,"timestampMs":3400,"confidence":null},{"text":" THẲNG","startMs":3600,"endMs":4000,"timestampMs":3800,"confidence":null}],[{"text":"ĐẾN","startMs":4000,"endMs":4500,"timestampMs":4250,"confidence":null},{"text":" QUÁN.","startMs":4500,"endMs":5000,"timestampMs":4750,"confidence":null}]]},
+  {"startMs":6000,"endMs":7600,"lines":[[{"text":"CƠM","startMs":6000,"endMs":6500,"timestampMs":6250,"confidence":null},{"text":" NÓNG","startMs":6500,"endMs":7000,"timestampMs":6750,"confidence":null},{"text":" ĐÂY!","startMs":7000,"endMs":7600,"timestampMs":7300,"confidence":null}]]}
+ ],
+ "callouts":[
+  {"kind":"intro","startMs":400,"endMs":2800,"title":"ĐI ĂN\nTHÔI!","subtitle":"Mở đầu theo bối cảnh mới"},
+  {"kind":"route","startMs":3200,"endMs":5000,"title":"ĐƯỜNG ĐI MỚI","subtitle":"Thay bằng chỉ dẫn đã xác nhận"},
+  {"kind":"food","startMs":6000,"endMs":7600,"title":"NÓNG HỔI!"},
+  {"kind":"cta","startMs":8400,"endMs":12000,"title":"QUÁN MẪU","addressMain":"SỐ NHÀ MỚI","addressRest":"Địa chỉ mới được xác nhận"}
+ ]
+}

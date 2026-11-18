@@ -1,0 +1,128 @@
+{
+ "_note": "Tap Che Dua Hoang Gia theo mau Gelexia. Tu lay tu plan-v3-vo.json (Whisper + asr-fixes.json). Callout dat theo moc tu trong vo-captions.json.",
+ "wordsFrom": "projects/che-dua-hoang-gia/plan-v3-vo.json",
+ "durationMs": 72900,
+ "fps": 60,
+ "maxCharsPerLine": 19,
+ "brand": {
+  "name": "CHÈ DỪA HOÀNG GIA",
+  "address": "KT12 Phố Đông · Vinhomes Ocean Park 2 · Văn Giang",
+  "showAddress": true
+ },
+ "background": {
+  "video": "inputs/che-dua/base.mp4",
+  "muted": true
+ },
+ "voice": "inputs/che-dua/voice.mp3",
+ "wordByWord": {
+  "y": 1300,
+  "accentRe": "^(Chè|Dừa|Hoàng|Gia|KT12|Phố|Đông|Ocean|Park|35K|55K|30|9|topping|Xoài|béo|tiktok|Kiếp|nạn)"
+ },
+ "callouts": [
+  {
+   "kind": "intro",
+   "startMs": 700,
+   "endMs": 4900,
+   "title": "KIẾP NẠN\nCUỐI TUẦN",
+   "subtitle": "Ăn dở là chửi luôn!"
+  },
+  {
+   "kind": "route",
+   "startMs": 9800,
+   "endMs": 13600,
+   "title": "PHỐ ĐÔNG",
+   "subtitle": "Vinhomes Ocean Park 2"
+  },
+  {
+   "kind": "route",
+   "startMs": 22000,
+   "endMs": 25800,
+   "title": "ĐỖ XE DỄ ỢT"
+  },
+  {
+   "kind": "food",
+   "startMs": 34400,
+   "endMs": 38000,
+   "title": "CHỈ TỪ 35K"
+  },
+  {
+   "kind": "food",
+   "startMs": 40400,
+   "endMs": 44400,
+   "title": "TOPPING ĐẦY Ụ"
+  },
+  {
+   "kind": "food",
+   "startMs": 47800,
+   "endMs": 51600,
+   "title": "BÉO NGẬY"
+  },
+  {
+   "kind": "food",
+   "startMs": 63300,
+   "endMs": 66200,
+   "title": "CHẤM 9/10"
+  },
+  {
+   "kind": "cta",
+   "startMs": 66500,
+   "endMs": 72900,
+   "title": "CHÈ DỪA HOÀNG GIA",
+   "addressMain": "KT12 PHỐ ĐÔNG",
+   "addressRest": "Vinhomes Ocean Park 2 · Văn Giang"
+  }
+ ],
+ "pages": [
+  "KIẾP NẠN / CUỐI TUẦN",
+  "RẢNH QUÁ LẠI ĐI / ĂN THEO TIKTOK",
+  "TAO NÓI TRƯỚC NHÁ",
+  "ĂN DỞ LÀ TAO / CHỬI LUÔN",
+  "ĐÉO CÓ CÁI KIỂU",
+  "\"ÔI QUÁN XINH / LẮM MỌI NGƯỜI Ạ\"",
+  "XINH CÁI GÌ MÀ XINH!",
+  "HÔM NAY TAO / PHI THẲNG XUỐNG",
+  "VIN OCEAN PARK 2",
+  "VÀO KHU PHỐ ĐÔNG",
+  "TRỜI THÌ ÂM U, / ĐƯỜNG ƯỚT NHẸP",
+  "KỆ, THÈM CHÈ RỒI / THÌ TAO VẪN ĐI",
+  "CHỨ GIỜ QUAY VỀ / UỐNG NƯỚC LỌC À?",
+  "Ơ KÌA, ĐẾN / NƠI RỒI NÀY",
+  "CHÈ DỪA HOÀNG GIA",
+  "KT12 PHỐ ĐÔNG / OCEAN PARK 2",
+  "Ô TÔ ĐỖ LUÔN LỀ / ĐƯỜNG TRƯỚC CỬA",
+  "XE MÁY DẮT / LÊN VỈA HÈ",
+  "KHỎI PHẢI ĐI VÒNG / TÌM CHỖ GỬI NHÁ",
+  "ĐỂ TAO XEM / CÓ CÁI GÌ",
+  "MÀ BỌN FOOD REVIEW / KHEN GHÊ THẾ",
+  "Ơ, TRONG NÀY / RỘNG PHẾT",
+  "MÁY LẠNH MÁT RƯỢI, / BÀN GHẾ SẠCH SẼ",
+  "MENU GẦN 30 MÓN",
+  "TOÀN 35K ĐẾN 55K",
+  "CON BẠN TAO ĐỌC / MENU NHƯ ĐỌC SỚ",
+  "10 PHÚT / CHƯA CHỌN XONG",
+  "CHỌN NHANH LÊN / BÀ NỘI, TAO ĐÓI RỒI",
+  "QUẦY TOPPING / ĐÂY CHÚNG MÀY",
+  "THẠCH NÀY, / DỪA NON NÀY",
+  "XOÀI NÀY, / TRÂN CHÂU NÀY",
+  "MÚC ĐẦY Ụ, CHẢ / KI_BO TÍ NÀO",
+  "ĐÂY, CHÈ LÊN RỒI",
+  "XOÀI VÀNG ƯƠM, / CỐT DỪA TRẮNG PHAU",
+  "ĐÁ MÁT LẠNH",
+  "35K MÀ LÈO TÈO / THÌ TAO QUAY XE NGAY",
+  "NÀO, ĂN ĐI BÀ NỘI",
+  "NGỒI ĐỰC MẶT RA / CHỤP ẢNH LÀM GÌ?",
+  "NGON KHÔNG? / NÓI THẬT!",
+  "ĐỪNG THẤY TAO QUAY / TIKTOK MÀ NỊNH",
+  "GẬT GÙ À? / Ừ THÔI",
+  "TAO CÔNG NHẬN",
+  "BÉO MÀ KHÔNG NGẤY",
+  "XOÀI NGỌT, / NHÂN VIÊN NHANH NHẸN",
+  "TAO CHẤM 9 ĐIỂM",
+  "1 ĐIỂM CÒN LẠI",
+  "ĐỂ LẦN SAU TAO / QUAY LẠI SOI TIẾP",
+  "CHÚNG MÀY Ở / OCEAN PARK",
+  "THÌ NHỚ CÁI / ĐỊA CHỈ NÀY NHÁ",
+  "CHÈ DỪA HOÀNG GIA",
+  "KT12 PHỐ ĐÔNG / OCEAN PARK 2"
+ ]
+}

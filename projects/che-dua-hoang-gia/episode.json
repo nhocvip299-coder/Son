@@ -1,0 +1,18 @@
+{
+ "title": "Chè Dừa Hoàng Gia — KT12 Phố Đông, Vinhomes Ocean Park 2 (mẫu Gelexia)",
+ "inputs": [
+  {"role": "footage", "path": "work/gelexia/IMG_0063..0069.mov", "drive_folder_id": "1mCVFpNOLbIRQ-hjhtA6NsOBH_F6niLVU", "library_file_id": "drive:1qejk_JL5DGIEmQwzt-6Z01pnUEpcxhwz,1Ob2Ti--Vl8577sJAX8JnvdmXn1BmNMsY,1v3e6TqFqpKaxoOI47QKeCL1_ayYKf28e,1G98ezx_hyB8EP-U7W3hW8WyP5Be9Vfnm,1b5KBHHZeMc84NWuqmdIJBLt9UQeHxKdj,1Se4-vZVO3fOHL06cH6Uyk-TYdSQto0ps,1Y7KvlaThLpRf8MSXNJlNAos3tWIX3Oyj"},
+  {"role": "voice", "path": "public/inputs/che-dua/voice.mp3", "note": "ElevenLabs giọng An Vu, người dùng gửi qua upload; bản lưu trong repo: public/vo/che-dua-an-vu.mp3"}
+ ],
+ "derived": [
+  {"path": "public/inputs/gelexia-che-dua.mp4", "rebuild": "ffmpeg mỗi clip: scale=1080:1920,fps=30 H.264 → concat theo thứ tự 0063..0069"},
+  {"path": "public/inputs/che-dua/base.mp4", "rebuild_script": "node scripts/gelexia/build-base.mjs projects/che-dua-hoang-gia/plan-v3-vo.json public/inputs/gelexia-che-dua.mp4 public/inputs/che-dua/base.mp4 72900 60"},
+  {"path": "projects/che-dua-hoang-gia/plan-v3-vo.json", "rebuild_script": "node scripts/gelexia/build-plan-v3.mjs projects/che-dua-hoang-gia/script-v3.json --vo projects/che-dua-hoang-gia/vo-captions.json --fixes projects/che-dua-hoang-gia/asr-fixes.json --end 72280"},
+  {"path": "projects/che-dua-hoang-gia/project.json", "rebuild_script": "node scripts/gelexia/build-gelexia-project.mjs projects/che-dua-hoang-gia/gelexia-spec.json"}
+ ],
+ "outputs": ["out/che-dua-hoang-gia-gelexia.mp4", "out/che-dua-hoang-gia-gelexia-chay-chu.mp4"],
+ "shots": "xem plan-v3-vo.json (srcStartMs/srcEndMs/rate trên file ghép 30fps; output = (src)/rate)",
+ "audio": {"speed": 1, "original": "tắt (muted)", "sfx": "autoSfx CC0 theo vai trò (src/styles/gelexia/sfx.ts)"},
+ "decisions": ["Không nhạc nền (mẫu Gelexia)", "Callout không lặp nguyên văn phụ đề", "Phụ đề chia trang tay theo ý (gelexia-spec.json pages)"],
+ "render": "npx remotion render src/index.ts GelexiaEdit out/... --props=projects/che-dua-hoang-gia/props.json | props-wbw.json"
+}

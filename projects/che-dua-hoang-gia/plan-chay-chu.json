@@ -1,0 +1,584 @@
+{
+ "source": "inputs/gelexia-che-dua.mp4",
+ "fps": 60,
+ "shots": [
+  {
+   "srcStartMs": 4000,
+   "srcEndMs": 7500,
+   "kb": "in",
+   "drift": [
+    -40,
+    0
+   ],
+   "trans": "cut"
+  },
+  {
+   "srcStartMs": 9500,
+   "srcEndMs": 11800,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 15200,
+   "srcEndMs": 18500,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 19500,
+   "srcEndMs": 22000,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 29000,
+   "srcEndMs": 31500,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 32000,
+   "srcEndMs": 35300,
+   "kb": "in",
+   "drift": [
+    30,
+    0
+   ],
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 40500,
+   "srcEndMs": 43500,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 45500,
+   "srcEndMs": 48500,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 52000,
+   "srcEndMs": 55500,
+   "kb": "in",
+   "drift": [
+    -30,
+    0
+   ],
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 55800,
+   "srcEndMs": 57500,
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 60300,
+   "srcEndMs": 63500,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 64500,
+   "srcEndMs": 67000,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 68500,
+   "srcEndMs": 71500,
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 78000,
+   "srcEndMs": 83500,
+   "kb": "out",
+   "trans": "flash"
+  }
+ ],
+ "items": [
+  {
+   "preset": "Kobe Text 07",
+   "startMs": 200,
+   "durationMs": 3400,
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "hook"
+  },
+  {
+   "preset": "Kobe Text 03",
+   "startMs": 6000,
+   "durationMs": 3000,
+   "texts": {
+    "Ẩm Thực": "Chè Dừa",
+    "4 mùa": "Hoàng Gia"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "ten quan"
+  },
+  {
+   "preset": "Kobe Text 35",
+   "startMs": 14300,
+   "durationMs": 3000,
+   "texts": {
+    "xanh": "rộng mát"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "khong gian"
+  },
+  {
+   "preset": "Kobe Text 21",
+   "startMs": 17600,
+   "durationMs": 3000,
+   "texts": {
+    "Tiện ích": "Menu",
+    "Nổi Bật": "Đủ Món"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "menu"
+  },
+  {
+   "preset": "Kobe Text 19",
+   "startMs": 23600,
+   "durationMs": 3200,
+   "texts": {
+    "Phong cách sống": "Topping",
+    "Hiện Đại": "Đầy Ắp",
+    "Do bạn chọn": "tha hồ chọn"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "topping"
+  },
+  {
+   "preset": "Kobe Text 38",
+   "startMs": 28800,
+   "durationMs": 3000,
+   "texts": {
+    "Căn Hộ": "Bát Chè",
+    "Đáng sống": "Đáng thử"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "chè lên"
+  },
+  {
+   "preset": "Kobe Text 27",
+   "startMs": 32000,
+   "durationMs": 3000,
+   "texts": {
+    "SEDAN HẠNG C": "XOÀI + DỪA",
+    "Sang trọng": "Béo ngậy"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "vị"
+  },
+  {
+   "preset": "Kobe Text 12",
+   "startMs": 38500,
+   "durationMs": 3800,
+   "texts": {
+    "Đăng Ký": "Lưu Lại",
+    "Ngay hôm nay": "rủ hội đi ăn"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "CTA"
+  }
+ ],
+ "music": {
+  "src": "music/gelexia-upbeat.wav",
+  "volume": 0.5
+ },
+ "ambientVolume": 0.22,
+ "words": [
+  {
+   "text": "Hôm",
+   "startMs": 250,
+   "endMs": 683
+  },
+  {
+   "text": "nay",
+   "startMs": 723,
+   "endMs": 1155
+  },
+  {
+   "text": "team",
+   "startMs": 1195,
+   "endMs": 1628
+  },
+  {
+   "text": "mình",
+   "startMs": 1668,
+   "endMs": 2101
+  },
+  {
+   "text": "đi",
+   "startMs": 2141,
+   "endMs": 2574
+  },
+  {
+   "text": "săn",
+   "startMs": 2614,
+   "endMs": 3046
+  },
+  {
+   "text": "quán",
+   "startMs": 3086,
+   "endMs": 3519
+  },
+  {
+   "text": "chè",
+   "startMs": 3559,
+   "endMs": 3992
+  },
+  {
+   "text": "đang",
+   "startMs": 4032,
+   "endMs": 4465
+  },
+  {
+   "text": "cực",
+   "startMs": 4505,
+   "endMs": 4937
+  },
+  {
+   "text": "hot",
+   "startMs": 4977,
+   "endMs": 5410
+  },
+  {
+   "text": "Chè",
+   "startMs": 6050,
+   "endMs": 6530
+  },
+  {
+   "text": "Dừa",
+   "startMs": 6570,
+   "endMs": 7050
+  },
+  {
+   "text": "Hoàng",
+   "startMs": 7090,
+   "endMs": 7570
+  },
+  {
+   "text": "Gia,",
+   "startMs": 7610,
+   "endMs": 8090
+  },
+  {
+   "text": "mặt",
+   "startMs": 8130,
+   "endMs": 8610
+  },
+  {
+   "text": "tiền",
+   "startMs": 8650,
+   "endMs": 9130
+  },
+  {
+   "text": "nổi",
+   "startMs": 9170,
+   "endMs": 9650
+  },
+  {
+   "text": "bật",
+   "startMs": 9690,
+   "endMs": 10170
+  },
+  {
+   "text": "từ",
+   "startMs": 10210,
+   "endMs": 10690
+  },
+  {
+   "text": "xa",
+   "startMs": 10730,
+   "endMs": 11210
+  },
+  {
+   "text": "Bên",
+   "startMs": 11850,
+   "endMs": 12330
+  },
+  {
+   "text": "trong",
+   "startMs": 12370,
+   "endMs": 12850
+  },
+  {
+   "text": "rộng",
+   "startMs": 12890,
+   "endMs": 13370
+  },
+  {
+   "text": "rãi,",
+   "startMs": 13410,
+   "endMs": 13890
+  },
+  {
+   "text": "mát",
+   "startMs": 13930,
+   "endMs": 14410
+  },
+  {
+   "text": "lạnh,",
+   "startMs": 14450,
+   "endMs": 14930
+  },
+  {
+   "text": "ngồi",
+   "startMs": 14970,
+   "endMs": 15450
+  },
+  {
+   "text": "chill",
+   "startMs": 15490,
+   "endMs": 15970
+  },
+  {
+   "text": "cả",
+   "startMs": 16010,
+   "endMs": 16490
+  },
+  {
+   "text": "buổi",
+   "startMs": 16530,
+   "endMs": 17010
+  },
+  {
+   "text": "Menu",
+   "startMs": 17650,
+   "endMs": 18210
+  },
+  {
+   "text": "dài",
+   "startMs": 18250,
+   "endMs": 18810
+  },
+  {
+   "text": "cả",
+   "startMs": 18850,
+   "endMs": 19410
+  },
+  {
+   "text": "trang,",
+   "startMs": 19450,
+   "endMs": 20010
+  },
+  {
+   "text": "món",
+   "startMs": 20050,
+   "endMs": 20610
+  },
+  {
+   "text": "nào",
+   "startMs": 20650,
+   "endMs": 21210
+  },
+  {
+   "text": "cũng",
+   "startMs": 21250,
+   "endMs": 21810
+  },
+  {
+   "text": "muốn",
+   "startMs": 21850,
+   "endMs": 22410
+  },
+  {
+   "text": "thử",
+   "startMs": 22450,
+   "endMs": 23010
+  },
+  {
+   "text": "Quầy",
+   "startMs": 23650,
+   "endMs": 24185
+  },
+  {
+   "text": "topping",
+   "startMs": 24225,
+   "endMs": 24760
+  },
+  {
+   "text": "đầy",
+   "startMs": 24800,
+   "endMs": 25335
+  },
+  {
+   "text": "ắp:",
+   "startMs": 25375,
+   "endMs": 25910
+  },
+  {
+   "text": "thạch,",
+   "startMs": 25950,
+   "endMs": 26485
+  },
+  {
+   "text": "dừa,",
+   "startMs": 26525,
+   "endMs": 27060
+  },
+  {
+   "text": "xoài",
+   "startMs": 27100,
+   "endMs": 27635
+  },
+  {
+   "text": "tươi",
+   "startMs": 27675,
+   "endMs": 28210
+  },
+  {
+   "text": "Chè",
+   "startMs": 28850,
+   "endMs": 29433
+  },
+  {
+   "text": "lên",
+   "startMs": 29473,
+   "endMs": 30056
+  },
+  {
+   "text": "rồi!",
+   "startMs": 30096,
+   "endMs": 30679
+  },
+  {
+   "text": "Xoài",
+   "startMs": 30719,
+   "endMs": 31302
+  },
+  {
+   "text": "vàng",
+   "startMs": 31342,
+   "endMs": 31925
+  },
+  {
+   "text": "ươm,",
+   "startMs": 31965,
+   "endMs": 32548
+  },
+  {
+   "text": "cốt",
+   "startMs": 32588,
+   "endMs": 33172
+  },
+  {
+   "text": "dừa",
+   "startMs": 33212,
+   "endMs": 33795
+  },
+  {
+   "text": "béo",
+   "startMs": 33835,
+   "endMs": 34418
+  },
+  {
+   "text": "ngậy,",
+   "startMs": 34458,
+   "endMs": 35041
+  },
+  {
+   "text": "đá",
+   "startMs": 35081,
+   "endMs": 35664
+  },
+  {
+   "text": "mát",
+   "startMs": 35704,
+   "endMs": 36287
+  },
+  {
+   "text": "lạnh",
+   "startMs": 36327,
+   "endMs": 36910
+  },
+  {
+   "text": "Lưu",
+   "startMs": 37550,
+   "endMs": 38000
+  },
+  {
+   "text": "lại",
+   "startMs": 38040,
+   "endMs": 38490
+  },
+  {
+   "text": "ngay",
+   "startMs": 38530,
+   "endMs": 38980
+  },
+  {
+   "text": "và",
+   "startMs": 39020,
+   "endMs": 39470
+  },
+  {
+   "text": "rủ",
+   "startMs": 39510,
+   "endMs": 39960
+  },
+  {
+   "text": "hội",
+   "startMs": 40000,
+   "endMs": 40450
+  },
+  {
+   "text": "bạn",
+   "startMs": 40490,
+   "endMs": 40940
+  },
+  {
+   "text": "đi",
+   "startMs": 40980,
+   "endMs": 41430
+  },
+  {
+   "text": "ăn",
+   "startMs": 41470,
+   "endMs": 41920
+  },
+  {
+   "text": "nhé!",
+   "startMs": 41960,
+   "endMs": 42410
+  }
+ ],
+ "wordsY": 1450,
+ "accentRe": "^(Chè|Dừa|Hoàng|Gia|hot|topping|Xoài|béo|ngậy|Menu|chill|Lưu)"
+}

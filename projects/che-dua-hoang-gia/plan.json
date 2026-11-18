@@ -1,0 +1,225 @@
+{
+ "source": "inputs/gelexia-che-dua.mp4",
+ "fps": 60,
+ "shots": [
+  {
+   "srcStartMs": 4000,
+   "srcEndMs": 7500,
+   "kb": "in",
+   "drift": [
+    -40,
+    0
+   ],
+   "trans": "cut"
+  },
+  {
+   "srcStartMs": 9500,
+   "srcEndMs": 11800,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 15200,
+   "srcEndMs": 18500,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 19500,
+   "srcEndMs": 22000,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 29000,
+   "srcEndMs": 31500,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 32000,
+   "srcEndMs": 35300,
+   "kb": "in",
+   "drift": [
+    30,
+    0
+   ],
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 40500,
+   "srcEndMs": 43500,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 45500,
+   "srcEndMs": 48500,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 52000,
+   "srcEndMs": 55500,
+   "kb": "in",
+   "drift": [
+    -30,
+    0
+   ],
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 55800,
+   "srcEndMs": 57500,
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 60300,
+   "srcEndMs": 63500,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 64500,
+   "srcEndMs": 67000,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 68500,
+   "srcEndMs": 71500,
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 78000,
+   "srcEndMs": 83500,
+   "kb": "out",
+   "trans": "flash"
+  }
+ ],
+ "items": [
+  {
+   "preset": "Kobe Text 07",
+   "startMs": 200,
+   "durationMs": 3400,
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "hook"
+  },
+  {
+   "preset": "Kobe Text 03",
+   "startMs": 6000,
+   "durationMs": 3000,
+   "texts": {
+    "Ẩm Thực": "Chè Dừa",
+    "4 mùa": "Hoàng Gia"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "ten quan"
+  },
+  {
+   "preset": "Kobe Text 35",
+   "startMs": 14300,
+   "durationMs": 3000,
+   "texts": {
+    "xanh": "rộng mát"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "khong gian"
+  },
+  {
+   "preset": "Kobe Text 21",
+   "startMs": 17600,
+   "durationMs": 3000,
+   "texts": {
+    "Tiện ích": "Menu",
+    "Nổi Bật": "Đủ Món"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "menu"
+  },
+  {
+   "preset": "Kobe Text 19",
+   "startMs": 23600,
+   "durationMs": 3200,
+   "texts": {
+    "Phong cách sống": "Topping",
+    "Hiện Đại": "Đầy Ắp",
+    "Do bạn chọn": "tha hồ chọn"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "topping"
+  },
+  {
+   "preset": "Kobe Text 38",
+   "startMs": 28800,
+   "durationMs": 3000,
+   "texts": {
+    "Căn Hộ": "Bát Chè",
+    "Đáng sống": "Đáng thử"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "chè lên"
+  },
+  {
+   "preset": "Kobe Text 27",
+   "startMs": 32000,
+   "durationMs": 3000,
+   "texts": {
+    "SEDAN HẠNG C": "XOÀI + DỪA",
+    "Sang trọng": "Béo ngậy"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "vị"
+  },
+  {
+   "preset": "Kobe Text 12",
+   "startMs": 38500,
+   "durationMs": 3800,
+   "texts": {
+    "Đăng Ký": "Lưu Lại",
+    "Ngay hôm nay": "rủ hội đi ăn"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "CTA"
+  }
+ ],
+ "music": {
+  "src": "music/gelexia-upbeat.wav",
+  "volume": 0.5
+ },
+ "ambientVolume": 0.22
+}

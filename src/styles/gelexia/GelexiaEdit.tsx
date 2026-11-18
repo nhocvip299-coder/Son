@@ -127,7 +127,9 @@ const Handle: React.FC<{ text: string }> = ({ text }) => {
 const SubChunk: React.FC<{ words: WbwWord[]; dur: number; re: RegExp | null; y: number }> = ({ words, dur, re, y }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const a = interpolate(f, [0, Math.round(0.12 * fps), dur - 3, dur], [0, 1, 1, 0], clamp);
+  const fin = Math.max(1, Math.min(Math.round(0.12 * fps), Math.floor(dur / 3)));
+  const fout = Math.max(1, Math.min(3, Math.floor(dur / 4)));
+  const a = interpolate(f, [0, fin, Math.max(fin + 1, dur - fout), Math.max(fin + 2, dur)], [0, 1, 1, 0], clamp);
   const sc = interpolate(f, [0, Math.round(0.15 * fps)], [0.85, 1], { ...clamp, easing: Easing.out(Easing.back(2)) });
   return (
     <>

@@ -39,3 +39,7 @@ Ví dụ ghép đủ 4 phân đoạn: `src/styles/bdsLuxury/SanHoDemo.tsx` (comp
 - SFX tải bằng `python3 -I scripts/style/fetch_sfx.py` (Mixkit, không đưa lên Git); điểm đỉnh trong `quyetTranLux/sfxHits.json`; cue = mốc chữ + 0.08 − hit.
 - Ảnh tĩnh cho card/đóng băng lấy từ CHÍNH footage người dùng (`ffmpeg -ss t -frames:v 1` → `public/inputs/<du-an>-stills/`), không dùng ảnh của kênh mẫu.
 - Không dùng logo "Q", tên kênh, khuôn mặt kênh mẫu.
+
+## Sở thích người dùng (ưu tiên khi chọn style)
+- **Rất thích chữ sơn chìm dưới chân** (`RoadText`, người đứng trước chữ — "300M" bản San Hô 57 s): ưu tiên dùng mỗi khi có cảnh mặt đường/sàn/sân.
+- **Rất thích chữ vàng champagne** (style A `QtGlassText tint="gold"`): giữ làm màu chủ đạo của thương hiệu.

@@ -1,0 +1,5 @@
+{
+ "_note": "Sua loi Whisper cho giong ElevenLabs (An Vu). Khoa = chi so tu trong vo-captions.json; gia tri = chu dung (\"\" = xoa tu, gop vao tu truoc).",
+ "byIndex": {"14":"nhá","31":"ạ","49":"Phố","50":"Đông","59":"Thèm","81":"Dừa","82":"Hoàng","83":"Gia","84":"KT12","85":"","86":"Phố","87":"Đông","126":"Ơ","169":"Quầy","181":"trân","182":"châu","188":"ki bo","201":"phau","205":"35K","206":"","271":"soi","286":"Dừa","287":"Hoàng","288":"Gia","289":"KT12","290":"","291":"Phố","292":"Đông","141":"30","144":"35K","146":"55K","147":""},
+ "paraAnchors": [0, 37, 74, 113, 139, 169, 191, 239, 273]
+}

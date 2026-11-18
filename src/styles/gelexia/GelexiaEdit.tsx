@@ -33,6 +33,8 @@ export type GxPlan = {
   wordsY?: number;
   accentRe?: string;
   music?: { src: string; volume: number };
+  voice?: { src: string; volume: number }; // giong doc (ElevenLabs) -> nhac tu ha xuong
+  musicUnderVoice?: number;
   ambientVolume?: number;
   cutSfxVolume?: number;
   handle?: string; // tag kenh goc tren
@@ -276,7 +278,8 @@ export const GelexiaEdit: React.FC<{ plan: GxPlan }> = ({ plan }) => {
       {plan.words && plan.subs ? <PhraseSubs words={plan.words} y={plan.subsY ?? 560} accentRe={plan.accentRe} /> : null}
       {plan.words && !plan.subs ? <WordByWord words={plan.words} y={plan.wordsY} accentRe={plan.accentRe} /> : null}
       {plan.handle ? <Handle text={plan.handle} /> : null}
-      {plan.music ? <Audio src={staticFile(plan.music.src)} volume={plan.music.volume} /> : null}
+      {plan.voice ? <Audio src={staticFile(plan.voice.src)} volume={plan.voice.volume} /> : null}
+      {plan.music ? <Audio src={staticFile(plan.music.src)} volume={plan.voice ? (plan.musicUnderVoice ?? 0.17) : plan.music.volume} /> : null}
     </AbsoluteFill>
   );
 };

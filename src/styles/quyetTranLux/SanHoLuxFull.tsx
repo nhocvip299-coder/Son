@@ -109,7 +109,7 @@ const Overlays: React.FC = () => (
 );
 
 /** Lop TREN nguoi (sau QtPersonFront) — chu nho duoi cam, icon, cac doan can mat cuoi video. */
-const OverlaysTop: React.FC = () => (
+const OverlaysTop: React.FC<{ contact?: boolean }> = ({ contact = true }) => (
   <>
     {/* 43.5–46.9 phuong an thanh toan */}
     <I id="b1" name="card" x={0.86} y={0.6} size={150} at={45.9} end={46.9} enter="fromRight" exit="toRight" />
@@ -128,14 +128,16 @@ const OverlaysTop: React.FC = () => (
     <G id="b7" lines={["OCEAN PARK 2"]} at={[53.4]} end={54.3} x={0.58} y={0.13} size={86} enter={["scaleIn"]} exit="scaleOut" />
 
     {/* 54.5–56.7 lien he em Son */}
+    {contact ? <>
     <I id="b8" name="phone" x={0.1} y={0.13} size={120} at={54.5} end={56.4} />
     <Lead x={0.58} y={0.06} at={54.5} end={56.4}>liên hệ trực tiếp</Lead>
     <G id="b9" lines={["EM SƠN"]} at={[55.5]} end={56.4} x={0.58} y={0.13} size={120} enter={["riseUp"]} exit="blurUp" />
+    </> : null}
   </>
 );
 
 /** SFX: 1 tieng moi lan chu chinh vao (canh hit) + 1 tieng gon khi khoi chu ra + chuyen canh. */
-const CUES: Array<[number, SfxCue["sfx"], number]> = [
+export const CUES: Array<[number, SfxCue["sfx"], number]> = [
   [1.35, TXT, 1], [3.55, TXT, 1], [3.9, OUT, 1],
   [6.1, GLS, 1], [6.75, TXT, 0.8], [7.55, OUT, 1],
   [9.4, TXT, 1], [10.1, OUT, 0.8], [11.5, GLS, 1], [12.5, OUT, 0.8], [14.4, TXT, 1], [15.65, OUT, 1],
@@ -148,6 +150,22 @@ const CUES: Array<[number, SfxCue["sfx"], number]> = [
   [49.5, TXT, 1], [50.1, TXT, 1], [50.95, OUT, 1],
   [53.4, GLS, 1], [54.35, OUT, 1], [55.5, TXT, 1],
 ];
+
+/** Phan cuoi style A (42.6s -> het): vet sang chuyen canh, "LINH HOẠT" sau dau, thanh toan, vua KD vua o, Ocean Park 2 (+ lien he neu contact). */
+export const SanHoTailA: React.FC<{ contact?: boolean }> = ({ contact = true }) => {
+  const { fps } = useVideoConfig();
+  const s = (sec: number) => Math.round(sec * fps);
+  return (
+    <>
+      <Sequence from={s(43.4)} durationInFrames={s(3.6)} name="LINH HOAT sau dau">
+        <QtBehindText lines={["LINH HOẠT"]} lineAt={[44.85 - 43.4]} y={0.2} size={250} duration={46.9 - 43.4} />
+        <QtPersonFront src={staticFile(MATTE)} startFrom={43.4} />
+      </Sequence>
+      <OverlaysTop contact={contact} />
+      <Sequence from={s(42.62)} durationInFrames={s(0.6)} name="Vet sang chuyen canh"><QtLightLeak /></Sequence>
+    </>
+  );
+};
 
 export type SanHoFullProps = { captions: "phrase" | "wbw"; words: QtWord[]; stem?: "all" | "sfx" | "voice" };
 

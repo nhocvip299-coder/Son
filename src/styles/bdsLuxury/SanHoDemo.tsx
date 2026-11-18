@@ -27,7 +27,7 @@ const TING: Sfx = "real/lux-ting", DING: Sfx = "real/lux-ding", TICK: Sfx = "rea
 const WHIP: Sfx = "real/lux-whip", BOOM: Sfx = "real/lux-boom", TXT: Sfx = "real/qtl-sparkle-whoosh-2", SOFT: Sfx = "real/qtl-sparkle-sweep", OUT: Sfx = "real/qtl-pop-whoosh-hot", TRN: Sfx = "real/qtl-transition";
 const ticks = (t: number, n = 4, gap = 0.13): Array<[number, Sfx, number]> => Array.from({ length: n }, (_v, i) => [t + 0.1 + i * gap, TICK, 0.55] as [number, Sfx, number]);
 
-const CUES: Array<[number, Sfx, number]> = [
+export const LUX_DEMO_CUES: Array<[number, Sfx, number]> = [
   // D
   [1.39, SOFT, 0.9], [6.12, BOOM, 1], [6.12, SOFT, 0.8], [6.75, DING, 0.9], [7.95, WHIP, 1],
   // B
@@ -41,19 +41,20 @@ const CUES: Array<[number, Sfx, number]> = [
   [39.24, TING, 1], [41.31, DING, 1], ...ticks(41.31),
 ];
 
-const ZONES: CapZone[] = [
+export const LUX_DEMO_ZONES: CapZone[] = [
   { from: 0, to: 7.95, kind: "cinema", y: 0.872 },
   { from: 7.95, to: 19.95, kind: "box", y: 0.74 },
   { from: 19.95, to: 33.9, kind: "plain", y: 0.79 },
   { from: 33.9, to: 99, kind: "box", y: 0.66 },
 ];
 
-export type LuxDemoProps = { captions: "phrase" | "wbw"; words: QtWord[]; stem?: "all" | "sfx" | "voice" };
+export type LuxDemoProps = { captions: "phrase" | "wbw"; words: QtWord[]; stem?: "all" | "sfx" | "voice"; bare?: boolean };
 
-export const BdsLuxuryDemo: React.FC<LuxDemoProps> = ({ captions, words, stem = "all" }) => {
+/** bare = chi hinh + chu (khong phu de, nhac, SFX) -> de ghep vao ban dung dai hon (SanHoMix). */
+export const BdsLuxuryDemo: React.FC<LuxDemoProps> = ({ captions, words, stem = "all", bare = false }) => {
   const { fps } = useVideoConfig();
   const s = (sec: number) => Math.round(sec * fps);
-  const cues: SfxCue[] = CUES.map(([t, sfx, v]) => ({ frame: Math.max(0, s(t + 0.08 - hitOf(sfx))), sfx, volume: v }));
+  const cues: SfxCue[] = LUX_DEMO_CUES.map(([t, sfx, v]) => ({ frame: Math.max(0, s(t + 0.08 - hitOf(sfx))), sfx, volume: v }));
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       <WhipBlur at={7.95}>
@@ -116,9 +117,9 @@ export const BdsLuxuryDemo: React.FC<LuxDemoProps> = ({ captions, words, stem = 
       <StackText id="d2" y={0.17} size={104} end={38.1} exit="toLeft" lines={[{ text: "cách", role: "lead", at: 36.16, italic: true, size: 46 }, { text: "Vincom Mega Mall", role: "main", at: 36.49 }]} />
       <StackText id="d3" y={0.17} size={116} end={42.0} exit="blurUp" lines={[{ text: "công viên", role: "lead", at: 38.56, italic: true, size: 46 }, { text: "Wonder Park", role: "main", at: 39.24 }]} />
 
-      {captions === "phrase" ? <LuxCaptions words={words} zones={ZONES} /> : <WordByWord words={words} y={1385} />}
-      {stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.1} loop /> : null}
-      {stem === "voice" ? null : <SfxTrack cues={cues} />}
+      {bare ? null : captions === "phrase" ? <LuxCaptions words={words} zones={LUX_DEMO_ZONES} /> : <WordByWord words={words} y={1385} />}
+      {!bare && stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.1} loop /> : null}
+      {bare || stem === "voice" ? null : <SfxTrack cues={cues} />}
     </AbsoluteFill>
   );
 };

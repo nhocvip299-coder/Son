@@ -124,5 +124,63 @@
   "THÌ NHỚ CÁI / ĐỊA CHỈ NÀY NHÁ",
   "CHÈ DỪA HOÀNG GIA",
   "KT12 PHỐ ĐÔNG / OCEAN PARK 2"
- ]
+ ],
+ "sfx": [
+  {
+   "atMs": 0,
+   "file": "sfx/cc0/whoosh-ui.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 700,
+   "file": "sfx/cc0/rise-maximize.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 9800,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 9800,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 22000,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 22000,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 34400,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 40400,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 47800,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 63300,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 66500,
+   "file": "sfx/cc0/select-chime.wav",
+   "volume": 0.8
+  }
+ ],
+ "_sfxNote": "sfx[] khai bao tay = autoSfx + nhan duong them powerup, whoosh-swipe 1.0 (do 22s bi giong lan)"
 }

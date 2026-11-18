@@ -15,6 +15,63 @@
  },
  "voice": "inputs/che-dua/voice.mp3",
  "autoSfx": true,
+ "sfx": [
+  {
+   "atMs": 0,
+   "file": "sfx/cc0/whoosh-ui.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 700,
+   "file": "sfx/cc0/rise-maximize.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 9800,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1
+  },
+  {
+   "atMs": 9800,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 22000,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1
+  },
+  {
+   "atMs": 22000,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 34400,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 40400,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 47800,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 63300,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 66500,
+   "file": "sfx/cc0/select-chime.wav",
+   "volume": 0.8
+  }
+ ],
  "pages": [
   {
    "startMs": 50,

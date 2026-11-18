@@ -36,7 +36,7 @@ const pages = raw.map((lines, i) => {
 });
 const project = {
   mode: "production", durationSeconds: spec.durationMs / 1000, fps: spec.fps ?? 60, width: 1080, height: 1920,
-  brand: spec.brand, background: spec.background, voice: spec.voice, autoSfx: true,
+  brand: spec.brand, background: spec.background, voice: spec.voice, autoSfx: true, ...(spec.sfx ? { sfx: spec.sfx } : {}),
   pages, callouts: spec.callouts,
 };
 fs.writeFileSync(path.join(dir, "project.json"), JSON.stringify(project, null, 1));

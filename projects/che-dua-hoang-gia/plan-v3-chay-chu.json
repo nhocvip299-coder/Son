@@ -1,0 +1,1729 @@
+{
+ "source": "inputs/gelexia-che-dua.mp4",
+ "fps": 60,
+ "shots": [
+  {
+   "srcStartMs": 300,
+   "srcEndMs": 4300,
+   "rate": 0.796,
+   "kb": "in",
+   "drift": [
+    -30,
+    0
+   ],
+   "trans": "cut"
+  },
+  {
+   "srcStartMs": 4300,
+   "srcEndMs": 6700,
+   "rate": 0.796,
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 6700,
+   "srcEndMs": 9500,
+   "rate": 0.793,
+   "kb": "out",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 9500,
+   "srcEndMs": 12500,
+   "rate": 0.665,
+   "kb": "in",
+   "drift": [
+    30,
+    0
+   ],
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 15200,
+   "srcEndMs": 18500,
+   "rate": 1,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 18500,
+   "srcEndMs": 21500,
+   "rate": 1,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 22000,
+   "srcEndMs": 24400,
+   "rate": 1,
+   "kb": "in",
+   "drift": [
+    -30,
+    0
+   ],
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 29000,
+   "srcEndMs": 31600,
+   "rate": 1.008,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 32000,
+   "srcEndMs": 35100,
+   "rate": 1.008,
+   "kb": "in",
+   "drift": [
+    30,
+    0
+   ],
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 40000,
+   "srcEndMs": 43600,
+   "rate": 1.004,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 44800,
+   "srcEndMs": 48400,
+   "rate": 1.004,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 52000,
+   "srcEndMs": 55500,
+   "rate": 1,
+   "kb": "in",
+   "drift": [
+    -30,
+    0
+   ],
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 55700,
+   "srcEndMs": 57200,
+   "rate": 1,
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 60300,
+   "srcEndMs": 63600,
+   "rate": 1.005,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 64300,
+   "srcEndMs": 67200,
+   "rate": 1.005,
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 68000,
+   "srcEndMs": 71000,
+   "rate": 1.005,
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 72000,
+   "srcEndMs": 73500,
+   "rate": 1.005,
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 77200,
+   "srcEndMs": 82200,
+   "rate": 0.999,
+   "kb": "out",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 83500,
+   "srcEndMs": 86100,
+   "rate": 0.999,
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "srcStartMs": 86100,
+   "srcEndMs": 88800,
+   "rate": 0.994,
+   "kb": "in",
+   "trans": "flash"
+  },
+  {
+   "srcStartMs": 16000,
+   "srcEndMs": 18700,
+   "rate": 0.994,
+   "kb": "in",
+   "trans": "zoom"
+  }
+ ],
+ "items": [
+  {
+   "preset": "Kobe Text 08",
+   "startMs": 100,
+   "durationMs": 2600,
+   "texts": {
+    "Cẩn Thận": "Kiếp Nạn"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1180,
+    "width": 780
+   },
+   "note": "hook"
+  },
+  {
+   "preset": "Kobe Text 21",
+   "startMs": 21686,
+   "durationMs": 2900,
+   "texts": {
+    "Tiện ích": "Đỗ xe",
+    "Nổi Bật": "Dễ Ợt"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1180,
+    "width": 780
+   },
+   "note": "do xe"
+  },
+  {
+   "preset": "Kobe Text 35",
+   "startMs": 27482,
+   "durationMs": 2900,
+   "texts": {
+    "xanh": "rộng mát"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1180,
+    "width": 780
+   },
+   "note": "khong gian"
+  },
+  {
+   "preset": "Kobe Text 09",
+   "startMs": 30734,
+   "durationMs": 3000,
+   "texts": {
+    "Tiết kiệm": "Chỉ từ",
+    "50 TRIỆU": "35K",
+    "50 Triệu": "35K"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1180,
+    "width": 780
+   },
+   "note": "gia"
+  },
+  {
+   "preset": "Kobe Text 19",
+   "startMs": 37808,
+   "durationMs": 3200,
+   "texts": {
+    "Phong cách sống": "Topping",
+    "Hiện Đại": "Đầy Ắp",
+    "Do bạn chọn": "chả ki bo"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1180,
+    "width": 780
+   },
+   "note": "topping"
+  },
+  {
+   "preset": "Kobe Text 27",
+   "startMs": 43208,
+   "durationMs": 2800,
+   "texts": {
+    "SEDAN HẠNG C": "XOÀI + DỪA",
+    "Sang trọng": "Béo ngậy"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1180,
+    "width": 780
+   },
+   "note": "vi"
+  },
+  {
+   "preset": "Kobe Text 38",
+   "startMs": 57160,
+   "durationMs": 3300,
+   "texts": {
+    "1": "9",
+    "Căn Hộ": "Điểm",
+    "Đáng sống": "Đáng thử"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 1180,
+    "width": 780
+   },
+   "note": "cham diem"
+  }
+ ],
+ "tags": [
+  {
+   "startMs": 17186,
+   "durationMs": 4200,
+   "line1": "CHÈ DỪA HOÀNG GIA",
+   "line2": "KT12 Phố Đông – Vinhomes Ocean Park 2"
+  },
+  {
+   "startMs": 62469,
+   "durationMs": 3800,
+   "line1": "CHÈ DỪA HOÀNG GIA",
+   "line2": "KT12 Phố Đông – Vinhomes Ocean Park 2"
+  }
+ ],
+ "words": [
+  {
+   "text": "Kiếp",
+   "startMs": 150,
+   "endMs": 326
+  },
+  {
+   "text": "nạn",
+   "startMs": 356,
+   "endMs": 513
+  },
+  {
+   "text": "cuối",
+   "startMs": 543,
+   "endMs": 719
+  },
+  {
+   "text": "tuần.",
+   "startMs": 749,
+   "endMs": 942
+  },
+  {
+   "text": "Rảnh",
+   "startMs": 1073,
+   "endMs": 1248
+  },
+  {
+   "text": "quá",
+   "startMs": 1278,
+   "endMs": 1436
+  },
+  {
+   "text": "lại",
+   "startMs": 1466,
+   "endMs": 1624
+  },
+  {
+   "text": "đi",
+   "startMs": 1654,
+   "endMs": 1794
+  },
+  {
+   "text": "ăn",
+   "startMs": 1824,
+   "endMs": 1964
+  },
+  {
+   "text": "theo",
+   "startMs": 1994,
+   "endMs": 2169
+  },
+  {
+   "text": "tiktok.",
+   "startMs": 2199,
+   "endMs": 2428
+  },
+  {
+   "text": "Tao",
+   "startMs": 2559,
+   "endMs": 2717
+  },
+  {
+   "text": "nói",
+   "startMs": 2747,
+   "endMs": 2904
+  },
+  {
+   "text": "trước",
+   "startMs": 2934,
+   "endMs": 3128
+  },
+  {
+   "text": "nhá,",
+   "startMs": 3158,
+   "endMs": 3333
+  },
+  {
+   "text": "ăn",
+   "startMs": 3408,
+   "endMs": 3548
+  },
+  {
+   "text": "dở",
+   "startMs": 3578,
+   "endMs": 3718
+  },
+  {
+   "text": "là",
+   "startMs": 3748,
+   "endMs": 3888
+  },
+  {
+   "text": "tao",
+   "startMs": 3918,
+   "endMs": 4075
+  },
+  {
+   "text": "chửi",
+   "startMs": 4105,
+   "endMs": 4281
+  },
+  {
+   "text": "luôn.",
+   "startMs": 4311,
+   "endMs": 4504
+  },
+  {
+   "text": "Đéo",
+   "startMs": 4635,
+   "endMs": 4793
+  },
+  {
+   "text": "có",
+   "startMs": 4823,
+   "endMs": 4962
+  },
+  {
+   "text": "cái",
+   "startMs": 4992,
+   "endMs": 5150
+  },
+  {
+   "text": "kiểu",
+   "startMs": 5180,
+   "endMs": 5356
+  },
+  {
+   "text": "ôi",
+   "startMs": 5386,
+   "endMs": 5526
+  },
+  {
+   "text": "quán",
+   "startMs": 5556,
+   "endMs": 5731
+  },
+  {
+   "text": "xinh",
+   "startMs": 5761,
+   "endMs": 5937
+  },
+  {
+   "text": "lắm",
+   "startMs": 5967,
+   "endMs": 6124
+  },
+  {
+   "text": "mọi",
+   "startMs": 6154,
+   "endMs": 6312
+  },
+  {
+   "text": "người",
+   "startMs": 6342,
+   "endMs": 6536
+  },
+  {
+   "text": "ạ.",
+   "startMs": 6566,
+   "endMs": 6705
+  },
+  {
+   "text": "Xinh",
+   "startMs": 6836,
+   "endMs": 7012
+  },
+  {
+   "text": "cái",
+   "startMs": 7042,
+   "endMs": 7199
+  },
+  {
+   "text": "gì",
+   "startMs": 7229,
+   "endMs": 7369
+  },
+  {
+   "text": "mà",
+   "startMs": 7399,
+   "endMs": 7539
+  },
+  {
+   "text": "xinh!",
+   "startMs": 7569,
+   "endMs": 7762
+  },
+  {
+   "text": "Hôm",
+   "startMs": 8193,
+   "endMs": 8352
+  },
+  {
+   "text": "nay",
+   "startMs": 8382,
+   "endMs": 8541
+  },
+  {
+   "text": "tao",
+   "startMs": 8571,
+   "endMs": 8730
+  },
+  {
+   "text": "phi",
+   "startMs": 8760,
+   "endMs": 8919
+  },
+  {
+   "text": "thẳng",
+   "startMs": 8949,
+   "endMs": 9144
+  },
+  {
+   "text": "xuống",
+   "startMs": 9174,
+   "endMs": 9368
+  },
+  {
+   "text": "Vin",
+   "startMs": 9398,
+   "endMs": 9557
+  },
+  {
+   "text": "Ocean Park 2,",
+   "startMs": 9587,
+   "endMs": 10196
+  },
+  {
+   "text": "vào",
+   "startMs": 10271,
+   "endMs": 10430
+  },
+  {
+   "text": "khu",
+   "startMs": 10460,
+   "endMs": 10619
+  },
+  {
+   "text": "Phố",
+   "startMs": 10649,
+   "endMs": 10808
+  },
+  {
+   "text": "Đông.",
+   "startMs": 10838,
+   "endMs": 11033
+  },
+  {
+   "text": "Trời",
+   "startMs": 11164,
+   "endMs": 11341
+  },
+  {
+   "text": "thì",
+   "startMs": 11371,
+   "endMs": 11530
+  },
+  {
+   "text": "âm",
+   "startMs": 11560,
+   "endMs": 11701
+  },
+  {
+   "text": "u,",
+   "startMs": 11731,
+   "endMs": 11871
+  },
+  {
+   "text": "đường",
+   "startMs": 11946,
+   "endMs": 12141
+  },
+  {
+   "text": "ướt",
+   "startMs": 12171,
+   "endMs": 12330
+  },
+  {
+   "text": "nhẹp.",
+   "startMs": 12360,
+   "endMs": 12555
+  },
+  {
+   "text": "Kệ,",
+   "startMs": 12686,
+   "endMs": 12845
+  },
+  {
+   "text": "thèm",
+   "startMs": 12920,
+   "endMs": 13097
+  },
+  {
+   "text": "chè",
+   "startMs": 13127,
+   "endMs": 13286
+  },
+  {
+   "text": "rồi",
+   "startMs": 13316,
+   "endMs": 13475
+  },
+  {
+   "text": "thì",
+   "startMs": 13505,
+   "endMs": 13664
+  },
+  {
+   "text": "tao",
+   "startMs": 13694,
+   "endMs": 13853
+  },
+  {
+   "text": "vẫn",
+   "startMs": 13883,
+   "endMs": 14042
+  },
+  {
+   "text": "đi,",
+   "startMs": 14072,
+   "endMs": 14231
+  },
+  {
+   "text": "chứ",
+   "startMs": 14306,
+   "endMs": 14464
+  },
+  {
+   "text": "giờ",
+   "startMs": 14494,
+   "endMs": 14653
+  },
+  {
+   "text": "quay",
+   "startMs": 14683,
+   "endMs": 14860
+  },
+  {
+   "text": "về",
+   "startMs": 14890,
+   "endMs": 15031
+  },
+  {
+   "text": "uống",
+   "startMs": 15061,
+   "endMs": 15238
+  },
+  {
+   "text": "nước",
+   "startMs": 15268,
+   "endMs": 15445
+  },
+  {
+   "text": "lọc",
+   "startMs": 15475,
+   "endMs": 15634
+  },
+  {
+   "text": "à?",
+   "startMs": 15664,
+   "endMs": 15805
+  },
+  {
+   "text": "Ơ",
+   "startMs": 16236,
+   "endMs": 16361
+  },
+  {
+   "text": "kìa,",
+   "startMs": 16391,
+   "endMs": 16571
+  },
+  {
+   "text": "đến",
+   "startMs": 16646,
+   "endMs": 16808
+  },
+  {
+   "text": "nơi",
+   "startMs": 16838,
+   "endMs": 16999
+  },
+  {
+   "text": "rồi",
+   "startMs": 17029,
+   "endMs": 17191
+  },
+  {
+   "text": "này.",
+   "startMs": 17221,
+   "endMs": 17401
+  },
+  {
+   "text": "Chè",
+   "startMs": 17533,
+   "endMs": 17695
+  },
+  {
+   "text": "Dừa",
+   "startMs": 17725,
+   "endMs": 17886
+  },
+  {
+   "text": "Hoàng",
+   "startMs": 17916,
+   "endMs": 18114
+  },
+  {
+   "text": "Gia,",
+   "startMs": 18144,
+   "endMs": 18324
+  },
+  {
+   "text": "KT12",
+   "startMs": 18399,
+   "endMs": 19117
+  },
+  {
+   "text": "Phố",
+   "startMs": 19147,
+   "endMs": 19309
+  },
+  {
+   "text": "Đông,",
+   "startMs": 19339,
+   "endMs": 19537
+  },
+  {
+   "text": "Ocean Park 2.",
+   "startMs": 19612,
+   "endMs": 20230
+  },
+  {
+   "text": "Ô",
+   "startMs": 20362,
+   "endMs": 20487
+  },
+  {
+   "text": "tô",
+   "startMs": 20517,
+   "endMs": 20660
+  },
+  {
+   "text": "đỗ",
+   "startMs": 20690,
+   "endMs": 20834
+  },
+  {
+   "text": "luôn",
+   "startMs": 20864,
+   "endMs": 21043
+  },
+  {
+   "text": "lề",
+   "startMs": 21073,
+   "endMs": 21217
+  },
+  {
+   "text": "đường",
+   "startMs": 21247,
+   "endMs": 21445
+  },
+  {
+   "text": "trước",
+   "startMs": 21475,
+   "endMs": 21673
+  },
+  {
+   "text": "cửa,",
+   "startMs": 21703,
+   "endMs": 21882
+  },
+  {
+   "text": "xe",
+   "startMs": 21958,
+   "endMs": 22101
+  },
+  {
+   "text": "máy",
+   "startMs": 22131,
+   "endMs": 22293
+  },
+  {
+   "text": "dắt",
+   "startMs": 22323,
+   "endMs": 22484
+  },
+  {
+   "text": "lên",
+   "startMs": 22514,
+   "endMs": 22676
+  },
+  {
+   "text": "vỉa",
+   "startMs": 22706,
+   "endMs": 22867
+  },
+  {
+   "text": "hè,",
+   "startMs": 22897,
+   "endMs": 23059
+  },
+  {
+   "text": "khỏi",
+   "startMs": 23134,
+   "endMs": 23314
+  },
+  {
+   "text": "phải",
+   "startMs": 23344,
+   "endMs": 23524
+  },
+  {
+   "text": "đi",
+   "startMs": 23554,
+   "endMs": 23697
+  },
+  {
+   "text": "vòng",
+   "startMs": 23727,
+   "endMs": 23907
+  },
+  {
+   "text": "tìm",
+   "startMs": 23937,
+   "endMs": 24098
+  },
+  {
+   "text": "chỗ",
+   "startMs": 24128,
+   "endMs": 24290
+  },
+  {
+   "text": "gửi.",
+   "startMs": 24320,
+   "endMs": 24499
+  },
+  {
+   "text": "Để",
+   "startMs": 24932,
+   "endMs": 25070
+  },
+  {
+   "text": "tao",
+   "startMs": 25100,
+   "endMs": 25257
+  },
+  {
+   "text": "xem",
+   "startMs": 25287,
+   "endMs": 25443
+  },
+  {
+   "text": "có",
+   "startMs": 25473,
+   "endMs": 25611
+  },
+  {
+   "text": "cái",
+   "startMs": 25641,
+   "endMs": 25798
+  },
+  {
+   "text": "gì",
+   "startMs": 25828,
+   "endMs": 25966
+  },
+  {
+   "text": "mà",
+   "startMs": 25996,
+   "endMs": 26135
+  },
+  {
+   "text": "bọn",
+   "startMs": 26165,
+   "endMs": 26321
+  },
+  {
+   "text": "food",
+   "startMs": 26351,
+   "endMs": 26525
+  },
+  {
+   "text": "review",
+   "startMs": 26555,
+   "endMs": 26764
+  },
+  {
+   "text": "khen",
+   "startMs": 26794,
+   "endMs": 26968
+  },
+  {
+   "text": "ghê",
+   "startMs": 26998,
+   "endMs": 27155
+  },
+  {
+   "text": "thế.",
+   "startMs": 27185,
+   "endMs": 27359
+  },
+  {
+   "text": "Ơ,",
+   "startMs": 27488,
+   "endMs": 27627
+  },
+  {
+   "text": "trong",
+   "startMs": 27701,
+   "endMs": 27893
+  },
+  {
+   "text": "này",
+   "startMs": 27923,
+   "endMs": 28079
+  },
+  {
+   "text": "rộng",
+   "startMs": 28109,
+   "endMs": 28283
+  },
+  {
+   "text": "phết,",
+   "startMs": 28313,
+   "endMs": 28505
+  },
+  {
+   "text": "máy",
+   "startMs": 28579,
+   "endMs": 28735
+  },
+  {
+   "text": "lạnh",
+   "startMs": 28765,
+   "endMs": 28939
+  },
+  {
+   "text": "mát",
+   "startMs": 28969,
+   "endMs": 29126
+  },
+  {
+   "text": "rượi,",
+   "startMs": 29156,
+   "endMs": 29347
+  },
+  {
+   "text": "bàn",
+   "startMs": 29422,
+   "endMs": 29578
+  },
+  {
+   "text": "ghế",
+   "startMs": 29608,
+   "endMs": 29764
+  },
+  {
+   "text": "sạch",
+   "startMs": 29794,
+   "endMs": 29968
+  },
+  {
+   "text": "sẽ.",
+   "startMs": 29998,
+   "endMs": 30154
+  },
+  {
+   "text": "Menu",
+   "startMs": 30584,
+   "endMs": 30758
+  },
+  {
+   "text": "gần",
+   "startMs": 30788,
+   "endMs": 30945
+  },
+  {
+   "text": "30",
+   "startMs": 30975,
+   "endMs": 31318
+  },
+  {
+   "text": "món,",
+   "startMs": 31348,
+   "endMs": 31522
+  },
+  {
+   "text": "toàn",
+   "startMs": 31597,
+   "endMs": 31771
+  },
+  {
+   "text": "35K",
+   "startMs": 31801,
+   "endMs": 32126
+  },
+  {
+   "text": "đến",
+   "startMs": 32156,
+   "endMs": 32313
+  },
+  {
+   "text": "55K.",
+   "startMs": 32343,
+   "endMs": 32926
+  },
+  {
+   "text": "Con",
+   "startMs": 33056,
+   "endMs": 33213
+  },
+  {
+   "text": "bạn",
+   "startMs": 33243,
+   "endMs": 33399
+  },
+  {
+   "text": "tao",
+   "startMs": 33429,
+   "endMs": 33586
+  },
+  {
+   "text": "đọc",
+   "startMs": 33616,
+   "endMs": 33772
+  },
+  {
+   "text": "menu",
+   "startMs": 33802,
+   "endMs": 33977
+  },
+  {
+   "text": "như",
+   "startMs": 34007,
+   "endMs": 34163
+  },
+  {
+   "text": "đọc",
+   "startMs": 34193,
+   "endMs": 34350
+  },
+  {
+   "text": "sớ,",
+   "startMs": 34380,
+   "endMs": 34536
+  },
+  {
+   "text": "mười",
+   "startMs": 34611,
+   "endMs": 34785
+  },
+  {
+   "text": "phút",
+   "startMs": 34815,
+   "endMs": 34989
+  },
+  {
+   "text": "chưa",
+   "startMs": 35019,
+   "endMs": 35194
+  },
+  {
+   "text": "chọn",
+   "startMs": 35224,
+   "endMs": 35398
+  },
+  {
+   "text": "xong.",
+   "startMs": 35428,
+   "endMs": 35620
+  },
+  {
+   "text": "Chọn",
+   "startMs": 35750,
+   "endMs": 35924
+  },
+  {
+   "text": "nhanh",
+   "startMs": 35954,
+   "endMs": 36146
+  },
+  {
+   "text": "lên",
+   "startMs": 36176,
+   "endMs": 36333
+  },
+  {
+   "text": "bà",
+   "startMs": 36363,
+   "endMs": 36502
+  },
+  {
+   "text": "nội,",
+   "startMs": 36532,
+   "endMs": 36706
+  },
+  {
+   "text": "tao",
+   "startMs": 36781,
+   "endMs": 36937
+  },
+  {
+   "text": "đói",
+   "startMs": 36967,
+   "endMs": 37124
+  },
+  {
+   "text": "rồi!",
+   "startMs": 37154,
+   "endMs": 37328
+  },
+  {
+   "text": "Quầy",
+   "startMs": 37758,
+   "endMs": 37922
+  },
+  {
+   "text": "topping",
+   "startMs": 37952,
+   "endMs": 38166
+  },
+  {
+   "text": "đây",
+   "startMs": 38196,
+   "endMs": 38342
+  },
+  {
+   "text": "chúng",
+   "startMs": 38372,
+   "endMs": 38553
+  },
+  {
+   "text": "mày:",
+   "startMs": 38583,
+   "endMs": 38746
+  },
+  {
+   "text": "thạch",
+   "startMs": 38818,
+   "endMs": 38999
+  },
+  {
+   "text": "này,",
+   "startMs": 39029,
+   "endMs": 39192
+  },
+  {
+   "text": "dừa",
+   "startMs": 39264,
+   "endMs": 39411
+  },
+  {
+   "text": "non",
+   "startMs": 39441,
+   "endMs": 39588
+  },
+  {
+   "text": "này,",
+   "startMs": 39618,
+   "endMs": 39781
+  },
+  {
+   "text": "xoài",
+   "startMs": 39853,
+   "endMs": 40017
+  },
+  {
+   "text": "này,",
+   "startMs": 40047,
+   "endMs": 40211
+  },
+  {
+   "text": "trân",
+   "startMs": 40283,
+   "endMs": 40446
+  },
+  {
+   "text": "châu",
+   "startMs": 40476,
+   "endMs": 40640
+  },
+  {
+   "text": "này.",
+   "startMs": 40670,
+   "endMs": 40833
+  },
+  {
+   "text": "Múc",
+   "startMs": 40958,
+   "endMs": 41105
+  },
+  {
+   "text": "đầy",
+   "startMs": 41135,
+   "endMs": 41281
+  },
+  {
+   "text": "ụ,",
+   "startMs": 41311,
+   "endMs": 41441
+  },
+  {
+   "text": "chả",
+   "startMs": 41513,
+   "endMs": 41660
+  },
+  {
+   "text": "ki",
+   "startMs": 41690,
+   "endMs": 41820
+  },
+  {
+   "text": "bo",
+   "startMs": 41850,
+   "endMs": 41980
+  },
+  {
+   "text": "tí",
+   "startMs": 42010,
+   "endMs": 42140
+  },
+  {
+   "text": "nào.",
+   "startMs": 42170,
+   "endMs": 42333
+  },
+  {
+   "text": "Đây,",
+   "startMs": 42758,
+   "endMs": 42930
+  },
+  {
+   "text": "chè",
+   "startMs": 43004,
+   "endMs": 43159
+  },
+  {
+   "text": "lên",
+   "startMs": 43189,
+   "endMs": 43344
+  },
+  {
+   "text": "rồi.",
+   "startMs": 43374,
+   "endMs": 43546
+  },
+  {
+   "text": "Xoài",
+   "startMs": 43675,
+   "endMs": 43848
+  },
+  {
+   "text": "vàng",
+   "startMs": 43878,
+   "endMs": 44050
+  },
+  {
+   "text": "ươm,",
+   "startMs": 44080,
+   "endMs": 44252
+  },
+  {
+   "text": "cốt",
+   "startMs": 44326,
+   "endMs": 44481
+  },
+  {
+   "text": "dừa",
+   "startMs": 44511,
+   "endMs": 44666
+  },
+  {
+   "text": "trắng",
+   "startMs": 44696,
+   "endMs": 44886
+  },
+  {
+   "text": "phau,",
+   "startMs": 44916,
+   "endMs": 45106
+  },
+  {
+   "text": "đá",
+   "startMs": 45180,
+   "endMs": 45317
+  },
+  {
+   "text": "mát",
+   "startMs": 45347,
+   "endMs": 45502
+  },
+  {
+   "text": "lạnh.",
+   "startMs": 45532,
+   "endMs": 45722
+  },
+  {
+   "text": "35K",
+   "startMs": 45851,
+   "endMs": 46393
+  },
+  {
+   "text": "mà",
+   "startMs": 46423,
+   "endMs": 46560
+  },
+  {
+   "text": "lèo",
+   "startMs": 46590,
+   "endMs": 46745
+  },
+  {
+   "text": "tèo",
+   "startMs": 46775,
+   "endMs": 46930
+  },
+  {
+   "text": "thì",
+   "startMs": 46960,
+   "endMs": 47114
+  },
+  {
+   "text": "tao",
+   "startMs": 47144,
+   "endMs": 47299
+  },
+  {
+   "text": "quay",
+   "startMs": 47329,
+   "endMs": 47501
+  },
+  {
+   "text": "xe",
+   "startMs": 47531,
+   "endMs": 47669
+  },
+  {
+   "text": "ngay.",
+   "startMs": 47699,
+   "endMs": 47889
+  },
+  {
+   "text": "Nào,",
+   "startMs": 48018,
+   "endMs": 48190
+  },
+  {
+   "text": "ăn",
+   "startMs": 48264,
+   "endMs": 48401
+  },
+  {
+   "text": "đi",
+   "startMs": 48431,
+   "endMs": 48568
+  },
+  {
+   "text": "bà",
+   "startMs": 48598,
+   "endMs": 48736
+  },
+  {
+   "text": "nội,",
+   "startMs": 48766,
+   "endMs": 48938
+  },
+  {
+   "text": "ngồi",
+   "startMs": 49012,
+   "endMs": 49184
+  },
+  {
+   "text": "đực",
+   "startMs": 49214,
+   "endMs": 49369
+  },
+  {
+   "text": "mặt",
+   "startMs": 49399,
+   "endMs": 49554
+  },
+  {
+   "text": "ra",
+   "startMs": 49584,
+   "endMs": 49721
+  },
+  {
+   "text": "chụp",
+   "startMs": 49751,
+   "endMs": 49923
+  },
+  {
+   "text": "ảnh",
+   "startMs": 49953,
+   "endMs": 50108
+  },
+  {
+   "text": "làm",
+   "startMs": 50138,
+   "endMs": 50293
+  },
+  {
+   "text": "gì?",
+   "startMs": 50323,
+   "endMs": 50478
+  },
+  {
+   "text": "Ngon",
+   "startMs": 50607,
+   "endMs": 50779
+  },
+  {
+   "text": "không,",
+   "startMs": 50809,
+   "endMs": 51017
+  },
+  {
+   "text": "nói",
+   "startMs": 51091,
+   "endMs": 51245
+  },
+  {
+   "text": "thật?",
+   "startMs": 51275,
+   "endMs": 51465
+  },
+  {
+   "text": "Đừng",
+   "startMs": 51594,
+   "endMs": 51767
+  },
+  {
+   "text": "thấy",
+   "startMs": 51797,
+   "endMs": 51969
+  },
+  {
+   "text": "tao",
+   "startMs": 51999,
+   "endMs": 52154
+  },
+  {
+   "text": "quay",
+   "startMs": 52184,
+   "endMs": 52356
+  },
+  {
+   "text": "tiktok",
+   "startMs": 52386,
+   "endMs": 52594
+  },
+  {
+   "text": "mà",
+   "startMs": 52624,
+   "endMs": 52761
+  },
+  {
+   "text": "nịnh!",
+   "startMs": 52791,
+   "endMs": 52981
+  },
+  {
+   "text": "Ơ,",
+   "startMs": 53410,
+   "endMs": 53545
+  },
+  {
+   "text": "gật",
+   "startMs": 53618,
+   "endMs": 53770
+  },
+  {
+   "text": "gù",
+   "startMs": 53800,
+   "endMs": 53935
+  },
+  {
+   "text": "à?",
+   "startMs": 53965,
+   "endMs": 54100
+  },
+  {
+   "text": "Ừ",
+   "startMs": 54227,
+   "endMs": 54345
+  },
+  {
+   "text": "thôi,",
+   "startMs": 54375,
+   "endMs": 54561
+  },
+  {
+   "text": "tao",
+   "startMs": 54635,
+   "endMs": 54787
+  },
+  {
+   "text": "công",
+   "startMs": 54817,
+   "endMs": 54986
+  },
+  {
+   "text": "nhận:",
+   "startMs": 55016,
+   "endMs": 55203
+  },
+  {
+   "text": "béo",
+   "startMs": 55276,
+   "endMs": 55428
+  },
+  {
+   "text": "mà",
+   "startMs": 55458,
+   "endMs": 55593
+  },
+  {
+   "text": "không",
+   "startMs": 55623,
+   "endMs": 55810
+  },
+  {
+   "text": "ngấy,",
+   "startMs": 55840,
+   "endMs": 56027
+  },
+  {
+   "text": "xoài",
+   "startMs": 56100,
+   "endMs": 56269
+  },
+  {
+   "text": "ngọt,",
+   "startMs": 56299,
+   "endMs": 56486
+  },
+  {
+   "text": "nhân",
+   "startMs": 56559,
+   "endMs": 56729
+  },
+  {
+   "text": "viên",
+   "startMs": 56759,
+   "endMs": 56928
+  },
+  {
+   "text": "nhanh",
+   "startMs": 56958,
+   "endMs": 57145
+  },
+  {
+   "text": "nhẹn.",
+   "startMs": 57175,
+   "endMs": 57362
+  },
+  {
+   "text": "Tao",
+   "startMs": 57489,
+   "endMs": 57641
+  },
+  {
+   "text": "chấm",
+   "startMs": 57671,
+   "endMs": 57841
+  },
+  {
+   "text": "9 điểm.",
+   "startMs": 57871,
+   "endMs": 58257
+  },
+  {
+   "text": "1 điểm",
+   "startMs": 58385,
+   "endMs": 58736
+  },
+  {
+   "text": "còn",
+   "startMs": 58766,
+   "endMs": 58918
+  },
+  {
+   "text": "lại",
+   "startMs": 58948,
+   "endMs": 59100
+  },
+  {
+   "text": "để",
+   "startMs": 59130,
+   "endMs": 59265
+  },
+  {
+   "text": "lần",
+   "startMs": 59295,
+   "endMs": 59447
+  },
+  {
+   "text": "sau",
+   "startMs": 59477,
+   "endMs": 59629
+  },
+  {
+   "text": "tao",
+   "startMs": 59659,
+   "endMs": 59811
+  },
+  {
+   "text": "quay",
+   "startMs": 59841,
+   "endMs": 60011
+  },
+  {
+   "text": "lại",
+   "startMs": 60041,
+   "endMs": 60193
+  },
+  {
+   "text": "soi",
+   "startMs": 60223,
+   "endMs": 60375
+  },
+  {
+   "text": "tiếp.",
+   "startMs": 60405,
+   "endMs": 60591
+  },
+  {
+   "text": "Chúng",
+   "startMs": 61019,
+   "endMs": 61212
+  },
+  {
+   "text": "mày",
+   "startMs": 61242,
+   "endMs": 61400
+  },
+  {
+   "text": "ở",
+   "startMs": 61430,
+   "endMs": 61551
+  },
+  {
+   "text": "Ocean",
+   "startMs": 61581,
+   "endMs": 61775
+  },
+  {
+   "text": "Park",
+   "startMs": 61805,
+   "endMs": 61980
+  },
+  {
+   "text": "thì",
+   "startMs": 62010,
+   "endMs": 62167
+  },
+  {
+   "text": "nhớ",
+   "startMs": 62197,
+   "endMs": 62355
+  },
+  {
+   "text": "cái",
+   "startMs": 62385,
+   "endMs": 62542
+  },
+  {
+   "text": "địa",
+   "startMs": 62572,
+   "endMs": 62730
+  },
+  {
+   "text": "chỉ",
+   "startMs": 62760,
+   "endMs": 62917
+  },
+  {
+   "text": "này",
+   "startMs": 62947,
+   "endMs": 63105
+  },
+  {
+   "text": "nhá:",
+   "startMs": 63135,
+   "endMs": 63310
+  },
+  {
+   "text": "Chè",
+   "startMs": 63385,
+   "endMs": 63542
+  },
+  {
+   "text": "Dừa",
+   "startMs": 63572,
+   "endMs": 63729
+  },
+  {
+   "text": "Hoàng",
+   "startMs": 63759,
+   "endMs": 63953
+  },
+  {
+   "text": "Gia,",
+   "startMs": 63983,
+   "endMs": 64158
+  },
+  {
+   "text": "KT12",
+   "startMs": 64233,
+   "endMs": 64935
+  },
+  {
+   "text": "Phố",
+   "startMs": 64965,
+   "endMs": 65122
+  },
+  {
+   "text": "Đông,",
+   "startMs": 65152,
+   "endMs": 65345
+  },
+  {
+   "text": "Ocean Park 2.",
+   "startMs": 65420,
+   "endMs": 66024
+  }
+ ],
+ "accentRe": "^(kiếp|nạn|tiktok|đéo|dở|chửi|chè|dừa|hoàng|gia|KT12|phố|đông|ocean|park|ô|tô|đỗ|menu|35K|55K|30|9|topping|xoài|béo|chín|điểm|ngon|nịnh|quay)",
+ "music": {
+  "src": "music/gelexia-upbeat.wav",
+  "volume": 0.5
+ },
+ "ambientVolume": 0.22,
+ "wordsY": 560
+}

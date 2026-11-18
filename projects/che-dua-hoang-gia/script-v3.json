@@ -1,0 +1,369 @@
+{
+ "title": "Chè Dừa Hoàng Gia v3 — kịch bản kiểu video mẫu (tao – chúng mày)",
+ "source": "inputs/gelexia-che-dua.mp4",
+ "fps": 60,
+ "wps": 4.6,
+ "paras": [
+  {
+   "text": "Kiếp nạn cuối tuần. Rảnh quá lại đi ăn theo tiktok. Tao nói trước nhá, ăn dở là tao chửi luôn. Đéo có cái kiểu \"ôi quán xinh lắm mọi người ạ\". Xinh cái gì mà xinh!",
+   "shots": [
+    {
+     "src": [
+      300,
+      4300
+     ],
+     "rate": 0.8,
+     "trans": "cut",
+     "kb": "in",
+     "drift": [
+      -30,
+      0
+     ]
+    },
+    {
+     "src": [
+      4300,
+      6700
+     ],
+     "rate": 0.8,
+     "trans": "zoom",
+     "kb": "in"
+    }
+   ],
+   "items": [
+    {
+     "preset": "Kobe Text 08",
+     "at": 100,
+     "dur": 2600,
+     "texts": {
+      "Cẩn Thận": "Kiếp Nạn"
+     },
+     "note": "hook"
+    }
+   ]
+  },
+  {
+   "text": "Hôm nay tao phi thẳng xuống Vin Ocean Park hai, vào khu Phố Đông. Trời thì âm u, đường ướt nhẹp. Kệ, thèm chè rồi thì tao vẫn đi, chứ giờ quay về uống nước lọc à?",
+   "shots": [
+    {
+     "src": [
+      6700,
+      9500
+     ],
+     "rate": 0.8,
+     "trans": "flash",
+     "kb": "out"
+    },
+    {
+     "src": [
+      9500,
+      12500
+     ],
+     "rate": 0.67,
+     "trans": "zoom",
+     "kb": "in",
+     "drift": [
+      30,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "text": "Ơ kìa, đến nơi rồi này. Chè Dừa Hoàng Gia, Ca Tê mười hai Phố Đông, Ocean Park hai. Ô tô đỗ luôn lề đường trước cửa, xe máy dắt lên vỉa hè, khỏi phải đi vòng tìm chỗ gửi.",
+   "shots": [
+    {
+     "src": [
+      15200,
+      18500
+     ],
+     "trans": "flash",
+     "kb": "in"
+    },
+    {
+     "src": [
+      18500,
+      21500
+     ],
+     "trans": "zoom",
+     "kb": "out"
+    },
+    {
+     "src": [
+      22000,
+      24400
+     ],
+     "trans": "zoom",
+     "kb": "in",
+     "drift": [
+      -30,
+      0
+     ]
+    }
+   ],
+   "tags": [
+    {
+     "at": 1100,
+     "dur": 4200,
+     "line1": "CHÈ DỪA HOÀNG GIA",
+     "line2": "KT12 Phố Đông – Vinhomes Ocean Park 2"
+    }
+   ],
+   "items": [
+    {
+     "preset": "Kobe Text 21",
+     "at": 5600,
+     "dur": 2900,
+     "texts": {
+      "Tiện ích": "Đỗ xe",
+      "Nổi Bật": "Dễ Ợt"
+     },
+     "note": "do xe"
+    }
+   ]
+  },
+  {
+   "text": "Để tao xem có cái gì mà bọn food review khen ghê thế. Ơ, trong này rộng phết, máy lạnh mát rượi, bàn ghế sạch sẽ.",
+   "shots": [
+    {
+     "src": [
+      29000,
+      31600
+     ],
+     "trans": "flash",
+     "kb": "in"
+    },
+    {
+     "src": [
+      32000,
+      35100
+     ],
+     "trans": "zoom",
+     "kb": "in",
+     "drift": [
+      30,
+      0
+     ]
+    }
+   ],
+   "items": [
+    {
+     "preset": "Kobe Text 35",
+     "at": 2700,
+     "dur": 2900,
+     "texts": {
+      "xanh": "rộng mát"
+     },
+     "note": "khong gian"
+    }
+   ]
+  },
+  {
+   "text": "Menu gần ba chục món, toàn ba lăm đến năm lăm nghìn. Con bạn tao đọc menu như đọc sớ, mười phút chưa chọn xong. Chọn nhanh lên bà nội, tao đói rồi!",
+   "shots": [
+    {
+     "src": [
+      40000,
+      43600
+     ],
+     "trans": "flash",
+     "kb": "in"
+    },
+    {
+     "src": [
+      44800,
+      48400
+     ],
+     "trans": "zoom",
+     "kb": "out"
+    }
+   ],
+   "items": [
+    {
+     "preset": "Kobe Text 09",
+     "at": 300,
+     "dur": 3000,
+     "texts": {
+      "Tiết kiệm": "Chỉ từ",
+      "50 TRIỆU": "35K",
+      "50 Triệu": "35K"
+     },
+     "note": "gia"
+    }
+   ]
+  },
+  {
+   "text": "Quầy topping đây chúng mày: thạch này, dừa non này, xoài này, trân châu này. Múc đầy ụ, chả ki bo tí nào.",
+   "shots": [
+    {
+     "src": [
+      52000,
+      55500
+     ],
+     "trans": "flash",
+     "kb": "in",
+     "drift": [
+      -30,
+      0
+     ]
+    },
+    {
+     "src": [
+      55700,
+      57200
+     ],
+     "trans": "zoom",
+     "kb": "in"
+    }
+   ],
+   "items": [
+    {
+     "preset": "Kobe Text 19",
+     "at": 200,
+     "dur": 3200,
+     "texts": {
+      "Phong cách sống": "Topping",
+      "Hiện Đại": "Đầy Ắp",
+      "Do bạn chọn": "chả ki bo"
+     },
+     "note": "topping"
+    }
+   ]
+  },
+  {
+   "text": "Đây, chè lên rồi. Xoài vàng ươm, cốt dừa trắng phau, đá mát lạnh. Ba lăm nghìn mà lèo tèo thì tao quay xe ngay. Nào, ăn đi bà nội, ngồi đực mặt ra chụp ảnh làm gì? Ngon không, nói thật? Đừng thấy tao quay tiktok mà nịnh!",
+   "shots": [
+    {
+     "src": [
+      60300,
+      63600
+     ],
+     "trans": "flash",
+     "kb": "in"
+    },
+    {
+     "src": [
+      64300,
+      67200
+     ],
+     "trans": "zoom",
+     "kb": "out"
+    },
+    {
+     "src": [
+      68000,
+      71000
+     ],
+     "trans": "zoom",
+     "kb": "in"
+    },
+    {
+     "src": [
+      72000,
+      73500
+     ],
+     "trans": "zoom",
+     "kb": "in"
+    }
+   ],
+   "items": [
+    {
+     "preset": "Kobe Text 27",
+     "at": 600,
+     "dur": 2800,
+     "texts": {
+      "SEDAN HẠNG C": "XOÀI + DỪA",
+      "Sang trọng": "Béo ngậy"
+     },
+     "note": "vi"
+    }
+   ]
+  },
+  {
+   "text": "Ơ, gật gù à? Ừ thôi, tao công nhận: béo mà không ngấy, xoài ngọt, nhân viên nhanh nhẹn. Tao chấm chín điểm. Một điểm còn lại để lần sau tao quay lại soi tiếp.",
+   "shots": [
+    {
+     "src": [
+      77200,
+      82200
+     ],
+     "trans": "flash",
+     "kb": "out"
+    },
+    {
+     "src": [
+      83500,
+      86100
+     ],
+     "trans": "zoom",
+     "kb": "in"
+    }
+   ],
+   "items": [
+    {
+     "preset": "Kobe Text 38",
+     "at": 3900,
+     "dur": 3300,
+     "texts": {
+      "1": "9",
+      "Căn Hộ": "Điểm",
+      "Đáng sống": "Đáng thử"
+     },
+     "note": "cham diem"
+    }
+   ]
+  },
+  {
+   "text": "Chúng mày ở Ocean Park thì nhớ cái địa chỉ này nhá: Chè Dừa Hoàng Gia, Ca Tê mười hai Phố Đông, Ocean Park hai.",
+   "shots": [
+    {
+     "src": [
+      86100,
+      88800
+     ],
+     "trans": "flash",
+     "kb": "in"
+    },
+    {
+     "src": [
+      16000,
+      18700
+     ],
+     "trans": "zoom",
+     "kb": "in"
+    }
+   ],
+   "tags": [
+    {
+     "at": 1600,
+     "dur": 3800,
+     "line1": "CHÈ DỪA HOÀNG GIA",
+     "line2": "KT12 Phố Đông – Vinhomes Ocean Park 2"
+    }
+   ]
+  }
+ ],
+ "fit": {
+  "cx": 540,
+  "cy": 1180,
+  "width": 780
+ },
+ "subsY": 560,
+ "wordsY": 560,
+ "accentRe": "^(kiếp|nạn|tiktok|đéo|dở|chửi|chè|dừa|hoàng|gia|KT12|phố|đông|ocean|park|ô|tô|đỗ|menu|35K|55K|30|9|topping|xoài|béo|chín|điểm|ngon|nịnh|quay)",
+ "music": {
+  "src": "music/gelexia-upbeat.wav",
+  "volume": 0.5
+ },
+ "ambientVolume": 0.22,
+ "display": {
+  "Ca Tê mười hai": "KT12",
+  "Ocean Park hai": "Ocean Park 2",
+  "ba lăm nghìn": "35K",
+  "năm lăm nghìn": "55K",
+  "ba lăm": "35K",
+  "ba chục": "30",
+  "chín điểm": "9 điểm",
+  "Một điểm": "1 điểm"
+ }
+}

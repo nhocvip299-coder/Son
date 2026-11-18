@@ -21,7 +21,9 @@ export type GxShot = {
   drift?: [number, number]; // troi px (x,y) tu dau -> cuoi canh
   kb?: "in" | "out"; // Ken Burns
   trans?: "flash" | "zoom" | "cut"; // hieu ung luc VAO canh
+  rate?: number; // toc do phat (0.8 = cham lai cho canh b-roll)
 };
+export type GxTag = { startMs: number; durationMs: number; line1: string; line2?: string; y?: number };
 export type GxPlan = {
   source: string;
   fps: number;
@@ -34,8 +36,12 @@ export type GxPlan = {
   ambientVolume?: number;
   cutSfxVolume?: number;
   handle?: string; // tag kenh goc tren
+  subs?: boolean; // phu de theo cum (kieu video mau: trang IN HOA, tu khoa cam)
+  subsY?: number;
+  tags?: GxTag[]; // nhan dia chi vang
 };
-export const gxDurationMs = (p: GxPlan) => p.shots.reduce((a, s) => a + s.srcEndMs - s.srcStartMs, 0);
+const shotMs = (s: GxShot) => (s.srcEndMs - s.srcStartMs) / (s.rate ?? 1);
+export const gxDurationMs = (p: GxPlan) => p.shots.reduce((a, s) => a + shotMs(s), 0);
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const G = STYLE.grade;
@@ -64,6 +70,7 @@ const Shot: React.FC<{ plan: GxPlan; s: GxShot; dur: number }> = ({ plan, s, dur
         trimBefore={toF(s.srcStartMs)}
         trimAfter={toF(s.srcEndMs)}
         objectFit="cover"
+        playbackRate={s.rate ?? 1}
         volume={plan.ambientVolume ?? 0.25}
       />
     </AbsoluteFill>
@@ -114,6 +121,108 @@ const Handle: React.FC<{ text: string }> = ({ text }) => {
   );
 };
 
+/** Phu de theo cum ~4-6 tu (kieu video mau): trang IN HOA dam, vien den, tu khoa cam. */
+const SubChunk: React.FC<{ words: WbwWord[]; dur: number; re: RegExp | null; y: number }> = ({ words, dur, re, y }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const a = interpolate(f, [0, Math.round(0.12 * fps), dur - 3, dur], [0, 1, 1, 0], clamp);
+  const sc = interpolate(f, [0, Math.round(0.15 * fps)], [0.85, 1], { ...clamp, easing: Easing.out(Easing.back(2)) });
+  return (
+    <>
+    <div style={{ position: "absolute", left: 0, right: 0, top: y - 130, height: 260, opacity: a * 0.9, background: "linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.38) 30%, rgba(0,0,0,0.38) 70%, rgba(0,0,0,0) 100%)" }} />
+    <div style={{ position: "absolute", left: 60, right: 60, top: y, textAlign: "center", opacity: a, scale: sc, translate: "0 -50%" }}>
+      {words.map((w, i) => {
+        const hot = !!re && re.test(w.text);
+        return (
+          <span
+            key={i}
+            style={{
+              fontFamily: "Be Vietnam Pro, sans-serif",
+              fontWeight: 900,
+              fontSize: hot ? 66 : 56,
+              textTransform: "uppercase",
+              color: hot ? "#FF8A1F" : "#FFFFFF",
+              WebkitTextStroke: "2px #000",
+              paintOrder: "stroke",
+              textShadow: "0 3px 0 #000, 0 0 14px rgba(0,0,0,0.6)" + (hot ? ", 0 0 18px #FF8A1Faa" : ""),
+              marginRight: 14,
+              lineHeight: 1.25,
+            }}
+          >
+            {w.text}
+          </span>
+        );
+      })}
+    </div>
+    </>
+  );
+};
+
+const PhraseSubs: React.FC<{ words: WbwWord[]; y: number; accentRe?: string }> = ({ words, y, accentRe }) => {
+  const { fps } = useVideoConfig();
+  const re = accentRe ? new RegExp(accentRe, "i") : null;
+  // gom cum: ngat o dau cau / dau phay hoac khi du 5 tu
+  const chunks: WbwWord[][] = [];
+  let cur: WbwWord[] = [];
+  for (const w of words) {
+    cur.push(w);
+    if (/[.,!?:;…]$/.test(w.text) || cur.length >= 5) {
+      chunks.push(cur);
+      cur = [];
+    }
+  }
+  if (cur.length) chunks.push(cur);
+  return (
+    <AbsoluteFill>
+      {chunks.map((c, i) => {
+        const from = Math.round((c[0].startMs / 1000) * fps);
+        const next = chunks[i + 1];
+        const endMs = next ? next[0].startMs : c[c.length - 1].endMs + 400;
+        const dur = Math.max(3, Math.round((endMs / 1000) * fps) - from);
+        return (
+          <Sequence key={i} from={from} durationInFrames={dur} layout="none" name={`Sub ${c.map((w) => w.text).join(" ")}`}>
+            <SubChunk words={c.map((w) => ({ ...w, text: w.text.replace(/[,.:;]$/, "") }))} dur={dur} re={re} y={y} />
+          </Sequence>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+/** Nhan dia chi: hop vang chu den (kieu video mau), truot vao + "pop". */
+const AddressTag: React.FC<{ tag: GxTag; dur: number }> = ({ tag, dur }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const a = interpolate(f, [0, Math.round(0.25 * fps), dur - Math.round(0.25 * fps), dur], [0, 1, 1, 0], clamp);
+  const w = interpolate(f, [0, Math.round(0.3 * fps)], [0, 1], { ...clamp, easing: Easing.out(Easing.cubic) });
+  return (
+    <div style={{ position: "absolute", left: 0, right: 0, top: tag.y ?? 1300, display: "flex", flexDirection: "column", alignItems: "center", gap: 10, opacity: a }}>
+      <div
+        style={{
+          background: "#FFD400",
+          color: "#111",
+          fontFamily: "Be Vietnam Pro, sans-serif",
+          fontWeight: 900,
+          fontSize: 50,
+          padding: "12px 30px",
+          borderRadius: 10,
+          clipPath: `inset(0 ${(1 - w) * 100}% 0 0)`,
+          boxShadow: "0 8px 24px rgba(0,0,0,0.45)",
+          whiteSpace: "nowrap",
+        }}
+      >
+        📍 {tag.line1}
+      </div>
+      {tag.line2 ? (
+        <div style={{ background: "rgba(0,0,0,0.75)", color: "#FFD400", fontFamily: "Be Vietnam Pro, sans-serif", fontWeight: 800, fontSize: 36, padding: "8px 22px", borderRadius: 8, clipPath: `inset(0 ${(1 - w) * 100}% 0 0)`, whiteSpace: "nowrap" }}>
+          {tag.line2}
+        </div>
+      ) : null}
+      <Audio src={staticFile("sfx/pop.wav")} volume={0.8} />
+    </div>
+  );
+};
+
 export const GelexiaEdit: React.FC<{ plan: GxPlan }> = ({ plan }) => {
   const { fps } = useVideoConfig();
   const toF = (ms: number) => Math.round((ms / 1000) * fps);
@@ -123,7 +232,7 @@ export const GelexiaEdit: React.FC<{ plan: GxPlan }> = ({ plan }) => {
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {plan.shots.map((s, i) => {
         const from = cursor;
-        const dur = toF(s.srcEndMs) - toF(s.srcStartMs);
+        const dur = Math.round((toF(s.srcEndMs) - toF(s.srcStartMs)) / (s.rate ?? 1));
         cursor += dur;
         starts.push(from);
         return (
@@ -159,7 +268,13 @@ export const GelexiaEdit: React.FC<{ plan: GxPlan }> = ({ plan }) => {
           </Sequence>
         );
       })}
-      {plan.words ? <WordByWord words={plan.words} y={plan.wordsY} accentRe={plan.accentRe} /> : null}
+      {plan.tags?.map((t, i) => (
+        <Sequence key={`tag${i}`} from={toF(t.startMs)} durationInFrames={toF(t.durationMs)} name={`Tag ${t.line1}`}>
+          <AddressTag tag={t} dur={toF(t.durationMs)} />
+        </Sequence>
+      ))}
+      {plan.words && plan.subs ? <PhraseSubs words={plan.words} y={plan.subsY ?? 560} accentRe={plan.accentRe} /> : null}
+      {plan.words && !plan.subs ? <WordByWord words={plan.words} y={plan.wordsY} accentRe={plan.accentRe} /> : null}
       {plan.handle ? <Handle text={plan.handle} /> : null}
       {plan.music ? <Audio src={staticFile(plan.music.src)} volume={plan.music.volume} /> : null}
     </AbsoluteFill>

@@ -222,7 +222,8 @@ const AddressTag: React.FC<{ tag: GxTag; dur: number }> = ({ tag, dur }) => {
           {tag.line2}
         </div>
       ) : null}
-      <Audio src={staticFile("sfx/pop.wav")} volume={0.8} />
+      <Audio src={staticFile("sfx/pop.wav")} volume={1} />
+      <Audio src={staticFile("sfx/sparkle.wav")} volume={0.6} />
     </div>
   );
 };
@@ -256,7 +257,9 @@ export const GelexiaEdit: React.FC<{ plan: GxPlan }> = ({ plan }) => {
       {plan.shots.map((s, i) =>
         i > 0 && s.trans !== "cut" ? (
           <Sequence key={`sx${i}`} from={Math.max(0, starts[i] - Math.round(0.12 * fps))} durationInFrames={Math.round(0.8 * fps)} name="Whoosh" layout="none">
-            <Audio src={staticFile(s.trans === "flash" ? "sfx/swish.wav" : "sfx/whoosh.wav")} volume={plan.cutSfxVolume ?? 0.55} />
+            {/* swish: nhieu cao tan -> noi ro tren giong; whoosh lot than am cho canh zoom */}
+            <Audio src={staticFile("sfx/swish.wav")} volume={s.trans === "flash" ? 1 : (plan.cutSfxVolume ?? 0.8)} />
+            {s.trans === "zoom" ? <Audio src={staticFile("sfx/whoosh.wav")} volume={0.5} /> : null}
           </Sequence>
         ) : null,
       )}

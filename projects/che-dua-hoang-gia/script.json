@@ -1,37 +1,254 @@
 {
-  "title": "Chè Dừa Hoàng Gia — food review (style gelexia-food-review)",
-  "source": "inputs/gelexia-che-dua.mp4",
-  "sourceNote": "Ghep IMG_0063..0069 (proxy H.264 1080x1920 30fps, ffmpeg concat) — thoi diem tinh theo file ghep",
-  "fps": 60,
-  "shots": [
-    { "src": [4000, 7500], "kb": "in", "drift": [-40, 0], "trans": "cut", "say": "Hôm nay team mình đi săn quán chè đang cực hot" },
-    { "src": [9500, 11800], "kb": "out", "trans": "zoom" },
-    { "src": [15200, 18500], "kb": "in", "trans": "flash", "say": "Chè Dừa Hoàng Gia, mặt tiền nổi bật từ xa" },
-    { "src": [19500, 22000], "kb": "out", "trans": "zoom" },
-    { "src": [29000, 31500], "kb": "in", "trans": "flash", "say": "Bên trong rộng rãi, mát lạnh, ngồi chill cả buổi" },
-    { "src": [32000, 35300], "kb": "in", "drift": [30, 0], "trans": "zoom" },
-    { "src": [40500, 43500], "kb": "in", "trans": "flash", "say": "Menu dài cả trang, món nào cũng muốn thử" },
-    { "src": [45500, 48500], "kb": "out", "trans": "zoom" },
-    { "src": [52000, 55500], "kb": "in", "drift": [-30, 0], "trans": "flash", "say": "Quầy topping đầy ắp: thạch, dừa, xoài tươi" },
-    { "src": [55800, 57500], "kb": "in", "trans": "zoom" },
-    { "src": [60300, 63500], "kb": "in", "trans": "flash", "say": "Chè lên rồi! Xoài vàng ươm, cốt dừa béo ngậy, đá mát lạnh" },
-    { "src": [64500, 67000], "kb": "out", "trans": "zoom" },
-    { "src": [68500, 71500], "kb": "in", "trans": "zoom" },
-    { "src": [78000, 83500], "kb": "out", "trans": "flash", "say": "Lưu lại ngay và rủ hội bạn đi ăn nhé!" }
-  ],
-  "items": [
-    { "preset": "Kobe Text 07", "at": 200, "dur": 3400, "note": "hook" },
-    { "preset": "Kobe Text 03", "at": 6000, "dur": 3000, "texts": { "Ẩm Thực": "Chè Dừa", "4 mùa": "Hoàng Gia" }, "note": "ten quan" },
-    { "preset": "Kobe Text 35", "at": 14300, "dur": 3000, "texts": { "xanh": "rộng mát" }, "note": "khong gian" },
-    { "preset": "Kobe Text 21", "at": 17600, "dur": 3000, "texts": { "Tiện ích": "Menu", "Nổi Bật": "Đủ Món" }, "note": "menu" },
-    { "preset": "Kobe Text 19", "at": 23600, "dur": 3200, "texts": { "Phong cách sống": "Topping", "Hiện Đại": "Đầy Ắp", "Do bạn chọn": "tha hồ chọn" }, "note": "topping" },
-    { "preset": "Kobe Text 38", "at": 28800, "dur": 3000, "texts": { "Căn Hộ": "Bát Chè", "Đáng sống": "Đáng thử" }, "note": "chè lên" },
-    { "preset": "Kobe Text 27", "at": 32000, "dur": 3000, "texts": { "SEDAN HẠNG C": "XOÀI + DỪA", "Sang trọng": "Béo ngậy" }, "note": "vị" },
-    { "preset": "Kobe Text 12", "at": 38500, "dur": 3800, "texts": { "Đăng Ký": "Lưu Lại", "Ngay hôm nay": "rủ hội đi ăn" }, "note": "CTA" }
-  ],
-  "fit": { "cx": 540, "cy": 800, "width": 800 },
-  "wordsY": 1450,
-  "accentRe": "^(Chè|Dừa|Hoàng|Gia|hot|topping|Xoài|béo|ngậy|Menu|chill|Lưu)",
-  "music": { "src": "music/gelexia-upbeat.wav", "volume": 0.5 },
-  "ambientVolume": 0.22
+ "title": "Chè Dừa Hoàng Gia — food review (style gelexia-food-review)",
+ "source": "inputs/gelexia-che-dua.mp4",
+ "sourceNote": "Ghep IMG_0063..0069 (proxy H.264 1080x1920 30fps, ffmpeg concat) — thoi diem tinh theo file ghep",
+ "fps": 60,
+ "shots": [
+  {
+   "src": [
+    4000,
+    7500
+   ],
+   "kb": "in",
+   "drift": [
+    -40,
+    0
+   ],
+   "trans": "cut",
+   "say": "Ê! Lướt qua là mất phần đấy nhé! Đứa nào bảo chè dừa ở đây dở, ra đây nói chuyện với chị!"
+  },
+  {
+   "src": [
+    9500,
+    11800
+   ],
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "src": [
+    15200,
+    18500
+   ],
+   "kb": "in",
+   "trans": "flash",
+   "say": "Chè Dừa Hoàng Gia, KT12 Phố Đông, Ocean Park 2. Biển vàng chóe thế mà không thấy thì đi khám mắt đi!"
+  },
+  {
+   "src": [
+    19500,
+    22000
+   ],
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "src": [
+    29000,
+    31500
+   ],
+   "kb": "in",
+   "trans": "flash",
+   "say": "Trong thì rộng, máy lạnh phà phà, ngồi cả buổi chẳng ai đuổi!"
+  },
+  {
+   "src": [
+    32000,
+    35300
+   ],
+   "kb": "in",
+   "drift": [
+    30,
+    0
+   ],
+   "trans": "zoom"
+  },
+  {
+   "src": [
+    40500,
+    43500
+   ],
+   "kb": "in",
+   "trans": "flash",
+   "say": "Menu gần ba chục món, rẻ nhất ba lăm nghìn. Đắt nhất năm lăm thôi, đừng có kêu!"
+  },
+  {
+   "src": [
+    45500,
+    48500
+   ],
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "src": [
+    52000,
+    55500
+   ],
+   "kb": "in",
+   "drift": [
+    -30,
+    0
+   ],
+   "trans": "flash",
+   "say": "Topping chất đống: thạch, dừa, xoài, trân châu, múc không kịp!"
+  },
+  {
+   "src": [
+    55800,
+    57500
+   ],
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "src": [
+    60300,
+    63500
+   ],
+   "kb": "in",
+   "trans": "flash",
+   "say": "Chè lên rồi! Xoài vàng ươm, cốt dừa béo ngậy, đá lạnh tê răng. Ăn một miếng là quên luôn người yêu cũ!"
+  },
+  {
+   "src": [
+    64500,
+    67000
+   ],
+   "kb": "out",
+   "trans": "zoom"
+  },
+  {
+   "src": [
+    68500,
+    71500
+   ],
+   "kb": "in",
+   "trans": "zoom"
+  },
+  {
+   "src": [
+    78000,
+    83500
+   ],
+   "kb": "out",
+   "trans": "flash",
+   "say": "Còn ngồi đó lướt à? Lưu lại, tag ngay đứa bạn hay kêu nghèo vào đây. Đi!"
+  }
+ ],
+ "items": [
+  {
+   "preset": "Kobe Text 07",
+   "at": 200,
+   "dur": 3400,
+   "note": "hook"
+  },
+  {
+   "preset": "Kobe Text 03",
+   "at": 6000,
+   "dur": 3000,
+   "texts": {
+    "Ẩm Thực": "Chè Dừa",
+    "4 mùa": "Hoàng Gia"
+   },
+   "note": "ten quan"
+  },
+  {
+   "preset": "Kobe Text 33",
+   "at": 9200,
+   "dur": 2300,
+   "texts": {
+    "Vị Trí": "KT12 Phố Đông",
+    "trung tâm đắc địa": "Ocean Park 2"
+   },
+   "note": "dia chi"
+  },
+  {
+   "preset": "Kobe Text 35",
+   "at": 14300,
+   "dur": 3000,
+   "texts": {
+    "xanh": "rộng mát"
+   },
+   "note": "khong gian"
+  },
+  {
+   "preset": "Kobe Text 09",
+   "at": 17600,
+   "dur": 3000,
+   "texts": {
+    "Tiết kiệm": "Chỉ từ",
+    "50 TRIỆU": "35K",
+    "50 Triệu": "35K"
+   },
+   "note": "gia"
+  },
+  {
+   "preset": "Kobe Text 21",
+   "at": 20600,
+   "dur": 2700,
+   "texts": {
+    "Tiện ích": "Menu",
+    "Nổi Bật": "29 Món"
+   },
+   "note": "menu"
+  },
+  {
+   "preset": "Kobe Text 19",
+   "at": 23600,
+   "dur": 3200,
+   "texts": {
+    "Phong cách sống": "Topping",
+    "Hiện Đại": "Đầy Ắp",
+    "Do bạn chọn": "tha hồ chọn"
+   },
+   "note": "topping"
+  },
+  {
+   "preset": "Kobe Text 38",
+   "at": 28800,
+   "dur": 3000,
+   "texts": {
+    "Căn Hộ": "Bát Chè",
+    "Đáng sống": "Đáng thử"
+   },
+   "note": "che len"
+  },
+  {
+   "preset": "Kobe Text 27",
+   "at": 32000,
+   "dur": 3000,
+   "texts": {
+    "SEDAN HẠNG C": "XOÀI + DỪA",
+    "Sang trọng": "Béo ngậy"
+   },
+   "note": "vi"
+  },
+  {
+   "preset": "Kobe Text 12",
+   "at": 38500,
+   "dur": 3800,
+   "texts": {
+    "Đăng Ký": "Lưu Lại",
+    "Ngay hôm nay": "rủ hội đi ăn"
+   },
+   "note": "CTA"
+  }
+ ],
+ "fit": {
+  "cx": 540,
+  "cy": 800,
+  "width": 800
+ },
+ "wordsY": 1450,
+ "accentRe": "^(Chè|Dừa|Hoàng|Gia|KT12|Phố|Đông|Ocean|Park|ba|lăm|năm|Topping|Xoài|béo|ngậy|Lưu|Đi!)",
+ "music": {
+  "src": "music/gelexia-upbeat.wav",
+  "volume": 0.5
+ },
+ "ambientVolume": 0.22,
+ "info": {
+  "address": "CS2: Phố Đông - KT12 - VOP2 (Đ. Tô Quyền, Nghĩa Trụ), Văn Giang, Hưng Yên",
+  "price": "35k-55k, 29 món (menu 2 trang)"
+ }
 }

@@ -127,6 +127,21 @@
    "note": "ten quan"
   },
   {
+   "preset": "Kobe Text 33",
+   "startMs": 9200,
+   "durationMs": 2300,
+   "texts": {
+    "Vị Trí": "KT12 Phố Đông",
+    "trung tâm đắc địa": "Ocean Park 2"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "dia chi"
+  },
+  {
    "preset": "Kobe Text 35",
    "startMs": 14300,
    "durationMs": 3000,
@@ -141,12 +156,28 @@
    "note": "khong gian"
   },
   {
-   "preset": "Kobe Text 21",
+   "preset": "Kobe Text 09",
    "startMs": 17600,
    "durationMs": 3000,
    "texts": {
+    "Tiết kiệm": "Chỉ từ",
+    "50 TRIỆU": "35K",
+    "50 Triệu": "35K"
+   },
+   "fit": {
+    "cx": 540,
+    "cy": 800,
+    "width": 800
+   },
+   "note": "gia"
+  },
+  {
+   "preset": "Kobe Text 21",
+   "startMs": 20600,
+   "durationMs": 2700,
+   "texts": {
     "Tiện ích": "Menu",
-    "Nổi Bật": "Đủ Món"
+    "Nổi Bật": "29 Món"
    },
    "fit": {
     "cx": 540,
@@ -184,7 +215,7 @@
     "cy": 800,
     "width": 800
    },
-   "note": "chè lên"
+   "note": "che len"
   },
   {
    "preset": "Kobe Text 27",
@@ -199,7 +230,7 @@
     "cy": 800,
     "width": 800
    },
-   "note": "vị"
+   "note": "vi"
   },
   {
    "preset": "Kobe Text 12",

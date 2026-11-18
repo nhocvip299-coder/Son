@@ -28,6 +28,8 @@ export type StackLine = {
 
 export const PALETTE = {
   mint: { font: "Oswald", weight: 700, top: "#c9fff3", mid: "#45f2d2", bot: "#10c4a3", glow: "#38f3d3", shade: "#00241d", upper: true },
+  // vang champagne (nguoi dung rat thich) — cung tong style A kinh vang
+  gold: { font: "Montserrat", weight: 800, top: "#fff4d6", mid: "#e8c26e", bot: "#a8742a", glow: "#ffd98a", shade: "#2a1804", upper: true },
   white: { font: "Be Vietnam Pro", weight: 800, top: "#ffffff", mid: "#ffffff", bot: "#e9ecef", glow: "#ffffff", shade: "#000000", upper: false },
 } as const;
 export type Palette = keyof typeof PALETTE;
@@ -50,8 +52,8 @@ export const StackText: React.FC<{
   const { fps, width, height } = useVideoConfig();
   const t = f / fps;
   const P = PALETTE[palette];
-  const sz = (l: StackLine) => l.size ?? (l.role === "main" ? size : size * (palette === "mint" ? 0.34 : 0.3));
-  const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : 1.1) : 1.3);
+  const sz = (l: StackLine) => l.size ?? (l.role === "main" ? size : size * (palette !== "white" ? 0.34 : 0.3));
+  const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : palette === "gold" ? 1.05 : 1.1) : 1.3);
   let acc = y * height;
   const ys = lines.map((l, i) => {
     const prev = lines[i - 1];
@@ -84,13 +86,13 @@ export const StackText: React.FC<{
           const fs = sz(l);
           const cx = x * width + (l.dx ?? 0) * width;
           // quang sang: loe manh luc vao roi diu (ref08 "THƯỚC ĐO": glow 100% -> ~35% trong 0.6s)
-          const glow = isMain ? interpolate(t, [l.at, l.at + 0.12, l.at + 0.75], [0, palette === "mint" ? 1 : 0.6, palette === "mint" ? 0.38 : 0.15], C) : 0;
+          const glow = isMain ? interpolate(t, [l.at, l.at + 0.12, l.at + 0.75], [0, palette !== "white" ? 1 : 0.6, palette !== "white" ? 0.38 : 0.15], C) : 0;
           const style: React.CSSProperties = {
             fontFamily: isMain ? P.font : "Be Vietnam Pro",
             fontWeight: isMain ? P.weight : l.role === "lead" ? 600 : 700,
             fontStyle: l.italic && !isMain ? "italic" : "normal",
             fontSize: fs,
-            letterSpacing: isMain && palette === "mint" ? "0.01em" : "0",
+            letterSpacing: isMain && palette !== "white" ? "0.01em" : "0",
           };
           const T = (fill: string, extra: React.SVGProps<SVGTextElement> = {}) => (
             <text x={0} y={0} textAnchor={anchor} dominantBaseline="central" fill={fill} style={style} {...extra}>{txt}</text>

@@ -34,7 +34,7 @@ export const LUX_DEMO_CUES: Array<[number, Sfx, number]> = [
   [9.36, TING, 1], [11.51, TING, 1], ...ticks(11.51), [14.39, TING, 1], ...ticks(14.39, 5), [15.85, POP, 1], [17.2, OUT, 0.8],
   [18.3, SHUT, 1], ...ticks(18.35, 5, 0.2), [18.55, DING, 0.9], [19.0, TING, 1],
   // C
-  [19.95, TRN, 1], [20.38, TXT, 1], [22.23, TXT, 1], [22.95, OUT, 0.8], [23.76, TXT, 1], [25.2, OUT, 0.8], [28.16, TXT, 1], [28.9, OUT, 0.8],
+  [19.95, TRN, 1], [20.38, TXT, 1], [22.23, DING, 1], ...ticks(22.23, 3), [22.95, OUT, 0.8], [23.76, TXT, 1], [25.2, OUT, 0.8], [28.16, TXT, 1], [28.9, OUT, 0.8],
   [30.1, TXT, 1], [31.55, SOFT, 0.7], [33.13, TXT, 1],
   // B' khoang cach
   [33.9, WHIP, 1], [34.65, TING, 1], [35.7, DING, 1], ...ticks(35.7), [36.3, OUT, 0.7], [36.49, TING, 1], [37.35, DING, 1], ...ticks(37.35), [38.1, OUT, 1],
@@ -99,23 +99,24 @@ export const BdsLuxuryDemo: React.FC<LuxDemoProps> = ({ captions, words, stem = 
         { text: "nằm giữa", role: "lead", at: 20.05 },
         { text: "NGÃ 3", role: "main", at: 20.38 },
         { text: "mặt tiền lên tới", role: "sub", at: 21.38 },
-        { text: "8M", role: "main", at: 22.23, size: 200 },
       ]} />
+      {/* 8M son tren mat duong truoc toa nha (doan quay cong trinh, khong nguoi) */}
+      <RoadText value={8} unit="M" at={22.23} end={22.85} y={0.97} size={340} tint="gold" />
       <StackText id="w2" palette="white" y={0.15} size={140} end={25.2} exit="toRight" lines={[{ text: "phù hợp", role: "lead", at: 22.95 }, { text: "KINH DOANH", role: "main", at: 23.76 }, { text: "ở tầng 1", role: "sub", at: 24.76 }]} />
       <StackText id="w3" palette="white" y={0.15} size={150} end={28.9} exit="toLeft" lines={[{ text: "khai thác cho thuê", role: "lead", at: 27.26 }, { text: "HOMESTAY", role: "main", at: 28.16 }]} />
       <StackText id="w4" palette="white" y={0.15} size={130} end={32.15} lines={[{ text: "tình trạng", role: "lead", at: 29.3 }, { text: "BÀN GIAO THÔ", role: "main", at: 30.1 }, { text: "có cầu thang", role: "sub", at: 31.55 }]} />
       <StackText id="w5" palette="white" y={0.15} size={140} end={33.75} exit="scaleOut" lines={[{ text: "vị trí", role: "lead", at: 32.86 }, { text: "SIÊU ĐẶC ĐỊA", role: "main", at: 33.13 }]} />
 
       {/* ===== B': KHOANG CACH TREN MAT DUONG (33.9 - 42.4) ===== */}
-      <RoadText value={300} unit="M" at={35.7} end={36.3} y={0.985} drift={30} />
-      <RoadText value={500} unit="M" at={37.35} end={38.1} y={0.985} drift={30} />
-      <RoadText value={400} unit="M" at={41.31} end={42.0} y={0.985} drift={30} />
+      <RoadText value={300} unit="M" at={35.7} end={36.3} y={0.985} drift={30} tint="gold" />
+      <RoadText value={500} unit="M" at={37.35} end={38.1} y={0.985} drift={30} tint="gold" />
+      <RoadText value={400} unit="M" at={41.31} end={42.0} y={0.985} drift={30} tint="gold" />
       <Sequence from={s(34.15)} name="Nguoi dung TRUOC chu son duong">
         <QtPersonFront src={staticFile(MATTE)} startFrom={34.15} />
       </Sequence>
-      <StackText id="d1" y={0.17} size={104} end={36.3} exit="toLeft" lines={[{ text: "cách quảng trường", role: "lead", at: 34.08, italic: true, size: 46 }, { text: "Kinh Đô Ánh Sáng", role: "main", at: 34.65 }]} />
-      <StackText id="d2" y={0.17} size={104} end={38.1} exit="toLeft" lines={[{ text: "cách", role: "lead", at: 36.16, italic: true, size: 46 }, { text: "Vincom Mega Mall", role: "main", at: 36.49 }]} />
-      <StackText id="d3" y={0.17} size={116} end={42.0} exit="blurUp" lines={[{ text: "công viên", role: "lead", at: 38.56, italic: true, size: 46 }, { text: "Wonder Park", role: "main", at: 39.24 }]} />
+      <StackText id="d1" palette="gold" y={0.17} size={74} end={36.3} exit="toLeft" lines={[{ text: "cách quảng trường", role: "lead", at: 34.08, italic: true, size: 46 }, { text: "Kinh Đô Ánh Sáng", role: "main", at: 34.65 }]} />
+      <StackText id="d2" palette="gold" y={0.17} size={76} end={38.1} exit="toLeft" lines={[{ text: "cách", role: "lead", at: 36.16, italic: true, size: 46 }, { text: "Vincom Mega Mall", role: "main", at: 36.49 }]} />
+      <StackText id="d3" palette="gold" y={0.17} size={92} end={42.0} exit="blurUp" lines={[{ text: "công viên", role: "lead", at: 38.56, italic: true, size: 46 }, { text: "Wonder Park", role: "main", at: 39.24 }]} />
 
       {bare ? null : captions === "phrase" ? <LuxCaptions words={words} zones={LUX_DEMO_ZONES} /> : <WordByWord words={words} y={1385} />}
       {!bare && stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.1} loop /> : null}

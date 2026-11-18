@@ -176,7 +176,13 @@ export const PhotoCard: React.FC<{ img: string; label?: string; at: number; end:
  * So khoang cach "son" tren mat duong — phoi canh 3D (rotateX), hien bang vet quet tu gan ra xa,
  * so chay 0 -> gia tri. Dat DUOI lop nguoi (QtPersonFront) de nguoi dung truoc chu.
  */
-export const RoadText: React.FC<{ value: number; unit: string; at: number; end: number; y?: number; size?: number; drift?: number }> = ({ value, unit, at, end, y = 0.9, size = 300, drift = 0 }) => {
+const ROAD = {
+  mint: { body: "#f4fffc", unit: "#45f2d2", glow: "0 0 18px rgba(56,243,211,0.75), 0 0 2px rgba(0,0,0,0.4)", blend: "screen" as const },
+  // vang champagne: son anh kim, quang am, khong screen (giu mau vang tren nhua sang)
+  gold: { body: "#fff1cf", unit: "#f0c870", glow: "0 0 22px rgba(255,205,120,0.85), 0 0 6px rgba(232,170,70,0.9), 0 3px 2px rgba(60,35,0,0.55)", blend: "normal" as const },
+};
+export const RoadText: React.FC<{ value: number; unit: string; at: number; end: number; y?: number; size?: number; drift?: number; tint?: keyof typeof ROAD }> = ({ value, unit, at, end, y = 0.9, size = 300, drift = 0, tint = "mint" }) => {
+  const R = ROAD[tint];
   const f = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const t = f / fps;
@@ -209,14 +215,13 @@ export const RoadText: React.FC<{ value: number; unit: string; at: number; end: 
             fontSize: size,
             lineHeight: 1,
             letterSpacing: "0.02em",
-            color: "#f4fffc",
-            // son duong: hoi trong, vien sang bac ha mem
-            textShadow: "0 0 18px rgba(56,243,211,0.75), 0 0 2px rgba(0,0,0,0.4)",
-            mixBlendMode: "screen",
+            color: R.body,
+            textShadow: R.glow,
+            mixBlendMode: R.blend,
           }}
         >
           {n}
-          <span style={{ fontSize: size * 0.62, color: "#45f2d2" }}>{unit}</span>
+          <span style={{ fontSize: size * 0.62, color: R.unit }}>{unit}</span>
         </span>
       </div>
       <div style={{ position: "absolute", width }} />

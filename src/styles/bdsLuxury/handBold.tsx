@@ -11,7 +11,7 @@
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { measureText } from "@remotion/layout-utils";
-import { Glints, loopSweep } from "./sparkle";
+import { loopSweep } from "./sparkle";
 
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const out3 = Easing.bezier(0.33, 1, 0.68, 1);
@@ -73,6 +73,7 @@ export const HandBold: React.FC<{
   const bigDx = variant === "bac" ? mw * 0.07 : 0;
   const big = (
     <g opacity={fade * neonFlick} transform={isNeon ? undefined : `translate(${cx + bigDx} ${cy}) scale(${0.6 + 0.4 * pIn}) translate(${-cx - bigDx} ${-cy})`} style={!isNeon && blurIn > 0.3 ? { filter: `blur(${blurIn}px)` } : undefined}>
+      <g filter={sh("bd")} opacity={0.55}>{MT({ fill: "#000814", stroke: "#000814", strokeWidth: size * 0.35, strokeLinejoin: "round" }, bigDx)}</g>
       <g filter={sh("sd")} opacity={0.7} transform={`translate(0 ${size * 0.04})`}>{MT({ fill: "#000" }, bigDx)}</g>
       {isNeon ? (
         <>
@@ -84,6 +85,7 @@ export const HandBold: React.FC<{
         <>
           <g filter={sh("gl")} opacity={0.75}>{MT({ fill: T.glow }, bigDx)}</g>
           {MT({ fill: sh("g"), stroke: "rgba(0,0,0,0.55)", strokeWidth: size * 0.025, strokeLinejoin: "round", paintOrder: "stroke" }, bigDx)}
+          {MT({ fill: sh("gs") }, bigDx)}
           {MT({ fill: sh("sw") }, bigDx)}
         </>
       )}
@@ -157,10 +159,11 @@ export const HandBold: React.FC<{
           <filter id={`gl-${id}`} x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation={size * 0.05} /></filter>
           <filter id={`gl2-${id}`} x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation={size * 0.16} /></filter>
           <filter id={`gls-${id}`} x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation={size * 0.04} /></filter>
+          <filter id={`bd-${id}`} x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation={size * 0.16} /></filter>
+          <linearGradient id={`gs-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff" stopOpacity={0.75} /><stop offset="0.42" stopColor="#fff" stopOpacity={0.12} /><stop offset="0.5" stopColor="#fff" stopOpacity={0} /></linearGradient>
           <filter id={`sd-${id}`} x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation={4} /></filter>
         </defs>
         {big}
-        <Glints id={`gl${id}`} t={t} from={mainAt + 0.2} x0={x0 + bigDx} x1={x1 + bigDx} y0={cy - size * 0.42} y1={cy + size * 0.38} size={size} color={T.glow} opacity={fade} />
         {subN}
         {front}
       </svg>

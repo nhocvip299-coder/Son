@@ -8,7 +8,7 @@
  */
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, OffthreadVideo, random, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
-import { Glints, loopSweep } from "./sparkle";
+import { loopSweep } from "./sparkle";
 
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const out3 = Easing.bezier(0.33, 1, 0.68, 1);
@@ -110,7 +110,6 @@ export const KxPrice: React.FC<{ lead: string; script: string; oldP: string; str
           <g transform={`translate(${cx - bw / 2 - 30} ${by + bh / 2})`}>{br(1, -1)}</g>
           <g transform={`translate(${cx + bw / 2 + 30} ${by + bh / 2})`}>{br(-1, -1)}</g>
           <N x={cx} y={by} s={big} size={170} t={t} at={newAt} id="kp" />
-          <Glints id="kpg" t={t} from={newAt + 0.3} x0={cx - bw / 2} x1={cx + bw / 2} y0={by - 70} y1={by + 60} size={170} color={BLUE.glow} />
         </g>
         {note ? <text x={cx} y={by + 175} textAnchor="middle" dominantBaseline="central" fill="#cfeaff" opacity={interpolate(t, [newAt + 0.8, newAt + 1.2], [0, 1], C)} style={{ fontFamily: "Great Vibes", fontSize: 64, filter: "drop-shadow(0 2px 3px rgba(0,0,0,0.8))" }}>{note}</text> : null}
       </svg>
@@ -163,5 +162,56 @@ export const KxPhone: React.FC<{ phone: string; y?: number }> = ({ phone, y = 0.
       <div style={{ fontFamily: "Oswald", fontWeight: 700, fontSize: 84, color: "#fff", letterSpacing: "0.02em", textShadow: "0 0 14px rgba(110,200,255,0.9)" }}>{phone}</div>
       {sw > -0.5 ? <div style={{ position: "absolute", inset: 0, background: `linear-gradient(105deg, transparent ${sw * 100 - 12}%, rgba(255,255,255,0.55) ${sw * 100}%, transparent ${sw * 100 + 12}%)` }} /> : null}
     </div>
+  );
+};
+
+/** BAN DO TRUC QUAN (thay anh ban do bi mo): luoi duong toi + ghim SB-145 + cum thap MASTERI phia truoc,
+ *  duong "huong nhin" chay tu ghim toi cum thap. Khong ghi khoang cach (video khong noi). */
+export const KxMap: React.FC<{ pinLabel: string; towerLabel: string; towerAt: number }> = ({ pinLabel, towerLabel, towerAt }) => {
+  const { t, dur, width, height } = useT();
+  const o = Math.min(interpolate(t, [0, 0.3], [0, 1], C), interpolate(t, [dur - 0.3, dur], [1, 0], C));
+  const grid = interpolate(t, [0, 0.9], [0, 1], { ...C, easing: out3 });
+  const px = width * 0.34, py = height * 0.56;
+  const tx = width * 0.66, ty = height * 0.44;
+  const pin = interpolate(t, [0.3, 0.7], [0, 1], { ...C, easing: back });
+  const pulse = ((t * 0.9) % 1);
+  const tw = interpolate(t, [towerAt, towerAt + 0.5], [0, 1], { ...C, easing: back });
+  const line = interpolate(t, [towerAt + 0.2, towerAt + 0.9], [0, 1], { ...C, easing: out3 });
+  const L = Math.hypot(tx - px, ty - py);
+  const lines: React.ReactNode[] = [];
+  for (let i = -8; i <= 8; i++) {
+    lines.push(<line key={`a${i}`} x1={width / 2 + i * 150 - 600} y1={0} x2={width / 2 + i * 150 + 600} y2={height} stroke="#6fd3ff" strokeWidth={i % 3 === 0 ? 7 : 2} opacity={(i % 3 === 0 ? 0.35 : 0.18) * grid} />);
+    lines.push(<line key={`b${i}`} x1={0} y1={height / 2 + i * 170 + 300} x2={width} y2={height / 2 + i * 170 - 300} stroke="#6fd3ff" strokeWidth={i % 4 === 0 ? 9 : 2} opacity={(i % 4 === 0 ? 0.4 : 0.16) * grid} />);
+  }
+  return (
+    <AbsoluteFill style={{ opacity: o }}>
+      <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 45%, #0b2f5c 0%, #061a38 60%, #030d20 100%)" }} />
+      <svg width={width} height={height} style={{ position: "absolute", inset: 0 }}>
+        <defs><filter id="km-g"><feGaussianBlur stdDeviation={10} /></filter></defs>
+        {lines}
+        {/* duong huong nhin */}
+        <line x1={px} y1={py} x2={px + (tx - px) * line} y2={py + (ty - py) * line} stroke="#bfe9ff" strokeWidth={8} strokeDasharray="26 18" strokeDashoffset={-t * 80} strokeLinecap="round" />
+        <line x1={px} y1={py} x2={px + (tx - px) * line} y2={py + (ty - py) * line} stroke="#3fa0ff" strokeWidth={22} opacity={0.35} filter="url(#km-g)" />
+        {/* cum thap MASTERI */}
+        <g opacity={tw} transform={`translate(${tx} ${ty}) scale(${0.6 + 0.4 * tw})`}>
+          {[[-110, 260], [-20, 330], [80, 290], [170, 220]].map(([x, h], i) => (
+            <g key={i}>
+              <rect x={x - 38} y={-h} width={76} height={h} rx={6} fill="rgba(80,170,255,0.25)" stroke="#8fdcff" strokeWidth={3} />
+              {Array.from({ length: Math.floor(h / 40) }, (_, k) => <line key={k} x1={x - 26} x2={x + 26} y1={-h + 26 + k * 40} y2={-h + 26 + k * 40} stroke="#8fdcff" strokeWidth={2} opacity={0.6} />)}
+            </g>
+          ))}
+          <rect x={-200} y={30} width={460} height={78} rx={39} fill="rgba(3,18,44,0.9)" stroke="#8fdcff" strokeWidth={3} />
+          <text x={30} y={69} textAnchor="middle" dominantBaseline="central" fill="#fff" style={{ fontFamily: "Montserrat", fontWeight: 800, fontSize: 34, letterSpacing: "0.04em" }}>{towerLabel}</text>
+        </g>
+        {/* ghim SB-145 */}
+        <circle cx={px} cy={py} r={40 + pulse * 120} fill="none" stroke="#6fd3ff" strokeWidth={4} opacity={(1 - pulse) * 0.8 * pin} />
+        <g opacity={pin} transform={`translate(${px} ${py - (1 - pin) * 80})`}>
+          <path d="M 0 0 C -40 -50 -62 -80 -62 -112 A 62 62 0 1 1 62 -112 C 62 -80 40 -50 0 0 Z" fill="#1f6fe0" stroke="#fff" strokeWidth={5} />
+          <circle cx={0} cy={-112} r={24} fill="#fff" />
+          <rect x={-130} y={-262} width={260} height={74} rx={37} fill="#ffffff" />
+          <text x={0} y={-225} textAnchor="middle" dominantBaseline="central" fill="#0b3a8a" style={{ fontFamily: "Montserrat", fontWeight: 900, fontSize: 40 }}>{pinLabel}</text>
+        </g>
+      </svg>
+    </AbsoluteFill>
   );
 };

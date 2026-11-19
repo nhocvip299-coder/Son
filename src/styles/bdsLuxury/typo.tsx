@@ -11,7 +11,7 @@ import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { kf, type KfIn, type KfOut } from "../quyetTranLux/keyframes";
 import { measureText } from "@remotion/layout-utils";
-import { Glints, loopSweep } from "./sparkle";
+import { loopSweep } from "./sparkle";
 
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const outCubic = Easing.bezier(0.33, 1, 0.68, 1);
@@ -79,6 +79,8 @@ export const StackText: React.FC<{
           </linearGradient>
           <filter id={`gl-${id}`} x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="14" /></filter>
           <filter id={`sd-${id}`} x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="7" /></filter>
+          <filter id={`bd-${id}`} x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="22" /></filter>
+          <linearGradient id={`gs-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff" stopOpacity={0.75} /><stop offset="0.42" stopColor="#fff" stopOpacity={0.12} /><stop offset="0.5" stopColor="#fff" stopOpacity={0} /></linearGradient>
         </defs>
         {lines.map((l, i) => {
           const isMain = l.role === "main";
@@ -108,10 +110,13 @@ export const StackText: React.FC<{
           const skew = l.italic && isMain ? " skewX(-9)" : "";
           return (
             <g key={i} transform={`translate(${cx + k.tx} ${ys[i] + k.ty}) rotate(${k.rot}) scale(${k.sx} ${k.sy})${skew}`} opacity={k.opacity} style={k.blur > 0.2 ? { filter: `blur(${k.blur}px)` } : undefined}>
+              {/* NOI BAT: nen toi mem sau dong chinh (khong khung) -> chu bat len tren moi nen */}
+              {isMain ? <g filter={`url(#bd-${id})`} opacity={0.5}>{T("#000814", { stroke: "#000814", strokeWidth: fs * 0.35, strokeLinejoin: "round" })}</g> : null}
               {/* bong toi mem -> doc ro tren nen sang (troi, tuong vang) */}
               <g filter={`url(#sd-${id})`} opacity={isMain ? 0.7 : 0.85} transform="translate(0 5)">{T(P.shade)}</g>
               {glow > 0.01 ? <g filter={`url(#gl-${id})`} opacity={glow}>{T(P.glow)}</g> : null}
               {isMain ? T(`url(#mg-${id})`, { stroke: `url(#mg-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round", paintOrder: "stroke" }) : T("#ffffff", { stroke: "#ffffff", strokeWidth: fs * 0.022, strokeLinejoin: "round" })}
+              {isMain && palette !== "white" ? T(`url(#gs-${id})`) : null}
               {isMain && palette !== "white" ? (() => {
                 // LONG LANH: vet sang quet lap lai + dom sao nhap nhay tren mat chu
                 const sw = loopSweep(t, l.at + 0.5, 1.7, 0.75);
@@ -129,7 +134,6 @@ export const StackText: React.FC<{
                         {T(`url(#sw-${id}-${i})`)}
                       </>
                     ) : null}
-                    <Glints id={`${id}-${i}`} t={t} from={l.at + 0.3} x0={ax} x1={ax + tw} y0={-fs * 0.4} y1={fs * 0.36} size={fs} color={P.glow} />
                   </>
                 );
               })() : null}

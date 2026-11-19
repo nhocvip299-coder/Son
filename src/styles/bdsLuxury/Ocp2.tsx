@@ -4,12 +4,12 @@ import { Audio } from "@remotion/media";
 import { SfxTrack } from "../../compositions/shared";
 import type { SfxCue } from "../../lib/theme";
 import { WordByWord } from "../textPresets/capcut/WordByWord";
-import { QtGrade, QtPersonFront, type QtWord } from "../quyetTranLux/components";
+import { QtGrade, type QtWord } from "../quyetTranLux/components";
 import HITS from "../quyetTranLux/sfxHits.json";
 import { LuxCaptions, type CapZone } from "./captions";
 import { RoadText, WhipBlur, WhiteFlash } from "./fill";
 import { StackText } from "./typo";
-import { KxCard, KxPage, KxPhone, KxPrice } from "./mauKinhXanh";
+import { KxCard, KxMap, KxPage, KxPhone, KxPrice } from "./mauKinhXanh";
 import { HandBold, type HbTone, type HbVariant } from "./handBold";
 import { CheckChips, CompareBars, FloorStack, RoadSection, SitePlan, XeKhe } from "./explain";
 
@@ -20,7 +20,6 @@ import { CheckChips, CompareBars, FloorStack, RoadSection, SitePlan, XeKhe } fro
  * Vung an toan TikTok/Reels: chu trong y 0.11-0.73.
  */
 const SRC = "inputs/du-an-3/goc-1080.mp4";
-const MATTE = "inputs/du-an-3/matte60/person.webm"; // 60fps = trung nhip video (30fps gay bong ma khi nguoi di)
 const IMG = (n: number) => staticFile(`inputs/du-an-3/anh/IMG_${n}.jpg`);
 const SRC_END = 81.1;
 export const OCP2_SEC = 83.0;
@@ -93,12 +92,6 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
   const Seq: React.FC<{ a: number; b: number; name: string; children: React.ReactNode }> = ({ a, b, name, children }) => (
     <Sequence from={s(a)} durationInFrames={s(b - a)} name={name}>{children}</Sequence>
   );
-  const front = (a: number, b: number) => (
-    <Seq a={a} b={b} name={`Nguoi truoc chu ${a}`}>
-      {/* cung bo loc mau voi video nen (QtGrade) -> lop nguoi khong lech mau */}
-      <AbsoluteFill style={{ filter: "contrast(1.06) saturate(1.05) sepia(0.06) brightness(1.0)" }}><QtPersonFront src={staticFile(MATTE)} startFrom={a} /></AbsoluteFill>
-    </Seq>
-  );
   const hb = (k: string, a: number, b: number, cy: number, variant: HbVariant, small: string, main: string, o: { cx?: number; size?: number; tone?: HbTone; smallTone?: HbTone; sub?: string; mainAt?: number } = {}) => (
     <Seq a={a} b={b} name={`Chu ${variant} ${k}`}><HandBold id={k} variant={variant} cy={cy} small={small} main={main} {...o} /></Seq>
   );
@@ -110,9 +103,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
             <Sequence durationInFrames={s(SRC_END)} name="Video goc"><OffthreadVideo src={staticFile(SRC)} muted={stem === "sfx"} /></Sequence>
             <Sequence from={s(SRC_END)} name="Giu khung cuoi"><Freeze frame={s(SRC_END) - 2}><OffthreadVideo src={staticFile(SRC)} muted /></Freeze></Sequence>
           </Punch>
-          <Seq a={2.7} b={6.9} name="Tram SB-145"><ImgPush n={8345} px={0.53} ox={0.53} oy={0.45} z0={1.02} z1={1.22} /></Seq>
-          <Seq a={48.6} b={51.5} name="Tram ban do ghim"><ImgPush n={8343} px={0.26} ox={0.5} oy={0.52} z0={1.1} z1={1.45} /></Seq>
-          <Seq a={51.5} b={53.1} name="Tram Masteri"><ImgPush n={8347} px={0.5} ox={0.5} oy={0.75} z0={1.0} z1={1.15} /></Seq>
+          <Seq a={2.7} b={6.9} name="Tram: mat tien SB-145 (canh quay that)"><OffthreadVideo src={staticFile(SRC)} trimBefore={Math.round(31.0 * 60)} muted /></Seq>
             </QtGrade>
       </Whips>
       <WhiteFlash at={0} dur={0.3} />
@@ -121,8 +112,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <Shade top={0.5} bot={0} />
       <StackText id="h0" palette="white" y={0.16} size={70} end={2.6} exit="blurUp" lines={[{ text: "một mét vuông đất", role: "lead", at: 0.6, size: 50, enter: "riseUp" }]} />
       <StackText id="h1" palette="blue" y={0.305} size={200} end={2.6} exit="scaleOut" lines={[{ text: "{n} TRIỆU", role: "main", at: 0.02, enter: "zoomSettle", count: { to: 70, dur: 0.55 } }]} />
-      <Punch>{front(0, 2.7)}</Punch>
-      {hb("k1", 1.45, 2.75, 1220, "neon", "anh chị", "Có tin không?", { size: 120, tone: "blue", mainAt: 0.05 })}
+      {hb("k1", 1.45, 2.75, 1330, "neon", "anh chị", "Có tin không?", { size: 120, tone: "blue", mainAt: 0.05 })}
 
       {/* ===== 2.7-6.9 anh SB-145 ===== */}
       <Seq a={2.7} b={6.9} name="toi anh"><Shade top={0.75} bot={0.55} /></Seq>
@@ -133,12 +123,10 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <Seq a={6.9} b={12.2} name="toi tren"><Shade top={0.55} bot={0} /></Seq>
       <StackText id="b1" palette="blue" y={0.17} size={170} end={9.65} exit="toLeft" lines={[{ text: "so với đất thổ cư", role: "lead", at: 6.95, size: 50 }, { text: "VĂN GIANG", role: "main", at: 8.2 }]} />
       <StackText id="b2" palette="blue" y={0.17} size={140} end={12.15} exit="blurUp" lines={[{ text: "vị trí tương đương", role: "lead", at: 9.75, size: 48, enter: "fromRight" }, { text: "KHÔNG CĂN NÀO", role: "main", at: 10.5, size: 118 }, { text: "sánh được với căn này", role: "sub", at: 11.2, size: 50, italic: true }]} />
-      {front(8.1, 12.2)}
 
       {/* ===== 12.2-17 duong 20M: 1 so duy nhat tren mat duong, trong vung an toan ===== */}
       <StackText id="c1" palette="white" y={0.2} size={90} end={17.4} exit="blurUp" lines={[{ text: "sở hữu trục đường rộng", role: "lead", at: 14.1, size: 54 }, { text: "cả vỉa hè", role: "sub", at: 16.3, size: 46, italic: true }]} />
-      <RoadText value={20} unit="M" at={15.95} end={17.4} y={0.72} size={250} x={0.5} tint="blue" font={SF} />
-      {front(15.8, 17.8)}
+      <RoadText value={20} unit="M" at={15.95} end={17.4} y={0.72} size={230} x={0.25} tint="blue" font={SF} />
 
       {/* ===== 17-22.4 di theo em Son ===== */}
       {hb("k3", 17.85, 21.2, 560, "bac", "mời anh chị", "Đi theo em Sơn", { size: 130, tone: "white", smallTone: "blue", mainAt: 0.5 })}
@@ -163,16 +151,14 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <Seq a={43.6} b={48.6} name="Chot gia (dem lui)"><KxPrice lead="giá HTLS 18 tháng" script="áp voucher 30%" oldP="23,339 TỶ" strikeAt={2.2} chip={["VOUCHER 30%", 2.1]} mid="chỉ về hơn" from={23} to={15} dec={0} unit="TỶ" newAt={3.6} y={0.24} /></Seq>
 
       {/* ===== 48.6-53.1 vi tri ===== */}
-      <Seq a={49.0} b={51.5} name="toi duoi ban do"><Shade top={0} bot={0.85} /></Seq>
+      <Seq a={48.6} b={53.1} name="Ban do do hoa (huong Masteri)"><KxMap pinLabel="SB-145" towerLabel="MASTERI" towerAt={2.9} /></Seq>
       {hb("k6", 49.2, 51.5, 1250, "tay", "vị trí", "Cực kỳ đắc địa", { size: 130, tone: "blue", sub: "Ocean Park 2", mainAt: 0.4 })}
-      <Seq a={51.5} b={53.1} name="toi Masteri"><Shade top={0.75} bot={0} /></Seq>
       <StackText id="e1" palette="blue" y={0.13} size={120} end={53.0} exit="blurUp" lines={[{ text: "hướng vào toà chung cư", role: "lead", at: 51.5, size: 46 }, { text: "MASTERI", role: "main", at: 52.6 }]} />
 
       {/* ===== 53.1-60.2 boc tach 70 trieu ===== */}
       {hb("k7", 53.5, 55.35, 560, "bac", "căn này với", "427 m² sàn", { size: 160, tone: "blue", smallTone: "white", mainAt: 0.5 })}
       <Seq a={55.3} b={60.2} name="toi tren 2"><Shade top={0.55} bot={0} /></Seq>
       <StackText id="f1" palette="blue" y={0.15} size={190} end={60.1} exit="scaleOut" lines={[{ text: "bóc tách giá xây dựng · chỉ khoảng", role: "lead", at: 55.4, size: 44 }, { text: "{n} TRIỆU", role: "main", at: 58.9, count: { to: 70, dur: 0.8 } }, { text: "/ m² đất", role: "sub", at: 59.6, size: 62, italic: true }]} />
-      {front(58.7, 60.2)}
 
       {/* ===== 60.2-72.1 KHONG NGUOI: so sanh + chinh sach ===== */}
       <Seq a={60.2} b={65.1} name="Blueprint 3 (kinh xanh)"><KxPage src={SRC} from={60.2} ring={false} /></Seq>
@@ -185,10 +171,9 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       {/* ===== 72.1-83 CTA ===== */}
       <Seq a={72.1} b={83} name="toi tren 3"><Shade top={0.55} bot={0} /></Seq>
       <StackText id="h2" palette="blue" y={0.15} size={200} end={78.5} exit="blurUp" lines={[{ text: "nếu anh chị có tài chính", role: "lead", at: 72.1, size: 48 }, { text: "15 TỶ", role: "main", at: 73.9 }]} />
-      {front(73.8, 78.6)}
-      <Seq a={74.5} b={79.0} name="Checklist"><CheckChips x={110} y={1000} items={[["Diện tích lớn", 1.3], ["2 mặt tiền đường", 2.0], ["Xẻ khe thoáng", 3.5]]} /></Seq>
-      {hb("k8", 78.6, 83, 520, "bac", "liên hệ ngay", "Em Sơn", { size: 200, tone: "white", smallTone: "blue", mainAt: 0.3 })}
-      <Seq a={79.0} b={83} name="Vien SDT"><KxPhone phone="0966 312 333" y={0.68} /></Seq>
+      <Seq a={74.5} b={79.0} name="Checklist"><CheckChips x={30} y={1000} items={[["Diện tích lớn", 1.3], ["2 mặt tiền đường", 2.0], ["Xẻ khe thoáng", 3.5]]} /></Seq>
+      {hb("k8", 78.6, 83, 400, "bac", "liên hệ ngay", "Em Sơn", { size: 170, tone: "white", smallTone: "blue", mainAt: 0.3 })}
+      <Seq a={79.0} b={83} name="Vien SDT"><KxPhone phone="0966 312 333" y={0.315} /></Seq>
 
       {captions === "phrase" ? <LuxCaptions words={words} zones={ZONES} /> : captions === "wbw" ? <WordByWord words={words} y={1330} /> : null}
       {stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.1} loop /> : null}

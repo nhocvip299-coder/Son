@@ -274,7 +274,7 @@ export const CheckChips: React.FC<{ items: Array<[string, number]>; x: number; y
         return (
           <div key={i} style={{ position: "absolute", left: x, top: y + i * 92, transform: `translateX(${(1 - a) * -60}px) scale(${0.7 + 0.3 * a})`, opacity: Math.min(1, a * 1.5), display: "flex", alignItems: "center", gap: 14, padding: "12px 26px 12px 14px", borderRadius: 40, background: NAVY, border: `2px solid ${GOLD}`, boxShadow: "0 8px 24px rgba(0,0,0,0.45)" }}>
             <div style={{ width: 46, height: 46, borderRadius: 23, background: GOLD, color: "#1a1206", display: "grid", placeItems: "center", fontFamily: SANS, fontWeight: 900, fontSize: 30 }}>✓</div>
-            <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 38, color: "#fff", whiteSpace: "nowrap" }}>{s}</div>
+            <div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 30, color: "#fff", whiteSpace: "nowrap" }}>{s}</div>
           </div>
         );
       })}

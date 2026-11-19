@@ -48,54 +48,71 @@ const Num: React.FC<{ x: number; y: number; s: string; size?: number; o?: number
   </g>
 );
 
-/** 1) MAT BANG LO GOC: lo dat ve net, 2 duong bao 2 mat (20M + 7M), xe khe ben hong, dien tich dem so. */
+/** mui ten chay (gio): duong + dau mui, dash chay theo t */
+const Flow: React.FC<{ d: string; t: number; color?: string; o?: number }> = ({ d, t, color = "#9be7ff", o = 1 }) => (
+  <g opacity={o}>
+    <path d={d} fill="none" stroke={color} strokeWidth={5} strokeLinecap="round" strokeDasharray="22 16" strokeDashoffset={-t * 120} markerEnd="url(#arw)" />
+  </g>
+);
+const ArrowDef: React.FC<{ color?: string }> = ({ color = "#9be7ff" }) => (
+  <defs><marker id="arw" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill={color} /></marker></defs>
+);
+
+/** Mat bang chung (nhin tu tren): duong 7M phia sau (tren) | lo SB-145 | duong 20M phia truoc (duoi); trai = xe khe 3M, phai = can lien ke. */
+const PlanBase: React.FC<{ t: number; cx: number; L: { x: number; y: number; w: number; h: number }; khe: number; showKhe: number }> = ({ t, cx, L, khe, showKhe }) => {
+  const rB = lin(t, 0.35, 0.9), rF = lin(t, 0.5, 1.05);
+  return (
+    <>
+      {/* duong sau 7M */}
+      <g opacity={rB}>
+        <rect x={150} y={L.y - 150} width={780} height={120} fill="#2b2f36" stroke="rgba(255,255,255,0.25)" />
+        <line x1={170} y1={L.y - 90} x2={170 + 740 * rB} y2={L.y - 90} stroke="#fff" strokeWidth={4} strokeDasharray="30 22" opacity={0.7} />
+        <Label x={cx} y={L.y - 182} s="MẶT TIỀN SAU · ĐƯỜNG 7M" size={30} color={GOLD_HI} />
+      </g>
+      {/* duong truoc 20M (ca via he) */}
+      <g opacity={rF}>
+        <rect x={150} y={L.y + L.h + 30} width={780} height={190} fill="#2b2f36" stroke="rgba(255,255,255,0.25)" />
+        <rect x={150} y={L.y + L.h + 30} width={780} height={34} fill="#8f897e" />
+        <line x1={170} y1={L.y + L.h + 140} x2={170 + 740 * rF} y2={L.y + L.h + 140} stroke="#fff" strokeWidth={4} strokeDasharray="34 24" opacity={0.75} />
+        <Label x={cx} y={L.y + L.h + 252} s="MẶT TIỀN TRƯỚC · ĐƯỜNG 20M (cả vỉa hè)" size={30} color={GOLD_HI} />
+      </g>
+      {/* can lien ke (dinh sat ben phai) */}
+      <rect x={L.x + L.w} y={L.y} width={930 - L.x - L.w} height={L.h} fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.4)" strokeDasharray="8 8" strokeWidth={2} opacity={lin(t, 0.3, 0.8)} />
+      <Label x={(L.x + L.w + 930) / 2} y={L.y + L.h / 2} s="LIỀN KỀ" size={24} color="rgba(255,255,255,0.75)" rot={-90} o={lin(t, 0.4, 0.9)} />
+      {/* xe khe ben trai */}
+      <g opacity={showKhe}>
+        <rect x={L.x - khe} y={L.y} width={khe} height={L.h} fill="rgba(120,220,255,0.22)" stroke="#9be7ff" strokeWidth={2} strokeDasharray="6 6" />
+        <Label x={L.x - khe / 2} y={L.y + L.h / 2} s="XẺ KHE 3M" size={24} color="#9be7ff" rot={-90} />
+        <rect x={150} y={L.y} width={L.x - khe - 150} height={L.h} fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.4)" strokeDasharray="8 8" strokeWidth={2} />
+      </g>
+    </>
+  );
+};
+
+/** 1) MAT BANG: 2 mat tien TRUOC (20M) - SAU (7M), xe khe 3M ben hong, dien tich dem so. */
 export const SitePlan: React.FC<{ area: number }> = ({ area }) => {
   const { t, width } = useLocal();
   const { o, s } = useInOut();
-  const cx = width / 2, top = 470;
-  const L = { x: cx - 230, y: top + 250, w: 400, h: 330 }; // lo dat
+  const cx = width / 2;
+  const L = { x: 400, y: 640, w: 380, h: 420 };
   const per = 2 * (L.w + L.h);
-  const draw = lin(t, 0.2, 1.1);
-  const road1 = lin(t, 0.45, 0.95), road2 = lin(t, 0.7, 1.2);
+  const draw = lin(t, 0.15, 1.0);
   const n = area * lin(t, 0.9, 2.0);
+  const edge = (at: number) => lin(t, at, at + 0.4);
   return (
     <AbsoluteFill style={{ opacity: o, transform: `scale(${s})` }}>
       <svg width={width} height={1920} style={{ position: "absolute", inset: 0 }}>
-        {/* lo ben canh (lien ke) */}
-        <rect x={L.x - 250} y={L.y} width={210} height={L.h} fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.35)" strokeDasharray="8 8" strokeWidth={2} opacity={lin(t, 0.3, 0.8)} />
-        <Label x={L.x - 145} y={L.y + L.h / 2} s="LIỀN KỀ" size={26} color="rgba(255,255,255,0.7)" o={lin(t, 0.4, 0.9)} />
-        {/* xe khe */}
-        <rect x={L.x - 40} y={L.y} width={40} height={L.h} fill="rgba(120,220,255,0.18)" opacity={lin(t, 1.6, 2.1)} />
-        <Label x={L.x - 20} y={L.y - 36} s="XẺ KHE" size={24} color="#9be7ff" o={lin(t, 1.6, 2.1)} />
-        {/* duong 20M (truoc) */}
-        <g opacity={road1}>
-          <rect x={L.x - 260} y={L.y + L.h + 14} width={(L.w + 400) * road1} height={150} fill="#2b2f36" stroke="rgba(255,255,255,0.25)" />
-          <line x1={L.x - 250} y1={L.y + L.h + 89} x2={L.x - 250 + (L.w + 380) * road1} y2={L.y + L.h + 89} stroke="#fff" strokeWidth={4} strokeDasharray="34 26" opacity={0.75} />
-          <Label x={L.x + L.w / 2 - 30} y={L.y + L.h + 130} s="ĐƯỜNG 20M (cả vỉa hè)" size={30} color={GOLD_HI} />
-        </g>
-        {/* duong 7M (hong) */}
-        <g opacity={road2}>
-          <rect x={L.x + L.w + 14} y={L.y - 300} width={110} height={(L.h + 300) * road2 + 14} fill="#2b2f36" stroke="rgba(255,255,255,0.25)" />
-          <line x1={L.x + L.w + 69} y1={L.y - 290} x2={L.x + L.w + 69} y2={L.y - 290 + (L.h + 290) * road2} stroke="#fff" strokeWidth={4} strokeDasharray="30 24" opacity={0.75} />
-          <Label x={L.x + L.w + 69} y={L.y - 330} s="ĐƯỜNG 7M" size={30} color={GOLD_HI} />
-        </g>
-        {/* lo dat SB-145 */}
-        <rect x={L.x} y={L.y} width={L.w} height={L.h} fill={`rgba(232,194,110,${0.22 * draw})`} stroke={GOLD} strokeWidth={6} strokeDasharray={per} strokeDashoffset={per * (1 - draw)} strokeLinejoin="round" style={{ filter: "drop-shadow(0 0 12px rgba(255,205,120,0.8))" }} />
-        <Label x={L.x + L.w / 2} y={L.y + 50} s="SB-145" size={34} color={GOLD_HI} o={lin(t, 0.8, 1.2)} />
-        <Label x={L.x + L.w / 2} y={L.y + 120} s="DIỆN TÍCH ĐẤT" size={26} color="#fff" o={lin(t, 0.9, 1.3)} />
-        <Num x={L.x + L.w / 2} y={L.y + 210} s={`${fmt(n)} m²`} size={84} o={lin(t, 0.9, 1.2)} />
-        {/* 2 mat tien: 2 canh sang */}
-        {[0, 1].map((i) => {
-          const a = pop(t, 1.3 + i * 0.25);
-          return i === 0 ? (
-            <g key={i} opacity={a}><line x1={L.x} y1={L.y + L.h} x2={L.x + L.w} y2={L.y + L.h} stroke={GOLD_HI} strokeWidth={12} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 14px #ffd98a)" }} /></g>
-          ) : (
-            <g key={i} opacity={a}><line x1={L.x + L.w} y1={L.y} x2={L.x + L.w} y2={L.y + L.h} stroke={GOLD_HI} strokeWidth={12} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 14px #ffd98a)" }} /></g>
-          );
-        })}
-        <g opacity={pop(t, 1.8)} transform={`translate(${cx} ${top + 120})`}>
-          <rect x={-210} y={-42} width={420} height={84} rx={42} fill={NAVY} stroke={GOLD} strokeWidth={3} />
-          <Label x={0} y={0} s="LÔ GÓC · 2 MẶT TIỀN" size={32} color={GOLD_HI} />
+        <PlanBase t={t} cx={cx} L={L} khe={90} showKhe={lin(t, 1.8, 2.3)} />
+        <rect x={L.x} y={L.y} width={L.w} height={L.h} fill={`rgba(232,194,110,${0.22 * draw})`} stroke={GOLD} strokeWidth={6} strokeDasharray={per} strokeDashoffset={per * (1 - draw)} style={{ filter: "drop-shadow(0 0 12px rgba(255,205,120,0.8))" }} />
+        {/* 2 canh mat tien sang len: truoc (duoi) + sau (tren) */}
+        <line x1={L.x} y1={L.y + L.h} x2={L.x + L.w * edge(1.2)} y2={L.y + L.h} stroke={GOLD_HI} strokeWidth={14} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 14px #ffd98a)" }} opacity={edge(1.2) > 0 ? 1 : 0} />
+        <line x1={L.x} y1={L.y} x2={L.x + L.w * edge(1.45)} y2={L.y} stroke={GOLD_HI} strokeWidth={14} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 14px #ffd98a)" }} opacity={edge(1.45) > 0 ? 1 : 0} />
+        <Label x={L.x + L.w / 2} y={L.y + 60} s="SB-145" size={34} color={GOLD_HI} o={lin(t, 0.8, 1.2)} />
+        <Label x={L.x + L.w / 2} y={L.y + 150} s="DIỆN TÍCH ĐẤT" size={26} o={lin(t, 0.9, 1.3)} />
+        <Num x={L.x + L.w / 2} y={L.y + 250} s={`${fmt(n)} m²`} size={80} o={lin(t, 0.9, 1.2)} />
+        <g opacity={pop(t, 1.7)} transform={`translate(${cx} 330)`}>
+          <rect x={-270} y={-44} width={540} height={88} rx={44} fill={NAVY} stroke={GOLD} strokeWidth={3} />
+          <Label x={0} y={0} s="2 MẶT TIỀN TRƯỚC – SAU" size={34} color={GOLD_HI} />
         </g>
       </svg>
     </AbsoluteFill>
@@ -134,37 +151,30 @@ export const FloorStack: React.FC<{ total: number; floors?: number }> = ({ total
   );
 };
 
-/** 3) XE KHE: nhin tu tren — day lien ke dinh nhau vs SB-145 co khe 3M, gio + nang chay qua khe. */
-export const XeKhe: React.FC<{ gap?: string }> = ({ gap = "3M" }) => {
+/** 3) XE KHE: cung mat bang, khe 3M ben hong mo ra -> gio chay tu duong truoc ra duong sau + vao nha qua cua so hong; nang chieu xuong. */
+export const XeKhe: React.FC = () => {
   const { t, width } = useLocal();
   const { o, s } = useInOut();
-  const cx = width / 2, y0 = 700, h = 560;
-  const gw = 110 * lin(t, 0.6, 1.3); // khe mo ra
-  const bL = { x: 150, w: cx - 150 - gw / 2 }, bR = { x: cx + gw / 2, w: 930 - cx - gw / 2 };
-  const flow = (t * 260) % 140;
+  const cx = width / 2;
+  const L = { x: 430, y: 640, w: 370, h: 420 };
+  const khe = 150 * lin(t, 0.5, 1.2);
+  const kx = L.x - khe * 0.18;
+  const fl = lin(t, 1.3, 1.8);
   return (
     <AbsoluteFill style={{ opacity: o, transform: `scale(${s})` }}>
       <svg width={width} height={1920} style={{ position: "absolute", inset: 0 }}>
-        <rect x={bL.x} y={y0} width={bL.w} height={h} fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.45)" strokeWidth={3} />
-        {[1, 2].map((i) => <line key={i} x1={bL.x + (bL.w * i) / 3} y1={y0} x2={bL.x + (bL.w * i) / 3} y2={y0 + h} stroke="rgba(255,255,255,0.35)" strokeWidth={2} />)}
-        <Label x={bL.x + bL.w / 2} y={y0 + h / 2} s="LIỀN KỀ" size={30} color="rgba(255,255,255,0.8)" />
-        <rect x={bR.x} y={y0} width={bR.w} height={h} fill="rgba(232,194,110,0.28)" stroke={GOLD} strokeWidth={5} style={{ filter: "drop-shadow(0 0 12px rgba(255,205,120,0.7))" }} />
-        <Label x={bR.x + bR.w / 2} y={y0 + h / 2} s="SB-145" size={40} color={GOLD_HI} />
-        {/* khe: gio + nang */}
-        <g opacity={lin(t, 1.1, 1.6)}>
-          <rect x={cx - gw / 2} y={y0} width={gw} height={h} fill="rgba(140,225,255,0.16)" />
-          {[0, 1, 2, 3, 4, 5].map((i) => (
-            <path key={i} d={`M ${cx - 18 + (i % 2) * 36} ${y0 + h + 40 - ((flow + i * 140) % (h + 120))} l -14 26 m 14 -26 l 14 26`} stroke="#9be7ff" strokeWidth={5} fill="none" strokeLinecap="round" />
-          ))}
-        </g>
+        <ArrowDef />
+        <PlanBase t={t + 2} cx={cx} L={L} khe={khe} showKhe={lin(t, 0.4, 0.8)} />
+        <rect x={L.x} y={L.y} width={L.w} height={L.h} fill="rgba(232,194,110,0.28)" stroke={GOLD} strokeWidth={6} style={{ filter: "drop-shadow(0 0 12px rgba(255,205,120,0.8))" }} />
+        <Label x={L.x + L.w / 2} y={L.y + L.h / 2} s="SB-145" size={40} color={GOLD_HI} />
+        {/* cua so ben hong */}
+        {[0, 1, 2].map((i) => <rect key={i} x={L.x - 5} y={L.y + 70 + i * 120} width={10} height={60} fill="#9be7ff" opacity={fl} />)}
+        {/* gio doc khe: tu duong truoc -> duong sau */}
+        <Flow d={`M ${kx} ${L.y + L.h + 20} L ${kx} ${L.y - 20}`} t={t} o={fl} />
+        {/* gio re vao nha qua cua so hong */}
+        {[0, 1, 2].map((i) => <Flow key={i} d={`M ${L.x - khe * 0.85} ${L.y + 140 + i * 120} Q ${L.x - 10} ${L.y + 100 + i * 120} ${L.x + 70} ${L.y + 100 + i * 120}`} t={t + i * 0.2} o={lin(t, 1.6 + i * 0.15, 2.0 + i * 0.15)} />)}
         {/* kich thuoc 3M */}
-        <g opacity={pop(t, 1.4)}>
-          <line x1={cx - gw / 2} y1={y0 - 40} x2={cx + gw / 2} y2={y0 - 40} stroke={GOLD_HI} strokeWidth={4} />
-          <line x1={cx - gw / 2} y1={y0 - 58} x2={cx - gw / 2} y2={y0 - 22} stroke={GOLD_HI} strokeWidth={4} />
-          <line x1={cx + gw / 2} y1={y0 - 58} x2={cx + gw / 2} y2={y0 - 22} stroke={GOLD_HI} strokeWidth={4} />
-          <Num x={cx} y={y0 - 110} s={gap} size={110} />
-        </g>
-        <Label x={cx} y={y0 + h + 90} s="THÔNG THOÁNG · LẤY SÁNG 3 MẶT" size={34} color="#9be7ff" o={lin(t, 2.0, 2.5)} />
+        <g opacity={pop(t, 2.2)} transform={`translate(${cx} ${L.y + L.h + 330})`}><rect x={-370} y={-40} width={740} height={80} rx={40} fill={NAVY} stroke="#9be7ff" strokeWidth={3} /><Label x={0} y={0} s="THOÁNG · SÁNG 3 MẶT: TRƯỚC – SAU – HÔNG" size={28} color="#9be7ff" /></g>
       </svg>
     </AbsoluteFill>
   );

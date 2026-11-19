@@ -117,7 +117,7 @@ const shadowCss = (l: CcLayer, px: number): string | undefined => {
     .join(", ");
 };
 
-const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | null; text?: string; idx: number; hasTwin: boolean; twin?: CcLayer }> = ({ l, glow, text, idx, hasTwin, twin }) => {
+const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | null; text?: string; idx: number; hasTwin: boolean; twin?: CcLayer; glowK?: number }> = ({ l, glow, text, idx, hasTwin, twin, glowK = 1 }) => {
   const f = useFrame30();
   const { width, height } = useVideoConfig();
   const t = f / 30 - l.start;
@@ -132,9 +132,12 @@ const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | nu
   const outAnims = l.animations.filter((a) => a.type === "out");
   // hieu ung phat sang (Phat sang 2 / Glow 2): drop-shadow cung mau, do lon theo tham so
   // "Phat sang 2": quang sang rong cung mau + loi sang (hieu chinh tren video quay man hinh CapCut)
+  // glowK < 1 = che do NET (chen len video): quang sang gon hon, khong day sang chay mau, them vien toi mong giu canh chu
   const g = glow
-    ? `drop-shadow(0 0 ${(glow.size * 45).toFixed(1)}px ${color}) drop-shadow(0 0 ${(glow.size * 110).toFixed(1)}px ${color}bb) drop-shadow(0 0 ${(glow.size * 220).toFixed(1)}px ${color}55) brightness(${1 + glow.lum * 0.8})`
-    : "";
+    ? glowK < 1
+      ? `drop-shadow(0 2px 1.5px rgba(0,0,0,0.75)) drop-shadow(0 0 ${(glow.size * 30 * glowK).toFixed(1)}px ${color}cc) drop-shadow(0 0 ${(glow.size * 90 * glowK).toFixed(1)}px ${color}66)`
+      : `drop-shadow(0 0 ${(glow.size * 45).toFixed(1)}px ${color}) drop-shadow(0 0 ${(glow.size * 110).toFixed(1)}px ${color}bb) drop-shadow(0 0 ${(glow.size * 220).toFixed(1)}px ${color}55) brightness(${1 + glow.lum * 0.8})`
+    : glowK < 1 ? "drop-shadow(0 2px 1.5px rgba(0,0,0,0.75))" : "";
   const outP = outAnims.length ? interpolate(t, [l.duration - outAnims[0].duration, l.duration], [1, 0], clamp) : 1;
   // nghieng theo du lieu (italic_degree, mac dinh 10 do khi style italic) -> skew giong CapCut
   const italicDeg = (st as { italic?: boolean }).italic || (l.italicDegree ?? 0) > 0 ? (l.italicDegree || 10) : 0;
@@ -186,13 +189,14 @@ const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | nu
         left: width / 2 + (l.x * width) / 2,
         top: height / 2 - (l.y * height) / 2,
         translate: "-50% -50%",
-        scale: `${(l as { flipH?: boolean }).flipH ? -l.scale : l.scale} ${(l as { flipV?: boolean }).flipV ? -l.scale : l.scale}`,
+        // lat bang scale -1 (khong phong to) ; phong to bang zoom -> chu duoc dan trang lai o co that, khong nhoe
+        scale: (l as { flipH?: boolean }).flipH || (l as { flipV?: boolean }).flipV ? `${(l as { flipH?: boolean }).flipH ? -1 : 1} ${(l as { flipV?: boolean }).flipV ? -1 : 1}` : undefined,
         rotate: `${l.rotation}deg`,
-        filter: g || undefined,
-        textAlign: l.alignment === 0 ? "left" : l.alignment === 2 ? "right" : "center",
       }}
     >
-      <div style={{ ...textStyle, ...wholeStyle, ...maskCss }}>{body}</div>
+      <div style={{ zoom: l.scale, filter: g || undefined, textAlign: l.alignment === 0 ? "left" : l.alignment === 2 ? "right" : "center" }}>
+        <div style={{ ...textStyle, ...wholeStyle, ...maskCss }}>{body}</div>
+      </div>
     </div>
   );
 };
@@ -224,7 +228,7 @@ export type CcFit =
   | { cx: number; cy: number; width: number; maxHeight?: number }; // dat vao vung (px) khi chen video
 
 /** Mot preset CapCut. `texts`: thay noi dung theo van ban goc, vd { "Bat dong san": "Nha pho" }. */
-export const CapcutPreset: React.FC<{ preset: CcPreset; texts?: Record<string, string>; withAudio?: boolean; fit?: CcFit; children?: React.ReactNode }> = ({ preset, texts, withAudio = true, fit = "cover", children }) => {
+export const CapcutPreset: React.FC<{ preset: CcPreset; texts?: Record<string, string>; withAudio?: boolean; fit?: CcFit; children?: React.ReactNode; glowK?: number }> = ({ preset, texts, withAudio = true, fit = "cover", children, glowK = 1 }) => {
   const { fps } = useVideoConfig();
   const box = useUnionBox(preset, texts);
   let fitStyle: React.CSSProperties = {};
@@ -240,7 +244,8 @@ export const CapcutPreset: React.FC<{ preset: CcPreset; texts?: Record<string, s
     let k = target.width / bw;
     if (target.maxHeight) k = Math.min(k, (target.maxHeight / bh) * 1.15);
     const bcx = (box.x0 + box.x1) / 2, bcy = (box.y0 + box.y1) / 2;
-    fitStyle = { transformOrigin: `${bcx}px ${bcy}px`, transform: `translate(${target.cx - bcx}px, ${target.cy - bcy}px) scale(${k})` };
+    // zoom (dan trang lai o co dich) thay cho transform scale -> chu sac net; dich bang translate thuan
+    fitStyle = { zoom: k, transform: `translate(${(target.cx - bcx * k) / k}px, ${(target.cy - bcy * k) / k}px)` };
   }
   // khoi hinh do theo toa do anh bia -> dua ve vung dich bang cung phep bien doi coverBox -> target
   const cb = (preset as { coverBox?: number[] | null }).coverBox;
@@ -262,7 +267,7 @@ export const CapcutPreset: React.FC<{ preset: CcPreset; texts?: Record<string, s
       ) : null}
       <AbsoluteFill style={fitStyle}>
         {preset.layers.map((l, i) => (
-          <LayerView key={i} idx={i} l={l} glow={glow} text={texts?.[l.text]} hasTwin={preset.layers.some((o, j) => j !== i && o.text.toLowerCase() === l.text.toLowerCase() && !(o as { mask?: unknown }).mask)}
+          <LayerView key={i} idx={i} l={l} glow={glow} glowK={glowK} text={texts?.[l.text]} hasTwin={preset.layers.some((o, j) => j !== i && o.text.toLowerCase() === l.text.toLowerCase() && !(o as { mask?: unknown }).mask)}
             twin={preset.layers.find((o, j) => j !== i && o.text.toLowerCase() === l.text.toLowerCase() && !(o as { mask?: unknown }).mask && Math.abs(o.x - l.x) < 0.02 && Math.abs(o.y - l.y) < 0.02)} />
         ))}
         {children}

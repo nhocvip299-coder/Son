@@ -94,7 +94,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
   );
   const cc = (id: string, a: number, b: number, fit: { cx: number; cy: number; width: number }, texts: Record<string, string>) => (
     <Seq a={a} b={b} name={`CapCut ${id} @${a}`}>
-      <Backdrop fit={fit} dur={s(b - a)} /><Backdrop fit={fit} dur={s(b - a)} /><ExitFade dur={s(b - a)}><CapcutPreset preset={P(id)} fit={fit} texts={texts} /></ExitFade>
+      <Backdrop fit={fit} dur={s(b - a)} /><Backdrop fit={fit} dur={s(b - a)} /><ExitFade dur={s(b - a)}><CapcutPreset preset={P(id)} fit={fit} texts={texts} glowK={0.45} /></ExitFade>
     </Seq>
   );
   return (
@@ -123,7 +123,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       {/* ===== 2.7-6.9 anh SB-145 ===== */}
       <Seq a={2.7} b={6.9} name="toi anh"><Shade top={0.75} bot={0.55} /></Seq>
       <StackText id="a1" palette="serif" y={0.13} size={120} end={6.8} exit="blurUp" lines={[{ text: "ngay tại Vinhomes", role: "lead", at: 2.75, size: 48 }, { text: "OCEAN PARK 2", role: "main", at: 3.25 }]} />
-      {cc("Kobe Text 19", 4.5, 6.9, { cx: 540, cy: 1250, width: 720 }, { "Phong cách sống": "căn shophouse sở hữu", "Hiện Đại": "2 Mặt Tiền", "Do bạn chọn": "đường lớn" })}
+      {cc("Kobe Text 19", 4.5, 6.9, { cx: 540, cy: 1250, width: 720 }, { "Phong cách sống": "căn shophouse sở hữu", "Hiện Đại": "2 Mặt Tiền", "Do bạn chọn": "trước – sau" })}
 
       {/* ===== 6.9-12.2 so sanh ===== */}
       <Seq a={6.9} b={12.2} name="toi tren"><Shade top={0.55} bot={0} /></Seq>

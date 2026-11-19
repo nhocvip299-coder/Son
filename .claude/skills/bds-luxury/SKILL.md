@@ -46,3 +46,7 @@ Ví dụ ghép đủ 4 phân đoạn: `src/styles/bdsLuxury/SanHoDemo.tsx` (comp
 - **Chữ đậm** (góp ý Happy Home): chữ chính Be Vietnam/Montserrat 900 + viền cùng màu 2,8 % cỡ chữ; dẫn/phụ 700/800; serif Playfair 900; phụ đề 700–800.
 - **Trám điểm nhấn** (KCN, trường đại học, bệnh viện…): nhắc tới đâu cắt `VideoCard` tới đó (~1 s/cảnh), ưu tiên b-roll của người dùng, thiếu thì stock Mixkit (giấy phép miễn phí) — `inputs/<du-an>/stock/`. Không dùng ảnh báo chí có bản quyền.
 - **Chủ đầu tư**: ưu tiên logo THẬT trong footage (tường nhà mẫu, sa bàn) + `PushIn` zoom vào logo.
+
+
+## Chữ viết tay + chữ dày bản, SFX theo tình huống
+Xem `references/phufilms-chu-sfx.md` (nghiên cứu Phú Films): mẫu 1 dòng viết tay chéo + chữ khối dày + dòng phụ, quầng sáng gọn sát chữ; bảng SFX Riser → Highlight → Impact. Component: `src/styles/bdsLuxury/handBold.tsx`.

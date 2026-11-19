@@ -14,6 +14,7 @@ import { SanHoLuxFull, SANHO_FULL_SEC, type SanHoFullProps } from "./styles/quye
 import { BdsLuxuryDemo, LUX_DEMO_SEC, type LuxDemoProps } from "./styles/bdsLuxury/SanHoDemo";
 import { SanHoLuxMix, SANHO_MIX_SEC, type SanHoMixProps } from "./styles/bdsLuxury/SanHoMix";
 import { HappyHome, HAPPY_HOME_SEC, type HappyHomeProps } from "./styles/bdsLuxury/HappyHome";
+import { HappyHomeThumb, type ThumbProps } from "./styles/bdsLuxury/HappyHomeThumb";
 import { TextPresetsGallery } from "./styles/textPresets/Gallery";
 import { TextPresetsCatalog40, TextPresetsGallery40 } from "./styles/textPresets/Gallery40";
 import { CapcutCatalog } from "./styles/textPresets/capcut/CapcutCatalog";
@@ -74,6 +75,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="BdsLuxuryDemo" component={BdsLuxuryDemo} durationInFrames={Math.round(LUX_DEMO_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ captions: "phrase", words: [], stem: "all" } as LuxDemoProps} />
       <Composition id="SanHoLuxMix" component={SanHoLuxMix} durationInFrames={Math.round(SANHO_MIX_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ captions: "phrase", words: [], stem: "all" } as SanHoMixProps} />
       <Composition id="HappyHome" component={HappyHome} durationInFrames={Math.round(HAPPY_HOME_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ captions: "phrase", words: [], stem: "all" } as HappyHomeProps} />
+      <Composition id="HappyHomeThumb" component={HappyHomeThumb} durationInFrames={1} fps={60} width={1080} height={1920} defaultProps={{ t: 12.0 } as ThumbProps} />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

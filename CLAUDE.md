@@ -6,7 +6,7 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 - **Mỗi lần dựng/chỉnh sửa video: luôn xuất thêm bản "chạy chữ từng chữ"** (phụ đề hiện từng từ đang nói — `WordByWord` trong `src/styles/textPresets/capcut/`), bên cạnh bản thường.
 - Chữ hiệu ứng phải giống mẫu CapCut: đủ độ bóng/phát sáng, chuyển động mượt (có vào + thoát), **sound effect phải nghe rõ** trên giọng nói (kiểm bằng đo năng lượng cao tần quanh mốc SFX).
 - **Chữ tuyệt đối phải 4K sắc nét** (video gốc có thể Full HD): luôn render x2 = 2160x3840 (`Config.setScale(2)` + khung PNG), chữ vẽ SVG/text ở cỡ thật, không phóng to ảnh chữ (dùng `zoom`, không `transform: scale` cho preset). Bản xem nhanh cũng giữ 4K, chỉ hạ bitrate.
-- **Chữ không được đè lên người** (kể cả kiểu "chữ sau lưng") — đặt trên đầu/vùng trống, kiểm bằng `faces.json`.
+- **Chữ không được đè lên người** — đặt trên đầu/vùng trống, kiểm bằng `faces.json`. Chữ sau lưng chỉ dùng khi chữ to thật sự chạm đầu (một phần chìm sau tóc, KHÔNG che mặt), matte người đặc, không khuyết (`person_matte.py` bản mới, 60fps).
 - Chữ cần **độ bóng** (gradient kim loại + vệt sáng quét), KHÔNG rắc ngôi sao lấp lánh; điểm nhấn phải nổi bật (to, nền tối mềm sau chữ).
 - Ảnh trám mờ/độ phân giải thấp → bỏ; dùng cảnh quay thật trong video, đồ hoạ tự dựng, hoặc footage miễn phí bản quyền.
 - Chữ to tự thu nhỏ để nằm trong **vùng an toàn TikTok/Reels** (lề 150px hai bên, trên 220px, dưới 520px) — kiểm bằng ảnh có khung đỏ.

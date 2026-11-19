@@ -36,7 +36,7 @@ const Front: React.FC<{ a: number; b: number; fps: number }> = ({ a, b, fps }) =
 
 type Sfx = SfxCue["sfx"];
 const TING: Sfx = "real/lux-ting", DING: Sfx = "real/lux-ding", TICK: Sfx = "real/lux-tick", WHIP: Sfx = "real/lux-whip", BOOM: Sfx = "real/lux-boom";
-const TXT: Sfx = "real/qtl-sparkle-whoosh-2", SOFT: Sfx = "real/qtl-sparkle-sweep", TRN: Sfx = "real/qtl-transition", POP: Sfx = "real/lux-pop", IMP: Sfx = "real/qtl-impact";
+const TXT: Sfx = "real/qtl-sparkle-whoosh-2", SOFT: Sfx = "real/qtl-sparkle-sweep", TRN: Sfx = "real/qtl-transition", POP: Sfx = "real/qtl-pop-whoosh-hot", IMP: Sfx = "real/qtl-impact";
 const ticks = (t: number, n = 4, gap = 0.13): Array<[number, Sfx, number]> => Array.from({ length: n }, (_v, i) => [t + 0.1 + i * gap, TICK, 0.55] as [number, Sfx, number]);
 
 const WHIPS = [2.7, 6.9, 26.3, 48.6, 53.1, 60.2];
@@ -58,6 +58,7 @@ const CUES: Array<[number, Sfx, number]> = [
   [3.25, "shimmer" as Sfx, 0.9], [46.2, "riser" as Sfx, 0.7], [57.7, "riser" as Sfx, 0.7], [69.5, "riser" as Sfx, 0.6],
   [43.6, TRN, 1], [47.2, DING, 1], ...ticks(47.2, 6, 0.15), [70.3, DING, 1], ...ticks(70.3, 6, 0.15), [33.2, TRN, 0.9], [79.0, DING, 1], ...ticks(0.02, 4, 0.12),
   [12.25, TXT, 1], [13.3, POP, 1],
+  [22.45, TING, 0.9], [60.5, SOFT, 1], [64.6, TING, 1], [73.9, DING, 1],
   [72.1, TRN, 0.8], [73.9, TING, 1], [75.8, POP, 1], [76.5, POP, 1], [78.0, POP, 1], [79.0, DING, 1],
 ];
 const ZONES: CapZone[] = [{ from: 0, to: 99, kind: "plain", y: 0.7 }];

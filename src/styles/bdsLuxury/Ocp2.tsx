@@ -20,7 +20,7 @@ import { CheckChips, CompareBars, FloorStack, RoadSection, SitePlan, XeKhe } fro
  * Vung an toan TikTok/Reels: chu trong y 0.11-0.73.
  */
 const SRC = "inputs/du-an-3/goc-1080.mp4";
-const MATTE = "inputs/du-an-3/matte/person.webm";
+const MATTE = "inputs/du-an-3/matte60/person.webm"; // 60fps = trung nhip video (30fps gay bong ma khi nguoi di)
 const IMG = (n: number) => staticFile(`inputs/du-an-3/anh/IMG_${n}.jpg`);
 const SRC_END = 81.1;
 export const OCP2_SEC = 83.0;
@@ -62,9 +62,10 @@ const Punch: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps;
-  const z = interpolate(t, [0, 0.5], [1.32, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.bezier(0.16, 1, 0.3, 1) })
+  // CHI tac dong 0–2.7s (hook), sau do DUNG 1.0 — neu giu >1 se lam mo video va lech lop nguoi (loi chong 2 lop)
+  const z = t >= 2.7 ? 1 : interpolate(t, [0, 0.5], [1.32, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.bezier(0.16, 1, 0.3, 1) })
     + interpolate(t, [0.5, 2.7], [0, 0.06], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const sh = t < 0.35 ? Math.sin(t * 90) * 10 * (1 - t / 0.35) : 0;
+  const sh = t < 0.35 && t >= 0 ? Math.sin(t * 90) * 10 * (1 - t / 0.35) : 0;
   return <AbsoluteFill style={{ transform: `translate(${sh}px, ${sh * 0.6}px) scale(${z})`, transformOrigin: "50% 40%" }}>{children}</AbsoluteFill>;
 };
 /** anh tram phu kin + day may cham vao (ox,oy) */
@@ -93,7 +94,10 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
     <Sequence from={s(a)} durationInFrames={s(b - a)} name={name}>{children}</Sequence>
   );
   const front = (a: number, b: number) => (
-    <Seq a={a} b={b} name={`Nguoi truoc chu ${a}`}><QtPersonFront src={staticFile(MATTE)} startFrom={a} /></Seq>
+    <Seq a={a} b={b} name={`Nguoi truoc chu ${a}`}>
+      {/* cung bo loc mau voi video nen (QtGrade) -> lop nguoi khong lech mau */}
+      <AbsoluteFill style={{ filter: "contrast(1.06) saturate(1.05) sepia(0.06) brightness(1.0)" }}><QtPersonFront src={staticFile(MATTE)} startFrom={a} /></AbsoluteFill>
+    </Seq>
   );
   const hb = (k: string, a: number, b: number, cy: number, variant: HbVariant, small: string, main: string, o: { cx?: number; size?: number; tone?: HbTone; smallTone?: HbTone; sub?: string; mainAt?: number } = {}) => (
     <Seq a={a} b={b} name={`Chu ${variant} ${k}`}><HandBold id={k} variant={variant} cy={cy} small={small} main={main} {...o} /></Seq>
@@ -117,7 +121,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <Shade top={0.5} bot={0} />
       <StackText id="h0" palette="white" y={0.16} size={70} end={2.6} exit="blurUp" lines={[{ text: "một mét vuông đất", role: "lead", at: 0.6, size: 50, enter: "riseUp" }]} />
       <StackText id="h1" palette="blue" y={0.305} size={200} end={2.6} exit="scaleOut" lines={[{ text: "{n} TRIỆU", role: "main", at: 0.02, enter: "zoomSettle", count: { to: 70, dur: 0.55 } }]} />
-      {front(0, 2.7)}
+      <Punch>{front(0, 2.7)}</Punch>
       {hb("k1", 1.45, 2.75, 1220, "neon", "anh chị", "Có tin không?", { size: 120, tone: "blue", mainAt: 0.05 })}
 
       {/* ===== 2.7-6.9 anh SB-145 ===== */}

@@ -37,7 +37,7 @@ inp = ["ffmpeg", "-nostdin", "-v", "error", "-ss", str(start), "-i", src] + (["-
       ["-vf", f"fps={fps},scale={W}:{H}", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
 rd = subprocess.Popen(inp, stdout=subprocess.PIPE)
 wr = subprocess.Popen(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgba", "-s", f"{W}x{H}", "-r", str(fps), "-i", "-",
-                       "-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", "-b:v", "6M", "-deadline", "realtime", "-cpu-used", "8", "-row-mt", "1",
+                       "-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", "-crf", "12", "-b:v", "0", "-deadline", "good", "-cpu-used", "4", "-row-mt", "1",  # gan khong mat net: lop nguoi de len video goc phai SAC nhu goc
                        "-auto-alt-ref", "0", str(out / "person.webm")], stdin=subprocess.PIPE)
 faces, i, prev = [], 0, None
 bbox = lambda m: (lambda ys, xs: [round(xs.min() / m.shape[1], 3), round(ys.min() / m.shape[0], 3), round(xs.max() / m.shape[1], 3), round(ys.max() / m.shape[0], 3)] if len(xs) else None)(*np.where(m))

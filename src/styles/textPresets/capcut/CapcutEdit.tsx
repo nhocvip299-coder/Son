@@ -19,7 +19,7 @@ export type CcEditPlan = {
 export const ccPlanDurationMs = (p: CcEditPlan) => p.segments.reduce((a, s) => a + s.srcEndMs - s.srcStartMs, 0);
 
 /** Thoat muot: 0.3s cuoi mo dan + thu nhe (tranh bien mat dot ngot). */
-const ExitFade: React.FC<{ dur: number; children: React.ReactNode }> = ({ dur, children }) => {
+export const ExitFade: React.FC<{ dur: number; children: React.ReactNode }> = ({ dur, children }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const n = Math.round(0.3 * fps);
@@ -28,7 +28,7 @@ const ExitFade: React.FC<{ dur: number; children: React.ReactNode }> = ({ dur, c
 };
 
 /** Lop toi mem hinh bau duc sau preset: giu chu dan nho doc duoc tren nen sang (troi, tuong vang). */
-const Backdrop: React.FC<{ fit: CcFit; dur: number }> = ({ fit, dur }) => {
+export const Backdrop: React.FC<{ fit: CcFit; dur: number }> = ({ fit, dur }) => {
   const f = useCurrentFrame();
   if (typeof fit !== "object") return null;
   const a = interpolate(f, [0, 8, dur - 8, dur], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });

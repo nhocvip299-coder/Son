@@ -59,6 +59,7 @@ const CUES: Array<[number, Sfx, number]> = [
   [43.6, TRN, 1], [47.2, DING, 1], ...ticks(47.2, 6, 0.15), [70.3, DING, 1], ...ticks(70.3, 6, 0.15), [33.2, TRN, 0.9], [79.0, DING, 1], ...ticks(0.02, 4, 0.12),
   [12.25, TXT, 1], [13.3, POP, 1],
   [22.45, TING, 0.9], [60.5, SOFT, 1], [64.6, TING, 1], [73.9, DING, 1],
+  [13.3, TING, 0.9], [33.9, TING, 1], [49.9, TING, 1], [60.5, TING, 0.9], [64.6, DING, 1], [75.8, TING, 1], [76.5, TING, 1], [78.0, DING, 1],
   [72.1, TRN, 0.8], [73.9, TING, 1], [75.8, POP, 1], [76.5, POP, 1], [78.0, POP, 1], [79.0, DING, 1],
 ];
 const ZONES: CapZone[] = [{ from: 0, to: 99, kind: "plain", y: 0.7 }];

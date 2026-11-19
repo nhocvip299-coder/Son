@@ -4,7 +4,7 @@ import { Audio } from "@remotion/media";
 import { SfxTrack } from "../../compositions/shared";
 import type { SfxCue } from "../../lib/theme";
 import { WordByWord } from "../textPresets/capcut/WordByWord";
-import { QtGrade, type QtWord } from "../quyetTranLux/components";
+import { QtGrade, QtPersonFront, type QtWord } from "../quyetTranLux/components";
 import HITS from "../quyetTranLux/sfxHits.json";
 import { LuxCaptions, type CapZone } from "./captions";
 import { RoadText, WhipBlur, WhiteFlash } from "./fill";
@@ -26,6 +26,13 @@ const SRC_END = 81.1;
 export const OCP2_SEC = 83.0;
 const hitOf = (s: string) => (HITS as Record<string, number>)[s.replace("real/", "")] ?? 0;
 const SF = "Playfair Display";
+const MATTE = "inputs/du-an-3/matte60/person.webm"; // 60fps, nen gan khong mat net
+/** CHU SAU DAU: lop nguoi (cung mau QtGrade) de len chu -> chu chim 1 phan sau toc, KHONG che mat. Chi dung khi chu that su cham dau. */
+const Front: React.FC<{ a: number; b: number; fps: number }> = ({ a, b, fps }) => (
+  <Sequence from={Math.round(a * fps)} durationInFrames={Math.round((b - a) * fps)} name={`Nguoi truoc chu ${a}`}>
+    <AbsoluteFill style={{ filter: "contrast(1.06) saturate(1.05) sepia(0.06) brightness(1.0)" }}><QtPersonFront src={staticFile(MATTE)} startFrom={a} /></AbsoluteFill>
+  </Sequence>
+);
 
 type Sfx = SfxCue["sfx"];
 const TING: Sfx = "real/lux-ting", DING: Sfx = "real/lux-ding", TICK: Sfx = "real/lux-tick", WHIP: Sfx = "real/lux-whip", BOOM: Sfx = "real/lux-boom";
@@ -123,10 +130,11 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
 
       {/* ===== 6.9-12.2 so sanh ===== */}
       <Seq a={6.9} b={12.2} name="toi tren"><Shade top={0.55} bot={0} /></Seq>
-      <StackText id="b1" palette="blue" y={0.17} size={170} end={9.65} exit="toLeft" lines={[{ text: "so với đất thổ cư", role: "lead", at: 6.95, size: 50 }, { text: "VĂN GIANG", role: "main", at: 8.2 }]} />
+      <StackText id="b1" palette="blue" y={0.314} size={170} end={9.65} exit="toLeft" lines={[{ text: "so với đất thổ cư", role: "lead", at: 6.95, size: 50 }, { text: "VĂN GIANG", role: "main", at: 8.2 }]} />
       <StackText id="b2" palette="blue" y={0.17} size={140} end={12.15} exit="blurUp" lines={[{ text: "vị trí tương đương", role: "lead", at: 9.75, size: 48, enter: "fromRight" }, { text: "KHÔNG CĂN NÀO", role: "main", at: 10.5, size: 118 }, { text: "sánh được với căn này", role: "sub", at: 11.2, size: 50, italic: true }]} />
 
       {hb("k9", 12.2, 14.05, 520, "tay", "anh chị nhìn xem", "Mặt đường", { size: 150, tone: "blue", sub: "trục chính", mainAt: 1.1 })}
+      <Front a={6.95} b={9.75} fps={fps} />
       {/* ===== 12.2-17 duong 20M: 1 so duy nhat tren mat duong, trong vung an toan ===== */}
       <StackText id="c1" palette="white" y={0.2} size={90} end={17.4} exit="blurUp" lines={[{ text: "sở hữu trục đường rộng", role: "lead", at: 14.1, size: 54 }, { text: "cả vỉa hè", role: "sub", at: 16.3, size: 46, italic: true }]} />
       <RoadText value={20} unit="M" at={15.95} end={17.4} y={0.72} size={230} x={0.25} tint="blue" font={SF} />
@@ -173,7 +181,8 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
 
       {/* ===== 72.1-83 CTA ===== */}
       <Seq a={72.1} b={83} name="toi tren 3"><Shade top={0.55} bot={0} /></Seq>
-      <StackText id="h2" palette="blue" y={0.15} size={200} end={78.5} exit="blurUp" lines={[{ text: "nếu anh chị có tài chính", role: "lead", at: 72.1, size: 48 }, { text: "15 TỶ", role: "main", at: 73.9 }]} />
+      <StackText id="h2" palette="blue" x={0.42} y={0.296} size={200} end={78.5} exit="blurUp" lines={[{ text: "nếu anh chị có tài chính", role: "lead", at: 72.1, size: 48 }, { text: "15 TỶ", role: "main", at: 73.9 }]} />
+      <Front a={72.1} b={78.6} fps={fps} />
       <Seq a={74.5} b={79.0} name="Checklist"><CheckChips x={160} y={1000} items={[["Diện tích lớn", 1.3], ["2 mặt tiền đường", 2.0], ["Xẻ khe thoáng", 3.5]]} /></Seq>
       {hb("k8", 78.6, 83, 400, "bac", "liên hệ ngay", "Em Sơn", { size: 170, tone: "white", smallTone: "blue", mainAt: 0.3 })}
       <Seq a={79.0} b={83} name="Vien SDT"><KxPhone phone="0966 312 333" y={0.315} /></Seq>

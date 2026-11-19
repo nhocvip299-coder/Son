@@ -115,28 +115,28 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       {/* ===== 0-2.7 HOOK: 70 TRIEU nam sau dau + "co tin khong?" canh tay ===== */}
       <Shade top={0.5} bot={0} />
       <StackText id="h0" palette="white" y={0.16} size={70} end={2.6} exit="blurUp" lines={[{ text: "một mét vuông đất", role: "lead", at: 0.6, size: 50, enter: "riseUp" }]} />
-      <StackText id="h1" palette="serif" y={0.305} size={200} end={2.6} exit="scaleOut" lines={[{ text: "70 TRIỆU", role: "main", at: 0.02, enter: "zoomSettle" }]} />
+      <StackText id="h1" palette="blue" y={0.305} size={200} end={2.6} exit="scaleOut" lines={[{ text: "70 TRIỆU", role: "main", at: 0.02, enter: "zoomSettle" }]} />
       {front(0, 2.7)}
-      {hb("k1", 1.45, 2.75, 1220, "neon", "anh chị", "Có tin không?", { size: 120, tone: "cyan", mainAt: 0.05 })}
+      {hb("k1", 1.45, 2.75, 1220, "neon", "anh chị", "Có tin không?", { size: 120, tone: "blue", mainAt: 0.05 })}
 
       {/* ===== 2.7-6.9 anh SB-145 ===== */}
       <Seq a={2.7} b={6.9} name="toi anh"><Shade top={0.75} bot={0.55} /></Seq>
-      <StackText id="a1" palette="serif" y={0.13} size={120} end={6.8} exit="blurUp" lines={[{ text: "ngay tại Vinhomes", role: "lead", at: 2.75, size: 48 }, { text: "OCEAN PARK 2", role: "main", at: 3.25 }]} />
-      {hb("k2", 4.5, 6.9, 1200, "tay", "sở hữu", "2 mặt tiền", { size: 170, tone: "gold", sub: "trước – sau", mainAt: 1.0 })}
+      <StackText id="a1" palette="blue" y={0.13} size={120} end={6.8} exit="blurUp" lines={[{ text: "ngay tại Vinhomes", role: "lead", at: 2.75, size: 48 }, { text: "OCEAN PARK 2", role: "main", at: 3.25 }]} />
+      {hb("k2", 4.5, 6.9, 1200, "tay", "sở hữu", "2 mặt tiền", { size: 170, tone: "blue", sub: "trước – sau", mainAt: 1.0 })}
 
       {/* ===== 6.9-12.2 so sanh ===== */}
       <Seq a={6.9} b={12.2} name="toi tren"><Shade top={0.55} bot={0} /></Seq>
-      <StackText id="b1" palette="serif" y={0.17} size={170} end={9.65} exit="toLeft" lines={[{ text: "so với đất thổ cư", role: "lead", at: 6.95, size: 50 }, { text: "VĂN GIANG", role: "main", at: 8.2 }]} />
-      <StackText id="b2" palette="serif" y={0.17} size={140} end={12.15} exit="blurUp" lines={[{ text: "vị trí tương đương", role: "lead", at: 9.75, size: 48, enter: "fromRight" }, { text: "KHÔNG CĂN NÀO", role: "main", at: 10.5, size: 118 }, { text: "sánh được với căn này", role: "sub", at: 11.2, size: 50, italic: true }]} />
+      <StackText id="b1" palette="blue" y={0.17} size={170} end={9.65} exit="toLeft" lines={[{ text: "so với đất thổ cư", role: "lead", at: 6.95, size: 50 }, { text: "VĂN GIANG", role: "main", at: 8.2 }]} />
+      <StackText id="b2" palette="blue" y={0.17} size={140} end={12.15} exit="blurUp" lines={[{ text: "vị trí tương đương", role: "lead", at: 9.75, size: 48, enter: "fromRight" }, { text: "KHÔNG CĂN NÀO", role: "main", at: 10.5, size: 118 }, { text: "sánh được với căn này", role: "sub", at: 11.2, size: 50, italic: true }]} />
       {front(8.1, 12.2)}
 
       {/* ===== 12.2-17 duong 20M: 1 so duy nhat tren mat duong, trong vung an toan ===== */}
       <StackText id="c1" palette="white" y={0.2} size={90} end={17.4} exit="blurUp" lines={[{ text: "sở hữu trục đường rộng", role: "lead", at: 14.1, size: 54 }, { text: "cả vỉa hè", role: "sub", at: 16.3, size: 46, italic: true }]} />
-      <RoadText value={20} unit="M" at={15.95} end={17.4} y={0.72} size={250} x={0.5} tint="gold" font={SF} />
+      <RoadText value={20} unit="M" at={15.95} end={17.4} y={0.72} size={250} x={0.5} tint="blue" font={SF} />
       {front(15.8, 17.8)}
 
       {/* ===== 17-22.4 di theo em Son ===== */}
-      {hb("k3", 17.85, 21.2, 560, "bac", "mời anh chị", "Đi theo em Sơn", { size: 130, tone: "gold", smallTone: "orange", mainAt: 0.5 })}
+      {hb("k3", 17.85, 21.2, 560, "bac", "mời anh chị", "Đi theo em Sơn", { size: 130, tone: "white", smallTone: "blue", mainAt: 0.5 })}
 
       {/* ===== 22.4-26.3 mat cat duong ===== */}
       <Seq a={22.4} b={26.3} name="Mat cat duong"><RoadSection y={460} parts={[["VỈA HÈ", 4, "walk"], ["MẶT ĐƯỜNG", 7, "road"], ["VỈA HÈ", 4, "walk"]]} /></Seq>
@@ -145,41 +145,41 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <Seq a={26.3} b={33.2} name="Blueprint 1"><Blueprint /></Seq>
       <Seq a={26.3} b={29.7} name="Mat bang lo goc"><SitePlan area={163.8} /></Seq>
       <Seq a={29.6} b={33.2} name="Chong san"><FloorStack total={427.2} /></Seq>
-      {hb("k4", 33.2, 35.25, 900, "tay", "nhà bàn giao", "Thô · có thang", { size: 140, tone: "teal", mainAt: 0.3 })}
+      {hb("k4", 33.2, 35.25, 900, "tay", "nhà bàn giao", "Thô · có thang", { size: 140, tone: "blue", mainAt: 0.3 })}
       <Seq a={35.2} b={41.5} name="Blueprint 2"><Blueprint /></Seq>
-      <StackText id="d1" palette="serif" y={0.13} size={140} end={41.4} exit="blurUp" lines={[{ text: "đặc biệt bên hông", role: "lead", at: 35.25, size: 48 }, { text: "XẺ KHE RỘNG", role: "main", at: 37.15, size: 110 }]} />
+      <StackText id="d1" palette="blue" y={0.13} size={140} end={41.4} exit="blurUp" lines={[{ text: "đặc biệt bên hông", role: "lead", at: 35.25, size: 48 }, { text: "XẺ KHE RỘNG", role: "main", at: 37.15, size: 110 }]} />
       <Seq a={35.2} b={41.5} name="Xe khe"><XeKhe /></Seq>
 
       {/* ===== 41.5-48.6 gia ===== */}
-      {hb("k5", 41.5, 43.6, 560, "neon", "Cái điều", "Đặc biệt nhất", { size: 120, tone: "green", mainAt: 0.1 })}
+      {hb("k5", 41.5, 43.6, 560, "neon", "Cái điều", "Đặc biệt nhất", { size: 120, tone: "blue", mainAt: 0.1 })}
       <Seq a={43.6} b={48.6} name="Gia giam"><PriceDrop from="23,339 TỶ" chips={[["VOUCHER 30%", 2.3]]} to="HƠN 15 TỶ" toAt={3.8} y={480} /></Seq>
 
       {/* ===== 48.6-53.1 vi tri ===== */}
       <Seq a={49.0} b={51.5} name="toi duoi ban do"><Shade top={0} bot={0.85} /></Seq>
-      {hb("k6", 49.2, 51.5, 1250, "tay", "vị trí", "Cực kỳ đắc địa", { size: 130, tone: "red", sub: "Ocean Park 2", mainAt: 0.4 })}
+      {hb("k6", 49.2, 51.5, 1250, "tay", "vị trí", "Cực kỳ đắc địa", { size: 130, tone: "blue", sub: "Ocean Park 2", mainAt: 0.4 })}
       <Seq a={51.5} b={53.1} name="toi Masteri"><Shade top={0.75} bot={0} /></Seq>
-      <StackText id="e1" palette="serif" y={0.13} size={120} end={53.0} exit="blurUp" lines={[{ text: "hướng vào toà chung cư", role: "lead", at: 51.5, size: 46 }, { text: "MASTERI", role: "main", at: 52.6 }]} />
+      <StackText id="e1" palette="blue" y={0.13} size={120} end={53.0} exit="blurUp" lines={[{ text: "hướng vào toà chung cư", role: "lead", at: 51.5, size: 46 }, { text: "MASTERI", role: "main", at: 52.6 }]} />
 
       {/* ===== 53.1-60.2 boc tach 70 trieu ===== */}
-      {hb("k7", 53.5, 55.35, 560, "bac", "căn này với", "427 m² sàn", { size: 160, tone: "gold", smallTone: "red", mainAt: 0.5 })}
+      {hb("k7", 53.5, 55.35, 560, "bac", "căn này với", "427 m² sàn", { size: 160, tone: "blue", smallTone: "white", mainAt: 0.5 })}
       <Seq a={55.3} b={60.2} name="toi tren 2"><Shade top={0.55} bot={0} /></Seq>
-      <StackText id="f1" palette="serif" y={0.15} size={190} end={60.1} exit="scaleOut" lines={[{ text: "bóc tách giá xây dựng · chỉ khoảng", role: "lead", at: 55.4, size: 44 }, { text: "70 TRIỆU", role: "main", at: 58.9 }, { text: "/ m² đất", role: "sub", at: 59.6, size: 62, italic: true }]} />
+      <StackText id="f1" palette="blue" y={0.15} size={190} end={60.1} exit="scaleOut" lines={[{ text: "bóc tách giá xây dựng · chỉ khoảng", role: "lead", at: 55.4, size: 44 }, { text: "70 TRIỆU", role: "main", at: 58.9 }, { text: "/ m² đất", role: "sub", at: 59.6, size: 62, italic: true }]} />
       {front(58.7, 60.2)}
 
       {/* ===== 60.2-72.1 KHONG NGUOI: so sanh + chinh sach ===== */}
       <Seq a={60.2} b={65.1} name="Blueprint 3"><Blueprint /></Seq>
-      <StackText id="g1" palette="serif" y={0.13} size={110} end={65.0} exit="blurUp" lines={[{ text: "so với những căn", role: "lead", at: 60.3, size: 48 }, { text: "CẮT LỖ SÂU", role: "main", at: 62.3 }]} />
+      <StackText id="g1" palette="blue" y={0.13} size={110} end={65.0} exit="blurUp" lines={[{ text: "so với những căn", role: "lead", at: 60.3, size: 48 }, { text: "CẮT LỖ SÂU", role: "main", at: 62.3 }]} />
       <Seq a={60.2} b={65.1} name="So sanh"><CompareBars ours="≈70TR/m²" badgeAt={4.4} /></Seq>
       <Seq a={65.1} b={72.1} name="toi poster"><Blueprint dim={0.7} /></Seq>
-      <StackText id="g2" palette="serif" y={0.13} size={110} end={72.0} exit="blurUp" lines={[{ text: "chính sách mới Vinhomes", role: "lead", at: 66.4, size: 48 }, { text: "THANH TOÁN SỚM", role: "main", at: 68.3, size: 100 }]} />
+      <StackText id="g2" palette="blue" y={0.13} size={110} end={72.0} exit="blurUp" lines={[{ text: "chính sách mới Vinhomes", role: "lead", at: 66.4, size: 48 }, { text: "THANH TOÁN SỚM", role: "main", at: 68.3, size: 100 }]} />
       <Seq a={65.1} b={72.1} name="Chiet khau"><PriceDrop from="23,339 TỶ" chips={[["VOUCHER 30%", 0.3], ["CK THÊM 7,5%", 3.9]]} to="HƠN 15 TỶ" toAt={5.6} note="giá này đã cộng chiết khấu" y={940} /></Seq>
 
       {/* ===== 72.1-83 CTA ===== */}
       <Seq a={72.1} b={83} name="toi tren 3"><Shade top={0.55} bot={0} /></Seq>
-      <StackText id="h2" palette="serif" y={0.15} size={200} end={78.5} exit="blurUp" lines={[{ text: "nếu anh chị có tài chính", role: "lead", at: 72.1, size: 48 }, { text: "15 TỶ", role: "main", at: 73.9 }]} />
+      <StackText id="h2" palette="blue" y={0.15} size={200} end={78.5} exit="blurUp" lines={[{ text: "nếu anh chị có tài chính", role: "lead", at: 72.1, size: 48 }, { text: "15 TỶ", role: "main", at: 73.9 }]} />
       {front(73.8, 78.6)}
       <Seq a={74.5} b={79.0} name="Checklist"><CheckChips x={110} y={1000} items={[["Diện tích lớn", 1.3], ["2 mặt tiền đường", 2.0], ["Xẻ khe thoáng", 3.5]]} /></Seq>
-      {hb("k8", 78.6, 83, 520, "bac", "liên hệ ngay", "Em Sơn", { size: 200, tone: "gold", smallTone: "orange", sub: "0966 312 333", mainAt: 0.3 })}
+      {hb("k8", 78.6, 83, 520, "bac", "liên hệ ngay", "Em Sơn", { size: 200, tone: "white", smallTone: "blue", sub: "0966 312 333", mainAt: 0.3 })}
 
       {captions === "phrase" ? <LuxCaptions words={words} zones={ZONES} /> : captions === "wbw" ? <WordByWord words={words} y={1330} /> : null}
       {stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.1} loop /> : null}

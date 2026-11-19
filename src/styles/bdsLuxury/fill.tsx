@@ -177,6 +177,7 @@ export const PhotoCard: React.FC<{ img: string; label?: string; at: number; end:
  * so chay 0 -> gia tri. Dat DUOI lop nguoi (QtPersonFront) de nguoi dung truoc chu.
  */
 const ROAD = {
+  blue: { body: "#eef8ff", unit: "#6cc0ff", glow: "0 0 22px rgba(80,170,255,0.85), 0 0 6px rgba(40,120,240,0.9), 0 3px 2px rgba(0,20,60,0.55)", blend: "normal" as const },
   mint: { body: "#f4fffc", unit: "#45f2d2", glow: "0 0 18px rgba(56,243,211,0.75), 0 0 2px rgba(0,0,0,0.4)", blend: "screen" as const },
   // vang champagne: son anh kim, quang am, khong screen (giu mau vang tren nhua sang)
   gold: { body: "#fff1cf", unit: "#f0c870", glow: "0 0 22px rgba(255,205,120,0.85), 0 0 6px rgba(232,170,70,0.9), 0 3px 2px rgba(60,35,0,0.55)", blend: "normal" as const },

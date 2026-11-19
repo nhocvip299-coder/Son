@@ -17,6 +17,8 @@ const out3 = Easing.bezier(0.33, 1, 0.68, 1);
 const back = Easing.bezier(0.34, 1.7, 0.64, 1);
 
 const TONES = {
+  blue: { a: "#f0f9ff", b: "#5db4ff", c: "#1c5cd4", glow: "#3b9cff" },
+  white: { a: "#ffffff", b: "#ffffff", c: "#dde7f3", glow: "#7cc0ff" },
   gold: { a: "#fff6d8", b: "#ffd36a", c: "#e2952a", glow: "#ffb23e" },
   purple: { a: "#f1dcff", b: "#b47cff", c: "#6f3fd6", glow: "#a565ff" },
   red: { a: "#ffd6cc", b: "#ff4a32", c: "#c21407", glow: "#ff3b22" },

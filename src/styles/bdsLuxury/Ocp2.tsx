@@ -20,7 +20,7 @@ import { CheckChips, CompareBars, FloorStack, RoadSection, SitePlan, XeKhe } fro
  * Chu to theo diem nhan dat TREN DAU / canh tay, mot phan nam SAU DAU (nguoi truoc chu).
  * Vung an toan TikTok/Reels: chu trong y 0.11-0.73.
  */
-const SRC = "inputs/du-an-3/goc-1080.mp4";
+const SRC = "inputs/du-an-3/goc-1080-hq.mp4"; // tu file goc HEVC, x264 CRF10 (gan khong mat chat luong)
 const IMG = (n: number) => staticFile(`inputs/du-an-3/anh/IMG_${n}.jpg`);
 const SRC_END = 81.1;
 export const OCP2_SEC = 83.0;

@@ -9,6 +9,7 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 - **Chữ không được đè lên người** (kể cả kiểu "chữ sau lưng") — đặt trên đầu/vùng trống, kiểm bằng `faces.json`.
 - Chữ cần **độ bóng** (gradient kim loại + vệt sáng quét), KHÔNG rắc ngôi sao lấp lánh; điểm nhấn phải nổi bật (to, nền tối mềm sau chữ).
 - Ảnh trám mờ/độ phân giải thấp → bỏ; dùng cảnh quay thật trong video, đồ hoạ tự dựng, hoặc footage miễn phí bản quyền.
+- Chữ to tự thu nhỏ để nằm trong **vùng an toàn TikTok/Reels** (lề 150px hai bên, trên 220px, dưới 520px) — kiểm bằng ảnh có khung đỏ.
 - Gửi bản xem nhanh (~60 MB) qua SendUserFile; bản đầy đủ để trong `out/`.
 - Không sửa/xóa file gốc; video gốc/mẫu không đưa lên Git.
 

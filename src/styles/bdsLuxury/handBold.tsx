@@ -45,7 +45,7 @@ export const HandBold: React.FC<{
   tone?: HbTone; // mau chu to
   smallTone?: HbTone; // mau dong nho (kieu "bac")
   mainAt?: number;
-}> = ({ id, variant = "tay", small, main, sub, cx = 540, cy, size = 140, tone = "gold", smallTone = "orange", mainAt = 0.12 }) => {
+}> = ({ id, variant = "tay", small, main, sub, cx = 540, cy, size: size0 = 140, tone = "gold", smallTone = "orange", mainAt = 0.12 }) => {
   const f = useCurrentFrame();
   const { fps, durationInFrames, width, height } = useVideoConfig();
   const t = f / fps, dur = durationInFrames / fps;
@@ -62,6 +62,8 @@ export const HandBold: React.FC<{
   const M = isNeon ? main : main.toUpperCase();
   const mFont = isNeon ? "Montserrat" : "Oswald";
   const mWeight = isNeon ? 700 : 700;
+  // VUNG AN TOAN: chu to toi da 760px rong -> tu thu nho
+  const size = Math.min(size0, size0 * 700 / Math.max(1, mt(M, mFont, size0, String(mWeight), "0.01em")));
   const mw = mt(M, mFont, size, String(mWeight), "0.01em");
   const x0 = cx - mw / 2, x1 = cx + mw / 2;
   const mainStyle: React.CSSProperties = { fontFamily: mFont, fontWeight: mWeight, fontSize: size, letterSpacing: "0.01em" };
@@ -97,7 +99,7 @@ export const HandBold: React.FC<{
   if (small && variant === "tay") {
     const ss = size * 0.78;
     const sw = mt(small, "Great Vibes", ss, "400");
-    const sx = x0 - size * 0.18, sy = cy - size * 0.66;
+    const sx = Math.max(165, x0 - size * 0.18), sy = cy - size * 0.66; // khong vuot le trai vung an toan
     front = (
       <g>
         <clipPath id={`cl-${id}`}><rect x={sx - 30} y={sy - ss * 1.5} width={(sw + 80) * smallP} height={ss * 3} /></clipPath>
@@ -109,7 +111,7 @@ export const HandBold: React.FC<{
     );
   } else if (small && variant === "bac") {
     const fs = size * 0.42;
-    const sx = x0 - mw * 0.04, sy = cy - size * 0.58;
+    const sx = Math.max(165, x0 - mw * 0.04), sy = cy - size * 0.58;
     const slide = (1 - smallP) * -60;
     front = (
       <g opacity={Math.min(1, smallP * 1.6)} transform={`translate(${slide} 0)`}>
@@ -121,7 +123,7 @@ export const HandBold: React.FC<{
     );
   } else if (small && variant === "neon") {
     const fs = size * 0.46;
-    const sy = cy - size * 0.52, sx = x0 - mw * 0.02;
+    const sy = cy - size * 0.52, sx = Math.max(165, x0 - mw * 0.02);
     const sc = interpolate(t, [mainAt + 0.25, mainAt + 0.5], [1.6, 1], { ...C, easing: back });
     const so = interpolate(t, [mainAt + 0.25, mainAt + 0.33], [0, 1], C);
     front = (

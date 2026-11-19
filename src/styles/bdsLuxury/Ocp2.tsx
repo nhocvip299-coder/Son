@@ -50,6 +50,7 @@ const CUES: Array<[number, Sfx, number]> = [
   [41.5, TXT, 1], [41.7, POP, 1], [49.2, TXT, 1], [49.9, POP, 1], [53.5, TXT, 1], [54.2, POP, 1], [78.6, TXT, 1], [79.0, POP, 1],
   [3.25, "shimmer" as Sfx, 0.9], [46.2, "riser" as Sfx, 0.7], [57.7, "riser" as Sfx, 0.7], [69.5, "riser" as Sfx, 0.6],
   [43.6, TRN, 1], [47.2, DING, 1], ...ticks(47.2, 6, 0.15), [70.3, DING, 1], ...ticks(70.3, 6, 0.15), [33.2, TRN, 0.9], [79.0, DING, 1], ...ticks(0.02, 4, 0.12),
+  [12.25, TXT, 1], [13.3, POP, 1],
   [72.1, TRN, 0.8], [73.9, TING, 1], [75.8, POP, 1], [76.5, POP, 1], [78.0, POP, 1], [79.0, DING, 1],
 ];
 const ZONES: CapZone[] = [{ from: 0, to: 99, kind: "plain", y: 0.7 }];
@@ -125,6 +126,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <StackText id="b1" palette="blue" y={0.17} size={170} end={9.65} exit="toLeft" lines={[{ text: "so với đất thổ cư", role: "lead", at: 6.95, size: 50 }, { text: "VĂN GIANG", role: "main", at: 8.2 }]} />
       <StackText id="b2" palette="blue" y={0.17} size={140} end={12.15} exit="blurUp" lines={[{ text: "vị trí tương đương", role: "lead", at: 9.75, size: 48, enter: "fromRight" }, { text: "KHÔNG CĂN NÀO", role: "main", at: 10.5, size: 118 }, { text: "sánh được với căn này", role: "sub", at: 11.2, size: 50, italic: true }]} />
 
+      {hb("k9", 12.2, 14.05, 520, "tay", "anh chị nhìn xem", "Mặt đường", { size: 150, tone: "blue", sub: "trục chính", mainAt: 1.1 })}
       {/* ===== 12.2-17 duong 20M: 1 so duy nhat tren mat duong, trong vung an toan ===== */}
       <StackText id="c1" palette="white" y={0.2} size={90} end={17.4} exit="blurUp" lines={[{ text: "sở hữu trục đường rộng", role: "lead", at: 14.1, size: 54 }, { text: "cả vỉa hè", role: "sub", at: 16.3, size: 46, italic: true }]} />
       <RoadText value={20} unit="M" at={15.95} end={17.4} y={0.72} size={230} x={0.25} tint="blue" font={SF} />
@@ -172,7 +174,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       {/* ===== 72.1-83 CTA ===== */}
       <Seq a={72.1} b={83} name="toi tren 3"><Shade top={0.55} bot={0} /></Seq>
       <StackText id="h2" palette="blue" y={0.15} size={200} end={78.5} exit="blurUp" lines={[{ text: "nếu anh chị có tài chính", role: "lead", at: 72.1, size: 48 }, { text: "15 TỶ", role: "main", at: 73.9 }]} />
-      <Seq a={74.5} b={79.0} name="Checklist"><CheckChips x={30} y={1000} items={[["Diện tích lớn", 1.3], ["2 mặt tiền đường", 2.0], ["Xẻ khe thoáng", 3.5]]} /></Seq>
+      <Seq a={74.5} b={79.0} name="Checklist"><CheckChips x={160} y={1000} items={[["Diện tích lớn", 1.3], ["2 mặt tiền đường", 2.0], ["Xẻ khe thoáng", 3.5]]} /></Seq>
       {hb("k8", 78.6, 83, 400, "bac", "liên hệ ngay", "Em Sơn", { size: 170, tone: "white", smallTone: "blue", mainAt: 0.3 })}
       <Seq a={79.0} b={83} name="Vien SDT"><KxPhone phone="0966 312 333" y={0.315} /></Seq>
 

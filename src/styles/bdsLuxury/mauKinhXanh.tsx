@@ -99,7 +99,7 @@ export const KxPrice: React.FC<{ lead: string; script: string; oldP: string; str
           <line x1={cx - 230} y1={Y + 165} x2={cx - 230 + 460 * st} y2={Y + 165} stroke="#ff4d4d" strokeWidth={10} strokeLinecap="round" />
         </g>
         {chip ? (() => { const c = interpolate(t, [chip[1], chip[1] + 0.3], [0, 1], { ...C, easing: back }); return (
-          <g opacity={c} transform={`translate(${cx + 300} ${Y + 90}) scale(${0.6 + 0.4 * c}) rotate(8)`}>
+          <g opacity={c} transform={`translate(${cx + 220} ${Y + 90}) scale(${0.6 + 0.4 * c}) rotate(8)`}>
             <rect x={-130} y={-34} width={260} height={68} rx={34} fill="#1f6fe0" stroke="#bfe6ff" strokeWidth={3} />
             <text textAnchor="middle" dominantBaseline="central" fill="#fff" style={{ fontFamily: "Montserrat", fontWeight: 900, fontSize: 30 }}>{chip[0]}</text>
           </g>); })() : null}

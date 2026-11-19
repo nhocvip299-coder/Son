@@ -60,7 +60,16 @@ export const StackText: React.FC<{
   const P = PALETTE[palette];
   // palette "blue": dong dan/phu = CHU VIET TAY (Dancing Script) de lech len chu khoi -> chieu sau, pha cach
   const script = palette === "blue";
-  const sz = (l: StackLine) => (l.size ?? (l.role === "main" ? size : size * (palette !== "white" ? 0.34 : 0.3))) * (script && l.role !== "main" ? 1.5 : 1);
+  const sz0 = (l: StackLine) => (l.size ?? (l.role === "main" ? size : size * (palette !== "white" ? 0.34 : 0.3))) * (script && l.role !== "main" ? 1.5 : 1);
+  // VUNG AN TOAN TikTok/Reels: moi dong toi da 780px (le 150px moi ben) -> tu thu nho neu dai
+  const MAXW = width - 340;
+  const sz = (l: StackLine) => {
+    const f0 = sz0(l);
+    const isM = l.role === "main";
+    const tx = (isM && P.upper ? l.text.toUpperCase() : l.text).replace("{n}", "888");
+    const w = measureText({ text: tx, fontFamily: isM ? P.font : script ? "Dancing Script" : "Be Vietnam Pro", fontSize: f0, fontWeight: String(isM ? P.weight : script ? 700 : 800), letterSpacing: isM && palette !== "white" ? "0.01em" : "0", validateFontIsLoaded: false }).width;
+    return w > MAXW ? f0 * (MAXW / w) : f0;
+  };
   const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : palette === "gold" || palette === "serif" || palette === "blue" ? 1.05 : 1.1) : script ? 0.62 : 1.3);
   let acc = y * height;
   const ys = lines.map((l, i) => {
@@ -110,7 +119,10 @@ export const StackText: React.FC<{
           const T = (fill: string, extra: React.SVGProps<SVGTextElement> = {}) => (
             <text x={0} y={0} textAnchor={anchor} dominantBaseline="central" fill={fill} style={style} {...extra}>{txt}</text>
           );
-          const skew = (l.italic && isMain ? " skewX(-9)" : "") + (script && !isMain ? ` rotate(-5) translate(${-fs * 0.6} 0)` : "");
+          // chu tay lech trai de len chu khoi, nhung KHONG vuot le trai vung an toan (150px)
+          const lw = script && !isMain ? measureText({ text: txt, fontFamily: "Dancing Script", fontSize: fs, fontWeight: "700", validateFontIsLoaded: false }).width : 0;
+          const shift = script && !isMain ? Math.min(fs * 0.6, Math.max(0, cx - lw / 2 - 165)) : 0;
+          const skew = (l.italic && isMain ? " skewX(-9)" : "") + (script && !isMain ? ` rotate(-5) translate(${-shift} 0)` : "");
           return (
             <g key={i} transform={`translate(${cx + k.tx} ${ys[i] + k.ty}) rotate(${k.rot}) scale(${k.sx} ${k.sy})${skew}`} opacity={k.opacity} style={k.blur > 0.2 ? { filter: `blur(${k.blur}px)` } : undefined}>
               {/* NOI BAT: nen toi mem sau dong chinh (khong khung) -> chu bat len tren moi nen */}

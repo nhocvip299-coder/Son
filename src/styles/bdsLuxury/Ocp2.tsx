@@ -9,7 +9,7 @@ import HITS from "../quyetTranLux/sfxHits.json";
 import { LuxCaptions, type CapZone } from "./captions";
 import { RoadText, WhipBlur, WhiteFlash } from "./fill";
 import { StackText } from "./typo";
-import { HandBold, type HbTone } from "./handBold";
+import { HandBold, type HbTone, type HbVariant } from "./handBold";
 import { Blueprint, CheckChips, CompareBars, FloorStack, PriceDrop, RoadSection, SitePlan, XeKhe } from "./explain";
 
 /**
@@ -93,8 +93,8 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
   const front = (a: number, b: number) => (
     <Seq a={a} b={b} name={`Nguoi truoc chu ${a}`}><QtPersonFront src={staticFile(MATTE)} startFrom={a} /></Seq>
   );
-  const hb = (k: string, a: number, b: number, cy: number, script: string, main: string, o: { cx?: number; size?: number; tone?: HbTone; sub?: string; mainAt?: number } = {}) => (
-    <Seq a={a} b={b} name={`Chu tay+day ${k}`}><HandBold id={k} cy={cy} script={script} main={main} {...o} /></Seq>
+  const hb = (k: string, a: number, b: number, cy: number, variant: HbVariant, small: string, main: string, o: { cx?: number; size?: number; tone?: HbTone; smallTone?: HbTone; sub?: string; mainAt?: number } = {}) => (
+    <Seq a={a} b={b} name={`Chu ${variant} ${k}`}><HandBold id={k} variant={variant} cy={cy} small={small} main={main} {...o} /></Seq>
   );
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
@@ -117,12 +117,12 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <StackText id="h0" palette="white" y={0.16} size={70} end={2.6} exit="blurUp" lines={[{ text: "một mét vuông đất", role: "lead", at: 0.6, size: 50, enter: "riseUp" }]} />
       <StackText id="h1" palette="serif" y={0.305} size={200} end={2.6} exit="scaleOut" lines={[{ text: "70 TRIỆU", role: "main", at: 0.02, enter: "zoomSettle" }]} />
       {front(0, 2.7)}
-      {hb("k1", 1.45, 2.75, 1230, "anh chị", "Có tin không?", { size: 120, tone: "white", mainAt: 0.1 })}
+      {hb("k1", 1.45, 2.75, 1220, "neon", "anh chị", "Có tin không?", { size: 120, tone: "cyan", mainAt: 0.05 })}
 
       {/* ===== 2.7-6.9 anh SB-145 ===== */}
       <Seq a={2.7} b={6.9} name="toi anh"><Shade top={0.75} bot={0.55} /></Seq>
       <StackText id="a1" palette="serif" y={0.13} size={120} end={6.8} exit="blurUp" lines={[{ text: "ngay tại Vinhomes", role: "lead", at: 2.75, size: 48 }, { text: "OCEAN PARK 2", role: "main", at: 3.25 }]} />
-      {hb("k2", 4.5, 6.9, 1200, "sở hữu", "2 mặt tiền", { size: 170, sub: "trước – sau", mainAt: 1.1 })}
+      {hb("k2", 4.5, 6.9, 1200, "tay", "sở hữu", "2 mặt tiền", { size: 170, tone: "gold", sub: "trước – sau", mainAt: 1.0 })}
 
       {/* ===== 6.9-12.2 so sanh ===== */}
       <Seq a={6.9} b={12.2} name="toi tren"><Shade top={0.55} bot={0} /></Seq>
@@ -136,7 +136,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       {front(15.8, 17.8)}
 
       {/* ===== 17-22.4 di theo em Son ===== */}
-      {hb("k3", 17.85, 21.2, 560, "mời anh chị", "Đi theo em Sơn", { size: 120, tone: "white", mainAt: 0.7 })}
+      {hb("k3", 17.85, 21.2, 560, "bac", "mời anh chị", "Đi theo em Sơn", { size: 130, tone: "gold", smallTone: "orange", mainAt: 0.5 })}
 
       {/* ===== 22.4-26.3 mat cat duong ===== */}
       <Seq a={22.4} b={26.3} name="Mat cat duong"><RoadSection y={460} parts={[["VỈA HÈ", 4, "walk"], ["MẶT ĐƯỜNG", 7, "road"], ["VỈA HÈ", 4, "walk"]]} /></Seq>
@@ -145,23 +145,23 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <Seq a={26.3} b={33.2} name="Blueprint 1"><Blueprint /></Seq>
       <Seq a={26.3} b={29.7} name="Mat bang lo goc"><SitePlan area={163.8} /></Seq>
       <Seq a={29.6} b={33.2} name="Chong san"><FloorStack total={427.2} /></Seq>
-      {hb("k4", 33.2, 35.25, 900, "nhà bàn giao", "Thô", { size: 220, sub: "có thang", mainAt: 0.4 })}
+      {hb("k4", 33.2, 35.25, 900, "tay", "nhà bàn giao", "Thô · có thang", { size: 140, tone: "teal", mainAt: 0.3 })}
       <Seq a={35.2} b={41.5} name="Blueprint 2"><Blueprint /></Seq>
       <StackText id="d1" palette="serif" y={0.13} size={140} end={41.4} exit="blurUp" lines={[{ text: "đặc biệt bên hông", role: "lead", at: 35.25, size: 48 }, { text: "XẺ KHE RỘNG", role: "main", at: 37.15, size: 110 }]} />
       <Seq a={35.2} b={41.5} name="Xe khe"><XeKhe /></Seq>
 
       {/* ===== 41.5-48.6 gia ===== */}
-      {hb("k5", 41.5, 43.6, 560, "cái điều", "Đặc biệt nhất", { size: 130, tone: "white", mainAt: 0.15 })}
+      {hb("k5", 41.5, 43.6, 560, "neon", "Cái điều", "Đặc biệt nhất", { size: 120, tone: "green", mainAt: 0.1 })}
       <Seq a={43.6} b={48.6} name="Gia giam"><PriceDrop from="23,339 TỶ" chips={[["VOUCHER 30%", 2.3]]} to="HƠN 15 TỶ" toAt={3.8} y={480} /></Seq>
 
       {/* ===== 48.6-53.1 vi tri ===== */}
       <Seq a={49.0} b={51.5} name="toi duoi ban do"><Shade top={0} bot={0.85} /></Seq>
-      {hb("k6", 49.2, 51.5, 1260, "vị trí", "Cực kỳ đắc địa", { size: 130, sub: "Ocean Park 2", mainAt: 0.5 })}
+      {hb("k6", 49.2, 51.5, 1250, "tay", "vị trí", "Cực kỳ đắc địa", { size: 130, tone: "red", sub: "Ocean Park 2", mainAt: 0.4 })}
       <Seq a={51.5} b={53.1} name="toi Masteri"><Shade top={0.75} bot={0} /></Seq>
       <StackText id="e1" palette="serif" y={0.13} size={120} end={53.0} exit="blurUp" lines={[{ text: "hướng vào toà chung cư", role: "lead", at: 51.5, size: 46 }, { text: "MASTERI", role: "main", at: 52.6 }]} />
 
       {/* ===== 53.1-60.2 boc tach 70 trieu ===== */}
-      {hb("k7", 53.5, 55.35, 560, "căn này với", "427 m²", { size: 190, sub: "tổng mặt sàn", mainAt: 0.6 })}
+      {hb("k7", 53.5, 55.35, 560, "bac", "căn này với", "427 m² sàn", { size: 160, tone: "gold", smallTone: "red", mainAt: 0.5 })}
       <Seq a={55.3} b={60.2} name="toi tren 2"><Shade top={0.55} bot={0} /></Seq>
       <StackText id="f1" palette="serif" y={0.15} size={190} end={60.1} exit="scaleOut" lines={[{ text: "bóc tách giá xây dựng · chỉ khoảng", role: "lead", at: 55.4, size: 44 }, { text: "70 TRIỆU", role: "main", at: 58.9 }, { text: "/ m² đất", role: "sub", at: 59.6, size: 62, italic: true }]} />
       {front(58.7, 60.2)}
@@ -179,7 +179,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <StackText id="h2" palette="serif" y={0.15} size={200} end={78.5} exit="blurUp" lines={[{ text: "nếu anh chị có tài chính", role: "lead", at: 72.1, size: 48 }, { text: "15 TỶ", role: "main", at: 73.9 }]} />
       {front(73.8, 78.6)}
       <Seq a={74.5} b={79.0} name="Checklist"><CheckChips x={110} y={1000} items={[["Diện tích lớn", 1.3], ["2 mặt tiền đường", 2.0], ["Xẻ khe thoáng", 3.5]]} /></Seq>
-      {hb("k8", 78.6, 83, 520, "liên hệ ngay", "Em Sơn", { size: 210, sub: "0966 312 333", mainAt: 0.3 })}
+      {hb("k8", 78.6, 83, 520, "bac", "liên hệ ngay", "Em Sơn", { size: 200, tone: "gold", smallTone: "orange", sub: "0966 312 333", mainAt: 0.3 })}
 
       {captions === "phrase" ? <LuxCaptions words={words} zones={ZONES} /> : captions === "wbw" ? <WordByWord words={words} y={1330} /> : null}
       {stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.1} loop /> : null}

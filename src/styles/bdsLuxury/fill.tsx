@@ -181,7 +181,7 @@ const ROAD = {
   // vang champagne: son anh kim, quang am, khong screen (giu mau vang tren nhua sang)
   gold: { body: "#fff1cf", unit: "#f0c870", glow: "0 0 22px rgba(255,205,120,0.85), 0 0 6px rgba(232,170,70,0.9), 0 3px 2px rgba(60,35,0,0.55)", blend: "normal" as const },
 };
-export const RoadText: React.FC<{ value: number; unit: string; at: number; end: number; y?: number; size?: number; drift?: number; tint?: keyof typeof ROAD; x?: number }> = ({ value, unit, at, end, y = 0.9, size = 300, drift = 0, tint = "mint", x = 0.5 }) => {
+export const RoadText: React.FC<{ value: number; unit: string; at: number; end: number; y?: number; size?: number; drift?: number; tint?: keyof typeof ROAD; x?: number; font?: string }> = ({ value, unit, at, end, y = 0.9, size = 300, drift = 0, tint = "mint", x = 0.5, font = "Oswald" }) => {
   const R = ROAD[tint];
   const f = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
@@ -210,8 +210,8 @@ export const RoadText: React.FC<{ value: number; unit: string; at: number; end: 
       >
         <span
           style={{
-            fontFamily: "Oswald",
-            fontWeight: 700,
+            fontFamily: font,
+            fontWeight: font === "Oswald" ? 700 : 900,
             fontSize: size,
             lineHeight: 1,
             letterSpacing: "0.02em",

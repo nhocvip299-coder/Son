@@ -30,6 +30,8 @@ export const PALETTE = {
   mint: { font: "Oswald", weight: 700, top: "#c9fff3", mid: "#45f2d2", bot: "#10c4a3", glow: "#38f3d3", shade: "#00241d", upper: true },
   // vang champagne (nguoi dung rat thich) — cung tong style A kinh vang
   gold: { font: "Montserrat", weight: 900, top: "#fff4d6", mid: "#e8c26e", bot: "#a8742a", glow: "#ffd98a", shade: "#2a1804", upper: true },
+  // font B nguoi dung chon (du an OCP2): serif Playfair vang champagne
+  serif: { font: "Playfair Display", weight: 900, top: "#fff4d6", mid: "#e8c26e", bot: "#a8742a", glow: "#ffd98a", shade: "#2a1804", upper: true },
   white: { font: "Be Vietnam Pro", weight: 900, top: "#ffffff", mid: "#ffffff", bot: "#e9ecef", glow: "#ffffff", shade: "#000000", upper: false },
 } as const;
 export type Palette = keyof typeof PALETTE;
@@ -53,7 +55,7 @@ export const StackText: React.FC<{
   const t = f / fps;
   const P = PALETTE[palette];
   const sz = (l: StackLine) => l.size ?? (l.role === "main" ? size : size * (palette !== "white" ? 0.34 : 0.3));
-  const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : palette === "gold" ? 1.05 : 1.1) : 1.3);
+  const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : palette === "gold" || palette === "serif" ? 1.05 : 1.1) : 1.3);
   let acc = y * height;
   const ys = lines.map((l, i) => {
     const prev = lines[i - 1];

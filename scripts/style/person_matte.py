@@ -46,16 +46,31 @@ while True:
     if len(buf) < W * H * 3:
         break
     fr = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
-    small = cv2.resize(fr, (540, 960))
+    small = cv2.resize(fr, (720, 1280))  # do phan giai cao hon -> vien toc/vai chinh xac hon
     r = seg.segment_for_video(mp.Image(image_format=mp.ImageFormat.SRGB, data=small), int(i * 1000 / fps))
     cm = [np.squeeze(m.numpy_view()) for m in r.confidence_masks]  # 0 nen, 1 toc, 2 than, 3 mat, 4 ao, 5 khac
     person = np.clip(1.0 - cm[0], 0, 1)
     if prev is not None:  # lam muot theo thoi gian, giam rung vien
         person = 0.65 * person + 0.35 * prev
     prev = person
-    a = cv2.resize(person, (W, H), interpolation=cv2.INTER_LINEAR)
-    a = cv2.GaussianBlur(a, (0, 0), 1.6)
-    a = np.clip((a - 0.35) / 0.4, 0, 1)
+    # NGUOI KHONG BI KHUYET: mat na dac -> giu manh lon nhat, lap lo thung (to cung/ken ao), dong kin khe, gian nhe vien
+    hard = (person > 0.4).astype(np.uint8)
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(hard, 8)
+    if n > 1:
+        keep = 1 + np.argsort(stats[1:, cv2.CC_STAT_AREA])[::-1][:2]  # nguoi + (tay/vat cam) lon thu 2
+        hard = np.isin(lab, [k for k in keep if stats[k, cv2.CC_STAT_AREA] > 0.02 * stats[1:, cv2.CC_STAT_AREA].max()]).astype(np.uint8)
+    hard = cv2.morphologyEx(hard, cv2.MORPH_CLOSE, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (7, 7)))
+    ff = hard.copy(); mask = np.zeros((ff.shape[0] + 2, ff.shape[1] + 2), np.uint8)
+    cv2.floodFill(ff, mask, (0, 0), 1)
+    holes = (1 - ff).astype(np.uint8)  # lo kin ben trong
+    hn, hl, hs, _ = cv2.connectedComponentsWithStats(holes, 8)
+    lim = 0.015 * max(1, int(hard.sum()))
+    small_holes = np.isin(hl, [k for k in range(1, hn) if hs[k, cv2.CC_STAT_AREA] < lim])  # chi lap lo NHO (khuyet), giu khe giua 2 chan/tay
+    hard = hard | small_holes.astype(np.uint8)
+    hard = cv2.dilate(hard, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3)))
+    a = cv2.resize(hard.astype(np.float32), (W, H), interpolation=cv2.INTER_LINEAR)
+    a = cv2.GaussianBlur(a, (0, 0), 1.2)  # vien mem 1–2px, loi dac 100%
+    a = np.clip(a * 1.6, 0, 1)
     rgba = np.dstack([fr, (a * 255).astype(np.uint8)])
     wr.stdin.write(rgba.tobytes())
     face = (cm[3] + cm[1] * 0.5) > 0.5

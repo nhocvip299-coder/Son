@@ -11,6 +11,7 @@
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { measureText } from "@remotion/layout-utils";
+import { Glints, loopSweep } from "./sparkle";
 
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const out3 = Easing.bezier(0.33, 1, 0.68, 1);
@@ -55,7 +56,7 @@ export const HandBold: React.FC<{
   const blurIn = interpolate(t, [mainAt, mainAt + 0.18], [6, 0], C);
   const smallP = interpolate(t, [mainAt + 0.18, mainAt + 0.7], [0, 1], { ...C, easing: out3 });
   const subP = interpolate(t, [mainAt + 0.4, mainAt + 0.8], [0, 1], { ...C, easing: out3 });
-  const sweep = interpolate(t, [mainAt + 0.35, mainAt + 1.0], [-0.3, 1.3], C);
+  const sweep = loopSweep(t, mainAt + 0.35, 1.6, 0.7); // vet sang quet lap lai -> lap lanh
 
   const isNeon = variant === "neon";
   const M = isNeon ? main : main.toUpperCase();
@@ -147,7 +148,7 @@ export const HandBold: React.FC<{
     <AbsoluteFill style={{ opacity: 1 - ex, transform: `translateY(${-ex * 40}px) scale(${1 + ex * 0.05})`, transformOrigin: `${cx}px ${cy}px` }}>
       <svg width={width} height={height} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
         <defs>
-          <linearGradient id={`g-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={T.a} /><stop offset="0.5" stopColor={T.b} /><stop offset="1" stopColor={T.c} /></linearGradient>
+          <linearGradient id={`g-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={T.a} /><stop offset="0.3" stopColor="#ffffff" /><stop offset="0.42" stopColor={T.b} /><stop offset="0.7" stopColor={T.c} /><stop offset="0.86" stopColor={T.b} /><stop offset="1" stopColor={T.a} /></linearGradient>
           <linearGradient id={`sw-${id}`} x1="0" y1="0" x2="1" y2="0.25">
             <stop offset={Math.max(0, sweep - 0.1)} stopColor="#fff" stopOpacity={0} />
             <stop offset={Math.min(1, Math.max(0, sweep))} stopColor="#fff" stopOpacity={0.85} />
@@ -159,6 +160,7 @@ export const HandBold: React.FC<{
           <filter id={`sd-${id}`} x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation={4} /></filter>
         </defs>
         {big}
+        <Glints id={`gl${id}`} t={t} from={mainAt + 0.2} x0={x0 + bigDx} x1={x1 + bigDx} y0={cy - size * 0.42} y1={cy + size * 0.38} size={size} color={T.glow} opacity={fade} />
         {subN}
         {front}
       </svg>

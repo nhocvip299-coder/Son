@@ -10,6 +10,8 @@
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } from "remotion";
 import { kf, type KfIn, type KfOut } from "../quyetTranLux/keyframes";
+import { measureText } from "@remotion/layout-utils";
+import { Glints, loopSweep } from "./sparkle";
 
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const outCubic = Easing.bezier(0.33, 1, 0.68, 1);
@@ -70,8 +72,10 @@ export const StackText: React.FC<{
         <defs>
           <linearGradient id={`mg-${id}`} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor={P.top} />
+            {palette === "blue" ? <stop offset="0.28" stopColor="#ffffff" /> : null}
             <stop offset="0.45" stopColor={P.mid} />
-            <stop offset="1" stopColor={P.bot} />
+            <stop offset={palette === "blue" ? 0.75 : 1} stopColor={P.bot} />
+            {palette === "blue" ? <stop offset="1" stopColor={P.mid} /> : null}
           </linearGradient>
           <filter id={`gl-${id}`} x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="14" /></filter>
           <filter id={`sd-${id}`} x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="7" /></filter>
@@ -108,6 +112,27 @@ export const StackText: React.FC<{
               <g filter={`url(#sd-${id})`} opacity={isMain ? 0.7 : 0.85} transform="translate(0 5)">{T(P.shade)}</g>
               {glow > 0.01 ? <g filter={`url(#gl-${id})`} opacity={glow}>{T(P.glow)}</g> : null}
               {isMain ? T(`url(#mg-${id})`, { stroke: `url(#mg-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round", paintOrder: "stroke" }) : T("#ffffff", { stroke: "#ffffff", strokeWidth: fs * 0.022, strokeLinejoin: "round" })}
+              {isMain && palette !== "white" ? (() => {
+                // LONG LANH: vet sang quet lap lai + dom sao nhap nhay tren mat chu
+                const sw = loopSweep(t, l.at + 0.5, 1.7, 0.75);
+                const tw = measureText({ text: txt, fontFamily: P.font, fontSize: fs, fontWeight: String(P.weight), letterSpacing: "0.01em", validateFontIsLoaded: false }).width;
+                const ax = anchor === "middle" ? -tw / 2 : anchor === "end" ? -tw : 0;
+                return (
+                  <>
+                    {sw > -0.5 ? (
+                      <>
+                        <linearGradient id={`sw-${id}-${i}`} x1="0" y1="0" x2="1" y2="0.25">
+                          <stop offset={Math.max(0, sw - 0.1)} stopColor="#fff" stopOpacity={0} />
+                          <stop offset={Math.min(1, Math.max(0, sw))} stopColor="#fff" stopOpacity={0.9} />
+                          <stop offset={Math.min(1, Math.max(0, sw + 0.1))} stopColor="#fff" stopOpacity={0} />
+                        </linearGradient>
+                        {T(`url(#sw-${id}-${i})`)}
+                      </>
+                    ) : null}
+                    <Glints id={`${id}-${i}`} t={t} from={l.at + 0.3} x0={ax} x1={ax + tw} y0={-fs * 0.4} y1={fs * 0.36} size={fs} color={P.glow} />
+                  </>
+                );
+              })() : null}
             </g>
           );
         })}

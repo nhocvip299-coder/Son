@@ -61,29 +61,28 @@ const ArrowDef: React.FC<{ color?: string }> = ({ color = "#9be7ff" }) => (
 /** Mat bang chung (nhin tu tren): duong 7M phia sau (tren) | lo SB-145 | duong 20M phia truoc (duoi); trai = xe khe 3M, phai = can lien ke. */
 const PlanBase: React.FC<{ t: number; cx: number; L: { x: number; y: number; w: number; h: number }; khe: number; showKhe: number }> = ({ t, cx, L, khe, showKhe }) => {
   const rB = lin(t, 0.35, 0.9), rF = lin(t, 0.5, 1.05);
+  const R = L.x + L.w; // canh phai lo
   return (
     <>
-      {/* duong sau 7M */}
       <g opacity={rB}>
         <rect x={150} y={L.y - 150} width={780} height={120} fill="#2b2f36" stroke="rgba(255,255,255,0.25)" />
         <line x1={170} y1={L.y - 90} x2={170 + 740 * rB} y2={L.y - 90} stroke="#fff" strokeWidth={4} strokeDasharray="30 22" opacity={0.7} />
         <Label x={cx} y={L.y - 182} s="MẶT TIỀN SAU · ĐƯỜNG 7M" size={30} color={GOLD_HI} />
       </g>
-      {/* duong truoc 20M (ca via he) */}
       <g opacity={rF}>
         <rect x={150} y={L.y + L.h + 30} width={780} height={190} fill="#2b2f36" stroke="rgba(255,255,255,0.25)" />
         <rect x={150} y={L.y + L.h + 30} width={780} height={34} fill="#8f897e" />
         <line x1={170} y1={L.y + L.h + 140} x2={170 + 740 * rF} y2={L.y + L.h + 140} stroke="#fff" strokeWidth={4} strokeDasharray="34 24" opacity={0.75} />
         <Label x={cx} y={L.y + L.h + 252} s="MẶT TIỀN TRƯỚC · ĐƯỜNG 20M (cả vỉa hè)" size={30} color={GOLD_HI} />
       </g>
-      {/* can lien ke (dinh sat ben phai) */}
-      <rect x={L.x + L.w} y={L.y} width={930 - L.x - L.w} height={L.h} fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.4)" strokeDasharray="8 8" strokeWidth={2} opacity={lin(t, 0.3, 0.8)} />
-      <Label x={(L.x + L.w + 930) / 2} y={L.y + L.h / 2} s="LIỀN KỀ" size={24} color="rgba(255,255,255,0.75)" rot={-90} o={lin(t, 0.4, 0.9)} />
-      {/* xe khe ben trai */}
+      {/* can lien ke (dinh sat ben TRAI) */}
+      <rect x={150} y={L.y} width={L.x - 150} height={L.h} fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.4)" strokeDasharray="8 8" strokeWidth={2} opacity={lin(t, 0.3, 0.8)} />
+      <Label x={(150 + L.x) / 2} y={L.y + L.h / 2} s="LIỀN KỀ" size={24} color="rgba(255,255,255,0.75)" rot={-90} o={lin(t, 0.4, 0.9)} />
+      {/* xe khe ben PHAI (doi dien lien ke) */}
       <g opacity={showKhe}>
-        <rect x={L.x - khe} y={L.y} width={khe} height={L.h} fill="rgba(120,220,255,0.22)" stroke="#9be7ff" strokeWidth={2} strokeDasharray="6 6" />
-        <Label x={L.x - khe / 2} y={L.y + L.h / 2} s="XẺ KHE 3M" size={24} color="#9be7ff" rot={-90} />
-        <rect x={150} y={L.y} width={L.x - khe - 150} height={L.h} fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.4)" strokeDasharray="8 8" strokeWidth={2} />
+        <rect x={R} y={L.y} width={khe} height={L.h} fill="rgba(120,220,255,0.22)" stroke="#9be7ff" strokeWidth={2} strokeDasharray="6 6" />
+        <Label x={R + khe * 0.36} y={L.y + L.h / 2} s="XẺ KHE 3M" size={24} color="#9be7ff" rot={90} />
+        {R + khe < 930 ? <rect x={R + khe} y={L.y} width={930 - R - khe} height={L.h} fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.4)" strokeDasharray="8 8" strokeWidth={2} /> : null}
       </g>
     </>
   );
@@ -94,7 +93,7 @@ export const SitePlan: React.FC<{ area: number }> = ({ area }) => {
   const { t, width } = useLocal();
   const { o, s } = useInOut();
   const cx = width / 2;
-  const L = { x: 400, y: 640, w: 380, h: 420 };
+  const L = { x: 300, y: 640, w: 380, h: 420 };
   const per = 2 * (L.w + L.h);
   const draw = lin(t, 0.15, 1.0);
   const n = area * lin(t, 0.9, 2.0);
@@ -156,9 +155,9 @@ export const XeKhe: React.FC = () => {
   const { t, width } = useLocal();
   const { o, s } = useInOut();
   const cx = width / 2;
-  const L = { x: 430, y: 640, w: 370, h: 420 };
+  const L = { x: 280, y: 640, w: 370, h: 420 };
   const khe = 150 * lin(t, 0.5, 1.2);
-  const kx = L.x - khe * 0.18;
+  const R = L.x + L.w; const kx = R + khe * 0.82;
   const fl = lin(t, 1.3, 1.8);
   return (
     <AbsoluteFill style={{ opacity: o, transform: `scale(${s})` }}>
@@ -168,11 +167,11 @@ export const XeKhe: React.FC = () => {
         <rect x={L.x} y={L.y} width={L.w} height={L.h} fill="rgba(232,194,110,0.28)" stroke={GOLD} strokeWidth={6} style={{ filter: "drop-shadow(0 0 12px rgba(255,205,120,0.8))" }} />
         <Label x={L.x + L.w / 2} y={L.y + L.h / 2} s="SB-145" size={40} color={GOLD_HI} />
         {/* cua so ben hong */}
-        {[0, 1, 2].map((i) => <rect key={i} x={L.x - 5} y={L.y + 70 + i * 120} width={10} height={60} fill="#9be7ff" opacity={fl} />)}
+        {[0, 1, 2].map((i) => <rect key={i} x={R - 5} y={L.y + 70 + i * 120} width={10} height={60} fill="#9be7ff" opacity={fl} />)}
         {/* gio doc khe: tu duong truoc -> duong sau */}
         <Flow d={`M ${kx} ${L.y + L.h + 20} L ${kx} ${L.y - 20}`} t={t} o={fl} />
         {/* gio re vao nha qua cua so hong */}
-        {[0, 1, 2].map((i) => <Flow key={i} d={`M ${L.x - khe * 0.85} ${L.y + 140 + i * 120} Q ${L.x - 10} ${L.y + 100 + i * 120} ${L.x + 70} ${L.y + 100 + i * 120}`} t={t + i * 0.2} o={lin(t, 1.6 + i * 0.15, 2.0 + i * 0.15)} />)}
+        {[0, 1, 2].map((i) => <Flow key={i} d={`M ${R + khe * 0.85} ${L.y + 140 + i * 120} Q ${R + 10} ${L.y + 100 + i * 120} ${R - 70} ${L.y + 100 + i * 120}`} t={t + i * 0.2} o={lin(t, 1.6 + i * 0.15, 2.0 + i * 0.15)} />)}
         {/* kich thuoc 3M */}
         <g opacity={pop(t, 2.2)} transform={`translate(${cx} ${L.y + L.h + 330})`}><rect x={-370} y={-40} width={740} height={80} rx={40} fill={NAVY} stroke="#9be7ff" strokeWidth={3} /><Label x={0} y={0} s="THOÁNG · SÁNG 3 MẶT: TRƯỚC – SAU – HÔNG" size={28} color="#9be7ff" /></g>
       </svg>

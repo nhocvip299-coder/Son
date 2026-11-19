@@ -9,8 +9,9 @@ import HITS from "../quyetTranLux/sfxHits.json";
 import { LuxCaptions, type CapZone } from "./captions";
 import { RoadText, WhipBlur, WhiteFlash } from "./fill";
 import { StackText } from "./typo";
+import { KxCard, KxPage, KxPhone, KxPrice } from "./mauKinhXanh";
 import { HandBold, type HbTone, type HbVariant } from "./handBold";
-import { Blueprint, CheckChips, CompareBars, FloorStack, PriceDrop, RoadSection, SitePlan, XeKhe } from "./explain";
+import { CheckChips, CompareBars, FloorStack, RoadSection, SitePlan, XeKhe } from "./explain";
 
 /**
  * VINHOMES OCEAN PARK 2 — SHOPHOUSE SB-145 (font B Playfair vang champagne + preset CapCut + canh tram truc quan).
@@ -48,6 +49,7 @@ const CUES: Array<[number, Sfx, number]> = [
   [1.45, TXT, 1], [1.62, POP, 1], [4.5, SOFT, 0.8], [5.6, POP, 1], [17.85, TXT, 1], [18.55, POP, 1], [33.2, TXT, 1], [33.9, POP, 1],
   [41.5, TXT, 1], [41.7, POP, 1], [49.2, TXT, 1], [49.9, POP, 1], [53.5, TXT, 1], [54.2, POP, 1], [78.6, TXT, 1], [79.0, POP, 1],
   [3.25, "shimmer" as Sfx, 0.9], [46.2, "riser" as Sfx, 0.7], [57.7, "riser" as Sfx, 0.7], [69.5, "riser" as Sfx, 0.6],
+  [43.6, TRN, 1], [47.2, DING, 1], ...ticks(47.2, 6, 0.15), [70.3, DING, 1], ...ticks(70.3, 6, 0.15), [33.2, TRN, 0.9], [79.0, DING, 1], ...ticks(0.02, 4, 0.12),
   [72.1, TRN, 0.8], [73.9, TING, 1], [75.8, POP, 1], [76.5, POP, 1], [78.0, POP, 1], [79.0, DING, 1],
 ];
 const ZONES: CapZone[] = [{ from: 0, to: 99, kind: "plain", y: 0.7 }];
@@ -107,15 +109,14 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
           <Seq a={2.7} b={6.9} name="Tram SB-145"><ImgPush n={8345} px={0.53} ox={0.53} oy={0.45} z0={1.02} z1={1.22} /></Seq>
           <Seq a={48.6} b={51.5} name="Tram ban do ghim"><ImgPush n={8343} px={0.26} ox={0.5} oy={0.52} z0={1.1} z1={1.45} /></Seq>
           <Seq a={51.5} b={53.1} name="Tram Masteri"><ImgPush n={8347} px={0.5} ox={0.5} oy={0.75} z0={1.0} z1={1.15} /></Seq>
-          <Seq a={65.1} b={72.1} name="Nen poster"><ImgPush n={8344} ox={0.5} oy={0.35} z0={1.2} z1={1.35} dim={0.2} /></Seq>
-        </QtGrade>
+            </QtGrade>
       </Whips>
       <WhiteFlash at={0} dur={0.3} />
 
       {/* ===== 0-2.7 HOOK: 70 TRIEU nam sau dau + "co tin khong?" canh tay ===== */}
       <Shade top={0.5} bot={0} />
       <StackText id="h0" palette="white" y={0.16} size={70} end={2.6} exit="blurUp" lines={[{ text: "một mét vuông đất", role: "lead", at: 0.6, size: 50, enter: "riseUp" }]} />
-      <StackText id="h1" palette="blue" y={0.305} size={200} end={2.6} exit="scaleOut" lines={[{ text: "70 TRIỆU", role: "main", at: 0.02, enter: "zoomSettle" }]} />
+      <StackText id="h1" palette="blue" y={0.305} size={200} end={2.6} exit="scaleOut" lines={[{ text: "{n} TRIỆU", role: "main", at: 0.02, enter: "zoomSettle", count: { to: 70, dur: 0.55 } }]} />
       {front(0, 2.7)}
       {hb("k1", 1.45, 2.75, 1220, "neon", "anh chị", "Có tin không?", { size: 120, tone: "blue", mainAt: 0.05 })}
 
@@ -142,17 +143,20 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       <Seq a={22.4} b={26.3} name="Mat cat duong"><RoadSection y={460} parts={[["VỈA HÈ", 4, "walk"], ["MẶT ĐƯỜNG", 7, "road"], ["VỈA HÈ", 4, "walk"]]} /></Seq>
 
       {/* ===== 26.3-41.5 KHONG NGUOI: tram truc quan ===== */}
-      <Seq a={26.3} b={33.2} name="Blueprint 1"><Blueprint /></Seq>
+      <Seq a={26.3} b={33.2} name="Blueprint 1 (kinh xanh)"><KxPage src={SRC} from={26.3} ring={false} /></Seq>
       <Seq a={26.3} b={29.7} name="Mat bang lo goc"><SitePlan area={163.8} /></Seq>
       <Seq a={29.6} b={33.2} name="Chong san"><FloorStack total={427.2} /></Seq>
-      {hb("k4", 33.2, 35.25, 900, "tay", "nhà bàn giao", "Thô · có thang", { size: 140, tone: "blue", mainAt: 0.3 })}
-      <Seq a={35.2} b={41.5} name="Blueprint 2"><Blueprint /></Seq>
+      <Seq a={33.2} b={35.25} name="Trang kinh xanh: ban giao"><KxPage src={SRC} from={33.2} ring={false} /></Seq>
+      <Seq a={33.2} b={35.25} name="The kinh ban giao"><KxCard src={SRC} from={33.2} title="Bàn giao" chips={[["Nhà thô", 0.5], ["Có thang", 1.0]]} y={0.44} /></Seq>
+      <Seq a={35.2} b={41.5} name="Blueprint 2 (kinh xanh)"><KxPage src={SRC} from={35.2} ring={false} /></Seq>
       <StackText id="d1" palette="blue" y={0.13} size={140} end={41.4} exit="blurUp" lines={[{ text: "đặc biệt bên hông", role: "lead", at: 35.25, size: 48 }, { text: "XẺ KHE RỘNG", role: "main", at: 37.15, size: 110 }]} />
       <Seq a={35.2} b={41.5} name="Xe khe"><XeKhe /></Seq>
 
       {/* ===== 41.5-48.6 gia ===== */}
       {hb("k5", 41.5, 43.6, 560, "neon", "Cái điều", "Đặc biệt nhất", { size: 120, tone: "blue", mainAt: 0.1 })}
-      <Seq a={43.6} b={48.6} name="Gia giam"><PriceDrop from="23,339 TỶ" chips={[["VOUCHER 30%", 2.3]]} to="HƠN 15 TỶ" toAt={3.8} y={480} /></Seq>
+      <WhiteFlash at={43.6} dur={0.35} />
+      <Seq a={43.6} b={48.6} name="Trang kinh xanh: gia"><KxPage src={SRC} from={43.6} /></Seq>
+      <Seq a={43.6} b={48.6} name="Chot gia (dem lui)"><KxPrice lead="giá HTLS 18 tháng" script="áp voucher 30%" oldP="23,339 TỶ" strikeAt={2.2} chip={["VOUCHER 30%", 2.1]} mid="chỉ về hơn" from={23} to={15} dec={0} unit="TỶ" newAt={3.6} y={0.24} /></Seq>
 
       {/* ===== 48.6-53.1 vi tri ===== */}
       <Seq a={49.0} b={51.5} name="toi duoi ban do"><Shade top={0} bot={0.85} /></Seq>
@@ -163,23 +167,24 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       {/* ===== 53.1-60.2 boc tach 70 trieu ===== */}
       {hb("k7", 53.5, 55.35, 560, "bac", "căn này với", "427 m² sàn", { size: 160, tone: "blue", smallTone: "white", mainAt: 0.5 })}
       <Seq a={55.3} b={60.2} name="toi tren 2"><Shade top={0.55} bot={0} /></Seq>
-      <StackText id="f1" palette="blue" y={0.15} size={190} end={60.1} exit="scaleOut" lines={[{ text: "bóc tách giá xây dựng · chỉ khoảng", role: "lead", at: 55.4, size: 44 }, { text: "70 TRIỆU", role: "main", at: 58.9 }, { text: "/ m² đất", role: "sub", at: 59.6, size: 62, italic: true }]} />
+      <StackText id="f1" palette="blue" y={0.15} size={190} end={60.1} exit="scaleOut" lines={[{ text: "bóc tách giá xây dựng · chỉ khoảng", role: "lead", at: 55.4, size: 44 }, { text: "{n} TRIỆU", role: "main", at: 58.9, count: { to: 70, dur: 0.8 } }, { text: "/ m² đất", role: "sub", at: 59.6, size: 62, italic: true }]} />
       {front(58.7, 60.2)}
 
       {/* ===== 60.2-72.1 KHONG NGUOI: so sanh + chinh sach ===== */}
-      <Seq a={60.2} b={65.1} name="Blueprint 3"><Blueprint /></Seq>
+      <Seq a={60.2} b={65.1} name="Blueprint 3 (kinh xanh)"><KxPage src={SRC} from={60.2} ring={false} /></Seq>
       <StackText id="g1" palette="blue" y={0.13} size={110} end={65.0} exit="blurUp" lines={[{ text: "so với những căn", role: "lead", at: 60.3, size: 48 }, { text: "CẮT LỖ SÂU", role: "main", at: 62.3 }]} />
       <Seq a={60.2} b={65.1} name="So sanh"><CompareBars ours="≈70TR/m²" badgeAt={4.4} /></Seq>
-      <Seq a={65.1} b={72.1} name="toi poster"><Blueprint dim={0.7} /></Seq>
-      <StackText id="g2" palette="blue" y={0.13} size={110} end={72.0} exit="blurUp" lines={[{ text: "chính sách mới Vinhomes", role: "lead", at: 66.4, size: 48 }, { text: "THANH TOÁN SỚM", role: "main", at: 68.3, size: 100 }]} />
-      <Seq a={65.1} b={72.1} name="Chiet khau"><PriceDrop from="23,339 TỶ" chips={[["VOUCHER 30%", 0.3], ["CK THÊM 7,5%", 3.9]]} to="HƠN 15 TỶ" toAt={5.6} note="giá này đã cộng chiết khấu" y={940} /></Seq>
+      <WhiteFlash at={65.1} dur={0.35} />
+      <Seq a={65.1} b={72.1} name="Trang kinh xanh: chiet khau"><KxPage src={SRC} from={65.1} /></Seq>
+      <Seq a={65.1} b={72.1} name="Chiet khau (dem lui)"><KxPrice lead="chính sách mới chủ đầu tư Vinhomes" script="thanh toán sớm" oldP="23,339 TỶ" strikeAt={3.9} chip={["CK THÊM 7,5%", 3.9]} mid="giá này đã được cộng chiết khấu" from={23} to={15} dec={0} unit="TỶ" newAt={5.2} y={0.24} /></Seq>
 
       {/* ===== 72.1-83 CTA ===== */}
       <Seq a={72.1} b={83} name="toi tren 3"><Shade top={0.55} bot={0} /></Seq>
       <StackText id="h2" palette="blue" y={0.15} size={200} end={78.5} exit="blurUp" lines={[{ text: "nếu anh chị có tài chính", role: "lead", at: 72.1, size: 48 }, { text: "15 TỶ", role: "main", at: 73.9 }]} />
       {front(73.8, 78.6)}
       <Seq a={74.5} b={79.0} name="Checklist"><CheckChips x={110} y={1000} items={[["Diện tích lớn", 1.3], ["2 mặt tiền đường", 2.0], ["Xẻ khe thoáng", 3.5]]} /></Seq>
-      {hb("k8", 78.6, 83, 520, "bac", "liên hệ ngay", "Em Sơn", { size: 200, tone: "white", smallTone: "blue", sub: "0966 312 333", mainAt: 0.3 })}
+      {hb("k8", 78.6, 83, 520, "bac", "liên hệ ngay", "Em Sơn", { size: 200, tone: "white", smallTone: "blue", mainAt: 0.3 })}
+      <Seq a={79.0} b={83} name="Vien SDT"><KxPhone phone="0966 312 333" y={0.68} /></Seq>
 
       {captions === "phrase" ? <LuxCaptions words={words} zones={ZONES} /> : captions === "wbw" ? <WordByWord words={words} y={1330} /> : null}
       {stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.1} loop /> : null}

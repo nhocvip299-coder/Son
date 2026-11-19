@@ -181,7 +181,7 @@ const ROAD = {
   // vang champagne: son anh kim, quang am, khong screen (giu mau vang tren nhua sang)
   gold: { body: "#fff1cf", unit: "#f0c870", glow: "0 0 22px rgba(255,205,120,0.85), 0 0 6px rgba(232,170,70,0.9), 0 3px 2px rgba(60,35,0,0.55)", blend: "normal" as const },
 };
-export const RoadText: React.FC<{ value: number; unit: string; at: number; end: number; y?: number; size?: number; drift?: number; tint?: keyof typeof ROAD }> = ({ value, unit, at, end, y = 0.9, size = 300, drift = 0, tint = "mint" }) => {
+export const RoadText: React.FC<{ value: number; unit: string; at: number; end: number; y?: number; size?: number; drift?: number; tint?: keyof typeof ROAD; x?: number }> = ({ value, unit, at, end, y = 0.9, size = 300, drift = 0, tint = "mint", x = 0.5 }) => {
   const R = ROAD[tint];
   const f = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
@@ -197,8 +197,8 @@ export const RoadText: React.FC<{ value: number; unit: string; at: number; end: 
       <div
         style={{
           position: "absolute",
-          left: 0,
-          right: 0,
+          left: (x - 0.5) * width, // x = tam ngang: dat chu lech sang ben chan nguoi de doc ro
+          width,
           top: y * height - size - dy + slide * 120,
           textAlign: "center",
           transform: "perspective(700px) rotateX(60deg)",

@@ -1,10 +1,12 @@
 import { Config } from "@remotion/cli/config";
 
-// Chat luong uu tien: khung hinh JPEG 95, H.264 CRF 17, audio 320k
-Config.setVideoImageFormat("jpeg");
-Config.setJpegQuality(95);
+// YEU CAU NGUOI DUNG: video co the Full HD nhung CHU PHAI 4K SAC NET
+// -> moi lan render (video + anh tinh) deu x2 = 2160x3840: chu/SVG duoc dan trang o 4K, video goc 1080 duoc phong len.
+// Khung trung gian PNG (khong nen) de canh chu khong bi vien JPEG.
+Config.setScale(2);
+Config.setVideoImageFormat("png");
 Config.setCodec("h264");
-Config.setCrf(17);
+Config.setCrf(16);
 Config.setPixelFormat("yuv420p");
 Config.setColorSpace("bt709");
 Config.setAudioBitrate("320k");

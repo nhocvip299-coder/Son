@@ -22,7 +22,7 @@ const common = {
   logLevel: "error",
 };
 
-export const renderComposition = async ({ id, inputProps = {}, output, crf = 17 }) => {
+export const renderComposition = async ({ id, inputProps = {}, output, crf = 16, scale = 2 }) => {
   const serveUrl = await getBundle();
   const composition = await selectComposition({ serveUrl, id, inputProps, ...common });
   log("render", `${id}: ${composition.width}x${composition.height} ${composition.fps}fps ${composition.durationInFrames} khung`);
@@ -36,12 +36,13 @@ export const renderComposition = async ({ id, inputProps = {}, output, crf = 17 
     crf,
     pixelFormat: "yuv420p",
     colorSpace: "bt709",
-    imageFormat: "jpeg",
-    jpegQuality: 95,
+    // CHU 4K: dan trang x2 (2160x3840) + khung PNG khong nen
+    scale,
+    imageFormat: "png",
     audioBitrate: "320k",
     // tran bitrate: giu chat luong cao nhung khong phinh file vo ly (TikTok/Reels se ma hoa lai)
-    encodingMaxRate: "30M",
-    encodingBufferSize: "60M",
+    encodingMaxRate: "80M",
+    encodingBufferSize: "160M",
     concurrency: Math.max(1, os.cpus().length),
     overwrite: true,
     onProgress: ({ progress }) => {

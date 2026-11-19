@@ -50,3 +50,7 @@ Ví dụ ghép đủ 4 phân đoạn: `src/styles/bdsLuxury/SanHoDemo.tsx` (comp
 
 ## Chữ viết tay + chữ dày bản, SFX theo tình huống
 Xem `references/phufilms-chu-sfx.md` (nghiên cứu Phú Films): mẫu 1 dòng viết tay chéo + chữ khối dày + dòng phụ, quầng sáng gọn sát chữ; bảng SFX Riser → Highlight → Impact. Component: `src/styles/bdsLuxury/handBold.tsx`.
+
+
+## CHỮ 4K (bắt buộc)
+Video gốc có thể Full HD nhưng chữ phải 4K sắc nét: `remotion.config.ts` đặt `Config.setScale(2)` + khung PNG → mọi bản render/ảnh duyệt ra 2160x3840. Chữ luôn là SVG/text vẽ ở cỡ thật (không phóng to ảnh chữ; preset CapCut dùng `zoom` thay `transform: scale`). Bản xem nhanh giữ 4K, chỉ hạ bitrate (~5–6 Mbps).

@@ -31,7 +31,7 @@ export const LuxCaptions: React.FC<{ words: QtWord[]; zones: CapZone[]; maxWords
   if (z.kind === "box")
     return (
       <div style={common}>
-        <div style={{ maxWidth: width * 0.78, padding: "12px 26px", borderRadius: 18, background: "rgba(18,20,22,0.58)", backdropFilter: "blur(6px)", fontFamily: "Be Vietnam Pro", fontWeight: 600, fontSize: 40, lineHeight: 1.3, color: "#fff", textAlign: "center" }}>
+        <div style={{ maxWidth: width * 0.78, padding: "12px 26px", borderRadius: 18, background: "rgba(18,20,22,0.58)", backdropFilter: "blur(6px)", fontFamily: "Be Vietnam Pro", fontWeight: 700, fontSize: 42, lineHeight: 1.3, color: "#fff", textAlign: "center" }}>
           {p.text}
         </div>
       </div>
@@ -39,14 +39,14 @@ export const LuxCaptions: React.FC<{ words: QtWord[]; zones: CapZone[]; maxWords
   if (z.kind === "plain")
     return (
       <div style={common}>
-        <div style={{ maxWidth: width * 0.82, fontFamily: "Be Vietnam Pro", fontWeight: 600, fontSize: 42, lineHeight: 1.3, color: "#fff", textAlign: "center", textShadow: "0 2px 6px rgba(0,0,0,0.75), 0 0 18px rgba(0,0,0,0.35)" }}>
+        <div style={{ maxWidth: width * 0.82, fontFamily: "Be Vietnam Pro", fontWeight: 800, fontSize: 44, lineHeight: 1.3, color: "#fff", textAlign: "center", textShadow: "0 2px 6px rgba(0,0,0,0.75), 0 0 18px rgba(0,0,0,0.35)" }}>
           {p.text}
         </div>
       </div>
     );
   return (
     <div style={common}>
-      <div style={{ maxWidth: width * 0.86, fontFamily: "Be Vietnam Pro", fontWeight: 500, fontSize: 36, lineHeight: 1.35, letterSpacing: "0.04em", color: "#ece6da", textAlign: "center" }}>{p.text}</div>
+      <div style={{ maxWidth: width * 0.86, fontFamily: "Be Vietnam Pro", fontWeight: 600, fontSize: 38, lineHeight: 1.35, letterSpacing: "0.04em", color: "#ece6da", textAlign: "center" }}>{p.text}</div>
     </div>
   );
 };

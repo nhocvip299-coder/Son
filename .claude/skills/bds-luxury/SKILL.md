@@ -43,3 +43,6 @@ Ví dụ ghép đủ 4 phân đoạn: `src/styles/bdsLuxury/SanHoDemo.tsx` (comp
 ## Sở thích người dùng (ưu tiên khi chọn style)
 - **Rất thích chữ sơn chìm dưới chân** (`RoadText`, người đứng trước chữ — "300M" bản San Hô 57 s): ưu tiên dùng mỗi khi có cảnh mặt đường/sàn/sân.
 - **Rất thích chữ vàng champagne** (style A `QtGlassText tint="gold"`): giữ làm màu chủ đạo của thương hiệu.
+- **Chữ đậm** (góp ý Happy Home): chữ chính Be Vietnam/Montserrat 900 + viền cùng màu 2,8 % cỡ chữ; dẫn/phụ 700/800; serif Playfair 900; phụ đề 700–800.
+- **Trám điểm nhấn** (KCN, trường đại học, bệnh viện…): nhắc tới đâu cắt `VideoCard` tới đó (~1 s/cảnh), ưu tiên b-roll của người dùng, thiếu thì stock Mixkit (giấy phép miễn phí) — `inputs/<du-an>/stock/`. Không dùng ảnh báo chí có bản quyền.
+- **Chủ đầu tư**: ưu tiên logo THẬT trong footage (tường nhà mẫu, sa bàn) + `PushIn` zoom vào logo.

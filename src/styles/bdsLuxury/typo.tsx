@@ -29,8 +29,8 @@ export type StackLine = {
 export const PALETTE = {
   mint: { font: "Oswald", weight: 700, top: "#c9fff3", mid: "#45f2d2", bot: "#10c4a3", glow: "#38f3d3", shade: "#00241d", upper: true },
   // vang champagne (nguoi dung rat thich) — cung tong style A kinh vang
-  gold: { font: "Montserrat", weight: 800, top: "#fff4d6", mid: "#e8c26e", bot: "#a8742a", glow: "#ffd98a", shade: "#2a1804", upper: true },
-  white: { font: "Be Vietnam Pro", weight: 800, top: "#ffffff", mid: "#ffffff", bot: "#e9ecef", glow: "#ffffff", shade: "#000000", upper: false },
+  gold: { font: "Montserrat", weight: 900, top: "#fff4d6", mid: "#e8c26e", bot: "#a8742a", glow: "#ffd98a", shade: "#2a1804", upper: true },
+  white: { font: "Be Vietnam Pro", weight: 900, top: "#ffffff", mid: "#ffffff", bot: "#e9ecef", glow: "#ffffff", shade: "#000000", upper: false },
 } as const;
 export type Palette = keyof typeof PALETTE;
 
@@ -89,7 +89,7 @@ export const StackText: React.FC<{
           const glow = isMain ? interpolate(t, [l.at, l.at + 0.12, l.at + 0.75], [0, palette !== "white" ? 1 : 0.6, palette !== "white" ? 0.38 : 0.15], C) : 0;
           const style: React.CSSProperties = {
             fontFamily: isMain ? P.font : "Be Vietnam Pro",
-            fontWeight: isMain ? P.weight : l.role === "lead" ? 600 : 700,
+            fontWeight: isMain ? P.weight : l.role === "lead" ? 700 : 800,
             fontStyle: l.italic && !isMain ? "italic" : "normal",
             fontSize: fs,
             letterSpacing: isMain && palette !== "white" ? "0.01em" : "0",
@@ -103,7 +103,7 @@ export const StackText: React.FC<{
               {/* bong toi mem -> doc ro tren nen sang (troi, tuong vang) */}
               <g filter={`url(#sd-${id})`} opacity={isMain ? 0.7 : 0.85} transform="translate(0 5)">{T(P.shade)}</g>
               {glow > 0.01 ? <g filter={`url(#gl-${id})`} opacity={glow}>{T(P.glow)}</g> : null}
-              {isMain ? T(`url(#mg-${id})`) : T("#ffffff")}
+              {isMain ? T(`url(#mg-${id})`, { stroke: `url(#mg-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round", paintOrder: "stroke" }) : T("#ffffff", { stroke: "#ffffff", strokeWidth: fs * 0.022, strokeLinejoin: "round" })}
             </g>
           );
         })}
@@ -132,7 +132,7 @@ export const SerifTitle: React.FC<{ text: string; at: number; end: number; x?: n
         dominantBaseline="central"
         fill={color}
         opacity={o}
-        style={{ fontFamily: "Playfair Display", fontWeight: italic ? 500 : 700, fontStyle: italic ? "italic" : "normal", fontSize: size, letterSpacing: `${0.42 - 0.3 * p}em`, filter: `blur(${blur}px) drop-shadow(0 2px 3px rgba(0,0,0,0.7)) drop-shadow(0 6px 18px rgba(0,0,0,0.6))` }}
+        style={{ fontFamily: "Playfair Display", fontWeight: italic ? 700 : 900, fontStyle: italic ? "italic" : "normal", fontSize: size, letterSpacing: `${0.42 - 0.3 * p}em`, filter: `blur(${blur}px) drop-shadow(0 2px 3px rgba(0,0,0,0.7)) drop-shadow(0 6px 18px rgba(0,0,0,0.6))` }}
       >
         {text}
       </text>
@@ -156,8 +156,8 @@ export const SpecBox: React.FC<{ top: string; main: string; at: number; end: num
       <rect x={X} y={Y} width={w} height={h} rx={10} fill="rgba(0,0,0,0.45)" opacity={o} />
       <rect x={X} y={Y} width={w} height={h} rx={10} fill="none" stroke="#f6f1e7" strokeWidth={2.5} strokeDasharray={per} strokeDashoffset={per * (1 - draw)} />
       <g opacity={o} style={{ filter: `blur(${(1 - o) * 6}px)` }}>
-        <text x={X + w / 2} y={Y + h * 0.32} textAnchor="middle" dominantBaseline="central" fill="#f6f1e7" style={{ fontFamily: "Be Vietnam Pro", fontWeight: 500, fontSize: 34, letterSpacing: "0.12em" }}>{top}</text>
-        <text x={X + w / 2} y={Y + h * 0.68} textAnchor="middle" dominantBaseline="central" fill="#ffffff" style={{ fontFamily: "Playfair Display", fontWeight: 500, fontSize: 52, letterSpacing: "0.04em" }}>{main}</text>
+        <text x={X + w / 2} y={Y + h * 0.32} textAnchor="middle" dominantBaseline="central" fill="#f6f1e7" style={{ fontFamily: "Be Vietnam Pro", fontWeight: 700, fontSize: 34, letterSpacing: "0.12em" }}>{top}</text>
+        <text x={X + w / 2} y={Y + h * 0.68} textAnchor="middle" dominantBaseline="central" fill="#ffffff" style={{ fontFamily: "Playfair Display", fontWeight: 800, fontSize: 52, letterSpacing: "0.04em" }}>{main}</text>
       </g>
     </svg>
   );

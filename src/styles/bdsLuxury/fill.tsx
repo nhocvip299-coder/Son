@@ -228,3 +228,47 @@ export const RoadText: React.FC<{ value: number; unit: string; at: number; end: 
     </AbsoluteFill>
   );
 };
+
+/**
+ * CARD VIDEO TRAM (ref07 "nhac toi dau cat hinh toi do" + ref08 card): video ngang (stock/b-roll) dat trong the bo goc
+ * giua khung doc, nen la chinh video do phong to + nhoe + toi. Dung TRONG <Sequence> (thoi gian cuc bo).
+ */
+export const VideoCard: React.FC<{ src: string; startFrom?: number; y?: number; w?: number }> = ({ src, startFrom = 0, y = 0.52, w = 0.9 }) => {
+  const f = useCurrentFrame();
+  const { fps, width, height, durationInFrames } = useVideoConfig();
+  const t = f / fps;
+  const dur = durationInFrames / fps;
+  const pop = interpolate(t, [0, 0.28], [0, 1], { ...C, easing: outBack });
+  const o = interpolate(t, [0, 0.12], [0, 1], C);
+  const zoom = interpolate(t, [0, dur], [1.0, 1.08], C);
+  const cw = width * w, ch = (cw * 9) / 16;
+  const v = <OffthreadVideo src={staticFile(src)} startFrom={Math.round(startFrom * fps)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />;
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{ transform: "scale(1.35)", filter: "blur(28px) brightness(0.5) saturate(1.1)" }}>{v}</AbsoluteFill>
+      <div
+        style={{
+          position: "absolute", left: (width - cw) / 2, top: y * height - ch / 2, width: cw, height: ch, borderRadius: 30, overflow: "hidden",
+          border: "4px solid rgba(255,255,255,0.92)", boxShadow: "0 24px 60px rgba(0,0,0,0.55)", opacity: o,
+          transform: `scale(${0.86 + 0.14 * pop}) rotate(${(1 - pop) * -2}deg)`,
+        }}
+      >
+        <div style={{ width: "100%", height: "100%", transform: `scale(${zoom})` }}>{v}</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+/** Day may cham vao 1 diem (vd logo chu dau tu tren tuong): zoom dan tu `z0` -> `z1` quanh (ox, oy). Dung trong <Sequence>. */
+export const PushIn: React.FC<{ src: string; startFrom?: number; ox: number; oy: number; z0?: number; z1?: number }> = ({ src, startFrom = 0, ox, oy, z0 = 1.1, z1 = 1.8 }) => {
+  const f = useCurrentFrame();
+  const { fps, durationInFrames } = useVideoConfig();
+  const z = interpolate(f, [0, durationInFrames], [z0, z1], { ...C, easing: Easing.bezier(0.25, 0.1, 0.25, 1) });
+  return (
+    <AbsoluteFill style={{ overflow: "hidden" }}>
+      <AbsoluteFill style={{ transform: `scale(${z})`, transformOrigin: `${ox * 100}% ${oy * 100}%` }}>
+        <OffthreadVideo src={staticFile(src)} startFrom={Math.round(startFrom * fps)} muted />
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};

@@ -8,7 +8,7 @@ import { QtGrade, QtLightLeak, QtPersonFront, type QtWord } from "../quyetTranLu
 import { QtGlassText } from "../quyetTranLux/glass";
 import HITS from "../quyetTranLux/sfxHits.json";
 import { LuxCaptions, type CapZone } from "./captions";
-import { Letterbox, RoadText, WhipBlur, WhiteFlash } from "./fill";
+import { Letterbox, PushIn, RoadText, VideoCard, WhipBlur, WhiteFlash } from "./fill";
 import { SerifTitle, SpecBox, StackText } from "./typo";
 
 /**
@@ -34,14 +34,22 @@ const ticks = (t: number, n = 4, gap = 0.13): Array<[number, Sfx, number]> => Ar
 // [bat dau, ket thuc, file, giay nguon bat dau]
 const BROLL: Array<[number, number, string, number]> = [
   [6.9, 9.1, "58", 8.0],
-  [9.1, 13.3, "52", 0.0],
-  [15.9, 21.4, "54", 0.0],
-  [21.4, 25.95, "57", 0.0],
+  [9.1, 11.9, "52", 0.0],
+  [15.9, 18.8, "54", 0.0],
+  [22.4, 24.2, "57", 0.0],
   [25.95, 28.0, "55", 6.0],
   [28.0, 29.3, "56", 0.5],
   [29.3, 33.4, "60", 0.0],
   [39.9, 44.1, "61", 0.0],
   [44.1, 45.55, "62", 0.0],
+];
+// card video tram tien ich (stock Mixkit, giay phep mien phi): [bat dau, ket thuc, id, giay nguon]
+const STOCK: Array<[number, number, string, number]> = [
+  [18.8, 19.8, "23069", 2.0], // benh vien
+  [19.8, 20.95, "4503", 1.0], // DH Chu Van An
+  [20.95, 22.4, "4519", 2.0], // DH Thuy Loi
+  [24.2, 25.15, "15596", 3.0], // KCN Di Che
+  [25.15, 25.95, "21949", 1.0], // KCN Quang Lang
 ];
 const WHIPS = [6.9, 13.3, 25.95, 33.4, 39.9];
 
@@ -49,7 +57,7 @@ const CUES: Array<[number, Sfx, number]> = [
   // gia
   [0.62, DING, 1], ...ticks(0.62), [1.95, OUT, 0.8], [3.9, DING, 1], ...ticks(3.9, 3), [5.99, TING, 1],
   // cao toc + dien anh
-  [6.9, WHIP, 1], [7.85, TXT, 1], [9.1, TRN, 1], [11.02, BOOM, 1], [11.02, SOFT, 0.8], [12.55, DING, 0.9], [13.3, WHIP, 1],
+  [6.9, WHIP, 1], [7.85, TXT, 1], [9.1, TRN, 1], [11.02, BOOM, 1], [11.02, SOFT, 0.8], [11.9, SOFT, 1], [12.2, DING, 1], [13.3, WHIP, 1],
   [14.15, TING, 1], [15.9, TRN, 1],
   // tien ich
   [18.84, TXT, 1], [19.75, OUT, 0.8], [19.84, TXT, 1], [21.01, TXT, 1], [24.28, TXT, 1], [25.24, TXT, 1],
@@ -105,6 +113,15 @@ export const HappyHome: React.FC<HappyHomeProps> = ({ captions, words, stem = "a
               <OffthreadVideo src={staticFile(BR(f))} startFrom={s(ss)} muted />
             </Sequence>
           ))}
+          {/* chu dau tu: day may vao LOGO VINHOMES that tren tuong nha mau */}
+          <Sequence from={s(11.9)} durationInFrames={s(1.4)} name="Logo Vinhomes (zoom)">
+            <PushIn src={BR("52")} startFrom={7.2} ox={0.4} oy={0.52} z0={1.25} z1={2.1} />
+          </Sequence>
+          {STOCK.map(([a, b, id, ss]) => (
+            <Sequence key={id} from={s(a)} durationInFrames={s(b - a)} name={`Card tram ${id}`}>
+              <VideoCard src={`inputs/du-an-moi/stock/${id}.mp4`} startFrom={ss} y={0.45} />
+            </Sequence>
+          ))}
         </QtGrade>
       </Whips>
 
@@ -124,7 +141,7 @@ export const HappyHome: React.FC<HappyHomeProps> = ({ captions, words, stem = "a
       <Letterbox at={9.1} end={13.0} />
       <SerifTitle text="HAPPY HOME" at={11.02} end={13.0} y={0.235} size={112} />
       <SerifTitle text="Phố Hiến" at={11.33} end={13.0} y={0.295} size={64} italic />
-      <SpecBox top="CHỦ ĐẦU TƯ" main="Vinhomes" at={12.5} end={13.25} x={0.95} y={0.42} w={400} />
+      <SpecBox top="CHỦ ĐẦU TƯ" main="Vinhomes" at={12.2} end={13.25} x={0.95} y={0.7} w={400} />
 
       {/* ===== 13.3-15.9 vang: vi tri ===== */}
       <StackText id="v1" palette="gold" y={0.1} size={96} end={15.8} exit="blurUp" lines={[{ text: "toạ lạc tại vị trí", role: "lead", at: 13.35, italic: true, size: 48 }, { text: "Cực kỳ đắc địa", role: "main", at: 14.15 }, { text: "thành phố Hưng Yên", role: "sub", at: 15.14, size: 44 }]} />
@@ -135,7 +152,7 @@ export const HappyHome: React.FC<HappyHomeProps> = ({ captions, words, stem = "a
       <StackText id="t2" palette="white" y={0.15} size={140} end={20.9} exit="toLeft" lines={[{ text: "Đại học", role: "lead", at: 19.5 }, { text: "CHU VĂN AN", role: "main", at: 19.84 }]} />
       <StackText id="t3" palette="white" y={0.15} size={150} end={22.4} exit="scaleOut" lines={[{ text: "Đại học", role: "lead", at: 20.64 }, { text: "THỦY LỢI", role: "main", at: 21.01 }]} />
       <StackText id="t4" palette="white" y={0.15} size={140} end={24.95} exit="toLeft" lines={[{ text: "các khu công nghiệp", role: "lead", at: 22.6 }, { text: "KCN DỊ CHẾ", role: "main", at: 24.28 }]} />
-      <StackText id="t5" palette="white" y={0.15} size={120} end={25.85} exit="blurUp" lines={[{ text: "KCN QUẢNG LÃNG", role: "main", at: 25.24 }, { text: "Ân Thi", role: "sub", at: 25.65 }]} />
+      <StackText id="t5" palette="white" y={0.15} size={98} end={25.85} exit="blurUp" lines={[{ text: "KCN QUẢNG LÃNG", role: "main", at: 25.24 }, { text: "Ân Thi", role: "sub", at: 25.65 }]} />
 
       {/* ===== 25.95-33.4 B: bac ha (sa ban) ===== */}
       <StackText id="q1" y={0.15} size={200} end={27.95} exit="toLeft" lines={[{ text: "quỹ căn", role: "lead", at: 26.0, italic: true }, { text: "{n} CĂN", role: "main", at: 26.6, count: { to: 303 } }]} />

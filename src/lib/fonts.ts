@@ -14,6 +14,9 @@ import "@fontsource/montserrat/800.css";
 import "@fontsource/montserrat/900.css";
 import "@fontsource/dancing-script/600.css";
 import "@fontsource/playfair-display/700.css";
+import "@fontsource/playfair-display/900.css";
+import "@fontsource/playfair-display/800.css";
+import "@fontsource/playfair-display/700-italic.css";
 import "@fontsource/playfair-display/500-italic.css";
 import "@fontsource/oswald/700.css";
 import "@fontsource/nunito/900.css";
@@ -65,6 +68,9 @@ const SPECS: Array<[number, string, string?]> = [
   [900, "Montserrat"],
   [600, "Dancing Script"],
   [700, "Playfair Display"],
+  [900, "Playfair Display"],
+  [800, "Playfair Display"],
+  [700, "Playfair Display", "italic"],
   [700, "Oswald"],
   [900, "Nunito"],
   [500, "Playfair Display", "italic"],

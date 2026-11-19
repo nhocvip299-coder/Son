@@ -31,3 +31,14 @@ Quy tắc "Không quá 3": tối đa 2–3 font trong 1 video.
 - Ngành BĐS: **Whoosh, Impact, Atmosphere, Riser**.
 - 3 lớp: **Riser** (dẫn trước cao trào) → **Highlight** (Ding/Pop/Whoosh nhẹ khi hiện chữ, số liệu) → **Impact** (chốt thông điệp, logo).
 - Không lạm dụng: mỗi điểm nhấn 1 âm chính, có khoảng nghỉ.
+
+## 6 công thức CẶP FONT (bài "Các cặp font chữ Việt hoá" P3–P6, BĐS, F&B) → bản miễn phí (xem `PairBoard`)
+| # | Công thức | Ví dụ Phú Films | Bản miễn phí trong repo | Dùng cho |
+|---|---|---|---|---|
+| 1 | Sans ĐẬM IN HOA + serif NGHIÊNG nhỏ | Montserrat + PlayfairDisplay-Italic (họ gợi ý cho **BĐS cao cấp**) | Montserrat 900 + Playfair 700 italic | tên dự án, mã căn |
+| 2 | Viết tay bay (chéo) + sans đậm IN HOA + dòng giãn chữ | Blacksword + American Sans; Frista + Montserrat; Bacalisties + Gotham | Great Vibes + Montserrat 800/600 | điểm nhấn cảm xúc |
+| 3 | Serif LỚN hai dòng + sans IN HOA giãn chữ | Rogie + Montserrat SemiBold ("Con Rồng / CHÁU TIÊN") | Playfair 900 + Montserrat 600 (0.18em) | vị trí, sang trọng |
+| 4 | Chữ ĐỨNG HẸP cực dày + viết tay nhỏ trên/dưới | Romeda + UTM Bebas; Faltura + Hand of Sean; Montserrat + Agency FB | Oswald 700 + Dancing Script 700 | giá, khuyến mãi, chốt số |
+| 5 | Khối SỐ lớn + chữ nhỏ ghép ô/xếp tầng bên cạnh | "51 / 30-04 / NĂM", "50% / Giảm giá" (Bacalisties + Gotham) | Oswald 700 + Montserrat 800/900 | 70 TRIỆU/M², 427 M², 15 TỶ |
+| 6 | Serif cổ điển + viết tay (tân cổ điển, shophouse) | UTM Alexander + Bestagrach; Brand Pro + Analogue | Playfair 900 + Dancing Script + Playfair italic | shophouse, kiến trúc châu Âu |
+Quy tắc chung: 1 font "tính cách" (viết tay/serif/hẹp dày) làm tiêu đề + 1 font sans dễ đọc làm phụ; tối đa 2–3 font/video; chữ phụ giãn chữ (0.15–0.35em) khi IN HOA nhỏ; quầng sáng ấm cam-vàng gọn, bóng đổ ngắn.

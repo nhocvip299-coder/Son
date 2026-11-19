@@ -70,7 +70,7 @@ export const StackText: React.FC<{
     const w = measureText({ text: tx, fontFamily: isM ? P.font : script ? "Dancing Script" : "Be Vietnam Pro", fontSize: f0, fontWeight: String(isM ? P.weight : script ? 700 : 800), letterSpacing: isM && palette !== "white" ? "0.01em" : "0", validateFontIsLoaded: false }).width;
     return w > MAXW ? f0 * (MAXW / w) : f0;
   };
-  const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : palette === "gold" || palette === "serif" || palette === "blue" ? 1.05 : 1.1) : script ? 0.62 : 1.3);
+  const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : palette === "gold" || palette === "serif" || palette === "blue" ? 1.05 : 1.1) : script ? 0.86 : 1.3);
   let acc = y * height;
   const ys = lines.map((l, i) => {
     const prev = lines[i - 1];
@@ -90,6 +90,7 @@ export const StackText: React.FC<{
           </linearGradient>
           <filter id={`gl-${id}`} x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="14" /></filter>
           <filter id={`sd-${id}`} x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="7" /></filter>
+          <linearGradient id={`ex-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#2a6fd6" /><stop offset="1" stopColor="#0a2763" /></linearGradient>
           <filter id={`bd-${id}`} x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="22" /></filter>
           <linearGradient id={`gs-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff" stopOpacity={0.75} /><stop offset="0.42" stopColor="#fff" stopOpacity={0.12} /><stop offset="0.5" stopColor="#fff" stopOpacity={0} /></linearGradient>
         </defs>
@@ -130,7 +131,14 @@ export const StackText: React.FC<{
               {/* bong toi mem -> doc ro tren nen sang (troi, tuong vang) */}
               <g filter={`url(#sd-${id})`} opacity={isMain ? 0.7 : 0.85} transform="translate(0 5)">{T(P.shade)}</g>
               {glow > 0.01 ? <g filter={`url(#gl-${id})`} opacity={glow}>{T(P.glow)}</g> : null}
-              {isMain ? T(`url(#mg-${id})`, { stroke: `url(#mg-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round", paintOrder: "stroke" }) : T("#ffffff", { stroke: "#ffffff", strokeWidth: fs * 0.022, strokeLinejoin: "round" })}
+              {/* HINH KHOI: dun chu 14 lop lech xuong-phai (canh ben toi dan) -> chu noi 3D */}
+              {isMain && palette !== "white" ? Array.from({ length: 14 }, (_, k) => 14 - k).map((k) => (
+                <g key={`ex${k}`} transform={`translate(${k * fs * 0.0045} ${k * fs * 0.0065})`}>{T(k > 11 ? "#020b1f" : `url(#ex-${id})`, { stroke: k > 11 ? "#020b1f" : `url(#ex-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round" })}</g>
+              )) : null}
+              {isMain ? T(`url(#mg-${id})`, { stroke: `url(#mg-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round", paintOrder: "stroke" }) : script
+                // chu viet tay: trang, VIEN TOI DAY + bong -> tach han khoi chu khoi phia sau
+                ? T("#ffffff", { stroke: "#031029", strokeWidth: fs * 0.1, strokeLinejoin: "round", paintOrder: "stroke" })
+                : T("#ffffff", { stroke: "#ffffff", strokeWidth: fs * 0.022, strokeLinejoin: "round" })}
               {isMain && palette !== "white" ? T(`url(#gs-${id})`) : null}
               {isMain && palette !== "white" ? (() => {
                 // LONG LANH: vet sang quet lap lai + dom sao nhap nhay tren mat chu

@@ -86,6 +86,9 @@ export const HandBold: React.FC<{
       ) : (
         <>
           <g filter={sh("gl")} opacity={0.75}>{MT({ fill: T.glow }, bigDx)}</g>
+          {Array.from({ length: 14 }, (_, k) => 14 - k).map((k) => (
+            <g key={`ex${k}`} transform={`translate(${k * size * 0.0045} ${k * size * 0.0065})`}>{MT({ fill: k > 11 ? "#020b1f" : sh("ex"), stroke: k > 11 ? "#020b1f" : sh("ex"), strokeWidth: size * 0.025, strokeLinejoin: "round" }, bigDx)}</g>
+          ))}
           {MT({ fill: sh("g"), stroke: "rgba(0,0,0,0.55)", strokeWidth: size * 0.025, strokeLinejoin: "round", paintOrder: "stroke" }, bigDx)}
           {MT({ fill: sh("gs") }, bigDx)}
           {MT({ fill: sh("sw") }, bigDx)}
@@ -99,37 +102,37 @@ export const HandBold: React.FC<{
   if (small && variant === "tay") {
     const ss = size * 0.78;
     const sw = mt(small, "Great Vibes", ss, "400");
-    const sx = Math.max(165, x0 - size * 0.18), sy = cy - size * 0.66; // khong vuot le trai vung an toan
+    const sx = Math.max(165, x0 - size * 0.18), sy = cy - size * 0.82; // khong vuot le trai vung an toan
     front = (
       <g>
         <clipPath id={`cl-${id}`}><rect x={sx - 30} y={sy - ss * 1.5} width={(sw + 80) * smallP} height={ss * 3} /></clipPath>
         <g clipPath={`url(#cl-${id})`} transform={`rotate(-7 ${sx} ${sy})`}>
           <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Great Vibes", fontSize: ss }} fill="#000" opacity={0.85} filter={sh("sd")} transform="translate(3 6)">{small}</text>
-          <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Great Vibes", fontSize: ss }} fill="#fff" stroke="#fff" strokeWidth={ss * 0.012}>{small}</text>
+          <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Great Vibes", fontSize: ss }} fill="#fff" stroke="#031029" strokeWidth={ss * 0.1} strokeLinejoin="round" paintOrder="stroke">{small}</text>
         </g>
       </g>
     );
   } else if (small && variant === "bac") {
     const fs = size * 0.42;
-    const sx = Math.max(165, x0 - mw * 0.04), sy = cy - size * 0.58;
+    const sx = Math.max(165, x0 - mw * 0.04), sy = cy - size * 0.7;
     const slide = (1 - smallP) * -60;
     front = (
       <g opacity={Math.min(1, smallP * 1.6)} transform={`translate(${slide} 0)`}>
         <linearGradient id={`gs-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={S.a} /><stop offset="0.5" stopColor={S.b} /><stop offset="1" stopColor={S.c} /></linearGradient>
         <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Montserrat", fontWeight: 800, fontSize: fs, letterSpacing: "0.02em" }} fill="#000" opacity={0.85} filter={sh("sd")} transform="translate(2 5)">{small.toUpperCase()}</text>
         <g filter={sh("gls")} opacity={0.7}><text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Montserrat", fontWeight: 800, fontSize: fs, letterSpacing: "0.02em" }} fill={S.glow}>{small.toUpperCase()}</text></g>
-        <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Montserrat", fontWeight: 800, fontSize: fs, letterSpacing: "0.02em" }} fill={`url(#gs-${id})`} stroke="rgba(0,0,0,0.5)" strokeWidth={fs * 0.04} paintOrder="stroke">{small.toUpperCase()}</text>
+        <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Montserrat", fontWeight: 800, fontSize: fs, letterSpacing: "0.02em" }} fill={`url(#gs-${id})`} stroke="#031029" strokeWidth={fs * 0.12} strokeLinejoin="round" paintOrder="stroke">{small.toUpperCase()}</text>
       </g>
     );
   } else if (small && variant === "neon") {
     const fs = size * 0.46;
-    const sy = cy - size * 0.52, sx = Math.max(165, x0 - mw * 0.02);
+    const sy = cy - size * 0.66, sx = Math.max(165, x0 - mw * 0.02);
     const sc = interpolate(t, [mainAt + 0.25, mainAt + 0.5], [1.6, 1], { ...C, easing: back });
     const so = interpolate(t, [mainAt + 0.25, mainAt + 0.33], [0, 1], C);
     front = (
       <g opacity={so} transform={`translate(${sx} ${sy}) scale(${sc}) translate(${-sx} ${-sy})`}>
         <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Montserrat", fontWeight: 900, fontSize: fs, letterSpacing: "-0.01em" }} fill="#000" opacity={0.9} filter={sh("sd")} transform="translate(3 6)">{small}</text>
-        <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Montserrat", fontWeight: 900, fontSize: fs, letterSpacing: "-0.01em" }} fill="#fff" stroke="#1b1b1b" strokeWidth={fs * 0.07} paintOrder="stroke">{small}</text>
+        <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Montserrat", fontWeight: 900, fontSize: fs, letterSpacing: "-0.01em" }} fill="#fff" stroke="#031029" strokeWidth={fs * 0.12} strokeLinejoin="round" paintOrder="stroke">{small}</text>
       </g>
     );
   }
@@ -161,6 +164,7 @@ export const HandBold: React.FC<{
           <filter id={`gl-${id}`} x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation={size * 0.05} /></filter>
           <filter id={`gl2-${id}`} x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation={size * 0.16} /></filter>
           <filter id={`gls-${id}`} x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation={size * 0.04} /></filter>
+          <linearGradient id={`ex-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={tone === "white" ? "#9bb4d6" : "#2a6fd6"} /><stop offset="1" stopColor={tone === "white" ? "#3a5578" : "#0a2763"} /></linearGradient>
           <filter id={`bd-${id}`} x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation={size * 0.16} /></filter>
           <linearGradient id={`gs-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff" stopOpacity={0.75} /><stop offset="0.42" stopColor="#fff" stopOpacity={0.12} /><stop offset="0.5" stopColor="#fff" stopOpacity={0} /></linearGradient>
           <filter id={`sd-${id}`} x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation={4} /></filter>

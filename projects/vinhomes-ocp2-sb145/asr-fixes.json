@@ -1,0 +1,27 @@
+{
+ "_note": "Sua theo chi so tu (index) cho video OCP2 SB-145",
+ "fixes": {
+  "14": "Vinhomes",
+  "15": "Ocean",
+  "17": "Park",
+  "21": "Shophouse",
+  "69": "đường",
+  "135": "xẻ",
+  "299": "xẻ",
+  "170": "áp",
+  "180": "Nằm",
+  "186": "đắc",
+  "192": "chung",
+  "194": "Masteri",
+  "238": "trường",
+  "258": "Vinhomes",
+  "266": "thêm"
+ },
+ "drop": [
+  16,
+  18,
+  22,
+  127,
+  195
+ ]
+}

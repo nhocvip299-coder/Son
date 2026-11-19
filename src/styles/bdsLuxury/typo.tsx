@@ -58,8 +58,10 @@ export const StackText: React.FC<{
   const { fps, width, height } = useVideoConfig();
   const t = f / fps;
   const P = PALETTE[palette];
-  const sz = (l: StackLine) => l.size ?? (l.role === "main" ? size : size * (palette !== "white" ? 0.34 : 0.3));
-  const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : palette === "gold" || palette === "serif" || palette === "blue" ? 1.05 : 1.1) : 1.3);
+  // palette "blue": dong dan/phu = CHU VIET TAY (Dancing Script) de lech len chu khoi -> chieu sau, pha cach
+  const script = palette === "blue";
+  const sz = (l: StackLine) => (l.size ?? (l.role === "main" ? size : size * (palette !== "white" ? 0.34 : 0.3))) * (script && l.role !== "main" ? 1.5 : 1);
+  const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : palette === "gold" || palette === "serif" || palette === "blue" ? 1.05 : 1.1) : script ? 0.62 : 1.3);
   let acc = y * height;
   const ys = lines.map((l, i) => {
     const prev = lines[i - 1];
@@ -82,7 +84,8 @@ export const StackText: React.FC<{
           <filter id={`bd-${id}`} x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="22" /></filter>
           <linearGradient id={`gs-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff" stopOpacity={0.75} /><stop offset="0.42" stopColor="#fff" stopOpacity={0.12} /><stop offset="0.5" stopColor="#fff" stopOpacity={0} /></linearGradient>
         </defs>
-        {lines.map((l, i) => {
+        {/* ve chu KHOI truoc, chu VIET TAY sau -> chu tay nam TRUOC, de len chu khoi */}
+        {lines.map((l, i) => ({ l, i })).sort((a, b) => (a.l.role === "main" ? 0 : 1) - (b.l.role === "main" ? 0 : 1)).map(({ l, i }) => {
           const isMain = l.role === "main";
           const k = kf(l.enter ?? (isMain ? "zoomSettle" : "blurIn"), exit, t, l.at, end, fps, width);
           if (k.hidden) return null;
@@ -98,8 +101,8 @@ export const StackText: React.FC<{
           // quang sang: loe manh luc vao roi diu (ref08 "THƯỚC ĐO": glow 100% -> ~35% trong 0.6s)
           const glow = isMain ? interpolate(t, [l.at, l.at + 0.12, l.at + 0.75], [0, palette !== "white" ? 1 : 0.6, palette !== "white" ? 0.38 : 0.15], C) : 0;
           const style: React.CSSProperties = {
-            fontFamily: isMain ? P.font : "Be Vietnam Pro",
-            fontWeight: isMain ? P.weight : l.role === "lead" ? 700 : 800,
+            fontFamily: isMain ? P.font : script ? "Dancing Script" : "Be Vietnam Pro",
+            fontWeight: isMain ? P.weight : script ? 700 : l.role === "lead" ? 700 : 800,
             fontStyle: l.italic && !isMain ? "italic" : "normal",
             fontSize: fs,
             letterSpacing: isMain && palette !== "white" ? "0.01em" : "0",
@@ -107,7 +110,7 @@ export const StackText: React.FC<{
           const T = (fill: string, extra: React.SVGProps<SVGTextElement> = {}) => (
             <text x={0} y={0} textAnchor={anchor} dominantBaseline="central" fill={fill} style={style} {...extra}>{txt}</text>
           );
-          const skew = l.italic && isMain ? " skewX(-9)" : "";
+          const skew = (l.italic && isMain ? " skewX(-9)" : "") + (script && !isMain ? ` rotate(-5) translate(${-fs * 0.6} 0)` : "");
           return (
             <g key={i} transform={`translate(${cx + k.tx} ${ys[i] + k.ty}) rotate(${k.rot}) scale(${k.sx} ${k.sy})${skew}`} opacity={k.opacity} style={k.blur > 0.2 ? { filter: `blur(${k.blur}px)` } : undefined}>
               {/* NOI BAT: nen toi mem sau dong chinh (khong khung) -> chu bat len tren moi nen */}

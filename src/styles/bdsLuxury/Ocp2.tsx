@@ -10,6 +10,7 @@ import { LuxCaptions, type CapZone } from "./captions";
 import { RoadText, WhipBlur, WhiteFlash } from "./fill";
 import { StackText } from "./typo";
 import { KxCard, KxMap, KxPage, KxPhone, KxPrice } from "./mauKinhXanh";
+import { BigWord, KaraSub } from "./subs";
 import { HandBold, type HbTone, type HbVariant } from "./handBold";
 import { CheckChips, CompareBars, FloorStack, RoadSection, SitePlan, XeKhe } from "./explain";
 
@@ -83,7 +84,7 @@ const Shade: React.FC<{ top?: number; bot?: number }> = ({ top = 0.55, bot = 0.4
   <AbsoluteFill style={{ background: `linear-gradient(180deg, rgba(0,0,0,${top}) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,0) 60%, rgba(0,0,0,${bot}) 100%)` }} />
 );
 
-export type Ocp2Props = { captions: "phrase" | "wbw" | "none"; words: QtWord[]; stem?: "all" | "sfx" | "voice" };
+export type Ocp2Props = { captions: "phrase" | "wbw" | "none" | "kara" | "big"; words: QtWord[]; stem?: "all" | "sfx" | "voice" };
 
 export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => {
   const { fps } = useVideoConfig();
@@ -110,7 +111,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
 
       {/* ===== 0-2.7 HOOK: 70 TRIEU nam sau dau + "co tin khong?" canh tay ===== */}
       <Shade top={0.5} bot={0} />
-      <StackText id="h0" palette="white" y={0.16} size={70} end={2.6} exit="blurUp" lines={[{ text: "một mét vuông đất", role: "lead", at: 0.6, size: 50, enter: "riseUp" }]} />
+      <StackText id="h0" palette="blue" y={0.16} size={70} end={2.6} exit="blurUp" lines={[{ text: "một mét vuông đất", role: "lead", at: 0.6, size: 50, enter: "riseUp" }]} />
       <StackText id="h1" palette="blue" y={0.305} size={200} end={2.6} exit="scaleOut" lines={[{ text: "{n} TRIỆU", role: "main", at: 0.02, enter: "zoomSettle", count: { to: 70, dur: 0.55 } }]} />
       {hb("k1", 1.45, 2.75, 1330, "neon", "anh chị", "Có tin không?", { size: 120, tone: "blue", mainAt: 0.05 })}
 
@@ -175,7 +176,7 @@ export const Ocp2: React.FC<Ocp2Props> = ({ captions, words, stem = "all" }) => 
       {hb("k8", 78.6, 83, 400, "bac", "liên hệ ngay", "Em Sơn", { size: 170, tone: "white", smallTone: "blue", mainAt: 0.3 })}
       <Seq a={79.0} b={83} name="Vien SDT"><KxPhone phone="0966 312 333" y={0.315} /></Seq>
 
-      {captions === "phrase" ? <LuxCaptions words={words} zones={ZONES} /> : captions === "wbw" ? <WordByWord words={words} y={1330} /> : null}
+      {captions === "phrase" ? <LuxCaptions words={words} zones={ZONES} /> : captions === "wbw" ? <WordByWord words={words} y={1330} /> : captions === "kara" ? <KaraSub words={words} /> : captions === "big" ? <BigWord words={words} /> : null}
       {stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.1} loop /> : null}
       {stem === "voice" ? null : <SfxTrack cues={cues} />}
     </AbsoluteFill>

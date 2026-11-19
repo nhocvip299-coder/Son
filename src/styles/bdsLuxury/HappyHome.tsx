@@ -60,7 +60,7 @@ const CUES: Array<[number, Sfx, number]> = [
   // truc xuong song
   [39.9, WHIP, 1], [40.91, TXT, 1], [42.78, TXT, 1], [43.86, TXT, 1], [44.8, SOFT, 1],
   // A + dong
-  [45.55, TRN, 1], [48.02, TXT, 1], [48.35, SOFT, 0.8], [CLOSE_AT + 0.1, BOOM, 0.9], [50.42, DING, 1],
+  [45.55, TRN, 1], [48.02, TXT, 1], [48.35, TING, 1], [CLOSE_AT + 0.1, BOOM, 0.9], [CLOSE_AT + 0.1, TING, 1], [CLOSE_AT + 0.15, SOFT, 1], [50.42, DING, 1],
 ];
 
 const ZONES: CapZone[] = [

@@ -60,8 +60,8 @@ export const HandBold: React.FC<{
 
   const isNeon = variant === "neon";
   const M = isNeon ? main : main.toUpperCase();
-  const mFont = isNeon ? "Montserrat" : "Oswald";
-  const mWeight = isNeon ? 700 : 700;
+  const mFont = isNeon ? "Montserrat" : "Barlow Condensed";
+  const mWeight = isNeon ? 700 : 800;
   // VUNG AN TOAN: chu to toi da 760px rong -> tu thu nho
   const size = Math.min(size0, size0 * 700 / Math.max(1, mt(M, mFont, size0, String(mWeight), "0.01em")));
   const mw = mt(M, mFont, size, String(mWeight), "0.01em");
@@ -86,11 +86,11 @@ export const HandBold: React.FC<{
       ) : (
         <>
           <g filter={sh("gl")} opacity={0.75}>{MT({ fill: T.glow }, bigDx)}</g>
-          {Array.from({ length: 14 }, (_, k) => 14 - k).map((k) => (
+          {tone !== "blue" && Array.from({ length: 14 }, (_, k) => 14 - k).map((k) => (
             <g key={`ex${k}`} transform={`translate(${k * size * 0.0045} ${k * size * 0.0065})`}>{MT({ fill: sh("ex"), stroke: sh("ex"), strokeWidth: size * 0.025, strokeLinejoin: "round" }, bigDx)}</g>
           ))}
-          {MT({ fill: sh("g"), stroke: "rgba(0,0,0,0.55)", strokeWidth: size * 0.025, strokeLinejoin: "round", paintOrder: "stroke" }, bigDx)}
-          {MT({ fill: sh("gs") }, bigDx)}
+          {MT({ fill: sh("g"), stroke: tone === "blue" ? "none" : "rgba(0,0,0,0.55)", strokeWidth: size * 0.025, strokeLinejoin: "round", paintOrder: "stroke" }, bigDx)}
+          {tone !== "blue" && MT({ fill: sh("gs") }, bigDx)}
           {MT({ fill: sh("sw") }, bigDx)}
         </>
       )}
@@ -100,15 +100,15 @@ export const HandBold: React.FC<{
   // ---- chu NHO (truoc) ----
   let front: React.ReactNode = null;
   if (small && variant === "tay") {
-    const ss = size * 0.78;
-    const sw = mt(small, "Great Vibes", ss, "400");
+    const ss = size * 0.95;
+    const sw = mt(small, "Ms Madi", ss, "400");
     const sx = Math.max(165, x0 - size * 0.18), sy = cy - size * 0.82; // khong vuot le trai vung an toan
     front = (
       <g>
         <clipPath id={`cl-${id}`}><rect x={sx - 30} y={sy - ss * 1.5} width={(sw + 80) * smallP} height={ss * 3} /></clipPath>
         <g clipPath={`url(#cl-${id})`} transform={`rotate(-7 ${sx} ${sy})`}>
-          <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Great Vibes", fontSize: ss }} fill="#000" opacity={0.4} filter={sh("sd")} transform="translate(3 6)">{small}</text>
-          <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Great Vibes", fontSize: ss }} fill="#fff" stroke="#0b3d3a" strokeWidth={ss * 0.05} strokeLinejoin="round" paintOrder="stroke">{small}</text>
+          <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Ms Madi", fontSize: ss }} fill="#000" opacity={0.4} filter={sh("sd")} transform="translate(3 6)">{small}</text>
+          <text x={sx} y={sy} dominantBaseline="central" style={{ fontFamily: "Ms Madi", fontSize: ss, filter: "drop-shadow(0 2px 2px rgba(0,0,28,0.9)) drop-shadow(0 0 10px rgba(0,0,28,0.7)) drop-shadow(0 0 5px rgba(255,255,255,0.7))" }} fill="#f3ffff" stroke="none" strokeWidth={0} strokeLinejoin="round" paintOrder="stroke">{small}</text>
         </g>
       </g>
     );
@@ -155,7 +155,7 @@ export const HandBold: React.FC<{
     <AbsoluteFill style={{ opacity: 1 - ex, transform: `translateY(${-ex * 40}px) scale(${1 + ex * 0.05})`, transformOrigin: `${cx}px ${cy}px` }}>
       <svg width={width} height={height} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
         <defs>
-          <linearGradient id={`g-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={T.a} /><stop offset="0.3" stopColor="#ffffff" /><stop offset="0.42" stopColor={T.b} /><stop offset="0.7" stopColor={T.c} /><stop offset="0.86" stopColor={T.b} /><stop offset="1" stopColor={T.a} /></linearGradient>
+          {tone === "blue" ? <linearGradient id={`g-${id}`} x1="0" y1="0.1" x2="1" y2="0.9"><stop offset="0" stopColor="#13489c" /><stop offset="0.22" stopColor="#1576b0" /><stop offset="0.38" stopColor="#15c8d6" /><stop offset="0.47" stopColor="#16fff4" /><stop offset="0.56" stopColor="#15b5cc" /><stop offset="0.72" stopColor="#1582b4" /><stop offset="1" stopColor="#13489c" /></linearGradient> : <linearGradient id={`g-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={T.a} /><stop offset="0.3" stopColor="#ffffff" /><stop offset="0.42" stopColor={T.b} /><stop offset="0.7" stopColor={T.c} /><stop offset="0.86" stopColor={T.b} /><stop offset="1" stopColor={T.a} /></linearGradient>}
           <linearGradient id={`sw-${id}`} x1="0" y1="0" x2="1" y2="0.25">
             <stop offset={Math.max(0, sweep - 0.1)} stopColor="#fff" stopOpacity={0} />
             <stop offset={Math.min(1, Math.max(0, sweep))} stopColor="#fff" stopOpacity={0.85} />

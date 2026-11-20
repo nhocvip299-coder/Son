@@ -36,7 +36,8 @@ export const PALETTE = {
   serif: { font: "Playfair Display", weight: 900, top: "#fff4d6", mid: "#e8c26e", bot: "#a8742a", glow: "#ffd98a", shade: "#2a1804", upper: true },
   // XANH DUONG + TRANG (tone nguoi dung chon cho du an OCP2): serif Playfair xanh, dong dan trang
   // XANH NGOC SANG NHE (tone nguoi dung chon cho OCP2; ten giu "blue")
-  blue: { font: "Playfair Display", weight: 900, top: "#f2fffd", mid: "#7fe8dc", bot: "#20a99e", glow: "#5ee8d8", shade: "#02201d", upper: true },
+  // XANH DIEN QUANG + chu ky trang (tone duyet cho OCP2; ten giu "blue")
+  blue: { font: "Barlow Condensed", weight: 800, top: "#16fff4", mid: "#15a2c2", bot: "#13489c", glow: "#16c8f0", shade: "#00001c", upper: true },
   white: { font: "Be Vietnam Pro", weight: 900, top: "#ffffff", mid: "#ffffff", bot: "#e9ecef", glow: "#ffffff", shade: "#000000", upper: false },
 } as const;
 export type Palette = keyof typeof PALETTE;
@@ -61,14 +62,14 @@ export const StackText: React.FC<{
   const P = PALETTE[palette];
   // palette "blue": dong dan/phu = CHU VIET TAY (Dancing Script) de lech len chu khoi -> chieu sau, pha cach
   const script = palette === "blue";
-  const sz0 = (l: StackLine) => (l.size ?? (l.role === "main" ? size : size * (palette !== "white" ? 0.34 : 0.3))) * (script && l.role !== "main" ? 1.5 : 1);
+  const sz0 = (l: StackLine) => (l.size ?? (l.role === "main" ? size : size * (palette !== "white" ? 0.34 : 0.3))) * (script && l.role !== "main" ? 1.85 : 1);
   // VUNG AN TOAN TikTok/Reels: moi dong toi da 780px (le 150px moi ben) -> tu thu nho neu dai
   const MAXW = width - 340;
   const sz = (l: StackLine) => {
     const f0 = sz0(l);
     const isM = l.role === "main";
     const tx = (isM && P.upper ? l.text.toUpperCase() : l.text).replace("{n}", "888");
-    const w = measureText({ text: tx, fontFamily: isM ? P.font : script ? "Dancing Script" : "Be Vietnam Pro", fontSize: f0, fontWeight: String(isM ? P.weight : script ? 700 : 800), letterSpacing: isM && palette !== "white" ? "0.01em" : "0", validateFontIsLoaded: false }).width;
+    const w = measureText({ text: tx, fontFamily: isM ? P.font : script ? "Ms Madi" : "Be Vietnam Pro", fontSize: f0, fontWeight: String(isM ? P.weight : script ? 400 : 800), letterSpacing: isM && palette !== "white" ? "0.01em" : "0", validateFontIsLoaded: false }).width;
     return w > MAXW ? f0 * (MAXW / w) : f0;
   };
   const lh = (l: StackLine) => sz(l) * (l.role === "main" ? (palette === "mint" ? 0.98 : palette === "gold" || palette === "serif" || palette === "blue" ? 1.05 : 1.1) : script ? 0.86 : 1.3);
@@ -82,13 +83,16 @@ export const StackText: React.FC<{
     <AbsoluteFill>
       <svg width={width} height={height} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
         <defs>
-          <linearGradient id={`mg-${id}`} x1="0" y1="0" x2="0" y2="1">
+          {palette === "blue" ? (
+            // XANH DIEN QUANG (hoc tu video mau): gradient CHEO xanh dam #13489c <-> dai sang ngoc #16fff4
+            <linearGradient id={`mg-${id}`} x1="0" y1="0.1" x2="1" y2="0.9"><stop offset="0" stopColor="#13489c" /><stop offset="0.22" stopColor="#1576b0" /><stop offset="0.38" stopColor="#15c8d6" /><stop offset="0.47" stopColor="#16fff4" /><stop offset="0.56" stopColor="#15b5cc" /><stop offset="0.72" stopColor="#1582b4" /><stop offset="1" stopColor="#13489c" /></linearGradient>
+          ) : (
+            <linearGradient id={`mg-${id}`} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor={P.top} />
-            {palette === "blue" ? <stop offset="0.28" stopColor="#ffffff" /> : null}
             <stop offset="0.45" stopColor={P.mid} />
-            <stop offset={palette === "blue" ? 0.75 : 1} stopColor={P.bot} />
-            {palette === "blue" ? <stop offset="1" stopColor={P.mid} /> : null}
+            <stop offset={1} stopColor={P.bot} />
           </linearGradient>
+          )}
           <filter id={`gl-${id}`} x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="14" /></filter>
           <filter id={`sd-${id}`} x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="7" /></filter>
           <linearGradient id={`ex-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#1f9e94" /><stop offset="1" stopColor="#0a4a46" /></linearGradient>
@@ -112,8 +116,8 @@ export const StackText: React.FC<{
           // quang sang: loe manh luc vao roi diu (ref08 "THƯỚC ĐO": glow 100% -> ~35% trong 0.6s)
           const glow = isMain ? interpolate(t, [l.at, l.at + 0.12, l.at + 0.75], [0, palette !== "white" ? 1 : 0.6, palette !== "white" ? 0.38 : 0.15], C) : 0;
           const style: React.CSSProperties = {
-            fontFamily: isMain ? P.font : script ? "Dancing Script" : "Be Vietnam Pro",
-            fontWeight: isMain ? P.weight : script ? 700 : l.role === "lead" ? 700 : 800,
+            fontFamily: isMain ? P.font : script ? "Ms Madi" : "Be Vietnam Pro",
+            fontWeight: isMain ? P.weight : script ? 400 : l.role === "lead" ? 700 : 800,
             fontStyle: l.italic && !isMain ? "italic" : "normal",
             fontSize: fs,
             letterSpacing: isMain && palette !== "white" ? "0.01em" : "0",
@@ -122,7 +126,7 @@ export const StackText: React.FC<{
             <text x={0} y={0} textAnchor={anchor} dominantBaseline="central" fill={fill} style={style} {...extra}>{txt}</text>
           );
           // chu tay lech trai de len chu khoi, nhung KHONG vuot le trai vung an toan (150px)
-          const lw = script && !isMain ? measureText({ text: txt, fontFamily: "Dancing Script", fontSize: fs, fontWeight: "700", validateFontIsLoaded: false }).width : 0;
+          const lw = script && !isMain ? measureText({ text: txt, fontFamily: "Ms Madi", fontSize: fs, fontWeight: "400", validateFontIsLoaded: false }).width : 0;
           const shift = script && !isMain ? Math.min(fs * 0.6, Math.max(0, cx - lw / 2 - 165)) : 0;
           const skew = (l.italic && isMain ? " skewX(-9)" : "") + (script && !isMain ? ` rotate(-5) translate(${-shift} 0)` : "");
           return (
@@ -133,12 +137,12 @@ export const StackText: React.FC<{
               <g filter={`url(#sd-${id})`} opacity={isMain ? 0.7 : 0.85} transform="translate(0 5)">{T(P.shade)}</g>
               {glow > 0.01 ? <g filter={`url(#gl-${id})`} opacity={glow}>{T(P.glow)}</g> : null}
               {/* HINH KHOI: dun chu 14 lop lech xuong-phai (canh ben toi dan) -> chu noi 3D */}
-              {isMain && palette !== "white" ? Array.from({ length: 14 }, (_, k) => 14 - k).map((k) => (
+              {isMain && palette !== "white" && palette !== "blue" ? Array.from({ length: 14 }, (_, k) => 14 - k).map((k) => (
                 <g key={`ex${k}`} transform={`translate(${k * fs * 0.0045} ${k * fs * 0.0065})`}>{T(`url(#ex-${id})`, { stroke: `url(#ex-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round" })}</g>
               )) : null}
               {isMain ? T(`url(#mg-${id})`, { stroke: `url(#mg-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round", paintOrder: "stroke" }) : script
                 // chu viet tay: trang, VIEN TOI DAY + bong -> tach han khoi chu khoi phia sau
-                ? T("#ffffff", { stroke: "#0b3d3a", strokeWidth: fs * 0.05, strokeLinejoin: "round", paintOrder: "stroke" })
+                ? T("#f3ffff", { style: { ...style, filter: "drop-shadow(0 2px 2px rgba(0,0,28,0.9)) drop-shadow(0 0 10px rgba(0,0,28,0.7)) drop-shadow(0 0 5px rgba(255,255,255,0.7))" } })
                 : T("#ffffff", { stroke: "#ffffff", strokeWidth: fs * 0.022, strokeLinejoin: "round" })}
               {isMain && palette !== "white" ? T(`url(#gs-${id})`) : null}
               {isMain && palette !== "white" ? (() => {

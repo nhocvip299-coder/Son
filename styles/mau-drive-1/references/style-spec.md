@@ -11,3 +11,14 @@ Nguồn lưu `reference/mau-drive-1/` (gitignore). Phân tích: `styles/mau-driv
 - **Viên SĐT** cố định cuối video + "GỌI NGAY" neon [XM 59–83 s].
 - Font: viết tay ≈ Great Vibes, chữ hẹp ≈ Oswald/Bebas [UD]. SFX chưa đo [UD].
 Áp dụng: `src/styles/bdsLuxury/mauKinhXanh.tsx` (KxPage, KxPrice, KxCard, KxPhone), đổi màu sang xanh dương + trắng.
+
+## Phong cách EDIT (đo thêm: dải khung 10 hình/giây, hf_peaks)
+- **Chuyển cảnh = bùng sáng (light burst)**: khung chuyển trắng-kem loá ~0,3 s rồi mở ra cảnh mới (8,5 s; 14,1 s; 33,9 s; 45,8 s; 63,7 s) [XM]. Mỗi lần có SFX whoosh/impact rất to (+33 dB) [XM].
+- **Vào bản đồ = trượt khối pixel**: cảnh cũ vỡ thành các dải bậc thang trượt đi (18,1 s) [XM]. Ra bản đồ = **zoom nhoè** về cảnh quay (22,2 s) [XM].
+- **Grade teal–orange toàn video**: bóng/sàn ngả xanh teal, đèn/gỗ ngả cam [XM palette #1a2b25, accent #0df9f8, #cf8f4b].
+- **Chữ neon cyan** (đứng hẹp, IN HOA, phát sáng #0df9f8): hiện **từng ký tự trái→phải** ~0,4 s, chữ ký trắng nhỏ phía trên/dưới [XM 33–35 s "không gian / PHÒNG THỜ"]. Thoát: mờ + nhoè ~0,3 s [XM 3,3 s].
+- **Số tiền vàng** (#cf8f4b → vàng sáng): **đếm chạy** 15→193→249→284→297→300 trong ~0,5 s rồi đứng [XM 4,7 s]; chữ dẫn trắng nhỏ phía trên.
+- **Chữ ký viết tay trắng** hiện **viết dần** (~0,6 s) [XM 29 s "Diện tích", 46 s "Hoàn thiện"].
+- **Thẻ kính**: sau bùng sáng, thẻ bật từ nhỏ → to (~0,3 s), viền neon, chip ✓ hiện lần lượt ~0,3 s/chip; thoát bằng zoom nhoè [XM 45–55 s].
+- Nhạc nền suốt video (p5–p50 17,8 dB) [XM]; chữ thường có SFX nhẹ, chuyển cảnh SFX mạnh.
+- Nhịp: 12,9 cắt/phút, shot trung vị 3,5 s [XM].

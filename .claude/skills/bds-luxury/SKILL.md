@@ -54,3 +54,7 @@ Xem `references/phufilms-chu-sfx.md` (nghiên cứu Phú Films): mẫu 1 dòng v
 
 ## CHỮ 4K (bắt buộc)
 Video gốc có thể Full HD nhưng chữ phải 4K sắc nét: `remotion.config.ts` đặt `Config.setScale(2)` + khung PNG → mọi bản render/ảnh duyệt ra 2160x3840. Chữ luôn là SVG/text vẽ ở cỡ thật (không phóng to ảnh chữ; preset CapCut dùng `zoom` thay `transform: scale`). Bản xem nhanh giữ 4K, chỉ hạ bitrate (~5–6 Mbps).
+
+
+## Phong cách edit "trang kính xanh" (video mẫu Drive 1zgJkx…)
+Đặc tả: `styles/mau-drive-1/references/style-spec.md`. Component `src/styles/bdsLuxury/kxEdit.tsx`: `LightBurst` (chuyển cảnh bùng sáng + SFX impact), `TealOrange` (grade), `NeonType` (neon cyan gõ từng ký tự + chữ ký viết dần), `GoldCount` (số tiền vàng đếm chạy), `PixelSlide` (vào bản đồ). Kèm `mauKinhXanh.tsx` (KxPage, KxPrice, KxCard, KxPhone, KxMap).

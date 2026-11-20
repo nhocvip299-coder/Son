@@ -11,5 +11,6 @@
     "esModuleInterop": true,
     "lib": ["DOM", "ES2022"]
   },
-  "include": ["src", "styles"]
+  "include": ["src", "styles", "skills"],
+  "exclude": ["skills/**/tests"]
 }

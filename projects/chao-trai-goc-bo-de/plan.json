@@ -1,0 +1,124 @@
+{
+ "shots": [
+  {
+   "srcStartMs": 73000,
+   "srcEndMs": 77000,
+   "rate": 1.064,
+   "note": "hook - bat chao + dia quay (0077)"
+  },
+  {
+   "srcStartMs": 79500,
+   "srcEndMs": 82100,
+   "rate": 1,
+   "note": "50K van doi - cham quay (0077)"
+  },
+  {
+   "srcStartMs": 107000,
+   "srcEndMs": 111200,
+   "rate": 0.991,
+   "note": "chui ngo loi cho (0079)"
+  },
+  {
+   "srcStartMs": 111500,
+   "srcEndMs": 113300,
+   "rate": 0.971,
+   "note": "hang vang, hang ca kho (0079, 0080)"
+  },
+  {
+   "srcStartMs": 116800,
+   "srcEndMs": 118300,
+   "rate": 0.971,
+   "note": "hang vang, hang ca kho (0079, 0080)"
+  },
+  {
+   "srcStartMs": 119800,
+   "srcEndMs": 121800,
+   "rate": 1.017,
+   "note": "xe chao trai xanh, 29A (0080, 0073)"
+  },
+  {
+   "srcStartMs": 200,
+   "srcEndMs": 1800,
+   "rate": 1.017,
+   "note": "xe chao trai xanh, 29A (0080, 0073)"
+  },
+  {
+   "srcStartMs": 4000,
+   "srcEndMs": 7100,
+   "rate": 1.026,
+   "note": "ghe nhua via he (0073)"
+  },
+  {
+   "srcStartMs": 13800,
+   "srcEndMs": 15600,
+   "rate": 1,
+   "note": "rau thom, trai xao (0074)"
+  },
+  {
+   "srcStartMs": 21000,
+   "srcEndMs": 22200,
+   "rate": 1,
+   "note": "rau thom, trai xao (0074)"
+  },
+  {
+   "srcStartMs": 28000,
+   "srcEndMs": 30200,
+   "rate": 0.965,
+   "note": "muc chao tu noi (0074)"
+  },
+  {
+   "srcStartMs": 33000,
+   "srcEndMs": 35400,
+   "rate": 1.026,
+   "note": "muc vao bat (0074)"
+  },
+  {
+   "srcStartMs": 45500,
+   "srcEndMs": 48400,
+   "rate": 1,
+   "note": "bung ra, bat tren ban (0075)"
+  },
+  {
+   "srcStartMs": 84000,
+   "srcEndMs": 85500,
+   "rate": 1,
+   "note": "quay cham ngap chao (0077)"
+  },
+  {
+   "srcStartMs": 85600,
+   "srcEndMs": 88700,
+   "rate": 0.987,
+   "note": "15K ca quay (0077)"
+  },
+  {
+   "srcStartMs": 7200,
+   "srcEndMs": 12000,
+   "rate": 1.008,
+   "note": "ban sang + chieu toi - xe chao (0073)"
+  },
+  {
+   "srcStartMs": 97500,
+   "srcEndMs": 101200,
+   "rate": 0.984,
+   "note": "vet sach bat (0078)"
+  },
+  {
+   "srcStartMs": 64000,
+   "srcEndMs": 67100,
+   "rate": 1.026,
+   "note": "comment - bat chao (0076)"
+  },
+  {
+   "srcStartMs": 67300,
+   "srcEndMs": 71900,
+   "rate": 0.976,
+   "note": "CTA (0076, 0077)"
+  },
+  {
+   "srcStartMs": 89000,
+   "srcEndMs": 90000,
+   "rate": 0.976,
+   "note": "CTA (0076, 0077)"
+  }
+ ]
+}

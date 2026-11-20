@@ -1,0 +1,176 @@
+{
+ "_note": "Tap Chao trai 29A ngo Goc Bo De theo mau Gelexia. Tu: words.json (Whisper + asr-fixes). Trang phu de chia tay theo y.",
+ "wordsFrom": "projects/chao-trai-goc-bo-de/words.json",
+ "durationMs": 53000,
+ "fps": 60,
+ "brand": {
+  "name": "CHÁO TRAI 29A",
+  "address": "29A ngõ Gốc Bồ Đề · Tương Mai · Hà Nội",
+  "showAddress": true
+ },
+ "background": {
+  "video": "inputs/chao-trai/base.mp4",
+  "muted": true
+ },
+ "voice": "inputs/chao-trai/voice.mp3",
+ "wordByWord": {
+  "y": 1300,
+  "accentRe": "^(15K|50K|29A|trai|quẩy|Gốc|Bồ|Đề|Tương|Mai|ngọt|thỉu|nóng|hổi|9)"
+ },
+ "pages": [
+  "15K MỘT BÁT / CHÁO TRAI NÓNG HỔI",
+  "KÈM LUÔN ĐĨA QUẨY",
+  "NGAY GIỮA / TƯƠNG MAI, HÀ NỘI",
+  "CHÚNG MÀY ĂN / MỘT BỮA 50K",
+  "MÀ VẪN ĐÓI / THÌ NGHE TAO NÀY",
+  "TAO CHÚA GHÉT / QUÁN SANG",
+  "TOÀN CHUI NGÕ, / LỘI CHỢ",
+  "VÀO MẤY CHỖ / CHÚNG MÀY ĐI QUA",
+  "CÒN CHẲNG THÈM LIẾC",
+  "NGÕ GỐC BỒ ĐỀ ĐÂY",
+  "QUA HÀNG VÀNG, / HÀNG CÁ KHO",
+  "RẼ VÀO LÀ THẤY NGAY",
+  "XE CHÁO TRAI / XANH LÈ",
+  "SỐ 29A / NGÕ GỐC BỒ ĐỀ",
+  "TỔ 13 TƯƠNG MAI",
+  "GHẾ NHỰA VỈA HÈ",
+  "ĐỨA NÀO CHÊ / THÌ VỀ MÀ ĂN",
+  "NHÀ HÀNG 5 SAO",
+  "NHÌN TAO SOI NÀY",
+  "RAU THƠM THÁI SẴN",
+  "TRAI XÀO ĐỂ RIÊNG",
+  "CHÁO MÚC TỪ / NỒI TO ĐÙNG RA",
+  "RẮC RAU, RẮC HÀNH",
+  "LÀM TẠI CHỖ, / MÚC XONG BƯNG RA LUÔN",
+  "KHÔNG PHẢI CHỜ",
+  "BƯNG RA RỒI ĐÂY",
+  "CHÁO NÓNG HỔI, / HÚP MỘT THÌA",
+  "NGỌT THỈU!",
+  "QUẨY CHẤM NGẬP / CHÁO, ĐÚNG BÀI",
+  "15K CẢ CHÁO / LẪN QUẨY",
+  "MÀ CÒN KÊU ĐẮT",
+  "THÌ ĐỪNG CÓ / ĐI ĂN VỚI TAO",
+  "QUÁN BÁN CẢ / SÁNG LẪN CHIỀU TỐI",
+  "SÁNG LÓT DẠ, / TỐI ĐÓI GHÉ LÀM BÁT",
+  "HẾT ĐƯỜNG / LẤY CỚ NHÁ",
+  "TAO VÉT SẠCH BÁT, / CHẤM 9 ĐIỂM",
+  "TRỪ MỘT ĐIỂM VÌ / ĂN XONG VẪN MUỐN",
+  "GỌI BÁT NỮA",
+  "COMMENT CHO TAO BIẾT",
+  "HÀ NỘI CÒN CHỖ NÀO / 15K NGON HƠN KHÔNG?",
+  "LƯU LẠI, TAG ĐỨA / BẠN HAY KÊU NGHÈO",
+  "29A NGÕ GỐC BỒ ĐỀ, / TƯƠNG MAI",
+  "15K ĐẤY, / NGHE CHƯA!"
+ ],
+ "callouts": [
+  {
+   "kind": "intro",
+   "startMs": 300,
+   "endMs": 3800,
+   "title": "CHÁO TRAI 15K",
+   "subtitle": "Rẻ vô lý chưa?"
+  },
+  {
+   "kind": "route",
+   "startMs": 10800,
+   "endMs": 14000,
+   "title": "NGÕ GỐC BỒ ĐỀ",
+   "subtitle": "Tương Mai · Hà Nội"
+  },
+  {
+   "kind": "food",
+   "startMs": 21600,
+   "endMs": 23600,
+   "title": "TRAI XÀO RIÊNG"
+  },
+  {
+   "kind": "food",
+   "startMs": 29100,
+   "endMs": 31200,
+   "title": "NGỌT THỈU!"
+  },
+  {
+   "kind": "food",
+   "startMs": 32700,
+   "endMs": 35700,
+   "title": "15K CẢ QUẨY"
+  },
+  {
+   "kind": "route",
+   "startMs": 35900,
+   "endMs": 40400,
+   "title": "BÁN SÁNG + CHIỀU TỐI"
+  },
+  {
+   "kind": "food",
+   "startMs": 41400,
+   "endMs": 44200,
+   "title": "CHẤM 9/10"
+  },
+  {
+   "kind": "cta",
+   "startMs": 47300,
+   "endMs": 53000,
+   "title": "CHÁO TRAI",
+   "addressMain": "29A NGÕ GỐC BỒ ĐỀ",
+   "addressRest": "Tổ 13 · Tương Mai · Hà Nội"
+  }
+ ],
+ "sfx": [
+  {
+   "atMs": 0,
+   "file": "sfx/cc0/whoosh-ui.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 300,
+   "file": "sfx/cc0/rise-maximize.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 10800,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 10800,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 21600,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 29100,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 32700,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 35900,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 35900,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 41400,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 47300,
+   "file": "sfx/cc0/select-chime.wav",
+   "volume": 0.8
+  }
+ ]
+}

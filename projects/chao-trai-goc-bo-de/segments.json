@@ -1,0 +1,182 @@
+{
+ "_note": "Canh theo doan giong: anchor = chi so tu bat dau doan; src = [ms bat dau, ms ket thuc] tren work/clip-0073/all.mp4 (ghep 0073..0080 proxy 30fps). Thoi luong doan = moc giong; toc do canh = src/out.",
+ "endMs": 53000,
+ "segments": [
+  {
+   "anchor": 0,
+   "note": "hook - bat chao + dia quay (0077)",
+   "src": [
+    [
+     73000,
+     77000
+    ]
+   ]
+  },
+  {
+   "anchor": 17,
+   "note": "50K van doi - cham quay (0077)",
+   "src": [
+    [
+     79500,
+     82100
+    ]
+   ]
+  },
+  {
+   "anchor": 30,
+   "note": "chui ngo loi cho (0079)",
+   "src": [
+    [
+     107000,
+     111200
+    ]
+   ]
+  },
+  {
+   "anchor": 51,
+   "note": "hang vang, hang ca kho (0079, 0080)",
+   "src": [
+    [
+     111500,
+     113300
+    ],
+    [
+     116800,
+     118300
+    ]
+   ]
+  },
+  {
+   "anchor": 67,
+   "note": "xe chao trai xanh, 29A (0080, 0073)",
+   "src": [
+    [
+     119800,
+     121800
+    ],
+    [
+     200,
+     1800
+    ]
+   ]
+  },
+  {
+   "anchor": 82,
+   "note": "ghe nhua via he (0073)",
+   "src": [
+    [
+     4000,
+     7100
+    ]
+   ]
+  },
+  {
+   "anchor": 97,
+   "note": "rau thom, trai xao (0074)",
+   "src": [
+    [
+     13800,
+     15600
+    ],
+    [
+     21000,
+     22200
+    ]
+   ]
+  },
+  {
+   "anchor": 109,
+   "note": "muc chao tu noi (0074)",
+   "src": [
+    [
+     28000,
+     30200
+    ]
+   ]
+  },
+  {
+   "anchor": 120,
+   "note": "muc vao bat (0074)",
+   "src": [
+    [
+     33000,
+     35400
+    ]
+   ]
+  },
+  {
+   "anchor": 131,
+   "note": "bung ra, bat tren ban (0075)",
+   "src": [
+    [
+     45500,
+     48400
+    ]
+   ]
+  },
+  {
+   "anchor": 143,
+   "note": "quay cham ngap chao (0077)",
+   "src": [
+    [
+     84000,
+     85500
+    ]
+   ]
+  },
+  {
+   "anchor": 149,
+   "note": "15K ca quay (0077)",
+   "src": [
+    [
+     85600,
+     88700
+    ]
+   ]
+  },
+  {
+   "anchor": 165,
+   "note": "ban sang + chieu toi - xe chao (0073)",
+   "src": [
+    [
+     7200,
+     12000
+    ]
+   ]
+  },
+  {
+   "anchor": 185,
+   "note": "vet sach bat (0078)",
+   "src": [
+    [
+     97500,
+     101200
+    ]
+   ]
+  },
+  {
+   "anchor": 203,
+   "note": "comment - bat chao (0076)",
+   "src": [
+    [
+     64000,
+     67100
+    ]
+   ]
+  },
+  {
+   "anchor": 216,
+   "note": "CTA (0076, 0077)",
+   "src": [
+    [
+     67300,
+     71900
+    ],
+    [
+     89000,
+     90000
+    ]
+   ]
+  }
+ ]
+}

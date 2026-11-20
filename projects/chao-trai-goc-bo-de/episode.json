@@ -1,0 +1,19 @@
+{
+ "title": "Cháo trai 29A ngõ Gốc Bồ Đề, tổ 13, Tương Mai, Hà Nội — 15K cả quẩy (mẫu Gelexia)",
+ "info": {"price": "15K/bát kèm đĩa quẩy (người dùng xác nhận)", "hours": "bán cả sáng lẫn chiều tối (người dùng xác nhận)", "address": "29A ngõ Gốc Bồ Đề, tổ 13, Tương Mai, Hà Nội"},
+ "inputs": [
+  {"role": "footage", "path": "work/clip-0073/IMG_0073..0080.mov", "drive_folder_id": "1AV1NGjYxLesLxaVOzHus9FrYDrfqr4H_", "library_file_id": "drive:1qmfTCsaWTeY57uShKP_-Jf0q4fOrBvOy,1s__4aHC4zG416D847IixR6aZCeMQo5w8,1Y4RQ4ABAvgev8cJX57SBhQIbxPC3VKhT,1LgLR0p35qKe7vL_jRkzdSBscxE0OkAHS,1jH_lsHBX_r7sjGTr6mN63Yr_xDFZIruu,1nKUafl-9scoFH0D82VFTdPhhOISQcEki,1S6TQtFn1837KDxHBb2EVodWkYk6ONhxb,1vovAyDcjDMaSCc9zvZhY1IiXl-y-hlXe"},
+  {"role": "voice", "path": "public/inputs/chao-trai/voice.mp3", "note": "ElevenLabs An Vu 52,4s, người dùng gửi qua upload 20/11"}
+ ],
+ "derived": [
+  {"path": "work/clip-0073/all.mp4", "rebuild": "ffmpeg mỗi clip scale=1080:1920,fps=30 H.264 -> concat 0073..0080"},
+  {"path": "projects/chao-trai-goc-bo-de/plan.json + words.json", "rebuild_script": "node scripts/gelexia/build-shots.mjs projects/chao-trai-goc-bo-de"},
+  {"path": "public/inputs/chao-trai/base.mp4", "rebuild_script": "node scripts/gelexia/build-base.mjs projects/chao-trai-goc-bo-de/plan.json work/clip-0073/all.mp4 public/inputs/chao-trai/base.mp4 53000 60"},
+  {"path": "projects/chao-trai-goc-bo-de/project.json", "rebuild_script": "node scripts/gelexia/build-gelexia-project.mjs projects/chao-trai-goc-bo-de/gelexia-spec.json"}
+ ],
+ "outputs": ["out/chao-trai-goc-bo-de.mp4", "out/chao-trai-goc-bo-de-chay-chu.mp4"],
+ "shots": "segments.json (neo theo chỉ số từ giọng) -> plan.json",
+ "audio": {"speed": 1, "original": "tắt", "sfx": "sfx[] trong gelexia-spec.json (CC0 theo vai trò, nhãn đường thêm powerup)"},
+ "decisions": ["Full HD 1080x1920@60 theo yêu cầu", "Không nhạc nền (mẫu Gelexia)", "Callout không lặp nguyên văn phụ đề"],
+ "render": "npx remotion render src/index.ts GelexiaEdit out/... --props=projects/chao-trai-goc-bo-de/props.json | props-wbw.json"
+}

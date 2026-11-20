@@ -9,7 +9,7 @@ import { AbsoluteFill, Easing, interpolate, useCurrentFrame, useVideoConfig } fr
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const out3 = Easing.bezier(0.33, 1, 0.68, 1);
 const back = Easing.bezier(0.34, 1.56, 0.64, 1);
-export const GOLD = "#5db4ff", GOLD_HI = "#eef8ff", NAVY = "rgba(4,14,34,0.84)" /* tone XANH DUONG + TRANG (ten bien giu nguyen) */, SERIF = "Playfair Display", SANS = "Be Vietnam Pro";
+export const GOLD = "#7fe8dc", GOLD_HI = "#f2fffd", NAVY = "rgba(3,26,28,0.84)" /* tone XANH DUONG + TRANG (ten bien giu nguyen) */, SERIF = "Playfair Display", SANS = "Be Vietnam Pro";
 
 const useLocal = () => {
   const f = useCurrentFrame();
@@ -32,8 +32,8 @@ export const Blueprint: React.FC<{ dim?: number }> = ({ dim = 0.62 }) => {
   const { o } = useInOut(0.3);
   return (
     <AbsoluteFill style={{ opacity: o }}>
-      <AbsoluteFill style={{ backdropFilter: "blur(14px)", background: `rgba(4,10,24,${dim})` }} />
-      <AbsoluteFill style={{ opacity: 0.18, backgroundImage: "linear-gradient(rgba(93,180,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(93,180,255,0.5) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
+      <AbsoluteFill style={{ backdropFilter: "blur(14px)", background: `rgba(2,20,22,${dim})` }} />
+      <AbsoluteFill style={{ opacity: 0.18, backgroundImage: "linear-gradient(rgba(95,230,215,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(95,230,215,0.5) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
     </AbsoluteFill>
   );
 };
@@ -43,18 +43,18 @@ const Label: React.FC<{ x: number; y: number; s: string; size?: number; color?: 
 );
 const Num: React.FC<{ x: number; y: number; s: string; size?: number; o?: number; sc?: number }> = ({ x, y, s, size = 90, o = 1, sc = 1 }) => (
   <g transform={`translate(${x} ${y}) scale(${sc})`} opacity={o}>
-    <defs><linearGradient id="ng" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={GOLD_HI} /><stop offset="0.5" stopColor={GOLD} /><stop offset="1" stopColor="#1c5cd4" /></linearGradient></defs>
-    <text textAnchor="middle" dominantBaseline="central" fill="url(#ng)" stroke="url(#ng)" strokeWidth={size * 0.025} style={{ fontFamily: SERIF, fontWeight: 900, fontSize: size, filter: `drop-shadow(0 0 ${size * 0.18}px rgba(80,170,255,0.55)) drop-shadow(0 4px 6px rgba(0,0,0,0.7))` }}>{s}</text>
+    <defs><linearGradient id="ng" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={GOLD_HI} /><stop offset="0.5" stopColor={GOLD} /><stop offset="1" stopColor="#20a99e" /></linearGradient></defs>
+    <text textAnchor="middle" dominantBaseline="central" fill="url(#ng)" stroke="url(#ng)" strokeWidth={size * 0.025} style={{ fontFamily: SERIF, fontWeight: 900, fontSize: size, filter: `drop-shadow(0 0 ${size * 0.18}px rgba(80,230,210,0.55)) drop-shadow(0 4px 6px rgba(0,0,0,0.7))` }}>{s}</text>
   </g>
 );
 
 /** mui ten chay (gio): duong + dau mui, dash chay theo t */
-const Flow: React.FC<{ d: string; t: number; color?: string; o?: number }> = ({ d, t, color = "#9be7ff", o = 1 }) => (
+const Flow: React.FC<{ d: string; t: number; color?: string; o?: number }> = ({ d, t, color = "#a5f5ea", o = 1 }) => (
   <g opacity={o}>
     <path d={d} fill="none" stroke={color} strokeWidth={5} strokeLinecap="round" strokeDasharray="22 16" strokeDashoffset={-t * 120} markerEnd="url(#arw)" />
   </g>
 );
-const ArrowDef: React.FC<{ color?: string }> = ({ color = "#9be7ff" }) => (
+const ArrowDef: React.FC<{ color?: string }> = ({ color = "#a5f5ea" }) => (
   <defs><marker id="arw" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill={color} /></marker></defs>
 );
 
@@ -80,8 +80,8 @@ const PlanBase: React.FC<{ t: number; cx: number; L: { x: number; y: number; w: 
       <Label x={(150 + L.x) / 2} y={L.y + L.h / 2} s="LIỀN KỀ" size={24} color="rgba(255,255,255,0.75)" rot={-90} o={lin(t, 0.4, 0.9)} />
       {/* xe khe ben PHAI (doi dien lien ke) */}
       <g opacity={showKhe}>
-        <rect x={R} y={L.y} width={khe} height={L.h} fill="rgba(120,220,255,0.22)" stroke="#9be7ff" strokeWidth={2} strokeDasharray="6 6" />
-        <Label x={R + khe * 0.36} y={L.y + L.h / 2} s="XẺ KHE 3M" size={24} color="#9be7ff" rot={90} />
+        <rect x={R} y={L.y} width={khe} height={L.h} fill="rgba(120,240,225,0.22)" stroke="#a5f5ea" strokeWidth={2} strokeDasharray="6 6" />
+        <Label x={R + khe * 0.36} y={L.y + L.h / 2} s="XẺ KHE 3M" size={24} color="#a5f5ea" rot={90} />
         {R + khe < 930 ? <rect x={R + khe} y={L.y} width={930 - R - khe} height={L.h} fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.4)" strokeDasharray="8 8" strokeWidth={2} /> : null}
       </g>
     </>
@@ -102,10 +102,10 @@ export const SitePlan: React.FC<{ area: number }> = ({ area }) => {
     <AbsoluteFill style={{ opacity: o, transform: `scale(${s})` }}>
       <svg width={width} height={1920} style={{ position: "absolute", inset: 0 }}>
         <PlanBase t={t} cx={cx} L={L} khe={90} showKhe={lin(t, 1.8, 2.3)} />
-        <rect x={L.x} y={L.y} width={L.w} height={L.h} fill={`rgba(93,180,255,${0.22 * draw})`} stroke={GOLD} strokeWidth={6} strokeDasharray={per} strokeDashoffset={per * (1 - draw)} style={{ filter: "drop-shadow(0 0 12px rgba(80,170,255,0.8))" }} />
+        <rect x={L.x} y={L.y} width={L.w} height={L.h} fill={`rgba(95,230,215,${0.22 * draw})`} stroke={GOLD} strokeWidth={6} strokeDasharray={per} strokeDashoffset={per * (1 - draw)} style={{ filter: "drop-shadow(0 0 12px rgba(80,230,210,0.8))" }} />
         {/* 2 canh mat tien sang len: truoc (duoi) + sau (tren) */}
-        <line x1={L.x} y1={L.y + L.h} x2={L.x + L.w * edge(1.2)} y2={L.y + L.h} stroke={GOLD_HI} strokeWidth={14} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 14px #8ccaff)" }} opacity={edge(1.2) > 0 ? 1 : 0} />
-        <line x1={L.x} y1={L.y} x2={L.x + L.w * edge(1.45)} y2={L.y} stroke={GOLD_HI} strokeWidth={14} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 14px #8ccaff)" }} opacity={edge(1.45) > 0 ? 1 : 0} />
+        <line x1={L.x} y1={L.y + L.h} x2={L.x + L.w * edge(1.2)} y2={L.y + L.h} stroke={GOLD_HI} strokeWidth={14} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 14px #8ff2e6)" }} opacity={edge(1.2) > 0 ? 1 : 0} />
+        <line x1={L.x} y1={L.y} x2={L.x + L.w * edge(1.45)} y2={L.y} stroke={GOLD_HI} strokeWidth={14} strokeLinecap="round" style={{ filter: "drop-shadow(0 0 14px #8ff2e6)" }} opacity={edge(1.45) > 0 ? 1 : 0} />
         <Label x={L.x + L.w / 2} y={L.y + 60} s="SB-145" size={34} color={GOLD_HI} o={lin(t, 0.8, 1.2)} />
         <Label x={L.x + L.w / 2} y={L.y + 150} s="DIỆN TÍCH ĐẤT" size={26} o={lin(t, 0.9, 1.3)} />
         <Num x={L.x + L.w / 2} y={L.y + 250} s={`${fmt(n)} m²`} size={80} o={lin(t, 0.9, 1.2)} />
@@ -132,8 +132,8 @@ export const FloorStack: React.FC<{ total: number; floors?: number }> = ({ total
     const right = `M ${cx + w} ${y} L ${cx} ${y + d / 2} L ${cx} ${y + d / 2 + 26} L ${cx + w} ${y + 26} Z`;
     return (
       <g key={i} opacity={a}>
-        <path d={left} fill="#174a9e" /><path d={right} fill="#0f3576" />
-        <path d={top} fill={`rgba(93,180,255,${0.35 + 0.1 * i})`} stroke={GOLD_HI} strokeWidth={2.5} />
+        <path d={left} fill="#16756e" /><path d={right} fill="#0e514c" />
+        <path d={top} fill={`rgba(95,230,215,${0.35 + 0.1 * i})`} stroke={GOLD_HI} strokeWidth={2.5} />
       </g>
     );
   };
@@ -164,16 +164,16 @@ export const XeKhe: React.FC = () => {
       <svg width={width} height={1920} style={{ position: "absolute", inset: 0 }}>
         <ArrowDef />
         <PlanBase t={t + 2} cx={cx} L={L} khe={khe} showKhe={lin(t, 0.4, 0.8)} />
-        <rect x={L.x} y={L.y} width={L.w} height={L.h} fill="rgba(93,180,255,0.28)" stroke={GOLD} strokeWidth={6} style={{ filter: "drop-shadow(0 0 12px rgba(80,170,255,0.8))" }} />
+        <rect x={L.x} y={L.y} width={L.w} height={L.h} fill="rgba(95,230,215,0.28)" stroke={GOLD} strokeWidth={6} style={{ filter: "drop-shadow(0 0 12px rgba(80,230,210,0.8))" }} />
         <Label x={L.x + L.w / 2} y={L.y + L.h / 2} s="SB-145" size={40} color={GOLD_HI} />
         {/* cua so ben hong */}
-        {[0, 1, 2].map((i) => <rect key={i} x={R - 5} y={L.y + 70 + i * 120} width={10} height={60} fill="#9be7ff" opacity={fl} />)}
+        {[0, 1, 2].map((i) => <rect key={i} x={R - 5} y={L.y + 70 + i * 120} width={10} height={60} fill="#a5f5ea" opacity={fl} />)}
         {/* gio doc khe: tu duong truoc -> duong sau */}
         <Flow d={`M ${kx} ${L.y + L.h + 20} L ${kx} ${L.y - 20}`} t={t} o={fl} />
         {/* gio re vao nha qua cua so hong */}
         {[0, 1, 2].map((i) => <Flow key={i} d={`M ${R + khe * 0.85} ${L.y + 140 + i * 120} Q ${R + 10} ${L.y + 100 + i * 120} ${R - 70} ${L.y + 100 + i * 120}`} t={t + i * 0.2} o={lin(t, 1.6 + i * 0.15, 2.0 + i * 0.15)} />)}
         {/* kich thuoc 3M */}
-        <g opacity={pop(t, 2.2)} transform={`translate(${cx} ${L.y + L.h + 330})`}><rect x={-370} y={-40} width={740} height={80} rx={40} fill={NAVY} stroke="#9be7ff" strokeWidth={3} /><Label x={0} y={0} s="THOÁNG · SÁNG 3 MẶT: TRƯỚC – SAU – HÔNG" size={28} color="#9be7ff" /></g>
+        <g opacity={pop(t, 2.2)} transform={`translate(${cx} ${L.y + L.h + 330})`}><rect x={-370} y={-40} width={740} height={80} rx={40} fill={NAVY} stroke="#a5f5ea" strokeWidth={3} /><Label x={0} y={0} s="THOÁNG · SÁNG 3 MẶT: TRƯỚC – SAU – HÔNG" size={28} color="#a5f5ea" /></g>
       </svg>
     </AbsoluteFill>
   );
@@ -188,7 +188,7 @@ export const RoadSection: React.FC<{ y?: number; parts: Array<[string, number, "
   return (
     <AbsoluteFill style={{ opacity: o, transform: `scale(${s})`, transformOrigin: `50% ${y}px` }}>
       <svg width={width} height={1920} style={{ position: "absolute", inset: 0 }}>
-        <rect x={x0 - 30} y={y - 120} width={W + 60} height={250} rx={24} fill={NAVY} stroke="rgba(93,180,255,0.6)" strokeWidth={2} />
+        <rect x={x0 - 30} y={y - 120} width={W + 60} height={250} rx={24} fill={NAVY} stroke="rgba(95,230,215,0.6)" strokeWidth={2} />
         {parts.map(([lab, m, k], i) => {
           const w = (W * m) / total, x = acc; acc += w;
           const a = pop(t, 0.1 + i * 0.25);
@@ -220,11 +220,11 @@ export const CompareBars: React.FC<{ ours: string; badgeAt?: number }> = ({ ours
         <rect x={cx - 300} y={base - h1} width={240} height={h1} rx={14} fill="rgba(255,255,255,0.22)" stroke="rgba(255,255,255,0.6)" strokeWidth={3} />
         <Label x={cx - 180} y={base + 46} s="CĂN CẮT LỖ SÂU" size={28} />
         <Label x={cx - 180} y={base + 84} s="trên thị trường" size={24} w={600} color="rgba(255,255,255,0.8)" />
-        <rect x={cx + 60} y={base - h2} width={240} height={h2} rx={14} fill="rgba(93,180,255,0.55)" stroke={GOLD_HI} strokeWidth={4} style={{ filter: "drop-shadow(0 0 16px rgba(80,170,255,0.7))" }} />
+        <rect x={cx + 60} y={base - h2} width={240} height={h2} rx={14} fill="rgba(95,230,215,0.55)" stroke={GOLD_HI} strokeWidth={4} style={{ filter: "drop-shadow(0 0 16px rgba(80,230,210,0.7))" }} />
         <Label x={cx + 180} y={base + 46} s="SB-145" size={32} color={GOLD_HI} />
         <Num x={cx + 180} y={base - h2 - 70} s={ours} size={64} o={lin(t, 1.2, 1.5)} />
         <g opacity={pop(t, badgeAt)} transform={`translate(${cx} 560) rotate(-4)`}>
-          <rect x={-190} y={-56} width={380} height={112} rx={20} fill="#1f6fe0" />
+          <rect x={-190} y={-56} width={380} height={112} rx={20} fill="#17a196" />
           <text textAnchor="middle" dominantBaseline="central" fill="#fff" style={{ fontFamily: SANS, fontWeight: 900, fontSize: 64 }}>RẺ HƠN</text>
         </g>
       </svg>
@@ -241,7 +241,7 @@ export const PriceDrop: React.FC<{ from: string; chips: Array<[string, number]>;
   return (
     <AbsoluteFill style={{ opacity: o, transform: `scale(${s})`, transformOrigin: `50% ${y}px` }}>
       <svg width={width} height={1920} style={{ position: "absolute", inset: 0 }}>
-        {panel ? <rect x={150} y={y - 170} width={780} height={330 + chips.length * 0} rx={28} fill={NAVY} stroke="rgba(93,180,255,0.6)" strokeWidth={2} /> : null}
+        {panel ? <rect x={150} y={y - 170} width={780} height={330 + chips.length * 0} rx={28} fill={NAVY} stroke="rgba(95,230,215,0.6)" strokeWidth={2} /> : null}
         <g opacity={1 - 0.45 * strike}>
           <text x={cx} y={y - 95} textAnchor="middle" dominantBaseline="central" fill="#fff" style={{ fontFamily: SERIF, fontWeight: 900, fontSize: 76 }}>{from}</text>
           <line x1={cx - 230} y1={y - 95} x2={cx - 230 + 460 * strike} y2={y - 95} stroke="#ff4d4d" strokeWidth={9} strokeLinecap="round" />
@@ -251,7 +251,7 @@ export const PriceDrop: React.FC<{ from: string; chips: Array<[string, number]>;
           const x = cx + (i - (chips.length - 1) / 2) * 330;
           return (
             <g key={i} opacity={a} transform={`translate(${x} ${y - 5}) scale(${0.6 + 0.4 * a})`}>
-              <rect x={-155} y={-34} width={310} height={68} rx={34} fill="#1f6fe0" />
+              <rect x={-155} y={-34} width={310} height={68} rx={34} fill="#17a196" />
               <text textAnchor="middle" dominantBaseline="central" fill="#fff" style={{ fontFamily: SANS, fontWeight: 900, fontSize: 30 }}>{c}</text>
             </g>
           );

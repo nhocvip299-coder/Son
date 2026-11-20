@@ -35,7 +35,8 @@ export const PALETTE = {
   // font B nguoi dung chon (du an OCP2): serif Playfair vang champagne
   serif: { font: "Playfair Display", weight: 900, top: "#fff4d6", mid: "#e8c26e", bot: "#a8742a", glow: "#ffd98a", shade: "#2a1804", upper: true },
   // XANH DUONG + TRANG (tone nguoi dung chon cho du an OCP2): serif Playfair xanh, dong dan trang
-  blue: { font: "Playfair Display", weight: 900, top: "#f0f9ff", mid: "#66baff", bot: "#1d5ed4", glow: "#4aa3ff", shade: "#021430", upper: true },
+  // XANH NGOC SANG NHE (tone nguoi dung chon cho OCP2; ten giu "blue")
+  blue: { font: "Playfair Display", weight: 900, top: "#f2fffd", mid: "#7fe8dc", bot: "#20a99e", glow: "#5ee8d8", shade: "#02201d", upper: true },
   white: { font: "Be Vietnam Pro", weight: 900, top: "#ffffff", mid: "#ffffff", bot: "#e9ecef", glow: "#ffffff", shade: "#000000", upper: false },
 } as const;
 export type Palette = keyof typeof PALETTE;
@@ -90,7 +91,7 @@ export const StackText: React.FC<{
           </linearGradient>
           <filter id={`gl-${id}`} x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="14" /></filter>
           <filter id={`sd-${id}`} x="-20%" y="-40%" width="140%" height="180%"><feGaussianBlur stdDeviation="7" /></filter>
-          <linearGradient id={`ex-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#2a6fd6" /><stop offset="1" stopColor="#0a2763" /></linearGradient>
+          <linearGradient id={`ex-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#1f9e94" /><stop offset="1" stopColor="#0a4a46" /></linearGradient>
           <filter id={`bd-${id}`} x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="22" /></filter>
           <linearGradient id={`gs-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff" stopOpacity={0.75} /><stop offset="0.42" stopColor="#fff" stopOpacity={0.12} /><stop offset="0.5" stopColor="#fff" stopOpacity={0} /></linearGradient>
         </defs>
@@ -127,7 +128,7 @@ export const StackText: React.FC<{
           return (
             <g key={i} transform={`translate(${cx + k.tx} ${ys[i] + k.ty}) rotate(${k.rot}) scale(${k.sx} ${k.sy})${skew}`} opacity={k.opacity} style={k.blur > 0.2 ? { filter: `blur(${k.blur}px)` } : undefined}>
               {/* NOI BAT: nen toi mem sau dong chinh (khong khung) -> chu bat len tren moi nen */}
-              {isMain ? <g filter={`url(#bd-${id})`} opacity={0.28}>{T("#000814", { stroke: "#000814", strokeWidth: fs * 0.35, strokeLinejoin: "round" })}</g> : null}
+              {isMain ? <g filter={`url(#bd-${id})`} opacity={0.28}>{T("#001412", { stroke: "#001412", strokeWidth: fs * 0.35, strokeLinejoin: "round" })}</g> : null}
               {/* bong toi mem -> doc ro tren nen sang (troi, tuong vang) */}
               <g filter={`url(#sd-${id})`} opacity={isMain ? 0.7 : 0.85} transform="translate(0 5)">{T(P.shade)}</g>
               {glow > 0.01 ? <g filter={`url(#gl-${id})`} opacity={glow}>{T(P.glow)}</g> : null}
@@ -137,7 +138,7 @@ export const StackText: React.FC<{
               )) : null}
               {isMain ? T(`url(#mg-${id})`, { stroke: `url(#mg-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round", paintOrder: "stroke" }) : script
                 // chu viet tay: trang, VIEN TOI DAY + bong -> tach han khoi chu khoi phia sau
-                ? T("#ffffff", { stroke: "#0b2a5c", strokeWidth: fs * 0.05, strokeLinejoin: "round", paintOrder: "stroke" })
+                ? T("#ffffff", { stroke: "#0b3d3a", strokeWidth: fs * 0.05, strokeLinejoin: "round", paintOrder: "stroke" })
                 : T("#ffffff", { stroke: "#ffffff", strokeWidth: fs * 0.022, strokeLinejoin: "round" })}
               {isMain && palette !== "white" ? T(`url(#gs-${id})`) : null}
               {isMain && palette !== "white" ? (() => {

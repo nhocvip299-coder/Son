@@ -3,7 +3,7 @@ import { AbsoluteFill, Freeze, OffthreadVideo, Sequence, staticFile, useVideoCon
 import { Audio } from "@remotion/media";
 import { SfxTrack } from "../../compositions/shared";
 import type { SfxCue } from "../../lib/theme";
-import { GlassCard, GlassPage, GoldNumber, LightBurst, NeonTitle, PersonFront, PhonePill, PriceDrop, TealOrange, ThinBig, VESM_SFX } from "../../../skills/video-edit-style-master/components";
+import { TextTheme, GlassCard, GlassPage, GoldNumber, LightBurst, NeonTitle, PersonFront, PhonePill, PriceDrop, TealOrange, ThinBig, VESM_SFX } from "../../../skills/video-edit-style-master/components";
 import { alignCues } from "../../../skills/video-edit-style-master/presets/style";
 import { CompareBars, FloorStack, SitePlan, XeKhe } from "../bdsLuxury/explain";
 import { KxMap } from "../bdsLuxury/mauKinhXanh";
@@ -35,7 +35,7 @@ export const Sb145Vesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem =
   const Seq: React.FC<{ a: number; b: number; children: React.ReactNode }> = ({ a, b, children }) => <Sequence from={s(a)} durationInFrames={s(b - a)}>{children}</Sequence>;
   const front = (a: number) => <PersonFront matte={MATTE} from={a} filter={GRADE} />;
   return (
-    <AbsoluteFill style={{ backgroundColor: "#000" }}>
+    <TextTheme value="aqua"><AbsoluteFill style={{ backgroundColor: "#000" }}>
       <TealOrange k={0.6}>
         <Sequence durationInFrames={s(81.1)}><OffthreadVideo src={staticFile(SRC)} muted={stem === "sfx"} volume={stem === "sfx" ? 0 : 1} /></Sequence>
         <Sequence from={s(81.1)}><Freeze frame={s(81.1) - 2}><OffthreadVideo src={staticFile(SRC)} muted /></Freeze></Sequence>
@@ -90,6 +90,6 @@ export const Sb145Vesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem =
 
       {stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.08} loop /> : null}
       {stem === "voice" ? null : <SfxTrack cues={alignCues(CUES, fps) as SfxCue[]} />}
-    </AbsoluteFill>
+    </AbsoluteFill></TextTheme>
   );
 };

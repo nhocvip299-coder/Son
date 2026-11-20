@@ -31,6 +31,9 @@ description: Dựng video BĐS dọc 9:16 theo phong cách "trang kính teal + c
 | câu đệm | none | để khung sạch |
 Tất cả nhận dữ liệu qua props, tự thu chữ vào 740 px (vùng an toàn), màu/font/thời gian ở `presets/style.ts`.
 
+## Bảng màu chữ
+`<TextTheme value="neon">` (mặc định, mẫu kính xanh: cyan + vàng) hoặc `"aqua"` (mẫu xanh điện quang, reference/mau-upload-2: gradient chéo #13489c↔#16fff4, chữ ký trắng). SB-145 dùng "aqua".
+
 ## Kiểm chứng
 `npx remotion render VesmVerify out/vesm-verify.mp4` — dựng lại 0–22,5 s của mẫu; `out/vesm-so-sanh-mau-vs-dung.mp4` để so cạnh nhau. Test luật: `node --experimental-strip-types --test skills/video-edit-style-master/tests/rules.test.ts`.
 

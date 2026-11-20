@@ -10,3 +10,4 @@ export { ThinBig } from "./Thin";
 export { PersonFront } from "./PersonFront";
 export { VESM, VESM_SFX } from "../presets/style";
 export { pickCue, type Cue } from "../presets/rules";
+export { TextTheme, type TextThemeName } from "./core";

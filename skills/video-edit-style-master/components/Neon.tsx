@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, interpolate } from "remotion";
 import { VESM } from "../presets/style";
-import { CL, exitK, fitSize, outCubic, textW, useLocal } from "./core";
+import { AquaGrad, CL, exitK, fitSize, outCubic, textW, useLocal, useTextTheme } from "./core";
 
 /**
  * Chữ NEON cyan đứng hẹp IN HOA, hiện TỪNG KÝ TỰ (nhấp nháy như đèn) trong ~0,4 s + chữ ký trắng viết dần.
@@ -14,6 +14,7 @@ export const NeonTitle: React.FC<{
   lead?: string; size?: number; at?: number; color?: string;
 }> = ({ id, main, cy, script, scriptPos = "below", scriptColor = VESM.color.script, lead, size = VESM.size.neon, at = 0.1, color = VESM.color.neon }) => {
   const { t, dur, width, height } = useLocal();
+  const aqua = useTextTheme() === "aqua";
   const M = main.toUpperCase();
   const fs = fitSize(M, VESM.font.block, VESM.font.blockWeight, size);
   const chars = [...M];
@@ -39,14 +40,15 @@ export const NeonTitle: React.FC<{
           <linearGradient id={`nf-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={VESM.color.neonCore} /><stop offset="0.55" stopColor={color} /><stop offset="1" stopColor={color} /></linearGradient>
           <clipPath id={`nc-${id}`}><rect x={sx - sw / 2 - 20} y={sy - ss} width={(sw + 40) * wS} height={ss * 2} /></clipPath>
         </defs>
-        {lead ? <text x={width / 2} y={cy - fs * 0.78} textAnchor="middle" dominantBaseline="central" fill="#fff" opacity={la} style={{ fontFamily: VESM.font.sans, fontWeight: 500, fontSize: VESM.size.lead, filter: "drop-shadow(0 2px 3px rgba(0,0,0,0.75))" }}>{lead}</text> : null}
-        {Row({ fill: color, filter: `url(#nw-${id})`, opacity: 0.85 }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
-        {Row({ fill: color, filter: `url(#nn-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
-        {Row({ fill: `url(#nf-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
+        {lead ? <text x={width / 2} y={cy - fs * 0.78} textAnchor="middle" dominantBaseline="central" fill="#fff" opacity={la} style={{ fontFamily: VESM.font.sans, fontWeight: 600, fontSize: VESM.size.lead, filter: "drop-shadow(0 2px 2px rgba(0,0,28,0.9)) drop-shadow(0 0 10px rgba(0,0,28,0.6))" }}>{lead}</text> : null}
+        {aqua ? <AquaGrad id={`aq-${id}`} /> : null}
+        {Row({ fill: aqua ? "#16c8f0" : color, filter: `url(#nw-${id})`, opacity: aqua ? 0.35 : 0.85 }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
+        {aqua ? Row({ fill: "#00001c", stroke: "#00001c", strokeWidth: fs * 0.3, strokeLinejoin: "round", opacity: 0.4, filter: `url(#nw-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>) : Row({ fill: color, filter: `url(#nn-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
+        {Row({ fill: aqua ? `url(#aq-${id})` : `url(#nf-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
         {script ? (
           <g clipPath={`url(#nc-${id})`}>
             <text x={sx} y={sy} textAnchor="middle" dominantBaseline="central" fill={scriptColor} transform={`rotate(-5 ${sx} ${sy})`}
-              style={{ fontFamily: VESM.font.script, fontSize: ss, filter: `drop-shadow(0 0 6px ${scriptColor}cc) drop-shadow(0 2px 3px rgba(0,0,0,0.7))` }}>{script}</text>
+              style={{ fontFamily: VESM.font.script, fontSize: ss, filter: `drop-shadow(0 2px 2px rgba(0,0,28,0.9)) drop-shadow(0 0 10px rgba(0,0,28,0.6)) drop-shadow(0 0 6px ${scriptColor}aa)` }}>{script}</text>
           </g>
         ) : null}
       </svg>

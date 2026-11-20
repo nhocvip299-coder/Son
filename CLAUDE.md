@@ -3,7 +3,7 @@
 Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả lời tiếng Việt, ngắn gọn.
 
 ## Yêu cầu cố định của người dùng (bắt buộc áp dụng)
-- **Mỗi lần dựng/chỉnh sửa video: luôn xuất thêm bản "chạy chữ từng chữ"** (phụ đề hiện từng từ đang nói — `WordByWord` trong `src/styles/textPresets/capcut/`), bên cạnh bản thường.
+- **KHÔNG xuất bản phụ đề "chạy chữ từng chữ"** nữa (người dùng bỏ yêu cầu này, 20/11/2026). Chỉ xuất bản thường; dùng chú thích theo điểm nhấn thay cho phụ đề. `WordByWord` chỉ dùng khi được yêu cầu lại.
 - Chữ hiệu ứng phải giống mẫu CapCut: đủ độ bóng/phát sáng, chuyển động mượt (có vào + thoát), **sound effect phải nghe rõ** trên giọng nói (kiểm bằng đo năng lượng cao tần quanh mốc SFX).
 - **Chữ tuyệt đối phải 4K sắc nét** (video gốc có thể Full HD): luôn render x2 = 2160x3840 (`Config.setScale(2)` + khung PNG), chữ vẽ SVG/text ở cỡ thật, không phóng to ảnh chữ (dùng `zoom`, không `transform: scale` cho preset). Bản xem nhanh cũng giữ 4K, chỉ hạ bitrate.
 - **Chữ không được đè lên người** — đặt trên đầu/vùng trống, kiểm bằng `faces.json`. Chữ sau lưng chỉ dùng khi chữ to thật sự chạm đầu (một phần chìm sau tóc, KHÔNG che mặt), matte người đặc, không khuyết (`person_matte.py` bản mới, 60fps).

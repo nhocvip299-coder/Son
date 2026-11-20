@@ -9,7 +9,7 @@ description: Dựng video BĐS dọc 9:16 theo phong cách "trang kính teal + c
 
 ## Đầu vào → đầu ra
 - Vào: video gốc dọc (1080x1920 hoặc lớn hơn, HEVC/H.264), tuỳ chọn SĐT, tên.
-- Ra: MP4 H.264 1080x1920 9:16, FPS theo nguồn, −14 LUFS; bản xem nhanh ~60 MB; bản "chạy chữ từng chữ" nếu dự án yêu cầu (CLAUDE.md). Chữ render ×2 nếu cần 4K.
+- Ra: MP4 H.264 1080x1920 9:16, FPS theo nguồn, −14 LUFS; bản xem nhanh ~60 MB. KHÔNG xuất phụ đề chạy chữ (người dùng bỏ yêu cầu). Chữ render ×2 nếu cần 4K.
 
 ## Quy trình (đã chạy được trên repo này)
 1. `bash skills/video-edit-style-master/scripts/analyze-video.sh <video> work/<du-an>` → probe, cắt cảnh, dải khung 2 fps, phiên âm `asr/captions.json`. Sửa tên riêng bằng `projects/<du-an>/asr-fixes.json`.

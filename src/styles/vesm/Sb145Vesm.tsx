@@ -15,8 +15,6 @@ import { KxMap } from "../bdsLuxury/mauKinhXanh";
  */
 export const SB145_SEC = 83;
 const SRC = "inputs/du-an-3/goc-1080-hq.mp4";
-const MATTE = "inputs/du-an-3/matte60/person.webm";
-const GRADE = "contrast(1.03) saturate(1.06)";
 const X = VESM_SFX;
 const CUES: Array<[number, string, number]> = [
   [0.05, X.count, 0.6], [0.2, X.count, 0.6], [0.35, X.count, 0.6], [0.55, X.land, 1],
@@ -33,18 +31,19 @@ export const Sb145Vesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem =
   const { fps } = useVideoConfig();
   const s = (x: number) => Math.round(x * fps);
   const Seq: React.FC<{ a: number; b: number; children: React.ReactNode }> = ({ a, b, children }) => <Sequence from={s(a)} durationInFrames={s(b - a)}>{children}</Sequence>;
-  const front = (a: number) => <PersonFront matte={MATTE} from={a} filter={GRADE} />;
+  // matte cắt riêng từ CHÍNH file nguồn (goc-1080-hq) -> điểm ảnh người trùng khít nền; grade áp chung cho cả 2 lớp (bọc ngoài)
+  const front = (a: number, m: string, start: number) => <PersonFront matte={`inputs/du-an-3/${m}/person.webm`} from={a - start} />;
   return (
-    <TextTheme value="aqua"><AbsoluteFill style={{ backgroundColor: "#000" }}>
-      <TealOrange k={0.6}>
+    <TextTheme value="aqua"><AbsoluteFill style={{ backgroundColor: "#000" }}><TealOrange k={0.6}>
+      <AbsoluteFill>
         <Sequence durationInFrames={s(81.1)}><OffthreadVideo src={staticFile(SRC)} muted={stem === "sfx"} volume={stem === "sfx" ? 0 : 1} /></Sequence>
         <Sequence from={s(81.1)}><Freeze frame={s(81.1) - 2}><OffthreadVideo src={staticFile(SRC)} muted /></Freeze></Sequence>
-      </TealOrange>
+      </AbsoluteFill>
 
       {/* HOOK: giá tiền -> số vàng đếm chạy */}
       <Seq a={0} b={2.65}><GoldNumber id="g0" lead="một mét vuông đất · chỉ" value={70} unit="TRIỆU" cy={520} size={210} at={0.05} countDur={0.45} /></Seq>
       {/* TRÁM: cảnh quay thật mặt tiền SB-145 (giây 31 của video gốc) khi nói "căn shophouse 2 mặt tiền" */}
-      <Seq a={2.7} b={6.9}><TealOrange k={0.6}><OffthreadVideo src={staticFile(SRC)} trimBefore={s(31.0)} muted /></TealOrange></Seq>
+      <Seq a={2.7} b={6.9}><OffthreadVideo src={staticFile(SRC)} trimBefore={s(31.0)} muted /></Seq>
       {/* đặc điểm -> neon */}
       <Seq a={3.0} b={5.5}><NeonTitle id="n1" lead="Ngay tại Vinhomes" main="Ocean Park 2" cy={520} size={170} at={0.2} /></Seq>
       <Seq a={5.5} b={8.1}><NeonTitle id="n2" lead="căn shophouse sở hữu" main="2 Mặt Tiền" script="trước – sau" cy={520} size={180} at={0.1} /></Seq>
@@ -53,8 +52,8 @@ export const Sb145Vesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem =
 
       {/* ĐƯỜNG: số mảnh SAU LƯNG người */}
       <Seq a={12.0} b={12.6}><LightBurst /></Seq>
-      <Seq a={15.9} b={17.7}><ThinBig value="20M" lead="trục đường rộng" cy={700} size={420} front={front(15.9)} /></Seq>
-      <Seq a={22.9} b={25.6}><ThinBig value="7M" lead="mặt đường bên này" cy={690} size={440} front={front(22.9)} /></Seq>
+      <Seq a={15.9} b={17.7}><ThinBig value="20M" lead="trục đường rộng" cy={700} size={420} front={front(15.9, "m20", 15.8)} /></Seq>
+      <Seq a={22.9} b={25.6}><ThinBig value="7M" lead="mặt đường bên này" cy={690} size={440} front={front(22.9, "m7", 22.8)} /></Seq>
       <Seq a={25.6} b={26.3}><NeonTitle id="n5" lead="vỉa hè" main="4 mét" cy={520} size={170} at={0.05} /></Seq>
 
       {/* THÔNG SỐ (cảnh toà nhà, không người) */}
@@ -88,6 +87,7 @@ export const Sb145Vesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem =
       <Seq a={78.8} b={83}><NeonTitle id="n14" lead="liên hệ ngay" main="Em Sơn" cy={360} size={190} at={0.2} /></Seq>
       <Seq a={79.0} b={83}><PhonePill phone="0966 312 333" y={0.27} dockAt={99} /></Seq>
 
+      </TealOrange>
       {stem === "all" ? <Audio src={staticFile("music/bed-ambient.wav")} volume={0.08} loop /> : null}
       {stem === "voice" ? null : <SfxTrack cues={alignCues(CUES, fps) as SfxCue[]} />}
     </AbsoluteFill></TextTheme>

@@ -6,6 +6,8 @@ import { AbsoluteFill, OffthreadVideo, Sequence, staticFile, useVideoConfig } fr
  * `matte` = person.webm (VP9 có alpha) tạo bằng `scripts/style/person_matte.py <video> <out> --fps <fps> [--start s --dur d]`.
  * `from` = giây trong nguồn ứng với frame đầu của Sequence chứa component này. Cùng bộ lọc màu với nền để không lệch tông.
  * Luật: chỉ dùng khi chữ thật sự chạm đầu/vai; KHÔNG để chữ che mặt; matte phải đặc (bản person_matte mới).
+ * BẮT BUỘC: tạo matte từ CHÍNH file nguồn đang dựng (cùng điểm ảnh, cùng nhịp), cắt đúng đoạn cần (--start/--dur, `from` = a − start);
+ * đặt grade (TealOrange) BỌC NGOÀI cả nền + chữ + người để 2 lớp người trùng màu. Người ở xa: person_matte tự cắt-phóng vùng người để giữ đủ đầu/tóc.
  */
 export const PersonFront: React.FC<{ matte: string; from?: number; filter?: string }> = ({ matte, from = 0, filter }) => {
   const { fps } = useVideoConfig();

@@ -33,6 +33,10 @@ opts = mp.tasks.vision.ImageSegmenterOptions(
     output_category_mask=False,
 )
 seg = mp.tasks.vision.ImageSegmenter.create_from_options(opts)
+# ban tach thu 2 (che do ANH) cho vung cat quanh nguoi o xa
+seg2 = mp.tasks.vision.ImageSegmenter.create_from_options(mp.tasks.vision.ImageSegmenterOptions(
+    base_options=mp.tasks.BaseOptions(model_asset_path=str(ROOT / "models/selfie_multiclass_256x256.tflite")),
+    running_mode=mp.tasks.vision.RunningMode.IMAGE, output_confidence_masks=True, output_category_mask=False))
 inp = ["ffmpeg", "-nostdin", "-v", "error", "-ss", str(start), "-i", src] + (["-t", str(dur)] if dur else []) + \
       ["-vf", f"fps={fps},scale={W}:{H}", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"]
 rd = subprocess.Popen(inp, stdout=subprocess.PIPE)
@@ -50,8 +54,26 @@ while True:
     r = seg.segment_for_video(mp.Image(image_format=mp.ImageFormat.SRGB, data=small), int(i * 1000 / fps))
     cm = [np.squeeze(m.numpy_view()) for m in r.confidence_masks]  # 0 nen, 1 toc, 2 than, 3 mat, 4 ao, 5 khac
     person = np.clip(1.0 - cm[0], 0, 1)
+    # NGUOI NHO (dung xa): cat vung quanh nguoi, phong to roi tach lai -> dau/toc/mat khong bi mat
+    ys, xs = np.where(person > 0.4)
+    if len(ys) > 50 and (ys.max() - ys.min()) < 0.6 * person.shape[0]:
+        h0, w0 = person.shape
+        y0, y1, x0, x1 = ys.min(), ys.max(), xs.min(), xs.max()
+        py, px = int((y1 - y0) * 0.25) + 10, int((x1 - x0) * 0.35) + 10
+        y0, y1, x0, x1 = max(0, y0 - py), min(h0, y1 + py), max(0, x0 - px), min(w0, x1 + px)
+        sy, sx = H / h0, W / w0
+        crop = fr[int(y0 * sy):int(y1 * sy), int(x0 * sx):int(x1 * sx)]
+        k = 1024 / max(crop.shape[:2])
+        cz = cv2.resize(crop, (max(8, int(crop.shape[1] * k)) // 2 * 2, max(8, int(crop.shape[0] * k)) // 2 * 2))
+        r2 = seg2.segment(mp.Image(image_format=mp.ImageFormat.SRGB, data=np.ascontiguousarray(cz)))
+        c2 = [np.squeeze(m.numpy_view()) for m in r2.confidence_masks]
+        p2 = np.clip(1.0 - c2[0], 0, 1)
+        head = np.clip(c2[1] + c2[3], 0, 1)  # toc + mat: luon giu dac
+        p2 = np.maximum(p2, (head > 0.25).astype(np.float32))
+        person = person.copy()
+        person[y0:y1, x0:x1] = np.maximum(person[y0:y1, x0:x1] * 0.3, cv2.resize(p2, (x1 - x0, y1 - y0)))
     if prev is not None:  # lam muot theo thoi gian, giam rung vien
-        person = 0.65 * person + 0.35 * prev
+        person = 0.85 * person + 0.15 * prev  # it lam muot -> vien khong tre khi nguoi di (het bong ma)
     prev = person
     # NGUOI KHONG BI KHUYET: mat na dac -> giu manh lon nhat, lap lo thung (to cung/ken ao), dong kin khe, gian nhe vien
     hard = (person > 0.4).astype(np.uint8)

@@ -60,6 +60,11 @@ Chỉ dùng khi tập mới vẫn về **Cơm Tấm Sườn Khói**: địa ch�
 
 Chỉ báo những phần đã kiểm chứng. Nếu còn lệch chuyển động/bố cục, nêu đúng phần lệch và tiếp tục sửa trong phạm vi được giao; không nói “giống 100%” từ một screenshot.
 
+## Kịch bản ElevenLabs và ảnh bìa (đã chốt với Sơn)
+
+- Viết lời thoại theo [script-elevenlabs.md](references/script-elevenlabs.md): thu đủ tên/địa chỉ/giá/giờ bán/cảm nhận thật, cấu trúc hook giá + khu vực → đường đi → địa chỉ → cách làm → món/giá → trải nghiệm → chấm điểm → CTA comment/lưu/tag + đọc lại địa chỉ, số viết bằng chữ; mặc định giao **bản liền mạch một đoạn** cho ElevenLabs. Không tự dựng khi chưa có mp3 và lệnh edit.
+- Mỗi tập làm **2 ảnh bìa** (ThumbBold giá to + GelexiaCover lưới 4 ảnh) theo [thumbnail.md](references/thumbnail.md), kèm caption + hashtag.
+
 ## Áp dụng trong repo Son (Claude Code)
 
 Skill gốc viết cho môi trường có "Library ID". Ở repo này:

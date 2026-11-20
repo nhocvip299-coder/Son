@@ -13,3 +13,4 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 2. `analyze` + `transcribe` (whisper.cpp large-v3-turbo, đường dẫn tuyệt đối) → sửa lỗi tên riêng bằng `projects/<du-an>/asr-fixes.json`.
 3. Kịch bản neo theo chỉ số từ → plan → preview stills → render 60fps → `master-audio` (-14 LUFS) → `qc`.
 4. Skills: `mau-hong-dang` (phong cách BĐS), `gelexia-food-review` (review quán ăn mẫu Gelexia/Mõ Làng — composition `GelexiaEdit`), `text-presets-bds` (40 preset CapCut từ dữ liệu thật).
+5. Review quán ăn: viết lời thoại ElevenLabs và làm 2 ảnh bìa TikTok theo `.claude/skills/gelexia-food-review/references/script-elevenlabs.md` và `thumbnail.md` (mặc định bản đọc liền mạch; chưa có mp3 + lệnh edit thì không dựng).

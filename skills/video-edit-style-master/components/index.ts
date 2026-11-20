@@ -7,5 +7,6 @@ export { MapRoute } from "./Map";
 export { GlassCard } from "./Card";
 export { PhonePill } from "./Phone";
 export { ThinBig } from "./Thin";
+export { PersonFront } from "./PersonFront";
 export { VESM, VESM_SFX } from "../presets/style";
 export { pickCue, type Cue } from "../presets/rules";

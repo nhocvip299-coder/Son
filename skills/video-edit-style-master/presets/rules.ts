@@ -7,7 +7,7 @@ export type Cue =
   | { kind: "price-drop"; from: string; to: number; unit: string; dec: number }
   | { kind: "map"; place: string; dist?: string }
   | { kind: "neon"; main: string; script?: string }
-  | { kind: "thin"; value: string }
+  | { kind: "thin"; value: string; behindPerson: true } // [XM 17 s] dat sau lung nguoi noi
   | { kind: "card"; title: string }
   | { kind: "phone"; phone: string }
   | { kind: "none" };
@@ -35,7 +35,7 @@ export const pickCue = (text: string, ctx: { prevPrice?: string } = {}): Cue => 
   }
   // 5) phần trăm / khoảng cách đơn -> số mảnh to [XM 24 s "3KM", 43 s "70%"]
   const pc = text.match(/(\d+)\s*(%|km)/i);
-  if (pc) return { kind: "thin", value: `${pc[1]}${pc[2].toUpperCase()}` };
+  if (pc) return { kind: "thin", value: `${pc[1]}${pc[2].toUpperCase()}`, behindPerson: true };
   // 6) vay / hỗ trợ / sở hữu -> thẻ kính [XM 41–59 s]
   if (/(hỗ trợ|ngân hàng|vay|sở hữu|an cư)/.test(t)) return { kind: "card", title: /(hỗ trợ|vay)/.test(t) ? "Hỗ trợ trọn gói" : "Sở hữu" };
   // 7) đặc điểm vật lý: diện tích, phòng, sân, sổ -> chữ neon + chữ ký [XM 29–40 s]

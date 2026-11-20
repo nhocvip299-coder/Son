@@ -13,3 +13,5 @@ Nguồn: reference/mau.mp4 (= reference/mau-drive-1/ref01.mp4, 1440x2560 30fps 8
 - Font là bản miễn phí tương đương (Barlow Condensed / Ms Madi / Playfair) — dáng gần, không trùng.
 - Đường bản đồ là đường cong cố định, không theo bản đồ thật; tên đường dọc tuyến chưa vẽ.
 - SFX là thư viện có sẵn, không phải file gốc của mẫu.
+
+- [x] Sửa theo góp ý: "3KM" đặt SAU LƯNG người nói (PersonFront + matte), đầu che chân chữ như mẫu 17 s; luật `thin` có `behindPerson`.

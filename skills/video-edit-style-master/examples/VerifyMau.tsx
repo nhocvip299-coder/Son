@@ -3,7 +3,7 @@ import { AbsoluteFill, Freeze, OffthreadVideo, Sequence, staticFile, useVideoCon
 import { Audio } from "@remotion/media";
 import { SfxTrack } from "../../../src/compositions/shared";
 import type { SfxCue } from "../../../src/lib/theme";
-import { GlassPage, GoldNumber, LightBurst, MapRoute, NeonTitle, PriceDrop, StripSlide, TealOrange, ThinBig, ZoomBlurOut, VESM_SFX } from "../components";
+import { PersonFront, GlassPage, GoldNumber, LightBurst, MapRoute, NeonTitle, PriceDrop, StripSlide, TealOrange, ThinBig, ZoomBlurOut, VESM_SFX } from "../components";
 
 /**
  * KIỂM CHỨNG: dựng lại 0–22,5 s của reference/mau.mp4 bằng component của skill, cùng mốc thời gian (căn theo phiên âm).
@@ -31,7 +31,8 @@ export const VerifyMau: React.FC<{ voice?: boolean }> = ({ voice = true }) => {
       <Seq a={8.5} b={14.1}><GlassPage src={SRC} from={7.0} /></Seq>
       <Seq a={8.5} b={14.1}><PriceDrop lead="Hôm nay" script="chủ đại hạ giá" oldPrice="2,85 TỶ" strikeAt={1.9} mid="giảm còn" from={2.85} to={2.55} unit="TỶ" newAt={3.05} /></Seq>
       <Seq a={14.1} b={17.0}><NeonTitle id="v4" lead="Vị trí nhà chỉ cách" main="Chợ Bình Chánh" cy={800} size={150} at={1.35} /></Seq>
-      <Seq a={17.0} b={18.1}><ThinBig value="3KM" lead="chỉ cách" cy={900} size={300} /></Seq>
+      <Seq a={17.0} b={18.1}><ThinBig value="3KM" lead="chỉ cách" cy={1085} size={420}
+        front={<Freeze frame={0}><PersonFront matte="inputs/vesm/matte-plate/person.webm" filter="contrast(1.03) saturate(1.06)" /></Freeze>} /></Seq>
       <Seq a={18.1} b={22.5}><ZoomBlurOut dur={0.35}><MapRoute place="Chợ Bình Chánh" dest="Khu nhà" dist="3 KM" lead="Từ chợ Bình Chánh" script="chỉ vài phút" /></ZoomBlurOut></Seq>
       <Seq a={18.1} b={18.7}><StripSlide><TealOrange k={0.5}><Plate /></TealOrange></StripSlide></Seq>
       {[8.5, 14.1].map((a) => <Seq key={a} a={a - 0.18} b={a + 0.42}><LightBurst /></Seq>)}

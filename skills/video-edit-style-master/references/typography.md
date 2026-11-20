@@ -6,5 +6,5 @@
 | Dòng dẫn | sans mảnh → **Be Vietnam Pro 500** | trắng | 40–50 px | bóng tối nhẹ | hiện mờ 0,25 s trước số/neon |
 | Số tiền | đứng hẹp → **Barlow Condensed 800** | gradient #fff4c2→#fddb5c→#e09a2c + quầng cam [XM] | 190–260 | | đếm 0→giá trị 0,45 s ease-out rồi đứng [XM] |
 | Giá cũ | như trên, TRẮNG | #f2ffff + quầng lạnh | 165 | gạch đỏ #ff4d4d phát sáng, vẽ 0,3 s | |
-| Số mảnh | serif tương phản cao [UD] → **Playfair 700** | trắng 90 % + quầng cyan | 260–300 | giãn chữ 0,25→0,08 em khi vào | đếm % nếu có |
+| Số mảnh | serif tương phản cao [UD] → **Playfair 700** | trắng 90 % + quầng cyan | 420 (tự thu ≤740 px) | giãn chữ 0,25→0,08 em khi vào; **nằm SAU người** (`front={<PersonFront/>}`), chân chữ ngang/khuất sau đầu [XM 17 s] | đếm % nếu có |
 Luật: 1 khối chữ chính tại một thời điểm; rộng tối đa 740 px (vùng an toàn); chữ đặt giữa ngang, y 0,37–0,42 (neon) hoặc 0,58 (giá thứ cấp); không đè mặt.

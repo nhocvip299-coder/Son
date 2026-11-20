@@ -10,4 +10,5 @@
 | Thẻ kính | `GlassCard` | bật 0,55→1 (back-out 0,35 s), viền #8ff5ee + quầng; tiêu đề chữ ký đè góc; chip ✓ mỗi 0,3 s |
 | Viên SĐT | `PhonePill` | bật giữa khung, gõ 0,08 s/số, sau ~2,4 s thu 0,68× + trượt xuống y 0,715, giữ tới hết |
 | Grade | `TealOrange` | soft-light teal + làm tối đáy |
+| Người trước chữ | `PersonFront` | matte VP9 alpha từ `person_matte.py` (60/30 fps theo nguồn), cùng bộ lọc màu với nền; chữ đặt sao cho chân chữ ở ngang đỉnh đầu → đầu che phần dưới chữ [XM 17 s "3KM"]. Không che mặt |
 Easing: vào = back-out (0.34,1.56,0.64,1) cho khối, out-cubic cho chữ/đếm; ra = mờ + nhoè 0,3 s.

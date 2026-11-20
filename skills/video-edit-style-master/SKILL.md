@@ -25,7 +25,7 @@ description: Dựng video BĐS dọc 9:16 theo phong cách "trang kính teal + c
 | giá cũ → còn/giảm | price-drop | `LightBurst` + `GlassPage` + `PriceDrop` |
 | ngang/sâu/phòng/WC/sân/sổ hồng/nội thất | neon | `NeonTitle` (+ `script` bổ nghĩa) |
 | cách … km/phút, tới chợ/trường | map | `StripSlide` → `MapRoute` → `ZoomBlurOut` |
-| % / km đơn lẻ | thin | `ThinBig` |
+| % / km đơn lẻ | thin | `ThinBig` + `PersonFront` (chữ SAU LƯNG người, đầu che chân chữ) |
 | vay, hỗ trợ, sở hữu | card | `GlassPage` + `GlassCard` (chips) |
 | số điện thoại | phone | `PhonePill` (gõ theo lời đọc, dính đáy) |
 | câu đệm | none | để khung sạch |

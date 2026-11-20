@@ -5,6 +5,8 @@ import { SfxTrack } from "../../compositions/shared";
 import type { SfxCue } from "../../lib/theme";
 import { GlassCard, GlassPage, GoldNumber, LightBurst, NeonTitle, PersonFront, PhonePill, PriceDrop, TealOrange, ThinBig, VESM_SFX } from "../../../skills/video-edit-style-master/components";
 import { alignCues } from "../../../skills/video-edit-style-master/presets/style";
+import { CompareBars, FloorStack, SitePlan, XeKhe } from "../bdsLuxury/explain";
+import { KxMap } from "../bdsLuxury/mauKinhXanh";
 
 /**
  * SB-145 Vinhomes Ocean Park 2 — dựng theo skill Video Edit Style Master.
@@ -20,10 +22,10 @@ const CUES: Array<[number, string, number]> = [
   [0.05, X.count, 0.6], [0.2, X.count, 0.6], [0.35, X.count, 0.6], [0.55, X.land, 1],
   [3.2, X.type, 0.7], [5.6, X.type, 0.7], [8.2, X.type, 0.7], [10.5, X.type, 0.7],
   [12.2, X.burst, 1], [15.95, X.soft, 0.9], [23.0, X.soft, 0.9], [25.7, X.type, 0.7],
-  [26.2, X.burst, 1], [28.1, X.type, 0.8], [31.2, X.type, 0.8], [33.6, X.type, 0.8], [37.2, X.type, 0.8], [41.3, X.type, 0.8],
+  [26.2, X.burst, 1], [26.4, X.page, 0.8], [29.7, X.soft, 0.8], [33.3, X.page, 0.8], [33.7, X.chip, 0.9], [34.2, X.chip, 0.9], [37.2, X.type, 0.8], [41.3, X.type, 0.8],
   [43.45, X.burst, 1], [43.6, X.page, 0.8], [45.8, X.whoosh, 0.8], [48.4, X.land, 1],
-  [49.9, X.type, 0.8], [52.7, X.type, 0.8], [58.9, X.count, 0.6], [59.05, X.count, 0.6], [59.2, X.count, 0.6], [59.4, X.land, 1],
-  [64.7, X.type, 0.8], [66.0, X.page, 0.8], [68.5, X.chip, 0.9], [68.8, X.chip, 0.9], [70.0, X.chip, 0.9],
+  [49.3, X.page, 0.8], [49.8, X.type, 0.8], [52.5, X.land, 0.9], [60.3, X.page, 0.8], [62.3, X.type, 0.8], [64.7, X.land, 1], [58.9, X.count, 0.6], [59.05, X.count, 0.6], [59.2, X.count, 0.6], [59.4, X.land, 1],
+  [66.0, X.page, 0.8], [68.5, X.chip, 0.9], [68.8, X.chip, 0.9], [70.0, X.chip, 0.9],
   [72.0, X.burst, 1], [73.9, X.land, 1], [79.0, X.chip, 1], [79.3, X.land, 1],
 ];
 
@@ -41,6 +43,8 @@ export const Sb145Vesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem =
 
       {/* HOOK: giá tiền -> số vàng đếm chạy */}
       <Seq a={0} b={2.65}><GoldNumber id="g0" lead="một mét vuông đất · chỉ" value={70} unit="TRIỆU" cy={520} size={210} at={0.05} countDur={0.45} /></Seq>
+      {/* TRÁM: cảnh quay thật mặt tiền SB-145 (giây 31 của video gốc) khi nói "căn shophouse 2 mặt tiền" */}
+      <Seq a={2.7} b={6.9}><TealOrange k={0.6}><OffthreadVideo src={staticFile(SRC)} trimBefore={s(31.0)} muted /></TealOrange></Seq>
       {/* đặc điểm -> neon */}
       <Seq a={3.0} b={5.5}><NeonTitle id="n1" lead="Ngay tại Vinhomes" main="Ocean Park 2" cy={520} size={170} at={0.2} /></Seq>
       <Seq a={5.5} b={8.1}><NeonTitle id="n2" lead="căn shophouse sở hữu" main="2 Mặt Tiền" script="trước – sau" cy={520} size={180} at={0.1} /></Seq>
@@ -55,20 +59,26 @@ export const Sb145Vesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem =
 
       {/* THÔNG SỐ (cảnh toà nhà, không người) */}
       <Seq a={26.0} b={26.6}><LightBurst /></Seq>
-      <Seq a={27.9} b={31.0}><NeonTitle id="n6" lead="diện tích đất" main="163,8 m²" cy={760} size={200} at={0.2} /></Seq>
-      <Seq a={31.0} b={33.4}><NeonTitle id="n7" lead="tổng diện tích xây dựng" main="427,2 m²" script="mặt sàn" cy={760} size={200} at={0.2} /></Seq>
-      <Seq a={33.4} b={36.9}><NeonTitle id="n8" lead="nhà bàn giao" main="Thô" script="có thang" cy={760} size={220} at={0.2} /></Seq>
-      <Seq a={36.9} b={40.8}><NeonTitle id="n9" lead="đặc biệt bên hông" main="Xẻ khe 3M" script="thông thoáng hơn" cy={760} size={200} at={0.3} /></Seq>
+      <Seq a={26.3} b={33.2}><GlassPage src={SRC} from={26.3} ring={false} /></Seq>
+      <Seq a={26.3} b={29.7}><SitePlan area={163.8} /></Seq>
+      <Seq a={29.6} b={33.2}><FloorStack total={427.2} /></Seq>
+      <Seq a={33.2} b={35.3}><GlassPage src={SRC} from={33.2} ring={false} /></Seq>
+      <Seq a={33.2} b={35.3}><GlassCard src={SRC} from={33.2} title="Bàn giao" chips={["Nhà thô", "Có thang"]} chipsAt={0.5} /></Seq>
+      <Seq a={35.2} b={40.8}><GlassPage src={SRC} from={35.2} ring={false} /></Seq>
+      <Seq a={35.2} b={40.8}><XeKhe /></Seq>
+      <Seq a={35.2} b={40.8}><NeonTitle id="n9" lead="đặc biệt bên hông" main="Xẻ khe 3M" cy={330} size={150} at={2.0} /></Seq>
       <Seq a={41.1} b={43.5}><NeonTitle id="n10" lead="cái điều" main="Đặc biệt nhất" cy={520} size={170} at={0.2} /></Seq>
 
       {/* GIÁ: trang kính + hạ giá */}
       <Seq a={43.45} b={49.2}><GlassPage src={SRC} from={43.45} /></Seq>
       <Seq a={43.45} b={49.2}><PriceDrop lead="mức giá căn SB-145" script="áp voucher 30%" oldPrice="23,3 TỶ" strikeAt={2.35} mid="chỉ về hơn" from={23.3} to={15} dec={0} unit="TỶ" newAt={4.95} /></Seq>
       <Seq a={43.25} b={43.85}><LightBurst /></Seq>
-      <Seq a={49.5} b={52.5}><NeonTitle id="n11" lead="vị trí" main="Cực kỳ đắc địa" cy={520} size={160} at={0.4} /></Seq>
-      <Seq a={52.5} b={55.3}><NeonTitle id="n12" lead="hướng vào toà chung cư" main="Masteri" cy={520} size={190} at={0.2} /></Seq>
+      <Seq a={49.2} b={53.3}><KxMap pinLabel="SB-145" towerLabel="MASTERI" towerAt={3.3} /></Seq>
+      <Seq a={49.2} b={53.3}><NeonTitle id="n11" lead="vị trí" main="Cực kỳ đắc địa" cy={330} size={150} at={0.6} /></Seq>
       <Seq a={55.3} b={60.1}><GoldNumber id="g1" lead="bóc tách giá xây dựng · chỉ khoảng" value={70} unit="TRIỆU/M²" cy={500} size={180} at={3.55} countDur={0.5} /></Seq>
-      <Seq a={64.4} b={66.0}><NeonTitle id="n13" lead="so với căn cắt lỗ sâu" main="Rẻ hơn" cy={760} size={220} at={0.3} /></Seq>
+      <Seq a={60.2} b={66.0}><GlassPage src={SRC} from={60.2} ring={false} /></Seq>
+      <Seq a={60.2} b={66.0}><CompareBars ours="≈70TR/m²" badgeAt={4.5} /></Seq>
+      <Seq a={60.2} b={66.0}><NeonTitle id="n13" lead="so với những căn" main="Cắt lỗ sâu" cy={330} size={150} at={2.1} /></Seq>
       <Seq a={66.0} b={72.0}><GlassPage src={SRC} from={66.0} ring={false} /></Seq>
       <Seq a={66.0} b={72.0}><GlassCard src={SRC} from={66.0} title="Chính sách mới" chips={["Thanh toán sớm", "Chiết khấu thêm 7,5%", "Giá đã cộng chiết khấu"]} chipsAt={2.5} caption="chủ đầu tư Vinhomes" /></Seq>
 

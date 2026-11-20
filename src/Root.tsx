@@ -20,6 +20,7 @@ import { Ocp2, OCP2_SEC, type Ocp2Props } from "./styles/bdsLuxury/Ocp2";
 import { PairBoard } from "./styles/bdsLuxury/PairBoard";
 import { AquaBoard } from "./styles/bdsLuxury/AquaBoard";
 import { VerifyMau, VERIFY_SEC } from "../skills/video-edit-style-master/examples/VerifyMau";
+import { Sb145Vesm, SB145_SEC } from "./styles/vesm/Sb145Vesm";
 import { TextPresetsGallery } from "./styles/textPresets/Gallery";
 import { TextPresetsCatalog40, TextPresetsGallery40 } from "./styles/textPresets/Gallery40";
 import { CapcutCatalog } from "./styles/textPresets/capcut/CapcutCatalog";
@@ -86,6 +87,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="PairBoard" component={PairBoard} durationInFrames={1} fps={60} width={1080} height={1920} />
       <Composition id="AquaBoard" component={AquaBoard} durationInFrames={1} fps={60} width={1080} height={1920} defaultProps={{ onVideo: false }} />
       <Composition id="VesmVerify" component={VerifyMau} durationInFrames={Math.round(VERIFY_SEC * 30)} fps={30} width={1080} height={1920} />
+      <Composition id="Sb145Vesm" component={Sb145Vesm} durationInFrames={SB145_SEC * 60} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

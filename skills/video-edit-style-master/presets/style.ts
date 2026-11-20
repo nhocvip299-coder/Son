@@ -52,3 +52,8 @@ export const VESM_SFX = {
   page: "real/qtl-transition",
   soft: "real/qtl-sparkle-sweep",
 } as const;
+
+import HITS from "../../../src/styles/quyetTranLux/sfxHits.json";
+/** Chuyển [giây, sfx, âm lượng] -> cue khung hình, TRỪ độ trễ đỉnh âm của file (sfxHits.json) để ĐỈNH tiếng trùng đúng lúc hiệu ứng hình. */
+export const alignCues = (list: Array<[number, string, number]>, fps: number) =>
+  list.map(([t, sfx, volume]) => ({ frame: Math.max(0, Math.round((t - ((HITS as Record<string, number>)[sfx.replace("real/", "")] ?? 0)) * fps)), sfx, volume }));

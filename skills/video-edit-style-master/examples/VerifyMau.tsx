@@ -3,6 +3,8 @@ import { AbsoluteFill, Freeze, OffthreadVideo, Sequence, staticFile, useVideoCon
 import { Audio } from "@remotion/media";
 import { SfxTrack } from "../../../src/compositions/shared";
 import type { SfxCue } from "../../../src/lib/theme";
+import { alignCues } from "../presets/style";
+import { WordByWord } from "../../../src/styles/textPresets/capcut/WordByWord";
 import { PersonFront, GlassPage, GoldNumber, LightBurst, MapRoute, NeonTitle, PriceDrop, StripSlide, TealOrange, ThinBig, ZoomBlurOut, VESM_SFX } from "../components";
 
 /**
@@ -17,7 +19,7 @@ const CUES: Array<[number, S, number]> = [
   [7.4, VESM_SFX.type as S, 0.7], [8.5, VESM_SFX.burst as S, 1], [10.45, VESM_SFX.whoosh as S, 0.7], [11.6, VESM_SFX.land as S, 1],
   [14.1, VESM_SFX.burst as S, 1], [15.5, VESM_SFX.type as S, 0.7], [17.05, VESM_SFX.soft as S, 0.8], [18.1, VESM_SFX.page as S, 1], [21.3, VESM_SFX.land as S, 1], [22.2, VESM_SFX.whoosh as S, 1],
 ];
-export const VerifyMau: React.FC<{ voice?: boolean }> = ({ voice = true }) => {
+export const VerifyMau: React.FC<{ voice?: boolean; words?: Array<{ text: string; startMs: number; endMs: number }> }> = ({ voice = true, words }) => {
   const { fps } = useVideoConfig();
   const s = (x: number) => Math.round(x * fps);
   const Seq: React.FC<{ a: number; b: number; children: React.ReactNode }> = ({ a, b, children }) => <Sequence from={s(a)} durationInFrames={s(b - a)}>{children}</Sequence>;
@@ -37,7 +39,8 @@ export const VerifyMau: React.FC<{ voice?: boolean }> = ({ voice = true }) => {
       <Seq a={18.1} b={18.7}><StripSlide><TealOrange k={0.5}><Plate /></TealOrange></StripSlide></Seq>
       {[8.5, 14.1].map((a) => <Seq key={a} a={a - 0.18} b={a + 0.42}><LightBurst /></Seq>)}
       {voice ? <Audio src={staticFile(SRC)} volume={0.9} /> : null}
-      <SfxTrack cues={CUES.map(([t, sfx, v]) => ({ frame: s(t), sfx, volume: v }))} />
+      {words ? <WordByWord words={words} y={1330} /> : null}
+      <SfxTrack cues={alignCues(CUES, fps) as SfxCue[]} />
     </AbsoluteFill>
   );
 };

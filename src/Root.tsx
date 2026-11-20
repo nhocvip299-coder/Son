@@ -18,6 +18,7 @@ import { HappyHomeThumb, type ThumbProps } from "./styles/bdsLuxury/HappyHomeThu
 import { OcpBoard, type OcpBoardProps } from "./styles/bdsLuxury/OcpBoard";
 import { Ocp2, OCP2_SEC, type Ocp2Props } from "./styles/bdsLuxury/Ocp2";
 import { PairBoard } from "./styles/bdsLuxury/PairBoard";
+import { AquaBoard } from "./styles/bdsLuxury/AquaBoard";
 import { TextPresetsGallery } from "./styles/textPresets/Gallery";
 import { TextPresetsCatalog40, TextPresetsGallery40 } from "./styles/textPresets/Gallery40";
 import { CapcutCatalog } from "./styles/textPresets/capcut/CapcutCatalog";
@@ -82,6 +83,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="OcpBoard" component={OcpBoard} durationInFrames={1} fps={60} width={1080} height={1920} defaultProps={{ scene: 0 } as OcpBoardProps} />
       <Composition id="Ocp2" component={Ocp2} durationInFrames={Math.round(OCP2_SEC * 60)} fps={60} width={1080} height={1920} defaultProps={{ captions: "none", words: [], stem: "all" } as Ocp2Props} />
       <Composition id="PairBoard" component={PairBoard} durationInFrames={1} fps={60} width={1080} height={1920} />
+      <Composition id="AquaBoard" component={AquaBoard} durationInFrames={1} fps={60} width={1080} height={1920} defaultProps={{ onVideo: false }} />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

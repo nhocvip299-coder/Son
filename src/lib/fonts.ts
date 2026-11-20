@@ -24,6 +24,10 @@ import "@fontsource/nunito/900.css";
 import "@fontsource/nunito/900-italic.css";
 import "@fontsource/nunito/800.css";
 import "@fontsource/great-vibes/400.css";
+import "@fontsource/allura/400.css";
+import "@fontsource/ms-madi/400.css";
+import "@fontsource/barlow-condensed/900.css";
+import "@fontsource/barlow-condensed/800.css";
 import "@fontsource/noto-serif/400.css";
 import "@fontsource/noto-serif/500.css";
 import "@fontsource/playfair-display/500.css";
@@ -79,6 +83,10 @@ const SPECS: Array<[number, string, string?]> = [
   [900, "Nunito", "italic"],
   [800, "Nunito"],
   [400, "Great Vibes"],
+  [400, "Allura"],
+  [400, "Ms Madi"],
+  [900, "Barlow Condensed"],
+  [800, "Barlow Condensed"],
   [400, "Noto Serif"],
   [500, "Noto Serif"],
   [500, "Playfair Display"],

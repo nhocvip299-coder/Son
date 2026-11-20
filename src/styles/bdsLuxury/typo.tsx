@@ -127,17 +127,17 @@ export const StackText: React.FC<{
           return (
             <g key={i} transform={`translate(${cx + k.tx} ${ys[i] + k.ty}) rotate(${k.rot}) scale(${k.sx} ${k.sy})${skew}`} opacity={k.opacity} style={k.blur > 0.2 ? { filter: `blur(${k.blur}px)` } : undefined}>
               {/* NOI BAT: nen toi mem sau dong chinh (khong khung) -> chu bat len tren moi nen */}
-              {isMain ? <g filter={`url(#bd-${id})`} opacity={0.5}>{T("#000814", { stroke: "#000814", strokeWidth: fs * 0.35, strokeLinejoin: "round" })}</g> : null}
+              {isMain ? <g filter={`url(#bd-${id})`} opacity={0.28}>{T("#000814", { stroke: "#000814", strokeWidth: fs * 0.35, strokeLinejoin: "round" })}</g> : null}
               {/* bong toi mem -> doc ro tren nen sang (troi, tuong vang) */}
               <g filter={`url(#sd-${id})`} opacity={isMain ? 0.7 : 0.85} transform="translate(0 5)">{T(P.shade)}</g>
               {glow > 0.01 ? <g filter={`url(#gl-${id})`} opacity={glow}>{T(P.glow)}</g> : null}
               {/* HINH KHOI: dun chu 14 lop lech xuong-phai (canh ben toi dan) -> chu noi 3D */}
               {isMain && palette !== "white" ? Array.from({ length: 14 }, (_, k) => 14 - k).map((k) => (
-                <g key={`ex${k}`} transform={`translate(${k * fs * 0.0045} ${k * fs * 0.0065})`}>{T(k > 11 ? "#020b1f" : `url(#ex-${id})`, { stroke: k > 11 ? "#020b1f" : `url(#ex-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round" })}</g>
+                <g key={`ex${k}`} transform={`translate(${k * fs * 0.0045} ${k * fs * 0.0065})`}>{T(`url(#ex-${id})`, { stroke: `url(#ex-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round" })}</g>
               )) : null}
               {isMain ? T(`url(#mg-${id})`, { stroke: `url(#mg-${id})`, strokeWidth: fs * 0.028, strokeLinejoin: "round", paintOrder: "stroke" }) : script
                 // chu viet tay: trang, VIEN TOI DAY + bong -> tach han khoi chu khoi phia sau
-                ? T("#ffffff", { stroke: "#031029", strokeWidth: fs * 0.1, strokeLinejoin: "round", paintOrder: "stroke" })
+                ? T("#ffffff", { stroke: "#0b2a5c", strokeWidth: fs * 0.05, strokeLinejoin: "round", paintOrder: "stroke" })
                 : T("#ffffff", { stroke: "#ffffff", strokeWidth: fs * 0.022, strokeLinejoin: "round" })}
               {isMain && palette !== "white" ? T(`url(#gs-${id})`) : null}
               {isMain && palette !== "white" ? (() => {

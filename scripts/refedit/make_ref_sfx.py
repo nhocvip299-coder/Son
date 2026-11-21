@@ -34,6 +34,8 @@ f = 780 + 620 * (1 - np.exp(-t * 40))  # chirp len
 ph = 2 * np.pi * np.cumsum(f) / SR
 env = np.minimum(1, t / 0.004) * np.exp(-t * 28)
 x = (np.sin(ph) + 0.25 * np.sin(2 * ph) + 0.12 * np.sin(3.1 * ph)) * env
+# lop "tinh" cao tan 3.5-5kHz de noi tren giong noi (kiem bang sfx-check.py)
+x += 0.55 * np.sin(2 * np.pi * np.cumsum(3500 + 1500 * (1 - np.exp(-t * 60))) / SR) * np.minimum(1, t / 0.002) * np.exp(-t * 45)
 # them chut "click" cao tan de nghe ro tren giong noi
 x[: int(SR * 0.006)] += np.random.default_rng(3).standard_normal(int(SR * 0.006)) * 0.35
 save("bubble.wav", x)

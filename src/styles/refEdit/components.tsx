@@ -51,7 +51,7 @@ export const redText = (size: number, font: string = RT.font.punch): React.CSSPr
   backgroundImage: `radial-gradient(ellipse 55% 70% at 50% 52%, ${RT.color.redCore} 0%, #FF8F7C 30%, ${RT.color.red} 68%, #D81A08 100%)`,
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
-  filter: `drop-shadow(0 0 6px rgba(246,42,21,0.95)) drop-shadow(0 0 22px rgba(246,42,21,0.65)) drop-shadow(0 5px 8px rgba(0,0,0,0.55))`,
+  filter: `drop-shadow(0 0 1.5px rgba(60,0,0,0.9)) drop-shadow(0 0 7px rgba(246,42,21,0.85)) drop-shadow(0 0 20px rgba(246,42,21,0.45)) drop-shadow(0 5px 8px rgba(0,0,0,0.6))`,
 });
 
 /** Chu vang dam rong [GOC: #FACF1E] */
@@ -67,6 +67,12 @@ export const yellowText = (size: number): React.CSSProperties => ({
   backgroundClip: "text",
   filter: `drop-shadow(0 0 10px rgba(250,190,20,0.55)) drop-shadow(0 5px 8px rgba(0,0,0,0.6))`,
 });
+
+/** Co chu de khong tran khung (uoc luong be rong ky tu theo font). [AI: video mau chu ngan nen khong can] */
+export const fit = (text: string, size: number, em: number, maxW = 930) => {
+  const w = Array.from(text).length * size * em;
+  return w > maxW ? Math.floor((size * maxW) / w) : size;
+};
 
 // ---------- Hien chu ----------
 /** Go tung ky tu [GOC ~45 ky tu/s]; ky tu moi hien mo -> ro trong 2 frame@30. */
@@ -140,7 +146,7 @@ export const AbstractBg: React.FC<{ seed?: number }> = ({ seed = 1 }) => {
   ];
   return (
     <AbsoluteFill style={{ background: `linear-gradient(205deg, ${RT.color.bgLight} 0%, ${RT.color.bgMid} 48%, ${RT.color.bgDark} 100%)`, overflow: "hidden" }}>
-      <AbsoluteFill style={{ filter: "blur(70px)" }}>
+      <AbsoluteFill>
         {blobs.map((b, i) => {
           const ph = random(`bg${seed}-${i}`) * 6.28;
           const dx = Math.sin(t * 0.35 + ph) * 0.08;
@@ -156,7 +162,7 @@ export const AbstractBg: React.FC<{ seed?: number }> = ({ seed = 1 }) => {
                 width: d,
                 height: d,
                 borderRadius: "50%",
-                background: `radial-gradient(circle, ${b.c} 0%, rgba(0,0,0,0) 70%)`,
+                background: `radial-gradient(circle, ${b.c} 0%, rgba(0,0,0,0) 72%)`, // gradient mem thay blur (render nhanh)
               }}
             />
           );
@@ -181,22 +187,22 @@ export const SetupPunch: React.FC<{
 }> = ({ setup, punch, setupAt = 0, punchAt = 0.3, setupMode = "blur", punchMode = "rise", punchColor = "red", y = RT.y.setup, exit = "cut" }) => {
   const { t } = useSec();
   const ex = useExit(exit);
-  const pst = punchColor === "red" ? redText(RT.size.punch) : yellowText(RT.size.warn);
+  const pst = punchColor === "red" ? redText(fit(punch, RT.size.punch, 0.47)) : yellowText(fit(punch, RT.size.warn, 0.78));
   const rise = interpolate(t, [punchAt, punchAt + 0.25], [0, 1], { ...C, easing: easeOut });
   return (
     <AbsoluteFill style={{ opacity: ex.k, filter: ex.blur ? `blur(${ex.blur}px)` : undefined }}>
       {setup ? (
         <Place y={y}>
           {setupMode === "type" ? (
-            <Typed text={setup} at={setupAt} style={whiteText(RT.size.setup)} />
+            <Typed text={setup} at={setupAt} style={whiteText(fit(setup, RT.size.setup, 0.56))} />
           ) : (
             <BlurIn at={setupAt} dur={0.16}>
-              <span style={whiteText(RT.size.setup)}>{setup}</span>
+              <span style={whiteText(fit(setup, RT.size.setup, 0.56))}>{setup}</span>
             </BlurIn>
           )}
         </Place>
       ) : null}
-      <Place y={y + (setup ? 0.052 : 0.03)}>
+      <Place y={y + (setup ? 0.058 : 0.03)}>
         {punchMode === "type" ? (
           <Typed text={punch} at={punchAt} style={pst} />
         ) : (
@@ -251,7 +257,7 @@ export const StepBadge: React.FC<{ n: number; label: string; labelAt?: number; e
       </Place>
       <Place y={RT.y.badgeLabel}>
         <BlurIn at={labelAt} dur={0.5} from={1.04}>
-          <span style={{ ...whiteText(RT.size.label), textShadow: `${whiteGlow}, 0 0 34px rgba(255,255,255,0.35)` }}>{label.toUpperCase()}</span>
+          <span style={{ ...whiteText(fit(label, RT.size.label, 0.72)), textShadow: `${whiteGlow}, 0 0 34px rgba(255,255,255,0.35)` }}>{label.toUpperCase()}</span>
         </BlurIn>
       </Place>
     </AbsoluteFill>
@@ -372,7 +378,8 @@ export const YellowCard: React.FC<{ y: number; lines: CardLine[]; at?: number; t
   const o = interpolate(t, [at, at + 0.1], [0, 1], C);
   // [GOC 41.3] the 3D: hien tu mo -> ro, nghieng phoi canh
   const tilt = tilt3d ? "perspective(1400px) rotateY(22deg) rotateX(6deg) rotateZ(6deg)" : "none";
-  const fs = lines.length > 1 ? RT.size.card * 0.95 : RT.size.card;
+  const longest = lines.reduce((a, l) => (l.text.length > a.length ? l.text : a), "");
+  const fs = fit(longest, lines.length > 2 ? RT.size.card * 0.88 : lines.length > 1 ? RT.size.card * 0.95 : RT.size.card, upper ? 0.7 : 0.58, w - (align === "left" ? 170 : 90));
   return (
     <Place y={y} style={{ transform: tilt }}>
       <div
@@ -466,7 +473,7 @@ export const Warning: React.FC<{ head: string; sub?: string; y?: number; at?: nu
   exit = "cut",
 }) => {
   const ex = useExit(exit);
-  const hs = color === "yellow" ? yellowText(RT.size.warn) : redText(RT.size.warn * 0.86, RT.font.heavy);
+  const hs = color === "yellow" ? yellowText(fit(head, RT.size.warn, 0.78)) : redText(fit(head, RT.size.warn * 0.86, 0.78), RT.font.heavy);
   return (
     <AbsoluteFill style={{ opacity: ex.k, filter: ex.blur ? `blur(${ex.blur}px)` : undefined }}>
       <Place y={y}>
@@ -476,7 +483,7 @@ export const Warning: React.FC<{ head: string; sub?: string; y?: number; at?: nu
       </Place>
       {sub ? (
         <Place y={y + 0.06}>
-          <Typed text={sub} at={subAt ?? at + 0.3} style={whiteText(RT.size.warnSub)} />
+          <Typed text={sub} at={subAt ?? at + 0.3} style={whiteText(fit(sub, RT.size.warnSub, 0.56))} />
         </Place>
       ) : null}
     </AbsoluteFill>

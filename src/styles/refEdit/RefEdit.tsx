@@ -78,11 +78,13 @@ export type RefPlan = {
   wordsY?: number;
   /** thay tieng: tat tieng footage, phat audio nay tu moc startMs (dung khi kiem chung voi "clean plate") */
   audioOverride?: { src: string; startMs: number };
+  /** am luong giong (footage). <1 de SFX noi ro tren giong khi giong goc qua to; master-audio se chuan lai -14 LUFS */
+  voiceVolume?: number;
 };
 
 export const refPlanDurationMs = (p: RefPlan) => p.segments.reduce((a, s) => a + s.srcEndMs - s.srcStartMs, 0);
 
-const Shot: React.FC<{ seg: RefSegment; source: string; trimBefore: number; trimAfter: number; muted?: boolean }> = ({ seg, source, trimBefore, trimAfter, muted }) => {
+const Shot: React.FC<{ seg: RefSegment; source: string; trimBefore: number; trimAfter: number; muted?: boolean; volume?: number }> = ({ seg, source, trimBefore, trimAfter, muted, volume = 1 }) => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = f / fps;
@@ -97,7 +99,7 @@ const Shot: React.FC<{ seg: RefSegment; source: string; trimBefore: number; trim
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{ scale: String(z * (1 + bgIn * 0.08)), transformOrigin: "50% 38%", filter: footBlur > 0.2 ? `blur(${footBlur}px) brightness(${1 - frost * 0.12})` : undefined }}>
-        <Video src={staticFile(source)} trimBefore={trimBefore} trimAfter={trimAfter} objectFit="cover" muted={muted} />
+        <Video src={staticFile(source)} trimBefore={trimBefore} trimAfter={trimAfter} objectFit="cover" muted={muted} volume={volume} />
       </AbsoluteFill>
       {seg.kind === "bg" ? (
         <AbsoluteFill style={{ opacity: bgIn }}>
@@ -121,7 +123,7 @@ const renderItem = (it: RefItem) => {
         <>
           {it.cards.map((c, i) =>
             it.tilt3d ? (
-              <YellowCard key={i} y={0.26} at={c.at} lines={c.lines} tilt3d upper={false} h={330} align="left" />
+              <YellowCard key={i} y={0.26} at={c.at} lines={c.lines} tilt3d upper={false} w={860} h={330} align="left" />
             ) : (
               <YellowCard key={i} y={RT.y.cardCenters[i % 3]} at={c.at} lines={c.lines} />
             ),
@@ -174,7 +176,7 @@ export const RefEdit: React.FC<{ plan: RefPlan }> = ({ plan }) => {
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {segs.map(({ s, from, dur }, i) => (
         <Sequence key={i} from={from} durationInFrames={dur} name={`${s.kind === "bg" ? "NEN" : "MAT"} ${i + 1}${s.zoomTo ? ` zoom ${s.zoomFrom}->${s.zoomTo}` : ""}`}>
-          <Shot seg={s} source={plan.source} trimBefore={toF(s.srcStartMs)} trimAfter={toF(s.srcEndMs)} muted={!!plan.audioOverride} />
+          <Shot seg={s} source={plan.source} trimBefore={toF(s.srcStartMs)} trimAfter={toF(s.srcEndMs)} muted={!!plan.audioOverride} volume={plan.voiceVolume ?? 1} />
         </Sequence>
       ))}
       {plan.items.map((it, i) => (

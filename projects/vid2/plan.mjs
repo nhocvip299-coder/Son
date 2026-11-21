@@ -105,9 +105,38 @@ add(105.3, "swoosh-down", 0.8); add(108.2, "blip8"); add(110.7, "hud"); add(111.
 
 // [THEO NGUOI DUNG] chu hien kieu GO BAN PHIM + tieng phim moi ky tu (component tu dat tieng dung frame);
 // bo SFX pop/bubble/hud cua chu, chi giu tieng chuyen canh (vut vao canh tram, light leak)
-const KEEP = new Set(["swoosh-down", "swish"]);
-const reveal = { mode: "type", cps: 22, keyVolume: 1.0 };
-const plan = { source: SRC, fps: 60, segments, items, reveal, sfx: sfx.filter((c) => KEEP.has(c.sfx)).sort((a, b) => a.atMs - b.atMs), music: { src: "music/bed-ambient.wav", volume: 0.03 }, voiceVolume: 0.5 };
+// [CAP NHAT] SFX lay tu bo SFX nguoi dung gui (TikTok @vietanh.videoeditor, cat vao public/sfx/pack/), gan tu dong theo loai hieu ung
+// theo dung cach nhom cua bo: XUAT HIEN (chu/the) - UI (badge, so, loi) - CHUYEN CANH (flash, vao canh tram).
+// Tieng go phim giu nho phia duoi (keyVolume 0.35) de giu cam giac "go chu".
+const reveal = { mode: "type", cps: 22, keyVolume: 0.35 };
+const typeDur = (txt) => (Array.from(txt).length + (txt.split(" ").length - 1) * 0.6) / reveal.cps;
+const pk = [];
+const P = (t, n, v = 1) => pk.push({ atMs: Math.round(t * 1000), sfx: `pack/${n}`, volume: v });
+for (const it of items) {
+  const st = it.startMs / 1000;
+  switch (it.type) {
+    case "setupPunch": {
+      if (it.setup) P(st, "pop-up", 0.9);
+      const pa = it.setup ? Math.max(it.punchAt ?? 0, typeDur(it.setup) + 0.12) : it.punchAt ?? 0;
+      P(st + pa, "correct-jewel");
+      break;
+    }
+    case "stepBadge": P(st, "ui-notification"); break;
+    case "emphasis": P(st, "correct-jewel"); break;
+    case "cards": it.cards.forEach((c) => P(st + c.at, "pop-bells", 0.9)); break;
+    case "bars": it.bars.forEach((b) => P(st + b.at, b.hot ? "correct-jewel" : "ui-digital")); break;
+    case "priceDrop": P(st, "pop-up", 0.9); P(st + it.dropAt - 0.35, "ui-error"); P(st + it.dropAt + 0.3, "es-success"); break;
+    case "warning": P(st, it.color === "yellow" ? "ui-error" : "sparkle-bonus"); break;
+    case "pills": P(st + (it.pills[0]?.at ?? 0), "ui-notification"); break;
+    case "versus":
+      P(st + it.left.at, "pop-bells"); P(st + it.right.at, "pop-bells");
+      [...it.left.rows, ...it.right.rows].forEach((r) => P(st + r.at, r.good ? "pop-bells" : "ui-error", 0.85));
+      break;
+    case "flare": case "leak": P(st, "camera-flash", 0.9); break;
+  }
+}
+for (const sg of segments) if (sg.kind === "bg" && sg.blurIn) P(sg.srcStartMs / 1000, "ui-whoosh", 0.9); // nguoi noi thu vao khung goc
+const plan = { source: SRC, fps: 60, segments, items, reveal, sfx: pk.sort((a, b) => a.atMs - b.atMs), music: { src: "music/bed-ambient.wav", volume: 0.03 }, voiceVolume: 0.5 };
 fs.writeFileSync("work/vid2/plan-final.json", JSON.stringify(plan, null, 1));
 // ban chay chu tung chu: tu (da sua ASR) tu ban nhap cua engine (chay --no-cut => thoi gian = goc)
 const draft = JSON.parse(fs.readFileSync("work/vid2/plan-chay-chu.json", "utf8"));

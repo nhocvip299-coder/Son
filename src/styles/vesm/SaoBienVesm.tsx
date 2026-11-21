@@ -25,7 +25,7 @@ const TX = { name: "SHOPHOUSE", back: "MẶT ĐƯỜNG SAU", front: "MẶT ĐƯ�
 const CUES: Array<[number, string, number]> = [
   [2.75, X.land, 1], [3.5, X.land, 1], [5.2, X.type, 0.75],
   [4.35, X.chip, 0.9], [8.05, X.chip, 0.9], [12.3, X.burst, 1], [12.5, X.type, 0.75], [14.7, X.page, 0.9], [20.1, X.page, 0.85],
-  [22.8, X.burst, 1], [22.95, X.chip, 0.9], [26.3, X.chip, 0.9], [33.5, X.chip, 0.8], [35.9, X.chip, 0.9], [24.9, X.type, 0.75], [27.7, X.page, 0.85], [29.0, X.soft, 0.8],
+  [22.8, X.burst, 1], [22.95, X.chip, 0.9], [26.3, X.chip, 1.8], [26.33, X.whoosh, 1.2], [33.5, X.chip, 1.8], [33.53, X.whoosh, 1.2], [35.9, X.chip, 0.9], [24.9, X.type, 0.75], [27.7, X.page, 0.85], [29.0, X.soft, 0.8],
   [31.5, X.page, 0.85], [32.2, X.count, 0.6], [32.35, X.count, 0.6], [32.5, X.land, 1], [34.7, X.land, 1],
    [41.6, X.burst, 1.8], [41.75, X.whoosh, 1], [47.85, X.chip, 0.9], [49.27, X.soft, 1],
   [50.8, X.page, 0.85], [51.4, X.whoosh, 0.8], [52.45, X.land, 1], [53.3, X.page, 0.85],

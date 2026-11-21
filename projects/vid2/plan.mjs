@@ -108,7 +108,7 @@ add(105.3, "swoosh-down", 0.8); add(108.2, "blip8"); add(110.7, "hud"); add(111.
 // [CAP NHAT] SFX lay tu bo SFX nguoi dung gui (TikTok @vietanh.videoeditor, cat vao public/sfx/pack/), gan tu dong theo loai hieu ung
 // theo dung cach nhom cua bo: XUAT HIEN (chu/the) - UI (badge, so, loi) - CHUYEN CANH (flash, vao canh tram).
 // Tieng go phim giu nho phia duoi (keyVolume 0.35) de giu cam giac "go chu".
-const reveal = { mode: "type", cps: 22, keyVolume: 0.35 };
+const reveal = { mode: "type", cps: 22, keyVolume: 0 }; // [NGUOI DUNG CHON A] bo tieng go phim, chi dung bo SFX
 const typeDur = (txt) => (Array.from(txt).length + (txt.split(" ").length - 1) * 0.6) / reveal.cps;
 const pk = [];
 const P = (t, n, v = 1) => pk.push({ atMs: Math.round(t * 1000), sfx: `pack/${n}`, volume: v });

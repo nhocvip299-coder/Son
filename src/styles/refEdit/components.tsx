@@ -5,7 +5,8 @@
  * Danh dau: [GOC] = tai tao tu quan sat; [AI] = cai tien/xap xi do AI de xuat.
  */
 import React from "react";
-import { AbsoluteFill, Easing, interpolate, random, spring, useCurrentFrame, useVideoConfig } from "remotion";
+import { AbsoluteFill, Easing, Sequence, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import { Audio } from "@remotion/media";
 import { RT, whiteGlow } from "./tokens";
 
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -76,20 +77,66 @@ export const fit = (text: string, size: number, em: number, maxW = 930) => {
 
 // ---------- Hien chu ----------
 /** Go tung ky tu [GOC ~45 ky tu/s]; ky tu moi hien mo -> ro trong 2 frame@30. */
-export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: React.CSSProperties }> = ({ text, at = 0, cps = RT.time.typeCps, style }) => {
-  const { t } = useSec();
+/**
+ * Kieu hien chu: "orig" = nhu video mau (go nhanh ~45 ky tu/s, khoi do truot len/nhoe->net)
+ * "type" = [THEO NGUOI DUNG] GO BAN PHIM: moi chu hien tung ky tu kem con tro nhap nhay + tieng phim go moi ky tu.
+ */
+export type Reveal = { mode: "orig" | "type"; cps: number; keyVolume: number };
+export const RevealCtx = React.createContext<Reveal>({ mode: "orig", cps: RT.time.typeCps, keyVolume: 0 });
+export const useReveal = () => React.useContext(RevealCtx);
+
+const KEYS = ["key1", "key2", "key3", "key4", "key5"];
+/** Go tung ky tu. O che do "type": toc do ban phim, con tro, tieng phim moi ky tu (dat dung frame ky tu hien). */
+export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: React.CSSProperties; sound?: boolean }> = ({ text, at = 0, cps, style, sound = true }) => {
+  const { t, fps } = useSec();
+  const rv = useReveal();
+  const typing = rv.mode === "type";
+  const speed = cps ?? (typing ? rv.cps : RT.time.typeCps);
   const chars = Array.from(text.normalize("NFC"));
-  const n = (t - at) * cps;
+  const n = (t - at) * speed;
+  const done = n >= chars.length;
+  const tEnd = at + chars.length / speed;
+  // con tro: hien khi dang go + 0.5s sau, nhap nhay 2 lan/giay
+  const caretOn = typing && t >= at && t < tEnd + 0.5 && (t < tEnd || Math.floor((t - tEnd) * 4) % 2 === 0);
+  // Chu to gradient (background-clip:text) bo qua opacity cua con -> tach phan DA GO / CHUA GO thanh 2 span rieng,
+  // phan chua go visibility:hidden (giu cho, khong ve). Con tro dat NGAY SAU ky tu vua go (khong chiem cho).
+  const shown = Math.max(0, Math.min(chars.length, typing ? Math.floor(n) + 1 : Math.floor(n)));
+  const partial = typing ? 0 : interpolate(n - shown, [0, 1.5], [0, 1], C);
+  const caretH = typeof style?.fontSize === "number" ? style.fontSize : 60;
   return (
-    <span style={style}>
-      {chars.map((ch, i) => {
-        const o = interpolate(n - i, [0, 1.5], [0, 1], C);
-        return (
-          <span key={i} style={{ opacity: o }}>
-            {ch}
-          </span>
-        );
-      })}
+    <span style={{ whiteSpace: style?.whiteSpace ?? "nowrap", fontSize: style?.fontSize, lineHeight: style?.lineHeight }}>
+      <span style={style}>{chars.slice(0, t < at ? 0 : shown).join("")}</span>
+      {!typing && shown < chars.length ? <span style={{ ...style, opacity: partial }}>{chars[shown]}</span> : null}
+      {typing ? (
+        <span style={{ position: "relative", display: "inline-block", width: 0 }}>
+          <span
+            style={{
+              position: "absolute",
+              left: caretH * 0.04,
+              bottom: caretH * 0.12,
+              width: Math.max(3, caretH * 0.06),
+              height: caretH * 0.95,
+              background: style?.color && style.color !== "transparent" ? style.color : "#FFFFFF",
+              boxShadow: "0 0 8px rgba(255,255,255,0.7)",
+              opacity: caretOn ? 1 : 0,
+            }}
+          />
+        </span>
+      ) : null}
+      <span style={{ ...style, visibility: "hidden" }}>{chars.slice(t < at ? 0 : typing ? shown : shown + 1).join("")}</span>
+      {typing && sound && rv.keyVolume > 0
+        ? chars.map((ch, i) => {
+            const fr = Math.round((at + i / speed) * fps);
+            if (fr < 0) return null;
+            const sp = ch === " ";
+            const k = KEYS[Math.floor(random(`k${text}${i}`) * KEYS.length)];
+            return (
+              <Sequence key={`a${i}`} from={fr} durationInFrames={Math.round(0.14 * fps)} layout="none" name={`phim ${ch}`}>
+                <Audio src={staticFile(`sfx/${sp ? "keyspace" : k}.wav`)} volume={rv.keyVolume * (sp ? 0.8 : 0.85 + random(`v${text}${i}`) * 0.3)} />
+              </Sequence>
+            );
+          })
+        : null}
     </span>
   );
 };
@@ -186,6 +233,13 @@ export const SetupPunch: React.FC<{
   exit?: ExitMode;
 }> = ({ setup, punch, setupAt = 0, punchAt = 0.3, setupMode = "blur", punchMode = "rise", punchColor = "red", y = RT.y.setup, exit = "cut" }) => {
   const { t } = useSec();
+  const rv = useReveal();
+  if (rv.mode === "type") {
+    setupMode = "type";
+    punchMode = "type";
+    // go dong trang xong moi go dong do (1 ban phim tai 1 thoi diem)
+    if (setup) punchAt = Math.max(punchAt, setupAt + Array.from(setup).length / rv.cps + 0.12);
+  }
   const ex = useExit(exit);
   const pst = punchColor === "red" ? redText(fit(punch, RT.size.punch, 0.6)) : yellowText(fit(punch, RT.size.warn, 0.62));
   const rise = interpolate(t, [punchAt, punchAt + 0.25], [0, 1], { ...C, easing: easeOut });
@@ -256,9 +310,13 @@ export const StepBadge: React.FC<{ n: number; label: string; labelAt?: number; e
         </div>
       </Place>
       <Place y={RT.y.badgeLabel}>
-        <BlurIn at={labelAt} dur={0.5} from={1.04}>
-          <span style={{ ...whiteText(fit(label, RT.size.label, 0.72)), textShadow: `${whiteGlow}, 0 0 34px rgba(255,255,255,0.35)` }}>{label.toUpperCase()}</span>
-        </BlurIn>
+        {useReveal().mode === "type" ? (
+          <Typed text={label.toUpperCase()} at={labelAt + 0.2} style={{ ...whiteText(fit(label, RT.size.label, 0.72)), textShadow: `${whiteGlow}, 0 0 34px rgba(255,255,255,0.35)` }} />
+        ) : (
+          <BlurIn at={labelAt} dur={0.5} from={1.04}>
+            <span style={{ ...whiteText(fit(label, RT.size.label, 0.72)), textShadow: `${whiteGlow}, 0 0 34px rgba(255,255,255,0.35)` }}>{label.toUpperCase()}</span>
+          </BlurIn>
+        )}
       </Place>
     </AbsoluteFill>
   );
@@ -347,9 +405,13 @@ export const ExampleList: React.FC<{ title: string; titleAt?: number; items: Lis
         const y = (zig ? 0.3 : 0.28) + i * (zig ? 0.066 : 0.075);
         return (
           <Place key={i} x={x} y={y} anchor="left">
-            <BlurIn at={it.at} dy={22} from={1}>
-              <span style={whiteText(upper ? RT.size.list * 0.86 : RT.size.list)}>{upper ? it.text.toUpperCase() : it.text}</span>
-            </BlurIn>
+            {useReveal().mode === "type" ? (
+              <Typed text={upper ? it.text.toUpperCase() : it.text} at={it.at} style={whiteText(upper ? RT.size.list * 0.86 : RT.size.list)} />
+            ) : (
+              <BlurIn at={it.at} dy={22} from={1}>
+                <span style={whiteText(upper ? RT.size.list * 0.86 : RT.size.list)}>{upper ? it.text.toUpperCase() : it.text}</span>
+              </BlurIn>
+            )}
           </Place>
         );
       })}
@@ -419,9 +481,13 @@ export const EmphasisWipe: React.FC<{ text: string; y?: number; at?: number; siz
   const st = { ...redText(size, RT.font.body), fontWeight: 800 };
   return (
     <Place y={y} style={{ opacity: ex.k, filter: ex.blur ? `blur(${ex.blur}px)` : undefined }}>
-      <div style={{ clipPath: `inset(-30% -5% -30% ${(1 - p) * 85}%)` }}>
-        <div style={{ ...st, filter: `${st.filter} blur(${(1 - p) * 5}px)` }}>{text.toUpperCase()}</div>
-      </div>
+      {useReveal().mode === "type" ? (
+        <Typed text={text.toUpperCase()} at={at} style={st} />
+      ) : (
+        <div style={{ clipPath: `inset(-30% -5% -30% ${(1 - p) * 85}%)` }}>
+          <div style={{ ...st, filter: `${st.filter} blur(${(1 - p) * 5}px)` }}>{text.toUpperCase()}</div>
+        </div>
+      )}
     </Place>
   );
 };
@@ -477,9 +543,13 @@ export const Warning: React.FC<{ head: string; sub?: string; y?: number; at?: nu
   return (
     <AbsoluteFill style={{ opacity: ex.k, filter: ex.blur ? `blur(${ex.blur}px)` : undefined }}>
       <Place y={y}>
-        <BlurIn at={at} dur={0.2} from={1.1}>
-          <Typed text={head.toUpperCase()} at={at} cps={30} style={hs} />
-        </BlurIn>
+        {useReveal().mode === "type" ? (
+          <Typed text={head.toUpperCase()} at={at} style={hs} />
+        ) : (
+          <BlurIn at={at} dur={0.2} from={1.1}>
+            <Typed text={head.toUpperCase()} at={at} cps={30} style={hs} />
+          </BlurIn>
+        )}
       </Place>
       {sub ? (
         <Place y={y + 0.06}>

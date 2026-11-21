@@ -8,7 +8,7 @@
  */
 import React from "react";
 import { Easing, interpolate, spring } from "remotion";
-import { Place, redText, useSec, whiteText, yellowText } from "./components";
+import { Place, Typed, redText, useSec, whiteText, yellowText } from "./components";
 import { RT } from "./tokens";
 
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -29,7 +29,7 @@ export const BarLadder: React.FC<{ title?: string; bars: Bar[]; y?: number }> = 
     <>
       {title ? (
         <Place y={y - H / RT.H / 2 - 0.1}>
-          <span style={whiteText(64)}>{title}</span>
+          <Typed text={title} at={0} style={whiteText(64)} />
         </Place>
       ) : null}
       {/* duong day */}
@@ -93,7 +93,7 @@ export const PriceDrop: React.FC<{ from: string; to: number; toPrefix?: string; 
     <>
       {label ? (
         <Place y={y - 0.07}>
-          <span style={{ ...whiteText(58), opacity: pin }}>{label}</span>
+          <Typed text={label} at={at} style={whiteText(58)} />
         </Place>
       ) : null}
       <Place y={y}>
@@ -141,7 +141,7 @@ export const VersusCompare: React.FC<{ left: VsSide; right: VsSide; y?: number }
           padding: "26px 22px 30px",
         }}
       >
-        <div style={{ ...whiteText(54), textAlign: "center", whiteSpace: "normal", marginBottom: 18 }}>{side.title.toUpperCase()}</div>
+        <div style={{ textAlign: "center", marginBottom: 18 }}><Typed text={side.title.toUpperCase()} at={side.at + 0.15} style={{ ...whiteText(54), whiteSpace: "normal" }} /></div>
         {side.rows.map((r, i) => {
           const s = spring({ frame: f - Math.round(r.at * fps), fps, config: { damping: 10, stiffness: 240, mass: 0.5 } });
           const o = interpolate(t, [r.at, r.at + 0.1], [0, 1], C);
@@ -167,7 +167,7 @@ export const VersusCompare: React.FC<{ left: VsSide; right: VsSide; y?: number }
               >
                 {r.good ? "✓" : "✕"}
               </div>
-              <span style={{ ...whiteText(46), whiteSpace: "normal", lineHeight: 1.1 }}>{r.text}</span>
+              <Typed text={r.text} at={r.at + 0.1} style={{ ...whiteText(46), whiteSpace: "normal", lineHeight: 1.1 }} />
             </div>
           );
         })}

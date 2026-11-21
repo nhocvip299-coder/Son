@@ -29,6 +29,7 @@ import {
   type ListItem,
 } from "./components";
 import { RT } from "./tokens";
+import { RevealCtx, Typed, whiteText } from "./components";
 import { BarLadder, PriceDrop, VersusCompare, type Bar, type VsSide } from "./animations";
 
 export type RefSegment = {
@@ -86,6 +87,10 @@ export type RefPlan = {
   audioOverride?: { src: string; startMs: number };
   /** am luong giong (footage). <1 de SFX noi ro tren giong khi giong goc qua to; master-audio se chuan lai -14 LUFS */
   voiceVolume?: number;
+  /** kieu hien chu: mac dinh nhu video mau; { mode: "type" } = go ban phim + tieng phim moi ky tu */
+  reveal?: { mode: "orig" | "type"; cps?: number; keyVolume?: number };
+  /** ban chay chu: phu de go tung tu (khong tieng phim de khong on ao suot video) */
+  wordsTypewriter?: boolean;
 };
 
 export const refPlanDurationMs = (p: RefPlan) => p.segments.reduce((a, s) => a + s.srcEndMs - s.srcStartMs, 0);
@@ -216,7 +221,9 @@ export const RefEdit: React.FC<{ plan: RefPlan }> = ({ plan }) => {
     cursor += dur;
     return { s, from, dur };
   });
+  const rv = { mode: plan.reveal?.mode ?? "orig", cps: plan.reveal?.cps ?? RT.time.typeCps, keyVolume: plan.reveal?.keyVolume ?? 0 } as const;
   return (
+    <RevealCtx.Provider value={rv}>
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {segs.map(({ s, from, dur }, i) => (
         <Sequence key={i} from={from} durationInFrames={dur} name={`${s.kind === "bg" ? "NEN" : "MAT"} ${i + 1}${s.zoomTo ? ` zoom ${s.zoomFrom}->${s.zoomTo}` : ""}`}>
@@ -228,10 +235,36 @@ export const RefEdit: React.FC<{ plan: RefPlan }> = ({ plan }) => {
           {renderItem(it)}
         </Sequence>
       ))}
-      {plan.words?.length ? <WordByWord words={plan.words} y={plan.wordsY ?? 1560} /> : null}
+      {plan.words?.length ? (
+        plan.wordsTypewriter ? <WordsTyped words={plan.words} y={plan.wordsY ?? 1560} /> : <WordByWord words={plan.words} y={plan.wordsY ?? 1560} />
+      ) : null}
       {plan.audioOverride ? <Audio src={staticFile(plan.audioOverride.src)} trimBefore={toF(plan.audioOverride.startMs)} /> : null}
       {plan.music ? <Audio src={staticFile(plan.music.src)} volume={plan.music.volume} /> : null}
       <SfxTrack cues={plan.sfx.map((c) => ({ frame: toF(c.atMs), sfx: c.sfx, volume: c.volume }))} />
+    </AbsoluteFill>
+    </RevealCtx.Provider>
+  );
+};
+
+/** Phu de "chay chu" kieu go ban phim: moi tu go tung ky tu kip truoc khi tu sau bat dau (khong tieng phim). */
+const WordsTyped: React.FC<{ words: WbwWord[]; y: number }> = ({ words, y }) => {
+  const { fps } = useVideoConfig();
+  return (
+    <AbsoluteFill>
+      {words.map((w, i) => {
+        const from = Math.round((w.startMs / 1000) * fps);
+        const nx = words[i + 1];
+        const endMs = Math.min(nx ? nx.startMs : w.endMs + 600, w.endMs + 600);
+        const dur = Math.max(2, Math.round((endMs / 1000) * fps) - from);
+        const cps = Math.max(22, Array.from(w.text).length / Math.max(0.12, ((endMs - w.startMs) / 1000) * 0.6));
+        return (
+          <Sequence key={i} from={from} durationInFrames={dur} layout="none" name={`W ${w.text}`}>
+            <div style={{ position: "absolute", left: 0, right: 0, top: y, textAlign: "center", translate: "0 -50%" }}>
+              <Typed text={w.text} cps={cps} sound={false} style={{ ...whiteText(96), color: "#FFFFFF" }} />
+            </div>
+          </Sequence>
+        );
+      })}
     </AbsoluteFill>
   );
 };

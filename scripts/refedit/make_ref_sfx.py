@@ -40,3 +40,28 @@ x += 0.55 * np.sin(2 * np.pi * np.cumsum(3500 + 1500 * (1 - np.exp(-t * 60))) / 
 x[: int(SR * 0.006)] += np.random.default_rng(3).standard_normal(int(SR * 0.006)) * 0.35
 save("bubble.wav", x)
 print("ok tick.wav bubble.wav")
+
+# ---- Phim go ban phim (co) — 5 bien the + phim cach: click cao tan + "thock" tram + tieng nha phim ----
+def key(seed, f_body=210, click_hp=2500, dur=0.09, space=False):
+    r = np.random.default_rng(seed)
+    t = np.arange(int(SR * dur)) / SR
+    noise = r.standard_normal(len(t))
+    # loc thong cao don gian (sai phan) cho click
+    hp = np.diff(noise, prepend=0)
+    click = hp * np.exp(-t * (900 if not space else 600))
+    body = np.sin(2 * np.pi * f_body * t) * np.exp(-t * (70 if not space else 45)) * (0.6 if not space else 0.9)
+    rel = np.zeros_like(t)
+    a = int(SR * (0.045 + r.uniform(0, 0.01)))
+    n = int(SR * 0.012)
+    rel[a:a + n] = np.diff(r.standard_normal(n), prepend=0) * np.exp(-np.arange(n) / SR * 700) * 0.35
+    return click * 1.8 + body * 0.6 + rel * 1.4  # nhan manh "tach" cao tan de noi tren giong
+
+def loud(x, drive=3.0):
+    """nen mem (tanh) de tang do to cam nhan cua tieng phim ngan ma khong vo dinh"""
+    x = x / (np.abs(x).max() + 1e-9)
+    return np.tanh(drive * x)
+
+for i in range(5):
+    save(f"key{i + 1}.wav", loud(key(100 + i, f_body=190 + i * 18)))
+save("keyspace.wav", loud(key(200, f_body=140, dur=0.12, space=True)))
+print("ok key1-5.wav keyspace.wav")

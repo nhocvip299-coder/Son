@@ -103,9 +103,13 @@ add(78.6, "swoosh-down", 0.8); add(80.4, "bubble"); for (const c of [80.7, 83.6,
 add(92.2, "blip8"); add(96.8, "bubble"); add(100.05, "bubble"); add(103.5, "hud");
 add(105.3, "swoosh-down", 0.8); add(108.2, "blip8"); add(110.7, "hud"); add(111.7, "hud"); add(114.3, "blip8"); add(115.7, "hud"); add(117.4, "hud");
 
-const plan = { source: SRC, fps: 60, segments, items, sfx: sfx.sort((a, b) => a.atMs - b.atMs), music: { src: "music/bed-ambient.wav", volume: 0.03 }, voiceVolume: 0.5 };
+// [THEO NGUOI DUNG] chu hien kieu GO BAN PHIM + tieng phim moi ky tu (component tu dat tieng dung frame);
+// bo SFX pop/bubble/hud cua chu, chi giu tieng chuyen canh (vut vao canh tram, light leak)
+const KEEP = new Set(["swoosh-down", "swish"]);
+const reveal = { mode: "type", cps: 22, keyVolume: 1.0 };
+const plan = { source: SRC, fps: 60, segments, items, reveal, sfx: sfx.filter((c) => KEEP.has(c.sfx)).sort((a, b) => a.atMs - b.atMs), music: { src: "music/bed-ambient.wav", volume: 0.03 }, voiceVolume: 0.5 };
 fs.writeFileSync("work/vid2/plan-final.json", JSON.stringify(plan, null, 1));
 // ban chay chu tung chu: tu (da sua ASR) tu ban nhap cua engine (chay --no-cut => thoi gian = goc)
 const draft = JSON.parse(fs.readFileSync("work/vid2/plan-chay-chu.json", "utf8"));
-fs.writeFileSync("work/vid2/plan-final-chay-chu.json", JSON.stringify({ ...plan, words: draft.words, wordsY: 1590 }, null, 1));
+fs.writeFileSync("work/vid2/plan-final-chay-chu.json", JSON.stringify({ ...plan, words: draft.words, wordsY: 1590, wordsTypewriter: true }, null, 1));
 console.log(`plan-final: ${segments.length} doan, ${items.length} item, ${sfx.length} SFX`);

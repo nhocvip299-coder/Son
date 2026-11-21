@@ -19,7 +19,7 @@ export const RT = {
     bgDark: "#1F2834", // [GOC] p05
   },
   font: {
-    body: "'Be Vietnam Pro'", // [SUA] Poppins thieu glyph ả/ỷ (trinh duyet chen font co chan) -> Be Vietnam Pro (hinh hoc giong Poppins, du tieng Viet)
+    body: "'Nexa Heavy VN', 'Be Vietnam Pro'", // [SUA theo nguoi dung] 1FTV Nexa Heavy (bo font Viet hoa cua nguoi dung) giong chu trang goc nhat; du phong Be Vietnam Pro
     punch: "'Phudu'", // [SUA theo nguoi dung] Phudu 900: day du dau tieng Viet (Anton loi dau chong: TRẦM LẮNG -> TRÂM LĂNG)
     heavy: "'Phudu'", // chu vang/do dam rong cung Phudu cho dong bo
   },

@@ -10,3 +10,6 @@ reference/*.mp4
 reference/*.MP4
 inputs/
 styles/text-presets/source-zip/
+
+# font Viet hoa tu bo 100 font cua nguoi dung (giay phep khong ro) - khong dua len Git
+public/fonts/1FTV-*

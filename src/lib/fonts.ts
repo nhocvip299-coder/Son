@@ -1,4 +1,4 @@
-import { cancelRender, continueRender, delayRender } from "remotion";
+import { cancelRender, continueRender, delayRender, staticFile } from "remotion";
 // Font tu host (goi @fontsource tren npm, giay phep SIL OFL) -> render offline, du dau tieng Viet.
 import "@fontsource/be-vietnam-pro/700.css";
 import "@fontsource/be-vietnam-pro/800.css";
@@ -90,6 +90,24 @@ if (typeof document !== "undefined") {
       const missing = SPECS.filter((_s, i) => res[i].length === 0);
       if (missing.length) throw new Error(`Font khong tai duoc: ${JSON.stringify(missing)}`);
       continueRender(handle);
+    })
+    .catch((e) => cancelRender(e));
+}
+
+// Font chu trang cho phong cach reference-video-edit-thinking: 1FTV Nexa Heavy (bo "100 Font chu Viet hoa" cua nguoi dung,
+// du 134 ky tu tieng Viet, khong loi dau chong). File trong public/fonts (khong dua len Git) -> thieu file thi bao loi ro rang.
+export const NEXA = "'Nexa Heavy VN'";
+if (typeof document !== "undefined") {
+  const url = staticFile("fonts/1FTV-Nexa-Heavy.otf");
+  const st = document.createElement("style");
+  st.textContent = `@font-face{font-family:'Nexa Heavy VN';src:url('${url}') format('opentype');font-weight:100 900;font-display:block;}`;
+  document.head.appendChild(st);
+  const h = delayRender("Tai font Nexa Heavy VN");
+  fetch(url, { method: "HEAD" })
+    .then((r) => (r.ok ? document.fonts.load(`900 64px 'Nexa Heavy VN'`, SAMPLE).then(() => true) : false))
+    .then((ok) => {
+      if (!ok) console.warn("Thieu public/fonts/1FTV-Nexa-Heavy.otf - chu trang RefEdit se dung font du phong");
+      continueRender(h);
     })
     .catch((e) => cancelRender(e));
 }

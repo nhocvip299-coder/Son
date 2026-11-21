@@ -5,4 +5,4 @@ const plan=JSON.parse(fs.readFileSync("work/vid2/plan-final.json","utf8"));
 const serveUrl=await bundle({entryPoint:path.join(ROOT,"src/index.ts"),publicDir:path.join(ROOT,"public")});
 const common={browserExecutable:BROWSER,chromiumOptions:{gl:"swangle"},logLevel:"error"};
 const composition=await selectComposition({serveUrl,id:"RefEdit",inputProps:{plan},...common});
-for (const t of [11.4, 29.6]) await renderStill({serveUrl,composition,inputProps:{plan},frame:Math.round(t*60),output:`/tmp/claude-0/full_${t}.png`,...common});
+for (const t of [11.4, 29.6, 47.0]) await renderStill({serveUrl,composition,inputProps:{plan},frame:Math.round(t*60),output:`/tmp/claude-0/full_${t}.png`,...common});

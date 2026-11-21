@@ -26,9 +26,9 @@ const CUES: Array<[number, string, number]> = [
   [9.7, X.type, 0.75], [12.3, X.burst, 1], [12.5, X.type, 0.75], [14.7, X.page, 0.9], [20.1, X.page, 0.85],
   [22.8, X.burst, 1], [24.9, X.type, 0.75], [26.3, X.type, 0.75], [27.7, X.page, 0.85], [29.0, X.soft, 0.8],
   [31.5, X.page, 0.85], [32.2, X.count, 0.6], [32.35, X.count, 0.6], [32.5, X.land, 1], [34.7, X.land, 1],
-  [37.1, X.type, 0.75], [39.6, X.soft, 0.8], [41.6, X.burst, 1], [45.1, X.chip, 0.9], [49.27, X.soft, 1],
+  [37.1, X.type, 1.2], [39.6, X.soft, 0.8], [41.6, X.burst, 1.8], [41.75, X.whoosh, 1], [45.1, X.chip, 0.9], [49.27, X.soft, 1],
   [50.8, X.page, 0.85], [51.4, X.whoosh, 0.8], [52.45, X.land, 1], [53.3, X.page, 0.85],
-  [59.6, X.page, 0.85], [62.6, X.type, 0.75], [64.4, X.burst, 0.9], [65.4, X.chip, 1], [66.0, X.land, 1],
+  [59.6, X.page, 0.85], [62.6, X.type, 0.75], [64.4, X.burst, 1.8], [64.55, X.whoosh, 1], [65.4, X.chip, 1], [66.0, X.land, 1],
 ];
 
 export const SaoBienVesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem = "all" }) => {

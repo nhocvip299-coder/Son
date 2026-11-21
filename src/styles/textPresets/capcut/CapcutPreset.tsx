@@ -117,7 +117,19 @@ const shadowCss = (l: CcLayer, px: number): string | undefined => {
     .join(", ");
 };
 
-const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | null; text?: string; idx: number; hasTwin: boolean; twin?: CcLayer; glowK?: number }> = ({ l, glow, text, idx, hasTwin, twin, glowK = 1 }) => {
+/** Đồng bộ màu preset với tông video: giữ trắng/xám, màu ấm (đỏ/cam/vàng/tím/hồng) -> vàng champagne, màu lạnh -> cyan dịu. */
+export type CcTone = "theme" | undefined;
+const toTheme = (hex: string) => {
+  const m = /^#?([0-9a-f]{6})/i.exec(hex); if (!m) return hex;
+  const n = parseInt(m[1], 16), r = (n >> 16) / 255, g = ((n >> 8) & 255) / 255, b = (n & 255) / 255;
+  const mx = Math.max(r, g, b), mn = Math.min(r, g, b);
+  if (mx - mn < 0.18) return hex; // trắng / xám / đen giữ nguyên
+  let h = 0; const d = mx - mn;
+  if (mx === r) h = ((g - b) / d) % 6; else if (mx === g) h = (b - r) / d + 2; else h = (r - g) / d + 4;
+  h = (h * 60 + 360) % 360;
+  return h < 70 || h > 260 ? "#ffd36a" : "#5ee9f5";
+};
+const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | null; text?: string; idx: number; hasTwin: boolean; twin?: CcLayer; glowK?: number; tone?: CcTone }> = ({ l, glow, text, idx, hasTwin, twin, glowK = 1, tone }) => {
   const f = useFrame30();
   const { width, height } = useVideoConfig();
   const t = f / 30 - l.start;
@@ -126,7 +138,8 @@ const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | nu
   const st = twin && (l as { mask?: unknown }).mask ? { ...l.styles[0], font: twin.styles[0].font, size: twin.styles[0].size } : l.styles[0];
   const fm = fontOf(st.font || l.font);
   const px = (st.size ?? l.fontSize ?? 15) * CC_SIZE_K * (fm.k ?? 1) * (width / 1080);
-  const color = (st.fill as { solid?: string } | null)?.solid ?? l.color ?? "#fff";
+  const color0 = (st.fill as { solid?: string } | null)?.solid ?? l.color ?? "#fff";
+  const color = tone === "theme" ? toTheme(color0) : color0;
   const content = text ?? l.text;
   const inAnims = l.animations.filter((a) => a.type === "in");
   const outAnims = l.animations.filter((a) => a.type === "out");
@@ -228,7 +241,7 @@ export type CcFit =
   | { cx: number; cy: number; width: number; maxHeight?: number }; // dat vao vung (px) khi chen video
 
 /** Mot preset CapCut. `texts`: thay noi dung theo van ban goc, vd { "Bat dong san": "Nha pho" }. */
-export const CapcutPreset: React.FC<{ preset: CcPreset; texts?: Record<string, string>; withAudio?: boolean; fit?: CcFit; children?: React.ReactNode; glowK?: number }> = ({ preset, texts, withAudio = true, fit = "cover", children, glowK = 1 }) => {
+export const CapcutPreset: React.FC<{ preset: CcPreset; texts?: Record<string, string>; withAudio?: boolean; fit?: CcFit; children?: React.ReactNode; glowK?: number; tone?: CcTone }> = ({ preset, texts, withAudio = true, fit = "cover", children, glowK = 1, tone }) => {
   const { fps } = useVideoConfig();
   const box = useUnionBox(preset, texts);
   let fitStyle: React.CSSProperties = {};
@@ -267,7 +280,7 @@ export const CapcutPreset: React.FC<{ preset: CcPreset; texts?: Record<string, s
       ) : null}
       <AbsoluteFill style={fitStyle}>
         {preset.layers.map((l, i) => (
-          <LayerView key={i} idx={i} l={l} glow={glow} glowK={glowK} text={texts?.[l.text]} hasTwin={preset.layers.some((o, j) => j !== i && o.text.toLowerCase() === l.text.toLowerCase() && !(o as { mask?: unknown }).mask)}
+          <LayerView key={i} idx={i} l={l} glow={glow} glowK={glowK} tone={tone} text={texts?.[l.text]} hasTwin={preset.layers.some((o, j) => j !== i && o.text.toLowerCase() === l.text.toLowerCase() && !(o as { mask?: unknown }).mask)}
             twin={preset.layers.find((o, j) => j !== i && o.text.toLowerCase() === l.text.toLowerCase() && !(o as { mask?: unknown }).mask && Math.abs(o.x - l.x) < 0.02 && Math.abs(o.y - l.y) < 0.02)} />
         ))}
         {children}

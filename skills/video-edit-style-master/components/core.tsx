@@ -25,7 +25,7 @@ export const vn = (v: number, dec: number) => v.toFixed(dec).replace(".", ",").r
 
 /** BẢNG MÀU CHỮ: "neon" = mẫu kính xanh (cyan phát sáng + vàng) ; "aqua" = mẫu "xanh điện quang" (reference/mau-upload-2):
  *  gradient CHÉO #13489c ↔ #16fff4, không viền, quầng xanh mờ; chữ ký trắng #f3ffff phát sáng. Bọc composition bằng <TextTheme value="aqua">. */
-export type TextThemeName = "neon" | "aqua";
+export type TextThemeName = "neon" | "aqua" | "neonSoft"; // neonSoft = neon dịu: quầng nhỏ, lõi bớt trắng, nền tối mềm (góp ý "chữ chói loá" 21/11)
 const ThemeCtx = createContext<TextThemeName>("neon");
 export const TextTheme: React.FC<{ value: TextThemeName; children: React.ReactNode }> = ({ value, children }) => <ThemeCtx.Provider value={value}>{children}</ThemeCtx.Provider>;
 export const useTextTheme = () => useContext(ThemeCtx);

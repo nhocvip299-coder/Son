@@ -38,7 +38,7 @@ export const SaoBienVesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem
   const front = (a: number, m: string, start: number) => <PersonFront matte={`${D}${m}/person.webm`} from={a - start} />;
   const k40 = CC_PRESETS.find((p) => p.id === "Kobe Text 40")!;
   return (
-    <TextTheme value="neon"><AbsoluteFill style={{ backgroundColor: "#000" }}><TealOrange k={0.5}>
+    <TextTheme value="neonSoft"><AbsoluteFill style={{ backgroundColor: "#000" }}><TealOrange k={0.5}>
       <AbsoluteFill>
         <Sequence durationInFrames={s(END)}><OffthreadVideo src={staticFile(SRC)} muted={stem === "sfx"} volume={stem === "sfx" ? 0 : 1} /></Sequence>
         <Sequence from={s(END)}><Freeze frame={s(END) - 2}><OffthreadVideo src={staticFile(SRC)} muted /></Freeze></Sequence>
@@ -75,7 +75,7 @@ export const SaoBienVesm: React.FC<{ stem?: "all" | "sfx" | "voice" }> = ({ stem
       {/* GIÁ */}
       <Seq a={41.4} b={42.0}><LightBurst /></Seq>
       <Seq a={41.7} b={44.9}><NeonTitle id="p1" lead="điều đáng nói nhất" main="Về giá" cy={390} size={180} at={0.1} /></Seq>
-      <Seq a={44.9} b={47.8}><CapcutPreset preset={k40} fit={{ cx: 540, cy: 460, width: 620 }} texts={{ "100 Triệu": "25 Tỷ" }} withAudio={stem !== "voice"} /></Seq>
+      <Seq a={44.9} b={47.8}><CapcutPreset preset={k40} fit={{ cx: 540, cy: 460, width: 620 }} texts={{ "100 Triệu": "25 Tỷ" }} glowK={0.45} withAudio={stem !== "voice"} /></Seq>
       <Seq a={47.8} b={49.2}><NeonTitle id="p2" lead="cộng với" main="Chiết khấu thêm" cy={330} size={150} at={0.05} /></Seq>
       <Seq a={49.2} b={50.75}><ThinBig value="7,5%" lead="theo chính sách mới" cy={470} size={230} front={front(49.2, "m75", 49.0)} /></Seq>
       <Seq a={50.75} b={53.35}><GlassPage src={SRC} from={50.75} /></Seq>

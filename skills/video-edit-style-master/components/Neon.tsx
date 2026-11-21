@@ -14,7 +14,9 @@ export const NeonTitle: React.FC<{
   lead?: string; size?: number; at?: number; color?: string;
 }> = ({ id, main, cy, script, scriptPos = "below", scriptColor = VESM.color.script, lead, size = VESM.size.neon, at = 0.1, color = VESM.color.neon }) => {
   const { t, dur, width, height } = useLocal();
-  const aqua = useTextTheme() === "aqua";
+  const theme = useTextTheme();
+  const aqua = theme === "aqua";
+  const soft = theme === "neonSoft";
   const M = main.toUpperCase();
   const fs = fitSize(M, VESM.font.block, VESM.font.blockWeight, size);
   const chars = [...M];
@@ -37,13 +39,14 @@ export const NeonTitle: React.FC<{
         <defs>
           <filter id={`nw-${id}`} x="-20%" y="-80%" width="140%" height="260%"><feGaussianBlur stdDeviation={fs * 0.12} /></filter>
           <filter id={`nn-${id}`} x="-20%" y="-80%" width="140%" height="260%"><feGaussianBlur stdDeviation={fs * 0.035} /></filter>
-          <linearGradient id={`nf-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={VESM.color.neonCore} /><stop offset="0.55" stopColor={color} /><stop offset="1" stopColor={color} /></linearGradient>
+          <linearGradient id={`nf-${id}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={soft ? "#b8fbfc" : VESM.color.neonCore} /><stop offset="0.55" stopColor={color} /><stop offset="1" stopColor={color} /></linearGradient>
           <clipPath id={`nc-${id}`}><rect x={sx - sw / 2 - 20} y={sy - ss} width={(sw + 40) * wS} height={ss * 2} /></clipPath>
         </defs>
         {lead ? <text x={width / 2} y={cy - fs * 0.78} textAnchor="middle" dominantBaseline="central" fill="#fff" opacity={la} style={{ fontFamily: VESM.font.sans, fontWeight: 600, fontSize: VESM.size.lead, filter: "drop-shadow(0 2px 2px rgba(0,0,28,0.9)) drop-shadow(0 0 10px rgba(0,0,28,0.6))" }}>{lead}</text> : null}
         {aqua ? <AquaGrad id={`aq-${id}`} /> : null}
-        {Row({ fill: aqua ? "#16c8f0" : color, filter: `url(#nw-${id})`, opacity: aqua ? 0.35 : 0.85 }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
-        {aqua ? Row({ fill: "#00001c", stroke: "#00001c", strokeWidth: fs * 0.3, strokeLinejoin: "round", opacity: 0.4, filter: `url(#nw-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>) : Row({ fill: color, filter: `url(#nn-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
+        {soft ? Row({ fill: "#001018", stroke: "#001018", strokeWidth: fs * 0.25, strokeLinejoin: "round", opacity: 0.45, filter: `url(#nw-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>) : null}
+        {Row({ fill: aqua ? "#16c8f0" : color, filter: `url(#nw-${id})`, opacity: aqua ? 0.35 : soft ? 0.28 : 0.85 }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
+        {aqua ? Row({ fill: "#00001c", stroke: "#00001c", strokeWidth: fs * 0.3, strokeLinejoin: "round", opacity: 0.4, filter: `url(#nw-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>) : Row({ fill: color, filter: `url(#nn-${id})`, opacity: soft ? 0.55 : 1 }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
         {Row({ fill: aqua ? `url(#aq-${id})` : `url(#nf-${id})` }, (c, i) => <tspan key={i} opacity={fl(i)}>{c}</tspan>)}
         {script ? (
           <g clipPath={`url(#nc-${id})`}>

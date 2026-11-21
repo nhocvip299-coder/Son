@@ -11,6 +11,7 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 - Ảnh trám mờ/độ phân giải thấp → bỏ; dùng cảnh quay thật trong video, đồ hoạ tự dựng, hoặc footage miễn phí bản quyền.
 - Chữ to tự thu nhỏ để nằm trong **vùng an toàn TikTok/Reels** (lề 150px hai bên, trên 220px, dưới 520px) — kiểm bằng ảnh có khung đỏ.
 - Gửi bản xem nhanh (~60 MB) qua SendUserFile; bản đầy đủ để trong `out/`.
+- **KHÔNG thêm nhạc nền** vào video (21/11/2026) — chỉ giọng gốc + SFX.
 - Không sửa/xóa file gốc; video gốc/mẫu không đưa lên Git.
 
 ## Quy trình chuẩn

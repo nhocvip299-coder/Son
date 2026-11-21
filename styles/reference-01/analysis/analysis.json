@@ -1,0 +1,188 @@
+{
+ "source": "reference/mau-ref-01.mp4",
+ "size": 5551620,
+ "duration": 61.9,
+ "video": {
+  "codec": "h264",
+  "w": 576,
+  "h": 1024,
+  "fps": "30/1"
+ },
+ "cuts": {
+  "count": 13,
+  "times": [
+   8.0,
+   9.7,
+   14.4,
+   20.6,
+   23.2,
+   25.7,
+   32.9,
+   36.3,
+   39.7,
+   41.1,
+   50.7,
+   53.3,
+   57.9
+  ],
+  "avg_shot_s": 4.42,
+  "median_shot_s": 3.7,
+  "per_min": 12.6
+ },
+ "text_events": {
+  "count": 5,
+  "per_min": 4.8,
+  "times": [
+   0.3,
+   5.7,
+   11.9,
+   37.9,
+   54.3
+  ]
+ },
+ "edge_density_by_band_top_to_bottom": [
+  0.0,
+  0.0336,
+  0.0413,
+  0.0431,
+  0.0439,
+  0.0404,
+  0.057,
+  0.0552,
+  0.0996,
+  0.0729
+ ],
+ "palette": [
+  {
+   "hex": "#3f4d5d",
+   "share": 0.247
+  },
+  {
+   "hex": "#7e7365",
+   "share": 0.199
+  },
+  {
+   "hex": "#0d0d14",
+   "share": 0.157
+  },
+  {
+   "hex": "#c6b19b",
+   "share": 0.155
+  },
+  {
+   "hex": "#333943",
+   "share": 0.145
+  },
+  {
+   "hex": "#21242b",
+   "share": 0.097
+  }
+ ],
+ "accent_colors": [
+  "#f32713",
+  "#cab833",
+  "#a69930",
+  "#ef314c",
+  "#af2d2a"
+ ],
+ "brightness_flashes": [
+  9.5,
+  23.2
+ ],
+ "audio": {
+  "onsets_count": 15,
+  "onsets_per_min": 14.5,
+  "cut_onset_sync_ratio": 0.08,
+  "onsets": [
+   4.53,
+   7.29,
+   8.83,
+   11.7,
+   13.34,
+   13.65,
+   15.66,
+   21.34,
+   35.07,
+   45.25,
+   54.19,
+   54.27,
+   56.62,
+   57.9,
+   58.27
+  ]
+ },
+ "keyframes": [
+  {
+   "file": "styles/reference-01/analysis/keyframes/k00_000.70s.jpg",
+   "t": 0.7
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k01_006.10s.jpg",
+   "t": 6.1
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k02_008.40s.jpg",
+   "t": 8.4
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k03_010.10s.jpg",
+   "t": 10.1
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k04_012.30s.jpg",
+   "t": 12.3
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k05_014.80s.jpg",
+   "t": 14.8
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k06_021.00s.jpg",
+   "t": 21.0
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k07_023.60s.jpg",
+   "t": 23.6
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k08_026.10s.jpg",
+   "t": 26.1
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k09_033.30s.jpg",
+   "t": 33.3
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k10_036.70s.jpg",
+   "t": 36.7
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k11_038.30s.jpg",
+   "t": 38.3
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k12_040.10s.jpg",
+   "t": 40.1
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k13_041.50s.jpg",
+   "t": 41.5
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k14_051.10s.jpg",
+   "t": 51.1
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k15_053.70s.jpg",
+   "t": 53.7
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k16_054.70s.jpg",
+   "t": 54.7
+  },
+  {
+   "file": "styles/reference-01/analysis/keyframes/k17_058.30s.jpg",
+   "t": 58.3
+  }
+ ]
+}

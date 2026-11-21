@@ -1,0 +1,79 @@
+{
+ "source": "inputs/ref01.mp4",
+ "fps": 60,
+ "segments": [
+  {
+   "srcStartMs": 3000,
+   "srcEndMs": 4050,
+   "kind": "th",
+   "zoomFrom": 1,
+   "zoomTo": 1.2,
+   "zoomRampMs": 800,
+   "why": "goc: zoom ramp 0.243->0.294 khi noi 'Quan trong nhat'"
+  },
+  {
+   "srcStartMs": 50750,
+   "srcEndMs": 53200,
+   "kind": "th",
+   "zoomFrom": 1.1,
+   "zoomTo": 1.1
+  }
+ ],
+ "items": [
+  {
+   "type": "emphasis",
+   "text": "Quan trọng nhất",
+   "at": 0,
+   "startMs": 200,
+   "endMs": 1050
+  },
+  {
+   "type": "bigNumeral",
+   "num": "1",
+   "line1": "Vấn đề",
+   "line2": "duy nhất",
+   "at": 0,
+   "dimAt": 1.2000000000000028,
+   "startMs": 1250,
+   "endMs": 3500,
+   "exit": "cut"
+  },
+  {
+   "type": "warning",
+   "head": "Đừng nói",
+   "sub": "Quá nhiều thông tin",
+   "at": 0,
+   "subAt": 0.12,
+   "startMs": 2500,
+   "endMs": 3500,
+   "exit": "cut"
+  }
+ ],
+ "sfx": [
+  {
+   "atMs": 200,
+   "sfx": "bubble",
+   "volume": 0.55
+  },
+  {
+   "atMs": 1250,
+   "sfx": "bubble",
+   "volume": 0.55
+  },
+  {
+   "atMs": 2500,
+   "sfx": "bubble",
+   "volume": 0.55
+  },
+  {
+   "atMs": 150,
+   "sfx": "whoosh",
+   "volume": 0.35
+  }
+ ],
+ "audioOverride": {
+  "src": "inputs/ref01.mp4",
+  "startMs": 36250
+ },
+ "origStart": 36.25
+}

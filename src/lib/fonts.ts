@@ -25,6 +25,9 @@ import "@fontsource/noto-serif/500.css";
 import "@fontsource/playfair-display/500.css";
 import "@fontsource/public-sans/300-italic.css";
 import "@fontsource/montserrat/800-italic.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/800.css";
+import "@fontsource/poppins/900.css";
 
 export const FONTS = {
   body: "'Be Vietnam Pro'",
@@ -39,6 +42,7 @@ export const FONTS = {
   elegant: "'Great Vibes'",
   times: "'Noto Serif'",
   grotesk: "'Public Sans'",
+  poppins: "'Poppins'",
 } as const;
 
 export type FontKey = keyof typeof FONTS;
@@ -67,6 +71,9 @@ const SPECS: Array<[number, string, string?]> = [
   [500, "Noto Serif"],
   [500, "Playfair Display"],
   [300, "Public Sans", "italic"],
+  [700, "Poppins"],
+  [800, "Poppins"],
+  [900, "Poppins"],
 ];
 // Chuoi mau phu ca 3 subset (latin, latin-ext, vietnamese) de trinh duyet tai du file
 const SAMPLE = "AaBb09 ĂăÂâĐđÊêÔôƠơƯư ẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặ ỆệỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ ŁłŚś₫";

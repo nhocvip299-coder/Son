@@ -1,0 +1,85 @@
+{
+ "source": "inputs/ref01.mp4",
+ "fps": 60,
+ "segments": [
+  {
+   "srcStartMs": 25700,
+   "srcEndMs": 32900,
+   "kind": "bg",
+   "blurIn": false
+  }
+ ],
+ "items": [
+  {
+   "type": "cards",
+   "startMs": 1400,
+   "endMs": 7200,
+   "cards": [
+    {
+     "at": 0,
+     "lines": [
+      {
+       "text": "Mở - gây tò mò",
+       "at": 0.57
+      }
+     ]
+    },
+    {
+     "at": 2,
+     "lines": [
+      {
+       "text": "Nội dung - giải thích",
+       "at": 2.7699999999999996
+      }
+     ]
+    },
+    {
+     "at": 4,
+     "lines": [
+      {
+       "text": "Kết - chốt vấn đề",
+       "at": 4.549999999999997
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "atMs": 1400,
+   "sfx": "bubble",
+   "volume": 0.55
+  },
+  {
+   "atMs": 3400,
+   "sfx": "bubble",
+   "volume": 0.55
+  },
+  {
+   "atMs": 5400,
+   "sfx": "bubble",
+   "volume": 0.55
+  },
+  {
+   "atMs": 1970,
+   "sfx": "click",
+   "volume": 0.5
+  },
+  {
+   "atMs": 4050,
+   "sfx": "click",
+   "volume": 0.5
+  },
+  {
+   "atMs": 5850,
+   "sfx": "click",
+   "volume": 0.5
+  }
+ ],
+ "audioOverride": {
+  "src": "inputs/ref01.mp4",
+  "startMs": 25700
+ },
+ "origStart": 25.7
+}

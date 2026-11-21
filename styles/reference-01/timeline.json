@@ -1,0 +1,59 @@
+{
+  "source": "reference/mau-ref-01.mp4 (tai TikTok, 576x1024 30fps 61.9s; 57.9-61.9s la outro TikTok, KHONG phai cua editor)",
+  "legend": {
+    "obs": "quan sat truc tiep tren keyframe/strip/do pixel",
+    "inf": "suy luan cua AI ve ly do editor chon (khong quan sat duoc truc tiep)",
+    "y": "tam doc khoi chu, ti le chieu cao khung (0=tren,1=duoi)",
+    "lag": "thoi diem hien - thoi diem tu khoa duoc noi (s). Am = hien truoc khi noi"
+  },
+  "shots": [
+    { "t0": 0.0, "t1": 8.0, "kind": "talking-head", "scale": "trung -> push-in 0.229->0.275 (0-1.6s)", "obs": "mo dau push-in cham" },
+    { "t0": 8.0, "t1": 9.7, "kind": "talking-head", "scale": "zoom ramp 0.238->0.292 trong 0.8s ngay khi vao 'Buoc 1'", "exit": "light-leak do-cam 9.4-9.6 roi cat" },
+    { "t0": 9.7, "t1": 14.4, "kind": "talking-head", "scale": "rong 0.24", "obs": "nen duoc lam mo (frosted) tu 10.8s de dat the kinh" },
+    { "t0": 14.4, "t1": 20.6, "kind": "abstract-bg", "obs": "nen xanh than mo, khoi toi troi cham; liet ke vi du" },
+    { "t0": 20.6, "t1": 23.2, "kind": "talking-head", "scale": "trung 0.25", "exit": "light-leak cam 23.0-23.2 roi cat" },
+    { "t0": 23.2, "t1": 25.7, "kind": "talking-head", "scale": "trung 0.24-0.25" , "exit": "blur-dissolve sang nen 25.6-26.0"},
+    { "t0": 25.7, "t1": 32.9, "kind": "abstract-bg", "obs": "3 the vang xep doc (infographic cau truc 3 canh)" },
+    { "t0": 32.9, "t1": 36.3, "kind": "abstract-bg", "obs": "danh sach goc quay; cat bg->bg de reset chu" },
+    { "t0": 36.3, "t1": 39.7, "kind": "talking-head", "scale": "zoom ramp 0.243->0.294 (36.4-37.2) khi noi 'Quan trong nhat'" },
+    { "t0": 39.7, "t1": 41.1, "kind": "talking-head", "scale": "rong 0.235-0.242" },
+    { "t0": 41.1, "t1": 50.7, "kind": "abstract-bg", "obs": "the vang 3D nghieng + chu do canh bao; badge '3' mang qua diem cat roi mo dan" },
+    { "t0": 50.7, "t1": 53.3, "kind": "talking-head", "scale": "zoom ramp 0.257->0.29", "obs": "KHONG co chu ~2.6s (doan giai thich 'Vi TikTok...')" },
+    { "t0": 53.3, "t1": 57.9, "kind": "talking-head", "scale": "rong 0.227 -> push cham 0.264", "obs": "tom tat 1-2-3 roi ket" }
+  ],
+  "events": [
+    { "t_in": 0.2, "t_out": 1.2, "kind": "hook-number-3d", "text": "2 NĂM", "color": "red-gradient", "y": 0.64, "with": "dong ho cat 3D xoay, de len chu", "anim_in": "pop + blur 0.2s", "anim_out": "glare/flare cau vong + bloom do 0.95-1.2s", "anchor_word": "2 năm@0.39", "lag": -0.19, "sfx": "glitch/flare ~0.9-1.1s (cao tan)", "inf": "con so thoi gian = bang chung cong suc -> hook bang con so + vat the 3D cu the" },
+    { "t_in": 1.42, "t_out": 8.0, "kind": "setup-line", "text": "Tìm ra quy trình", "color": "white", "font": "Poppins 700-800", "y": 0.615, "anim_in": "blur-fade 0.16s", "anchor_word": "tìm@1.08", "lag": 0.34 },
+    { "t_in": 2.1, "t_out": 3.6, "kind": "punch-line", "text": "LÀM VIDEO BĐS", "color": "red-gradient", "font": "heavy condensed (~Anton)", "y": 0.66, "anim_in": "truot len tu duoi + mask 0.25s", "anchor_word": "làm@2.04", "lag": 0.06, "sfx": "pop ~2.1s", "inf": "dong trang = ngu canh nho, dong do = chu de chinh to; cap 2 tang" },
+    { "t_in": 4.2, "t_out": 6.0, "kind": "prop-3d", "text": "(dong ho 3D)", "y": 0.38, "anim_in": "fade + zoom 0.25s, dong thoi push-in mat", "anim_out": "tan thanh hat bui bay ngang 5.6-6.0", "anchor_word": "phút@4.24", "lag": -0.04, "sfx": "tick-tock 4.2-5.0", "inf": "'5 phut' = khai niem thoi gian -> minh hoa bang dong ho, ben canh mat (khong che mat)" },
+    { "t_in": 5.7, "t_out": 9.4, "kind": "setup+punch", "text": "Cách tạo / VIDEO BĐS TỐI ƯU", "color": "white / red-gradient", "y": [0.59, 0.66], "anim_in": "go tung ky tu ~45 ky tu/s", "anchor_word": "cách@4.98, video@5.58", "lag": 0.5, "sfx": "pop ~5.9-6.0", "inf": "cho dong ho tan xong moi hien -> 1 diem nhin tai 1 thoi diem" },
+    { "t_in": 8.15, "t_out": 9.7, "kind": "step-badge", "text": "① CHỌN NỘI DUNG", "color": "badge #D13049 + chu trang", "y": [0.61, 0.70], "anim_in": "blur-in 0.25s, net han dung luc noi 'Chọn'@8.61", "anim_out": "light-leak do-cam 9.4-9.6 + cat", "anchor_word": "Bước 1@8.29", "lag": -0.14, "sfx": "pop ~8.35", "inf": "moc chuong -> badge so + zoom ramp + chuyen canh 'dong chuong'" },
+    { "t_in": 10.8, "t_out": 14.4, "kind": "question-pills", "text": "VIDEO NÀY DÀNH CHO AI / GIẢI QUYẾT VẤN ĐỀ GÌ", "color": "the kinh toi, vien trang phat sang", "y": [0.69, 0.80], "rot_deg": [-5, -7], "anim_in": "nen mo dan 0.2s, the scale-in + chu go", "anchor_word": "2 câu hỏi@10.98, Giải@13.04", "lag": 0.0, "inf": "2 cau hoi = 2 the; nghieng nhe tao nang dong, nen mo de doc" },
+    { "t_in": 14.45, "t_out": 20.6, "kind": "example-list", "text": "Khách mua ở: Tiện ích, Cuộc sống, Đi chợ, Đi học | Khách đầu tư: Giá, Hạ tầng, Tiềm năng tăng giá", "color": "trang, bong toi", "y": [0.18, 0.2, 0.47], "layout": "tieu de giua-tren; muc zig-zag trai/phai, cach deu ~0.02H", "anim_in": "tieu de go ky tu; muc: truot len + mo + blur 0.2s", "anchor_word": "khách@14.65; tiện ích@15.74; cuộc@16.19; đi chợ@16.78; đi học@17.20; Khách@17.64; giá@18.76; hạ tầng@18.94; tiềm năng@19.46", "lag": 0.2, "sfx": "pop nhe moi muc (16.5, 16.85, 17.4, 17.85)", "inf": ">=3 vi du -> roi talking head sang nen trung tinh de nao chi doc danh sach" },
+    { "t_in": 20.7, "t_out": 23.2, "kind": "step-badge", "text": "② QUAY CÓ CHỦ ĐÍCH", "y": [0.61, 0.70], "anim_in": "blur-in", "anim_out": "light-leak cam 23.0-23.2", "anchor_word": "Bước 2@20.42", "lag": 0.28, "sfx": "pop ~20.65" },
+    { "t_in": 23.3, "t_out": 25.7, "kind": "contrast-pair", "text": "KHÔNG CẦN ĐẸP / RÕ  ĐÚNG", "color": "trang / do (2 tu dat 2 ben)", "y": [0.61, 0.67], "anim_in": "go ky tu (dong trang); 'RÕ' & 'ĐÚNG' pop rieng tung tu", "anchor_word": "Không@23.12; rõ@24.82; đúng@25.17", "lag": 0.2, "sfx": "pop 23.5, 24.65", "anim_out": "blur-dissolve + zoom sang nen", "inf": "phu dinh (trang) -> khang dinh (do); tach 2 tu do de tung tu 'dap' theo giong" },
+    { "t_in": 27.1, "t_out": 32.9, "kind": "structure-cards", "text": "MỞ - GÂY TÒ MÒ / NỘI DUNG - GIẢI THÍCH / KẾT - CHỐT VẤN ĐỀ", "color": "the vang trong suot + vien vang phat sang", "y": [0.22, 0.42, 0.62], "anim_in": "the no ngang 0.4s roi cao 0.25s; chu go ~45 ky tu/s sau khi the xong", "anchor_word": "Thứ nhất@27.02 (the) / mở@28.01 (chu); Thứ hai@28.90; Thứ ba@30.86", "lag": 0.1, "sfx": "pop/ding moi the (27.25, 29.1, 30.9)", "inf": "KHUNG hien o tu dem (thu nhat/hai/ba), NOI DUNG go khi noi danh tu -> nguoi xem thay cau truc truoc, chi tiet sau" },
+    { "t_in": 32.9, "t_out": 36.3, "kind": "example-list", "text": "Góc quay: NÓI TRỰC DIỆN, QUAY CẢNH, GHI ÂM SAU", "y": [0.18, 0.33, 0.37], "anim_in": "tieu de go; muc truot len + blur", "anchor_word": "Góc@32.64; nói@33.51; quay cảnh@34.77; ghi âm@35.44", "lag": 0.1, "sfx": "pop ~32.97" },
+    { "t_in": 36.47, "t_out": 37.3, "kind": "emphasis-red", "text": "QUAN TRỌNG NHẤT", "color": "do", "y": 0.66, "anim_in": "mo rong tu phai sang trai 0.23s", "anchor_word": "Quan@36.16", "lag": 0.31, "with": "zoom ramp mat 0.8s", "inf": "cum 'quan trong nhat' = dinh noi dung -> do + zoom vao mat" },
+    { "t_in": 37.5, "t_out": 38.7, "kind": "big-numeral", "text": "1 | VẤN ĐỀ / DUY NHẤT", "color": "so 1 do nghieng rat lon + 2 dong trang", "y": 0.69, "x": "so 1 o 0.24W, chu ben phai", "anim_in": "wipe tu trai", "anchor_word": "một@37.23", "lag": 0.27 },
+    { "t_in": 38.5, "t_out": 39.7, "kind": "warning", "text": "ĐỪNG NÓI / Quá nhiều thông tin", "color": "vang #FACF1E / trang", "y": [0.66, 0.72], "anim_in": "go ky tu; khoi cu blur-out dong thoi (cross-blur 0.3s)", "anchor_word": "Đừng@38.34", "lag": 0.16, "inf": "doi mau sang vang vi ngay canh so 1 do -> tranh 2 khoi do lien tiep" },
+    { "t_in": 39.9, "t_out": 41.6, "kind": "step-badge", "text": "③ ĐĂNG VIDEO", "y": [0.61, 0.70], "anim_in": "blur-in", "anim_out": "mang qua diem cat sang nen roi mo dan", "anchor_word": "Bước 3@39.58", "lag": 0.32 },
+    { "t_in": 41.3, "t_out": 50.7, "kind": "checklist-card-3d", "text": "1 kênh - 1 chủ đề / 1 khung giờ / Liên tục 7-10 ngày", "color": "the vang, xoay 3D (rotateY ~-15deg, rotateZ ~6deg)", "y": 0.26, "anim_in": "the hien mo->ro 0.4s; tung dong go khi duoc noi", "anchor_word": "một kênh@41.14; khung giờ@43.31; liên tục@44.09", "lag": 0.15 },
+    { "t_in": 46.9, "t_out": 50.7, "kind": "warning-red", "text": "ĐĂNG ĐỜI SỐNG / KÊU GỌI BẠN BÈ", "color": "do + glow", "y": [0.47, 0.53], "anim_in": "go ky tu", "anchor_word": "Đăng@46.86; Kêu@48.70", "lag": 0.15, "sfx": "pop ~47.2", "inf": "dieu CAM ('tuyet doi khong') -> do, dat duoi the checklist de doi lap Nen/Khong nen" },
+    { "t_in": 50.7, "t_out": 53.3, "kind": "breathing-room", "text": "(khong chu)", "inf": "doan giai thich ly do ('Vi TikTok...') -> de mat nguoi noi tu nhien, tao nhip nghi" },
+    { "t_in": 54.3, "t_out": 55.8, "kind": "recap-badges", "text": "① ② ③", "y": 0.69, "anim_in": "pop tung badge cach 0.12-0.15s", "anim_out": "no thanh tia sang do (burst) 55.3-55.8", "anchor_word": "3 bước@54.15", "lag": 0.15, "sfx": "pop x3 ~54.3" }
+  ],
+  "transitions_obs": {
+    "hard_cut": "chu yeu (13 diem cat/58s, shot trung vi 3.7s)",
+    "zoom_ramp": "8.0, 36.4, 50.8: scale mat tang ~20% trong 0.5-0.8s, ease-out",
+    "light_leak": "9.4-9.6 (do), 23.0-23.2 (cam): ket thuc chuong 'Buoc N'",
+    "blur_dissolve": "25.6-26.0 talking-head -> nen; 38.6 chu cu blur-out",
+    "flare_burst": "0.95-1.2 ket thuc hook",
+    "particle_dissolve": "5.6-6.0 dong ho tan thanh bui"
+  },
+  "audio_obs": {
+    "loudness": "-15.5 LUFS tich hop",
+    "music": "co nhac nen lien tuc, rat nho, (vach tan ~700-900Hz on dinh tren pho kenh Side)",
+    "sfx": "tieng pop/ding ngan, am luong vua (khong at giong), dat dung luc chu/the xuat hien; tick-tock dong ho 4.2-5.0; glitch/flare cao tan 0.9-1.1. Do tin cay: TRUNG BINH (giong noi chong lap pho)."
+  }
+}

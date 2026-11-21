@@ -1,0 +1,113 @@
+{
+ "source": "inputs/ref01.mp4",
+ "fps": 60,
+ "segments": [
+  {
+   "srcStartMs": 14400,
+   "srcEndMs": 20600,
+   "kind": "bg"
+  }
+ ],
+ "items": [
+  {
+   "type": "list",
+   "title": "Khách mua ở",
+   "titleAt": 0,
+   "layout": "zigzag",
+   "startMs": 50,
+   "endMs": 3300,
+   "items": [
+    {
+     "text": "Tiện ích",
+     "at": 1.5500000000000007
+    },
+    {
+     "text": "Cuộc sống",
+     "at": 1.9499999999999993
+    },
+    {
+     "text": "Đi chợ",
+     "at": 2.4499999999999993
+    },
+    {
+     "text": "Đi học",
+     "at": 2.9499999999999993
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Khách đầu tư",
+   "titleAt": 0,
+   "layout": "stack",
+   "startMs": 3300,
+   "endMs": 6200,
+   "items": [
+    {
+     "text": "Giá",
+     "at": 1.25
+    },
+    {
+     "text": "Hạ tầng",
+     "at": 1.5
+    },
+    {
+     "text": "Tiềm năng tăng giá",
+     "at": 1.9499999999999993
+    }
+   ]
+  }
+ ],
+ "sfx": [
+  {
+   "atMs": 50,
+   "sfx": "swish",
+   "volume": 0.5
+  },
+  {
+   "atMs": 1600,
+   "sfx": "bubble",
+   "volume": 0.5
+  },
+  {
+   "atMs": 2000,
+   "sfx": "bubble",
+   "volume": 0.5
+  },
+  {
+   "atMs": 2500,
+   "sfx": "bubble",
+   "volume": 0.5
+  },
+  {
+   "atMs": 3000,
+   "sfx": "bubble",
+   "volume": 0.5
+  },
+  {
+   "atMs": 3300,
+   "sfx": "swish",
+   "volume": 0.5
+  },
+  {
+   "atMs": 4550,
+   "sfx": "bubble",
+   "volume": 0.5
+  },
+  {
+   "atMs": 4800,
+   "sfx": "bubble",
+   "volume": 0.5
+  },
+  {
+   "atMs": 5250,
+   "sfx": "bubble",
+   "volume": 0.5
+  }
+ ],
+ "audioOverride": {
+  "src": "inputs/ref01.mp4",
+  "startMs": 14400
+ },
+ "origStart": 14.4
+}

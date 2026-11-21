@@ -1,0 +1,46 @@
+{
+ "source": "inputs/ref01.mp4",
+ "fps": 60,
+ "segments": [
+  {
+   "srcStartMs": 50750,
+   "srcEndMs": 52600,
+   "kind": "th",
+   "why": "clean plate (goc 8.0 cung la zoom ramp 0.24->0.29)"
+  }
+ ],
+ "items": [
+  {
+   "type": "stepBadge",
+   "n": 1,
+   "label": "Chọn nội dung",
+   "labelAt": 0,
+   "startMs": 250,
+   "endMs": 1850,
+   "exit": "cut"
+  },
+  {
+   "type": "leak",
+   "tone": "red",
+   "startMs": 1450,
+   "endMs": 1850
+  }
+ ],
+ "sfx": [
+  {
+   "atMs": 300,
+   "sfx": "bubble",
+   "volume": 0.55
+  },
+  {
+   "atMs": 1500,
+   "sfx": "swish",
+   "volume": 0.45
+  }
+ ],
+ "audioOverride": {
+  "src": "inputs/ref01.mp4",
+  "startMs": 7900
+ },
+ "origStart": 7.9
+}

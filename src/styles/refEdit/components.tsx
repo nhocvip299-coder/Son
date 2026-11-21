@@ -85,7 +85,7 @@ export type Reveal = { mode: "orig" | "type"; cps: number; keyVolume: number };
 export const RevealCtx = React.createContext<Reveal>({ mode: "orig", cps: RT.time.typeCps, keyVolume: 0 });
 export const useReveal = () => React.useContext(RevealCtx);
 
-const KEYS = ["key1", "key2", "key3", "key4", "key5"];
+const KEYS = ["key1", "key2", "key3", "key4", "key5", "key6", "key7", "key8"];
 /** Go tung ky tu. O che do "type": toc do ban phim, con tro, tieng phim moi ky tu (dat dung frame ky tu hien). */
 export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: React.CSSProperties; sound?: boolean }> = ({ text, at = 0, cps, style, sound = true }) => {
   const { t, fps } = useSec();
@@ -93,14 +93,25 @@ export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: 
   const typing = rv.mode === "type";
   const speed = cps ?? (typing ? rv.cps : RT.time.typeCps);
   const chars = Array.from(text.normalize("NFC"));
-  const n = (t - at) * speed;
-  const done = n >= chars.length;
-  const tEnd = at + chars.length / speed;
+  // nhip go nhu nguoi that: moi phim lech ngau nhien +-35%, ngung them sau dau cach (chi o che do "type")
+  const times: number[] = [];
+  {
+    let acc = at;
+    for (let i = 0; i < chars.length; i++) {
+      times.push(acc);
+      const base = 1 / speed;
+      acc += typing ? base * (0.65 + random(`j${text}${i}`) * 0.7) + (chars[i] === " " ? base * 0.6 : 0) : base;
+    }
+  }
+  const tEnd = (times[times.length - 1] ?? at) + 1 / speed;
+  let typedCount = 0;
+  while (typedCount < times.length && times[typedCount] <= t) typedCount++;
+  const n = typing ? typedCount - 1 + 0.999 : (t - at) * speed;
   // con tro: hien khi dang go + 0.5s sau, nhap nhay 2 lan/giay
   const caretOn = typing && t >= at && t < tEnd + 0.5 && (t < tEnd || Math.floor((t - tEnd) * 4) % 2 === 0);
   // Chu to gradient (background-clip:text) bo qua opacity cua con -> tach phan DA GO / CHUA GO thanh 2 span rieng,
   // phan chua go visibility:hidden (giu cho, khong ve). Con tro dat NGAY SAU ky tu vua go (khong chiem cho).
-  const shown = Math.max(0, Math.min(chars.length, typing ? Math.floor(n) + 1 : Math.floor(n)));
+  const shown = Math.max(0, Math.min(chars.length, typing ? typedCount : Math.floor(n)));
   const partial = typing ? 0 : interpolate(n - shown, [0, 1.5], [0, 1], C);
   const caretH = typeof style?.fontSize === "number" ? style.fontSize : 60;
   return (
@@ -126,7 +137,7 @@ export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: 
       <span style={{ ...style, visibility: "hidden" }}>{chars.slice(t < at ? 0 : typing ? shown : shown + 1).join("")}</span>
       {typing && sound && rv.keyVolume > 0
         ? chars.map((ch, i) => {
-            const fr = Math.round((at + i / speed) * fps);
+            const fr = Math.round(times[i] * fps);
             if (fr < 0) return null;
             const sp = ch === " ";
             const k = KEYS[Math.floor(random(`k${text}${i}`) * KEYS.length)];

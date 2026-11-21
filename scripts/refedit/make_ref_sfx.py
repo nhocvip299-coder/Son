@@ -41,27 +41,40 @@ x[: int(SR * 0.006)] += np.random.default_rng(3).standard_normal(int(SR * 0.006)
 save("bubble.wav", x)
 print("ok tick.wav bubble.wav")
 
-# ---- Phim go ban phim (co) — 5 bien the + phim cach: click cao tan + "thock" tram + tieng nha phim ----
-def key(seed, f_body=210, click_hp=2500, dur=0.09, space=False):
-    r = np.random.default_rng(seed)
-    t = np.arange(int(SR * dur)) / SR
-    noise = r.standard_normal(len(t))
-    # loc thong cao don gian (sai phan) cho click
-    hp = np.diff(noise, prepend=0)
-    click = hp * np.exp(-t * (900 if not space else 600))
-    body = np.sin(2 * np.pi * f_body * t) * np.exp(-t * (70 if not space else 45)) * (0.6 if not space else 0.9)
-    rel = np.zeros_like(t)
-    a = int(SR * (0.045 + r.uniform(0, 0.01)))
-    n = int(SR * 0.012)
-    rel[a:a + n] = np.diff(r.standard_normal(n), prepend=0) * np.exp(-np.arange(n) / SR * 700) * 0.35
-    return click * 1.8 + body * 0.6 + rel * 1.4  # nhan manh "tach" cao tan de noi tren giong
+# ---- Phim go ban phim v2 (giong ghi am that hon): nhan (click nhua) + cham day (thock) + cong huong vo + nha phim ----
+def bandnoise(r, n, lo, hi):
+    x = r.standard_normal(n)
+    X = np.fft.rfft(x); f = np.fft.rfftfreq(n, 1 / SR)
+    X[(f < lo) | (f > hi)] = 0
+    return np.fft.irfft(X, n)
 
-def loud(x, drive=3.0):
-    """nen mem (tanh) de tang do to cam nhan cua tieng phim ngan ma khong vo dinh"""
+def key2(seed, space=False):
+    r = np.random.default_rng(seed)
+    dur = 0.16 if space else 0.12
+    n = int(SR * dur); t = np.arange(n) / SR; x = np.zeros(n)
+    # 1) nhan: click nhua sac 2-6kHz, 3-5ms
+    L = int(SR * 0.006)
+    x[:L] += bandnoise(r, L, 2000, 6500) * np.exp(-np.arange(L) / SR * 900) * 1.0
+    # 2) cham day sau ~6-10ms: thock 300-1500Hz
+    a = int(SR * r.uniform(0.006, 0.010)); L2 = int(SR * 0.03)
+    x[a:a + L2] += bandnoise(r, L2, 250 if space else 350, 1400) * np.exp(-np.arange(L2) / SR * (120 if space else 180)) * (1.3 if space else 0.9)
+    # 3) cong huong vo ban phim (sine tat dan)
+    for fr, amp in [(r.uniform(900, 1500), 0.25), (r.uniform(2000, 3200), 0.15)]:
+        x[a:] += amp * np.sin(2 * np.pi * fr * t[: n - a]) * np.exp(-t[: n - a] * 90)
+    # 4) nha phim nhe sau 55-85ms
+    b = int(SR * r.uniform(0.055, 0.085)); L3 = int(SR * 0.008)
+    if b + L3 < n:
+        x[b:b + L3] += bandnoise(r, L3, 1800, 5000) * np.exp(-np.arange(L3) / SR * 700) * 0.35
+    if space:  # tieng lach cach thanh cach
+        c = int(SR * 0.02); L4 = int(SR * 0.04)
+        x[c:c + L4] += bandnoise(r, L4, 600, 3000) * np.exp(-np.arange(L4) / SR * 80) * 0.3
+    return x
+
+def loud(x, drive=2.2):
     x = x / (np.abs(x).max() + 1e-9)
     return np.tanh(drive * x)
 
-for i in range(5):
-    save(f"key{i + 1}.wav", loud(key(100 + i, f_body=190 + i * 18)))
-save("keyspace.wav", loud(key(200, f_body=140, dur=0.12, space=True)))
-print("ok key1-5.wav keyspace.wav")
+for i in range(8):
+    save(f"key{i + 1}.wav", loud(key2(300 + i)))
+save("keyspace.wav", loud(key2(400, space=True)))
+print("ok key1-8.wav keyspace.wav (v2)")

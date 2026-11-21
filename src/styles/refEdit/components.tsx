@@ -42,10 +42,10 @@ export const whiteText = (size: number): React.CSSProperties => ({
 /** Chu do: loi sang hong-trang, vien do, phat sang do manh [GOC] */
 export const redText = (size: number, font: string = RT.font.punch): React.CSSProperties => ({
   fontFamily: font,
-  fontWeight: font === RT.font.punch ? 400 : 900,
+  fontWeight: 900,
   fontSize: size,
   lineHeight: 1.08,
-  letterSpacing: font === RT.font.punch ? "0.01em" : "0",
+  letterSpacing: "0.005em",
   whiteSpace: "nowrap",
   color: "transparent",
   backgroundImage: `radial-gradient(ellipse 55% 70% at 50% 52%, ${RT.color.redCore} 0%, #FF8F7C 30%, ${RT.color.red} 68%, #D81A08 100%)`,
@@ -187,7 +187,7 @@ export const SetupPunch: React.FC<{
 }> = ({ setup, punch, setupAt = 0, punchAt = 0.3, setupMode = "blur", punchMode = "rise", punchColor = "red", y = RT.y.setup, exit = "cut" }) => {
   const { t } = useSec();
   const ex = useExit(exit);
-  const pst = punchColor === "red" ? redText(fit(punch, RT.size.punch, 0.47)) : yellowText(fit(punch, RT.size.warn, 0.78));
+  const pst = punchColor === "red" ? redText(fit(punch, RT.size.punch, 0.6)) : yellowText(fit(punch, RT.size.warn, 0.62));
   const rise = interpolate(t, [punchAt, punchAt + 0.25], [0, 1], { ...C, easing: easeOut });
   return (
     <AbsoluteFill style={{ opacity: ex.k, filter: ex.blur ? `blur(${ex.blur}px)` : undefined }}>
@@ -473,7 +473,7 @@ export const Warning: React.FC<{ head: string; sub?: string; y?: number; at?: nu
   exit = "cut",
 }) => {
   const ex = useExit(exit);
-  const hs = color === "yellow" ? yellowText(fit(head, RT.size.warn, 0.78)) : redText(fit(head, RT.size.warn * 0.86, 0.78), RT.font.heavy);
+  const hs = color === "yellow" ? yellowText(fit(head, RT.size.warn, 0.62)) : redText(fit(head, RT.size.warn * 0.86, 0.62), RT.font.heavy);
   return (
     <AbsoluteFill style={{ opacity: ex.k, filter: ex.blur ? `blur(${ex.blur}px)` : undefined }}>
       <Place y={y}>

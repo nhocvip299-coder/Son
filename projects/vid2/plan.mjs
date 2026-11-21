@@ -25,8 +25,8 @@ const segments = [
   seg(6.45, 8.4, "th", { zoomFrom: 1.0, zoomTo: 1.2, zoomRampMs: 700, why: "moc chuong 1 -> zoom ramp" }),
   seg(8.4, 12.4, "th", { zoomFrom: 1.0, zoomTo: 1.0 }),
   seg(12.4, 15.3, "th", { zoomFrom: 1.12, zoomTo: 1.2, zoomRampMs: 2800, why: "nghi mat (khong chu)" }),
-  seg(15.3, 22.1, "bg", { blurIn: true, why: "thang gia 3 muc -> nen trung tinh" }),
-  seg(22.1, 23.5, "th", { zoomFrom: 1.0, zoomTo: 1.2, zoomRampMs: 700, why: "cuc ky soc -> zoom ramp" }),
+  seg(15.3, 22.3, "bg", { blurIn: true, why: "thang gia 3 muc -> animation cot tang dan, nguoi noi thu vao goc" }),
+  seg(22.3, 23.5, "th", { zoomFrom: 1.0, zoomTo: 1.2, zoomRampMs: 700, why: "cuc ky soc -> zoom ramp" }),
   seg(23.5, 29.95, "th", { zoomFrom: 1.0, zoomTo: 1.0 }),
   seg(29.95, 33.0, "th", { zoomFrom: 1.12, zoomTo: 1.12 }),
   seg(33.0, 37.3, "th", { zoomFrom: 1.0, zoomTo: 1.2, zoomRampMs: 700, why: "moc chuong 2 -> zoom ramp" }),
@@ -34,8 +34,7 @@ const segments = [
   seg(43.0, 47.5, "th", { zoomFrom: 1.0, zoomTo: 1.0 }),
   seg(47.5, 52.2, "th", { zoomFrom: 1.12, zoomTo: 1.12 }),
   seg(52.2, 58.2, "th", { zoomFrom: 1.0, zoomTo: 1.2, zoomRampMs: 900, why: "gia cong bo -> zoom ramp" }),
-  seg(58.2, 70.3, "bg", { blurIn: true, why: "3 uu dai -> 3 the" }),
-  seg(70.3, 73.4, "th", { zoomFrom: 1.0, zoomTo: 1.2, zoomRampMs: 700, why: "gia sau uu dai = dinh -> zoom ramp" }),
+  seg(58.2, 73.4, "bg", { blurIn: true, why: "3 uu dai -> 3 the, roi animation gia giam 7,5 -> 4 ty" }),
   seg(73.4, 78.6, "th", { zoomFrom: 1.0, zoomTo: 1.0 }),
   seg(78.6, 91.9, "bg", { blurIn: true, why: "quyen loi -> checklist 3D + chu do" }),
   seg(91.9, 95.6, "th", { zoomFrom: 1.12, zoomTo: 1.12, frostAtMs: 200, why: "cau hoi -> nen mo cho the kinh" }),
@@ -54,10 +53,10 @@ const items = [
   it("leak", 8.0, 8.4, { tone: "red" }),
   sp(8.6, 12.3, "Thị trường đất", "TRẦM LẮNG", 10.7, { why: "boi canh thi truong" }),
   // 12.4-15.3: khong chu (nghi mat) — cau dan dia diem
-  it("cards", 15.7, 22.1, { why: "thang gia 3 nac (mau 25.7s: khung hien o tu dem, chu go khi noi)", cards: [
-    { at: 0.1, lines: [{ text: "Khởi điểm 20 triệu", at: 1.0 }] },
-    { at: 3.3, lines: [{ text: "Trúng từ 40 triệu", at: 3.7 }] },
-    { at: 4.7, lines: [{ text: "Đến 146 triệu", at: 5.1 }] },
+  it("bars", 15.6, 22.3, { title: "Giá đấu giá (triệu/m²)", why: "[AI] thang gia = so lieu tang dan -> animation cot moc len + so dem", bars: [
+    { label: "Khởi điểm", value: 20, unit: "tr", at: 1.2 },
+    { label: "Trúng từ", value: 40, unit: "tr", at: 3.9 },
+    { label: "Cao nhất", value: 146, unit: "tr", at: 5.4, hot: true },
   ] }),
   it("emphasis", 22.35, 23.5, { text: "Cực kỳ sốc", at: 0, why: "dinh cam xuc -> do wipe + zoom (mau 36.3s)" }),
   sp(25.2, 29.95, "Trả 800 triệu - 1 tỷ", "CHỦ VẪN KHÔNG BÁN", 28.5, { why: "nghich ly -> dong trang + cum do" }),
@@ -75,7 +74,7 @@ const items = [
     { at: 4.9, lines: [{ text: "Voucher 30%", at: 5.6 }] },
     { at: 6.4, lines: [{ text: "Căn 70m²", at: 7.0 }] },
   ] }),
-  sp(70.5, 73.4, "Chỉ còn khoảng", "HƠN 4 TỶ", 72.5, { why: "gia sau uu dai = dinh -> zoom + do" }),
+  it("priceDrop", 70.3, 73.4, { from: "7,5", to: 4, unit: "TỶ", label: "Trừ hết voucher, chỉ còn hơn", at: 0, dropAt: 0.9, y: 0.3, why: "[AI] gia giam = diem nhan -> gach gia goc, mui ten, dem lui gia moi" }),
   sp(74.0, 78.6, "Giá đất chỉ", "30 TRIỆU/M²", 76.3, {}),
   it("cards", 80.4, 91.9, { tilt3d: true, why: "quyen loi -> checklist 3D (mau 41.1s)", cards: [
     { at: 0, lines: [{ text: "Tài chính 4 - 5 tỷ", at: 0.3 }, { text: "Liền kề 4 tầng", at: 3.2 }, { text: "30 tiện ích Vinhomes", at: 6.1 }] },
@@ -84,11 +83,9 @@ const items = [
   it("pills", 92.0, 95.6, { pills: [{ text: "Vì sao mua đất đấu giá?", at: 0.2 }], why: "cau hoi tu bien -> the kinh (mau 10.8s)" }),
   sp(95.8, 100.0, "Cách 1km", "100 TRIỆU/M²", 96.8, {}),
   it("warning", 100.05, 105.3, { head: "Chỉ có đất", sub: "Tiện ích sơ sài", at: 0, subAt: 3.5, color: "yellow", why: "canh bao; khoi truoc la do -> vang (mau 38.5s)" }),
-  it("cards", 108.2, DUR, { why: "so sanh 2 lua chon -> 2 the", cards: [
-    { at: 0, lines: [{ text: "Vinhomes Phố Hiến", at: 1.2 }, { text: "30 tiện ích", at: 2.5 }] },
-    { at: 5.2, lines: [{ text: "Lô đấu giá", at: 6.3 }, { text: "Chưa có nhà", at: 9.2 }] },
-  ] }),
-  it("warning", 115.6, DUR, { head: "146 triệu/m²", at: 0, color: "red", y: 0.69 }),
+  it("versus", 105.4, DUR, { why: "[AI] so sanh 2 lua chon -> 2 cot tick/x bat ra theo loi noi", left: { title: "Vinhomes Phố Hiến", at: 2.8, rows: [
+    { text: "30 tiện ích", at: 5.3, good: true }, { text: "Đón 1 vạn cư dân", at: 6.3, good: true } ] },
+    right: { title: "Lô đấu giá", at: 8.9, rows: [ { text: "146 triệu/m²", at: 10.3, good: false }, { text: "Chưa có nhà", at: 12.0, good: false } ] } }),
 ];
 
 const sfx = [];
@@ -96,15 +93,15 @@ const add = (t, s, v = V) => sfx.push({ atMs: ms(t), sfx: s, volume: v });
 // SFX dat dung khung hinh chu xuat hien
 add(0.15, "swoosh-down", 0.8); add(2.8, "bubble"); add(3.9, "glitch");
 add(5.4, "bubble"); add(6.5, "bubble"); add(8.0, "swish", 0.6); add(10.7, "blip8");
-add(15.3, "swoosh-down", 0.8); for (const c of [15.8, 19.0, 20.4]) add(c, "blip8"); for (const c of [16.7, 19.4, 20.8]) add(c, "hud");
+add(15.3, "swoosh-down", 0.8); for (const c of [16.8, 19.5]) add(c, "blip8"); add(21.0, "blip8"); add(21.0, "impact", 0.6);
 add(22.2, "swoosh-down", 0.8); add(22.35, "bubble"); add(28.5, "blip8"); add(31.4, "blip8");
 add(33.15, "bubble"); add(36.95, "swish", 0.6); add(37.3, "swoosh-down", 0.8); for (const c of [37.6, 38.85, 41.45]) add(c, "hud");
 add(44.7, "bubble"); add(49.9, "bubble"); add(55.6, "impact", 0.5); add(55.6, "bubble");
 add(58.2, "swoosh-down", 0.8); for (const c of [60.7, 65.5, 67.0]) add(c, "bubble"); for (const c of [61.7, 66.2, 67.6]) add(c, "hud");
-add(72.5, "impact", 0.5); add(72.5, "bubble"); add(76.3, "bubble");
+add(70.35, "bubble"); add(70.75, "swish", 0.8); add(71.5, "impact", 0.6); add(71.5, "blip8"); add(76.3, "bubble");
 add(78.6, "swoosh-down", 0.8); add(80.4, "bubble"); for (const c of [80.7, 83.6, 86.5]) add(c, "hud"); add(88.4, "blip8");
 add(92.2, "blip8"); add(96.8, "bubble"); add(100.05, "bubble"); add(103.5, "hud");
-add(105.3, "swoosh-down", 0.8); add(108.2, "blip8"); add(113.4, "bubble"); add(115.6, "blip8");
+add(105.3, "swoosh-down", 0.8); add(108.2, "blip8"); add(110.7, "hud"); add(111.7, "hud"); add(114.3, "blip8"); add(115.7, "hud"); add(117.4, "hud");
 
 const plan = { source: SRC, fps: 60, segments, items, sfx: sfx.sort((a, b) => a.atMs - b.atMs), music: { src: "music/bed-ambient.wav", volume: 0.03 }, voiceVolume: 0.5 };
 fs.writeFileSync("work/vid2/plan-final.json", JSON.stringify(plan, null, 1));

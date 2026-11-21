@@ -19,9 +19,9 @@ export const RT = {
     bgDark: "#1F2834", // [GOC] p05
   },
   font: {
-    body: "'Poppins'", // [GOC~] chu trang/ thuong: Poppins 700-800 (nhan dang bang mat: a 2 tang, g 1 tang, hinh hoc)
-    punch: "'Anton'", // [AI~] chu do dam hep (LAM VIDEO BDS) - goc la sans dam hep, Anton gan nhat trong bo font
-    heavy: "'Montserrat'", // [AI~] chu vang rong dam (DUNG NOI) ~ Montserrat 900
+    body: "'Be Vietnam Pro'", // [SUA] Poppins thieu glyph ả/ỷ (trinh duyet chen font co chan) -> Be Vietnam Pro (hinh hoc giong Poppins, du tieng Viet)
+    punch: "'Phudu'", // [SUA theo nguoi dung] Phudu 900: day du dau tieng Viet (Anton loi dau chong: TRẦM LẮNG -> TRÂM LĂNG)
+    heavy: "'Phudu'", // chu vang/do dam rong cung Phudu cho dong bo
   },
   /** Tam doc cac lop chu (ti le H) [GOC] */
   y: {
@@ -30,7 +30,7 @@ export const RT = {
     badge: 0.625,
     badgeLabel: 0.705,
     listTitle: 0.18,
-    cardCenters: [0.252, 0.474, 0.69], // sua sau so sanh
+    cardCenters: [0.2, 0.34, 0.48], // [SUA] day len de chua cho khung nguoi noi goc duoi (goc mau: 0.252/0.474/0.69)
     pill1: 0.69,
     pill2: 0.8,
   },
@@ -48,7 +48,7 @@ export const RT = {
   size: {
     // [GOC] quy doi tu be rong khoi chu do duoc (576 -> 1080)
     setup: 74, // "Tim ra quy trinh" rong ~0.6W
-    punch: 140, // "LAM VIDEO BDS" rong ~0.76W
+    punch: 128, // "LAM VIDEO BDS" rong ~0.76W
     label: 100, // "CHON NOI DUNG" rong ~0.74W (sua sau so sanh: 86 -> 100)
     badge: 160, // duong kinh hinh tron so buoc ~0.14W
     listTitle: 104, // sua sau so sanh: 90 -> 104
@@ -56,7 +56,7 @@ export const RT = {
     list: 80, // muc danh sach (sua: 70 -> 80)
     card: 62, // chu trong the vang (sua: 56 -> 62)
     cardW: 762, // the vang ~0.706W
-    cardH: 244, // ~0.127H
+    cardH: 220, // ~0.127H
     pill: 52,
     warn: 128, // "DUNG NOI" ~0.6W (sua: 108 -> 128)
     warnSub: 80, // "Qua nhieu thong tin" ~0.79W

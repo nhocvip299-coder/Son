@@ -29,6 +29,7 @@ import {
   type ListItem,
 } from "./components";
 import { RT } from "./tokens";
+import { BarLadder, PriceDrop, VersusCompare, type Bar, type VsSide } from "./animations";
 
 export type RefSegment = {
   srcStartMs: number;
@@ -42,6 +43,8 @@ export type RefSegment = {
   frostAtMs?: number;
   /** vao bang blur-dissolve (footage mo dan -> nen) thay vi cat cung */
   blurIn?: boolean;
+  /** canh tram: thu nguoi noi vao khung goc (mac dinh true). false = nen phu kin (kieu video mau goc) */
+  pip?: boolean;
   why?: string;
 };
 
@@ -62,6 +65,9 @@ export type RefItem = Base &
     | { type: "hourglass"; x?: number; y?: number }
     | { type: "flare"; y?: number }
     | { type: "leak"; tone?: "red" | "orange" }
+    | { type: "bars"; title?: string; bars: Bar[]; y?: number }
+    | { type: "priceDrop"; from: string; to: number; toPrefix?: string; unit: string; label?: string; at?: number; dropAt?: number; y?: number }
+    | { type: "versus"; left: VsSide; right: VsSide; y?: number }
   );
 
 export type RefPlan = {
@@ -94,12 +100,41 @@ const Shot: React.FC<{ seg: RefSegment; source: string; trimBefore: number; trim
     easing: Easing.out(Easing.cubic),
   });
   const frost = seg.frostAtMs !== undefined ? interpolate(t, [seg.frostAtMs / 1000, seg.frostAtMs / 1000 + 0.25], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 0;
-  const bgIn = seg.kind === "bg" ? (seg.blurIn ? interpolate(t, [0, 0.4], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) : 1) : 0;
+  const bgIn = seg.kind === "bg" ? (seg.blurIn ? interpolate(t, [0, 0.45], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) }) : 1) : 0;
+  const video = <Video src={staticFile(source)} trimBefore={trimBefore} trimAfter={trimAfter} objectFit="cover" muted={muted} volume={volume} />;
+  if (seg.kind === "bg" && seg.pip !== false) {
+    // [SUA theo nguoi dung] canh tram KHONG phu kin: nguoi noi thu vao khung bo goc (duoi-trai), noi dung do hoa o tren
+    const R = PIP;
+    const L = interpolate(bgIn, [0, 1], [0, R.x]);
+    const T = interpolate(bgIn, [0, 1], [0, R.y]);
+    const Wd = interpolate(bgIn, [0, 1], [1080, R.w]);
+    const Hd = interpolate(bgIn, [0, 1], [1920, R.h]);
+    return (
+      <AbsoluteFill>
+        <AbstractBg seed={Math.round(trimBefore)} />
+        <div
+          style={{
+            position: "absolute",
+            left: L,
+            top: T,
+            width: Wd,
+            height: Hd,
+            overflow: "hidden",
+            borderRadius: 34 * bgIn,
+            border: bgIn > 0.05 ? `${5 * bgIn}px solid rgba(255,255,255,0.92)` : undefined,
+            boxShadow: `0 0 ${24 * bgIn}px rgba(255,255,255,${0.45 * bgIn}), 0 18px 40px rgba(0,0,0,${0.45 * bgIn})`,
+          }}
+        >
+          <AbsoluteFill style={{ scale: String(1 + bgIn * 0.25), transformOrigin: "50% 30%" }}>{video}</AbsoluteFill>
+        </div>
+      </AbsoluteFill>
+    );
+  }
   const footBlur = Math.max(frost * 22, bgIn * 40);
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{ scale: String(z * (1 + bgIn * 0.08)), transformOrigin: "50% 38%", filter: footBlur > 0.2 ? `blur(${footBlur}px) brightness(${1 - frost * 0.12})` : undefined }}>
-        <Video src={staticFile(source)} trimBefore={trimBefore} trimAfter={trimAfter} objectFit="cover" muted={muted} volume={volume} />
+        {video}
       </AbsoluteFill>
       {seg.kind === "bg" ? (
         <AbsoluteFill style={{ opacity: bgIn }}>
@@ -109,6 +144,9 @@ const Shot: React.FC<{ seg: RefSegment; source: string; trimBefore: number; trim
     </AbsoluteFill>
   );
 };
+
+/** Khung nguoi noi khi o canh tram (px tren khung 1080x1920): goc duoi-trai, tranh cot nut TikTok ben phai */
+export const PIP = { x: 44, y: 1110, w: 470, h: 620 } as const;
 
 const renderItem = (it: RefItem) => {
   switch (it.type) {
@@ -156,6 +194,12 @@ const renderItem = (it: RefItem) => {
       return <FlareBurst {...it} />;
     case "leak":
       return <LightLeak tone={it.tone} />;
+    case "bars":
+      return <BarLadder {...it} />;
+    case "priceDrop":
+      return <PriceDrop {...it} />;
+    case "versus":
+      return <VersusCompare {...it} />;
   }
 };
 

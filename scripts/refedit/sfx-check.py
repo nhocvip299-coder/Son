@@ -16,4 +16,4 @@ g = 10*log10((r**2).mean()/((src[:len(r)]**2).mean()+1e-12))
 rows = [(c["atMs"]/1000, c["sfx"], hf(r, c["atMs"]/1000) - g - hf(src, c["atMs"]/1000)) for c in plan["sfx"]]
 d = np.array([x[2] for x in rows])
 print(f"{len(rows)} SFX | tang cao tan so voi giong goc: trung vi {np.median(d):.1f} dB, thap nhat {d.min():.1f} dB, so cue >= +3dB: {(d>=3).sum()}/{len(d)}")
-for t,n,x in sorted(rows, key=lambda z:z[2])[:5]: print(f"  yeu nhat: {t:.2f}s {n} +{x:.1f} dB")
+for t,n,x in sorted(rows, key=lambda z:z[2])[:int(sys.argv[4]) if len(sys.argv)>4 else 5]: print(f"  yeu nhat: {t:.2f}s {n} +{x:.1f} dB")

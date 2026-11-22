@@ -116,21 +116,21 @@ for (const it of items) {
   const st = it.startMs / 1000;
   switch (it.type) {
     case "setupPunch": {
-      if (it.setup) P(st, "pop-up", 0.9);
+      if (it.setup) P(st, "ui-digital", 0.8);
       const pa = it.setup ? Math.max(it.punchAt ?? 0, typeDur(it.setup) + 0.12) : it.punchAt ?? 0;
       P(st + pa, "correct-jewel");
       break;
     }
     case "stepBadge": P(st, "ui-notification"); break;
     case "emphasis": P(st, "correct-jewel"); break;
-    case "cards": it.cards.forEach((c) => P(st + c.at, "pop-bells", 0.9)); break;
+    case "cards": it.cards.forEach((c) => P(st + c.at, "pop-bells-sang", 0.9)); break;
     case "bars": it.bars.forEach((b) => P(st + b.at, b.hot ? "correct-jewel" : "ui-digital")); break;
-    case "priceDrop": P(st, "pop-up", 0.9); P(st + it.dropAt - 0.35, "ui-error"); P(st + it.dropAt + 0.3, "es-success"); break;
+    case "priceDrop": P(st, "ui-digital", 0.8); P(st + it.dropAt - 0.35, "ui-error"); P(st + it.dropAt + 0.3, "es-success"); break;
     case "warning": P(st, it.color === "yellow" ? "ui-error" : "sparkle-bonus"); break;
     case "pills": P(st + (it.pills[0]?.at ?? 0), "ui-notification"); break;
     case "versus":
-      P(st + it.left.at, "pop-bells"); P(st + it.right.at, "pop-bells");
-      [...it.left.rows, ...it.right.rows].forEach((r) => P(st + r.at, r.good ? "pop-bells" : "ui-error", 0.85));
+      P(st + it.left.at, "pop-bells-sang"); P(st + it.right.at, "pop-bells-sang");
+      [...it.left.rows, ...it.right.rows].forEach((r) => P(st + r.at, r.good ? "pop-bells-sang" : "ui-error", 0.85));
       break;
     case "flare": case "leak": P(st, "camera-flash", 0.9); break;
   }

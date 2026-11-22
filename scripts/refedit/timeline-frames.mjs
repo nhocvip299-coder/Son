@@ -14,7 +14,7 @@ const name = (it) => (it.punch ?? it.label ?? it.title ?? it.text ?? it.head ?? 
 const shots = plan.items.filter((i) => !["leak", "flare"].includes(i.type)).map((it) => {
   const dur = (it.endMs - it.startMs) / 1000;
   // chup luc hien DAY DU: sau khi chu do vao (punchAt), cuoi item voi do hoa nhieu buoc
-  const full = it.type === "setupPunch" ? (it.punchAt ?? 0) + 0.8 : ["cards", "versus", "bars", "priceDrop", "pills"].includes(it.type) ? dur - 0.25 : it.type === "stepBadge" ? (it.labelAt ?? 0) + 0.8 : 1.0;
+  const full = it.type === "setupPunch" ? dur - 0.25 : ["cards", "versus", "bars", "priceDrop", "pills"].includes(it.type) ? dur - 0.25 : it.type === "stepBadge" ? (it.labelAt ?? 0) + 0.8 : 1.0;
   const t = it.startMs / 1000 + Math.min(dur - 0.12, full);
   return { t, label: `${t.toFixed(1)}s ${it.type} - ${name(it)}`.replace(/[':\\]/g, "") };
 });

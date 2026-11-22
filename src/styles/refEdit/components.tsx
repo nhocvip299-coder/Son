@@ -262,6 +262,11 @@ export const SetupPunch: React.FC<{
     // go dong trang xong moi go dong do (1 ban phim tai 1 thoi diem)
     if (setup) punchAt = Math.max(punchAt, setupAt + Array.from(setup).length / rv.cps + 0.12);
   }
+  // chu do phai GO XONG truoc khi cat it nhat 0.8s (de doc) -> thieu thoi gian thi go nhanh hon
+  const { D } = useSec();
+  const pLen = Array.from(punch).length * 1.15; // +15% cho nhip lech/ngat o dau cach
+  const avail = D - punchAt - 0.8;
+  const punchCps = rv.mode === "type" ? Math.max(rv.cps, pLen / Math.max(0.25, avail)) : undefined;
   const ex = useExit(exit);
   const pst = punchColor === "red" ? redText(fit(punch, RT.size.punch, 0.6)) : yellowText(fit(punch, RT.size.warn, 0.62));
   const rise = interpolate(t, [punchAt, punchAt + 0.25], [0, 1], { ...C, easing: easeOut });
@@ -280,7 +285,7 @@ export const SetupPunch: React.FC<{
       ) : null}
       <Place y={y + (setup ? 0.058 : 0.03)}>
         {punchMode === "type" ? (
-          <Typed text={punch} at={punchAt} style={pst} />
+          <Typed text={punch} at={punchAt} style={pst} cps={punchCps} />
         ) : (
           // [GOC] truot len tu duoi trong mat na (0.25s)
           <div style={{ clipPath: "inset(-40% -10% 0 -10%)", overflow: "visible" }}>

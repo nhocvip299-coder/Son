@@ -21,8 +21,9 @@ export const BarLadder: React.FC<{ title?: string; bars: Bar[]; y?: number }> = 
   const { t } = useSec();
   const max = Math.max(...bars.map((b) => b.value));
   const H = 470; // chieu cao vung cot
-  const bw = 210;
-  const gap = 60;
+  // 3 cot: 210px; nhieu cot hon thi thu hep cho vua 980px
+  const gap = bars.length > 3 ? 36 : 60;
+  const bw = Math.min(210, (980 - gap * (bars.length - 1)) / bars.length);
   const x0 = (RT.W - (bars.length * bw + (bars.length - 1) * gap)) / 2;
   const base = y * RT.H + H / 2;
   return (
@@ -57,12 +58,12 @@ export const BarLadder: React.FC<{ title?: string; bars: Bar[]; y?: number }> = 
             />
             <div style={{ position: "absolute", left: x - 40, width: bw + 80, top: base - h - 96, textAlign: "center", opacity: p }}>
               <span style={b.hot ? redText(fitNum(b), "'Phudu'") : yellowText(fitNum(b))}>
-                {vn(b.value * p)}
+                {vn(b.value * p, b.value % 1 !== 0 ? 1 : 0)}
                 <span style={{ fontSize: "0.5em" }}> {b.unit}</span>
               </span>
             </div>
             <div style={{ position: "absolute", left: x - 40, width: bw + 80, top: base + 18, textAlign: "center", opacity: interpolate(t, [b.at, b.at + 0.2], [0, 1], C) }}>
-              <span style={whiteText(44)}>{b.label}</span>
+              <span style={whiteText(bars.length > 3 ? 36 : 44)}>{b.label}</span>
             </div>
           </React.Fragment>
         );
@@ -70,7 +71,7 @@ export const BarLadder: React.FC<{ title?: string; bars: Bar[]; y?: number }> = 
     </>
   );
 };
-const fitNum = (b: Bar) => (String(b.value).length > 2 ? 78 : 90);
+const fitNum = (b: Bar) => (String(b.value).length > 3 ? 62 : String(b.value).length > 2 ? 78 : 90);
 
 // ---------- Gia giam ----------
 export const PriceDrop: React.FC<{ from: string; to: number; toPrefix?: string; unit: string; label?: string; at?: number; dropAt?: number; y?: number }> = ({

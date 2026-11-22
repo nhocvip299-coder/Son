@@ -11,11 +11,21 @@ import { CapcutSamples } from "./styles/textPresets/capcut/CapcutSamples";
 import { CapcutEdit, ccPlanDurationMs, type CcEditPlan } from "./styles/textPresets/capcut/CapcutEdit";
 import { HongDangEdit, hdPlanDurationMs, type HdPlan } from "./styles/hongDang/HongDangEdit";
 import { RefEdit, refPlanDurationMs, type RefPlan } from "./styles/refEdit/RefEdit";
+import { RefThumbnail } from "./styles/refEdit/Thumbnail";
 import { EMPTY_PLAN, planDurationMs, type EditPlan } from "./compositions/plan";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="RefThumbnail"
+        component={RefThumbnail}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{ face: "inputs/vid2-thumb-face.png", topLabel: "Đất đấu giá", topBig: "146 triệu/m²", bottomLabel: "Liền kề Vinhomes", bottomBig: "Chỉ hơn 4 tỷ", question: "Chọn bên nào?" }}
+      />
       <Composition
         id="RefEdit"
         component={RefEdit}

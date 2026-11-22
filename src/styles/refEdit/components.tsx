@@ -85,6 +85,17 @@ export type Reveal = { mode: "orig" | "type"; cps: number; keyVolume: number };
 export const RevealCtx = React.createContext<Reveal>({ mode: "orig", cps: RT.time.typeCps, keyVolume: 0 });
 export const useReveal = () => React.useContext(RevealCtx);
 
+/** Phudu/Nexa ve "²" thap nhu chi so duoi -> tu ve so 2 nho nang len (sua loi "M₂") */
+export const supText = (txt: string): React.ReactNode => {
+  if (!txt.includes("²")) return txt;
+  return txt.split("²").map((p, i, arr) => (
+    <React.Fragment key={i}>
+      {p}
+      {i < arr.length - 1 ? <span style={{ fontSize: "0.5em", verticalAlign: "0.9em" }}>2</span> : null}
+    </React.Fragment>
+  ));
+};
+
 const KEYS = ["key1", "key2", "key3", "key4", "key5", "key6", "key7", "key8"];
 /** Go tung ky tu. O che do "type": toc do ban phim, con tro, tieng phim moi ky tu (dat dung frame ky tu hien). */
 export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: React.CSSProperties; sound?: boolean }> = ({ text, at = 0, cps, style, sound = true }) => {
@@ -116,7 +127,7 @@ export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: 
   const caretH = typeof style?.fontSize === "number" ? style.fontSize : 60;
   return (
     <span style={{ whiteSpace: style?.whiteSpace ?? "nowrap", fontSize: style?.fontSize, lineHeight: style?.lineHeight }}>
-      <span style={style}>{chars.slice(0, t < at ? 0 : shown).join("")}</span>
+      <span style={style}>{supText(chars.slice(0, t < at ? 0 : shown).join(""))}</span>
       {!typing && shown < chars.length ? <span style={{ ...style, opacity: partial }}>{chars[shown]}</span> : null}
       {typing ? (
         <span style={{ position: "relative", display: "inline-block", width: 0 }}>
@@ -134,7 +145,7 @@ export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: 
           />
         </span>
       ) : null}
-      <span style={{ ...style, visibility: "hidden" }}>{chars.slice(t < at ? 0 : typing ? shown : shown + 1).join("")}</span>
+      <span style={{ ...style, visibility: "hidden" }}>{supText(chars.slice(t < at ? 0 : typing ? shown : shown + 1).join(""))}</span>
       {typing && sound && rv.keyVolume > 0
         ? chars.map((ch, i) => {
             const fr = Math.round(times[i] * fps);

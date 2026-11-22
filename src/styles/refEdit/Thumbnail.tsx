@@ -4,7 +4,7 @@ import { AbsoluteFill, Img, staticFile } from "remotion";
 import { Place, redText, whiteText, yellowText } from "./components";
 import { RT } from "./tokens";
 
-export type ThumbProps = { face: string; topLabel: string; topBig: string; bottomLabel: string; bottomBig: string; question: string };
+export type ThumbProps = { face: string; topLabel: string; topBig: string; bottomLabel: string; bottomBig: string; question: string; middle?: string };
 
 /** Phudu ve "²" thap nhu chi so duoi -> tu ve so 2 nho nang len */
 const Sup: React.FC<{ text: string }> = ({ text }) => {
@@ -21,7 +21,7 @@ const Sup: React.FC<{ text: string }> = ({ text }) => {
   );
 };
 
-export const RefThumbnail: React.FC<ThumbProps> = ({ face, topLabel, topBig, bottomLabel, bottomBig, question }) => (
+export const RefThumbnail: React.FC<ThumbProps> = ({ face, topLabel, topBig, bottomLabel, bottomBig, question, middle = "VS" }) => (
   <AbsoluteFill style={{ backgroundColor: "#000" }}>
     <AbsoluteFill style={{ scale: "1.18", transformOrigin: "50% 28%" }}>
       <Img src={staticFile(face)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
@@ -37,9 +37,11 @@ export const RefThumbnail: React.FC<ThumbProps> = ({ face, topLabel, topBig, bot
       </div>
     </Place>
     {/* VS */}
-    <Place y={0.625}>
-      <div style={{ ...yellowText(120), textAlign: "center" }}>VS</div>
-    </Place>
+    {middle ? (
+      <Place y={0.625}>
+        <div style={{ ...yellowText(120), textAlign: "center" }}>{middle}</div>
+      </Place>
+    ) : null}
     {/* Duoi: lua chon 2 tren the vang */}
     <Place y={0.725}>
       <div
@@ -53,7 +55,9 @@ export const RefThumbnail: React.FC<ThumbProps> = ({ face, topLabel, topBig, bot
         }}
       >
         <div style={{ ...whiteText(70), textShadow: "0 3px 8px rgba(0,0,0,0.7)" }}>{bottomLabel}</div>
-        <div style={{ ...whiteText(120), fontFamily: RT.font.punch, fontWeight: 900, textShadow: "0 4px 10px rgba(0,0,0,0.7)" }}>{bottomBig.toUpperCase()}</div>
+        <div style={{ ...whiteText(120), fontFamily: RT.font.punch, fontWeight: 900, textShadow: "0 4px 10px rgba(0,0,0,0.7)" }}>
+          <Sup text={bottomBig.toUpperCase()} />
+        </div>
       </div>
     </Place>
     <Place y={0.855} style={{ rotate: "-4deg" }}>

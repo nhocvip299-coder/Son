@@ -57,7 +57,7 @@ const items = [
   sp(3.95, 7.0, "Vậy mà", "48 LÔ ĐẤT", 4.3, { why: "hook: con so nghich ly" }),
   sp(7.0, 10.4, "Hơn 600 bộ hồ sơ", "LÔ NÀO CŨNG HỢP LỆ", 9.0, {}),
   it("flare", 10.15, 10.55, { y: 0.66, why: "dong hook" }),
-  sp(10.6, 16.8, "Đấu giá Yên Mỹ, sát làng gạo Trai Trang", "ĐÔNG NGHỊT NGƯỜI", 13.4, { why: "dia danh (nguoi dung xac nhan) + khong khi" }),
+  sp(10.6, 16.8, "Phiên đấu giá Yên Mỹ", "ĐÔNG NGHỊT NGƯỜI", 13.4, { why: "dia danh (nguoi dung xac nhan) + khong khi" }),
   sp(16.9, 19.0, "Riêng phòng đấu", "HƠN 300 KHÁCH", 18.1, { why: "[THEM] so lieu khong khi" }),
   it("cards", 19.6, 25.85, { why: "2 nhom lo -> 2 the", cards: [
     { at: 0.4, lines: [{ text: "10 lô biệt thự", at: 0.6 }, { text: "150 - 200m²", at: 1.9 }] },

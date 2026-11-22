@@ -55,7 +55,7 @@ const items = [
   sp(3.95, 7.0, "Vậy mà", "48 LÔ ĐẤT", 4.3, { why: "hook: con so nghich ly" }),
   sp(7.0, 10.4, "Hơn 600 bộ hồ sơ", "LÔ NÀO CŨNG HỢP LỆ", 9.0, {}),
   it("flare", 10.15, 10.55, { y: 0.66, why: "dong hook" }),
-  sp(10.6, 16.8, "Phiên đấu giá sáng nay", "ĐÔNG NGHỊT NGƯỜI", 13.4, {}),
+  sp(10.6, 16.8, "Đấu giá Yên Mỹ, sát làng gạo Trai Trang", "ĐÔNG NGHỊT NGƯỜI", 13.4, { why: "dia danh (nguoi dung xac nhan) + khong khi" }),
   it("cards", 19.6, 25.85, { why: "2 nhom lo -> 2 the", cards: [
     { at: 0.4, lines: [{ text: "10 lô biệt thự", at: 0.6 }, { text: "150 - 200m²", at: 1.9 }] },
     { at: 3.7, lines: [{ text: "38 lô liền kề", at: 3.9 }, { text: "Khoảng 90m²", at: 5.0 }] },
@@ -72,7 +72,7 @@ const items = [
   it("pills", 47.6, 52.75, { pills: [{ text: "Vì sao hút nhà đầu tư?", at: 0.05 }], why: "cau hoi dan dat -> the kinh" }),
   it("stepBadge", 52.8, 56.35, { n: 1, label: "Nội lực kinh tế", labelAt: 0.6, exit: "cut", why: "ly do 1" }),
   it("leak", 55.95, 56.35, { tone: "red" }),
-  sp(56.45, 60.1, "Làng nghề gạo Trai Trang", "BÁN RA NƯỚC NGOÀI", 59.1, {}),
+  sp(56.45, 60.1, "Làng nghề gạo Trai Trang - Yên Mỹ", "BÁN RA NƯỚC NGOÀI", 59.1, {}),
   it("stepBadge", 60.2, 62.85, { n: 2, label: "Hạ tầng", labelAt: 0.9, exit: "cut", why: "ly do 2" }),
   it("cards", 62.9, 67.85, { tilt3d: true, why: "ha tang 3 y -> checklist 3D", cards: [
     { at: 0, lines: [{ text: "Gần đường 379", at: 0.1 }, { text: "Trục Bắc Nam 74m", at: 1.6 }, { text: "Qua Mỹ Hào - Yên Mỹ - Ân Thi", at: 3.1 }] },

@@ -102,5 +102,5 @@ fs.writeFileSync("work/vid3/plan-final.json", JSON.stringify(plan, null, 1));
 const draft = JSON.parse(fs.readFileSync("work/vid3/plan-chay-chu.json", "utf8"));
 const words = draft.words.filter((w) => w.startMs < ms(END));
 // [NGUOI DUNG] ban chay chu: phu de go tung chu + tieng go phim (nho hon giong, dat lai bang sfx-level/do rieng)
-fs.writeFileSync("work/vid3/plan-final-chay-chu.json", JSON.stringify({ ...plan, words, wordsY: 1344, wordsTypewriter: true, wordsKeyVolume: 0.25 }, null, 1));
+fs.writeFileSync("work/vid3/plan-final-chay-chu.json", JSON.stringify({ ...plan, words, wordsY: 1344, wordsTypewriter: true, wordsKeyVolume: 0.75 }, null, 1));
 console.log(`plan-final: ${segments.length} doan, ${items.length} item, ${plan.sfx.length} SFX, dai ${END}s`);

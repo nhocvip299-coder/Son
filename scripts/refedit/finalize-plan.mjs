@@ -11,7 +11,8 @@
 import fs from "node:fs";
 import { parseArgs } from "../pipeline/lib.mjs";
 
-export const REVEAL = { mode: "type", cps: 22, keyVolume: 0 };
+// keyFiles: 12 tieng phim THAT cat tu video TikTok nguoi dung gui (Keyboard typing) -> public/sfx/pack/kb1..12
+export const REVEAL = { mode: "type", cps: 22, keyVolume: 0, keyFiles: Array.from({ length: 12 }, (_, i) => `pack/kb${i + 1}`) };
 
 /** Bang SFX theo loai hieu ung (da duyet). Ten = file trong public/sfx/pack/. */
 export const SFX_MAP = {

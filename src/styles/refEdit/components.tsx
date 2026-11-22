@@ -81,7 +81,7 @@ export const fit = (text: string, size: number, em: number, maxW = 860) => {
  * Kieu hien chu: "orig" = nhu video mau (go nhanh ~45 ky tu/s, khoi do truot len/nhoe->net)
  * "type" = [THEO NGUOI DUNG] GO BAN PHIM: moi chu hien tung ky tu kem con tro nhap nhay + tieng phim go moi ky tu.
  */
-export type Reveal = { mode: "orig" | "type"; cps: number; keyVolume: number };
+export type Reveal = { mode: "orig" | "type"; cps: number; keyVolume: number; keyFiles?: string[] };
 export const RevealCtx = React.createContext<Reveal>({ mode: "orig", cps: RT.time.typeCps, keyVolume: 0 });
 export const useReveal = () => React.useContext(RevealCtx);
 
@@ -151,10 +151,11 @@ export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: 
             const fr = Math.round(times[i] * fps);
             if (fr < 0) return null;
             const sp = ch === " ";
-            const k = KEYS[Math.floor(random(`k${text}${i}`) * KEYS.length)];
+            const set = rv.keyFiles?.length ? rv.keyFiles : KEYS;
+            const k = set[Math.floor(random(`k${text}${i}`) * set.length)];
             return (
               <Sequence key={`a${i}`} from={fr} durationInFrames={Math.round(0.14 * fps)} layout="none" name={`phim ${ch}`}>
-                <Audio src={staticFile(`sfx/${sp ? "keyspace" : k}.wav`)} volume={(keyVol ?? rv.keyVolume) * (sp ? 0.8 : 0.85 + random(`v${text}${i}`) * 0.3)} />
+                <Audio src={staticFile(`sfx/${sp && !rv.keyFiles?.length ? "keyspace" : k}.wav`)} volume={(keyVol ?? rv.keyVolume) * (sp ? 0.8 : 0.85 + random(`v${text}${i}`) * 0.3)} />
               </Sequence>
             );
           })

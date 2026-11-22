@@ -88,7 +88,7 @@ export type RefPlan = {
   /** am luong giong (footage). <1 de SFX noi ro tren giong khi giong goc qua to; master-audio se chuan lai -14 LUFS */
   voiceVolume?: number;
   /** kieu hien chu: mac dinh nhu video mau; { mode: "type" } = go ban phim + tieng phim moi ky tu */
-  reveal?: { mode: "orig" | "type"; cps?: number; keyVolume?: number };
+  reveal?: { mode: "orig" | "type"; cps?: number; keyVolume?: number; keyFiles?: string[] };
   /** ban chay chu: phu de go tung tu (khong tieng phim de khong on ao suot video) */
   wordsTypewriter?: boolean;
   /** tieng go phim cho phu de chay chu (0 = tat) */
@@ -223,7 +223,7 @@ export const RefEdit: React.FC<{ plan: RefPlan }> = ({ plan }) => {
     cursor += dur;
     return { s, from, dur };
   });
-  const rv = { mode: plan.reveal?.mode ?? "orig", cps: plan.reveal?.cps ?? RT.time.typeCps, keyVolume: plan.reveal?.keyVolume ?? 0 } as const;
+  const rv = { mode: plan.reveal?.mode ?? "orig", cps: plan.reveal?.cps ?? RT.time.typeCps, keyVolume: plan.reveal?.keyVolume ?? 0, keyFiles: plan.reveal?.keyFiles } as const;
   return (
     <RevealCtx.Provider value={rv}>
     <AbsoluteFill style={{ backgroundColor: "#000" }}>

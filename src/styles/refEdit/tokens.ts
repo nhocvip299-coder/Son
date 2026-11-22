@@ -19,7 +19,7 @@ export const RT = {
     bgDark: "#1F2834", // [GOC] p05
   },
   font: {
-    body: "'Nexa Heavy VN', 'Be Vietnam Pro'", // [SUA theo nguoi dung] 1FTV Nexa Heavy (bo font Viet hoa cua nguoi dung) giong chu trang goc nhat; du phong Be Vietnam Pro
+    body: "'Kasepi VN', 'Be Vietnam Pro'", // [NGUOI DUNG] chu trang THUONG = 1FTV VIP Kasepi Sans; khoi toan IN HOA tu doi sang Phudu (xem Typed)
     punch: "'Phudu'", // [SUA theo nguoi dung] Phudu 900: day du dau tieng Viet (Anton loi dau chong: TRẦM LẮNG -> TRÂM LĂNG)
     heavy: "'Phudu'", // chu vang/do dam rong cung Phudu cho dong bo
   },

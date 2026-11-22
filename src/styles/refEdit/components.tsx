@@ -103,6 +103,9 @@ export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: 
   const rv = useReveal();
   const typing = rv.mode === "type";
   const speed = cps ?? (typing ? rv.cps : RT.time.typeCps);
+  // [NGUOI DUNG] chu trang: khoi toan IN HOA -> Phudu 800; chu thuong -> Kasepi (font body)
+  const isUpper = /\p{L}/u.test(text) && text === text.toUpperCase();
+  if (style && style.fontFamily === RT.font.body && isUpper) style = { ...style, fontFamily: RT.font.punch, fontWeight: 800 };
   const chars = Array.from(text.normalize("NFC"));
   // nhip go nhu nguoi that: moi phim lech ngau nhien +-35%, ngung them sau dau cach (chi o che do "type")
   const times: number[] = [];
@@ -310,7 +313,7 @@ export const Badge: React.FC<{ n: number | string; size?: number; style?: React.
       justifyContent: "center",
       background: `radial-gradient(circle at 42% 34%, ${RT.color.badgeHi} 0%, ${RT.color.badge} 52%, #A51C35 100%)`,
       boxShadow: `0 0 0 ${size * 0.035}px rgba(255,190,200,0.35) inset, 0 0 ${size * 0.22}px rgba(232,50,75,0.85), 0 ${size * 0.05}px ${size * 0.12}px rgba(0,0,0,0.45)`,
-      fontFamily: RT.font.body,
+      fontFamily: RT.font.punch, // so trong badge: Phudu (dong bo nhan IN HOA)
       fontWeight: 800,
       fontSize: size * 0.62,
       color: "#fff",

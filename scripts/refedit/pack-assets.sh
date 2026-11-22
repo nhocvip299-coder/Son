@@ -8,7 +8,7 @@ TMP="$(mktemp -d)"; D="$TMP/reference-video-edit-thinking"
 mkdir -p "$D/assets/sfx/pack" "$D/assets/fonts" "$D/skill" "$D/code/src" "$D/code/scripts"
 cp public/sfx/pack/*.wav "$D/assets/sfx/pack/"
 cp public/sfx/{bubble,tick,keyspace}.wav public/sfx/key*.wav "$D/assets/sfx/" 2>/dev/null || true
-cp public/fonts/1FTV-Nexa-Heavy.otf "$D/assets/fonts/"
+cp public/fonts/*.otf "$D/assets/fonts/"
 cp -r .claude/skills/reference-video-edit-thinking/. "$D/skill/"
 cp -r src/styles/refEdit "$D/code/src/"
 cp -r scripts/refedit "$D/code/scripts/"

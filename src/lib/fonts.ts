@@ -111,3 +111,20 @@ if (typeof document !== "undefined") {
     })
     .catch((e) => cancelRender(e));
 }
+
+// [NGUOI DUNG] chu TRANG THUONG: 1FTV VIP Kasepi Sans (bo 100 font Viet hoa). File trong public/fonts (khong len Git).
+export const KASEPI = "'Kasepi VN'";
+if (typeof document !== "undefined") {
+  const url = staticFile("fonts/1FTV-VIP-Kasepi-Sans.otf");
+  const st = document.createElement("style");
+  st.textContent = `@font-face{font-family:'Kasepi VN';src:url('${url}') format('opentype');font-weight:100 900;font-display:block;}`;
+  document.head.appendChild(st);
+  const h = delayRender("Tai font Kasepi VN");
+  fetch(url, { method: "HEAD" })
+    .then((r) => (r.ok ? document.fonts.load(`400 64px 'Kasepi VN'`, SAMPLE).then(() => true) : false))
+    .then((ok) => {
+      if (!ok) console.warn("Thieu public/fonts/1FTV-VIP-Kasepi-Sans.otf");
+      continueRender(h);
+    })
+    .catch((e) => cancelRender(e));
+}

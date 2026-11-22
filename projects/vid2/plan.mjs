@@ -136,9 +136,10 @@ for (const it of items) {
   }
 }
 for (const sg of segments) if (sg.kind === "bg" && sg.blurIn) P(sg.srcStartMs / 1000, "ui-whoosh", 0.9); // nguoi noi thu vao khung goc
-const plan = { source: SRC, fps: 60, segments, items, reveal, sfx: pk.sort((a, b) => a.atMs - b.atMs), music: { src: "music/bed-ambient.wav", volume: 0.03 }, voiceVolume: 0.5 };
+const plan = { source: SRC, fps: 60, segments, items, reveal, sfx: pk.sort((a, b) => a.atMs - b.atMs), music: { src: "music/bed-ambient.wav", volume: 0.03 }, voiceVolume: 1 }; // [NGUOI DUNG] giong giu nguyen; SFX dat theo giong bang scripts/refedit/sfx-level.py (-8 dB)
 fs.writeFileSync("work/vid2/plan-final.json", JSON.stringify(plan, null, 1));
 // ban chay chu tung chu: tu (da sua ASR) tu ban nhap cua engine (chay --no-cut => thoi gian = goc)
 const draft = JSON.parse(fs.readFileSync("work/vid2/plan-chay-chu.json", "utf8"));
 fs.writeFileSync("work/vid2/plan-final-chay-chu.json", JSON.stringify({ ...plan, words: draft.words, wordsY: 1590, wordsTypewriter: true }, null, 1));
+console.log("SAU DO chay: render stem SFX (voiceVolume=0) roi scripts/refedit/sfx-level.py <stem> inputs/vid2.mov -8 work/vid2/plan-final.json work/vid2/plan-final-chay-chu.json");
 console.log(`plan-final: ${segments.length} doan, ${items.length} item, ${sfx.length} SFX`);

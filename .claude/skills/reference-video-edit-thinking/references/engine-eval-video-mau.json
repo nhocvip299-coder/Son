@@ -1,0 +1,156 @@
+{
+ "recall": 0.95,
+ "precision": 0.95,
+ "timing_mae_s": 0.2,
+ "matched": 19,
+ "gt": 20,
+ "engine": 20,
+ "missed": [
+  "2.1s setupPunch \"LÀM VIDEO BĐS\""
+ ],
+ "extra": [
+  "17.64s list"
+ ],
+ "rows": [
+  {
+   "kind": "hook",
+   "t": 0.2,
+   "text": "2 NĂM",
+   "hit": true,
+   "dt": 0.01
+  },
+  {
+   "kind": "setupPunch",
+   "t": 1.42,
+   "text": "Tìm ra quy trình",
+   "hit": true,
+   "dt": -0.47
+  },
+  {
+   "kind": "setupPunch",
+   "t": 2.1,
+   "text": "LÀM VIDEO BĐS",
+   "hit": false,
+   "dt": null
+  },
+  {
+   "kind": "clock",
+   "t": 4.2,
+   "text": "(dong ho 3D)",
+   "hit": true,
+   "dt": 0
+  },
+  {
+   "kind": "setupPunch",
+   "t": 5.7,
+   "text": "Cách tạo / VIDEO BĐS TỐI ƯU",
+   "hit": true,
+   "dt": -0.76
+  },
+  {
+   "kind": "step",
+   "t": 8.15,
+   "text": "① CHỌN NỘI DUNG",
+   "hit": true,
+   "dt": -0.23
+  },
+  {
+   "kind": "pills",
+   "t": 10.8,
+   "text": "VIDEO NÀY DÀNH CHO AI / GIẢI QUYẾT VẤN ĐỀ GÌ",
+   "hit": true,
+   "dt": 0.03
+  },
+  {
+   "kind": "list",
+   "t": 14.45,
+   "text": "Khách mua ở: Tiện ích, Cuộc sống, Đi chợ, Đi học | Khách đầu tư: Giá, Hạ tầng, Tiềm năng tăng giá",
+   "hit": true,
+   "dt": 0.2
+  },
+  {
+   "kind": "step",
+   "t": 20.7,
+   "text": "② QUAY CÓ CHỦ ĐÍCH",
+   "hit": true,
+   "dt": -0.28
+  },
+  {
+   "kind": "contrast",
+   "t": 23.3,
+   "text": "KHÔNG CẦN ĐẸP / RÕ  ĐÚNG",
+   "hit": true,
+   "dt": -0.03
+  },
+  {
+   "kind": "cards",
+   "t": 27.1,
+   "text": "MỞ - GÂY TÒ MÒ / NỘI DUNG - GIẢI THÍCH / KẾT - CHỐT VẤN ĐỀ",
+   "hit": true,
+   "dt": -0.08
+  },
+  {
+   "kind": "list",
+   "t": 32.9,
+   "text": "Góc quay: NÓI TRỰC DIỆN, QUAY CẢNH, GHI ÂM SAU",
+   "hit": true,
+   "dt": -0.26
+  },
+  {
+   "kind": "emphasis",
+   "t": 36.47,
+   "text": "QUAN TRỌNG NHẤT",
+   "hit": true,
+   "dt": -0.06
+  },
+  {
+   "kind": "numeral",
+   "t": 37.5,
+   "text": "1 | VẤN ĐỀ / DUY NHẤT",
+   "hit": true,
+   "dt": -0.02
+  },
+  {
+   "kind": "warning",
+   "t": 38.5,
+   "text": "ĐỪNG NÓI / Quá nhiều thông tin",
+   "hit": true,
+   "dt": 0.14
+  },
+  {
+   "kind": "step",
+   "t": 39.9,
+   "text": "③ ĐĂNG VIDEO",
+   "hit": true,
+   "dt": -0.32
+  },
+  {
+   "kind": "checklist",
+   "t": 41.3,
+   "text": "1 kênh - 1 chủ đề / 1 khung giờ / Liên tục 7-10 ngày",
+   "hit": true,
+   "dt": -0.26
+  },
+  {
+   "kind": "warning",
+   "t": 46.9,
+   "text": "ĐĂNG ĐỜI SỐNG / KÊU GỌI BẠN BÈ",
+   "hit": true,
+   "dt": -0.63
+  },
+  {
+   "kind": "breath",
+   "t": 50.7,
+   "text": "(khong chu)",
+   "hit": true,
+   "dt": 0
+  },
+  {
+   "kind": "recap",
+   "t": 54.3,
+   "text": "① ② ③",
+   "hit": true,
+   "dt": 0
+  }
+ ]
+}

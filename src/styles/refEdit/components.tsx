@@ -35,6 +35,9 @@ export const whiteText = (size: number): React.CSSProperties => ({
   fontWeight: 800,
   fontSize: size,
   color: RT.color.white,
+  // [NGUOI DUNG] vien toi cho chu net manh (Kasepi): ve vien PHIA NGOAI (paint-order) -> giu dang chu
+  WebkitTextStroke: `${Math.max(2, Math.round(size * 0.035))}px rgba(10,12,16,0.9)`,
+  paintOrder: "stroke fill",
   textShadow: whiteGlow,
   lineHeight: 1.12,
   whiteSpace: "nowrap",
@@ -563,7 +566,7 @@ export const BigNumeral: React.FC<{ num: string; line1: string; line2?: string; 
 export const Warning: React.FC<{ head: string; sub?: string; y?: number; at?: number; subAt?: number; color?: "yellow" | "red"; exit?: ExitMode }> = ({
   head,
   sub,
-  y = 0.6,
+  y = 0.67,
   at = 0,
   subAt,
   color = "yellow",

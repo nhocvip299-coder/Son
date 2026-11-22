@@ -27,17 +27,18 @@ export const RT = {
   y: {
     // [SUA theo nguoi dung] vung an toan TikTok/Reels: tren 220px, duoi tu 1400px (0.729H), cot nut phai x>940 tu ~0.45H
     // -> chu tren mat: 0.54-0.64H; canh tram: khung nguoi noi goc TREN-PHAI, do hoa 0.36-0.72H (goc mau: setup 0.615, punch 0.665, label 0.705)
-    setup: 0.555,
-    punch: 0.6,
-    badge: 0.545,
-    badgeLabel: 0.625,
+    // [SUA lan 2] nguoi dung: chu bay vao mat -> ha ve gan vi tri video mau (duoi cam)
+    setup: 0.622,
+    punch: 0.678,
+    badge: 0.612,
+    badgeLabel: 0.692,
     listTitle: 0.38,
     cardCenters: [0.4, 0.515, 0.63], // het tai 0.68H: chua dai 0.68-0.73H cho phu de
-    pill1: 0.6,
+    pill1: 0.665,
     pill2: 0.68,
     tilt: 0.5,
     under: 0.63, // chu do duoi the 3D
-    subtitle: 0.7, // phu de chay chu (1344px)
+    subtitle: 0.765, // phu de chay chu (1469px) - van tren vung caption TikTok/Reels
   },
   /** Thoi luong (giay) [GOC] do bang duong cong pixel 30fps */
   time: {

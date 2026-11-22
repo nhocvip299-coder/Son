@@ -56,7 +56,7 @@ const items = [
   sp(0.1, 3.9, "Thị trường BĐS Hưng Yên", "CỰC KỲ KHÓ KHĂN", 3.3, { why: "boi canh (trang) + muc do (do)" }),
   sp(3.95, 7.0, "Vậy mà", "48 LÔ ĐẤT", 4.3, { why: "hook: con so nghich ly" }),
   sp(7.0, 10.4, "Hơn 600 bộ hồ sơ", "LÔ NÀO CŨNG HỢP LỆ", 9.0, {}),
-  it("flare", 10.15, 10.55, { y: 0.6, why: "dong hook" }),
+  it("flare", 10.15, 10.55, { y: 0.66, why: "dong hook" }),
   sp(10.6, 16.8, "Phiên đấu giá Yên Mỹ", "ĐÔNG NGHỊT NGƯỜI", 13.4, { why: "dia danh (nguoi dung xac nhan) + khong khi" }),
   sp(16.9, 19.0, "Riêng phòng đấu", "HƠN 300 KHÁCH", 18.1, { why: "[THEM] so lieu khong khi" }),
   it("cards", 19.6, 25.85, { why: "2 nhom lo -> 2 the", cards: [
@@ -102,5 +102,5 @@ fs.writeFileSync("work/vid3/plan-final.json", JSON.stringify(plan, null, 1));
 const draft = JSON.parse(fs.readFileSync("work/vid3/plan-chay-chu.json", "utf8"));
 const words = draft.words.filter((w) => w.startMs < ms(END));
 // [NGUOI DUNG] ban chay chu: phu de go tung chu + tieng go phim (nho hon giong, dat lai bang sfx-level/do rieng)
-fs.writeFileSync("work/vid3/plan-final-chay-chu.json", JSON.stringify({ ...plan, words, wordsY: 1344, wordsTypewriter: true, wordsKeyVolume: 0 /* [NGUOI DUNG] bo am typing */ }, null, 1));
+fs.writeFileSync("work/vid3/plan-final-chay-chu.json", JSON.stringify({ ...plan, words, wordsY: 1469, wordsTypewriter: true, wordsKeyVolume: 0 /* [NGUOI DUNG] bo am typing */ }, null, 1));
 console.log(`plan-final: ${segments.length} doan, ${items.length} item, ${plan.sfx.length} SFX, dai ${END}s`);

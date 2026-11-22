@@ -46,6 +46,8 @@ export type RefSegment = {
   blurIn?: boolean;
   /** canh tram: thu nguoi noi vao khung goc (mac dinh true). false = nen phu kin (kieu video mau goc) */
   pip?: boolean;
+  /** [NGUOI DUNG] canh tram bang VIDEO THAT (B-roll, khong tieng): "full" = phat ro net; "bg" = lam mo + toi lam nen cho do hoa */
+  broll?: { src: string; startMs?: number; mode?: "full" | "bg" };
   why?: string;
 };
 
@@ -118,7 +120,7 @@ const Shot: React.FC<{ seg: RefSegment; source: string; trimBefore: number; trim
     const Hd = interpolate(bgIn, [0, 1], [1920, R.h]);
     return (
       <AbsoluteFill>
-        <AbstractBg seed={Math.round(trimBefore)} />
+        {seg.broll ? <Broll b={seg.broll} /> : <AbstractBg seed={Math.round(trimBefore)} />}
         <div
           style={{
             position: "absolute",
@@ -148,6 +150,23 @@ const Shot: React.FC<{ seg: RefSegment; source: string; trimBefore: number; trim
           <AbstractBg seed={Math.round(trimBefore)} />
         </AbsoluteFill>
       ) : null}
+    </AbsoluteFill>
+  );
+};
+
+/** Lop B-roll: video that phu kin khung, tat tieng; che do "bg" lam mo + toi de do hoa noi ro */
+const Broll: React.FC<{ b: NonNullable<RefSegment["broll"]> }> = ({ b }) => {
+  const f = useCurrentFrame();
+  const { fps, durationInFrames } = useVideoConfig();
+  const bg = b.mode === "bg";
+  const z = interpolate(f, [0, durationInFrames], [1.04, 1.12]); // Ken Burns nhe cho canh tinh
+  return (
+    <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#000" }}>
+      <AbsoluteFill style={{ scale: String(z), filter: bg ? "blur(16px) brightness(0.5) saturate(0.85)" : "brightness(0.92)" }}>
+        <Video src={staticFile(b.src)} trimBefore={Math.round(((b.startMs ?? 0) / 1000) * fps)} muted objectFit="cover" />
+      </AbsoluteFill>
+      {/* toi day khung de chu trang/do noi ro */}
+      <AbsoluteFill style={{ background: bg ? "rgba(15,22,32,0.35)" : "linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.55) 80%)" }} />
     </AbsoluteFill>
   );
 };

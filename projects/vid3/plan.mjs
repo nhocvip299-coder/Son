@@ -22,19 +22,21 @@ const END = 100.1;
 const seg = (a, b, kind, o = {}) => ({ srcStartMs: ms(a), srcEndMs: ms(b), kind, ...o });
 const th = (a, b, z = 1, o = {}) => seg(a, b, "th", { zoomFrom: z, zoomTo: z, ...o });
 const ramp = (a, b, why) => seg(a, b, "th", { zoomFrom: 1.0, zoomTo: 1.2, zoomRampMs: 700, why });
-const bg = (a, b, why) => seg(a, b, "bg", { blurIn: true, why });
+const bg = (a, b, why, broll) => seg(a, b, "bg", { blurIn: true, why, ...(broll ? { broll } : {}) });
 
 const segments = [
   seg(0, 3.9, "th", { zoomFrom: 1.0, zoomTo: 1.08, zoomRampMs: 3900, why: "hook: push-in cham" }),
-  ramp(3.9, 10.55, "nghich ly 48 lo -> zoom ramp"),
-  th(10.55, 16.85, 1.12),
-  ramp(16.85, 19.0, "300 khach -> zoom"),
-  bg(19.0, 25.85, "co cau 48 suat -> 2 the"),
+  ramp(3.9, 7.0, "nghich ly 48 lo -> zoom ramp"),
+  // [NGUOI DUNG gui video tram] canh that phien dau gia, nguoi noi thu vao khung goc
+  bg(7.0, 10.55, "600 ho so -> canh dien ho so", { src: "inputs/vid3-b-hoso.mp4", mode: "full" }),
+  seg(10.55, 16.85, "bg", { why: "dong nghit nguoi -> canh dam dong", broll: { src: "inputs/vid3-b-dongnguoi.mp4", mode: "full" } }),
+  seg(16.85, 19.0, "bg", { why: "300 khach phong dau -> hoi truong", broll: { src: "inputs/vid3-b-phongdau.mp4", mode: "full" } }),
+  bg(19.0, 25.85, "co cau 48 suat -> 2 the tren nen canh that lam mo", { src: "inputs/vid3-b-the.mp4", mode: "bg" }),
   th(25.85, 29.15, 1.0),
   ramp(29.15, 31.6, "dat truoc 500 trieu -> zoom"),
-  bg(31.6, 41.6, "chuoi gia trung -> 5 cot"),
+  bg(31.6, 41.6, "chuoi gia trung -> 5 cot tren nen canh that lam mo", { src: "inputs/vid3-b-cot.mp4", mode: "bg" }),
   th(41.6, 44.05, 1.12),
-  ramp(44.05, 47.55, "hang tram trieu moi lan tra -> zoom ramp"),
+  bg(44.05, 47.55, "hang tram trieu moi lan tra -> canh tra gia", { src: "inputs/vid3-b-tragia.mp4", mode: "full" }),
   th(47.55, 52.75, 1.12, { frostAtMs: 100, why: "cau hoi -> nen mo cho the kinh" }),
   ramp(52.75, 56.35, "ly do 1"),
   th(56.35, 60.15, 1.0),

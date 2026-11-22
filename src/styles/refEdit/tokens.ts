@@ -25,14 +25,19 @@ export const RT = {
   },
   /** Tam doc cac lop chu (ti le H) [GOC] */
   y: {
-    setup: 0.615, // dong trang nho phia tren
-    punch: 0.665, // dong do lon
-    badge: 0.625,
-    badgeLabel: 0.705,
-    listTitle: 0.18,
-    cardCenters: [0.2, 0.34, 0.48], // [SUA] day len de chua cho khung nguoi noi goc duoi (goc mau: 0.252/0.474/0.69)
-    pill1: 0.69,
-    pill2: 0.8,
+    // [SUA theo nguoi dung] vung an toan TikTok/Reels: tren 220px, duoi tu 1400px (0.729H), cot nut phai x>940 tu ~0.45H
+    // -> chu tren mat: 0.54-0.64H; canh tram: khung nguoi noi goc TREN-PHAI, do hoa 0.36-0.72H (goc mau: setup 0.615, punch 0.665, label 0.705)
+    setup: 0.555,
+    punch: 0.6,
+    badge: 0.545,
+    badgeLabel: 0.625,
+    listTitle: 0.38,
+    cardCenters: [0.4, 0.515, 0.63], // het tai 0.68H: chua dai 0.68-0.73H cho phu de
+    pill1: 0.6,
+    pill2: 0.68,
+    tilt: 0.5,
+    under: 0.63, // chu do duoi the 3D
+    subtitle: 0.7, // phu de chay chu (1344px)
   },
   /** Thoi luong (giay) [GOC] do bang duong cong pixel 30fps */
   time: {
@@ -56,7 +61,7 @@ export const RT = {
     list: 80, // muc danh sach (sua: 70 -> 80)
     card: 62, // chu trong the vang (sua: 56 -> 62)
     cardW: 762, // the vang ~0.706W
-    cardH: 220, // ~0.127H
+    cardH: 200, // ~0.127H
     pill: 52,
     warn: 128, // "DUNG NOI" ~0.6W (sua: 108 -> 128)
     warnSub: 80, // "Qua nhieu thong tin" ~0.79W

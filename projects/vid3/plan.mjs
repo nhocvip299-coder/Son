@@ -56,7 +56,7 @@ const items = [
   sp(0.1, 3.9, "Thị trường BĐS Hưng Yên", "CỰC KỲ KHÓ KHĂN", 3.3, { why: "boi canh (trang) + muc do (do)" }),
   sp(3.95, 7.0, "Vậy mà", "48 LÔ ĐẤT", 4.3, { why: "hook: con so nghich ly" }),
   sp(7.0, 10.4, "Hơn 600 bộ hồ sơ", "LÔ NÀO CŨNG HỢP LỆ", 9.0, {}),
-  it("flare", 10.15, 10.55, { y: 0.66, why: "dong hook" }),
+  it("flare", 10.15, 10.55, { y: 0.6, why: "dong hook" }),
   sp(10.6, 16.8, "Phiên đấu giá Yên Mỹ", "ĐÔNG NGHỊT NGƯỜI", 13.4, { why: "dia danh (nguoi dung xac nhan) + khong khi" }),
   sp(16.9, 19.0, "Riêng phòng đấu", "HƠN 300 KHÁCH", 18.1, { why: "[THEM] so lieu khong khi" }),
   it("cards", 19.6, 25.85, { why: "2 nhom lo -> 2 the", cards: [
@@ -92,7 +92,7 @@ const items = [
   it("cards", 83.65, 89.6, { tilt3d: true, why: "3 tieu chi -> checklist 3D", cards: [
     { at: 0, lines: [{ text: "Đúng nhu cầu?", at: 0.15 }, { text: "Ở được?", at: 2.35 }, { text: "Kinh doanh được?", at: 3.55 }] },
   ] }),
-  it("warning", 88.0, 89.6, { head: "Vẫn được săn đón", at: 0, color: "red", y: 0.5, why: "ket luan duoi the (mau 46.9s)" }),
+  it("warning", 88.0, 89.6, { head: "Vẫn được săn đón", at: 0, color: "red", y: 0.63, why: "ket luan duoi the (mau 46.9s)" }),
   it("pills", 89.7, 93.3, { pills: [{ text: "Mức giá này hợp lý chưa?", at: 0.05 }], why: "cau hoi cho nguoi xem" }),
   sp(93.4, END, "Cần hồ sơ, giá trúng?", "NHẮN CHO MÌNH", 96.3, { why: "CTA" }),
 ];
@@ -101,5 +101,6 @@ const plan = finalize({ source: SRC, fps: 60, segments, items, sfx: [] });
 fs.writeFileSync("work/vid3/plan-final.json", JSON.stringify(plan, null, 1));
 const draft = JSON.parse(fs.readFileSync("work/vid3/plan-chay-chu.json", "utf8"));
 const words = draft.words.filter((w) => w.startMs < ms(END));
-fs.writeFileSync("work/vid3/plan-final-chay-chu.json", JSON.stringify({ ...plan, words, wordsY: 1590, wordsTypewriter: true }, null, 1));
+// [NGUOI DUNG] ban chay chu: phu de go tung chu + tieng go phim (nho hon giong, dat lai bang sfx-level/do rieng)
+fs.writeFileSync("work/vid3/plan-final-chay-chu.json", JSON.stringify({ ...plan, words, wordsY: 1344, wordsTypewriter: true, wordsKeyVolume: 0.25 }, null, 1));
 console.log(`plan-final: ${segments.length} doan, ${items.length} item, ${plan.sfx.length} SFX, dai ${END}s`);

@@ -70,7 +70,7 @@ export const yellowText = (size: number): React.CSSProperties => ({
 });
 
 /** Co chu de khong tran khung (uoc luong be rong ky tu theo font). [AI: video mau chu ngan nen khong can] */
-export const fit = (text: string, size: number, em: number, maxW = 930) => {
+export const fit = (text: string, size: number, em: number, maxW = 860) => {
   const w = Array.from(text).length * size * em;
   return w > maxW ? Math.floor((size * maxW) / w) : size;
 };
@@ -98,7 +98,7 @@ export const supText = (txt: string): React.ReactNode => {
 
 const KEYS = ["key1", "key2", "key3", "key4", "key5", "key6", "key7", "key8"];
 /** Go tung ky tu. O che do "type": toc do ban phim, con tro, tieng phim moi ky tu (dat dung frame ky tu hien). */
-export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: React.CSSProperties; sound?: boolean }> = ({ text, at = 0, cps, style, sound = true }) => {
+export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: React.CSSProperties; sound?: boolean; keyVol?: number }> = ({ text, at = 0, cps, style, sound = true, keyVol }) => {
   const { t, fps } = useSec();
   const rv = useReveal();
   const typing = rv.mode === "type";
@@ -146,7 +146,7 @@ export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: 
         </span>
       ) : null}
       <span style={{ ...style, visibility: "hidden" }}>{supText(chars.slice(t < at ? 0 : typing ? shown : shown + 1).join(""))}</span>
-      {typing && sound && rv.keyVolume > 0
+      {typing && sound && (keyVol ?? rv.keyVolume) > 0
         ? chars.map((ch, i) => {
             const fr = Math.round(times[i] * fps);
             if (fr < 0) return null;
@@ -154,7 +154,7 @@ export const Typed: React.FC<{ text: string; at?: number; cps?: number; style?: 
             const k = KEYS[Math.floor(random(`k${text}${i}`) * KEYS.length)];
             return (
               <Sequence key={`a${i}`} from={fr} durationInFrames={Math.round(0.14 * fps)} layout="none" name={`phim ${ch}`}>
-                <Audio src={staticFile(`sfx/${sp ? "keyspace" : k}.wav`)} volume={rv.keyVolume * (sp ? 0.8 : 0.85 + random(`v${text}${i}`) * 0.3)} />
+                <Audio src={staticFile(`sfx/${sp ? "keyspace" : k}.wav`)} volume={(keyVol ?? rv.keyVolume) * (sp ? 0.8 : 0.85 + random(`v${text}${i}`) * 0.3)} />
               </Sequence>
             );
           })
@@ -183,7 +183,7 @@ export const BlurIn: React.FC<{ at?: number; dur?: number; from?: number; dy?: n
 
 /** Khoi dat tai tam (x,y) theo ti le khung */
 export const Place: React.FC<{ x?: number; y: number; children: React.ReactNode; anchor?: "center" | "left"; style?: React.CSSProperties }> = ({
-  x = 0.5,
+  x = 0.48, // lech trai nhe: tranh cot nut ben phai TikTok/Reels
   y,
   children,
   anchor = "center",
@@ -367,7 +367,7 @@ export const LightLeak: React.FC<{ tone?: "red" | "orange" }> = ({ tone = "red" 
 };
 
 /** Flare cau vong + bloom do ket thuc hook [GOC 0.95-1.2s]. [AI] mo phong bang gradient. */
-export const FlareBurst: React.FC<{ y?: number }> = ({ y = 0.64 }) => {
+export const FlareBurst: React.FC<{ y?: number }> = ({ y = 0.6 }) => {
   const { t, D } = useSec();
   const p = interpolate(t, [0, D * 0.35, D], [0, 1, 0], C);
   const x = interpolate(t, [0, D], [0.2, 0.75], C);
@@ -428,8 +428,8 @@ export const ExampleList: React.FC<{ title: string; titleAt?: number; items: Lis
       {items.map((it, i) => {
         const zig = layout === "zigzag";
         // [GOC] muc dau ~0.30H, cach nhau ~0.067H; zig-zag x 0.15/0.42, xep doc x 0.2
-        const x = zig ? (i % 2 === 0 ? 0.15 : 0.42) : 0.2;
-        const y = (zig ? 0.3 : 0.28) + i * (zig ? 0.066 : 0.075);
+        const x = zig ? (i % 2 === 0 ? 0.12 : 0.38) : 0.16;
+        const y = (zig ? 0.45 : 0.45) + i * (zig ? 0.06 : 0.065);
         return (
           <Place key={i} x={x} y={y} anchor="left">
             {useReveal().mode === "type" ? (
@@ -525,7 +525,7 @@ export const BigNumeral: React.FC<{ num: string; line1: string; line2?: string; 
   num,
   line1,
   line2,
-  y = 0.69,
+  y = 0.62,
   at = 0,
   dimAt,
   exit = "blur",
@@ -559,7 +559,7 @@ export const BigNumeral: React.FC<{ num: string; line1: string; line2?: string; 
 export const Warning: React.FC<{ head: string; sub?: string; y?: number; at?: number; subAt?: number; color?: "yellow" | "red"; exit?: ExitMode }> = ({
   head,
   sub,
-  y = 0.665,
+  y = 0.6,
   at = 0,
   subAt,
   color = "yellow",
@@ -591,7 +591,7 @@ export const Warning: React.FC<{ head: string; sub?: string; y?: number; at?: nu
 export const ContrastPair: React.FC<{ neg: string; words: Array<{ text: string; at: number; x: number }>; y?: number; at?: number; exit?: ExitMode }> = ({
   neg,
   words,
-  y = 0.6,
+  y = 0.555,
   at = 0,
   exit = "blur",
 }) => {
@@ -622,7 +622,7 @@ export const RecapBadges: React.FC<{ nums?: Array<number | string>; at?: number;
   at = 0,
   stagger = RT.time.badgeStagger,
   burstAt = 1.2,
-  y = 0.69,
+  y = 0.62,
 }) => {
   const { t, fps, f } = useSec();
   const xs = nums.map((_, i) => 0.25 + (0.5 * i) / Math.max(1, nums.length - 1));

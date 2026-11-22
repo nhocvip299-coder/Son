@@ -25,7 +25,9 @@ for (const [i, s] of shots.entries()) {
   await renderStill({ serveUrl, composition, inputProps: { plan }, frame: Math.round(s.t * plan.fps), output: f, scale: 0.3, imageFormat: "jpeg", jpegQuality: 88, ...common });
   const g = path.join(tmp, `g${i}.jpg`);
   fs.writeFileSync(path.join(tmp, `l${i}.txt`), `${i + 1}. ${s.label}`);
-  spawnSync("ffmpeg", ["-v", "error", "-y", "-i", f, "-vf", `pad=324:616:0:0:black,drawtext=textfile=${path.join(tmp, `l${i}.txt`)}:x=6:y=584:fontsize=17:fontcolor=yellow`, g]);
+  // --safe: to vung bi giao dien TikTok/Reels che (tren 220px, duoi tu 1400px, cot nut phai x>940 tu 0.45H) — toa do da nhan 0.3
+  const safe = opts.safe ? "drawbox=x=0:y=0:w=324:h=66:color=red@0.28:t=fill,drawbox=x=0:y=420:w=324:h=156:color=red@0.28:t=fill,drawbox=x=282:y=259:w=42:h=161:color=red@0.28:t=fill," : "";
+  spawnSync("ffmpeg", ["-v", "error", "-y", "-i", f, "-vf", `${safe}pad=324:616:0:0:black,drawtext=textfile=${path.join(tmp, `l${i}.txt`)}:x=6:y=584:fontsize=17:fontcolor=yellow`, g]);
   tiles.push(g);
 }
 const per = COLS * ROWS; const outs = [];

@@ -91,6 +91,8 @@ export type RefPlan = {
   reveal?: { mode: "orig" | "type"; cps?: number; keyVolume?: number };
   /** ban chay chu: phu de go tung tu (khong tieng phim de khong on ao suot video) */
   wordsTypewriter?: boolean;
+  /** tieng go phim cho phu de chay chu (0 = tat) */
+  wordsKeyVolume?: number;
 };
 
 export const refPlanDurationMs = (p: RefPlan) => p.segments.reduce((a, s) => a + s.srcEndMs - s.srcStartMs, 0);
@@ -151,7 +153,7 @@ const Shot: React.FC<{ seg: RefSegment; source: string; trimBefore: number; trim
 };
 
 /** Khung nguoi noi khi o canh tram (px tren khung 1080x1920): goc duoi-trai, tranh cot nut TikTok ben phai */
-export const PIP = { x: 44, y: 1110, w: 470, h: 620 } as const;
+export const PIP = { x: 716, y: 236, w: 320, h: 420 } as const; // [SUA] goc TREN-PHAI: duoi thanh tab, tren cot nut; do hoa nam ben duoi
 
 const renderItem = (it: RefItem) => {
   switch (it.type) {
@@ -166,7 +168,7 @@ const renderItem = (it: RefItem) => {
         <>
           {it.cards.map((c, i) =>
             it.tilt3d ? (
-              <YellowCard key={i} y={0.26} at={c.at} lines={c.lines} tilt3d upper={false} w={860} h={330} align="left" />
+              <YellowCard key={i} y={RT.y.tilt} at={c.at} lines={c.lines} tilt3d upper={false} w={780} h={330} align="left" />
             ) : (
               <YellowCard key={i} y={RT.y.cardCenters[i % 3]} at={c.at} lines={c.lines} />
             ),
@@ -177,7 +179,7 @@ const renderItem = (it: RefItem) => {
       return (
         <>
           {it.pills.map((p, i) => (
-            <GlassPill key={i} text={p.text} at={p.at} y={i === 0 ? RT.y.pill1 : RT.y.pill2} rot={i === 0 ? -5 : -7} />
+            <GlassPill key={i} text={p.text} at={p.at} y={i === 0 ? RT.y.pill1 : RT.y.pill2} rot={i === 0 ? -5 : -7} x={0.47} />
           ))}
         </>
       );
@@ -236,7 +238,7 @@ export const RefEdit: React.FC<{ plan: RefPlan }> = ({ plan }) => {
         </Sequence>
       ))}
       {plan.words?.length ? (
-        plan.wordsTypewriter ? <WordsTyped words={plan.words} y={plan.wordsY ?? 1560} /> : <WordByWord words={plan.words} y={plan.wordsY ?? 1560} />
+        plan.wordsTypewriter ? <WordsTyped words={plan.words} y={plan.wordsY ?? 1344} keyVol={plan.wordsKeyVolume ?? 0} /> : <WordByWord words={plan.words} y={plan.wordsY ?? 1560} />
       ) : null}
       {plan.audioOverride ? <Audio src={staticFile(plan.audioOverride.src)} trimBefore={toF(plan.audioOverride.startMs)} /> : null}
       {plan.music ? <Audio src={staticFile(plan.music.src)} volume={plan.music.volume} /> : null}
@@ -247,7 +249,7 @@ export const RefEdit: React.FC<{ plan: RefPlan }> = ({ plan }) => {
 };
 
 /** Phu de "chay chu" kieu go ban phim: moi tu go tung ky tu kip truoc khi tu sau bat dau (khong tieng phim). */
-const WordsTyped: React.FC<{ words: WbwWord[]; y: number }> = ({ words, y }) => {
+const WordsTyped: React.FC<{ words: WbwWord[]; y: number; keyVol: number }> = ({ words, y, keyVol }) => {
   const { fps } = useVideoConfig();
   return (
     <AbsoluteFill>
@@ -260,7 +262,7 @@ const WordsTyped: React.FC<{ words: WbwWord[]; y: number }> = ({ words, y }) => 
         return (
           <Sequence key={i} from={from} durationInFrames={dur} layout="none" name={`W ${w.text}`}>
             <div style={{ position: "absolute", left: 0, right: 0, top: y, textAlign: "center", translate: "0 -50%" }}>
-              <Typed text={w.text} cps={cps} sound={false} style={{ ...whiteText(96), color: "#FFFFFF" }} />
+              <Typed text={w.text} cps={cps} sound={keyVol > 0} keyVol={keyVol} style={{ ...whiteText(80), color: "#FFFFFF" }} />
             </div>
           </Sequence>
         );

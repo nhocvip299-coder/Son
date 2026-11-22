@@ -17,19 +17,19 @@ const vn = (n: number, dec = 0) => n.toFixed(dec).replace(".", ",");
 
 // ---------- Thang gia ----------
 export type Bar = { label: string; value: number; unit: string; at: number; hot?: boolean };
-export const BarLadder: React.FC<{ title?: string; bars: Bar[]; y?: number }> = ({ title, bars, y = 0.4 }) => {
+export const BarLadder: React.FC<{ title?: string; bars: Bar[]; y?: number }> = ({ title, bars, y = 0.53 }) => {
   const { t } = useSec();
   const max = Math.max(...bars.map((b) => b.value));
-  const H = 470; // chieu cao vung cot
+  const H = 360; // chieu cao vung cot
   // 3 cot: 210px; nhieu cot hon thi thu hep cho vua 980px
   const gap = bars.length > 3 ? 36 : 60;
-  const bw = Math.min(210, (980 - gap * (bars.length - 1)) / bars.length);
-  const x0 = (RT.W - (bars.length * bw + (bars.length - 1) * gap)) / 2;
+  const bw = Math.min(200, (860 - gap * (bars.length - 1)) / bars.length);
+  const x0 = 0.47 * RT.W - (bars.length * bw + (bars.length - 1) * gap) / 2;
   const base = y * RT.H + H / 2;
   return (
     <>
       {title ? (
-        <Place y={y - H / RT.H / 2 - 0.1}>
+        <Place y={y - H / RT.H / 2 - 0.06}>
           <Typed text={title} at={0} style={whiteText(64)} />
         </Place>
       ) : null}
@@ -82,7 +82,7 @@ export const PriceDrop: React.FC<{ from: string; to: number; toPrefix?: string; 
   label,
   at = 0,
   dropAt = 0.6,
-  y = 0.3,
+  y = 0.42,
 }) => {
   const { t, f, fps } = useSec();
   const pin = interpolate(t, [at, at + 0.25], [0, 1], { ...C, easing: ease });
@@ -122,7 +122,7 @@ export const PriceDrop: React.FC<{ from: string; to: number; toPrefix?: string; 
 
 // ---------- So sanh 2 cot ----------
 export type VsSide = { title: string; at: number; rows: Array<{ text: string; at: number; good: boolean }> };
-export const VersusCompare: React.FC<{ left: VsSide; right: VsSide; y?: number }> = ({ left, right, y = 0.17 }) => {
+export const VersusCompare: React.FC<{ left: VsSide; right: VsSide; y?: number }> = ({ left, right, y = 0.4 }) => {
   const { t, f, fps } = useSec();
   const col = (side: VsSide, x: number, accent: string) => {
     const p = interpolate(t, [side.at, side.at + 0.35], [0, 1], { ...C, easing: ease });
@@ -132,7 +132,7 @@ export const VersusCompare: React.FC<{ left: VsSide; right: VsSide; y?: number }
           position: "absolute",
           left: x,
           top: y * RT.H,
-          width: 470,
+          width: 420,
           opacity: p,
           translate: `0 ${(1 - p) * 60}px`,
           borderRadius: 26,
@@ -177,9 +177,9 @@ export const VersusCompare: React.FC<{ left: VsSide; right: VsSide; y?: number }
   };
   return (
     <>
-      {col(left, 50, RT.color.cardBorder)}
-      {col(right, 560, "#F62A15")}
-      <Place y={y - 0.035} x={0.5}>
+      {col(left, 60, RT.color.cardBorder)}
+      {col(right, 500, "#F62A15")}
+      <Place y={y - 0.035} x={0.47}>
         <div style={{ ...yellowText(70), opacity: interpolate(t, [right.at, right.at + 0.2], [0, 1], C) }}>VS</div>
       </Place>
     </>

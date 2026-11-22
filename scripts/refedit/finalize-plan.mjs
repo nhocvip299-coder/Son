@@ -11,12 +11,13 @@
 import fs from "node:fs";
 import { parseArgs } from "../pipeline/lib.mjs";
 
-// keyFiles: 12 tieng phim THAT cat tu video TikTok nguoi dung gui (Keyboard typing) -> public/sfx/pack/kb1..12
-export const REVEAL = { mode: "type", cps: 22, keyVolume: 0, keyFiles: Array.from({ length: 12 }, (_, i) => `pack/kb${i + 1}`) };
+// [NGUOI DUNG] chu chay kieu go CO tieng phim that: 16 phim cat tu ban ghi go phim (TikTok efeitos__sonoros, nhip 56ms ~ toc do go 22 ky tu/s)
+// -> public/sfx/pack/ty1..16. Moi ky tu hien = 1 tieng phim (component Typed dat dung frame). Phu de chay chu: KHONG tieng (nguoi dung bo).
+export const REVEAL = { mode: "type", cps: 22, keyVolume: 0.6, keyFiles: Array.from({ length: 16 }, (_, i) => `pack/ty${i + 1}`) };
 
 /** Bang SFX theo loai hieu ung (da duyet). Ten = file trong public/sfx/pack/. */
 export const SFX_MAP = {
-  setupLine: "ui-digital", // dong chu trang
+  setupLine: null, // dong chu trang: tieng go phim thay the (khong them SFX)
   punch: "correct-jewel", // chu do nhan
   badge: "ui-notification", // badge chuong
   card: "pop-bells-sang", // the vang / tieu de VS
@@ -37,7 +38,7 @@ const typeDur = (txt, cps = REVEAL.cps) => (Array.from(txt).length + (txt.split(
 
 export const autoSfx = (plan) => {
   const out = [];
-  const P = (t, key, v = 1) => out.push({ atMs: Math.round(t * 1000), sfx: `pack/${SFX_MAP[key]}`, volume: v, why: key });
+  const P = (t, key, v = 1) => SFX_MAP[key] && out.push({ atMs: Math.round(t * 1000), sfx: `pack/${SFX_MAP[key]}`, volume: v, why: key });
   for (const it of plan.items) {
     const st = it.startMs / 1000;
     switch (it.type) {

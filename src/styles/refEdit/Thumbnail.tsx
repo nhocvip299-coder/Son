@@ -1,3 +1,5 @@
+/** [SUA] Vung an toan anh bia: TikTok cat luoi ~3:4 (y 240-1680), Reels ~4:5 (y 285-1635), ngoai ra 1:1 (y 420-1500).
+ *  -> moi chu nam trong y 340-1560 (chu chinh trong 1:1 neu co the). */
 /** Anh bia (thumbnail) theo phong cach reference-video-edit-thinking: mat bieu cam + doi lap 2 con so + cau hoi. */
 import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
@@ -23,27 +25,27 @@ const Sup: React.FC<{ text: string }> = ({ text }) => {
 
 export const RefThumbnail: React.FC<ThumbProps> = ({ face, topLabel, topBig, bottomLabel, bottomBig, question, middle = "VS" }) => (
   <AbsoluteFill style={{ backgroundColor: "#000" }}>
-    <AbsoluteFill style={{ scale: "1.18", transformOrigin: "50% 28%" }}>
+    <AbsoluteFill style={{ scale: "1.12", transformOrigin: "50% 40%" }}>
       <Img src={staticFile(face)} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
     </AbsoluteFill>
-    <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.35) 26%, rgba(0,0,0,0) 40%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 68%, rgba(0,0,0,0.85) 100%)" }} />
+    <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.6) 15%, rgba(0,0,0,0.25) 34%, rgba(0,0,0,0) 44%, rgba(0,0,0,0) 54%, rgba(0,0,0,0.5) 64%, rgba(0,0,0,0.75) 85%, rgba(0,0,0,0.85) 100%)" }} />
     {/* Tren: lua chon 1 (do = dat, dat do) */}
-    <Place y={0.1}>
+    <Place y={0.215}>
       <div style={{ ...yellowText(fit(topLabel, 96, 0.52, 960)), textAlign: "center" }}>{topLabel.toUpperCase()}</div>
     </Place>
-    <Place y={0.175}>
+    <Place y={0.285}>
       <div style={{ ...redText(fit(topBig, 150, 0.47, 980), RT.font.punch), textAlign: "center" }}>
         <Sup text={topBig.toUpperCase()} />
       </div>
     </Place>
     {/* VS */}
     {middle ? (
-      <Place y={0.625}>
+      <Place y={0.6}>
         <div style={{ ...yellowText(120), textAlign: "center" }}>{middle}</div>
       </Place>
     ) : null}
     {/* Duoi: lua chon 2 tren the vang */}
-    <Place y={0.725}>
+    <Place y={0.66}>
       <div
         style={{
           padding: "26px 60px 30px",
@@ -60,7 +62,7 @@ export const RefThumbnail: React.FC<ThumbProps> = ({ face, topLabel, topBig, bot
         </div>
       </div>
     </Place>
-    <Place y={0.855} style={{ rotate: "-4deg" }}>
+    <Place y={0.775} style={{ rotate: "-4deg" }}>
       <div style={{ padding: "18px 46px", borderRadius: 30, border: "5px solid #fff", background: "rgba(20,20,26,0.55)", boxShadow: "0 0 18px rgba(255,255,255,0.6)" }}>
         <span style={whiteText(72)}>{question}</span>
       </div>

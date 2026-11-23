@@ -29,6 +29,7 @@ Học từ video mẫu 58s (TikTok, talking-head + kinetic text + nền trừu t
 4. `finalize-plan.mjs` (gõ chữ + SFX + giọng 100%) → `timeline-frames.mjs` → gửi khung hình, chờ duyệt.
 5. Render stem SFX (voiceVolume 0, `_audio.mjs`) → `sfx-level.py <stem> <nguồn> -8 <plan...>` → nghe thử mp3 nếu người dùng muốn.
 6. `render-plan.mjs` → `master-audio.mjs` (-14 LUFS) → `qc.mjs --fps 60` → bản xem nhanh ~55 MB qua SendUserFile.
+7. **Luôn làm thêm** ảnh bìa + caption: chọn khung mặt biểu cảm (miệng mở/ngạc nhiên) → `npx remotion still src/index.ts RefThumbnail out/<x>/thumbnail.png --props='{"face":...,"topLabel","topBig","middle","bottomLabel","bottomBig","question"}'` (chữ trên = móc câu/đối lập, thẻ vàng dưới = con số/điểm bán, thẻ kính = câu hỏi kéo bình luận). Caption 2 bản: **TikTok** (ngắn, móc câu dòng đầu, 4–6 hashtag) và **Facebook Reels** (dài hơn, gạch đầu dòng ✅, kêu gọi nhắn tin, 3–5 hashtag). Số liệu chỉ lấy từ lời trong video; ghi chú điểm cần kiểm.
 
 ## Code
 - Component: `src/styles/refEdit/components.tsx` (SetupPunch, StepBadge, YellowCard, GlassPill, ExampleList, EmphasisWipe, BigNumeral, Warning, ContrastPair, RecapBadges, LightLeak, FlareBurst, ClockProp, HourglassProp, AbstractBg, Typed+RevealCtx), `animations.tsx` (BarLadder, PriceDrop, VersusCompare), `RefEdit.tsx` (composition theo plan JSON; PiP góc; voiceVolume; reveal), `tokens.ts` (thông số đo từ video mẫu).

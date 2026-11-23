@@ -6,6 +6,7 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 - **Mỗi lần dựng/chỉnh sửa video: luôn xuất thêm bản "chạy chữ từng chữ"** (phụ đề hiện từng từ đang nói — `WordByWord` trong `src/styles/textPresets/capcut/`), bên cạnh bản thường.
 - Chữ hiệu ứng phải giống mẫu CapCut: đủ độ bóng/phát sáng, chuyển động mượt (có vào + thoát), **sound effect phải nghe rõ** trên giọng nói (kiểm bằng đo năng lượng cao tần quanh mốc SFX).
 - Gửi bản xem nhanh (~60 MB) qua SendUserFile; bản đầy đủ để trong `out/`.
+- **Mỗi lần xong clip hoàn chỉnh: làm thêm ảnh bìa (thumbnail 1080×1920, composition `RefThumbnail`) và caption riêng cho TikTok và Facebook Reels** (lưu `out/<dự-án>/caption.txt`, số liệu chỉ lấy từ lời trong video).
 - Không sửa/xóa file gốc; video gốc/mẫu không đưa lên Git.
 
 ## Quy trình chuẩn

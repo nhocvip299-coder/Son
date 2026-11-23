@@ -12,11 +12,21 @@ import { CapcutEdit, ccPlanDurationMs, type CcEditPlan } from "./styles/textPres
 import { HongDangEdit, hdPlanDurationMs, type HdPlan } from "./styles/hongDang/HongDangEdit";
 import { RefEdit, refPlanDurationMs, type RefPlan } from "./styles/refEdit/RefEdit";
 import { RefThumbnail } from "./styles/refEdit/Thumbnail";
+import { RefPoster } from "./styles/refEdit/Poster";
 import { EMPTY_PLAN, planDurationMs, type EditPlan } from "./compositions/plan";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="RefPoster"
+        component={RefPoster}
+        durationInFrames={1}
+        fps={30}
+        width={1080}
+        height={1350}
+        defaultProps={{ photo: "inputs/posters/vid4-nha.jpg", kicker: "Shophouse", title: "Ocean Park 2" }}
+      />
       <Composition
         id="RefThumbnail"
         component={RefThumbnail}

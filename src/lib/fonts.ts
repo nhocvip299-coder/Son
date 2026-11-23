@@ -117,7 +117,8 @@ export const KASEPI = "'Kasepi VN'";
 if (typeof document !== "undefined") {
   const url = staticFile("fonts/1FTV-VIP-Kasepi-Sans.otf");
   const st = document.createElement("style");
-  st.textContent = `@font-face{font-family:'Kasepi VN';src:url('${url}') format('opentype');font-weight:100 900;font-display:block;}`;
+  // unicode-range bo chu so 0-9: Kasepi ve so 1 giong chu I -> chu so roi ve font ke tiep (Be Vietnam Pro)
+  st.textContent = `@font-face{font-family:'Kasepi VN';src:url('${url}') format('opentype');font-weight:100 900;font-display:block;unicode-range:U+0000-002F,U+003A-10FFFF;}`;
   document.head.appendChild(st);
   const h = delayRender("Tai font Kasepi VN");
   fetch(url, { method: "HEAD" })

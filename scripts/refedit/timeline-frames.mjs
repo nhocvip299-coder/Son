@@ -8,6 +8,7 @@ const { pos, opts } = parseArgs(process.argv.slice(2));
 const [planP, outPrefix] = pos; const COLS = Number(opts.cols ?? 5); const ROWS = 3;
 const plan = JSON.parse(fs.readFileSync(planP, "utf8"));
 const serveUrl = await bundle({ entryPoint: path.join(ROOT, "src/index.ts"), publicDir: path.join(ROOT, "public") });
+process.on("exit", () => { try { fs.rmSync(serveUrl, { recursive: true, force: true }); } catch {} }); // xoa ban dong goi tam (moi lan chep ca public/)
 const common = { browserExecutable: BROWSER, chromiumOptions: { gl: "swangle" }, logLevel: "error" };
 const composition = await selectComposition({ serveUrl, id: "RefEdit", inputProps: { plan }, ...common });
 const name = (it) => (it.punch ?? it.label ?? it.title ?? it.text ?? it.head ?? it.neg ?? (it.cards ? "the vang" : it.bars ? "cot gia" : it.left ? "so sanh VS" : it.pills ? "the kinh" : it.from ? "gia giam" : "")).toString();

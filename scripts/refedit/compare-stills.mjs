@@ -13,6 +13,7 @@ const plan = JSON.parse(fs.readFileSync(planPath, "utf8"));
 const tmp = path.join(path.dirname(out), "_cmp");
 fs.mkdirSync(tmp, { recursive: true });
 const serveUrl = await bundle({ entryPoint: path.join(ROOT, "src/index.ts"), publicDir: path.join(ROOT, "public") });
+process.on("exit", () => { try { fs.rmSync(serveUrl, { recursive: true, force: true }); } catch {} }); // xoa ban dong goi tam (moi lan chep ca public/)
 const common = { browserExecutable: BROWSER, chromiumOptions: { gl: "swangle" }, logLevel: "error" };
 const composition = await selectComposition({ serveUrl, id: "RefEdit", inputProps: { plan }, ...common });
 const tiles = [];

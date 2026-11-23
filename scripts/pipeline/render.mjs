@@ -1,3 +1,4 @@
+import fs from "node:fs";
 #!/usr/bin/env node
 // Buoc 7 — Render bang Remotion (that su dung React/Remotion de dung hieu ung, khong thay bang FFmpeg).
 import path from "node:path";
@@ -11,6 +12,8 @@ const getBundle = async () => {
   if (!bundled) {
     log("render", "Dong goi du an Remotion...");
     bundled = await bundle({ entryPoint: path.join(ROOT, "src/index.ts"), publicDir: path.join(ROOT, "public") });
+    const dir = bundled;
+    process.on("exit", () => { try { fs.rmSync(dir, { recursive: true, force: true }); } catch {} }); // xoa ban dong goi tam
   }
   return bundled;
 };

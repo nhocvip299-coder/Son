@@ -5,6 +5,7 @@ import { BROWSER, ROOT } from "../pipeline/lib.mjs";
 const [planP, out, t0, t1, step, cy = "1050", ch = "420"] = process.argv.slice(2);
 const plan = JSON.parse(fs.readFileSync(planP, "utf8"));
 const serveUrl = await bundle({ entryPoint: path.join(ROOT, "src/index.ts"), publicDir: path.join(ROOT, "public") });
+process.on("exit", () => { try { fs.rmSync(serveUrl, { recursive: true, force: true }); } catch {} }); // xoa ban dong goi tam (moi lan chep ca public/)
 const common = { browserExecutable: BROWSER, chromiumOptions: { gl: "swangle" }, logLevel: "error" };
 const composition = await selectComposition({ serveUrl, id: "RefEdit", inputProps: { plan }, ...common });
 const files = [];

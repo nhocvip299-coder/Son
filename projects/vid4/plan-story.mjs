@@ -36,7 +36,7 @@ const special = {
   13: [{ a: 11.0, b: 14.2, zoomFrom: 1.0, zoomTo: 1.2, zoomRampMs: 600, why: "can dep hiem -> zoom" }],
   2: [{ a: 10.7, b: 19.0 }, { a: 19.0, b: 21.3, kind: "bg", broll: { src: SRC("0302"), startMs: 500, mode: "full" }, blurIn: true, why: "cong vien" }],
   3: [
-    { a: 1.4, b: 9.3, kind: "bg", broll: { src: SRC("0302"), startMs: 1500, mode: "full" }, why: "Masteri -> toa thap" },
+    { a: 1.4, b: 9.3, kind: "bg", broll: { src: SRC("0302"), startMs: 0, mode: "full" }, why: "Masteri -> toa thap" },
     { a: 9.3, b: 17.0 },
   ],
   14: [{ a: 14.2, b: 16.4 }, { a: 16.4, b: 23.4, kind: "bg", broll: { src: SRC("0302"), startMs: 10500, mode: "bg" }, blurIn: true, why: "giai dap -> VS tren nen biet thu mo" }],

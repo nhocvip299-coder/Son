@@ -3,6 +3,7 @@ import { bundle } from "@remotion/bundler"; import { renderStill, selectComposit
 const ROOT="/home/user/Son"; const BROWSER="/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell";
 const [planP,out,...ts]=process.argv.slice(2); const plan=JSON.parse(fs.readFileSync(planP,"utf8"));
 const serveUrl=await bundle({entryPoint:path.join(ROOT,"src/index.ts"),publicDir:path.join(ROOT,"public")});
+process.on("exit", () => { try { fs.rmSync(serveUrl, { recursive: true, force: true }); } catch {} }); // xoa ban dong goi tam (moi lan chep ca public/)
 const common={browserExecutable:BROWSER,chromiumOptions:{gl:"swangle"},logLevel:"error"};
 const composition=await selectComposition({serveUrl,id:"RefEdit",inputProps:{plan},...common});
 const files=[];

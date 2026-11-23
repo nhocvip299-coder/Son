@@ -1,0 +1,22 @@
+{
+ "_note": "BAN DUNG GIAY vid4 (shophouse day Sao Bien - Ocean Park 2). Moc la giay trong clip goc; script refine-edl.py doi diem cat ve cho am thanh nho nhat (+-0.25s). why = ly do giu/bo.",
+ "keep": [
+  { "clip": "0309", "a": 16.6, "b": 23.25, "part": "hook", "why": "COLD OPEN: cau dat gia nhat cua video ('tinh so bo... con thap hon ca nhung can dang cat lo tai Ocean Park 2') dua len dau giu nguoi xem" },
+  { "clip": "0304", "a": 0.6, "b": 10.05, "part": "intro", "why": "chao + boi canh: dau tuan sang OP2 hop, quay luon can Sao Bien" },
+  { "clip": "0304", "a": 10.75, "b": 20.95, "part": "intro", "why": "nhieu nguoi quan tam vi vi tri + gia uu dai; dang dung canh cong vien. BO 'doi dien Masteri' (21-26.5) vi 0307 noi lai ky hon ngay sau" },
+  { "clip": "0307", "a": 1.45, "b": 16.75, "part": "vitri", "why": "vi tri gan Masteri, don hang van cu dan; chinh sach moi -> gia tot nhat OP2. BO 'Thuong thi em di xem dat...' (16.8-31.8): y phu, lap 'vi tri' va 'su dung ra sao' voi cau sau" },
+  { "clip": "0307", "a": 32.9, "b": 44.3, "part": "chuyen", "why": "cau dan sang tour: moi ngam can nha va mat duong" },
+  { "clip": "0308", "a": 2.0, "b": 4.65, "part": "tour", "why": "'day la can... day Sao Bien'. BO 'Thi nhu anh chi nhin nay' + lang 2.3s (4.6-9.0)" },
+  { "clip": "0308", "a": 6.85, "b": 15.6, "part": "tour", "why": "mat duong truc chinh hon 20m ca via he, kinh doanh qua ok" },
+  { "clip": "0308", "a": 15.6, "b": 34.8, "part": "tour", "why": "quay sang day chung cu; can co se khe them mat thoang; co mat duong phia sau" },
+  { "clip": "0308", "a": 37.15, "b": 43.55, "part": "tour", "why": "'7-8m ca via he' (BO '7m,' noi lai) + kinh doanh ca mat sau" },
+  { "clip": "0308", "a": 44.3, "b": 44.5, "part": "tour", "why": "(noi 'Duong xa' - ghep voi doan sau, bo lang 1.8s o giua)" },
+  { "clip": "0308", "a": 46.3, "b": 48.0, "part": "tour", "why": "'rat la dep nhe'" },
+  { "clip": "0308", "a": 54.8, "b": 61.75, "part": "tour", "why": "BO lan noi vap 'Them mot diem dang chu y nua la can nha nay o' (48.6-54.8), giu lan 2: xay 6 tang, tang 1 thong thoang. BO 'Noi chung thi...' (61.7-70) bo do, 0309 noi tron y" },
+  { "clip": "0309", "a": 0.85, "b": 10.2, "part": "gia", "why": "cuoi nam thi truong co tin hieu tot du tram lang; san pham huu han dep" },
+  { "clip": "0309", "a": 11.4, "b": 13.95, "part": "gia", "why": "'o Ocean Park thi van khong co nhieu' (bo lang 1.2s giua cau)" },
+  { "clip": "0309", "a": 14.45, "b": 23.25, "part": "gia", "why": "gia so bo thap hon can cat lo OP2 (nhac lai cau mo dau - co chu dich: chot y)" },
+  { "clip": "0309", "a": 23.65, "b": 39.65, "part": "cta", "why": "kinh doanh + luu tru vi tri dac dia -> lien he Son / theo doi kenh" }
+ ],
+ "broll": { "0302": "17s khong loi: cong vien + toa thap (0-10s), day biet thu (10-17s) -> chen luc noi 'cong vien', 'Masteri'" }
+}

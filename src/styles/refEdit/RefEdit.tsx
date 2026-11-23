@@ -46,6 +46,8 @@ export type RefSegment = {
   blurIn?: boolean;
   /** canh tram: thu nguoi noi vao khung goc (mac dinh true). false = nen phu kin (kieu video mau goc) */
   pip?: boolean;
+  /** clip nguon rieng cho doan nay (nhieu clip trong 1 video); mac dinh = plan.source */
+  source?: string;
   /** [NGUOI DUNG] canh tram bang VIDEO THAT (B-roll, khong tieng): "full" = phat ro net; "bg" = lam mo + toi lam nen cho do hoa */
   broll?: { src: string; startMs?: number; mode?: "full" | "bg" };
   why?: string;
@@ -248,7 +250,7 @@ export const RefEdit: React.FC<{ plan: RefPlan }> = ({ plan }) => {
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {segs.map(({ s, from, dur }, i) => (
         <Sequence key={i} from={from} durationInFrames={dur} name={`${s.kind === "bg" ? "NEN" : "MAT"} ${i + 1}${s.zoomTo ? ` zoom ${s.zoomFrom}->${s.zoomTo}` : ""}`}>
-          <Shot seg={s} source={plan.source} trimBefore={toF(s.srcStartMs)} trimAfter={toF(s.srcEndMs)} muted={!!plan.audioOverride} volume={plan.voiceVolume ?? 1} />
+          <Shot seg={s} source={s.source ?? plan.source} trimBefore={toF(s.srcStartMs)} trimAfter={toF(s.srcEndMs)} muted={!!plan.audioOverride} volume={plan.voiceVolume ?? 1} />
         </Sequence>
       ))}
       {plan.items.map((it, i) => (

@@ -1,5 +1,5 @@
-import fs from "node:fs";
 #!/usr/bin/env node
+import fs from "node:fs";
 // Buoc 7 — Render bang Remotion (that su dung React/Remotion de dung hieu ung, khong thay bang FFmpeg).
 import path from "node:path";
 import os from "node:os";

@@ -2381,19 +2381,19 @@
    "kind": "route",
    "startMs": 12900,
    "endMs": 14500,
-   "title": "ĐỂ XE THOẢI MÁI"
+   "title": "KHỎI LO GỬI XE"
   },
   {
    "kind": "food",
    "startMs": 18000,
    "endMs": 20900,
-   "title": "MÓNG THÁI SẴN"
+   "title": "LÀM TẠI CHỖ"
   },
   {
    "kind": "food",
    "startMs": 29100,
    "endMs": 31200,
-   "title": "MẸO: CẮT MÓNG"
+   "title": "DÙNG KÉO CHO GỌN"
   },
   {
    "kind": "food",

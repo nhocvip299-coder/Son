@@ -633,6 +633,218 @@ const SCENES: Record<string, React.FC<{ c: Cues }>> = { landTax: LandTax, taxCal
 export const SCENE_NAMES = Object.keys(SCENES);
 
 /** Lop canh minh hoa (ve DUOI lop video; doan "bg" co scene:true de trong suot nen -> lo canh nay, PiP nam tren) */
+// ---------- Dai animation phia duoi (lap cho trong o san, 1490-1800px) ----------
+const LY = 1490; // dinh dai duoi
+const lbl = (size: number, color = "#E9E2D6"): React.CSSProperties => ({ position: "absolute", fontFamily: RT.font.punch, fontWeight: 800, fontSize: size, color, whiteSpace: "nowrap", translate: "-50% -50%", textShadow: "0 2px 6px rgba(0,0,0,0.4)" });
+const GOLD = "#C9A24A", RED = "#C0503A", GREEN = "#6FA383", INK = "#E9E2D6";
+
+const Panel: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => {
+  const { t } = useSec();
+  const p = interpolate(t, [0.2, 0.7], [0, 1], { ...C, easing: Easing.out(Easing.cubic) });
+  return (
+    <AbsoluteFill style={{ opacity: p, translate: `0 ${(1 - p) * 40}px` }}>
+      <div style={{ position: "absolute", left: 60, top: LY, width: 960, height: 330, borderRadius: 28, border: `2px solid rgba(201,162,74,0.55)`, background: "rgba(20,30,36,0.28)" }} />
+      <div style={{ ...lbl(30, GOLD), left: 540, top: LY + 34, letterSpacing: 3 }}>{title.toUpperCase()}</div>
+      {children}
+    </AbsoluteFill>
+  );
+};
+
+const Timeline: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const k = interpolate(t, [0.5, 3.0], [0, 1], { ...C, easing: Easing.inOut(Easing.cubic) });
+  const y = LY + 190;
+  const x = 140 + k * 800;
+  const hit = t > (c.stamp ?? 99);
+  return (
+    <Panel title="Mốc áp dụng">
+      <Svg>
+        <line x1="140" y1={y} x2="940" y2={y} stroke="#8FA3A6" strokeWidth="6" strokeLinecap="round" />
+        <line x1="140" y1={y} x2={x} y2={y} stroke={GOLD} strokeWidth="6" strokeLinecap="round" />
+        {Array.from({ length: 9 }, (_, i) => <line key={i} x1={140 + i * 100} y1={y - 14} x2={140 + i * 100} y2={y + 14} stroke="#8FA3A6" strokeWidth="3" />)}
+        <circle cx={x} cy={y} r={16 + (k >= 1 ? Math.sin(t * 6) * 4 : 0)} fill={GOLD} stroke="#fff" strokeWidth="4" />
+        <circle cx="940" cy={y} r={hit ? 26 : 12} fill={hit ? RED : "#8FA3A6"} opacity={0.9} />
+      </Svg>
+      <div style={{ ...lbl(34), left: 160, top: y + 60 }}>Hiện tại</div>
+      <div style={{ ...lbl(40, GOLD), left: 900, top: y + 60 }}>1/7/2027</div>
+      {hit ? <div style={{ ...lbl(34, "#F0A08F"), left: 900, top: y - 60 }}>Áp thuế 0,2%</div> : null}
+    </Panel>
+  );
+};
+
+const Formula: React.FC<{ c: Cues }> = ({ c }) => {
+  const pop = usePop();
+  const parts = [["10 tỷ", 0.3, INK], ["× 0,2%", c.arrow, GOLD], ["≈ 20 triệu/năm", c.coins, "#F0A08F"]] as const;
+  const xs = [210, 450, 760];
+  return (
+    <Panel title="Cách tính thuế">
+      {parts.map(([txt, at, col], i) => {
+        const p = pop(at);
+        return (
+          <div key={i} style={{ ...lbl(i === 2 ? 50 : 56, col), left: xs[i], top: LY + 190, scale: String(interpolate(p, [0, 1], [0.5, 1])), opacity: Math.min(1, p * 1.5) }}>
+            {txt}
+          </div>
+        );
+      })}
+      <div style={{ ...lbl(26, "#AFC0C2"), left: 540, top: LY + 285, opacity: pop(c.coins) }}>Theo khung giá đất nhà nước, không phải giá thị trường</div>
+    </Panel>
+  );
+};
+
+const Gauge: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t, f, fps } = useSec();
+  const steps = [c.w1, c.w2, c.w3].filter((a) => t >= a).length;
+  const last = [c.w1, c.w2, c.w3][Math.max(0, steps - 1)] ?? 0;
+  const sp = steps ? spring({ frame: f - Math.round(last * fps), fps, config: { damping: 8, stiffness: 120 } }) : 1;
+  const prev = -80 + Math.max(0, steps - 1) * 52;
+  const ang = steps ? prev + (Math.min(-80 + steps * 52, 76) - prev) * sp : -80 + Math.sin(t * 3) * 2;
+  const cx = 540, cy = LY + 290, r = 200;
+  const arc = (a0: number, a1: number) => {
+    const p = (a: number) => [cx + r * Math.sin((a * Math.PI) / 180), cy - r * Math.cos((a * Math.PI) / 180)];
+    const [x0, y0] = p(a0), [x1, y1] = p(a1);
+    return `M ${x0} ${y0} A ${r} ${r} 0 0 1 ${x1} ${y1}`;
+  };
+  return (
+    <Panel title="Áp lực chi phí">
+      <Svg>
+        <path d={arc(-80, -27)} stroke={GREEN} strokeWidth="30" fill="none" />
+        <path d={arc(-25, 25)} stroke={GOLD} strokeWidth="30" fill="none" />
+        <path d={arc(27, 80)} stroke={RED} strokeWidth="30" fill="none" />
+        <g transform={`rotate(${ang} ${cx} ${cy})`}>
+          <polygon points={`${cx - 10},${cy} ${cx + 10},${cy} ${cx},${cy - r + 30}`} fill={INK} />
+        </g>
+        <circle cx={cx} cy={cy} r="20" fill={INK} />
+      </Svg>
+      <div style={{ ...lbl(30), left: 250, top: LY + 290 }}>Thấp</div>
+      <div style={{ ...lbl(30, "#F0A08F"), left: 830, top: LY + 290 }}>Cao</div>
+    </Panel>
+  );
+};
+
+const MonthBars: React.FC = () => {
+  const { t } = useSec();
+  return (
+    <Panel title="Chi phí cộng dồn theo tháng">
+      <Svg>
+        {Array.from({ length: 12 }, (_, i) => {
+          const k = interpolate(t, [0.3 + i * 0.28, 0.6 + i * 0.28], [0, 1], { ...C, easing: Easing.out(Easing.back(1.6)) });
+          const h = (40 + i * 16) * k;
+          return <rect key={i} x={120 + i * 72} y={LY + 290 - h} width="48" height={h} rx="6" fill={i > 8 ? RED : "#B87333"} />;
+        })}
+        <line x1="100" y1={LY + 292} x2="980" y2={LY + 292} stroke="#8FA3A6" strokeWidth="3" />
+      </Svg>
+    </Panel>
+  );
+};
+
+const CashLine: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const n = 24;
+  const pts = Array.from({ length: n }, (_, i) => {
+    const ti = (i / (n - 1)) * Math.max(t, 0.01) ;
+    const drop = ti > c.idle ? (ti - c.idle) * 22 : 0;
+    const v = 90 + Math.sin(i * 1.3) * 12 - drop - (ti > c.leak ? (ti - c.leak) * 20 : 0);
+    return [120 + (i * 840) / (n - 1), LY + 270 - Math.max(-20, Math.min(170, v))];
+  });
+  const bad = t > c.idle;
+  return (
+    <Panel title="Dòng tiền">
+      <Svg>
+        <line x1="120" y1={LY + 270} x2="960" y2={LY + 270} stroke="#8FA3A6" strokeWidth="3" strokeDasharray="12 10" />
+        <polyline points={pts.map((q) => q.join(",")).join(" ")} fill="none" stroke={bad ? RED : GREEN} strokeWidth="10" strokeLinejoin="round" strokeLinecap="round" />
+        <circle cx={pts[n - 1][0]} cy={pts[n - 1][1]} r="14" fill={bad ? RED : GREEN} stroke="#fff" strokeWidth="4" />
+      </Svg>
+      <div style={{ ...lbl(26, "#AFC0C2"), left: 990, top: LY + 270, translate: "-100% -150%" }}>0</div>
+    </Panel>
+  );
+};
+
+const ShopBars: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const months = Math.max(0, Math.min(6, Math.floor((t - c.leftRow) / 0.7) + 1));
+  return (
+    <Panel title="Thu nhập mỗi tháng">
+      <Svg>
+        {Array.from({ length: 6 }, (_, i) => (i < months ? <rect key={i} x={110 + i * 62} y={LY + 290 - 110} width="44" height="110" rx="6" fill={GREEN} /> : null))}
+        <line x1="100" y1={LY + 292} x2="490" y2={LY + 292} stroke="#8FA3A6" strokeWidth="3" />
+        <line x1="590" y1={LY + 292} x2="980" y2={LY + 292} stroke="#8FA3A6" strokeWidth="3" />
+        {t > c.right ? <line x1="600" y1={LY + 286} x2="970" y2={LY + 286} stroke={RED} strokeWidth="8" strokeLinecap="round" /> : null}
+      </Svg>
+      <div style={{ ...lbl(32, "#A9D3B8"), left: 295, top: LY + 100 }}>Cho thuê</div>
+      <div style={{ ...lbl(32, "#F0A08F"), left: 785, top: LY + 100 }}>Đóng cửa</div>
+      {t > c.right ? <div style={{ ...lbl(44, "#F0A08F"), left: 785, top: LY + 220 }}>0 đ</div> : null}
+    </Panel>
+  );
+};
+
+const Meters: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const a = interpolate(t, [c.up - 0.6, c.up + 0.4], [0.1, 0.55], { ...C, easing: Easing.out(Easing.cubic) });
+  const b = interpolate(t, [c.gear, c.gear + 0.8], [0.1, 0.92], { ...C, easing: Easing.out(Easing.cubic) });
+  const bar = (y: number, k: number, col: string, txt: string) => (
+    <>
+      <div style={{ ...lbl(32), left: 210, top: y }}>{txt}</div>
+      <div style={{ position: "absolute", left: 340, top: y - 22, width: 620, height: 44, borderRadius: 22, background: "rgba(255,255,255,0.12)" }}>
+        <div style={{ width: `${k * 100}%`, height: "100%", borderRadius: 22, background: col }} />
+      </div>
+    </>
+  );
+  return (
+    <Panel title="Giá trị bất động sản">
+      {bar(LY + 140, a, GREEN, "Tăng giá")}
+      {bar(LY + 240, b, GOLD, "Khai thác")}
+    </Panel>
+  );
+};
+
+/** pho: duong co xe chay + nguoi di bo (mat do dan cu) */
+const Street: React.FC<{ title: string }> = ({ title }) => {
+  const { t } = useSec();
+  const y = LY + 200;
+  const car = (i: number, sp: number, col: string, dir: 1 | -1) => {
+    const x = dir === 1 ? ((t * sp + i * 330) % 1300) - 140 : 1180 - (((t * sp + i * 330) % 1300));
+    const yy = dir === 1 ? y - 30 : y + 50;
+    return (
+      <g key={`${i}${dir}`} transform={`translate(${x} ${yy})`}>
+        <rect x="-60" y="-30" width="120" height="44" rx="14" fill={col} />
+        <rect x="-36" y="-52" width="70" height="28" rx="10" fill={col} />
+        <rect x="-28" y="-46" width="54" height="18" rx="6" fill="#BAC4C9" />
+        <circle cx="-34" cy="14" r="13" fill="#1E2830" />
+        <circle cx="34" cy="14" r="13" fill="#1E2830" />
+      </g>
+    );
+  };
+  return (
+    <Panel title={title}>
+      <Svg>
+        <defs>
+          <clipPath id="street"><rect x="62" y={y - 120} width="956" height="230" rx="10" /></clipPath>
+        </defs>
+        <g clipPath="url(#street)">
+        <rect x="60" y={y - 70} width="960" height="170" fill="#33424A" />
+        {Array.from({ length: 12 }, (_, i) => <rect key={i} x={((i * 100 - t * 160) % 1200 + 1200) % 1200 - 60} y={y + 8} width="50" height="6" fill="#C9A24A" opacity={0.7} />)}
+        {car(0, 220, "#A9503C", 1)}
+        {car(1, 220, "#BAC4C9", 1)}
+        {car(2, 180, "#C9A24A", -1)}
+        {car(3, 180, "#4F7D62", -1)}
+        </g>
+      </Svg>
+    </Panel>
+  );
+};
+
+const LOWER: Record<string, React.FC<{ c: Cues }>> = {
+  landTax: Timeline,
+  taxCalc: Formula,
+  landVsVilla: () => <Street title="Thực tế khu dân cư" />,
+  pressure: Gauge,
+  holdingCost: () => <MonthBars />,
+  leverage: CashLine,
+  shopVs: ShopBars,
+  criteria: () => <Street title="Mật độ dân cư - lưu thông" />,
+  goodRE: Meters,
+};
+
 export const IllustratedScene: React.FC<{ name: string; cues?: Cues }> = ({ name, cues = {} }) => {
   const { t, D } = useSec();
   const S = SCENES[name];
@@ -641,6 +853,7 @@ export const IllustratedScene: React.FC<{ name: string; cues?: Cues }> = ({ name
     <AbsoluteFill style={{ backgroundColor: "#E9E2D6", overflow: "hidden" }}>
       <Sky />
       <AbsoluteFill style={{ opacity: out, scale: "1.1", transformOrigin: `540px ${GY}px` }}>{S ? <S c={cues} /> : null}</AbsoluteFill>
+      {LOWER[name] ? <AbsoluteFill style={{ opacity: out }}>{React.createElement(LOWER[name], { c: cues })}</AbsoluteFill> : null}
     </AbsoluteFill>
   );
 };

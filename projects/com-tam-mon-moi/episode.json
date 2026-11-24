@@ -1,8 +1,30 @@
 {
  "title": "Cơm Tấm Sườn Khói — 2 món mới (sườn cọng, má đào): đưa hook lên đầu",
- "inputs": [{"role": "footage+voice", "path": "work/ep-hook/src.mov (HEVC 1080x1920 60fps 44,05s, có tiếng chủ quán)", "library_file_id": "drive:1eHLvEt1-8beNNmcax7UgK9FCdbkMsPPI"}],
- "derived": [{"path": "public/inputs/com-tam-mon-moi/src.mp4", "rebuild": "ffmpeg scale=1080:1920,fps=60 H.264 crf16 + aac 256k (work/ep-hook/proxy.mp4)"}],
+ "inputs": [
+  {
+   "role": "footage+voice",
+   "path": "work/ep-hook/src.mov (HEVC 1080x1920 60fps 44,05s, có tiếng chủ quán)",
+   "library_file_id": "drive:1eHLvEt1-8beNNmcax7UgK9FCdbkMsPPI"
+  }
+ ],
+ "derived": [
+  {
+   "path": "public/inputs/com-tam-mon-moi/src.mp4",
+   "rebuild": "ffmpeg scale=1080:1920,fps=60 H.264 crf16 + aac 256k (work/ep-hook/proxy.mp4)"
+  }
+ ],
  "edit": "Hook 6,35–10,33s ('Nhìn miếng sườn cọng vàng óng luôn', gắp sườn từ lò) lặp lên đầu, flash + swish, rồi phát nguyên video gốc 0–44,05s. Không thêm chữ ở bản thường; bản chạy chữ dùng Phudu.",
- "outputs": ["out/com-tam-mon-moi-hook.mp4", "out/com-tam-mon-moi-hook-chay-chu.mp4"],
- "render": "npx remotion render src/index.ts GelexiaCapcutEdit out/... --props=projects/com-tam-mon-moi/props.json | props-wbw.json"
+ "outputs": [
+  "out/com-tam-mon-moi-hook.mp4",
+  "out/com-tam-mon-moi-hook-chay-chu.mp4",
+  "out/com-tam-mon-moi-gelexia.mp4",
+  "out/com-tam-mon-moi-gelexia-chay-chu.mp4"
+ ],
+ "render": "npx remotion render src/index.ts GelexiaCapcutEdit out/... --props=projects/com-tam-mon-moi/props.json | props-wbw.json",
+ "gelexia": {
+  "base": "public/inputs/com-tam-gx/base.mp4 (ffmpeg concat hook 6,35-10,33s + goc 0-44,05s, giu tieng)",
+  "spec": "projects/com-tam-mon-moi/gelexia-spec.json",
+  "render": "npx remotion render src/index.ts GelexiaEdit out/com-tam-mon-moi-gelexia.mp4 --props=projects/com-tam-mon-moi/props.json | props-wbw.json",
+  "note": "Ban CapCut cu doi ten capcut-props*.json"
+ }
 }

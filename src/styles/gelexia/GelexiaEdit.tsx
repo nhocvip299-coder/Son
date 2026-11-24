@@ -1,5 +1,5 @@
-import React from "react";
-import { AbsoluteFill, Easing, Sequence, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { AbsoluteFill, Easing, Sequence, cancelRender, continueRender, delayRender, interpolate, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio, Video } from "@remotion/media";
 import STYLE from "../../../styles/gelexia-food-review/style.json";
 import { CC_PRESETS, CapcutPreset, type CcFit } from "../textPresets/capcut/CapcutPreset";
@@ -42,10 +42,24 @@ export type GxPlan = {
   subs?: boolean; // phu de theo cum (kieu video mau: trang IN HOA, tu khoa cam)
   subsY?: number;
   tags?: GxTag[]; // nhan dia chi vang
+  font?: "phudu"; // phu de / chay chu / nhan dia chi dung Phudu 800 (preset CapCut giu font rieng)
   grade?: Partial<typeof STYLE.grade>; // ghi de grade cua style.json cho tung tap
 };
 const shotMs = (s: GxShot) => (s.srcEndMs - s.srcStartMs) / (s.rate ?? 1);
 export const gxDurationMs = (p: GxPlan) => p.shots.reduce((a, s) => a + shotMs(s), 0);
+
+
+/** Font chu cho phu de/nhan: mac dinh Be Vietnam Pro; plan.font = "phudu" -> Phudu 800 (public/fonts/gelexia). */
+const FontCtx = createContext("Be Vietnam Pro, sans-serif");
+let phuduPromise: Promise<unknown> | null = null;
+const usePhudu = (on: boolean) => {
+  const [h] = useState(() => (on ? delayRender("Phudu font") : null));
+  useEffect(() => {
+    if (h === null) return;
+    phuduPromise ??= new FontFace("GelexiaPhudu", `url(${staticFile("fonts/gelexia/Phudu.ttf")})`, { weight: "800" }).load().then((f) => document.fonts.add(f));
+    phuduPromise.then(() => continueRender(h)).catch(cancelRender);
+  }, [h]);
+};
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const gradeOf = (p: GxPlan) => ({ ...STYLE.grade, ...(p.grade ?? {}) });
@@ -99,6 +113,7 @@ const Grade: React.FC<{ G: ReturnType<typeof gradeOf> }> = ({ G }) => (
 
 /** Tag kenh goc tren trai: vien cam bo tron. */
 const Handle: React.FC<{ text: string }> = ({ text }) => {
+  const ff = useContext(FontCtx);
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const a = interpolate(f, [0, Math.round(0.4 * fps)], [0, 1], clamp);
@@ -113,7 +128,7 @@ const Handle: React.FC<{ text: string }> = ({ text }) => {
         background: "rgba(0,0,0,0.35)",
         border: `3px solid ${STYLE.theme.accent}`,
         color: "#fff",
-        fontFamily: "Be Vietnam Pro, sans-serif",
+        fontFamily: ff,
         fontWeight: 800,
         fontSize: 34,
         opacity: a,
@@ -128,6 +143,7 @@ const Handle: React.FC<{ text: string }> = ({ text }) => {
 
 /** Phu de theo cum ~4-6 tu (kieu video mau): trang IN HOA dam, vien den, tu khoa cam. */
 const SubChunk: React.FC<{ words: WbwWord[]; dur: number; re: RegExp | null; y: number }> = ({ words, dur, re, y }) => {
+  const ff = useContext(FontCtx);
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const fin = Math.max(1, Math.min(Math.round(0.12 * fps), Math.floor(dur / 3)));
@@ -144,7 +160,7 @@ const SubChunk: React.FC<{ words: WbwWord[]; dur: number; re: RegExp | null; y: 
           <span
             key={i}
             style={{
-              fontFamily: "Be Vietnam Pro, sans-serif",
+              fontFamily: ff,
               fontWeight: 900,
               fontSize: hot ? 66 : 56,
               textTransform: "uppercase",
@@ -198,6 +214,7 @@ const PhraseSubs: React.FC<{ words: WbwWord[]; y: number; accentRe?: string }> =
 
 /** Nhan dia chi: hop vang chu den (kieu video mau), truot vao + "pop". */
 const AddressTag: React.FC<{ tag: GxTag; dur: number }> = ({ tag, dur }) => {
+  const ff = useContext(FontCtx);
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const a = interpolate(f, [0, Math.round(0.25 * fps), dur - Math.round(0.25 * fps), dur], [0, 1, 1, 0], clamp);
@@ -208,7 +225,7 @@ const AddressTag: React.FC<{ tag: GxTag; dur: number }> = ({ tag, dur }) => {
         style={{
           background: "#FFD400",
           color: "#111",
-          fontFamily: "Be Vietnam Pro, sans-serif",
+          fontFamily: ff,
           fontWeight: 900,
           fontSize: 50,
           padding: "12px 30px",
@@ -221,7 +238,7 @@ const AddressTag: React.FC<{ tag: GxTag; dur: number }> = ({ tag, dur }) => {
         📍 {tag.line1}
       </div>
       {tag.line2 ? (
-        <div style={{ background: "rgba(0,0,0,0.75)", color: "#FFD400", fontFamily: "Be Vietnam Pro, sans-serif", fontWeight: 800, fontSize: 36, padding: "8px 22px", borderRadius: 8, clipPath: `inset(0 ${(1 - w) * 100}% 0 0)`, whiteSpace: "nowrap" }}>
+        <div style={{ background: "rgba(0,0,0,0.75)", color: "#FFD400", fontFamily: ff, fontWeight: 800, fontSize: 36, padding: "8px 22px", borderRadius: 8, clipPath: `inset(0 ${(1 - w) * 100}% 0 0)`, whiteSpace: "nowrap" }}>
           {tag.line2}
         </div>
       ) : null}
@@ -232,11 +249,14 @@ const AddressTag: React.FC<{ tag: GxTag; dur: number }> = ({ tag, dur }) => {
 };
 
 export const GelexiaEdit: React.FC<{ plan: GxPlan }> = ({ plan }) => {
+  usePhudu(plan.font === "phudu");
+  const font = plan.font === "phudu" ? "GelexiaPhudu, sans-serif" : "Be Vietnam Pro, sans-serif";
   const { fps } = useVideoConfig();
   const toF = (ms: number) => Math.round((ms / 1000) * fps);
   let cursor = 0;
   const starts: number[] = [];
   return (
+    <FontCtx.Provider value={font}>
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {plan.shots.map((s, i) => {
         const from = cursor;
@@ -284,10 +304,11 @@ export const GelexiaEdit: React.FC<{ plan: GxPlan }> = ({ plan }) => {
         </Sequence>
       ))}
       {plan.words && plan.subs ? <PhraseSubs words={plan.words} y={plan.subsY ?? 560} accentRe={plan.accentRe} /> : null}
-      {plan.words && !plan.subs ? <WordByWord words={plan.words} y={plan.wordsY} accentRe={plan.accentRe} /> : null}
+      {plan.words && !plan.subs ? <WordByWord words={plan.words} y={plan.wordsY} accentRe={plan.accentRe} fontFamily={plan.font === "phudu" ? font : undefined} /> : null}
       {plan.handle ? <Handle text={plan.handle} /> : null}
       {plan.voice ? <Audio src={staticFile(plan.voice.src)} volume={plan.voice.volume} /> : null}
       {plan.music ? <Audio src={staticFile(plan.music.src)} volume={plan.voice ? (plan.musicUnderVoice ?? 0.17) : plan.music.volume} /> : null}
     </AbsoluteFill>
+    </FontCtx.Provider>
   );
 };

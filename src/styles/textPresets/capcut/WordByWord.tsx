@@ -5,7 +5,7 @@ import { FONTS } from "../../../lib/fonts";
 /** Phu de "chay chu tung chu": moi lan hien DUNG 1 tu dang noi, nay nhe + phat sang (phong cach preset CapCut). */
 export type WbwWord = { text: string; startMs: number; endMs: number };
 
-const Word: React.FC<{ w: WbwWord; dur: number; accent: boolean; y: number }> = ({ w, dur, accent, y }) => {
+const Word: React.FC<{ w: WbwWord; dur: number; accent: boolean; y: number; fontFamily?: string }> = ({ w, dur, accent, y, fontFamily }) => {
   const f = useCurrentFrame();
   const { fps, width } = useVideoConfig();
   const s = spring({ frame: f, fps, config: { damping: 12, stiffness: 260, mass: 0.5 } });
@@ -20,7 +20,7 @@ const Word: React.FC<{ w: WbwWord; dur: number; accent: boolean; y: number }> = 
         right: 0,
         top: y,
         textAlign: "center",
-        fontFamily: FONTS.rounded,
+        fontFamily: fontFamily ?? FONTS.rounded,
         fontWeight: 900,
         fontSize: size,
         color,
@@ -37,7 +37,7 @@ const Word: React.FC<{ w: WbwWord; dur: number; accent: boolean; y: number }> = 
   );
 };
 
-export const WordByWord: React.FC<{ words: WbwWord[]; y?: number; accentRe?: string }> = ({ words, y = 1350, accentRe }) => {
+export const WordByWord: React.FC<{ words: WbwWord[]; y?: number; accentRe?: string; fontFamily?: string }> = ({ words, y = 1350, accentRe, fontFamily }) => {
   const { fps } = useVideoConfig();
   const re = accentRe ? new RegExp(accentRe, "i") : null;
   return (
@@ -50,7 +50,7 @@ export const WordByWord: React.FC<{ words: WbwWord[]; y?: number; accentRe?: str
         const dur = Math.max(2, Math.round((endMs / 1000) * fps) - from);
         return (
           <Sequence key={i} from={from} durationInFrames={dur} layout="none" name={`W ${w.text}`}>
-            <Word w={w} dur={dur} accent={!!re && re.test(w.text)} y={y} />
+            <Word w={w} dur={dur} accent={!!re && re.test(w.text)} y={y} fontFamily={fontFamily} />
           </Sequence>
         );
       })}

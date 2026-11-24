@@ -20,7 +20,7 @@ export type GxShot = {
   srcEndMs: number;
   zoom?: number; // zoom co ban
   drift?: [number, number]; // troi px (x,y) tu dau -> cuoi canh
-  kb?: "in" | "out"; // Ken Burns
+  kb?: "in" | "out" | "none"; // Ken Burns ("none" = giu khung goc)
   trans?: "flash" | "zoom" | "cut"; // hieu ung luc VAO canh
   rate?: number; // toc do phat (0.8 = cham lai cho canh b-roll)
 };
@@ -71,7 +71,7 @@ const Shot: React.FC<{ plan: GxPlan; s: GxShot; dur: number }> = ({ plan, s, dur
   const toF = (ms: number) => Math.round((ms / 1000) * fps);
   const z0 = s.zoom ?? 1.04;
   const p = interpolate(f, [0, dur], [0, 1], clamp);
-  const kb = s.kb === "out" ? interpolate(p, [0, 1], [z0 + 0.07, z0]) : interpolate(p, [0, 1], [z0, z0 + 0.07]);
+  const kb = s.kb === "none" ? z0 : s.kb === "out" ? interpolate(p, [0, 1], [z0 + 0.07, z0]) : interpolate(p, [0, 1], [z0, z0 + 0.07]);
   // punch-in: vao canh phong to 10% roi ve trong ~0.25s
   const punch = s.trans === "cut" ? 0 : interpolate(f, [0, Math.round(0.28 * fps)], [0.1, 0], { ...clamp, easing: Easing.out(Easing.cubic) });
   const [dx, dy] = s.drift ?? [0, 0];

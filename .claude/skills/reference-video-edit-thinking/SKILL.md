@@ -21,6 +21,9 @@ Học từ video mẫu 58s (TikTok, talking-head + kinetic text + nền trừu t
 - SFX: bộ `public/sfx/pack/` gán theo loại hiệu ứng (`scripts/refedit/finalize-plan.mjs` → `SFX_MAP`); **giọng giữ nguyên 100%**, mỗi SFX **thấp hơn giọng 8 dB** (`sfx-level.py`).
 - **Không tự render**: gửi khung hình timeline cho người dùng duyệt trước. Ưu tiên tốc độ → render 1 bản (hỏi có cần bản chạy chữ không).
 
+- **Cảnh trám = cảnh minh họa động** (`src/styles/refEdit/scenes.tsx`, item `scene` + segment `scene:true`), KHÔNG nền tối trừu tượng: tông kem cát/xanh đá trầm/đất nung/vàng đồng (người dùng chê màu tươi "trẻ con"), hình mô phỏng đúng câu nói + dải animation thông tin phía dưới (mốc thời gian, công thức, đồng hồ áp lực, cột chi phí, dòng tiền, phố xe chạy).
+- **Người nói liếc kịch bản** → đo bằng `scripts/refedit/gaze.py` (MediaPipe FaceLandmarker, model `work/models/face_landmarker.task`; cần `libegl1`), kiểm bằng mắt, rồi đưa các đoạn đó vào cảnh trám (PiP nhỏ che mắt liếc).
+
 ## Quy trình (chi tiết lệnh: `references/quy-trinh.md`)
 0. Thiếu `public/sfx/pack` hoặc font → `bash scripts/refedit/install-assets.sh <gói.zip>` (gói tạo bằng `pack-assets.sh`).
 1. Proxy H.264 1080x1920 **60fps** → `analyze` + `transcribe` (Whisper large-v3-turbo) → `projects/<dự-án>/asr-fixes.json`.

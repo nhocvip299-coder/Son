@@ -21,3 +21,4 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 - Chữ hiện kiểu gõ (không tiếng gõ phím). SFX = bộ pack TikTok, nhỏ hơn giọng 8 dB; giọng giữ nguyên.
 - Gửi khung hình timeline để duyệt TRƯỚC khi render; khi người dùng ưu tiên thời gian chỉ render 1 bản (có thể bỏ bản chạy chữ).
 - Tài nguyên không lên Git (SFX pack, font Nexa): gói zip tạo bằng `scripts/refedit/pack-assets.sh`, cài bằng `install-assets.sh`.
+- Cảnh trám: dùng cảnh minh họa động tông trầm sang (scenes.tsx), không nền đen; đoạn liếc kịch bản → cảnh trám (gaze.py). Xem thử nhanh: `scripts/refedit/_preview.mjs`.

@@ -32,6 +32,11 @@ export const SFX_MAP = {
   rowBad: "ui-error",
   flash: "camera-flash", // flare / light leak
   pipIn: "ui-whoosh", // nguoi noi thu vao khung goc
+  // canh minh hoa dong (scenes.tsx)
+  stamp: "camera-shot", // dau do dap xuong
+  drop: "pop-up", // vat roi / hien hinh
+  coin: "es-success", // tien vao
+  whoosh: "ui-whoosh-2", // chuyen dong / mui ten
 };
 
 const typeDur = (txt, cps = REVEAL.cps) => (Array.from(txt).length + (txt.split(" ").length - 1) * 0.6) / cps;
@@ -64,6 +69,7 @@ export const autoSfx = (plan) => {
         [...it.left.rows, ...it.right.rows].forEach((r) => P(st + r.at, r.good ? "rowGood" : "rowBad", 0.85));
         break;
       case "flare": case "leak": P(st, "flash", 0.9); break;
+      case "scene": (it.sfx ?? []).forEach((x) => P(st + x.at, x.key, 0.85)); break;
     }
   }
   let acc = 0;

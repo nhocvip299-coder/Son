@@ -31,6 +31,7 @@ import {
 import { RT } from "./tokens";
 import { RevealCtx, Typed, whiteText } from "./components";
 import { BarLadder, PriceDrop, VersusCompare, type Bar, type VsSide } from "./animations";
+import { IllustratedScene } from "./scenes";
 
 export type RefSegment = {
   srcStartMs: number;
@@ -50,6 +51,8 @@ export type RefSegment = {
   source?: string;
   /** [NGUOI DUNG] canh tram bang VIDEO THAT (B-roll, khong tieng): "full" = phat ro net; "bg" = lam mo + toi lam nen cho do hoa */
   broll?: { src: string; startMs?: number; mode?: "full" | "bg" };
+  /** [AI] nen trong suot -> lo canh minh hoa (item type "scene") nam duoi lop video */
+  scene?: boolean;
   why?: string;
 };
 
@@ -73,6 +76,7 @@ export type RefItem = Base &
     | { type: "bars"; title?: string; bars: Bar[]; y?: number }
     | { type: "priceDrop"; from: string; to: number; toPrefix?: string; unit: string; label?: string; at?: number; dropAt?: number; y?: number }
     | { type: "versus"; left: VsSide; right: VsSide; y?: number }
+    | { type: "scene"; name: string; cues?: Record<string, number>; sfx?: Array<{ at: number; key: string }> }
   );
 
 export type RefPlan = {
@@ -122,7 +126,7 @@ const Shot: React.FC<{ seg: RefSegment; source: string; trimBefore: number; trim
     const Hd = interpolate(bgIn, [0, 1], [1920, R.h]);
     return (
       <AbsoluteFill>
-        {seg.broll ? <Broll b={seg.broll} /> : <AbstractBg seed={Math.round(trimBefore)} />}
+        {seg.broll ? <Broll b={seg.broll} /> : seg.scene ? null : <AbstractBg seed={Math.round(trimBefore)} />}
         <div
           style={{
             position: "absolute",
@@ -228,6 +232,8 @@ const renderItem = (it: RefItem) => {
       return <PriceDrop {...it} />;
     case "versus":
       return <VersusCompare {...it} />;
+    case "scene":
+      return null;
   }
 };
 
@@ -248,6 +254,11 @@ export const RefEdit: React.FC<{ plan: RefPlan }> = ({ plan }) => {
   return (
     <RevealCtx.Provider value={rv}>
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
+      {plan.items.filter((it) => it.type === "scene").map((it, i) => (
+        <Sequence key={`sc${i}`} from={toF(it.startMs)} durationInFrames={Math.max(1, toF(it.endMs) - toF(it.startMs))} name={`CANH ${"name" in it ? it.name : ""}`}>
+          {it.type === "scene" ? <IllustratedScene name={it.name} cues={it.cues} /> : null}
+        </Sequence>
+      ))}
       {segs.map(({ s, from, dur }, i) => (
         <Sequence key={i} from={from} durationInFrames={dur} name={`${s.kind === "bg" ? "NEN" : "MAT"} ${i + 1}${s.zoomTo ? ` zoom ${s.zoomFrom}->${s.zoomTo}` : ""}`}>
           <Shot seg={s} source={s.source ?? plan.source} trimBefore={toF(s.srcStartMs)} trimAfter={toF(s.srcEndMs)} muted={!!plan.audioOverride} volume={plan.voiceVolume ?? 1} />

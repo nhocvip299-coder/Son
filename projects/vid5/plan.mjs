@@ -61,7 +61,7 @@ for (const k of K) {
     const zm = inR(mid, ZOOM);
     const z = segments.length % 2 ? 1.1 : 1.0;
     const prev = segments[segments.length - 1];
-    if (bg) segments.push({ srcStartMs: ms(a), srcEndMs: ms(b), kind: "bg", blurIn: !(prev && prev.kind === "bg"), why: bg[2] });
+    if (bg) segments.push({ srcStartMs: ms(a), srcEndMs: ms(b), kind: "bg", scene: true, blurIn: !(prev && prev.kind === "bg"), why: bg[2] });
     else if (zm) segments.push({ srcStartMs: ms(a), srcEndMs: ms(b), kind: "th", zoomFrom: 1.0, zoomTo: 1.2, zoomRampMs: 700, why: "dinh -> zoom ramp" });
     else segments.push({ srcStartMs: ms(a), srcEndMs: ms(b), kind: "th", zoomFrom: z, zoomTo: z });
   }
@@ -70,38 +70,48 @@ for (const k of K) {
 const it = (type, a, b, o) => ({ type, startMs: ms(O(a)), endMs: ms(O(b)), ...o });
 const rel = (a, t) => +(O(t) - O(a)).toFixed(2);
 const sp = (a, b, setup, punch, punchT, o = {}) => it("setupPunch", a, b, { setup, punch, setupAt: 0, punchAt: rel(a, punchT), ...o });
+// [SUA theo nguoi dung] canh tram = CANH MINH HOA DONG (troi sang, nha/dat/tien/bieu do) thay nen toi -> src/styles/refEdit/scenes.tsx
+const scene = (name, a, b, cues, sfx = []) => it("scene", a, b, { name, cues: Object.fromEntries(Object.entries(cues).map(([k, v]) => [k, rel(a, v)])), sfx: sfx.map(([t, key]) => ({ at: rel(a, t), key })) });
 const items = [
   sp(0.1, 5.75, "Từ 1/7/2027 đất bỏ hoang chịu", "THUẾ 0,2%", 5.1, { why: "mo dau: tin chinh sach" }),
   it("flare", 5.4, 5.8, { y: 0.66 }),
   it("pills", 6.0, 17.9, { why: "2 cau hoi mo (nhu video mau 10.8s)", pills: [{ text: "Biệt thự đắp chiếu có bị ảnh hưởng?", at: rel(6.0, 11.9) }, { text: "Sắp có làn sóng bán ra?", at: rel(6.0, 14.4) }] }),
-  it("pills", 18.3, 21.4, { why: "canh tram: 'dieu dang chu y' -> cau hoi giu mat", pills: [{ text: "Điều đáng chú ý là gì?", at: rel(18.3, 19.4) }] }),
-  it("contrast", 21.4, 25.4, { y: 0.47, neg: "Không chỉ ở mức thuế", at: rel(21.4, 21.5), words: [{ text: "0,2%", at: rel(21.4, 24.0), x: 0.5 }], why: "phu dinh -> chuan bi cho y chinh" }),
+  // A dat bo hoang + dau thue
+  scene("landTax", 18.2, 25.4, { stamp: 24.0 }, [[18.5, "drop"], [24.0, "stamp"]]),
+  it("pills", 18.3, 21.4, { pills: [{ text: "Điều đáng chú ý là gì?", at: rel(18.3, 19.4) }] }),
+  it("contrast", 21.4, 25.4, { y: 0.64, neg: "Không chỉ ở mức thuế", at: rel(21.4, 21.5), words: [] }),
   sp(25.45, 30.0, "Mà chính là", "ĐỊNH HƯỚNG QUẢN LÝ", 26.2, { why: "nhan dinh -> do + zoom (mat nhin camera)" }),
   it("warning", 30.2, 37.9, { head: "Hạn chế găm đất", sub: "Đưa tài sản vào đúng mục đích", at: 0, subAt: rel(30.2, 34.1), color: "yellow", why: "dinh huong" }),
-  it("cards", 43.5, 57.0, { why: "vi du tinh thue -> the vang", cards: [
-    { at: 0.1, lines: [{ text: "Tài sản 10 tỷ", at: 0.3 }] },
-    { at: rel(43.5, 47.6), lines: [{ text: "Thuế ≈ 20 triệu/năm", at: rel(43.5, 48.3) }] },
-  ] }),
-  it("warning", 51.4, 57.0, { head: "Theo khung giá nhà nước", at: 0, color: "red", y: 0.63, why: "khong phai gia thi truong" }),
+  // B 10 ty x 0,2% -> 20 trieu/nam
+  scene("taxCalc", 43.4, 57.0, { arrow: 47.6, coins: 48.3 }, [[43.6, "drop"], [47.6, "whoosh"], [48.3, "coin"]]),
+  it("warning", 51.4, 57.0, { head: "Theo khung giá nhà nước", at: 0, color: "red", y: 0.65, why: "khong phai gia thi truong" }),
   sp(57.2, 60.45, "Anh chị phải", "HIỂU ĐÚNG", 59.3, {}),
-  it("versus", 60.6, 72.3, { why: "2 khai niem khac nhau", left: { title: "BĐS bỏ hoang", at: rel(60.6, 61.8), rows: [{ text: "Chịu thuế 0,2%", at: rel(60.6, 63.3), good: false }] },
-    right: { title: "Biệt thự chưa về ở", at: rel(60.6, 65.3), rows: [{ text: "Không mặc định bị thuế", at: rel(60.6, 68.4), good: true }] } }),
+  // C dat bo hoang VS biet thu chua ve o
+  scene("landVsVilla", 60.5, 72.3, { left: 61.8, right: 65.3, leftRow: 63.3, rightRow: 68.4 }, [[61.8, "card"], [63.3, "rowBad"], [65.3, "card"], [68.4, "rowGood"]]),
   sp(72.4, 78.35, "Thuế chỉ là một phần", "ÁP LỰC LỚN NHẤT", 77.4, {}),
-  it("cards", 79.05, 86.3, { tilt3d: true, why: "chi phi that", cards: [{ at: 0, lines: [{ text: "Chi phí lãi vay", at: rel(79.05, 79.7) }, { text: "Quản lý, bảo trì", at: rel(79.05, 80.6) }, { text: "Chi phí cơ hội", at: rel(79.05, 83.3) }] }] }),
-  it("contrast", 86.4, 89.3, { y: 0.47, neg: "Không thể chỉ vì", at: 0, words: [{ text: "Thuế 0,2%", at: rel(86.4, 88.4), x: 0.5 }], why: "lieć mat -> canh tram" }),
+  // D 3 qua ta chi phi de len nha
+  scene("pressure", 78.4, 89.3, { w1: 79.7, w2: 80.6, w3: 83.3, feather: 86.6 }, [[79.7, "drop"], [80.6, "drop"], [83.3, "drop"], [86.6, "card"]]),
+  it("contrast", 86.4, 89.3, { y: 0.64, neg: "Không thể chỉ vì", at: 0, words: [{ text: "Thuế 0,2%", at: rel(86.4, 88.4), x: 0.5 }], why: "lieć mat -> canh tram" }),
   sp(89.35, 92.9, "Mà", "KẾT LUẬN THỊ TRƯỜNG", 90.0, { why: "mat nhin camera -> zoom" }),
-  it("hourglass", 93.0, 97.4, { x: 0.5, y: 0.4, size: 400, why: "chi phi nam giu theo thoi gian" }),
+  // E chi phi nam giu tang theo thoi gian
+  scene("holdingCost", 92.9, 97.4, {}, [[93.0, "whoosh"]]),
   sp(93.2, 97.4, "Đáng nói nhất là", "CHI PHÍ NẮM GIỮ TĂNG", 95.7, { why: "dinh" }),
   sp(97.45, 101.6, "Các nhóm nhà đầu tư", "PHÂN HÓA RÕ RÀNG", 99.1, { why: "mat nhin camera -> zoom" }),
-  it("cards", 101.65, 110.4, { tilt3d: true, why: "nhom chiu ap luc -> checklist", cards: [{ at: 0, lines: [{ text: "Đòn bẩy tài chính cao", at: rel(101.65, 101.7) }, { text: "Tài sản không khai thác", at: rel(101.65, 104.6) }, { text: "Dòng tiền chịu áp lực", at: rel(101.65, 106.9) }] }] }),
-  it("warning", 109.0, 110.4, { head: "Mới đáng lo ngại", at: 0, color: "red", y: 0.7, why: "ket y" }),
+  // F don bay + tai san bo khong + dong tien ri
+  scene("leverage", 101.6, 110.4, { loan: 101.7, idle: 104.6, leak: 106.9 }, [[101.7, "drop"], [104.6, "card"], [106.9, "rowBad"]]),
+  it("warning", 109.0, 110.4, { head: "Mới đáng lo ngại", at: 0, color: "red", y: 0.68, why: "ket y" }),
   sp(110.45, 113.3, "Cùng một căn shophouse", "15 TỶ", 112.0, {}),
-  it("versus", 113.35, 122.5, { why: "cung shophouse 15 ty", left: { title: "Cho thuê", at: rel(113.35, 113.5), rows: [{ text: "Dòng tiền đều hàng tháng", at: rel(113.35, 115.2), good: true }] },
-    right: { title: "Đóng cửa chờ giá", at: rel(113.35, 120.5), rows: [{ text: "Không sinh dòng tiền", at: rel(113.35, 121.6), good: false }] } }),
+  // G shophouse cho thue VS dong cua
+  scene("shopVs", 113.3, 122.6, { left: 113.5, leftRow: 115.2, right: 120.5, rightRow: 121.6 }, [[113.5, "card"], [115.2, "coin"], [120.5, "whoosh"], [121.6, "rowBad"]]),
+  // H tieu chi chon
+  scene("criteria", 122.6, 135.9, { pin: 125.5, loc: 130.2, rent: 132.0, exploit: 133.5 }, [[125.5, "drop"], [130.2, "rowGood"], [132.0, "rowGood"], [133.5, "coin"]]),
   sp(122.7, 129.9, "Lý do chọn BĐS tại", "VINHOMES OCEAN PARK 2, 3", 125.5, { why: "dia diem (nguoi dung xac nhan ten)" }),
-  it("cards", 129.95, 135.9, { tilt3d: true, why: "tieu chi chon BDS", cards: [{ at: 0, lines: [{ text: "Vị trí, mật độ dân cư", at: rel(129.95, 130.2) }, { text: "Khả năng cho thuê", at: rel(129.95, 132.0) }, { text: "Tiềm năng khai thác", at: rel(129.95, 133.5) }] }] }),
-  it("contrast", 136.0, 141.0, { y: 0.47, neg: "BĐS tốt không chỉ", at: rel(136.0, 136.1), words: [{ text: "Tăng giá", at: rel(136.0, 140.5), x: 0.5 }] }),
+  // I khong chi tang gia ma con khai thac
+  scene("goodRE", 135.9, 143.4, { up: 140.5, gear: 142.1 }, [[140.1, "whoosh"]]),
+  it("contrast", 136.0, 141.0, { y: 0.64, neg: "BĐS tốt không chỉ", at: rel(136.0, 136.1), words: [{ text: "Tăng giá", at: rel(136.0, 140.5), x: 0.5 }] }),
   sp(141.0, 143.4, "Mà phải có", "PHƯƠNG ÁN KHAI THÁC", 142.1, { why: "chot y" }),
+  // J cau hoi ket: can
+  scene("choice", 148.4, 154.7, { left: 151.2, right: 154.1 }, [[151.2, "drop"], [154.1, "coin"]]),
   it("pills", 148.5, DUR, { why: "cau hoi ket keo binh luan", pills: [{ text: "Nắm giữ chờ tăng giá?", at: rel(148.5, 151.2) }, { text: "Hay BĐS sinh dòng tiền?", at: rel(148.5, 152.5) }] }),
 ];
 

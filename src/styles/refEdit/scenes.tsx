@@ -1,0 +1,650 @@
+/**
+ * [AI - theo nguoi dung] Canh tram MINH HOA DONG (thay nen toi truu tuong): troi sang + bai co, do hoa vector SVG
+ * mo phong dung noi dung cau noi (dat bo hoang, nha, shophouse, dong xu, bieu do, can...).
+ * Bo cuc 1080x1920: khung nguoi noi PiP goc tren-phai (x>=716, y<=656) -> minh hoa trong dai y 660-1080 (mat dat GY),
+ * chu nhan (setupPunch/contrast/pills) o dai co 1190-1400 (trong vung an toan TikTok/Reels).
+ * Moc thoi gian `cues` = giay tinh tu dau canh.
+ */
+import React from "react";
+import { AbsoluteFill, Easing, interpolate, spring } from "remotion";
+import { Typed, useSec } from "./components";
+import { RT } from "./tokens";
+
+const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+const GY = 1080; // mat dat
+type Cues = Record<string, number>;
+
+/** tien do xuat hien co nay (spring) */
+const usePop = () => {
+  const { f, fps, t } = useSec();
+  return (at = 0, stiff = 200) => (t < at ? 0 : spring({ frame: f - Math.round(at * fps), fps, config: { damping: 11, stiffness: stiff, mass: 0.6 } }));
+};
+const lin = (t: number, a: number, d: number) => interpolate(t, [a, a + d], [0, 1], { ...C, easing: Easing.out(Easing.cubic) });
+
+// ---------- Nen ----------
+const Sky: React.FC = () => {
+  const { t } = useSec();
+  const cloud = (x: number, y: number, s: number, sp: number) => {
+    const cx = ((x + t * sp) % 1300) - 110;
+    return (
+      <g transform={`translate(${cx} ${y}) scale(${s})`} opacity={0.95}>
+        <ellipse cx="0" cy="0" rx="70" ry="40" fill="#fff" />
+        <ellipse cx="55" cy="-18" rx="60" ry="48" fill="#fff" />
+        <ellipse cx="110" cy="0" rx="65" ry="38" fill="#fff" />
+      </g>
+    );
+  };
+  return (
+    <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#4FB3F4" />
+          <stop offset="0.56" stopColor="#CDEEFF" />
+        </linearGradient>
+        <linearGradient id="lawn" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#7DCB6A" />
+          <stop offset="0.35" stopColor="#4FA556" />
+          <stop offset="1" stopColor="#2B6E45" />
+        </linearGradient>
+        <radialGradient id="sun">
+          <stop offset="0" stopColor="#FFF6C8" />
+          <stop offset="0.5" stopColor="#FFE07A" stopOpacity="0.9" />
+          <stop offset="1" stopColor="#FFE07A" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <rect width="1080" height="1920" fill="url(#sky)" />
+      <circle cx="170" cy="330" r={150 + Math.sin(t * 2) * 6} fill="url(#sun)" />
+      {cloud(80, 470, 0.9, 18)}
+      {cloud(600, 560, 0.7, 26)}
+      {cloud(980, 300, 0.6, 14)}
+      {/* pho xa */}
+      <g fill="#9FD3F2" opacity={0.85}>
+        {[[0, 140, 120], [130, 90, 190], [230, 120, 150], [360, 80, 230], [450, 130, 170], [590, 100, 210], [700, 140, 130], [850, 90, 200], [950, 130, 160]].map(([x, w, h], i) => (
+          <rect key={i} x={x} y={GY - h} width={w} height={h} rx="6" />
+        ))}
+      </g>
+      <rect y={GY} width="1080" height={1920 - GY} fill="url(#lawn)" />
+      <rect y={GY} width="1080" height="10" fill="#9BDC83" />
+      {/* duong di */}
+      <path d={`M 0 ${GY + 70} L 1080 ${GY + 70}`} stroke="#3B8B4E" strokeWidth="3" strokeDasharray="30 22" opacity={0.6} />
+    </svg>
+  );
+};
+
+// ---------- Nhan chu (the toi tren nen sang) ----------
+export const Chip: React.FC<{ x: number; y: number; text: string; at: number; size?: number; tone?: "dark" | "red" | "green" | "gold"; icon?: "x" | "v"; anchor?: "center" | "left" }> = ({
+  x,
+  y,
+  text,
+  at,
+  size = 46,
+  tone = "dark",
+  icon,
+  anchor = "center",
+}) => {
+  const pop = usePop();
+  const p = pop(at, 260);
+  if (p <= 0) return null;
+  const bg = { dark: "rgba(16,30,50,0.9)", red: "linear-gradient(180deg,#FF5A44,#C8160A)", green: "linear-gradient(180deg,#34C86E,#178A45)", gold: "linear-gradient(180deg,#FFE36A,#E8A912)" }[tone];
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: x,
+        top: y,
+        translate: anchor === "center" ? "-50% -50%" : "0 -50%",
+        scale: String(interpolate(p, [0, 1], [0.4, 1])),
+        opacity: Math.min(1, p * 1.6),
+        display: "flex",
+        alignItems: "center",
+        gap: 14,
+        padding: `${size * 0.26}px ${size * 0.5}px`,
+        borderRadius: size * 0.55,
+        background: bg,
+        border: "4px solid rgba(255,255,255,0.95)",
+        boxShadow: "0 10px 24px rgba(0,0,0,0.35)",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {icon ? (
+        <div style={{ width: size * 0.95, height: size * 0.95, borderRadius: "50%", background: icon === "v" ? "#2BC46B" : "#F2301C", border: "3px solid #fff", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: RT.font.punch, fontWeight: 900, fontSize: size * 0.62 }}>
+          {icon === "v" ? "✓" : "✕"}
+        </div>
+      ) : null}
+      <Typed
+        text={text}
+        at={at}
+        style={{ fontFamily: RT.font.punch, fontWeight: 800, fontSize: size, color: tone === "gold" ? "#3A2600" : "#fff", lineHeight: 1.1, textShadow: tone === "gold" ? "none" : "0 2px 4px rgba(0,0,0,0.5)" }}
+      />
+    </div>
+  );
+};
+
+/** con dau do dap xuong */
+const Stamp: React.FC<{ x: number; y: number; text: string; at: number; rot?: number; size?: number }> = ({ x, y, text, at, rot = -10, size = 96 }) => {
+  const { t } = useSec();
+  if (t < at) return null;
+  const k = interpolate(t, [at, at + 0.18], [0, 1], { ...C, easing: Easing.in(Easing.quad) });
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: x,
+        top: y,
+        translate: "-50% -50%",
+        rotate: `${rot}deg`,
+        scale: String(interpolate(k, [0, 1], [2.4, 1])),
+        opacity: k,
+        padding: "14px 34px",
+        border: "9px solid #E8261A",
+        borderRadius: 26,
+        color: "#E8261A",
+        background: "rgba(255,255,255,0.82)",
+        fontFamily: RT.font.punch,
+        fontWeight: 900,
+        fontSize: size,
+        whiteSpace: "nowrap",
+        boxShadow: `0 0 ${30 * (1 - k) + 8}px rgba(232,38,26,0.6)`,
+      }}
+    >
+      {text}
+    </div>
+  );
+};
+
+// ---------- Hinh ve ----------
+const House: React.FC<{ x: number; w: number; h: number; body?: string; roof?: string; lit?: number; closed?: boolean; base?: number }> = ({ x, w, h, body = "#FFF3DF", roof = "#E2574C", lit = 1, closed, base = GY }) => {
+  const y = base - h;
+  const win = closed ? "#5B6B7C" : interpolate(lit, [0, 1], [0, 1]) > 0.5 ? "#FFD25E" : "#9DC7E6";
+  return (
+    <g>
+      <rect x={x} y={y} width={w} height={h} fill={body} stroke="#6B4A2E" strokeWidth="4" rx="4" />
+      <polygon points={`${x - 26},${y + 4} ${x + w / 2},${y - h * 0.55} ${x + w + 26},${y + 4}`} fill={roof} stroke="#7A2C22" strokeWidth="4" />
+      <rect x={x + w * 0.4} y={base - h * 0.45} width={w * 0.2} height={h * 0.45} fill={closed ? "#6E5440" : "#8B5A33"} />
+      {[0.12, 0.68].map((fx, i) => (
+        <g key={i}>
+          <rect x={x + w * fx} y={y + h * 0.18} width={w * 0.2} height={h * 0.24} fill={win} stroke="#6B4A2E" strokeWidth="3" />
+          {closed ? <line x1={x + w * fx} y1={y + h * 0.18} x2={x + w * (fx + 0.2)} y2={y + h * 0.42} stroke="#3B4652" strokeWidth="4" /> : null}
+        </g>
+      ))}
+    </g>
+  );
+};
+
+const Villa: React.FC<{ x: number; w: number }> = ({ x, w }) => {
+  const h = 300;
+  const y = GY - h;
+  return (
+    <g>
+      <rect x={x} y={y} width={w} height={h} fill="#F4F1EA" stroke="#5E6A75" strokeWidth="4" />
+      <rect x={x - 14} y={y - 22} width={w + 28} height={26} fill="#3E4E5E" />
+      <rect x={x} y={y + h * 0.48} width={w} height={10} fill="#C9C2B4" />
+      {[0.1, 0.4, 0.7].map((fx, i) => (
+        <g key={i}>
+          <rect x={x + w * fx} y={y + 30} width={w * 0.2} height={95} fill="#C8D4DE" stroke="#5E6A75" strokeWidth="3" />
+          {/* rem dong */}
+          <rect x={x + w * fx} y={y + 30} width={w * 0.2} height={95} fill="#B9A38A" opacity={0.85} />
+          <rect x={x + w * fx} y={y + 175} width={w * 0.2} height={95} fill="#B9A38A" opacity={0.85} stroke="#5E6A75" strokeWidth="3" />
+        </g>
+      ))}
+      {/* cong khoa */}
+      <rect x={x - 40} y={GY - 70} width={w + 80} height={70} fill="none" stroke="#2F3B47" strokeWidth="5" />
+      {Array.from({ length: 14 }, (_, i) => (
+        <line key={i} x1={x - 40 + ((w + 80) * i) / 13} y1={GY - 70} x2={x - 40 + ((w + 80) * i) / 13} y2={GY} stroke="#2F3B47" strokeWidth="4" />
+      ))}
+    </g>
+  );
+};
+
+const Weeds: React.FC<{ x0: number; x1: number; n?: number; h?: number }> = ({ x0, x1, n = 18, h = 60 }) => {
+  const { t } = useSec();
+  return (
+    <g>
+      {Array.from({ length: n }, (_, i) => {
+        const x = x0 + ((x1 - x0) * (i + 0.5)) / n;
+        const hh = h * (0.6 + ((i * 37) % 10) / 20);
+        const sw = Math.sin(t * 2.4 + i) * 8;
+        return <path key={i} d={`M ${x - 10} ${GY} Q ${x + sw * 0.5} ${GY - hh * 0.6} ${x + sw} ${GY - hh} Q ${x + 4} ${GY - hh * 0.5} ${x + 10} ${GY} Z`} fill={i % 2 ? "#5E8F3A" : "#7FA83E"} />;
+      })}
+    </g>
+  );
+};
+
+const Fence: React.FC<{ x0: number; x1: number; broken?: boolean }> = ({ x0, x1, broken }) => (
+  <g stroke="#8A6A45" strokeWidth="8" strokeLinecap="round">
+    <line x1={x0} y1={GY - 60} x2={x1} y2={GY - 60 + (broken ? 18 : 0)} />
+    {Array.from({ length: Math.round((x1 - x0) / 70) + 1 }, (_, i) => (
+      <line key={i} x1={x0 + i * 70} y1={GY} x2={x0 + i * 70 + (broken && i % 3 === 1 ? 14 : 0)} y2={GY - 90} />
+    ))}
+  </g>
+);
+
+const Coin: React.FC<{ x: number; y: number; r?: number; o?: number }> = ({ x, y, r = 30, o = 1 }) => (
+  <g opacity={o}>
+    <circle cx={x} cy={y} r={r} fill="#F6C431" stroke="#B57D0A" strokeWidth="4" />
+    <circle cx={x} cy={y} r={r * 0.68} fill="none" stroke="#FFE27A" strokeWidth="3" />
+    <text x={x} y={y + r * 0.3} textAnchor="middle" fontSize={r * 0.9} fontWeight={900} fill="#9A6400" fontFamily="Phudu">
+      đ
+    </text>
+  </g>
+);
+
+const Person: React.FC<{ x: number; color?: string; bob?: number; s?: number; base?: number }> = ({ x, color = "#2F6FDE", bob = 0, s = 1, base = GY }) => (
+  <g transform={`translate(${x} ${base - Math.abs(bob) * 6}) scale(${s})`}>
+    <circle cx="0" cy="-150" r="26" fill="#F2C9A0" stroke="#5A3B22" strokeWidth="3" />
+    <path d="M -16 -168 Q 0 -186 18 -166 L 18 -160 L -18 -160 Z" fill="#2B2420" />
+    <rect x="-28" y="-122" width="56" height="74" rx="18" fill={color} />
+    <line x1="-12" y1="-50" x2={-14 + bob * 8} y2="0" stroke="#33404F" strokeWidth="13" strokeLinecap="round" />
+    <line x1="12" y1="-50" x2={14 - bob * 8} y2="0" stroke="#33404F" strokeWidth="13" strokeLinecap="round" />
+  </g>
+);
+
+const Shophouse: React.FC<{ x: number; w: number; shutter: number; color: string; light?: boolean }> = ({ x, w, shutter, color, light }) => {
+  const h = 420;
+  const y = GY - h;
+  const doorH = 150;
+  return (
+    <g>
+      <rect x={x} y={y} width={w} height={h} fill={color} stroke="#4A3B30" strokeWidth="4" />
+      <rect x={x - 10} y={y - 18} width={w + 20} height={22} fill="#4A3B30" />
+      {[0, 1].map((r) => (
+        <g key={r}>
+          <rect x={x + 30} y={y + 30 + r * 110} width={w - 60} height={80} fill={light ? "#FFE08A" : "#AFC9DC"} stroke="#4A3B30" strokeWidth="3" />
+          <line x1={x + w / 2} y1={y + 30 + r * 110} x2={x + w / 2} y2={y + 110 + r * 110} stroke="#4A3B30" strokeWidth="3" />
+        </g>
+      ))}
+      {/* mai hien */}
+      <path d={`M ${x - 6} ${GY - doorH - 30} L ${x + w + 6} ${GY - doorH - 30} L ${x + w + 26} ${GY - doorH + 10} L ${x - 26} ${GY - doorH + 10} Z`} fill={light ? "#E8473A" : "#8E8E8E"} />
+      {Array.from({ length: 6 }, (_, i) => (
+        <rect key={i} x={x - 26 + ((w + 52) * i) / 6} y={GY - doorH - 30} width={(w + 52) / 12} height={40} fill="#fff" opacity={light ? 0.7 : 0.35} />
+      ))}
+      <rect x={x + 20} y={GY - doorH + 10} width={w - 40} height={doorH - 10} fill={light ? "#FFD36B" : "#2E3440"} />
+      {/* cua cuon */}
+      <rect x={x + 20} y={GY - doorH + 10} width={w - 40} height={(doorH - 10) * shutter} fill="#9AA3AD" />
+      {Array.from({ length: Math.floor(shutter * 9) }, (_, i) => (
+        <line key={i} x1={x + 20} x2={x + w - 20} y1={GY - doorH + 24 + i * 15} y2={GY - doorH + 24 + i * 15} stroke="#7B848E" strokeWidth="3" />
+      ))}
+    </g>
+  );
+};
+
+const Arrow: React.FC<{ x0: number; y0: number; x1: number; y1: number; p: number; color?: string; w?: number }> = ({ x0, y0, x1, y1, p, color = "#E8261A", w = 14 }) => {
+  const xe = x0 + (x1 - x0) * p;
+  const ye = y0 + (y1 - y0) * p;
+  const a = Math.atan2(y1 - y0, x1 - x0);
+  const hl = 40;
+  return p <= 0 ? null : (
+    <g>
+      <line x1={x0} y1={y0} x2={xe} y2={ye} stroke={color} strokeWidth={w} strokeLinecap="round" />
+      <polygon points={`${xe + Math.cos(a) * 14},${ye + Math.sin(a) * 14} ${xe - Math.cos(a - 0.5) * hl},${ye - Math.sin(a - 0.5) * hl} ${xe - Math.cos(a + 0.5) * hl},${ye - Math.sin(a + 0.5) * hl}`} fill={color} />
+    </g>
+  );
+};
+
+const Svg: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute", inset: 0 }}>
+    {children}
+  </svg>
+);
+
+const pg = (p: number, from = 60) => ({ transform: `translate(0px, ${interpolate(p, [0, 1], [from, 0])}px)`, opacity: Math.min(1, p * 1.5) });
+
+// ---------- Cac canh ----------
+/** A. Dat bo hoang + dau THUE 0,2% */
+const LandTax: React.FC<{ c: Cues }> = ({ c }) => {
+  const pop = usePop();
+  const p = pop(0.1);
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          <rect x="120" y={GY - 6} width="840" height="12" fill="#A57B4F" />
+          <Weeds x0={130} x1={950} n={26} h={80} />
+          <Fence x0={120} x1={960} broken />
+          <rect x="250" y={GY - 210} width="12" height="150" fill="#6B4A2E" />
+        </g>
+      </Svg>
+      <Chip x={256} y={GY - 220} text="Đất bỏ hoang" at={0.3} size={50} />
+      <Stamp x={660} y={880} text="THUẾ 0,2%" at={c.stamp ?? 0.8} />
+    </>
+  );
+};
+
+/** B. Tai san 10 ty x 0,2% -> ~20 trieu/nam */
+const TaxCalc: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const h = pop(0.05);
+  const ar = lin(t, c.arrow, 0.5);
+  const coinsP = lin(t, c.coins, 1.2);
+  const n = Math.round(coinsP * 8);
+  return (
+    <>
+      <Svg>
+        <g style={pg(h)}>
+          <House x={110} w={300} h={230} />
+        </g>
+        <Arrow x0={450} y0={900} x1={640} y1={900} p={ar} color="#F07B12" />
+        {Array.from({ length: n }, (_, i) => (
+          <Coin key={i} x={820 + (i % 2) * 12} y={GY - 26 - i * 22} r={44} />
+        ))}
+      </Svg>
+      <Chip x={260} y={705} text="Tài sản 10 tỷ" at={0.3} tone="gold" size={52} />
+      {ar > 0 ? <Chip x={545} y={835} text="× 0,2%" at={c.arrow} size={42} /> : null}
+      <Chip x={820} y={790} text="≈ 20 triệu/năm" at={c.coins} tone="red" size={46} />
+    </>
+  );
+};
+
+/** C. Dat bo hoang (thue) VS Biet thu chua ve o (khong mac dinh thue) */
+const LandVsVilla: React.FC<{ c: Cues }> = ({ c }) => {
+  const pop = usePop();
+  const l = pop(c.left);
+  const r = pop(c.right);
+  return (
+    <>
+      <Svg>
+        <g style={pg(l)}>
+          <Weeds x0={50} x1={480} n={14} h={90} />
+          <Fence x0={40} x1={490} broken />
+        </g>
+        <g style={pg(r)}>
+          <Villa x={640} w={330} />
+        </g>
+        <line x1="540" y1="700" x2="540" y2={GY + 40} stroke="#fff" strokeWidth="6" strokeDasharray="18 14" opacity={0.9} />
+      </Svg>
+      <div style={{ position: "absolute", left: 540, top: 880, translate: "-50% -50%", fontFamily: RT.font.punch, fontWeight: 900, fontSize: 84, color: RT.color.yellow, WebkitTextStroke: "4px #3A2600", paintOrder: "stroke fill", opacity: Math.min(l, 1) }}>VS</div>
+      <Chip x={265} y={850} text="BĐS bỏ hoang" at={c.left} size={50} />
+      <Chip x={805} y={770} text="Biệt thự chưa về ở" at={c.right} size={44} />
+      <Chip x={265} y={1190} text="Chịu thuế 0,2%" at={c.leftRow} tone="red" icon="x" size={44} />
+      <Chip x={805} y={1190} text="Không mặc định bị thuế" at={c.rightRow} tone="green" icon="v" size={38} />
+    </>
+  );
+};
+
+/** D. Ap luc that: 3 qua ta de len ngoi nha; thue 0,2% chi la dong xu nho */
+const Pressure: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const ws = [c.w1, c.w2, c.w3];
+  const drop = ws.map((a) => (t < a ? 0 : interpolate(t, [a, a + 0.35], [0, 1], { ...C, easing: Easing.bounce })));
+  const squash = 1 - drop.reduce((s, d) => s + d * 0.035, 0);
+  const labels = ["Lãi vay", "Quản lý, bảo trì", "Chi phí cơ hội"];
+  const fe = pop(c.feather);
+  return (
+    <>
+      <Svg>
+        <g transform={`translate(540 ${GY}) scale(1 ${squash}) translate(-540 ${-GY})`}>
+          <House x={390} w={300} h={220} />
+        </g>
+        {ws.map((_, i) => {
+          const yT = GY - 220 * squash - 120 - 6 - i * 96;
+          const y = interpolate(drop[i], [0, 1], [-200, yT]);
+          return drop[i] > 0 ? (
+            <g key={i}>
+              <polygon points={`${360},${y + 90} ${720},${y + 90} ${690},${y} ${390},${y}`} fill={["#4A5568", "#5A6578", "#6B7689"][i]} stroke="#1F2733" strokeWidth="4" />
+            </g>
+          ) : null;
+        })}
+        {fe > 0 ? (
+          <g transform={`translate(0 ${Math.sin(t * 3) * 10})`}>
+            <Coin x={170} y={820} r={34 * fe} />
+          </g>
+        ) : null}
+      </Svg>
+      {ws.map((a, i) => {
+        const yT = GY - 220 * squash - 120 - 6 - i * 96 + 45;
+        return drop[i] > 0 ? (
+          <div key={i} style={{ position: "absolute", left: 540, top: interpolate(drop[i], [0, 1], [-155, yT]), translate: "-50% -50%", fontFamily: RT.font.punch, fontWeight: 800, fontSize: 42, color: "#fff", whiteSpace: "nowrap" }}>
+            {labels[i]}
+          </div>
+        ) : null;
+      })}
+      {fe > 0 ? <Chip x={170} y={735} text="0,2%" at={c.feather} size={34} /> : null}
+    </>
+  );
+};
+
+/** E. Chi phi nam giu tang theo thoi gian: lich lat + duong chi phi di len */
+const HoldingCost: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const m = Math.min(12, 1 + Math.floor(Math.max(0, t - 0.3) * 3));
+  const ch = lin(t, 0.4, 3.2);
+  const pts = Array.from({ length: 9 }, (_, i) => [470 + i * 62, 1040 - Math.pow(i / 8, 1.6) * 300] as const);
+  const shown = pts.slice(0, Math.max(1, Math.ceil(ch * pts.length)));
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          <rect x="90" y="720" width="300" height="300" rx="22" fill="#fff" stroke="#2F3B47" strokeWidth="5" />
+          <rect x="90" y="720" width="300" height="80" rx="22" fill="#E8473A" />
+          <rect x="140" y="700" width="18" height="50" rx="8" fill="#2F3B47" />
+          <rect x="322" y="700" width="18" height="50" rx="8" fill="#2F3B47" />
+          <line x1="460" y1="1050" x2="1010" y2="1050" stroke="#2F3B47" strokeWidth="5" />
+          <line x1="460" y1="1050" x2="460" y2="700" stroke="#2F3B47" strokeWidth="5" />
+          <polyline points={shown.map((q) => q.join(",")).join(" ")} fill="none" stroke="#E8261A" strokeWidth="14" strokeLinejoin="round" strokeLinecap="round" />
+          {shown.length > 1 ? <circle cx={shown[shown.length - 1][0]} cy={shown[shown.length - 1][1]} r="16" fill="#E8261A" stroke="#fff" strokeWidth="5" /> : null}
+        </g>
+      </Svg>
+      <div style={{ position: "absolute", left: 240, top: 910, translate: "-50% -50%", fontFamily: RT.font.punch, fontWeight: 900, fontSize: 120, color: "#2F3B47", opacity: p }}>{m}</div>
+      <div style={{ position: "absolute", left: 240, top: 760, translate: "-50% -50%", fontFamily: RT.font.punch, fontWeight: 800, fontSize: 40, color: "#fff", opacity: p }}>THÁNG</div>
+      <Chip x={700} y={800} text="Chi phí nắm giữ" at={0.4} tone="red" size={40} />
+    </>
+  );
+};
+
+/** F. Nha dau tu cong no (don bay) + tai san dong cua + dong tien ri ri */
+const Leverage: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const bob = Math.sin(t * 5);
+  const bag = pop(c.loan);
+  const dark = lin(t, c.idle, 0.6);
+  const leak = t > c.leak;
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          <g transform={`translate(${200 + t * 6} 0)`}>
+            <Person x={0} bob={bob} color="#3C64B1" />
+            {/* tui no */}
+            <g transform={`translate(-95 ${GY - 120}) scale(${bag})`}>
+              <path d="M -55 0 Q -70 -90 0 -95 Q 70 -90 55 0 Z" fill="#7A5230" stroke="#3E2A16" strokeWidth="4" />
+              <text x="0" y="-30" textAnchor="middle" fontSize="40" fontWeight={900} fill="#FFE08A" fontFamily="Phudu">NỢ</text>
+            </g>
+            <line x1="-60" y1={GY - 210} x2="-20" y2={GY - 120} stroke="#3E2A16" strokeWidth="5" opacity={bag} />
+          </g>
+          <House x={520} w={260} h={220} closed={dark > 0.5} body={dark > 0.5 ? "#C9C2B7" : "#FFF3DF"} />
+          {/* ong dong tien */}
+          <rect x="800" y={GY - 120} width="190" height="34" rx="12" fill="#6E7F92" stroke="#2F3B47" strokeWidth="4" />
+          {leak
+            ? Array.from({ length: 4 }, (_, i) => {
+                const ph = ((t - c.leak) * 0.9 + i * 0.25) % 1;
+                return <Coin key={i} x={940 + (i % 2) * 10} y={GY - 86 + ph * 150} r={20} o={1 - ph} />;
+              })
+            : null}
+        </g>
+      </Svg>
+      <Chip x={250} y={760} text="Đòn bẩy cao" at={c.loan} tone="red" size={44} />
+      <Chip x={650} y={720} text="Không khai thác" at={c.idle} size={42} />
+      <Chip x={790} y={GY + 60} text="Dòng tiền chịu áp lực" at={c.leak} tone="red" size={36} />
+    </>
+  );
+};
+
+/** G. Cung shophouse 15 ty: cho thue (sang, khach, tien vao) VS dong cua cho gia */
+const ShopVs: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const sh = lin(t, c.right, 0.9);
+  const flow = t > c.leftRow;
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          <Shophouse x={90} w={340} shutter={0} color="#F6D9A8" light />
+          <Shophouse x={650} w={340} shutter={sh} color="#D9D4CC" />
+          {[0, 1, 2].map((i) => {
+            const ph = (t * 0.35 + i / 3) % 1;
+            return <Person key={i} x={-40 + ph * 300} bob={Math.sin(t * 7 + i)} s={0.75} color={["#2F6FDE", "#E2574C", "#1FA37A"][i]} />;
+          })}
+          {flow
+            ? Array.from({ length: 3 }, (_, i) => {
+                const ph = ((t - c.leftRow) * 0.8 + i / 3) % 1;
+                return <Coin key={i} x={260 + Math.sin(i * 2) * 40} y={GY - 300 - ph * 220} r={30} o={1 - ph} />;
+              })
+            : null}
+        </g>
+      </Svg>
+      <Chip x={260} y={690} text="Cho thuê" at={c.left} tone="green" size={48} />
+      <Chip x={820} y={790} text="Đóng cửa chờ giá" at={c.right} size={42} />
+      <Chip x={540} y={1140} text="Cùng 15 tỷ" at={0.2} tone="gold" size={40} />
+      <Chip x={265} y={1240} text="Dòng tiền hàng tháng" at={c.leftRow} tone="green" icon="v" size={36} />
+      <Chip x={815} y={1240} text="Không sinh dòng tiền" at={c.rightRow} tone="red" icon="x" size={36} />
+    </>
+  );
+};
+
+/** H. Tieu chi chon: ghim vi tri -> dan cu den -> cho thue -> khai thac */
+const Criteria: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const pin = t < c.pin ? 0 : interpolate(t, [c.pin, c.pin + 0.5], [0, 1], { ...C, easing: Easing.bounce });
+  const ppl = lin(t, c.loc, 1.5);
+  const blds = [[60, 150, 260, "#F6D9A8"], [230, 170, 360, "#BFD8F0"], [420, 220, 430, "#F4F1EA"], [660, 170, 320, "#F7C9B6"], [850, 170, 250, "#D7E8C8"]] as const;
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          {blds.map(([x, w, h, col], i) => (
+            <g key={i}>
+              <rect x={x} y={GY - h} width={w} height={h} fill={col} stroke="#4A5866" strokeWidth="4" />
+              {Array.from({ length: Math.floor(h / 70) }, (_, r) => (
+                <g key={r}>
+                  <rect x={x + 22} y={GY - h + 22 + r * 70} width={w / 2 - 34} height={40} fill={t > c.rent && i === 2 ? "#FFD25E" : "#9DC7E6"} />
+                  <rect x={x + w / 2 + 12} y={GY - h + 22 + r * 70} width={w / 2 - 34} height={40} fill={t > c.rent ? "#FFD25E" : "#9DC7E6"} />
+                </g>
+              ))}
+            </g>
+          ))}
+          {Array.from({ length: Math.round(ppl * 7) }, (_, i) => (
+            <Person key={i} x={80 + i * 140 + Math.sin(t * 2 + i) * 20} bob={Math.sin(t * 6 + i)} s={0.55} base={GY + 90} color={["#2F6FDE", "#E2574C", "#1FA37A", "#8A4FD8"][i % 4]} />
+          ))}
+          {t > c.exploit
+            ? Array.from({ length: 3 }, (_, i) => {
+                const ph = ((t - c.exploit) * 0.8 + i / 3) % 1;
+                return <Coin key={i} x={530 + (i - 1) * 60} y={GY - 450 - ph * 160} r={26} o={1 - ph} />;
+              })
+            : null}
+        </g>
+        {pin > 0 ? (
+          <g transform={`translate(530 ${interpolate(pin, [0, 1], [300, GY - 470])})`}>
+            <path d="M 0 0 C -60 -70 -60 -150 0 -150 C 60 -150 60 -70 0 0 Z" fill="#E8261A" stroke="#fff" strokeWidth="6" />
+            <circle cx="0" cy="-100" r="22" fill="#fff" />
+          </g>
+        ) : null}
+      </Svg>
+      <Chip x={95} y={1190} text="Vị trí, mật độ dân cư" at={c.loc} tone="dark" icon="v" size={40} anchor="left" />
+      <Chip x={95} y={1265} text="Khả năng cho thuê" at={c.rent} tone="dark" icon="v" size={40} anchor="left" />
+      <Chip x={95} y={1340} text="Tiềm năng khai thác" at={c.exploit} tone="dark" icon="v" size={40} anchor="left" />
+    </>
+  );
+};
+
+/** I. BDS tot: khong chi gia tang (bieu do) ma con phuong an khai thac (banh rang + tien) */
+const GoodRE: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const up = lin(t, c.up - 0.6, 0.9);
+  const g = pop(c.gear);
+  const pts = [[90, 1040], [190, 1000], [270, 1020], [360, 930], [440, 880]] as const;
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          <rect x="70" y="700" width="420" height="360" rx="24" fill="rgba(255,255,255,0.85)" stroke="#2F3B47" strokeWidth="5" />
+          <polyline points={pts.slice(0, 2 + Math.round(up * 3)).map((q) => q.join(",")).join(" ")} fill="none" stroke="#1FA37A" strokeWidth="14" strokeLinejoin="round" strokeLinecap="round" />
+          <Arrow x0={360} y0={930} x1={450} y1={790} p={up} color="#1FA37A" w={12} />
+          <g transform={`translate(780 900) scale(${g})`}>
+            <g transform={`rotate(${t * 90})`}>
+              {Array.from({ length: 10 }, (_, i) => (
+                <rect key={i} x="-22" y="-150" width="44" height="50" rx="8" fill="#F07B12" transform={`rotate(${i * 36})`} />
+              ))}
+              <circle r="110" fill="#F59A36" stroke="#9A4A00" strokeWidth="6" />
+              <circle r="40" fill="#FFF3DF" stroke="#9A4A00" strokeWidth="6" />
+            </g>
+            {g > 0.9
+              ? Array.from({ length: 3 }, (_, i) => {
+                  const ph = ((t - c.gear) * 0.9 + i / 3) % 1;
+                  return <Coin key={i} x={150 + i * 10} y={-60 - ph * 160} r={26} o={1 - ph} />;
+                })
+              : null}
+          </g>
+        </g>
+      </Svg>
+      <Chip x={280} y={745} text="Tăng giá" at={c.up - 0.4} tone="green" size={40} />
+      <Chip x={790} y={1090} text="Khai thác" at={c.gear} tone="gold" size={42} />
+    </>
+  );
+};
+
+/** J. Cau hoi ket: can - cho tang gia hay dong tien */
+const Choice: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const tilt = interpolate(t, [c.right, c.right + 0.8], [0, 1], C) * Math.sin(t * 1.8) * 9;
+  const L = { x: 540 - 300, y: 760 + Math.sin((tilt * Math.PI) / 180) * -300 };
+  const R = { x: 540 + 300, y: 760 + Math.sin((tilt * Math.PI) / 180) * 300 };
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          <rect x="525" y="760" width="30" height={GY - 760} fill="#6B4A2E" />
+          <rect x="430" y={GY - 30} width="220" height="30" rx="10" fill="#6B4A2E" />
+          <line x1={L.x} y1={L.y} x2={R.x} y2={R.y} stroke="#6B4A2E" strokeWidth="16" strokeLinecap="round" />
+          <circle cx="540" cy="760" r="20" fill="#F6C431" stroke="#6B4A2E" strokeWidth="5" />
+          {[L, R].map((q, i) => (
+            <g key={i}>
+              <line x1={q.x} y1={q.y} x2={q.x - 90} y2={q.y + 150} stroke="#6B4A2E" strokeWidth="4" />
+              <line x1={q.x} y1={q.y} x2={q.x + 90} y2={q.y + 150} stroke="#6B4A2E" strokeWidth="4" />
+              <path d={`M ${q.x - 120} ${q.y + 150} Q ${q.x} ${q.y + 220} ${q.x + 120} ${q.y + 150} Z`} fill="#F6C431" stroke="#9A6400" strokeWidth="5" />
+            </g>
+          ))}
+          <g opacity={pop(c.left)}>
+            <House x={L.x - 60} w={120} h={90} base={L.y + 150} />
+          </g>
+          <g opacity={pop(c.right)}>
+            {[0, 1, 2, 3].map((i) => (
+              <Coin key={i} x={R.x - 45 + (i % 2) * 90} y={R.y + 128 - Math.floor(i / 2) * 44} r={30} />
+            ))}
+          </g>
+        </g>
+      </Svg>
+      <Chip x={240} y={GY + 40} text="Chờ tăng giá" at={c.left} size={40} />
+      <Chip x={840} y={GY + 40} text="Dòng tiền" at={c.right} tone="green" size={40} />
+    </>
+  );
+};
+
+const SCENES: Record<string, React.FC<{ c: Cues }>> = { landTax: LandTax, taxCalc: TaxCalc, landVsVilla: LandVsVilla, pressure: Pressure, holdingCost: HoldingCost, leverage: Leverage, shopVs: ShopVs, criteria: Criteria, goodRE: GoodRE, choice: Choice };
+export const SCENE_NAMES = Object.keys(SCENES);
+
+/** Lop canh minh hoa (ve DUOI lop video; doan "bg" co scene:true de trong suot nen -> lo canh nay, PiP nam tren) */
+export const IllustratedScene: React.FC<{ name: string; cues?: Cues }> = ({ name, cues = {} }) => {
+  const { t, D } = useSec();
+  const S = SCENES[name];
+  const out = interpolate(t, [D - 0.2, D], [1, 0], C);
+  return (
+    <AbsoluteFill style={{ backgroundColor: "#CDEEFF", overflow: "hidden" }}>
+      <Sky />
+      <AbsoluteFill style={{ opacity: out, scale: "1.1", transformOrigin: `540px ${GY}px` }}>{S ? <S c={cues} /> : null}</AbsoluteFill>
+    </AbsoluteFill>
+  );
+};

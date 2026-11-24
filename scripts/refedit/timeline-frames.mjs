@@ -11,11 +11,11 @@ const serveUrl = await bundle({ entryPoint: path.join(ROOT, "src/index.ts"), pub
 process.on("exit", () => { try { fs.rmSync(serveUrl, { recursive: true, force: true }); } catch {} }); // xoa ban dong goi tam (moi lan chep ca public/)
 const common = { browserExecutable: BROWSER, chromiumOptions: { gl: "swangle" }, logLevel: "error" };
 const composition = await selectComposition({ serveUrl, id: "RefEdit", inputProps: { plan }, ...common });
-const name = (it) => (it.punch ?? it.label ?? it.title ?? it.text ?? it.head ?? it.neg ?? (it.cards ? "the vang" : it.bars ? "cot gia" : it.left ? "so sanh VS" : it.pills ? "the kinh" : it.from ? "gia giam" : "")).toString();
+const name = (it) => (it.type === "scene" ? `canh ${it.name}` : null) ?? (it.punch ?? it.label ?? it.title ?? it.text ?? it.head ?? it.neg ?? (it.cards ? "the vang" : it.bars ? "cot gia" : it.left ? "so sanh VS" : it.pills ? "the kinh" : it.from ? "gia giam" : "")).toString();
 const shots = plan.items.filter((i) => !["leak", "flare"].includes(i.type)).map((it) => {
   const dur = (it.endMs - it.startMs) / 1000;
   // chup luc hien DAY DU: sau khi chu do vao (punchAt), cuoi item voi do hoa nhieu buoc
-  const full = it.type === "setupPunch" ? dur - 0.25 : ["cards", "versus", "bars", "priceDrop", "pills", "contrast", "warning"].includes(it.type) ? dur - 0.25 : it.type === "stepBadge" ? (it.labelAt ?? 0) + 0.8 : 1.0;
+  const full = it.type === "setupPunch" ? dur - 0.25 : ["cards", "versus", "bars", "priceDrop", "pills", "contrast", "warning", "scene"].includes(it.type) ? dur - 0.3 : it.type === "stepBadge" ? (it.labelAt ?? 0) + 0.8 : 1.0;
   const t = it.startMs / 1000 + Math.min(dur - 0.12, full);
   return { t, label: `${t.toFixed(1)}s ${it.type} - ${name(it)}`.replace(/[':\\]/g, "") };
 });

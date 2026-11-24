@@ -42,14 +42,16 @@ export type GxPlan = {
   subs?: boolean; // phu de theo cum (kieu video mau: trang IN HOA, tu khoa cam)
   subsY?: number;
   tags?: GxTag[]; // nhan dia chi vang
+  grade?: Partial<typeof STYLE.grade>; // ghi de grade cua style.json cho tung tap
 };
 const shotMs = (s: GxShot) => (s.srcEndMs - s.srcStartMs) / (s.rate ?? 1);
 export const gxDurationMs = (p: GxPlan) => p.shots.reduce((a, s) => a + shotMs(s), 0);
 
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
-const G = STYLE.grade;
+const gradeOf = (p: GxPlan) => ({ ...STYLE.grade, ...(p.grade ?? {}) });
 
 const Shot: React.FC<{ plan: GxPlan; s: GxShot; dur: number }> = ({ plan, s, dur }) => {
+  const G = gradeOf(plan);
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   const toF = (ms: number) => Math.round((ms / 1000) * fps);
@@ -88,7 +90,7 @@ const Flash: React.FC = () => {
 };
 
 /** Grade am: phu cam (soft-light) + vignette. */
-const Grade: React.FC = () => (
+const Grade: React.FC<{ G: ReturnType<typeof gradeOf> }> = ({ G }) => (
   <>
     <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(255,170,90,0.10), rgba(255,120,40,0.08))", mixBlendMode: "soft-light" }} />
     <AbsoluteFill style={{ background: `radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,${G.vignette}) 100%)` }} />
@@ -247,7 +249,7 @@ export const GelexiaEdit: React.FC<{ plan: GxPlan }> = ({ plan }) => {
           </Sequence>
         );
       })}
-      <Grade />
+      <Grade G={gradeOf(plan)} />
       {plan.shots.map((s, i) =>
         i > 0 && s.trans === "flash" ? (
           <Sequence key={`fl${i}`} from={starts[i]} durationInFrames={Math.round(0.25 * fps)} name="Flash">

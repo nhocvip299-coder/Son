@@ -1,0 +1,11 @@
+{
+ "title": "Bún móng dọc mùng — bản xào lại giọng Huế chua (kiểu CapCut, GelexiaCapcutEdit)",
+ "basedOn": "projects/bun-bung-den-lu (cùng footage, kịch bản v2 'cảnh báo ngược 3 lý do')",
+ "inputs": [
+  {"role": "footage", "path": "work/ep-1124/src.mov -> public/inputs/bun-mong-hue/src.mp4 (remux, bỏ tiếng)", "library_file_id": "drive:1Vc_no96mGZDJsK-9jdi2HEajthb2hL5J"},
+  {"role": "voice", "path": "public/inputs/bun-mong-hue/voice.mp3", "note": "ElevenLabs 'Giọng Huế chua', 68,2s, upload 24/11"}
+ ],
+ "edit": "Khác bản Gelexia: thứ tự cảnh mới (mở bằng cảnh ăn), Ken Burns + punch-in + flash/zoom, grade ấm, 13 preset CapCut (Lý do 1/2/3, 40K, Bí quyết, 9 điểm, Comment), nhãn địa chỉ vàng, phụ đề cụm cam/trắng, nhạc nền nhẹ dưới giọng.",
+ "outputs": ["out/bun-mong-hue.mp4", "out/bun-mong-hue-chay-chu.mp4"],
+ "render": "npx remotion render src/index.ts GelexiaCapcutEdit out/... --props=projects/bun-mong-hue/props.json | props-wbw.json"
+}

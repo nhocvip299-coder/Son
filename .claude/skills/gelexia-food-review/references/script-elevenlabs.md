@@ -20,6 +20,14 @@ Chỉ viết kịch bản khi được yêu cầu; **không tự dựng video** 
 
 Yếu tố TikTok: từ khóa món/giá/phường/thành phố được **đọc to** và có trên chữ màn hình; câu hỏi gây comment; kêu gọi lưu/tag; kết vòng lặp. Không hứa lên xu hướng.
 
+## 2b. Tiêu chí TikTok "Đăng về địa điểm" (Sơn gửi ảnh hướng dẫn TikTok 24/11 — bắt buộc đủ)
+1. **Giới thiệu địa điểm** bằng cả 3 kênh: **âm thanh** (đọc tên quán + địa chỉ), **video** (chữ trên màn hình, kiểu "Mới đến quán … hôm nay!"/ghim địa chỉ), **mô tả** (caption có địa chỉ); nhắc Sơn **gắn thẻ vị trí** khi đăng.
+2. **Chia sẻ thêm về địa điểm**, mỗi mục ít nhất một câu:
+   - Ẩm thực/sản phẩm, **dịch vụ**, **bầu không khí**, hoạt động.
+   - **Thông tin hữu ích**: giá (và giá gồm gì, topping gọi thêm), **ưu đãi** nếu có, **chỉ đường**, **mẹo** (giờ mở cửa, chỗ để xe, nên gọi gì).
+   - **Trải nghiệm cá nhân** của người review.
+Checklist trước khi giao kịch bản: tên quán · địa chỉ đọc 2 lần · chỉ đường · giá + topping · giờ mở · để xe · không khí · dịch vụ · vị (đã xác nhận) · mẹo · trải nghiệm cá nhân · câu hỏi comment · lưu/tag.
+
 ## 3. Giọng điệu
 - Xưng **tao – chúng mày**, bình dân, cà khịa. Các tông đã dùng: *chua – hỗn – đanh đá* (nữ), *ngông cuồng*.
 - Hạn chế chửi thề (một chữ "đéo" là tối đa; báo Sơn có thể đổi để tránh bị bóp tương tác).

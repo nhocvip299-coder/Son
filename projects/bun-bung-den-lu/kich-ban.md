@@ -16,3 +16,4 @@ Thông tin đọc từ biển trong clip: "BÚN SƯỜN – THỊT MÓNG – M�
 
 Sơn xác nhận 24/11: món là **bún móng dọc mùng**; địa chỉ **29A lô 2 – Đền Lừ 1 – Hoàng Mai – Hà Nội** (biển ghi tắt "29 Đền Lừ").
 Sơn xác nhận: bát bún trong video giá **45K** (sửa từ 35K).
+Sơn xác nhận: vị "nước dùng chua chua thanh thanh, móng mềm" OK; giờ bán **6h sáng – 9h tối**; **chỗ để xe thoải mái**; gọi "cô bán hàng" OK.

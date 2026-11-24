@@ -35,7 +35,7 @@ export const RT = {
     listTitle: 0.38,
     cardCenters: [0.4, 0.515, 0.63], // het tai 0.68H: chua dai 0.68-0.73H cho phu de
     pill1: 0.665,
-    pill2: 0.68,
+    pill2: 0.745, // [SUA] tach khoi pill1 (0.665) - khong chong nhau
     tilt: 0.5,
     under: 0.63, // chu do duoi the 3D
     subtitle: 0.765, // phu de chay chu (1469px) - van tren vung caption TikTok/Reels

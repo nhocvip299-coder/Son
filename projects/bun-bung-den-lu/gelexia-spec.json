@@ -1,0 +1,208 @@
+{
+ "_note": "Tap bun mong doc mung 29A lo 2 Den Lu 1 theo mau Gelexia.",
+ "wordsFrom": "projects/bun-bung-den-lu/words.json",
+ "durationMs": 58700,
+ "fps": 60,
+ "brand": {
+  "name": "BÚN MÓNG DỌC MÙNG",
+  "address": "29A lô 2 Đền Lừ 1 · Hoàng Mai · Hà Nội",
+  "showAddress": true
+ },
+ "background": {
+  "video": "inputs/bun-mong/base.mp4",
+  "muted": true
+ },
+ "voice": "inputs/bun-mong/voice.mp3",
+ "wordByWord": {
+  "y": 1300,
+  "accentRe": "^(40K|29A|móng|dọc|mùng|Đền|Lừ|Hoàng|Mai|topping|9)"
+ },
+ "pages": [
+  "40K MỘT BÁT / BÚN MÓNG DỌC MÙNG",
+  "ĐẦY Ụ NGAY / ĐỀN LỪ, HOÀNG MAI",
+  "HÀ NỘI!",
+  "CHÚNG MÀY CỨ NGỒI / NHÀ ÚP MÌ TÔM ĐI",
+  "TAO ĐI ĂN ĐÂY",
+  "PHI DỌC ĐỀN LỪ, / CÂY XANH RỢP HAI BÊN",
+  "THẤY CÁI BIỂN / VÀNG CHÓE",
+  "BÚN SƯỜN THỊT / MÓNG MỌC LÀ ĐẾN",
+  "SỐ 29A LÔ 2 / ĐỀN LỪ 1, HOÀNG MAI",
+  "CHỖ ĐỂ XE / THOẢI MÁI, KHỎI LO",
+  "QUÁN BÌNH DÂN / BÀN GỖ",
+  "VÀO TRONG LÀ CÔ / BÁN HÀNG ĐỨNG BẾP",
+  "LÀM TẠI CHỖ LUÔN",
+  "MÓNG THÁI SẴN / TỪNG LÁT",
+  "XẾP BÚN, XẾP MÓNG, / BỐC DỌC MÙNG",
+  "MÚC NƯỚC DÙNG / VÀNG ƯƠM",
+  "TỪ CÁI NỒI / TO TỔ BỐ",
+  "RƯỚI NGẬP BÁT",
+  "BƯNG RA KÈM NGUYÊN / RỔ RAU SỐNG",
+  "ỚT TƯƠI, CHANH",
+  "BÁT BÚN XANH MƯỚT",
+  "NÀO DỌC MÙNG, / NÀO MÓNG, NÀO MỌC",
+  "MẸO CỦA TAO LÀ / LẤY KÉO CẮT MÓNG",
+  "RA TỪNG MIẾNG",
+  "VẮT TÍ CHANH, / THÊM TÍ ỚT",
+  "HÚP MỘT THÌA",
+  "NƯỚC DÙNG CHUA CHUA / THANH THANH",
+  "MÓNG MỀM",
+  "TAO ĂN MỘT MẠCH, / VÉT SẠCH",
+  "KHÔNG CÒN GIỌT NÀO",
+  "40K MỘT BÁT",
+  "ĐỨA NÀO ĂN KHỎE THÌ / GỌI THÊM TOPPING",
+  "THA HỒ",
+  "CÒN KÊU ĐẮT",
+  "THÌ ĐỪNG CÓ / ĐI ĂN VỚI TAO",
+  "QUÁN MỞ TỪ / 6 GIỜ SÁNG",
+  "ĐẾN 9 GIỜ TỐI",
+  "SÁNG, TRƯA, TỐI / ĐỀU ĂN ĐƯỢC",
+  "HẾT ĐƯỜNG / LẤY CỚ NHÁ",
+  "TAO CHẤM 9 ĐIỂM",
+  "TRỪ MỘT ĐIỂM VÌ / ĂN XONG LẠI THÈM",
+  "BÁT NỮA",
+  "COMMENT CHO / TAO BIẾT",
+  "HÀ NỘI CÒN BÁT / BÚN MÓNG NÀO",
+  "40K NGON HƠN KHÔNG?",
+  "LƯU LẠI, TAG NGAY / ĐỨA BẠN MÊ BÚN",
+  "29A LÔ 2 ĐỀN LỪ 1, / HOÀNG MAI",
+  "40K ĐẤY, / NGHE CHƯA!"
+ ],
+ "callouts": [
+  {
+   "kind": "intro",
+   "startMs": 200,
+   "endMs": 3400,
+   "title": "BÚN MÓNG 40K",
+   "subtitle": "Mới đến Đền Lừ hôm nay!"
+  },
+  {
+   "kind": "route",
+   "startMs": 6000,
+   "endMs": 8000,
+   "title": "PHỐ ĐỀN LỪ",
+   "subtitle": "Hoàng Mai · Hà Nội"
+  },
+  {
+   "kind": "route",
+   "startMs": 12900,
+   "endMs": 14500,
+   "title": "KHỎI LO GỬI XE"
+  },
+  {
+   "kind": "food",
+   "startMs": 18000,
+   "endMs": 20900,
+   "title": "LÀM TẠI CHỖ"
+  },
+  {
+   "kind": "food",
+   "startMs": 29100,
+   "endMs": 31200,
+   "title": "DÙNG KÉO CHO GỌN"
+  },
+  {
+   "kind": "food",
+   "startMs": 33300,
+   "endMs": 35300,
+   "title": "MÓNG MỀM"
+  },
+  {
+   "kind": "food",
+   "startMs": 37400,
+   "endMs": 40400,
+   "title": "TOPPING GỌI THÊM"
+  },
+  {
+   "kind": "route",
+   "startMs": 42200,
+   "endMs": 46400,
+   "title": "MỞ 6H – 21H"
+  },
+  {
+   "kind": "food",
+   "startMs": 46600,
+   "endMs": 49400,
+   "title": "CHẤM 9/10"
+  },
+  {
+   "kind": "cta",
+   "startMs": 52900,
+   "endMs": 58700,
+   "title": "BÚN MÓNG DỌC MÙNG",
+   "addressMain": "29A LÔ 2 ĐỀN LỪ 1",
+   "addressRest": "Hoàng Mai · Hà Nội"
+  }
+ ],
+ "sfx": [
+  {
+   "atMs": 0,
+   "file": "sfx/cc0/whoosh-ui.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 200,
+   "file": "sfx/cc0/rise-maximize.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 6000,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 6000,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 12900,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 12900,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 18000,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 29100,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 33300,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 37400,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 42200,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 42200,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 46600,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 52900,
+   "file": "sfx/cc0/select-chime.wav",
+   "volume": 0.8
+  }
+ ]
+}

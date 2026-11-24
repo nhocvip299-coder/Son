@@ -1,0 +1,16 @@
+{
+ "title": "Bún móng dọc mùng — 29A lô 2 Đền Lừ 1, Hoàng Mai, Hà Nội (mẫu Gelexia)",
+ "info": {"price": "40K/bát, gọi thêm topping tùy ý", "hours": "6h–21h", "parking": "thoải mái", "taste": "nước dùng chua thanh, móng mềm (Sơn xác nhận)"},
+ "inputs": [
+  {"role": "footage", "path": "work/ep-1124/src.mov", "library_file_id": "drive:1Vc_no96mGZDJsK-9jdi2HEajthb2hL5J", "drive_folder_id": "1XJcxZYwj6oRR26neKtrGcJh7TJHMRWBy"},
+  {"role": "voice", "path": "public/inputs/bun-mong/voice.mp3", "note": "ElevenLabs An Vu 58,1s, upload 24/11"}
+ ],
+ "derived": [
+  {"path": "projects/bun-bung-den-lu/plan.json + words.json", "rebuild_script": "node scripts/gelexia/build-shots.mjs projects/bun-bung-den-lu"},
+  {"path": "public/inputs/bun-mong/base.mp4", "rebuild_script": "node scripts/gelexia/build-base.mjs projects/bun-bung-den-lu/plan.json work/ep-1124/src.mov public/inputs/bun-mong/base.mp4 58700 60"},
+  {"path": "projects/bun-bung-den-lu/project.json", "rebuild_script": "node scripts/gelexia/build-gelexia-project.mjs projects/bun-bung-den-lu/gelexia-spec.json"}
+ ],
+ "outputs": ["out/bun-mong-den-lu.mp4", "out/bun-mong-den-lu-chay-chu.mp4"],
+ "audio": {"speed": 1, "original": "tắt", "sfx": "sfx[] trong gelexia-spec.json"},
+ "decisions": ["Full HD 1080x1920@60", "Không nhạc nền", "Callout bổ sung ý, không lặp nguyên phụ đề"]
+}

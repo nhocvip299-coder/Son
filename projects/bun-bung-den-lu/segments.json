@@ -1,0 +1,232 @@
+{
+ "_note": "src = ms tren work/ep-1124/src.mov (H.264 1080x1920 30fps, 175s); anchor = chi so tu giong.",
+ "endMs": 58700,
+ "segments": [
+  {
+   "anchor": 0,
+   "note": "hook bat bun can",
+   "src": [
+    [
+     160000,
+     163500
+    ]
+   ]
+  },
+  {
+   "anchor": 16,
+   "note": "pho",
+   "src": [
+    [
+     0,
+     2400
+    ]
+   ]
+  },
+  {
+   "anchor": 29,
+   "note": "cay xanh",
+   "src": [
+    [
+     2400,
+     4500
+    ]
+   ]
+  },
+  {
+   "anchor": 38,
+   "note": "bien vang",
+   "src": [
+    [
+     6000,
+     8500
+    ]
+   ]
+  },
+  {
+   "anchor": 50,
+   "note": "bien dia chi",
+   "src": [
+    [
+     8500,
+     10900
+    ]
+   ]
+  },
+  {
+   "anchor": 59,
+   "note": "de xe",
+   "src": [
+    [
+     4500,
+     6000
+    ]
+   ]
+  },
+  {
+   "anchor": 66,
+   "note": "mat tien + bep",
+   "src": [
+    [
+     11000,
+     13000
+    ],
+    [
+     14000,
+     15500
+    ]
+   ]
+  },
+  {
+   "anchor": 83,
+   "note": "mong thai san, boc doc mung",
+   "src": [
+    [
+     38500,
+     40000
+    ],
+    [
+     50500,
+     52000
+    ]
+   ]
+  },
+  {
+   "anchor": 95,
+   "note": "muc nuoc dung",
+   "src": [
+    [
+     58000,
+     61000
+    ]
+   ]
+  },
+  {
+   "anchor": 109,
+   "note": "bung ra + ro rau",
+   "src": [
+    [
+     68000,
+     70500
+    ]
+   ]
+  },
+  {
+   "anchor": 119,
+   "note": "bat can",
+   "src": [
+    [
+     97500,
+     100100
+    ]
+   ]
+  },
+  {
+   "anchor": 130,
+   "note": "keo cat mong",
+   "src": [
+    [
+     104000,
+     106200
+    ]
+   ]
+  },
+  {
+   "anchor": 141,
+   "note": "chanh ot",
+   "src": [
+    [
+     115500,
+     117500
+    ]
+   ]
+  },
+  {
+   "anchor": 150,
+   "note": "an",
+   "src": [
+    [
+     140000,
+     142100
+    ]
+   ]
+  },
+  {
+   "anchor": 158,
+   "note": "vet sach",
+   "src": [
+    [
+     168500,
+     170500
+    ]
+   ]
+  },
+  {
+   "anchor": 168,
+   "note": "bat + ro rau",
+   "src": [
+    [
+     82000,
+     85100
+    ]
+   ]
+  },
+  {
+   "anchor": 181,
+   "note": "an can",
+   "src": [
+    [
+     164000,
+     165700
+    ]
+   ]
+  },
+  {
+   "anchor": 191,
+   "note": "mat tien + bep",
+   "src": [
+    [
+     9500,
+     11000
+    ],
+    [
+     16000,
+     18900
+    ]
+   ]
+  },
+  {
+   "anchor": 212,
+   "note": "an",
+   "src": [
+    [
+     144000,
+     147000
+    ]
+   ]
+  },
+  {
+   "anchor": 226,
+   "note": "bat",
+   "src": [
+    [
+     88000,
+     91300
+    ]
+   ]
+  },
+  {
+   "anchor": 241,
+   "note": "mat tien + bat",
+   "src": [
+    [
+     12000,
+     13800
+    ],
+    [
+     150000,
+     154000
+    ]
+   ]
+  }
+ ]
+}

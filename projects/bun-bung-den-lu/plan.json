@@ -1,0 +1,154 @@
+{
+ "shots": [
+  {
+   "srcStartMs": 160000,
+   "srcEndMs": 163500,
+   "rate": 1.017,
+   "note": "hook bat bun can"
+  },
+  {
+   "srcStartMs": 0,
+   "srcEndMs": 2400,
+   "rate": 1.017,
+   "note": "pho"
+  },
+  {
+   "srcStartMs": 2400,
+   "srcEndMs": 4500,
+   "rate": 1.019,
+   "note": "cay xanh"
+  },
+  {
+   "srcStartMs": 6000,
+   "srcEndMs": 8500,
+   "rate": 0.969,
+   "note": "bien vang"
+  },
+  {
+   "srcStartMs": 8500,
+   "srcEndMs": 10900,
+   "rate": 1.008,
+   "note": "bien dia chi"
+  },
+  {
+   "srcStartMs": 4500,
+   "srcEndMs": 6000,
+   "rate": 0.962,
+   "note": "de xe"
+  },
+  {
+   "srcStartMs": 11000,
+   "srcEndMs": 13000,
+   "rate": 1,
+   "note": "mat tien + bep"
+  },
+  {
+   "srcStartMs": 14000,
+   "srcEndMs": 15500,
+   "rate": 1,
+   "note": "mat tien + bep"
+  },
+  {
+   "srcStartMs": 38500,
+   "srcEndMs": 40000,
+   "rate": 0.993,
+   "note": "mong thai san, boc doc mung"
+  },
+  {
+   "srcStartMs": 50500,
+   "srcEndMs": 52000,
+   "rate": 0.993,
+   "note": "mong thai san, boc doc mung"
+  },
+  {
+   "srcStartMs": 58000,
+   "srcEndMs": 61000,
+   "rate": 0.987,
+   "note": "muc nuoc dung"
+  },
+  {
+   "srcStartMs": 68000,
+   "srcEndMs": 70500,
+   "rate": 1,
+   "note": "bung ra + ro rau"
+  },
+  {
+   "srcStartMs": 97500,
+   "srcEndMs": 100100,
+   "rate": 1,
+   "note": "bat can"
+  },
+  {
+   "srcStartMs": 104000,
+   "srcEndMs": 106200,
+   "rate": 1,
+   "note": "keo cat mong"
+  },
+  {
+   "srcStartMs": 115500,
+   "srcEndMs": 117500,
+   "rate": 1,
+   "note": "chanh ot"
+  },
+  {
+   "srcStartMs": 140000,
+   "srcEndMs": 142100,
+   "rate": 1,
+   "note": "an"
+  },
+  {
+   "srcStartMs": 168500,
+   "srcEndMs": 170500,
+   "rate": 1.02,
+   "note": "vet sach"
+  },
+  {
+   "srcStartMs": 82000,
+   "srcEndMs": 85100,
+   "rate": 1,
+   "note": "bat + ro rau"
+  },
+  {
+   "srcStartMs": 164000,
+   "srcEndMs": 165700,
+   "rate": 1.018,
+   "note": "an can"
+  },
+  {
+   "srcStartMs": 9500,
+   "srcEndMs": 11000,
+   "rate": 0.984,
+   "note": "mat tien + bep"
+  },
+  {
+   "srcStartMs": 16000,
+   "srcEndMs": 18900,
+   "rate": 0.984,
+   "note": "mat tien + bep"
+  },
+  {
+   "srcStartMs": 144000,
+   "srcEndMs": 147000,
+   "rate": 1.02,
+   "note": "an"
+  },
+  {
+   "srcStartMs": 88000,
+   "srcEndMs": 91300,
+   "rate": 0.988,
+   "note": "bat"
+  },
+  {
+   "srcStartMs": 12000,
+   "srcEndMs": 13800,
+   "rate": 0.986,
+   "note": "mat tien + bat"
+  },
+  {
+   "srcStartMs": 150000,
+   "srcEndMs": 154000,
+   "rate": 0.986,
+   "note": "mat tien + bat"
+  }
+ ]
+}

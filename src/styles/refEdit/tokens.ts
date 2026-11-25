@@ -76,7 +76,8 @@ export const whiteGlow = "0 3px 5px rgba(0,0,0,0.6), 0 0 1px rgba(0,0,0,0.8), 0 
  *  vien xanh than dam (Thuy sinh Moc). Doi ACCENT_MODE = "do" de quay ve mau do goc. */
 const ACCENTS = {
   do: { grad: ["#FF7A63", "#FF3A22", "#F62A15", "#C91405"], edge: "#2A0000", glow: "255,60,35", glow2: "246,42,21", burst: "255,120,90" },
+  vang: { grad: ["#FFF6B0", "#FFE433", "#FFD700", "#E8B400"], edge: "#000000", glow: "255,215,0", glow2: "255,190,0", burst: "255,236,140" }, // [NGUOI DUNG] vang nghe #FFD700 + den #000000
   moc: { grad: ["#D4FFB0", "#6CF08A", "#22C55E", "#0E8A43"], edge: "#03261A", glow: "60,230,120", glow2: "20,190,90", burst: "150,255,170" },
 } as const;
-export const ACCENT_MODE: keyof typeof ACCENTS = "moc";
+export const ACCENT_MODE: keyof typeof ACCENTS = "vang";
 export const ACCENT = ACCENTS[ACCENT_MODE];

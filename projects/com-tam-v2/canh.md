@@ -12,3 +12,6 @@ Nguồn: Drive folder 1XJcxZYwj6oRR26neKtrGcJh7TJHMRWBy, file 1lkPB971Akj2xeGZr3
 | 51–71 | Đĩa mới / chan nước mắm lên cơm, cận sườn trứng |
 | 72–84 | Vét đĩa, húp canh |
 | 85–89 | Đĩa, bát sạch trơn |
+
+Sơn cung cấp 25/11: suất 60K; sườn chuẩn Sài Gòn, thiên ngọt; cơm tấm tơi ngon; nước mắm kẹo ngọt thơm mùi dứa; dịch vụ ổn áp; bán 10h–21h hàng ngày; chỗ để xe rộng, đỗ được cả ô tô.
+Địa chỉ dùng: 30 lô 2 Đền Lừ 1, Hoàng Mai (preset skill + caption clip mẫu) — chờ Sơn xác nhận.

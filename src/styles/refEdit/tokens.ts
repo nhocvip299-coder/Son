@@ -75,9 +75,11 @@ export const whiteGlow = "0 3px 5px rgba(0,0,0,0.6), 0 0 1px rgba(0,0,0,0.8), 0 
 /** [NGUOI DUNG] Mau chu NHAN (thay chu do video mau). "moc" = hop menh Moc cua nguoi dung: xanh luc ngoc (ban menh Moc),
  *  vien xanh than dam (Thuy sinh Moc). Doi ACCENT_MODE = "do" de quay ve mau do goc. */
 const ACCENTS = {
+  // [NGUOI DUNG] mau DO GOC cua skill (loi sang hong-trang giua, vien do) - chi lam NET hon bang vien toi sat canh
+  goc: { grad: ["#FFD9D0", "#FF8F7C", "#F62A15", "#D81A08"], radial: true, edge: "#2A0000", glow: "246,42,21", glow2: "246,42,21", burst: "255,120,90" },
   do: { grad: ["#FF7A63", "#FF3A22", "#F62A15", "#C91405"], edge: "#2A0000", glow: "255,60,35", glow2: "246,42,21", burst: "255,120,90" },
   vang: { grad: ["#FFF6B0", "#FFE433", "#FFD700", "#E8B400"], edge: "#000000", glow: "255,215,0", glow2: "255,190,0", burst: "255,236,140" }, // [NGUOI DUNG] vang nghe #FFD700 + den #000000
   moc: { grad: ["#D4FFB0", "#6CF08A", "#22C55E", "#0E8A43"], edge: "#03261A", glow: "60,230,120", glow2: "20,190,90", burst: "150,255,170" },
 } as const;
-export const ACCENT_MODE: keyof typeof ACCENTS = "vang";
-export const ACCENT = ACCENTS[ACCENT_MODE];
+export const ACCENT_MODE: keyof typeof ACCENTS = "goc";
+export const ACCENT: { grad: readonly string[]; radial?: boolean; edge: string; glow: string; glow2: string; burst: string } = ACCENTS[ACCENT_MODE];

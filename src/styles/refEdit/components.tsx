@@ -53,10 +53,12 @@ export const redText = (size: number, font: string = RT.font.punch): React.CSSPr
   whiteSpace: "nowrap",
   color: "transparent",
   // [SUA theo nguoi dung "text net cang"] mau dac hon (it loi hong), vien toi sat canh, quang sang hep -> canh chu sac
-  backgroundImage: `linear-gradient(180deg, ${ACCENT.grad[0]} 0%, ${ACCENT.grad[1]} 38%, ${ACCENT.grad[2]} 62%, ${ACCENT.grad[3]} 100%)`,
+  backgroundImage: ACCENT.radial
+    ? `radial-gradient(ellipse 55% 70% at 50% 52%, ${ACCENT.grad[0]} 0%, ${ACCENT.grad[1]} 30%, ${ACCENT.grad[2]} 68%, ${ACCENT.grad[3]} 100%)`
+    : `linear-gradient(180deg, ${ACCENT.grad[0]} 0%, ${ACCENT.grad[1]} 38%, ${ACCENT.grad[2]} 62%, ${ACCENT.grad[3]} 100%)`,
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
-  filter: `drop-shadow(0 0 1px ${ACCENT.edge}) drop-shadow(0 0 1px ${ACCENT.edge}) drop-shadow(0 0 1px ${ACCENT.edge}) drop-shadow(0 0 1px ${ACCENT.edge}) drop-shadow(0 0 8px rgba(${ACCENT.glow},0.85)) drop-shadow(0 0 22px rgba(${ACCENT.glow2},0.55)) drop-shadow(0 4px 6px rgba(0,0,0,0.6))`, // [SUA] net + phat sang
+  filter: `drop-shadow(0 0 1px ${ACCENT.edge}) drop-shadow(0 0 1px ${ACCENT.edge}) drop-shadow(0 0 1px ${ACCENT.edge}) drop-shadow(0 0 1px ${ACCENT.edge}) drop-shadow(0 0 7px rgba(${ACCENT.glow},0.85)) drop-shadow(0 0 20px rgba(${ACCENT.glow2},0.45)) drop-shadow(0 4px 6px rgba(0,0,0,0.6))`, // [SUA] net + phat sang
 });
 
 /** Chu vang dam rong [GOC: #FACF1E] */

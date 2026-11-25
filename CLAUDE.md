@@ -23,4 +23,4 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 - Tài nguyên không lên Git (SFX pack, font Nexa): gói zip tạo bằng `scripts/refedit/pack-assets.sh`, cài bằng `install-assets.sh`.
 - Cảnh trám: dùng cảnh minh họa động tông trầm sang (scenes.tsx), không nền đen; đoạn liếc kịch bản → cảnh trám (gaze.py). Xem thử nhanh: `scripts/refedit/_preview.mjs`.
 - Chữ: viền tối sát cạnh (nét căng) + GIỮ quầng phát sáng; chữ đỏ có hiệu ứng thoát (lóe sáng, phóng to, tan nhòe 0.3s cuối).
-- Màu chữ nhấn = VÀNG NGHỆ #FFD700 + viền ĐEN #000000 (người dùng chọn, `ACCENT_MODE = "vang"` trong tokens.ts), thay chữ đỏ video mẫu.
+- Màu chữ nhấn = ĐỎ GỐC của skill (lõi hồng-trắng, viền đỏ), chỉ thêm viền tối sát cạnh cho nét (`ACCENT_MODE = "goc"` trong tokens.ts). Đã thử xanh mệnh Mộc, vàng nghệ → người dùng quay về đỏ gốc.

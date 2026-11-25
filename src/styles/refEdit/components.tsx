@@ -36,7 +36,7 @@ export const whiteText = (size: number): React.CSSProperties => ({
   fontSize: size,
   color: RT.color.white,
   // [NGUOI DUNG] vien toi cho chu net manh (Kasepi): ve vien PHIA NGOAI (paint-order) -> giu dang chu
-  WebkitTextStroke: `${Math.max(2, Math.round(size * 0.035))}px rgba(10,12,16,0.9)`,
+  WebkitTextStroke: `${Math.max(3, Math.round(size * 0.05))}px rgba(8,10,14,0.95)`,
   paintOrder: "stroke fill",
   textShadow: whiteGlow,
   lineHeight: 1.12,
@@ -52,10 +52,11 @@ export const redText = (size: number, font: string = RT.font.punch): React.CSSPr
   letterSpacing: "0.005em",
   whiteSpace: "nowrap",
   color: "transparent",
-  backgroundImage: `radial-gradient(ellipse 55% 70% at 50% 52%, ${RT.color.redCore} 0%, #FF8F7C 30%, ${RT.color.red} 68%, #D81A08 100%)`,
+  // [SUA theo nguoi dung "text net cang"] mau dac hon (it loi hong), vien toi sat canh, quang sang hep -> canh chu sac
+  backgroundImage: `linear-gradient(180deg, #FF7A63 0%, #FF3A22 38%, ${RT.color.red} 62%, #C91405 100%)`,
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
-  filter: `drop-shadow(0 0 1.5px rgba(60,0,0,0.9)) drop-shadow(0 0 7px rgba(246,42,21,0.85)) drop-shadow(0 0 20px rgba(246,42,21,0.45)) drop-shadow(0 5px 8px rgba(0,0,0,0.6))`,
+  filter: `drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 6px rgba(246,42,21,0.55)) drop-shadow(0 4px 5px rgba(0,0,0,0.65))`,
 });
 
 /** Chu vang dam rong [GOC: #FACF1E] */
@@ -69,7 +70,7 @@ export const yellowText = (size: number): React.CSSProperties => ({
   backgroundImage: `linear-gradient(180deg, #FFE460 0%, ${RT.color.yellow} 55%, #F2B705 100%)`,
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
-  filter: `drop-shadow(0 0 10px rgba(250,190,20,0.55)) drop-shadow(0 5px 8px rgba(0,0,0,0.6))`,
+  filter: `drop-shadow(0 0 0.6px #3A2600) drop-shadow(0 0 0.6px #3A2600) drop-shadow(0 0 0.6px #3A2600) drop-shadow(0 0 5px rgba(250,190,20,0.4)) drop-shadow(0 4px 5px rgba(0,0,0,0.65))`,
 });
 
 /** Co chu de khong tran khung (uoc luong be rong ky tu theo font). [AI: video mau chu ngan nen khong can] */

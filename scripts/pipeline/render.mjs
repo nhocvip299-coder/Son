@@ -39,12 +39,12 @@ export const renderComposition = async ({ id, inputProps = {}, output, crf = 17 
     crf,
     pixelFormat: "yuv420p",
     colorSpace: "bt709",
-    imageFormat: "jpeg",
-    jpegQuality: 95,
+    imageFormat: "png", // [SUA "text net cang"] chup khung PNG (khong vet nen JPEG quanh canh chu)
+    x264Preset: "slow",
     audioBitrate: "320k",
     // tran bitrate: giu chat luong cao nhung khong phinh file vo ly (TikTok/Reels se ma hoa lai)
-    encodingMaxRate: "30M",
-    encodingBufferSize: "60M",
+    encodingMaxRate: "40M",
+    encodingBufferSize: "80M",
     concurrency: Math.max(1, os.cpus().length),
     overwrite: true,
     onProgress: ({ progress }) => {

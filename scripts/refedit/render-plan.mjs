@@ -9,6 +9,6 @@ for (let i = 0; i < pos.length; i += 2) plans.push([pos[i], pos[i + 1]]);
 for (const [p, out] of plans) {
   const plan = JSON.parse(fs.readFileSync(p, "utf8"));
   const t0 = Date.now();
-  await renderComposition({ id: "RefEdit", inputProps: { plan }, output: out, crf: Number(opts.crf ?? 18) });
+  await renderComposition({ id: "RefEdit", inputProps: { plan }, output: out, crf: Number(opts.crf ?? 14) });
   console.log("xong", out, ((Date.now() - t0) / 1000).toFixed(0) + "s");
 }

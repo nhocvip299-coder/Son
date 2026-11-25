@@ -70,4 +70,4 @@ export const RT = {
 } as const;
 
 /** Bong + phat sang chu trang [GOC: bong toi mem phia duoi + quang trang nhe] */
-export const whiteGlow = "0 4px 10px rgba(0,0,0,0.55), 0 0 2px rgba(0,0,0,0.6), 0 0 22px rgba(255,255,255,0.35)";
+export const whiteGlow = "0 3px 4px rgba(0,0,0,0.6), 0 0 1px rgba(0,0,0,0.8), 0 0 10px rgba(255,255,255,0.18)"; // [SUA] net cang: quang hep

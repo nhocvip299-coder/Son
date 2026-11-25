@@ -1,0 +1,14 @@
+{
+ "title": "Cơm Tấm Sườn Khói v2 — 30 lô 2 Đền Lừ 1, Hoàng Mai (mẫu Gelexia, KHÔNG SFX chữ)",
+ "info": {"price": "60K/suất đầy đủ", "taste": "sườn chuẩn Sài Gòn thiên ngọt, cơm tơi, nước mắm kẹo thơm mùi dứa", "service": "ổn áp", "hours": "10h–21h hàng ngày", "parking": "rộng, đỗ được cả ô tô", "route": "chợ Vĩnh Hưng → ngã ba Vĩnh Hưng → đường Vĩnh Hoàng → hồ Vĩnh Hoàng → đèn đỏ Tam Trinh–Hoàng Mai rẽ phải → 300 m, biển tròn bên phải"},
+ "inputs": [
+  {"role": "footage+voice A", "path": "work/ep-1125b/src.mov (89,7s; 0–22,7s đã có giọng Sơn làm sẵn, sau đó im lặng)", "library_file_id": "drive:1lkPB971Akj2xeGZr3kb-w4a-7mc3Mjf2"},
+  {"role": "voice B", "path": "public/inputs/com-tam-v2/voice2.mp3", "note": "ElevenLabs An Vu 45,5s, bắt đầu ở 22,8s"}
+ ],
+ "build": [
+  "A: proxy 0–22,8s (video, 60fps) + audio gốc; B: node scripts/gelexia/build-base.mjs projects/com-tam-v2/plan-b.json work/ep-1125b/proxy.mp4 work/com-tam-v2/b.mp4 46100 60",
+  "nối A+B video; audio = gốc 0–22,8s + voice2 (pad) -> base.mp4 (background không mute)",
+  "render GelexiaEdit (sfx: []), rồi thay audio bằng bản cân bằng: loudnorm từng đoạn -16 LUFS -> master -14 LUFS"
+ ],
+ "outputs": ["out/com-tam-v2.mp4", "out/com-tam-v2-chay-chu.mp4"]
+}

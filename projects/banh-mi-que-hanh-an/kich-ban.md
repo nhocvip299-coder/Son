@@ -14,3 +14,5 @@ Sơn xác nhận: chỉ bán mang về; 1 bọc 10 cái bánh mỳ que 35K; đú
 | 52,4–66,1 | 0068 | Đĩa bánh + xiên + tương ớt |
 | 66,1–70,1 | 0071 | Bọc bánh xếp chồng |
 | 70,1–84,5 | 0072 | Gói bánh vào túi |
+
+Sơn bổ sung 25/11: **chưa ăn thử** bánh và thịt xiên (không được tả vị; thịt xiên chỉ "nhìn ngon"); đi mua cùng bạn; chỗ khác thường **5K/cái, 50K/chục** → ở đây rẻ hơn; **bán cả ngày**; **chỗ dừng xe hạn chế, chỉ xe máy dừng mua nhanh**; tên quán theo biển: Hạnh An Cook.

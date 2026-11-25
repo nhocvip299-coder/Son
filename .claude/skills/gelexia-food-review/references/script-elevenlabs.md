@@ -44,6 +44,12 @@ Checklist trước khi giao kịch bản: tên quán · địa chỉ đọc 2 l�
 - Chữ: phụ đề trắng IN HOA nhỏ ở 1/4 trên theo từng cụm, từ khóa cam; địa chỉ nhãn vàng.
 - Caption: `TÊN QUÁN ĐỊA CHỈ ĐẦY ĐỦ` + 5 hashtag (`#tenquan #anngoncungtiktok #foodreview #mon+khuvuc #mon+vung`).
 
+## 2d. Tư duy kịch bản (Sơn góp ý 25/11) — KHÔNG chép câu chữ clip mẫu
+- Clip mẫu chỉ để học **nhịp và cấu trúc**; câu chữ, câu cửa miệng ("kiếp nạn…", "ăn dở là chửi…") phải viết mới cho từng tập.
+- Viết theo **mạch cảm xúc thật** của người review (vd đói/lạnh → tò mò trên đường → nghi ngờ khi đến → bất ngờ khi xem làm → thỏa mãn khi ăn → bất ngờ vì giá → chốt), mỗi nhịp cảm xúc gắn một thông tin thật:
+  **đường đi từ đâu đến đâu (tên đường, mốc rẽ)** · **vị trí quán (cách nhận ra)** · **món ăn ra sao** · **dịch vụ** · **giá**.
+- Hỏi Sơn các dữ kiện còn thiếu (điểm xuất phát, đường, mốc rẽ, vị trí, thời tiết thật, cảm xúc thật) thay vì bịa; để chỗ trống [IN HOA] trong bản nháp.
+
 ## 3. Giọng điệu
 - Xưng **tao – chúng mày**, bình dân, cà khịa. Các tông đã dùng: *chua – hỗn – đanh đá* (nữ), *ngông cuồng*.
 - Hạn chế chửi thề (một chữ "đéo" là tối đa; báo Sơn có thể đổi để tránh bị bóp tương tác).

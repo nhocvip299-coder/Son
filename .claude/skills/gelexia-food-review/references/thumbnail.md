@@ -17,3 +17,5 @@ Quy tắc:
 - Giá chỉ ghi đúng điều đã xác nhận; menu có khoảng giá thì dùng "TỪ 35K"/"CHỈ TỪ".
 - Xuất `out/<tap>-thumbnail-gia-to.png` và `out/<tap>-thumbnail-gelexia.png`, ghép xem thử cạnh nhau, rồi gửi bằng SendUserFile (display render). Commit 2 file props.
 - Lệnh: `npx remotion still src/index.ts ThumbBold out/<tap>-thumbnail-gia-to.png --props=projects/<tap>/thumb-bold.json` và tương tự `GelexiaCover`.
+
+- **Bản 4K** (Sơn yêu cầu 25/11): render `--scale=2` → 2160×3840; chữ nét 4K, còn ảnh nền lấy từ nguồn gốc 1080p (trích frame từ file gốc, không từ proxy) nên chỉ là phóng to — nói rõ với Sơn. Tên file `out/<tap>-thumbnail-*-4k.png`.

@@ -1,0 +1,142 @@
+{
+ "shots": [
+  {
+   "srcStartMs": 104000,
+   "srcEndMs": 108900,
+   "rate": 1.025,
+   "note": "hook bat bun"
+  },
+  {
+   "srcStartMs": 0,
+   "srcEndMs": 2500,
+   "rate": 0.992,
+   "note": "lai xe"
+  },
+  {
+   "srcStartMs": 2500,
+   "srcEndMs": 6000,
+   "rate": 0.994,
+   "note": "tu CC Louis"
+  },
+  {
+   "srcStartMs": 9000,
+   "srcEndMs": 12100,
+   "rate": 1,
+   "note": "nga tu Tam Trinh -> duong Hoang Mai"
+  },
+  {
+   "srcStartMs": 20000,
+   "srcEndMs": 22900,
+   "rate": 1.007,
+   "note": "cay xanh"
+  },
+  {
+   "srcStartMs": 30000,
+   "srcEndMs": 33900,
+   "rate": 1,
+   "note": "ben tay trai"
+  },
+  {
+   "srcStartMs": 40000,
+   "srcEndMs": 44100,
+   "rate": 1.01,
+   "note": "vao quan"
+  },
+  {
+   "srcStartMs": 48000,
+   "srcEndMs": 50800,
+   "rate": 0.972,
+   "note": "co ban hang"
+  },
+  {
+   "srcStartMs": 56000,
+   "srcEndMs": 58000,
+   "rate": 1.01,
+   "note": "mong thai san"
+  },
+  {
+   "srcStartMs": 76000,
+   "srcEndMs": 77600,
+   "rate": 1.013,
+   "note": "doc mung"
+  },
+  {
+   "srcStartMs": 84000,
+   "srcEndMs": 87100,
+   "rate": 0.987,
+   "note": "muc nuoc dung"
+  },
+  {
+   "srcStartMs": 64000,
+   "srcEndMs": 66400,
+   "rate": 1.017,
+   "note": "lam tai cho"
+  },
+  {
+   "srcStartMs": 161000,
+   "srcEndMs": 163500,
+   "rate": 1,
+   "note": "ro rau"
+  },
+  {
+   "srcStartMs": 112500,
+   "srcEndMs": 114100,
+   "rate": 0.976,
+   "note": "keo cat mong"
+  },
+  {
+   "srcStartMs": 108000,
+   "srcEndMs": 110300,
+   "rate": 1.018,
+   "note": "hup"
+  },
+  {
+   "srcStartMs": 188000,
+   "srcEndMs": 191200,
+   "rate": 0.991,
+   "note": "bat can"
+  },
+  {
+   "srcStartMs": 168000,
+   "srcEndMs": 170200,
+   "rate": 1.027,
+   "note": "an"
+  },
+  {
+   "srcStartMs": 96000,
+   "srcEndMs": 99500,
+   "rate": 0.98,
+   "note": "bien gia"
+  },
+  {
+   "srcStartMs": 34000,
+   "srcEndMs": 37500,
+   "rate": 1.023,
+   "note": "pho - gio mo, de xe"
+  },
+  {
+   "srcStartMs": 192000,
+   "srcEndMs": 195300,
+   "rate": 0.994,
+   "note": "vet bat"
+  },
+  {
+   "srcStartMs": 176000,
+   "srcEndMs": 181000,
+   "rate": 0.988,
+   "note": "hai bat"
+  },
+  {
+   "srcStartMs": 195300,
+   "srcEndMs": 199900,
+   "rate": 0.99,
+   "note": "ket"
+  },
+  {
+   "srcStartMs": 150000,
+   "srcEndMs": 151000,
+   "rate": 0.99,
+   "note": "ket"
+  }
+ ]
+}

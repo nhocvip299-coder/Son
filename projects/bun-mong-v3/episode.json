@@ -1,0 +1,14 @@
+{
+ "title": "Bún móng dọc mùng v3 — 29 lô 2 Đền Lừ 1, Hoàng Mai (quay lại 25/11, mẫu Gelexia)",
+ "info": {"price": "40K", "hours": "6h–21h", "parking": "thoải mái", "route": "CC Louis → ngã tư Tam Trinh–Hoàng Mai → đường Hoàng Mai, quán bên trái", "weather": "nắng mà lạnh"},
+ "inputs": [
+  {"role": "footage", "path": "work/ep-1125/src.mov (HEVC 60fps 3:20) -> work/ep-1125/proxy.mp4 (30fps)", "library_file_id": "drive:18xNZApNzCL8LrD88t2fmA2iDS4NMDkTb"},
+  {"role": "voice", "path": "public/inputs/bun-mong-v3/voice-full.wav", "note": "voice.mp3 48,4s (bị cắt) + 0,15s + voice-tail.mp3 20,4s; ElevenLabs An Vu"}
+ ],
+ "derived": [
+  {"path": "plan.json + words.json", "rebuild_script": "node scripts/gelexia/build-shots.mjs projects/bun-mong-v3"},
+  {"path": "public/inputs/bun-mong-v3/base.mp4", "rebuild_script": "node scripts/gelexia/build-base.mjs projects/bun-mong-v3/plan.json work/ep-1125/proxy.mp4 public/inputs/bun-mong-v3/base.mp4 69500 60"},
+  {"path": "project.json", "rebuild_script": "node scripts/gelexia/build-gelexia-project.mjs projects/bun-mong-v3/gelexia-spec.json"}
+ ],
+ "outputs": ["out/bun-mong-v3.mp4", "out/bun-mong-v3-chay-chu.mp4"]
+}

@@ -1,0 +1,214 @@
+{
+ "_note": "Bun mong doc mung v3 (video quay lai 25/11), mach cam xuc + lo trinh that, mau Gelexia.",
+ "wordsFrom": "projects/bun-mong-v3/words.json",
+ "durationMs": 69500,
+ "fps": 60,
+ "brand": {
+  "name": "BÚN MÓNG DỌC MÙNG",
+  "address": "29 lô 2 Đền Lừ 1 · Hoàng Mai · Hà Nội",
+  "showAddress": true
+ },
+ "background": {
+  "video": "inputs/bun-mong-v3/base.mp4",
+  "muted": true
+ },
+ "voice": "inputs/bun-mong-v3/voice-full.wav",
+ "wordByWord": {
+  "y": 1300,
+  "accentRe": "^(40K|29|Louis|Tam|Trinh|Hoàng|Mai|Đền|Lừ|móng|dọc|mùng|lạnh|nóng|9)"
+ },
+ "pages": [
+  "TRỜI NẮNG CHANG CHANG / MÀ GIÓ LẠNH BUỐT",
+  "KIỂU THỜI TIẾT NÀY / LÀ TAO CHỈ THÈM",
+  "ĐÚNG MỘT BÁT NƯỚC / DÙNG NÓNG HỔI",
+  "THẾ LÀ TAO QUYẾT / ĐI TÌM BẰNG ĐƯỢC",
+  "BÁT BÚN MÓNG / DỌC MÙNG",
+  "TAO XUẤT PHÁT TỪ / KHU CHUNG CƯ LOUIS",
+  "ĐI LÒNG VÒNG MỘT HỒI, / BỤNG RÉO ẦM ẦM",
+  "QUA NGÃ TƯ / TAM TRINH HOÀNG MAI",
+  "RỒI CỨ THẾ ĐI THẲNG / VÀO ĐƯỜNG HOÀNG MAI",
+  "CÂY XANH RỢP HAI BÊN",
+  "NẮNG LỌT QUA KẼ LÁ / ĐẸP PHẾT",
+  "ĐỂ Ý BÊN TAY TRÁI / LÀ THẤY QUÁN",
+  "SỐ 29 LÔ 2 ĐỀN LỪ 1, / HOÀNG MAI",
+  "NÓI THẬT LÚC BƯỚC VÀO / TAO CÒN NGHI NGHI",
+  "QUÁN NHỎ BÌNH DÂN / THẾ NÀY",
+  "LIỆU CÓ RA GÌ KHÔNG?",
+  "ẤY THẾ MÀ NHÌN / CÔ BÁN HÀNG LÀM",
+  "LÀ TAO BẮT ĐẦU / NUỐT NƯỚC MIẾNG",
+  "MÓNG THÁI SẴN / TỪNG LÁT",
+  "BÚN XẾP GỌN",
+  "BỐC MỘT NẮM DỌC / MÙNG XANH MƯỚT",
+  "RỒI MÚC NƯỚC DÙNG / VÀNG ƯƠM",
+  "TỪ CÁI NỒI TO TỔ BỐ / RƯỚI NGẬP BÁT",
+  "LÀM TẠI CHỖ, / TAY THOĂN THOẮT",
+  "GỌI CÁI LÀ CÓ",
+  "BƯNG RA LÀ NGUYÊN / RỔ RAU SỐNG",
+  "ỚT TƯƠI, CHANH",
+  "TAO LẤY KÉO CẮT / MÓNG RA TỪNG MIẾNG",
+  "HÚP THỬ MỘT THÌA / NƯỚC DÙNG NÓNG",
+  "ẤM HẾT CẢ NGƯỜI",
+  "CHUA CHUA THANH THANH",
+  "MÓNG MỀM, / DỌC MÙNG GIÒN",
+  "TAO CỨ THẾ ĂN / MỘT MẠCH",
+  "KHÔNG NGẨNG MẶT LÊN",
+  "ĐẾN LÚC TRẢ TIỀN / MỚI GIẬT MÌNH",
+  "BÁT ĐẦY NHƯ THẾ / MÀ CÓ 40K THÔI",
+  "QUÁN MỞ TỪ 6 GIỜ / SÁNG ĐẾN 9 GIỜ TỐI",
+  "CHỖ ĐỂ XE THOẢI MÁI",
+  "TAO CHẤM 9 ĐIỂM",
+  "TRỪ MỘT ĐIỂM VÌ / ĂN XONG CHỈ MUỐN",
+  "GỌI THÊM BÁT NỮA",
+  "AI Ở HOÀNG MAI THÌ / LƯU NGAY ĐỊA CHỈ",
+  "29 LÔ 2 ĐỀN LỪ 1",
+  "ĐI ĐƯỜNG HOÀNG MAI / NHÌN BÊN TAY TRÁI",
+  "TRỜI LẠNH THẾ NÀY / MÀ KHÔNG ĐI ĂN THÌ PHÍ",
+  "COMMENT CHO TAO BIẾT / QUANH ĐÂY CÒN",
+  "BÁT BÚN MÓNG NÀO / NGON HƠN KHÔNG?"
+ ],
+ "callouts": [
+  {
+   "kind": "intro",
+   "startMs": 200,
+   "endMs": 4600,
+   "title": "NẮNG MÀ LẠNH!",
+   "subtitle": "Đi tìm bún móng dọc mùng"
+  },
+  {
+   "kind": "route",
+   "startMs": 7500,
+   "endMs": 10800,
+   "title": "TỪ CC LOUIS"
+  },
+  {
+   "kind": "route",
+   "startMs": 10900,
+   "endMs": 13900,
+   "title": "NGÃ TƯ TAM TRINH",
+   "subtitle": "→ đường Hoàng Mai"
+  },
+  {
+   "kind": "route",
+   "startMs": 16900,
+   "endMs": 20700,
+   "title": "QUÁN BÊN TRÁI",
+   "subtitle": "29 lô 2 Đền Lừ 1"
+  },
+  {
+   "kind": "food",
+   "startMs": 27700,
+   "endMs": 31200,
+   "title": "LÀM TẠI CHỖ"
+  },
+  {
+   "kind": "food",
+   "startMs": 43300,
+   "endMs": 46300,
+   "title": "MÓNG MỀM"
+  },
+  {
+   "kind": "food",
+   "startMs": 50500,
+   "endMs": 52000,
+   "title": "CHỈ 40K"
+  },
+  {
+   "kind": "route",
+   "startMs": 52200,
+   "endMs": 55500,
+   "title": "MỞ 6H – 21H",
+   "subtitle": "Để xe thoải mái"
+  },
+  {
+   "kind": "food",
+   "startMs": 55700,
+   "endMs": 58800,
+   "title": "CHẤM 9/10"
+  },
+  {
+   "kind": "cta",
+   "startMs": 59000,
+   "endMs": 69500,
+   "title": "BÚN MÓNG DỌC MÙNG",
+   "addressMain": "29 LÔ 2 ĐỀN LỪ 1",
+   "addressRest": "Đường Hoàng Mai · bên tay trái"
+  }
+ ],
+ "sfx": [
+  {
+   "atMs": 0,
+   "file": "sfx/cc0/whoosh-ui.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 200,
+   "file": "sfx/cc0/rise-maximize.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 7500,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 7500,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 10900,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 10900,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 16900,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 16900,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 27700,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 43300,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 50500,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 52200,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 52200,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 55700,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 59000,
+   "file": "sfx/cc0/select-chime.wav",
+   "volume": 0.8
+  }
+ ]
+}

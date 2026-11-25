@@ -1,0 +1,230 @@
+{
+ "_note": "src = ms tren work/ep-1125/proxy.mp4 (30fps). anchor = chi so tu giong ghep.",
+ "endMs": 69500,
+ "segments": [
+  {
+   "anchor": 0,
+   "note": "hook bat bun",
+   "src": [
+    [
+     104000,
+     108900
+    ]
+   ]
+  },
+  {
+   "anchor": 23,
+   "note": "lai xe",
+   "src": [
+    [
+     0,
+     2500
+    ]
+   ]
+  },
+  {
+   "anchor": 36,
+   "note": "tu CC Louis",
+   "src": [
+    [
+     2500,
+     6000
+    ]
+   ]
+  },
+  {
+   "anchor": 53,
+   "note": "nga tu Tam Trinh -> duong Hoang Mai",
+   "src": [
+    [
+     9000,
+     12100
+    ]
+   ]
+  },
+  {
+   "anchor": 69,
+   "note": "cay xanh",
+   "src": [
+    [
+     20000,
+     22900
+    ]
+   ]
+  },
+  {
+   "anchor": 81,
+   "note": "ben tay trai",
+   "src": [
+    [
+     30000,
+     33900
+    ]
+   ]
+  },
+  {
+   "anchor": 98,
+   "note": "vao quan",
+   "src": [
+    [
+     40000,
+     44100
+    ]
+   ]
+  },
+  {
+   "anchor": 118,
+   "note": "co ban hang",
+   "src": [
+    [
+     48000,
+     50800
+    ]
+   ]
+  },
+  {
+   "anchor": 133,
+   "note": "mong thai san",
+   "src": [
+    [
+     56000,
+     58000
+    ]
+   ]
+  },
+  {
+   "anchor": 141,
+   "note": "doc mung",
+   "src": [
+    [
+     76000,
+     77600
+    ]
+   ]
+  },
+  {
+   "anchor": 148,
+   "note": "muc nuoc dung",
+   "src": [
+    [
+     84000,
+     87100
+    ]
+   ]
+  },
+  {
+   "anchor": 163,
+   "note": "lam tai cho",
+   "src": [
+    [
+     64000,
+     66400
+    ]
+   ]
+  },
+  {
+   "anchor": 173,
+   "note": "ro rau",
+   "src": [
+    [
+     161000,
+     163500
+    ]
+   ]
+  },
+  {
+   "anchor": 183,
+   "note": "keo cat mong",
+   "src": [
+    [
+     112500,
+     114100
+    ]
+   ]
+  },
+  {
+   "anchor": 191,
+   "note": "hup",
+   "src": [
+    [
+     108000,
+     110300
+    ]
+   ]
+  },
+  {
+   "anchor": 202,
+   "note": "bat can",
+   "src": [
+    [
+     188000,
+     191200
+    ]
+   ]
+  },
+  {
+   "anchor": 211,
+   "note": "an",
+   "src": [
+    [
+     168000,
+     170200
+    ]
+   ]
+  },
+  {
+   "anchor": 221,
+   "note": "bien gia",
+   "src": [
+    [
+     96000,
+     99500
+    ]
+   ]
+  },
+  {
+   "anchor": 236,
+   "note": "pho - gio mo, de xe",
+   "src": [
+    [
+     34000,
+     37500
+    ]
+   ]
+  },
+  {
+   "anchor": 251,
+   "note": "vet bat",
+   "src": [
+    [
+     192000,
+     195300
+    ]
+   ]
+  },
+  {
+   "anchor": 267,
+   "note": "hai bat",
+   "src": [
+    [
+     176000,
+     181000
+    ]
+   ]
+  },
+  {
+   "anchor": 290,
+   "note": "ket",
+   "src": [
+    [
+     195300,
+     199900
+    ],
+    [
+     150000,
+     151000
+    ]
+   ]
+  }
+ ]
+}

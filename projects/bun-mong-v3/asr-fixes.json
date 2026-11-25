@@ -1,0 +1,24 @@
+{
+ "_note": "Sua loi Whisper giong An Vu (ghep doan dau 48,4s + 0,15s lang + doan cuoi 20,4s). Khoa = chi so tu trong vo-captions.json.",
+ "byIndex": {
+  "2": "chang",
+  "3": "chang",
+  "41": "chung",
+  "50": "réo",
+  "51": "ầm",
+  "52": "ầm",
+  "71": "rợp",
+  "93": "Đền",
+  "94": "Lừ",
+  "160": "rưới",
+  "168": "thoắt",
+  "180": "ớt",
+  "206": "Móng",
+  "218": "ngẩng",
+  "220": "lên",
+  "234": "40K",
+  "255": "trừ",
+  "256": "một",
+  "277": "lô"
+ }
+}

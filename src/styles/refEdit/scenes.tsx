@@ -859,6 +859,7 @@ const CutLoss: React.FC<{ c: Cues }> = ({ c }) => {
         </g>
       </Svg>
       <Chip x={330} y={690} text="Ocean Park 2, 3" at={c.place} tone="gold" size={46} />
+      {c.op1 !== undefined ? <Chip x={330} y={595} text="Kể cả Ocean Park 1" at={c.op1} tone="dark" size={38} /> : null}
       <Chip x={790} y={1030} text="Hàng tỷ đồng" at={c.loss} tone="red" size={40} />
     </>
   );

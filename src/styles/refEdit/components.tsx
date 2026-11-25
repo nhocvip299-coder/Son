@@ -409,7 +409,7 @@ export const GlassPill: React.FC<{ text: string; y: number; rot?: number; at?: n
           boxShadow: "0 0 18px rgba(255,255,255,0.55), inset 0 0 14px rgba(255,255,255,0.22), 0 10px 30px rgba(0,0,0,0.35)",
         }}
       >
-        <Typed text={text.toUpperCase()} at={at + 0.12} style={whiteText(RT.size.pill)} />
+        <Typed text={text.toUpperCase()} at={at + 0.12} style={whiteText(fit(text, RT.size.pill, 0.62, 800))} />
       </div>
     </Place>
   );

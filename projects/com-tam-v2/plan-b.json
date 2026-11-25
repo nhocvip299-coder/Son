@@ -1,0 +1,75 @@
+{
+ "_note": "phan B (sau 22,8s)",
+ "shots": [
+  {
+   "srcStartMs": 18000,
+   "srcEndMs": 22700,
+   "rate": 1.0
+  },
+  {
+   "srcStartMs": 23000,
+   "srcEndMs": 24700,
+   "rate": 1.0
+  },
+  {
+   "srcStartMs": 25000,
+   "srcEndMs": 28800,
+   "rate": 1.0
+  },
+  {
+   "srcStartMs": 28800,
+   "srcEndMs": 31000,
+   "rate": 1.0
+  },
+  {
+   "srcStartMs": 37000,
+   "srcEndMs": 39300,
+   "rate": 1.0
+  },
+  {
+   "srcStartMs": 42000,
+   "srcEndMs": 43700,
+   "rate": 1.012
+  },
+  {
+   "srcStartMs": 44000,
+   "srcEndMs": 47500,
+   "rate": 0.986
+  },
+  {
+   "srcStartMs": 53000,
+   "srcEndMs": 55500,
+   "rate": 0.958
+  },
+  {
+   "srcStartMs": 60000,
+   "srcEndMs": 63000,
+   "rate": 1.045
+  },
+  {
+   "srcStartMs": 74000,
+   "srcEndMs": 76400,
+   "rate": 1.008
+  },
+  {
+   "srcStartMs": 64000,
+   "srcEndMs": 67200,
+   "rate": 1.003
+  },
+  {
+   "srcStartMs": 67200,
+   "srcEndMs": 72300,
+   "rate": 0.988
+  },
+  {
+   "srcStartMs": 10000,
+   "srcEndMs": 15800,
+   "rate": 0.998
+  },
+  {
+   "srcStartMs": 84000,
+   "srcEndMs": 88200,
+   "rate": 1.012
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "_note": "Com tam suon khoi v2: 0-22,7s giu nguyen video+giong co san, 22,8s+ giong moi; KHONG SFX chu (Son yeu cau 25/11).",
+ "wordsFrom": "projects/com-tam-v2/words.json",
+ "durationMs": 68900,
+ "fps": 60,
+ "brand": {
+  "name": "CƠM TẤM SƯỜN KHÓI",
+  "address": "30 lô 2 Đền Lừ 1 · Hoàng Mai · Hà Nội",
+  "showAddress": true
+ },
+ "background": {
+  "video": "inputs/com-tam-v2/base.mp4",
+  "muted": false
+ },
+ "wordByWord": {
+  "y": 1300,
+  "accentRe": "^(60K|30|300|Vĩnh|Hưng|Hoàng|Mai|Tam|Trinh|Đền|Lừ|sườn|Sài|Gòn|dứa|9)"
+ },
+ "pages": [
+  "VÃI NỒI, HÔM NAY / LẠI MÒ ĐI ĂN CƠM TẤM",
+  "TẬN HOÀNG MAI",
+  "XUẤT PHÁT TỪ / CHỢ VĨNH HƯNG",
+  "PHI RA NGÃ BA / VĨNH HƯNG",
+  "RẼ GẤP VÀO / ĐƯỜNG VĨNH HOÀNG",
+  "CỨ THẾ VÍT GA / CHẠY THẲNG",
+  "QUA HỒ VĨNH HOÀNG",
+  "ĐẾN ĐÈN ĐỎ TAM TRINH / HOÀNG MAI",
+  "THÌ ĐÁNH LÁI / SANG PHẢI",
+  "CỨ THẾ ĐÂM KỊCH DỐC",
+  "Đ*T MẸ, TƯỞNG / XA XÔI THẾ NÀO",
+  "CHẠY THÊM CÓ / 300 MÉT",
+  "BIẾT THẾ ĐI MẸ / NÓ XE MÁY",
+  "NHÌN NGAY BÊN / TAY PHẢI",
+  "THẤY CÁI BIỂN TRÒN / CƠM TẤM SƯỜN KHÓI",
+  "TƯỞNG XA HÓA RA / GẦN VÃI ĐÁI",
+  "CƠM TẤM SƯỜN KHÓI,",
+  "SỐ 30 LÔ 2 ĐỀN LỪ 1, / HOÀNG MAI",
+  "CHỖ ĐỂ XE / RỘNG THÊNH THANG",
+  "Ô TÔ CŨNG / ĐỖ THOẢI MÁI",
+  "VÀO CÁI LÀ GỌI NGAY / MỘT SUẤT ĐẦY ĐỦ 60K",
+  "BƯNG RA NHÌN / MÀ MUỐN XỈU",
+  "MIẾNG SƯỜN NƯỚNG / TO BẢN",
+  "TRỨNG ỐP LA, CHẢ, BÌ, / ĐỒ CHUA, DƯA LEO",
+  "KÈM LUÔN / BÁT CANH NÓNG",
+  "GẮP MIẾNG SƯỜN / CẮN THỬ",
+  "ĐỆT MẸ, CHUẨN VỊ / SÀI GÒN LUÔN",
+  "THIÊN NGỌT, / THƠM LỪNG",
+  "CƠM TẤM TƠI / TỪNG HẠT",
+  "RƯỚI THÊM THÌA / NƯỚC MẮM KẸO",
+  "NGỌT NGỌT / THƠM MÙI DỨA",
+  "TRỘN ĐỀU LÊN LÀ / CỨ THẾ CẮM MẶT ĂN",
+  "KHÔNG NGÓC / ĐẦU LÊN ĐƯỢC",
+  "HÚP NGỤM CANH / CHO TRÔI",
+  "VÉT SẠCH KHÔNG / CÒN HẠT CƠM NÀO",
+  "DỊCH VỤ ỔN ÁP",
+  "QUÁN BÁN TỪ 10 GIỜ / SÁNG ĐẾN 9 GIỜ TỐI",
+  "HÀNG NGÀY",
+  "60K MỘT SUẤT / NHƯ NÀY",
+  "THÌ TAO CHẤM 9 ĐIỂM",
+  "MỘT ĐIỂM CÒN LẠI / ĐỂ DÀNH LẦN SAU",
+  "QUAY LẠI ĂN TIẾP",
+  "ĐỨA NÀO Ở HOÀNG MAI / THÌ NHỚ CÁI ĐỊA CHỈ",
+  "30 LÔ 2 ĐỀN LỪ 1",
+  "ĐÈN ĐỎ TAM TRINH / RẼ PHẢI",
+  "CHẠY 300M / NHÌN BÊN TAY PHẢI",
+  "COMMENT CHO TAO BIẾT / CHỖ CHÚNG MÀY",
+  "CƠM TẤM BAO NHIÊU / MỘT SUẤT?"
+ ],
+ "callouts": [
+  {
+   "kind": "intro",
+   "startMs": 300,
+   "endMs": 3000,
+   "title": "VÃI NỒI!",
+   "subtitle": "Đi ăn cơm tấm tận Hoàng Mai"
+  },
+  {
+   "kind": "route",
+   "startMs": 3100,
+   "endMs": 6800,
+   "title": "TỪ CHỢ VĨNH HƯNG",
+   "subtitle": "→ đường Vĩnh Hoàng"
+  },
+  {
+   "kind": "route",
+   "startMs": 9100,
+   "endMs": 11600,
+   "title": "ĐÈN ĐỎ TAM TRINH",
+   "subtitle": "Rẽ phải"
+  },
+  {
+   "kind": "route",
+   "startMs": 14800,
+   "endMs": 17500,
+   "title": "THÊM 300 MÉT",
+   "subtitle": "Biển tròn bên phải"
+  },
+  {
+   "kind": "route",
+   "startMs": 26600,
+   "endMs": 29200,
+   "title": "ĐỖ ĐƯỢC CẢ Ô TÔ"
+  },
+  {
+   "kind": "food",
+   "startMs": 30500,
+   "endMs": 33000,
+   "title": "SUẤT ĐẦY ĐỦ 60K"
+  },
+  {
+   "kind": "food",
+   "startMs": 39700,
+   "endMs": 42300,
+   "title": "CHUẨN VỊ SÀI GÒN"
+  },
+  {
+   "kind": "food",
+   "startMs": 43600,
+   "endMs": 46100,
+   "title": "NƯỚC MẮM MÙI DỨA"
+  },
+  {
+   "kind": "route",
+   "startMs": 51400,
+   "endMs": 53800,
+   "title": "MỞ 10H – 21H"
+  },
+  {
+   "kind": "food",
+   "startMs": 55600,
+   "endMs": 58600,
+   "title": "CHẤM 9/10"
+  },
+  {
+   "kind": "cta",
+   "startMs": 59000,
+   "endMs": 68900,
+   "title": "CƠM TẤM SƯỜN KHÓI",
+   "addressMain": "30 LÔ 2 ĐỀN LỪ 1",
+   "addressRest": "Hoàng Mai · đèn đỏ Tam Trinh rẽ phải"
+  }
+ ],
+ "sfx": []
+}

@@ -18,7 +18,8 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 ## Sở thích đã chốt (video Happy Home, 11/2026)
 - Font: chữ trắng 1FTV Nexa Heavy, chữ nhấn Phudu. Không Poppins/Anton/Netto (lỗi dấu).
 - Cảnh trám không phủ kín: thu người nói vào khung góc; điểm nhấn dùng animation.
-- Chữ hiện kiểu gõ (không tiếng gõ phím). SFX = bộ pack TikTok, nhỏ hơn giọng 8 dB; giọng giữ nguyên.
+- Chữ hiện kiểu gõ (không tiếng gõ phím). SFX = bộ pack TikTok, nhỏ hơn giọng 10 dB (sfx-level.py -10); giọng giữ nguyên.
 - Gửi khung hình timeline để duyệt TRƯỚC khi render; khi người dùng ưu tiên thời gian chỉ render 1 bản (có thể bỏ bản chạy chữ).
 - Tài nguyên không lên Git (SFX pack, font Nexa): gói zip tạo bằng `scripts/refedit/pack-assets.sh`, cài bằng `install-assets.sh`.
 - Cảnh trám: dùng cảnh minh họa động tông trầm sang (scenes.tsx), không nền đen; đoạn liếc kịch bản → cảnh trám (gaze.py). Xem thử nhanh: `scripts/refedit/_preview.mjs`.
+- Chữ: viền tối sát cạnh (nét căng) + GIỮ quầng phát sáng; chữ đỏ có hiệu ứng thoát (lóe sáng, phóng to, tan nhòe 0.3s cuối).

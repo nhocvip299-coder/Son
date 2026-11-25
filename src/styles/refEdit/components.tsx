@@ -56,7 +56,7 @@ export const redText = (size: number, font: string = RT.font.punch): React.CSSPr
   backgroundImage: `linear-gradient(180deg, #FF7A63 0%, #FF3A22 38%, ${RT.color.red} 62%, #C91405 100%)`,
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
-  filter: `drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 6px rgba(246,42,21,0.55)) drop-shadow(0 4px 5px rgba(0,0,0,0.65))`,
+  filter: `drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 8px rgba(255,60,35,0.95)) drop-shadow(0 0 22px rgba(246,42,21,0.6)) drop-shadow(0 4px 6px rgba(0,0,0,0.6))`, // [SUA] net + phat sang
 });
 
 /** Chu vang dam rong [GOC: #FACF1E] */
@@ -70,7 +70,7 @@ export const yellowText = (size: number): React.CSSProperties => ({
   backgroundImage: `linear-gradient(180deg, #FFE460 0%, ${RT.color.yellow} 55%, #F2B705 100%)`,
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
-  filter: `drop-shadow(0 0 0.6px #3A2600) drop-shadow(0 0 0.6px #3A2600) drop-shadow(0 0 0.6px #3A2600) drop-shadow(0 0 5px rgba(250,190,20,0.4)) drop-shadow(0 4px 5px rgba(0,0,0,0.65))`,
+  filter: `drop-shadow(0 0 0.6px #3A2600) drop-shadow(0 0 0.6px #3A2600) drop-shadow(0 0 9px rgba(255,200,30,0.8)) drop-shadow(0 0 20px rgba(250,190,20,0.4)) drop-shadow(0 4px 6px rgba(0,0,0,0.6))`,
 });
 
 /** Co chu de khong tran khung (uoc luong be rong ky tu theo font). [AI: video mau chu ngan nen khong can] */
@@ -278,10 +278,12 @@ export const SetupPunch: React.FC<{
   const ex = useExit(exit);
   const pst = punchColor === "red" ? redText(fit(punch, RT.size.punch, 0.6)) : yellowText(fit(punch, RT.size.warn, 0.62));
   const rise = interpolate(t, [punchAt, punchAt + 0.25], [0, 1], { ...C, easing: easeOut });
+  // [SUA theo nguoi dung] HIEU UNG THOAT chu do: loe sang + phong to + nhoe tan (0.3s cuoi), dong trang troi len mo dan
+  const out = interpolate(t, [D - 0.3, D], [0, 1], { ...C, easing: Easing.in(Easing.cubic) });
   return (
     <AbsoluteFill style={{ opacity: ex.k, filter: ex.blur ? `blur(${ex.blur}px)` : undefined }}>
       {setup ? (
-        <Place y={y}>
+        <Place y={y} style={{ opacity: 1 - out, marginTop: -out * 24, filter: out > 0 ? `blur(${out * 6}px)` : undefined }}>
           {setupMode === "type" ? (
             <Typed text={setup} at={setupAt} style={whiteText(fit(setup, RT.size.setup, 0.56))} />
           ) : (
@@ -291,7 +293,10 @@ export const SetupPunch: React.FC<{
           )}
         </Place>
       ) : null}
-      <Place y={y + (setup ? 0.058 : 0.03)}>
+      <Place y={y + (setup ? 0.058 : 0.03)} style={out > 0 ? { scale: String(1 + out * 0.18), opacity: 1 - out * out, filter: `brightness(${1 + out * 1.4}) blur(${out * 9}px)` } : undefined}>
+        {out > 0 ? (
+          <div style={{ position: "absolute", left: "50%", top: "50%", width: 900, height: 160, translate: "-50% -50%", borderRadius: "50%", background: "radial-gradient(ellipse, rgba(255,120,90,0.9), rgba(246,42,21,0.35) 45%, transparent 70%)", opacity: Math.sin(out * Math.PI), scale: `${0.6 + out * 0.8} ${0.6 + out * 0.3}`, mixBlendMode: "screen" }} />
+        ) : null}
         {punchMode === "type" ? (
           <Typed text={punch} at={punchAt} style={pst} cps={punchCps} />
         ) : (

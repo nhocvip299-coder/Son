@@ -13,7 +13,7 @@ import { parseArgs } from "../pipeline/lib.mjs";
 
 // [NGUOI DUNG] chu chay kieu go CO tieng phim that: 16 phim cat tu ban ghi go phim (TikTok efeitos__sonoros, nhip 56ms ~ toc do go 22 ky tu/s)
 // -> public/sfx/pack/ty1..16. Moi ky tu hien = 1 tieng phim (component Typed dat dung frame). Phu de chay chu: KHONG tieng (nguoi dung bo).
-export const REVEAL = { mode: "type", cps: 22, keyVolume: 0.6, keyFiles: Array.from({ length: 16 }, (_, i) => `pack/ty${i + 1}`) };
+export const REVEAL = { mode: "type", cps: 22, keyVolume: 0.45, keyFiles: Array.from({ length: 16 }, (_, i) => `pack/ty${i + 1}`) };
 
 /** Bang SFX theo loai hieu ung (da duyet). Ten = file trong public/sfx/pack/. */
 export const SFX_MAP = {

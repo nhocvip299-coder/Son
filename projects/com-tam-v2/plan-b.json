@@ -2,14 +2,9 @@
  "_note": "phan B (sau 22,8s)",
  "shots": [
   {
-   "srcStartMs": 18000,
+   "srcStartMs": 15800,
    "srcEndMs": 22700,
-   "rate": 1.0
-  },
-  {
-   "srcStartMs": 23000,
-   "srcEndMs": 24700,
-   "rate": 1.0
+   "rate": 1.078
   },
   {
    "srcStartMs": 25000,

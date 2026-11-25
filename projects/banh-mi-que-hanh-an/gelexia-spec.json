@@ -1,0 +1,197 @@
+{
+ "_note": "Banh my que Hanh An Cook, 50A ngo Goc De, theo mau Gelexia.",
+ "wordsFrom": "projects/banh-mi-que-hanh-an/words.json",
+ "durationMs": 54700,
+ "fps": 60,
+ "brand": {
+  "name": "HẠNH AN COOK",
+  "address": "50A ngõ Gốc Đề · Tương Mai · Hà Nội",
+  "showAddress": true
+ },
+ "background": {
+  "video": "inputs/banh-mi-que/base.mp4",
+  "muted": true
+ },
+ "voice": "inputs/banh-mi-que/voice-full.wav",
+ "wordByWord": {
+  "y": 1300,
+  "accentRe": "^(35K|50K|5K|15K|8K|80K|50A|bánh|mỳ|que|xiên|Gốc|Đề|Tương|Mai|10)"
+ },
+ "pages": [
+  "35K MỘT BỌC / 10 CÁI BÁNH MỲ QUE",
+  "NGAY TƯƠNG MAI, / HÀ NỘI",
+  "CHỖ KHÁC TAO MUA / 5K MỘT CÁI",
+  "50K MỘT CHỤC",
+  "Ở ĐÂY RẺ HẲN 15K",
+  "CHÚNG MÀY CÒN ĐỨNG / ĐÓ ĐẾM TIỀN LẺ À?",
+  "HÔM NAY TAO / VỚI CON BẠN",
+  "CHUI VÀO NGÕ GỐC ĐỀ",
+  "THẤY CÁI BIỂN / VÀNG CHÓE",
+  "HẠNH AN COOK, / PATE GIA TRUYỀN",
+  "LÀ TỚI",
+  "SỐ 50A NGÕ GỐC ĐỀ, / TỔ 13 TƯƠNG MAI",
+  "QUÁN NÀY CHƠI / LÌ LẮM",
+  "ĐÚNG 2 MÓN THÔI",
+  "BÁNH MỲ QUE VỚI / THỊT XIÊN NƯỚNG",
+  "BIỂN CÒN GHI / TO ĐÙNG",
+  "THỊT XIÊN 8K,",
+  "KHÔNG NGON / KHÔNG LẤY TIỀN",
+  "GAN CHƯA?",
+  "NHÌN TAO SOI NÈ",
+  "BÁNH MỲ QUE XẾP / CAO NHƯ NÚI",
+  "CHO VÀO LÒ, / LỬA ĐỎ RỰC",
+  "RA LÒ VÀNG RUỘM",
+  "THỊT XIÊN NƯỚNG / 80K MỘT HỘP",
+  "XẾP CẠNH CHÉN / TƯƠNG ỚT",
+  "NHÌN THÔI ĐÃ THÈM",
+  "NHƯNG NHỚ NHÁ, / Ở ĐÂY CHỈ BÁN MANG VỀ",
+  "CHỖ DỪNG XE / HƠI CHẬT",
+  "ĐI XE MÁY TẠT VÀO / MUA NHANH LÀ CHUẨN",
+  "GỌI XONG CÔ GÓI / LUÔN VÀO TÚI",
+  "10 CÁI MỘT BỌC",
+  "XÁCH VỀ CẢ NHÀ / ĂN CHUNG",
+  "QUÁN BÁN CẢ NGÀY",
+  "LÚC NÀO THÈM / CŨNG CÓ",
+  "GIÁ THÌ TAO / CHẤM 10 ĐIỂM",
+  "CÒN VỊ THÌ ĐỂ / TỐI NAY TAO VỀ ĂN",
+  "RỒI BÁO / CHÚNG MÀY SAU",
+  "COMMENT CHO / TAO BIẾT",
+  "CHỖ CHÚNG MÀY / BÁNH MỲ QUE",
+  "BAO NHIÊU MỘT CHỤC?",
+  "LƯU LẠI, TAG NGAY / ĐỨA BẠN MÊ ĂN VẶT",
+  "50A NGÕ GỐC ĐỀ, / TƯƠNG MAI",
+  "35K 10 CÁI ĐẤY, / NGHE CHƯA!"
+ ],
+ "callouts": [
+  {
+   "kind": "intro",
+   "startMs": 200,
+   "endMs": 2900,
+   "title": "10 CÁI 35K",
+   "subtitle": "Chỗ khác 50K/chục"
+  },
+  {
+   "kind": "route",
+   "startMs": 8600,
+   "endMs": 10200,
+   "title": "NGÕ GỐC ĐỀ",
+   "subtitle": "Tương Mai · Hà Nội"
+  },
+  {
+   "kind": "food",
+   "startMs": 25700,
+   "endMs": 28100,
+   "title": "NƯỚNG TẠI CHỖ"
+  },
+  {
+   "kind": "food",
+   "startMs": 28300,
+   "endMs": 31300,
+   "title": "CHẤM TƯƠNG ỚT"
+  },
+  {
+   "kind": "route",
+   "startMs": 31600,
+   "endMs": 33300,
+   "title": "MANG VỀ"
+  },
+  {
+   "kind": "route",
+   "startMs": 33500,
+   "endMs": 36400,
+   "title": "XE MÁY DỪNG NHANH"
+  },
+  {
+   "kind": "route",
+   "startMs": 39900,
+   "endMs": 42000,
+   "title": "BÁN CẢ NGÀY"
+  },
+  {
+   "kind": "food",
+   "startMs": 42100,
+   "endMs": 43400,
+   "title": "GIÁ 10/10"
+  },
+  {
+   "kind": "cta",
+   "startMs": 48500,
+   "endMs": 54700,
+   "title": "HẠNH AN COOK",
+   "addressMain": "50A NGÕ GỐC ĐỀ",
+   "addressRest": "Tổ 13 · Tương Mai · Hà Nội"
+  }
+ ],
+ "sfx": [
+  {
+   "atMs": 0,
+   "file": "sfx/cc0/whoosh-ui.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 200,
+   "file": "sfx/cc0/rise-maximize.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 8600,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 8600,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 25700,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 28300,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 31600,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 31600,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 33500,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 33500,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 39900,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 39900,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 42100,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 48500,
+   "file": "sfx/cc0/select-chime.wav",
+   "volume": 0.8
+  }
+ ]
+}

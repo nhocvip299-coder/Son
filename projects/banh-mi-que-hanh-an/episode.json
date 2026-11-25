@@ -1,0 +1,15 @@
+{
+ "title": "Bánh mỳ que Hạnh An Cook — 50A ngõ Gốc Đề, tổ 13, Tương Mai, Hà Nội (mẫu Gelexia)",
+ "info": {"price": "35K/bọc 10 cái (chỗ khác 50K/chục)", "menu": "2 món: bánh mỳ que + thịt xiên nướng (80K/hộp, 8K/xiên)", "service": "chỉ bán mang về", "hours": "cả ngày", "parking": "hạn chế, xe máy dừng mua nhanh", "taste": "chưa ăn thử — không tả vị"},
+ "inputs": [
+  {"role": "footage", "path": "work/banh-mi-que/IMG_0063..0072.mov", "drive_folder_id": "1WHnjTMnJwuXEVtotAHg8z5tJKd2X0L-K"},
+  {"role": "voice", "path": "public/inputs/banh-mi-que/voice-full.wav", "note": "ghép voice.mp3 (43,2s, bị cắt cuối) + 0,15s lặng + voice-tail.mp3 (10,7s); ElevenLabs An Vu"}
+ ],
+ "derived": [
+  {"path": "work/banh-mi-que/all.mp4", "rebuild": "ffmpeg mỗi clip scale=1080:1920,fps=30 -> concat 0063,0064,0065,0066,0067,0068,0071,0072"},
+  {"path": "projects/banh-mi-que-hanh-an/plan.json + words.json", "rebuild_script": "node scripts/gelexia/build-shots.mjs projects/banh-mi-que-hanh-an"},
+  {"path": "public/inputs/banh-mi-que/base.mp4", "rebuild_script": "node scripts/gelexia/build-base.mjs projects/banh-mi-que-hanh-an/plan.json work/banh-mi-que/all.mp4 public/inputs/banh-mi-que/base.mp4 54700 60"},
+  {"path": "projects/banh-mi-que-hanh-an/project.json", "rebuild_script": "node scripts/gelexia/build-gelexia-project.mjs projects/banh-mi-que-hanh-an/gelexia-spec.json"}
+ ],
+ "outputs": ["out/banh-mi-que-hanh-an.mp4", "out/banh-mi-que-hanh-an-chay-chu.mp4"]
+}

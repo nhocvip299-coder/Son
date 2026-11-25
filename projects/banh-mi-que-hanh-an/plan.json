@@ -1,0 +1,136 @@
+{
+ "shots": [
+  {
+   "srcStartMs": 59000,
+   "srcEndMs": 62000,
+   "rate": 1.042,
+   "note": "hook dia banh + xien (0068)"
+  },
+  {
+   "srcStartMs": 66100,
+   "srcEndMs": 69900,
+   "rate": 0.984,
+   "note": "so gia - boc banh xep chong (0071)"
+  },
+  {
+   "srcStartMs": 54500,
+   "srcEndMs": 55900,
+   "rate": 1.014,
+   "note": "dem tien le - dia banh (0068)"
+  },
+  {
+   "srcStartMs": 48300,
+   "srcEndMs": 50300,
+   "rate": 1,
+   "note": "chui vao ngo (0067)"
+  },
+  {
+   "srcStartMs": 0,
+   "srcEndMs": 3000,
+   "rate": 1,
+   "note": "bien vang (0063)"
+  },
+  {
+   "srcStartMs": 3000,
+   "srcEndMs": 5600,
+   "rate": 0.992,
+   "note": "dia chi (0063)"
+  },
+  {
+   "srcStartMs": 27000,
+   "srcEndMs": 30600,
+   "rate": 1.023,
+   "note": "2 mon (0066)"
+  },
+  {
+   "srcStartMs": 43800,
+   "srcEndMs": 47600,
+   "rate": 0.984,
+   "note": "bien thit xien 8K (0067)"
+  },
+  {
+   "srcStartMs": 7000,
+   "srcEndMs": 9500,
+   "rate": 1.008,
+   "note": "nui banh (0064)"
+  },
+  {
+   "srcStartMs": 18500,
+   "srcEndMs": 21000,
+   "rate": 1.016,
+   "note": "lo nuong (0065)"
+  },
+  {
+   "srcStartMs": 62000,
+   "srcEndMs": 65300,
+   "rate": 0.994,
+   "note": "xien + tuong ot (0068)"
+  },
+  {
+   "srcStartMs": 71000,
+   "srcEndMs": 72900,
+   "rate": 0.99,
+   "note": "chi ban mang ve - goi (0072)"
+  },
+  {
+   "srcStartMs": 49800,
+   "srcEndMs": 51500,
+   "rate": 1.016,
+   "note": "dung xe may (0067, 0063)"
+  },
+  {
+   "srcStartMs": 4800,
+   "srcEndMs": 6200,
+   "rate": 1.016,
+   "note": "dung xe may (0067, 0063)"
+  },
+  {
+   "srcStartMs": 74000,
+   "srcEndMs": 76300,
+   "rate": 0.97,
+   "note": "goi vao tui (0072)"
+  },
+  {
+   "srcStartMs": 79000,
+   "srcEndMs": 80100,
+   "rate": 0.982,
+   "note": "xach ve (0072)"
+  },
+  {
+   "srcStartMs": 9500,
+   "srcEndMs": 11700,
+   "rate": 1.028,
+   "note": "ban ca ngay - nui banh (0064)"
+  },
+  {
+   "srcStartMs": 31000,
+   "srcEndMs": 32300,
+   "rate": 0.969,
+   "note": "gia 10 diem (0066)"
+  },
+  {
+   "srcStartMs": 33000,
+   "srcEndMs": 35400,
+   "rate": 0.992,
+   "note": "vi de toi bao (0066)"
+  },
+  {
+   "srcStartMs": 56000,
+   "srcEndMs": 58700,
+   "rate": 1.015,
+   "note": "comment (0068)"
+  },
+  {
+   "srcStartMs": 500,
+   "srcEndMs": 3500,
+   "rate": 0.984,
+   "note": "CTA mat tien + dia (0063, 0066)"
+  },
+  {
+   "srcStartMs": 35500,
+   "srcEndMs": 38700,
+   "rate": 0.984,
+   "note": "CTA mat tien + dia (0063, 0066)"
+  }
+ ]
+}

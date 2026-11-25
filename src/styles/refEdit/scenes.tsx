@@ -833,6 +833,219 @@ const Street: React.FC<{ title: string }> = ({ title }) => {
   );
 };
 
+// ---------- Canh vid6: CDT tang gia giua song cat lo ----------
+/** Day nha nha dau tu: bien "CAT LO" dap len, gia tut */
+const CutLoss: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const xs = [60, 300, 540];
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          {xs.map((x, i) => (
+            <g key={i}>
+              <House x={x + 20} w={180} h={170} />
+              {t > c.cut + i * 0.25 ? (
+                <g transform={`translate(${x + 110} ${GY - 330}) rotate(${-8 + i * 6})`}>
+                  <rect x="-80" y="-30" width="160" height="60" rx="8" fill="#B23A2A" stroke="#E9E2D6" strokeWidth="4" />
+                  <text x="0" y="12" textAnchor="middle" fontSize="34" fontWeight={900} fill="#fff" fontFamily="Phudu">CẮT LỖ</text>
+                </g>
+              ) : null}
+            </g>
+          ))}
+          <Arrow x0={820} y0={720} x1={900} y1={1000} p={lin(t, c.loss, 0.6)} color="#B23A2A" w={18} />
+        </g>
+      </Svg>
+      <Chip x={330} y={690} text="Ocean Park 2, 3" at={c.place} tone="gold" size={46} />
+      <Chip x={790} y={1030} text="Hàng tỷ đồng" at={c.loss} tone="red" size={40} />
+    </>
+  );
+};
+
+/** Nghich ly: nguoi mua truoc ban thu hoi von <-> CDT tang gia -> nguoi mua sau tra cao hon */
+const Paradox: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const l = pop(c.left);
+  const up = lin(t, c.up, 0.7);
+  const r = pop(c.right);
+  return (
+    <>
+      <Svg>
+        <g style={pg(l)}>
+          <Person x={150} bob={Math.sin(t * 3) * 0.3} color="#566B70" />
+          <rect x="200" y={GY - 190} width="120" height="80" rx="6" fill="#EFE8DC" stroke="#4A3B30" strokeWidth="4" />
+          <text x="260" y={GY - 140} textAnchor="middle" fontSize="30" fontWeight={900} fill="#B23A2A" fontFamily="Phudu">BÁN</text>
+          <line x1="260" y1={GY - 110} x2="260" y2={GY} stroke="#4A3B30" strokeWidth="6" />
+        </g>
+        {/* toa nha CDT + mui ten gia len */}
+        <g style={pg(pop(0.1))}>
+          <rect x="430" y={GY - 380} width="200" height="380" fill="#BAC4C9" stroke="#3E4E5E" strokeWidth="4" />
+          {Array.from({ length: 6 }, (_, i) => (
+            <rect key={i} x="455" y={GY - 350 + i * 58} width="150" height="34" fill={t > c.up ? "#E3C485" : "#A9B7C0"} />
+          ))}
+        </g>
+        <Arrow x0={530} y0={GY - 400} x1={530} y1={GY - 400 - 170 * up} p={up > 0 ? 1 : 0} color="#B4533A" w={22} />
+        <g style={pg(r)}>
+          <Person x={860} bob={Math.sin(t * 4)} color="#34495E" />
+          <g transform={`translate(920 ${GY - 110})`}>
+            <path d="M -45 0 Q -60 -80 0 -85 Q 60 -80 45 0 Z" fill="#C9A24A" stroke="#6E5220" strokeWidth="4" />
+            <text x="0" y="-26" textAnchor="middle" fontSize="40" fontWeight={900} fill="#3A2600" fontFamily="Phudu">đ</text>
+          </g>
+        </g>
+      </Svg>
+      <Chip x={220} y={770} text="Người mua trước" at={c.left} size={40} />
+      <Chip x={230} y={GY + 60} text="Bán, thu hồi vốn" at={c.leftRow} tone="dark" size={34} />
+      <Chip x={420} y={640} text="Chủ đầu tư tăng giá" at={c.up} tone="red" size={38} />
+      <Chip x={850} y={790} text="Người mua sau" at={c.right} size={40} />
+      <Chip x={850} y={GY + 60} text="Trả giá cao hơn" at={c.rightRow} tone="red" size={34} />
+    </>
+  );
+};
+
+/** Du luan mang xa hoi: dien thoai + binh luan chay + bong "Day thuyen?" */
+const Social: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const comments = ["Giá vậy ai mua?", "Chủ đầu tư biết trước rồi", "Đang cắt lỗ mà tăng giá?", "Mua sau chịu thiệt", "Hợp lý thôi", "Chờ thêm xem sao"];
+  const scroll = (t * 70) % (comments.length * 90);
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          <rect x="90" y="640" width="330" height="430" rx="40" fill="#1E2830" stroke="#C9A24A" strokeWidth="4" />
+          <rect x="108" y="672" width="294" height="380" rx="20" fill="#E9E2D6" />
+          <rect x="215" y="652" width="80" height="10" rx="5" fill="#3E4E5E" />
+          <defs>
+            <clipPath id="phone"><rect x="108" y="672" width="294" height="380" rx="20" /></clipPath>
+          </defs>
+          <g clipPath="url(#phone)">
+            {[...comments, ...comments].map((txt, i) => {
+              const y = 690 + i * 90 - scroll;
+              return (
+                <g key={i}>
+                  <circle cx="136" cy={y + 26} r="16" fill={["#A9503C", "#4F7D62", "#34495E"][i % 3]} />
+                  <rect x="160" y={y + 6} width="228" height="42" rx="14" fill="#fff" stroke="#C8BCA8" strokeWidth="2" />
+                  <text x="172" y={y + 34} fontSize="19" fill="#2A2418" fontFamily="Be Vietnam Pro" fontWeight={600}>{txt}</text>
+                </g>
+              );
+            })}
+          </g>
+          {/* like / dislike bay len */}
+          {Array.from({ length: 6 }, (_, i) => {
+            const ph = (t * 0.6 + i / 6) % 1;
+            const good = i % 2 === 0;
+            return (
+              <g key={i} transform={`translate(${470 + (i % 3) * 70} ${GY - 40 - ph * 330})`} opacity={1 - ph}>
+                <circle r="26" fill={good ? "#4F7D62" : "#B23A2A"} />
+                <text y="10" textAnchor="middle" fontSize="28" fill="#fff" fontFamily="Phudu" fontWeight={900}>{good ? "+" : "−"}</text>
+              </g>
+            );
+          })}
+        </g>
+      </Svg>
+      <Chip x={300} y={GY + 60} text="Ý kiến trái chiều" at={c.mixed} tone="dark" size={40} />
+      <Chip x={700} y={870} text="Đẩy thuyền?" at={c.pump} tone="red" size={56} />
+      <Chip x={700} y={975} text="Giúp nhà đầu tư cũ thoát hàng?" at={c.exit} tone="dark" size={28} />
+    </>
+  );
+};
+
+/** Binh chon ket: HOP LY hay KHONG? con tro nhay qua lai */
+const Vote: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const a = pop(0.1);
+  const b = pop(0.25);
+  const cx = 300 + (Math.sin(t * 2.2) * 0.5 + 0.5) * 480;
+  const btn = (x: number, txt: string, col: string, k: number, hot: boolean) => (
+    <div style={{ position: "absolute", left: x, top: 900, translate: "-50% -50%", scale: String(k * (hot ? 1.08 : 1)), padding: "26px 40px", borderRadius: 26, background: col, border: "4px solid #E9E2D6", boxShadow: hot ? "0 0 30px rgba(201,162,74,0.9)" : "0 10px 22px rgba(0,0,0,0.3)", fontFamily: RT.font.punch, fontWeight: 900, fontSize: 52, color: "#fff", whiteSpace: "nowrap" }}>
+      {txt}
+    </div>
+  );
+  return (
+    <>
+      {btn(290, "✓ HỢP LÝ", "linear-gradient(180deg,#5F8B6E,#3F6650)", a, cx < 540)}
+      {btn(790, "✕ KHÔNG", "linear-gradient(180deg,#B4533A,#8E3B28)", b, cx >= 540)}
+      <Svg>
+        <g transform={`translate(${cx} 960)`} opacity={a}>
+          <path d="M 0 0 L 0 70 L 18 54 L 32 86 L 44 80 L 30 50 L 54 50 Z" fill="#fff" stroke="#1E2830" strokeWidth="4" />
+        </g>
+      </Svg>
+      <Chip x={330} y={760} text="Tăng giá lúc này?" at={0.05} tone="gold" size={48} />
+    </>
+  );
+};
+
+const PriceCompare: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const a = interpolate(t, [c.left, c.left + 0.6], [0, 1], { ...C, easing: Easing.out(Easing.cubic) });
+  const b = interpolate(t, [c.up, c.up + 0.8], [0, 1], { ...C, easing: Easing.out(Easing.back(1.4)) });
+  return (
+    <Panel title="Mức giá">
+      <Svg>
+        <rect x="250" y={LY + 290 - 130 * a} width="160" height={130 * a} rx="8" fill="#8FA3A6" />
+        <rect x="670" y={LY + 290 - 210 * b} width="160" height={210 * b} rx="8" fill={RED} />
+        <line x1="160" y1={LY + 292} x2="920" y2={LY + 292} stroke="#8FA3A6" strokeWidth="3" />
+      </Svg>
+      <div style={{ ...lbl(30), left: 330, top: LY + 75 }}>Mua trước</div>
+      <div style={{ ...lbl(30, "#F0A08F"), left: 750, top: LY + 75 }}>Mua sau</div>
+    </Panel>
+  );
+};
+
+const LossChart: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const k = lin(t, 0.4, Math.max(1, (c.loss ?? 6) - 0.4));
+  const n = 16;
+  const pts = Array.from({ length: n }, (_, i) => [120 + (i * 840) / (n - 1), LY + 110 + (i / (n - 1)) * 160 * k + Math.sin(i * 1.7) * 10]);
+  const shown = pts.slice(0, Math.max(2, Math.ceil(k * n)));
+  return (
+    <Panel title="Giá bán lại (cắt lỗ)">
+      <Svg>
+        <polyline points={shown.map((q) => q.join(",")).join(" ")} fill="none" stroke={RED} strokeWidth="10" strokeLinejoin="round" strokeLinecap="round" />
+        <circle cx={shown[shown.length - 1][0]} cy={shown[shown.length - 1][1]} r="14" fill={RED} stroke="#fff" strokeWidth="4" />
+      </Svg>
+    </Panel>
+  );
+};
+
+const Sentiment: React.FC = () => {
+  const { t } = useSec();
+  const v = 0.5 + Math.sin(t * 1.3) * 0.18 + Math.sin(t * 3.1) * 0.06;
+  return (
+    <Panel title="Dư luận">
+      <div style={{ ...lbl(30, "#A9D3B8"), left: 200, top: LY + 120 }}>Đồng tình</div>
+      <div style={{ ...lbl(30, "#F0A08F"), left: 880, top: LY + 120 }}>Phản đối</div>
+      <div style={{ position: "absolute", left: 120, top: LY + 175, width: 840, height: 60, borderRadius: 30, overflow: "hidden", display: "flex" }}>
+        <div style={{ width: `${v * 100}%`, background: GREEN }} />
+        <div style={{ flex: 1, background: RED }} />
+      </div>
+      <div style={{ ...lbl(30), left: 120 + v * 840, top: LY + 270 }}>▲</div>
+    </Panel>
+  );
+};
+
+const VoteBars: React.FC = () => {
+  const { t } = useSec();
+  const v = 0.5 + Math.sin(t * 1.6) * 0.15;
+  return (
+    <Panel title="Anh chị chọn bên nào?">
+      <Svg>
+        <rect x="140" y={LY + 120} width={800 * v} height="56" rx="10" fill={GREEN} />
+        <rect x="140" y={LY + 200} width={800 * (1 - v)} height="56" rx="10" fill={RED} />
+      </Svg>
+      <div style={{ ...lbl(30), left: 140 + 800 * v + 60, top: LY + 148 }}>Hợp lý</div>
+      <div style={{ ...lbl(30), left: 140 + 800 * (1 - v) + 70, top: LY + 228 }}>Không</div>
+    </Panel>
+  );
+};
+
+Object.assign(SCENES, { cutLoss: CutLoss, paradox: Paradox, social: Social, vote: Vote });
+
 const LOWER: Record<string, React.FC<{ c: Cues }>> = {
   landTax: Timeline,
   taxCalc: Formula,
@@ -843,6 +1056,10 @@ const LOWER: Record<string, React.FC<{ c: Cues }>> = {
   shopVs: ShopBars,
   criteria: () => <Street title="Mật độ dân cư - lưu thông" />,
   goodRE: Meters,
+  cutLoss: LossChart,
+  paradox: PriceCompare,
+  social: () => <Sentiment />,
+  vote: () => <VoteBars />,
 };
 
 export const IllustratedScene: React.FC<{ name: string; cues?: Cues }> = ({ name, cues = {} }) => {

@@ -71,3 +71,12 @@ export const RT = {
 
 /** Bong + phat sang chu trang [GOC: bong toi mem phia duoi + quang trang nhe] */
 export const whiteGlow = "0 3px 5px rgba(0,0,0,0.6), 0 0 1px rgba(0,0,0,0.8), 0 0 14px rgba(255,255,255,0.45), 0 0 28px rgba(255,255,255,0.22)"; // [SUA] vien net + phat sang trang
+
+/** [NGUOI DUNG] Mau chu NHAN (thay chu do video mau). "moc" = hop menh Moc cua nguoi dung: xanh luc ngoc (ban menh Moc),
+ *  vien xanh than dam (Thuy sinh Moc). Doi ACCENT_MODE = "do" de quay ve mau do goc. */
+const ACCENTS = {
+  do: { grad: ["#FF7A63", "#FF3A22", "#F62A15", "#C91405"], edge: "#2A0000", glow: "255,60,35", glow2: "246,42,21", burst: "255,120,90" },
+  moc: { grad: ["#D4FFB0", "#6CF08A", "#22C55E", "#0E8A43"], edge: "#03261A", glow: "60,230,120", glow2: "20,190,90", burst: "150,255,170" },
+} as const;
+export const ACCENT_MODE: keyof typeof ACCENTS = "moc";
+export const ACCENT = ACCENTS[ACCENT_MODE];

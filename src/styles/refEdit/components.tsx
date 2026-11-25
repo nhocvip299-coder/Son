@@ -7,7 +7,7 @@
 import React from "react";
 import { AbsoluteFill, Easing, Sequence, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig } from "remotion";
 import { Audio } from "@remotion/media";
-import { RT, whiteGlow } from "./tokens";
+import { RT, whiteGlow, ACCENT } from "./tokens";
 
 const C = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const easeOut = Easing.out(Easing.cubic);
@@ -53,10 +53,10 @@ export const redText = (size: number, font: string = RT.font.punch): React.CSSPr
   whiteSpace: "nowrap",
   color: "transparent",
   // [SUA theo nguoi dung "text net cang"] mau dac hon (it loi hong), vien toi sat canh, quang sang hep -> canh chu sac
-  backgroundImage: `linear-gradient(180deg, #FF7A63 0%, #FF3A22 38%, ${RT.color.red} 62%, #C91405 100%)`,
+  backgroundImage: `linear-gradient(180deg, ${ACCENT.grad[0]} 0%, ${ACCENT.grad[1]} 38%, ${ACCENT.grad[2]} 62%, ${ACCENT.grad[3]} 100%)`,
   WebkitBackgroundClip: "text",
   backgroundClip: "text",
-  filter: `drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 0.6px #2A0000) drop-shadow(0 0 8px rgba(255,60,35,0.95)) drop-shadow(0 0 22px rgba(246,42,21,0.6)) drop-shadow(0 4px 6px rgba(0,0,0,0.6))`, // [SUA] net + phat sang
+  filter: `drop-shadow(0 0 0.6px ${ACCENT.edge}) drop-shadow(0 0 0.6px ${ACCENT.edge}) drop-shadow(0 0 0.6px ${ACCENT.edge}) drop-shadow(0 0 8px rgba(${ACCENT.glow},0.9)) drop-shadow(0 0 22px rgba(${ACCENT.glow2},0.55)) drop-shadow(0 4px 6px rgba(0,0,0,0.6))`, // [SUA] net + phat sang
 });
 
 /** Chu vang dam rong [GOC: #FACF1E] */
@@ -295,7 +295,7 @@ export const SetupPunch: React.FC<{
       ) : null}
       <Place y={y + (setup ? 0.058 : 0.03)} style={out > 0 ? { scale: String(1 + out * 0.18), opacity: 1 - out * out, filter: `brightness(${1 + out * 1.4}) blur(${out * 9}px)` } : undefined}>
         {out > 0 ? (
-          <div style={{ position: "absolute", left: "50%", top: "50%", width: 900, height: 160, translate: "-50% -50%", borderRadius: "50%", background: "radial-gradient(ellipse, rgba(255,120,90,0.9), rgba(246,42,21,0.35) 45%, transparent 70%)", opacity: Math.sin(out * Math.PI), scale: `${0.6 + out * 0.8} ${0.6 + out * 0.3}`, mixBlendMode: "screen" }} />
+          <div style={{ position: "absolute", left: "50%", top: "50%", width: 900, height: 160, translate: "-50% -50%", borderRadius: "50%", background: `radial-gradient(ellipse, rgba(${ACCENT.burst},0.9), rgba(${ACCENT.glow2},0.35) 45%, transparent 70%)`, opacity: Math.sin(out * Math.PI), scale: `${0.6 + out * 0.8} ${0.6 + out * 0.3}`, mixBlendMode: "screen" }} />
         ) : null}
         {punchMode === "type" ? (
           <Typed text={punch} at={punchAt} style={pst} cps={punchCps} />

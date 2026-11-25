@@ -23,3 +23,4 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 - Tài nguyên không lên Git (SFX pack, font Nexa): gói zip tạo bằng `scripts/refedit/pack-assets.sh`, cài bằng `install-assets.sh`.
 - Cảnh trám: dùng cảnh minh họa động tông trầm sang (scenes.tsx), không nền đen; đoạn liếc kịch bản → cảnh trám (gaze.py). Xem thử nhanh: `scripts/refedit/_preview.mjs`.
 - Chữ: viền tối sát cạnh (nét căng) + GIỮ quầng phát sáng; chữ đỏ có hiệu ứng thoát (lóe sáng, phóng to, tan nhòe 0.3s cuối).
+- Màu chữ nhấn = XANH LỤC NGỌC hợp mệnh Mộc của người dùng (`ACCENT_MODE = "moc"` trong tokens.ts), thay chữ đỏ video mẫu.

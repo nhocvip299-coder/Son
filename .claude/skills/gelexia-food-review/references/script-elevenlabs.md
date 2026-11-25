@@ -28,6 +28,22 @@ Yếu tố TikTok: từ khóa món/giá/phường/thành phố được **đọc
    - **Trải nghiệm cá nhân** của người review.
 Checklist trước khi giao kịch bản: tên quán · địa chỉ đọc 2 lần · chỉ đường · giá + topping · giờ mở · để xe · không khí · dịch vụ · vị (đã xác nhận) · mẹo · trải nghiệm cá nhân · câu hỏi comment · lưu/tag.
 
+## 2c. Nhịp dựng của clip mẫu được TikTok đề xuất (Sơn gửi 25/11: anxapmienbac "Cơm tấm sườn khói", 65s, ~40,4K view, 629 tim, 29 bình luận)
+| Giây | Hình | Lời |
+|---|---|---|
+| 0–7 | Lái xe, cổng/đường (POV kính lái) | Hook than thở + cam kết thật ("ăn dở là nói dở") |
+| 7–21 | Vẫn lái xe | Kể lộ trình có tên đường + thời tiết + "thèm thì vẫn đi" |
+| 21–25 | Mặt tiền, **nhãn vàng địa chỉ** | "Ơ kìa đến nơi rồi" + đọc địa chỉ lần 1 |
+| 25–28 | Trong quán đông khách | Nghi ngờ "để xem có gì mà food review khen" |
+| 28–34 | Bếp/nguyên liệu (nướng than, trứng) | Soi cách làm |
+| 34–44 | Đĩa món nhìn từ trên | Liệt kê "…này, …này" + phán giá |
+| 44–52 | Ăn | Cà khịa + phản ứng |
+| 52–58 | Trong quán/chỗ để xe | Công nhận + chấm 9/10 |
+| 58–65 | Đi ra, quay lại địa chỉ | "Chúng mày ở … nhớ địa chỉ này" + đọc địa chỉ lần 2 |
+- Chỉ ~13 lần cắt cứng trong 65s: cảnh dài, POV liền mạch; **20s đầu toàn cảnh lái xe** nhưng giữ người xem bằng lời.
+- Chữ: phụ đề trắng IN HOA nhỏ ở 1/4 trên theo từng cụm, từ khóa cam; địa chỉ nhãn vàng.
+- Caption: `TÊN QUÁN ĐỊA CHỈ ĐẦY ĐỦ` + 5 hashtag (`#tenquan #anngoncungtiktok #foodreview #mon+khuvuc #mon+vung`).
+
 ## 3. Giọng điệu
 - Xưng **tao – chúng mày**, bình dân, cà khịa. Các tông đã dùng: *chua – hỗn – đanh đá* (nữ), *ngông cuồng*.
 - Hạn chế chửi thề (một chữ "đéo" là tối đa; báo Sơn có thể đổi để tránh bị bóp tương tác).

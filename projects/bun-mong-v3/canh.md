@@ -17,3 +17,4 @@ Yêu cầu: cắt về 60s theo tiêu chí; Sơn sẽ gửi kịch bản mẫu.
 | 3:12–3:19 | Vét sạch bát |
 
 Sơn bổ sung 25/11: trời **nắng nhưng lạnh**; lộ trình: xuất phát **khu chung cư Louis** → đi lòng vòng qua **ngã tư Tam Trinh – Hoàng Mai** → đi thẳng vào **đường Hoàng Mai** → quán **bên tay trái**, số **29 lô 2 Đền Lừ 1, Hoàng Mai** (lần trước ghi 29A — cần xác nhận).
+Sơn chốt: bát ăn **40K**.

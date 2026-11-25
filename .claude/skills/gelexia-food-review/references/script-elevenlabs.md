@@ -55,6 +55,14 @@ Checklist trước khi giao kịch bản: tên quán · địa chỉ đọc 2 l�
 - Hạn chế chửi thề (một chữ "đéo" là tối đa; báo Sơn có thể đổi để tránh bị bóp tương tác).
 - Không tự thêm chuyện người đi cùng/nếm thử nếu footage và Sơn không xác nhận.
 
+## 3b. Giọng điệu chính chủ của Sơn (mẫu tự viết 25/11, Cơm tấm sườn khói, 22,7s ≈ 4,3 từ/giây, không ngắt nghỉ)
+> "Vãi nồi, hôm nay lại mò đi ăn cơm tấm tận Hoàng Mai, xuất phát từ chợ Vĩnh Hưng phi ra ngã ba Vĩnh Hưng rẽ gấp vào đường Vĩnh Hoàng, cứ thế vít ga chạy thẳng qua hồ Vĩnh Hoàng, đến đèn đỏ Tam Trinh – Hoàng Mai thì đánh lái sang phải, cứ thế đâm kịch dốc, đ** mẹ tưởng xa xôi thế nào, chạy thêm có 300 mét… nhìn ngay bên tay phải thấy cái biển tròn cơm tấm sườn khói, tưởng xa hóa ra gần vãi đái."
+- Ngôi kể: tự sự, nói với chính mình/người xem, không cần "tao–chúng mày" ở mọi câu.
+- **Chỉ đường cực chi tiết từng chặng**: điểm xuất phát → ngã ba/ngã tư → tên đường → mốc (hồ, đèn đỏ) → hướng rẽ (trái/phải) → khoảng cách (300 m) → **đặc điểm nhận diện quán** (biển tròn, bên tay phải).
+- Động từ lái xe mạnh: phi, rẽ gấp, vít ga, đánh lái, đâm kịch dốc.
+- Cảm thán bình dân tục mạnh ("vãi nồi", "vãi đái", "đ** mẹ") đặt ở **mở đầu và điểm bất ngờ** ("tưởng xa hóa ra gần"). Theo đúng mức Sơn dùng; nhắc rủi ro bị hạn chế phân phối khi chửi thề nặng, đề xuất phương án nhẹ hơn nếu Sơn muốn.
+- Nhịp: một hơi liền mạch, câu ngắn nối bằng "cứ thế…", "thì…", không "…".
+
 ## 4. Viết cho máy đọc
 - **Số và mã viết bằng chữ**: "mười lăm nghìn", "hai chín A", "Ca Tê mười hai", "tổ mười ba". Chữ trên màn hình hiển thị lại dạng 15K / 29A / KT12 (sửa ở `asr-fixes.json`).
 - Độ dài mục tiêu **50–65 giây** (~4,5–5 từ/giây ở Speed 1.1–1.2).

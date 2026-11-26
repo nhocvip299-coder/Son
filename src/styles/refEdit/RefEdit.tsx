@@ -61,7 +61,7 @@ export type RefItem = Base &
   (
     | { type: "setupPunch"; setup?: string; punch: string; setupAt?: number; punchAt?: number; setupMode?: "blur" | "type"; punchMode?: "rise" | "type"; punchColor?: "red" | "yellow"; y?: number; exit?: ExitMode }
     | { type: "stepBadge"; n: number; label: string; labelAt?: number; exit?: ExitMode }
-    | { type: "list"; title: string; titleAt?: number; items: ListItem[]; layout?: "zigzag" | "stack"; upper?: boolean; exit?: ExitMode }
+    | { type: "list"; title: string; titleAt?: number; items: ListItem[]; layout?: "zigzag" | "stack"; upper?: boolean; exit?: ExitMode; y?: number }
     | { type: "cards"; cards: Array<{ at: number; lines: CardLine[] }>; tilt3d?: boolean }
     | { type: "pills"; pills: Array<{ text: string; at: number }> }
     | { type: "emphasis"; text: string; at?: number; y?: number; exit?: ExitMode }

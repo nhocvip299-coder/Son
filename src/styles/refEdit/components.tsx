@@ -426,7 +426,8 @@ export const GlassPill: React.FC<{ text: string; y: number; rot?: number; at?: n
 // ---------- Danh sach vi du ----------
 export type ListItem = { text: string; at: number };
 /** Tieu de go ky tu + muc truot len/nhoe->net, bo cuc zig-zag hoac doc [GOC 14.4-20.6, 32.9-36.3] */
-export const ExampleList: React.FC<{ title: string; titleAt?: number; items: ListItem[]; layout?: "zigzag" | "stack"; upper?: boolean; exit?: ExitMode }> = ({
+export const ExampleList: React.FC<{ title: string; titleAt?: number; items: ListItem[]; layout?: "zigzag" | "stack"; upper?: boolean; exit?: ExitMode; y?: number }> = ({
+  y: ty = RT.y.listTitle, // [SUA] ha danh sach xuong duoi cam khi mat nam giua khung
   title,
   titleAt = 0,
   items,
@@ -437,14 +438,14 @@ export const ExampleList: React.FC<{ title: string; titleAt?: number; items: Lis
   const ex = useExit(exit);
   return (
     <AbsoluteFill style={{ opacity: ex.k, filter: ex.blur ? `blur(${ex.blur}px)` : undefined }}>
-      <Place y={RT.y.listTitle}>
+      <Place y={ty}>
         <Typed text={title} at={titleAt} cps={90} style={whiteText(RT.size.listTitle)} />
       </Place>
       {items.map((it, i) => {
         const zig = layout === "zigzag";
         // [GOC] muc dau ~0.30H, cach nhau ~0.067H; zig-zag x 0.15/0.42, xep doc x 0.2
         const x = zig ? (i % 2 === 0 ? 0.12 : 0.38) : 0.16;
-        const y = (zig ? 0.45 : 0.45) + i * (zig ? 0.06 : 0.065);
+        const y = ty + 0.07 + i * (zig ? 0.06 : 0.058);
         return (
           <Place key={i} x={x} y={y} anchor="left">
             {useReveal().mode === "type" ? (

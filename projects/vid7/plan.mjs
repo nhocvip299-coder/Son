@@ -71,7 +71,7 @@ const items = [
   it("flare", 1.5, 1.9, { y: 0.66 }),
   scene("specSheet", 2.5, 10.4, { front: 3.5, area: 5.2, floors: 6.2, road: 8.4, walk: 10.0 }, [[3.5, "whoosh"], [5.2, "card"], [6.2, "drop"], [8.4, "rowGood"], [10.0, "rowGood"]]),
   sp(10.45, 14.8, "Cơ hội cuối cùng cho", "AI ĐANG CÓ VOUCHER", 12.9, { why: "doi tuong khan gia -> zoom" }),
-  it("list", 14.85, 18.7, { title: "Dòng sản phẩm", titleAt: 0, layout: "stack", items: [{ text: "Mặt tiền lớn", at: rel(14.85, 15.5) }, { text: "Đường rộng", at: rel(14.85, 17.0) }, { text: "Gần khu trung tâm", at: rel(14.85, 17.8) }], why: "canh that di bo doc day nha" }),
+  it("list", 14.85, 18.7, { title: "Dòng sản phẩm", titleAt: 0, layout: "stack", y: 0.575, items: [{ text: "Mặt tiền lớn", at: rel(14.85, 15.5) }, { text: "Đường rộng", at: rel(14.85, 17.0) }, { text: "Gần khu trung tâm", at: rel(14.85, 17.8) }], why: "canh that di bo doc day nha" }),
   sp(18.75, 21.0, "Vinhomes Ocean Park 2", "PHÂN KHU KINH ĐÔ", 20.2, { why: "dia diem" }),
   scene("mixedUse", 21.0, 28.0, { shop: 23.1, stay: 26.0 }, [[23.1, "card"], [26.0, "card"]]),
   scene("voucher", 28.0, 39.6, { price: 33.6, voucher: 34.8, policy: 36.3, newPrice: 38.8 }, [[33.6, "card"], [34.8, "whoosh"], [36.3, "rowGood"], [38.8, "punch"]]),

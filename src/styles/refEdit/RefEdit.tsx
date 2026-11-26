@@ -63,7 +63,7 @@ export type RefItem = Base &
     | { type: "stepBadge"; n: number; label: string; labelAt?: number; exit?: ExitMode }
     | { type: "list"; title: string; titleAt?: number; items: ListItem[]; layout?: "zigzag" | "stack"; upper?: boolean; exit?: ExitMode; y?: number }
     | { type: "cards"; cards: Array<{ at: number; lines: CardLine[] }>; tilt3d?: boolean }
-    | { type: "pills"; pills: Array<{ text: string; at: number }> }
+    | { type: "pills"; pills: Array<{ text: string; at: number }>; ys?: [number, number] }
     | { type: "emphasis"; text: string; at?: number; y?: number; exit?: ExitMode }
     | { type: "bigNumeral"; num: string; line1: string; line2?: string; at?: number; dimAt?: number; exit?: ExitMode }
     | { type: "warning"; head: string; sub?: string; at?: number; subAt?: number; color?: "yellow" | "red"; y?: number; exit?: ExitMode }
@@ -204,7 +204,7 @@ const renderItem = (it: RefItem) => {
       return (
         <>
           {it.pills.map((p, i) => (
-            <GlassPill key={i} text={p.text} at={p.at} y={i === 0 ? RT.y.pill1 : RT.y.pill2} rot={i === 0 ? -5 : -7} x={0.47} />
+            <GlassPill key={i} text={p.text} at={p.at} y={it.ys ? it.ys[i % 2] : i === 0 ? RT.y.pill1 : RT.y.pill2} rot={i === 0 ? -5 : -7} x={0.47} />
           ))}
         </>
       );

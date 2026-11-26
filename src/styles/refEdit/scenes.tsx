@@ -1258,6 +1258,116 @@ const Countdown: React.FC<{ c: Cues }> = ({ c }) => {
 
 Object.assign(SCENES, { specSheet: SpecSheet, mixedUse: MixedUse, voucher: Voucher, deadline: Deadline });
 
+// ---------- Canh vid8: lien ke Co Xanh 52m2 ----------
+/** Ban do vi tri: ghim can + duong noi toi chung cu Masteri, truong tieu hoc */
+const Location: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const home = { x: 300, y: 900 };
+  const poi = [
+    { x: 760, y: 760, at: c.masteri, label: "Chung cư Masteri", col: "#34495E" },
+    { x: 720, y: 1000, at: c.school, label: "Trường tiểu học", col: "#4F7D62" },
+  ];
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)} opacity={0.9}>
+          {/* luoi duong ban do */}
+          <rect x="60" y="680" width="960" height="400" rx="26" fill="#EFE8DC" stroke="#C8BCA8" strokeWidth="3" />
+          {[760, 880, 1000].map((y) => <line key={y} x1="60" y1={y} x2="1020" y2={y} stroke="#D8CDBB" strokeWidth="16" />)}
+          {[220, 440, 640, 860].map((x) => <line key={x} x1={x} y1="680" x2={x} y2="1080" stroke="#D8CDBB" strokeWidth="16" />)}
+          <path d="M 60 1040 Q 300 980 560 1050 T 1020 1000" stroke="#A9B7C0" strokeWidth="26" fill="none" opacity={0.8} />
+        </g>
+        {poi.map((q, i) => {
+          const k = lin(t, q.at, 0.6);
+          return k > 0 ? (
+            <g key={i}>
+              <line x1={home.x} y1={home.y} x2={home.x + (q.x - home.x) * k} y2={home.y + (q.y - home.y) * k} stroke="#B4533A" strokeWidth="7" strokeDasharray="18 12" strokeDashoffset={-t * 60} />
+              <g transform={`translate(${q.x} ${q.y}) scale(${pop(q.at + 0.4)})`}>
+                <rect x="-46" y="-90" width="92" height="90" rx="10" fill={q.col} stroke="#fff" strokeWidth="5" />
+                {i === 0 ? [0, 1, 2].map((r) => <rect key={r} x="-30" y={-78 + r * 26} width="60" height="14" fill="#E3C485" />) : <polygon points="-36,-62 0,-90 36,-62" fill="#E3C485" />}
+              </g>
+            </g>
+          ) : null;
+        })}
+        <g transform={`translate(${home.x} ${home.y - 20 * Math.abs(Math.sin(t * 3)) * (t < 1.2 ? 1 : 0.3)})`}>
+          <path d="M 0 0 C -50 -60 -50 -130 0 -130 C 50 -130 50 -60 0 0 Z" fill="#B23A2A" stroke="#fff" strokeWidth="6" />
+          <circle cx="0" cy="-85" r="20" fill="#fff" />
+        </g>
+      </Svg>
+      <Chip x={home.x} y={home.y + 60} text="Căn Cọ Xanh" at={0.2} tone="gold" size={40} />
+      {poi.map((q, i) => <Chip key={i} x={q.x} y={q.y + 45} text={q.label} at={q.at + 0.4} tone="dark" size={32} />)}
+    </>
+  );
+};
+
+/** Khan hiem: day nha, da so xam "da ban", vai can nho sang vang -> dau RAT HIEM */
+const Scarcity: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const n = 9;
+  const hot = [2, 6];
+  const sold = lin(t, c.small, 1.6);
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          {Array.from({ length: n }, (_, i) => {
+            const x = 40 + i * 110;
+            const isHot = hot.includes(i);
+            const grey = !isHot && sold > i / n;
+            const h = isHot ? 200 : 260;
+            return (
+              <g key={i}>
+                <rect x={x} y={GY - h} width={isHot ? 70 : 100} height={h} fill={isHot && t > c.small ? "#E3C485" : grey ? "#B9B4AA" : "#EFE8DC"} stroke="#3E4E5E" strokeWidth="3" />
+                {Array.from({ length: 4 }, (_, r) => <rect key={r} x={x + 12} y={GY - h + 16 + r * (h / 4.4)} width={(isHot ? 70 : 100) - 24} height={h / 8} fill={grey ? "#9E9A92" : "#A9B7C0"} />)}
+                {isHot && t > c.small ? <circle cx={x + 35} cy={GY - h - 24} r={12 + Math.sin(t * 6) * 3} fill="#C9A24A" /> : null}
+              </g>
+            );
+          })}
+        </g>
+      </Svg>
+      <Chip x={330} y={720} text="Diện tích 48 – 52m²" at={c.small} tone="gold" size={42} />
+      <Stamp x={560} y={860} text="RẤT HIẾM" at={c.rare} size={80} />
+    </>
+  );
+};
+
+const SpecTable52: React.FC<{ c: Cues }> = ({ c }) => {
+  const rows: Array<[string, string, number]> = [["Diện tích", "52m²", 0.3], ["Xây dựng", "5 tầng", 0.5], ["Mặt đường", "8m", 0.7], ["Vỉa hè", "4m mỗi bên", 0.9]];
+  const pop = usePop();
+  return (
+    <Panel title="Căn liền kề Cọ Xanh">
+      {rows.map(([k, v, at], i) => {
+        const q = pop(at);
+        return (
+          <div key={k} style={{ position: "absolute", left: 120 + (i % 2) * 450, top: LY + 110 + Math.floor(i / 2) * 80, display: "flex", gap: 18, alignItems: "center", opacity: Math.min(1, q * 1.5) }}>
+            <span style={{ fontFamily: RT.font.punch, fontWeight: 700, fontSize: 32, color: "#AFC0C2" }}>{k}</span>
+            <span style={{ fontFamily: RT.font.punch, fontWeight: 900, fontSize: 40, color: GOLD }}>{v}</span>
+          </div>
+        );
+      })}
+    </Panel>
+  );
+};
+
+const StockBar: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const k = lin(t, c.small, Math.max(0.6, c.rare - c.small));
+  return (
+    <Panel title="Quỹ căn diện tích nhỏ">
+      <div style={{ position: "absolute", left: 120, top: LY + 150, width: 840, height: 50, borderRadius: 25, background: "rgba(255,255,255,0.12)", overflow: "hidden" }}>
+        <div style={{ width: `${(1 - k * 0.88) * 100}%`, height: "100%", background: k > 0.7 ? RED : GOLD }} />
+      </div>
+      <div style={{ ...lbl(30), left: 540, top: LY + 260 }}>{k > 0.95 ? "Còn rất ít" : "Đang giảm nhanh"}</div>
+    </Panel>
+  );
+};
+
+Object.assign(SCENES, { location: Location, scarcity: Scarcity });
+
 const LOWER: Record<string, React.FC<{ c: Cues }>> = {
   landTax: Timeline,
   taxCalc: Formula,
@@ -1276,6 +1386,8 @@ const LOWER: Record<string, React.FC<{ c: Cues }>> = {
   mixedUse: () => <Street title="Mặt đường kinh doanh" />,
   voucher: PriceBars,
   deadline: Countdown,
+  location: SpecTable52,
+  scarcity: StockBar,
 };
 
 export const IllustratedScene: React.FC<{ name: string; cues?: Cues }> = ({ name, cues = {} }) => {

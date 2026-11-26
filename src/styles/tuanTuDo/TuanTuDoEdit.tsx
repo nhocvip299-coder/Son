@@ -38,6 +38,8 @@ export type TtdPlan = {
   captionMode?: "karaoke" | "wordbyword";
   items: TtdItem[];
   sfxVolume?: number;
+  /** Mac dinh false: KHONG co SFX cho chu (theo yeu cau nguoi dung + kenh goc khong dung). Chi giu tieng chuyen canh vet muc. */
+  textSfx?: boolean;
 };
 
 export const ttdPlanDurationMs = (p: TtdPlan) => p.segments.reduce((a, s) => a + s.srcEndMs - s.srcStartMs, 0);
@@ -59,6 +61,7 @@ export const TuanTuDoEdit: React.FC<{ plan: TtdPlan }> = ({ plan }) => {
   // SFX [UD]: kenh goc gan nhu khong co nhac nen, SFX thua -> chi dat o cac diem nhan (xem style-spec.md §5)
   const cues: SfxCue[] = plan.items.flatMap((it): SfxCue[] => {
     if (it.type === "ink") return [{ frame: toF(it.atMs) - f30(7), sfx: "swish", volume: 0.9 }];
+    if (!plan.textSfx) return [];
     const at = toF(it.startMs);
     switch (it.type) {
       case "hook":

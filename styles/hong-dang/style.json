@@ -4,7 +4,7 @@
   "status": "calibrating",
   "description": "Đang hiệu chỉnh từ 2 video mẫu (reference/). Xem .claude/skills/mau-hong-dang và references/style-spec.md. Màu/vị trí đã xác minh, font ước lượng.",
   "theme": {
-    "fontHeadline": "geo",
+    "fontHeadline": "phudu",
     "fontCaption":"phudu",
     "text": "#FFFFFF",
     "accent": "#04EFFB",

@@ -5,6 +5,7 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 ## Yêu cầu cố định của người dùng (bắt buộc áp dụng)
 - **Mỗi lần dựng/chỉnh sửa video: luôn xuất thêm bản "chạy chữ từng chữ"** (phụ đề hiện từng từ đang nói — `WordByWord` trong `src/styles/textPresets/capcut/`), bên cạnh bản thường.
 - Chữ hiệu ứng phải giống mẫu CapCut: đủ độ bóng/phát sáng, chuyển động mượt (có vào + thoát), **sound effect phải nghe rõ** trên giọng nói (kiểm bằng đo năng lượng cao tần quanh mốc SFX).
+- Mẫu Tuấn Tự Do: **không dùng hiệu ứng âm thanh cho chữ** (chỉ giữ tiếng chuyển cảnh).
 - Gửi bản xem nhanh (~60 MB) qua SendUserFile; bản đầy đủ để trong `out/`.
 - Không sửa/xóa file gốc; video gốc/mẫu không đưa lên Git.
 

@@ -12,6 +12,7 @@ import { CapcutEdit, ccPlanDurationMs, type CcEditPlan } from "./styles/textPres
 import { HongDangEdit, hdPlanDurationMs, type HdPlan } from "./styles/hongDang/HongDangEdit";
 import { TuanTuDoEdit, ttdPlanDurationMs, type TtdPlan } from "./styles/tuanTuDo/TuanTuDoEdit";
 import { TTD_VERIFY_PLAN } from "./styles/tuanTuDo/Verify";
+import { ReviewEdit, reviewPlanDurationMs, type ReviewPlan } from "./compositions/ReviewEdit";
 import { EMPTY_PLAN, planDurationMs, type EditPlan } from "./compositions/plan";
 
 export const RemotionRoot: React.FC = () => {
@@ -77,6 +78,16 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{ plan: { ...TTD_VERIFY_PLAN, captionMode: "wordbyword" } as TtdPlan }}
         calculateMetadata={({ props }) => ({ fps: props.plan.fps, durationInFrames: Math.max(1, Math.round((ttdPlanDurationMs(props.plan) / 1000) * props.plan.fps)) })}
+      />
+      <Composition
+        id="ReviewEdit"
+        component={ReviewEdit}
+        durationInFrames={60}
+        fps={60}
+        width={1080}
+        height={1920}
+        defaultProps={{ plan: { source: "demo/bg.mp4", fps: 60, segments: [{ srcStartMs: 0, srcEndMs: 2000, speed: 1 }], captions: [], titles: [], sfx: [] } as ReviewPlan }}
+        calculateMetadata={({ props }) => ({ fps: props.plan.fps, durationInFrames: Math.max(1, Math.round((reviewPlanDurationMs(props.plan) / 1000) * props.plan.fps)) })}
       />
       <Composition
         id="AutoEdit"

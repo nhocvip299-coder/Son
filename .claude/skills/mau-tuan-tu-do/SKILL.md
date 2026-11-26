@@ -17,7 +17,7 @@ Nguồn: 6 video xem nhiều nhất của kênh (0.5–7.1 triệu view, 3.5–7
 
 ## Cách dùng
 - Components: `src/styles/tuanTuDo/components.tsx` — `TtdKaraokeCaptions` (+`ttdChunks`), `TtdHookTitle`, `TtdNameTag`, `TtdGlowBand`, `TtdLaughMarks`, `TtdQuestionMarks`, `TtdInkWipe`, `TtdToBeContinued`, `TtdReactionPip`, `Stroked` (chữ viền đen 2 lớp).
-- Composition `TuanTuDoEdit` nhận `plan: TtdPlan` (`src/styles/tuanTuDo/TuanTuDoEdit.tsx`): `segments` (đoạn 1 = teaser), `words` (timeline đầu ra), `keywordRe`, `items`, `captionMode: "karaoke" | "wordbyword"`. SFX tự gắn theo loại item.
+- Composition `TuanTuDoEdit` nhận `plan: TtdPlan` (`src/styles/tuanTuDo/TuanTuDoEdit.tsx`): `segments` (đoạn 1 = teaser), `words` (timeline đầu ra), `keywordRe`, `items`, `captionMode: "karaoke" | "wordbyword"`. Chữ không có SFX (bật bằng `textSfx: true`).
 - Ví dụ plan: `src/styles/tuanTuDo/Verify.tsx` (`TTD_VERIFY_PLAN`); `TuanTuDoVerifyWbw` = cùng plan, bản chạy chữ từng chữ.
 - Render (luôn 2 bản theo CLAUDE.md):
   ```
@@ -32,5 +32,5 @@ Nguồn: 6 video xem nhiều nhất của kênh (0.5–7.1 triệu view, 3.5–7
 2. Ẩn phụ đề khi có hook/thẻ tên/end card (composition tự làm qua `hideRanges`).
 3. Sửa lỗi tên riêng ASR trước (`projects/<du-an>/asr-fixes.json`); đánh `other: true` cho lời người khác.
 4. Mỗi 20–40 s tối đa 1 hiệu ứng phụ (laugh/question/glow); `ink` chỉ khi đổi địa điểm.
-5. SFX trầm (pop/impact/hit) luôn ghép thêm 1 lớp sáng (ding/sparkle/game/shimmer); kiểm năng lượng >3 kHz quanh mốc SFX phải ≥ giọng nói (~-30 dB).
+5. **Không gắn SFX cho chữ** (mặc định `textSfx: false`, theo yêu cầu người dùng; kênh gốc cũng không dùng). Chỉ giữ tiếng "swish" của chuyển cảnh vệt mực. Nếu bật lại `textSfx: true`: SFX trầm luôn ghép 1 lớp sáng và phải nghe rõ trên giọng nói.
 6. Không dùng tên/logo/watermark kênh Tuấn Tự Do — chỉ học cách dựng; watermark/tên là của người dùng.

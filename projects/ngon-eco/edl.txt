@@ -1,0 +1,54 @@
+Tổng: 3:31.0 (quay gốc 5:48)
+ 1. 0:00.0–0:02.2  1x     clip 0039 33.9–36.1s  HOOK: 'Đúng là được ăn là hạnh phúc nhất cuộc đời' (đưa lên đầu)
+ 2. 0:02.2–0:14.8  1x     clip 0031 0.0–12.6s  Chào, 3h chiều quá bữa, phát hiện quán mì gà tần
+ 3. 0:14.8–0:17.7  1x     clip 0031 20.8–23.8s  Các quán đều đóng cửa (bỏ đoạn 12.5–20.8 nói lặp lại)
+ 4. 0:17.7–0:24.6  1x     clip 0031 28.1–35.0s  Địa chỉ 61 Thủy Nguyên, quán Ngon Eco (bỏ câu đệm 'bây giờ mình giới thiệu')
+ 5. 0:24.6–0:30.2  1x     clip 0031 35.4–41.0s  Mời mọi người vào xem menu
+ 6. 0:30.2–0:33.7  x2 ▶▶  clip 0031 41.0–48.1s  Đi vào quán (lời không rõ)
+ 7. 0:33.7–1:00.5  1x     clip 0033 0.0–26.8s  Menu, giá 20–60k, ghé quán
+ 8. 1:00.5–1:03.3  1x     clip 0035 1.6–4.4s  Đây là...
+ 9. 1:03.3–1:20.7  1x     clip 0035 6.6–24.0s  Trứng hầm ngải cứu + mì gà tần, mời mọi người
+10. 1:20.7–1:28.5  x3 ▶▶  clip 0035 24.0–47.5s  Ăn thử, không thoại
+11. 1:28.5–1:36.9  x2 ▶▶  clip 0036 0.0–16.8s  Ăn, nói lí nhí 'đói run hết người'
+12. 1:36.9–1:45.5  1x     clip 0036 16.8–25.4s  Trước ăn trứng lộn 7 quả, giờ tiết chế
+13. 1:45.5–1:48.4  x3 ▶▶  clip 0036 25.4–34.0s  Ăn
+14. 1:48.4–1:55.6  1x     clip 0036 34.0–41.2s  Trứng mềm, trứng lộn vừa tới
+15. 1:55.6–1:59.6  x3 ▶▶  clip 0036 41.2–53.4s  Ăn
+16. 1:59.6–2:15.1  1x     clip 0036 53.4–68.9s  Mùa đông ăn món này ngon, địa chỉ 61 Thủy Nguyên
+17. 2:15.1–2:17.1  1x     clip 0039 0.0–2.0s  'Chịu chết'
+18. 2:17.1–2:20.3  x3 ▶▶  clip 0039 2.0–11.6s  Xé đùi gà
+19. 2:20.3–2:21.9  1x     clip 0039 11.6–13.2s  Đùi gà chất lượng đấy
+20. 2:21.9–2:27.5  x3 ▶▶  clip 0039 13.2–29.8s  Ăn đùi gà
+21. 2:27.5–2:28.1  1x     clip 0039 29.8–30.4s  'Đúng là...'
+22. 2:28.1–2:33.6  1x     clip 0039 33.9–39.4s  ...được ăn là hạnh phúc nhất cuộc đời, đói run
+23. 2:33.6–2:35.9  x3 ▶▶  clip 0039 39.4–46.3s  Uống trà
+24. 2:35.9–2:41.0  1x     clip 0039 46.3–51.4s  Trà tươi... (lời chưa rõ)
+25. 2:41.0–2:47.5  x3 ▶▶  clip 0039 51.4–70.8s  Ăn
+26. 2:47.5–2:50.7  1x     clip 0039 70.8–74.0s  Sức ăn của mình như này cũng khỏe
+27. 2:50.7–2:52.4  x3 ▶▶  clip 0039 74.0–79.3s  Ăn (bỏ câu Whisper bịa lặp lại)
+28. 2:52.4–3:01.7  1x     clip 0040 0.0–9.3s  Đói run cầm cập, ăn xong tỉnh táo, sướng
+29. 3:01.7–3:02.7  x2 ▶▶  clip 0040 9.3–11.2s  Gắp mì
+30. 3:02.7–3:03.9  1x     clip 0040 11.2–12.4s  Mì ngon không?
+31. 3:03.9–3:06.0  x2 ▶▶  clip 0040 12.4–16.7s  Húp mì
+32. 3:06.0–3:08.0  1x     clip 0040 16.7–18.7s  Ngon lắm
+33. 3:08.0–3:12.9  x2 ▶▶  clip 0041 0.0–9.8s  Ăn mì
+34. 3:12.9–3:22.1  1x     clip 0041 9.8–19.0s  Lúc đói có ăn là tốt rồi, tầm 7/10
+35. 3:22.1–3:25.3  1x     clip 0042 0.0–3.2s  Em thanh toán...
+36. 3:25.3–3:27.4  x2 ▶▶  clip 0042 3.2–7.3s  Chuyển khoản
+37. 3:27.4–3:31.0  1x     clip 0042 7.3–10.9s  90 nghìn, ra về
+
+Bỏ phụ đề (nghe không rõ):
+  clip 0039 46.3–51.4s: 'Trà tươi... Ăn mà không có lỗ bở' nghe không rõ
+  clip 0042 1.4–3.2s: 'có em vào tiền chị nhỉ' nghe không rõ
+  clip 0031 40.9–48.1s: 'Nhìn là 2 khách này vượt mờ quá' nghe không rõ
+
+Chữ hiệu ứng:
+  0:00.1  zoomPunch  HẠNH PHÚC | NHẤT CUỘC ĐỜI  (y=980)
+  0:04.4  popBounce  *3 GIỜ CHIỀU* | VẪN CHƯA ĂN  (y=818)
+  0:11.6  slideMask  QUÁN *MÌ GÀ TẦN*  (y=478)
+  0:19.5  zoomPunch  61 THỦY NGUYÊN | QUÁN NGON ECO  (y=454)
+  0:45.2  popBounce  GIÁ *20K – 60K*  (y=1030)
+  1:04.5  typewriter TRỨNG HẦM *NGẢI CỨU*  (y=980)
+  1:41.7  zoomPunch  7 QUẢ MỘT LÚC  (y=980)
+  2:20.4  popBounce  ĐÙI GÀ *CHẤT LƯỢNG*  (y=910)
+  3:19.7  zoomPunch  CHẤM 7/10  (y=980)

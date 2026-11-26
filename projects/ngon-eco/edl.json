@@ -1,0 +1,370 @@
+{
+ "_note": "Danh sach cat (EDL) video review Quan Ngon Eco. Thoi gian = giay trong tung clip goc. speed 1 = co thoai (giu tieng), 2/3 = tua nhanh doan an khong thoai (tat tieng goc). Doan khong co trong list = cat bo.",
+ "source": "inputs/ngon-eco/source.mp4",
+ "clips": {
+  "0031": 0,
+  "0033": 48.106,
+  "0034": 75.456,
+  "0035": 86.656,
+  "0036": 134.106,
+  "0039": 205.636,
+  "0040": 284.953,
+  "0041": 303.641,
+  "0042": 326.489,
+  "0043": 337.422
+ },
+ "segments": [
+  {
+   "clip": "0039",
+   "a": 33.9,
+   "b": 36.1,
+   "speed": 1,
+   "note": "HOOK: 'Đúng là được ăn là hạnh phúc nhất cuộc đời' (đưa lên đầu)"
+  },
+  {
+   "clip": "0031",
+   "a": 0.0,
+   "b": 12.55,
+   "speed": 1,
+   "note": "Chào, 3h chiều quá bữa, phát hiện quán mì gà tần"
+  },
+  {
+   "clip": "0031",
+   "a": 20.8,
+   "b": 23.75,
+   "speed": 1,
+   "note": "Các quán đều đóng cửa (bỏ đoạn 12.5–20.8 nói lặp lại)"
+  },
+  {
+   "clip": "0031",
+   "a": 28.1,
+   "b": 35.0,
+   "speed": 1,
+   "note": "Địa chỉ 61 Thủy Nguyên, quán Ngon Eco (bỏ câu đệm 'bây giờ mình giới thiệu')"
+  },
+  {
+   "clip": "0031",
+   "a": 35.4,
+   "b": 40.95,
+   "speed": 1,
+   "note": "Mời mọi người vào xem menu"
+  },
+  {
+   "clip": "0031",
+   "a": 40.95,
+   "b": 48.1,
+   "speed": 2,
+   "note": "Đi vào quán (lời không rõ)"
+  },
+  {
+   "clip": "0033",
+   "a": 0.0,
+   "b": 26.75,
+   "speed": 1,
+   "note": "Menu, giá 20–60k, ghé quán"
+  },
+  {
+   "clip": "0035",
+   "a": 1.6,
+   "b": 4.4,
+   "speed": 1,
+   "note": "Đây là..."
+  },
+  {
+   "clip": "0035",
+   "a": 6.6,
+   "b": 24.0,
+   "speed": 1,
+   "note": "Trứng hầm ngải cứu + mì gà tần, mời mọi người"
+  },
+  {
+   "clip": "0035",
+   "a": 24.0,
+   "b": 47.45,
+   "speed": 3,
+   "note": "Ăn thử, không thoại"
+  },
+  {
+   "clip": "0036",
+   "a": 0.0,
+   "b": 16.8,
+   "speed": 2,
+   "note": "Ăn, nói lí nhí 'đói run hết người'"
+  },
+  {
+   "clip": "0036",
+   "a": 16.8,
+   "b": 25.4,
+   "speed": 1,
+   "note": "Trước ăn trứng lộn 7 quả, giờ tiết chế"
+  },
+  {
+   "clip": "0036",
+   "a": 25.4,
+   "b": 34.0,
+   "speed": 3,
+   "note": "Ăn"
+  },
+  {
+   "clip": "0036",
+   "a": 34.0,
+   "b": 41.2,
+   "speed": 1,
+   "note": "Trứng mềm, trứng lộn vừa tới"
+  },
+  {
+   "clip": "0036",
+   "a": 41.2,
+   "b": 53.4,
+   "speed": 3,
+   "note": "Ăn"
+  },
+  {
+   "clip": "0036",
+   "a": 53.4,
+   "b": 68.9,
+   "speed": 1,
+   "note": "Mùa đông ăn món này ngon, địa chỉ 61 Thủy Nguyên"
+  },
+  {
+   "clip": "0039",
+   "a": 0.0,
+   "b": 2.0,
+   "speed": 1,
+   "note": "'Chịu chết'"
+  },
+  {
+   "clip": "0039",
+   "a": 2.0,
+   "b": 11.6,
+   "speed": 3,
+   "note": "Xé đùi gà"
+  },
+  {
+   "clip": "0039",
+   "a": 11.6,
+   "b": 13.2,
+   "speed": 1,
+   "note": "Đùi gà chất lượng đấy"
+  },
+  {
+   "clip": "0039",
+   "a": 13.2,
+   "b": 29.8,
+   "speed": 3,
+   "note": "Ăn đùi gà"
+  },
+  {
+   "clip": "0039",
+   "a": 29.8,
+   "b": 30.45,
+   "speed": 1,
+   "note": "'Đúng là...'"
+  },
+  {
+   "clip": "0039",
+   "a": 33.9,
+   "b": 39.4,
+   "speed": 1,
+   "note": "...được ăn là hạnh phúc nhất cuộc đời, đói run"
+  },
+  {
+   "clip": "0039",
+   "a": 39.4,
+   "b": 46.3,
+   "speed": 3,
+   "note": "Uống trà"
+  },
+  {
+   "clip": "0039",
+   "a": 46.3,
+   "b": 51.4,
+   "speed": 1,
+   "note": "Trà tươi... (lời chưa rõ)"
+  },
+  {
+   "clip": "0039",
+   "a": 51.4,
+   "b": 70.8,
+   "speed": 3,
+   "note": "Ăn"
+  },
+  {
+   "clip": "0039",
+   "a": 70.8,
+   "b": 74.0,
+   "speed": 1,
+   "note": "Sức ăn của mình như này cũng khỏe"
+  },
+  {
+   "clip": "0039",
+   "a": 74.0,
+   "b": 79.3,
+   "speed": 3,
+   "note": "Ăn (bỏ câu Whisper bịa lặp lại)"
+  },
+  {
+   "clip": "0040",
+   "a": 0.0,
+   "b": 9.3,
+   "speed": 1,
+   "note": "Đói run cầm cập, ăn xong tỉnh táo, sướng"
+  },
+  {
+   "clip": "0040",
+   "a": 9.3,
+   "b": 11.2,
+   "speed": 2,
+   "note": "Gắp mì"
+  },
+  {
+   "clip": "0040",
+   "a": 11.2,
+   "b": 12.4,
+   "speed": 1,
+   "note": "Mì ngon không?"
+  },
+  {
+   "clip": "0040",
+   "a": 12.4,
+   "b": 16.7,
+   "speed": 2,
+   "note": "Húp mì"
+  },
+  {
+   "clip": "0040",
+   "a": 16.7,
+   "b": 18.69,
+   "speed": 1,
+   "note": "Ngon lắm"
+  },
+  {
+   "clip": "0041",
+   "a": 0.0,
+   "b": 9.8,
+   "speed": 2,
+   "note": "Ăn mì"
+  },
+  {
+   "clip": "0041",
+   "a": 9.8,
+   "b": 19.0,
+   "speed": 1,
+   "note": "Lúc đói có ăn là tốt rồi, tầm 7/10"
+  },
+  {
+   "clip": "0042",
+   "a": 0.0,
+   "b": 3.2,
+   "speed": 1,
+   "note": "Em thanh toán..."
+  },
+  {
+   "clip": "0042",
+   "a": 3.2,
+   "b": 7.3,
+   "speed": 2,
+   "note": "Chuyển khoản"
+  },
+  {
+   "clip": "0042",
+   "a": 7.3,
+   "b": 10.93,
+   "speed": 1,
+   "note": "90 nghìn, ra về"
+  }
+ ],
+ "dropped": [
+  "0031 12.5–20.8: nói lặp lại đoạn giới thiệu",
+  "0031 23.75–28.1: câu đệm 'bây giờ mình giới thiệu mọi người là'",
+  "0034 (cả clip): cảnh với bạn, giống cảnh hỏng/thử máy, Whisper không nghe ra lời rõ",
+  "0035 4.4–6.6 / 0039 30.45–33.9 / 0041 19.0–22.8: khoảng lặng",
+  "0036 68.9–71.5: đuôi clip",
+  "0043 (cả clip): cảnh chào kết trước biển quán nhưng file KHÔNG CÓ TIẾNG (im lặng hoàn toàn)"
+ ],
+ "titles": [
+  {
+   "clip": "0039",
+   "at": 34.0,
+   "dur": 2.0,
+   "effect": "zoomPunch",
+   "text": "HẠNH PHÚC | *NHẤT CUỘC ĐỜI*"
+  },
+  {
+   "clip": "0031",
+   "at": 2.2,
+   "dur": 2.6,
+   "effect": "popBounce",
+   "text": "*3 GIỜ CHIỀU* | VẪN CHƯA ĂN"
+  },
+  {
+   "clip": "0031",
+   "at": 9.4,
+   "dur": 2.6,
+   "effect": "slideMask",
+   "text": "QUÁN *MÌ GÀ TẦN*"
+  },
+  {
+   "clip": "0031",
+   "at": 29.9,
+   "dur": 3.0,
+   "effect": "zoomPunch",
+   "text": "*61 THỦY NGUYÊN* | QUÁN NGON ECO"
+  },
+  {
+   "clip": "0033",
+   "at": 11.5,
+   "dur": 2.4,
+   "effect": "popBounce",
+   "text": "GIÁ *20K – 60K*"
+  },
+  {
+   "clip": "0035",
+   "at": 7.8,
+   "dur": 2.6,
+   "effect": "typewriter",
+   "text": "TRỨNG HẦM *NGẢI CỨU*"
+  },
+  {
+   "clip": "0036",
+   "at": 21.6,
+   "dur": 2.0,
+   "effect": "zoomPunch",
+   "text": "*7 QUẢ* MỘT LÚC"
+  },
+  {
+   "clip": "0039",
+   "at": 11.7,
+   "dur": 1.6,
+   "effect": "popBounce",
+   "text": "ĐÙI GÀ *CHẤT LƯỢNG*"
+  },
+  {
+   "clip": "0041",
+   "at": 16.6,
+   "dur": 2.2,
+   "effect": "zoomPunch",
+   "text": "CHẤM *7/10*"
+  }
+ ],
+ "noCaption": [
+  {
+   "clip": "0039",
+   "a": 46.3,
+   "b": 51.4,
+   "why": "'Trà tươi... Ăn mà không có lỗ bở' nghe không rõ"
+  },
+  {
+   "clip": "0042",
+   "a": 1.4,
+   "b": 3.2,
+   "why": "'có em vào tiền chị nhỉ' nghe không rõ"
+  },
+  {
+   "clip": "0031",
+   "a": 40.9,
+   "b": 48.1,
+   "why": "'Nhìn là 2 khách này vượt mờ quá' nghe không rõ"
+  }
+ ]
+}

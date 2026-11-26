@@ -51,7 +51,7 @@ export const HdKeywordReveal: React.FC<{
   const { height, width } = useVideoConfig();
   const chars = [...keyword.toUpperCase()];
   // tu co co chu de 1 dong vua 80% chieu ngang (khong tran, khong chong)
-  const size = useFitOneLine(keyword, FONTS.geo, 900, width * 0.8, sizeMax, { textTransform: "uppercase", letterSpacing: "0.01em" });
+  const size = useFitOneLine(keyword, FONTS.phudu, 900, width * 0.8, sizeMax, { textTransform: "uppercase", letterSpacing: "0.01em" });
   const leadFit = useFitOneLine(lead ?? " ", FONTS.body, 600, width * 0.84, Math.max(36, Math.min(sizeMax * 0.36, size * 0.5)));
   const leadSize = leadFit;
   const leadIn = interpolate(f, [0, 6], [0, 1], { ...clamp, easing: easeOut });
@@ -97,7 +97,7 @@ export const HdKeywordReveal: React.FC<{
               <span
                 key={i}
                 style={{
-                  fontFamily: FONTS.geo,
+                  fontFamily: FONTS.phudu,
                   fontWeight: 900,
                   fontSize: size,
                   lineHeight: 1.05,
@@ -144,7 +144,7 @@ export const HdSpinIcon3D: React.FC<{ glyph?: string; size?: number; arrow?: "do
               position: "absolute",
               inset: 0,
               textAlign: "center",
-              fontFamily: FONTS.geo,
+              fontFamily: FONTS.phudu,
               fontWeight: 900,
               fontSize: size,
               lineHeight: 1,
@@ -210,7 +210,7 @@ export const HdQuestionCard: React.FC<{ line1: string; line2?: string; y?: numbe
           scale: `${interpolate(boxIn, [0, 1], [0.92, 1])}`,
         }}
       >
-        <div style={{ fontFamily: FONTS.geo, fontWeight: 900, fontSize: 56, color: HD.yellow, whiteSpace: "pre", lineHeight: 1.15, textShadow: HD.shadow }}>
+        <div style={{ fontFamily: FONTS.phudu, fontWeight: 900, fontSize: 56, color: HD.yellow, whiteSpace: "pre", lineHeight: 1.15, textShadow: HD.shadow }}>
           {line1.toUpperCase().slice(0, n1)}
           <span style={{ visibility: "hidden" }}>{line1.toUpperCase().slice(n1)}</span>
         </div>
@@ -229,7 +229,7 @@ export const HdQuestionCard: React.FC<{ line1: string; line2?: string; y?: numbe
 export const HdBigNumber: React.FC<{ text: string; y?: number; size?: number; duration: number }> = ({ text, y = 0.2, size: sizeMax = 170, duration }) => {
   const f = useFrame30();
   const { height, width } = useVideoConfig();
-  const size = useFitOneLine(text, FONTS.geo, 900, width * 0.82, sizeMax, { textTransform: "uppercase" });
+  const size = useFitOneLine(text, FONTS.phudu, 900, width * 0.82, sizeMax, { textTransform: "uppercase" });
   const s = spring({ frame: f, fps: 30, config: { damping: 10, stiffness: 180, mass: 0.6 } });
   const exit = interpolate(f, [duration - 6, duration], [1, 0], clamp);
   return (
@@ -241,7 +241,7 @@ export const HdBigNumber: React.FC<{ text: string; y?: number; size?: number; du
         right: 0,
         translate: "0 -50%",
         textAlign: "center",
-        fontFamily: FONTS.geo,
+        fontFamily: FONTS.phudu,
         fontWeight: 900,
         fontSize: size,
         lineHeight: 1,
@@ -322,7 +322,7 @@ export const HdMapHud: React.FC<{
             left: labelAt[0],
             top: labelAt[1],
             rotate: `${rotateDeg}deg`,
-            fontFamily: FONTS.geo,
+            fontFamily: FONTS.phudu,
             fontWeight: 900,
             fontSize: 70,
             lineHeight: 1.05,

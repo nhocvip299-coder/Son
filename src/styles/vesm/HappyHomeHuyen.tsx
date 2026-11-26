@@ -56,7 +56,7 @@ const SHOTS: Shot[] = [
 ];
 
 const CUES: Array<[number, string, number]> = [
-  [0.95, X.chip, 1], [1.3, X.land, 1], [4.6, X.page, 0.9], [5.69, X.type, 0.8], [6.3, X.land, 1],
+  [0.95, X.chip, 2.0], [0.98, X.land, 1.0], [1.3, X.land, 1], [4.6, X.page, 0.9], [5.69, X.type, 0.8], [6.3, X.land, 1],
   [7.26, X.page, 0.9], [7.65, X.chip, 1], [8.61, X.land, 1], [9.2, X.whoosh, 0.9], [9.78, X.land, 1.2],
   [11.49, X.page, 0.9], [11.6, X.count, 0.7], [12.11, X.land, 1.2], [13.05, X.whoosh, 0.9], [14.7, X.count, 0.7], [15.13, X.land, 1.2],
   [15.88, X.soft, 0.9], [18.23, X.chip, 1.2], [18.73, X.chip, 1.2], [19.48, X.chip, 1.2],
@@ -66,8 +66,8 @@ const CUES: Array<[number, string, number]> = [
   [32.46, X.whoosh, 0.9], [33.65, X.type, 0.9], [34.69, X.land, 1.2],
   [35.35, X.page, 0.9], [36.72, X.chip, 1.2], [38.39, X.land, 1.2], [39.02, X.type, 0.9], [39.54, X.land, 1.1],
   [40.94, X.page, 0.9], [42.3, X.count, 0.7], [42.79, X.land, 1.3],
-  [44.16, X.whoosh, 0.9], [44.3, X.chip, 1.2], [47.63, X.chip, 1.2], [48.32, X.chip, 1.2], [49.09, X.chip, 1.2], [49.92, X.chip, 1.2],
-  [52.53, X.chip, 1.2], [53.24, X.chip, 1.2], [54.01, X.chip, 1.2], [54.63, X.chip, 1.2], [55.79, X.chip, 1.2],
+  [44.16, X.whoosh, 0.9], [44.3, X.chip, 2.2], [44.33, X.land, 1.0], [47.63, X.chip, 2.2], [47.66, X.land, 1.0], [48.32, X.chip, 2.2], [48.35, X.land, 1.0], [49.09, X.chip, 2.2], [49.12, X.land, 1.0], [49.92, X.chip, 2.2], [49.95, X.land, 1.0],
+  [52.53, X.chip, 2.2], [52.56, X.land, 1.0], [53.24, X.chip, 2.2], [53.27, X.land, 1.0], [54.01, X.chip, 2.2], [54.04, X.land, 1.0], [54.63, X.chip, 2.2], [54.66, X.land, 1.0], [55.79, X.chip, 2.2], [55.82, X.land, 1.0],
   [57.9, X.burst, 1.8], [58.05, X.whoosh, 1.0], [58.26, X.type, 0.9], [59.8, X.land, 1.2], [61.01, X.page, 0.9], [61.19, X.chip, 1.2], [62.28, X.land, 1.2],
   [63.18, X.page, 0.9], [63.34, X.chip, 1.3], [63.88, X.chip, 1.3], [64.69, X.chip, 1.3], [66.66, X.type, 0.9], [67.2, X.land, 1.3],
   [69.0, X.page, 0.9], [69.4, X.chip, 1.2], [70.72, X.land, 1.2],

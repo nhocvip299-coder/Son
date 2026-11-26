@@ -1047,6 +1047,217 @@ const VoteBars: React.FC = () => {
 
 Object.assign(SCENES, { cutLoss: CutLoss, paradox: Paradox, social: Social, vote: Vote });
 
+// ---------- Canh vid7: lien ke OCP2 Kinh Do + voucher 30% ----------
+/** Ban ve mat dung can lien ke 4 tang + duong kich thuoc (mat tien, dien tich, tang, duong, via he) */
+const DimH: React.FC<{ x0: number; x1: number; y: number; p: number; col?: string }> = ({ x0, x1, y, p, col = "#B23A2A" }) => {
+  const xm = (x0 + x1) / 2, hw = ((x1 - x0) / 2) * p;
+  return p <= 0 ? null : (
+    <g stroke={col} strokeWidth="5" fill={col}>
+      <line x1={xm - hw} y1={y} x2={xm + hw} y2={y} />
+      <line x1={x0} y1={y - 16} x2={x0} y2={y + 16} opacity={p} />
+      <line x1={x1} y1={y - 16} x2={x1} y2={y + 16} opacity={p} />
+      <polygon points={`${xm - hw},${y} ${xm - hw + 18},${y - 10} ${xm - hw + 18},${y + 10}`} />
+      <polygon points={`${xm + hw},${y} ${xm + hw - 18},${y - 10} ${xm + hw - 18},${y + 10}`} />
+    </g>
+  );
+};
+const SpecSheet: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const fl = Math.min(4, Math.max(0, Math.floor((t - c.floors + 0.6) / 0.15)));
+  const x = 300, w = 300, fh = 95;
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          {/* hang xom mo */}
+          <rect x={x - 230} y={GY - 4 * fh} width={220} height={4 * fh} fill="#D9CFBF" stroke="#B9AC96" strokeWidth="3" />
+          <rect x={x + w + 10} y={GY - 4 * fh} width={220} height={4 * fh} fill="#D9CFBF" stroke="#B9AC96" strokeWidth="3" />
+          {/* can chinh: tang hien dan */}
+          {Array.from({ length: 4 }, (_, i) => {
+            const on = t >= c.floors ? i < Math.max(fl, 0) || t > c.floors + 1 : true;
+            const y = GY - (i + 1) * fh;
+            return (
+              <g key={i} opacity={on ? 1 : 0.35}>
+                <rect x={x} y={y} width={w} height={fh} fill={i === 0 ? "#E6DCCB" : "#EFE8DC"} stroke="#3E4E5E" strokeWidth="4" />
+                {i === 0 ? <rect x={x + 30} y={y + 18} width={w - 60} height={fh - 18} fill="#8FA3A6" /> : <rect x={x + 40} y={y + 18} width={w - 80} height={fh - 40} fill="#A9B7C0" stroke="#3E4E5E" strokeWidth="3" />}
+                {i > 0 ? <rect x={x + 30} y={y + fh - 18} width={w - 60} height={8} fill="#3E4E5E" /> : null}
+              </g>
+            );
+          })}
+          <rect x={x - 10} y={GY - 4 * fh - 16} width={w + 20} height={18} fill="#3E4E5E" />
+        </g>
+        <DimH x0={x} x1={x + w} y={GY - 4 * fh - 60} p={lin(t, c.front, 0.5)} />
+        {/* chieu cao 4 tang */}
+        {t > c.floors ? <line x1={x + w + 40} y1={GY} x2={x + w + 40} y2={GY - 4 * fh * lin(t, c.floors, 0.6)} stroke="#B23A2A" strokeWidth="5" /> : null}
+      </Svg>
+      <Chip x={x + w / 2} y={GY - 4 * fh - 110} text="Mặt tiền 7m" at={c.front} tone="red" size={40} />
+      <Chip x={x + w / 2} y={GY - 2 * fh} text="84m²" at={c.area} tone="gold" size={54} />
+      <Chip x={x + w + 150} y={GY - 2 * fh - 40} text="4 tầng" at={c.floors} tone="dark" size={42} />
+    </>
+  );
+};
+
+/** Mat cat cong nang: tang 1 kinh doanh (khach ra vao) + tang tren luu tru (giuong, den) */
+const MixedUse: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const x = 240, w = 420, fh = 100;
+  const shop = t > c.shop, stay = t > c.stay;
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          {Array.from({ length: 4 }, (_, i) => {
+            const y = GY - (i + 1) * fh;
+            const lit = i === 0 ? shop : stay && t > c.stay + (i - 1) * 0.3;
+            return (
+              <g key={i}>
+                <rect x={x} y={y} width={w} height={fh} fill={lit ? (i === 0 ? "#F1D9A8" : "#F3E6C4") : "#E6E1D8"} stroke="#3E4E5E" strokeWidth="4" />
+                {i === 0 ? (
+                  <g>
+                    <rect x={x + 30} y={y + 50} width={120} height={14} fill="#A9503C" />
+                    <rect x={x + 250} y={y + 30} width={130} height={60} fill="#C98B4E" opacity={0.8} />
+                  </g>
+                ) : (
+                  <g opacity={lit ? 1 : 0.4}>
+                    <rect x={x + 40} y={y + 55} width={150} height={30} rx="6" fill="#EFE8DC" stroke="#6B4A2E" strokeWidth="3" />
+                    <rect x={x + 40} y={y + 45} width={40} height={20} rx="5" fill="#fff" stroke="#6B4A2E" strokeWidth="2" />
+                    <circle cx={x + 330} cy={y + 30} r={lit ? 14 : 8} fill={lit ? "#E3C485" : "#A9B7C0"} />
+                  </g>
+                )}
+              </g>
+            );
+          })}
+          <polygon points={`${x - 20},${GY - 4 * fh} ${x + w / 2},${GY - 4 * fh - 70} ${x + w + 20},${GY - 4 * fh}`} fill="#3E4E5E" />
+          {shop
+            ? [0, 1].map((i) => {
+                const ph = (t * 0.4 + i / 2) % 1;
+                return <Person key={i} x={x - 120 + ph * 240} bob={Math.sin(t * 7 + i)} s={0.6} color={["#34495E", "#A9503C"][i]} />;
+              })
+            : null}
+        </g>
+      </Svg>
+      <Chip x={x + w + 150} y={GY - fh / 2 - 10} text="Kinh doanh" at={c.shop} tone="gold" size={40} />
+      <Chip x={x + w / 2 - 40} y={GY - 4 * fh - 110} text="Lưu trú tầng trên" at={c.stay} tone="dark" size={40} />
+    </>
+  );
+};
+
+/** The gia 15 ty -> voucher 30% cat vao + chinh sach moi -> hon 10 ty */
+const Voucher: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const tag = pop(c.price);
+  const vin = lin(t, c.voucher, 0.6);
+  const cut = lin(t, c.policy, 0.5);
+  const nw = pop(c.newPrice);
+  return (
+    <>
+      <div style={{ position: "absolute", left: 330, top: 820, translate: "-50% -50%", scale: String(tag), padding: "30px 46px", borderRadius: 26, background: "#EFE8DC", border: "5px solid #3E4E5E", boxShadow: "0 14px 30px rgba(0,0,0,0.3)", textAlign: "center" }}>
+        <div style={{ fontFamily: RT.font.punch, fontWeight: 800, fontSize: 32, color: "#566B70" }}>GIÁ THANH TOÁN SỚM</div>
+        <div style={{ position: "relative", fontFamily: RT.font.punch, fontWeight: 900, fontSize: 110, color: nw > 0 ? "#8FA3A6" : "#1E2830", lineHeight: 1.1 }}>
+          15 TỶ
+          <div style={{ position: "absolute", left: -10, right: -10, top: "52%", height: 12, background: "#B23A2A", borderRadius: 6, transformOrigin: "left", scale: `${cut} 1`, rotate: "-8deg" }} />
+        </div>
+      </div>
+      {/* ve voucher bay vao */}
+      <div style={{ position: "absolute", left: interpolate(vin, [0, 1], [1250, 780]), top: 790 + (1 - vin) * -80, translate: "-50% -50%", rotate: `${interpolate(vin, [0, 1], [30, -8])}deg`, padding: "22px 34px", borderRadius: 18, background: "linear-gradient(135deg,#B4533A,#8E3B28)", border: "4px dashed #E9E2D6", fontFamily: RT.font.punch, fontWeight: 900, color: "#fff", textAlign: "center", boxShadow: "0 12px 26px rgba(0,0,0,0.35)" }}>
+        <div style={{ fontSize: 30, letterSpacing: 4 }}>VOUCHER</div>
+        <div style={{ fontSize: 86, lineHeight: 1 }}>30%</div>
+      </div>
+      <Chip x={780} y={960} text="+ Chính sách mới" at={c.policy} tone="dark" size={36} />
+      {nw > 0 ? (
+        <div style={{ position: "absolute", left: 470, top: 1065, translate: "-50% -50%", scale: String(interpolate(nw, [0, 1], [1.8, 1])), opacity: Math.min(1, nw * 1.5), padding: "18px 44px", borderRadius: 24, background: "linear-gradient(180deg,#5F8B6E,#3F6650)", border: "4px solid #E9E2D6", fontFamily: RT.font.punch, fontWeight: 900, fontSize: 76, color: "#fff", whiteSpace: "nowrap", boxShadow: "0 0 30px rgba(95,139,110,0.7)" }}>
+          HƠN 10 TỶ
+        </div>
+      ) : null}
+    </>
+  );
+};
+
+/** Lich lat toi 31/12/2026: voucher het han */
+const Deadline: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const pop = usePop();
+  const p = pop(0.05);
+  const k = lin(t, 0.3, Math.max(0.5, c.year - 0.3));
+  const day = Math.round(interpolate(k, [0, 1], [1, 31]));
+  const exp = t > c.expire;
+  return (
+    <>
+      <Svg>
+        <g style={pg(p)}>
+          <rect x="120" y="650" width="380" height="400" rx="26" fill="#fff" stroke="#2F3B47" strokeWidth="5" />
+          <rect x="120" y="650" width="380" height="100" rx="26" fill="#A9503C" />
+          <rect x="185" y="625" width="20" height="60" rx="9" fill="#2F3B47" />
+          <rect x="415" y="625" width="20" height="60" rx="9" fill="#2F3B47" />
+        </g>
+      </Svg>
+      <div style={{ position: "absolute", left: 310, top: 700, translate: "-50% -50%", fontFamily: RT.font.punch, fontWeight: 800, fontSize: 44, color: "#fff", opacity: p }}>THÁNG 12 · 2026</div>
+      <div style={{ position: "absolute", left: 310, top: 900, translate: "-50% -50%", fontFamily: RT.font.punch, fontWeight: 900, fontSize: 190, color: day === 31 ? "#B23A2A" : "#2F3B47", opacity: p }}>{day}</div>
+      <div style={{ position: "absolute", left: 780, top: 880, translate: "-50% -50%", rotate: "-8deg", padding: "18px 30px", borderRadius: 16, background: exp ? "#8FA3A6" : "linear-gradient(135deg,#B4533A,#8E3B28)", border: "4px dashed #E9E2D6", fontFamily: RT.font.punch, fontWeight: 900, color: "#fff", textAlign: "center", opacity: pop(c.voucher), filter: exp ? "grayscale(1)" : undefined }}>
+        <div style={{ fontSize: 26, letterSpacing: 4 }}>VOUCHER</div>
+        <div style={{ fontSize: 72, lineHeight: 1 }}>30%</div>
+      </div>
+      <Stamp x={780} y={890} text="HẾT HẠN" at={c.expire} size={64} />
+    </>
+  );
+};
+
+const SpecTable: React.FC<{ c: Cues }> = ({ c }) => {
+  const rows: Array<[string, string, number]> = [["Mặt tiền", "7m", c.front], ["Diện tích", "84m²", c.area], ["Xây dựng", "4 tầng", c.floors], ["Mặt đường", "8m", c.road], ["Vỉa hè", "4m mỗi bên", c.walk]];
+  const pop = usePop();
+  return (
+    <Panel title="Thông số căn liền kề">
+      {rows.map(([k, v, at], i) => {
+        const p = pop(at);
+        const col = i < 3 ? 0 : 1;
+        const row = i < 3 ? i : i - 3;
+        return (
+          <div key={k} style={{ position: "absolute", left: 120 + col * 450, top: LY + 95 + row * 70, display: "flex", gap: 18, alignItems: "center", opacity: Math.min(1, p * 1.5), translate: `${(1 - p) * 40}px 0` }}>
+            <span style={{ fontFamily: RT.font.punch, fontWeight: 700, fontSize: 32, color: "#AFC0C2" }}>{k}</span>
+            <span style={{ fontFamily: RT.font.punch, fontWeight: 900, fontSize: 40, color: GOLD }}>{v}</span>
+          </div>
+        );
+      })}
+    </Panel>
+  );
+};
+
+const PriceBars: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const a = lin(t, c.price, 0.6);
+  const b = lin(t, c.newPrice, 0.8);
+  return (
+    <Panel title="Giá trước và sau voucher">
+      <Svg>
+        <rect x="140" y={LY + 120} width={760 * a} height="56" rx="10" fill="#8FA3A6" />
+        <rect x="140" y={LY + 205} width={760 * 0.7 * b} height="56" rx="10" fill={GREEN} />
+      </Svg>
+      <div style={{ ...lbl(32), left: 140 + 760 * a - 70, top: LY + 148, opacity: a }}>15 tỷ</div>
+      <div style={{ ...lbl(32), left: 140 + 760 * 0.7 * b + 110, top: LY + 233, opacity: b }}>Hơn 10 tỷ</div>
+    </Panel>
+  );
+};
+
+const Countdown: React.FC<{ c: Cues }> = ({ c }) => {
+  const { t } = useSec();
+  const k = lin(t, 0.3, Math.max(0.5, c.expire - 0.3));
+  return (
+    <Panel title="Thời hạn voucher 30%">
+      <div style={{ position: "absolute", left: 120, top: LY + 150, width: 840, height: 50, borderRadius: 25, background: "rgba(255,255,255,0.12)", overflow: "hidden" }}>
+        <div style={{ width: `${(1 - k) * 100}%`, height: "100%", background: k > 0.85 ? RED : GOLD }} />
+      </div>
+      <div style={{ ...lbl(30), left: 540, top: LY + 260 }}>{k >= 1 ? "Hết hạn 31/12/2026" : "Còn đến cuối năm 2026"}</div>
+    </Panel>
+  );
+};
+
+Object.assign(SCENES, { specSheet: SpecSheet, mixedUse: MixedUse, voucher: Voucher, deadline: Deadline });
+
 const LOWER: Record<string, React.FC<{ c: Cues }>> = {
   landTax: Timeline,
   taxCalc: Formula,
@@ -1061,6 +1272,10 @@ const LOWER: Record<string, React.FC<{ c: Cues }>> = {
   paradox: PriceCompare,
   social: () => <Sentiment />,
   vote: () => <VoteBars />,
+  specSheet: SpecTable,
+  mixedUse: () => <Street title="Mặt đường kinh doanh" />,
+  voucher: PriceBars,
+  deadline: Countdown,
 };
 
 export const IllustratedScene: React.FC<{ name: string; cues?: Cues }> = ({ name, cues = {} }) => {

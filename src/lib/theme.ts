@@ -49,7 +49,8 @@ export type SfxName =
   | "blip8"
   | "coin"
   | "positive"
-  | "game";
+  | "game"
+  | `mixkit/${string}`; // SFX that tai bang scripts/get_mixkit_sfx.sh (khong dua len Git)
 
 export type TypoProps = {
   text: string;

@@ -52,7 +52,7 @@ for sg in segs:
             continue
         o = sg["out"] + a - sg["a"]
         ob = min(sg["outEnd"], o + (b - a))
-        caps.append({"text": " " + fix(clip, text), "startMs": round(o * 1000), "endMs": round(ob * 1000), "timestampMs": round(o * 1000), "confidence": None})
+        caps.append({"text": " " + fix(clip, text), "startMs": round(o * 1000), "endMs": round(ob * 1000), "timestampMs": round(o * 1000), "confidence": None, "maxEndMs": round(sg["outEnd"] * 1000)})
 caps.sort(key=lambda c: c["startMs"])
 
 # 3) tieu de
@@ -78,11 +78,27 @@ if faces_p.exists():
         else:  # can mat -> chu duoi cam, tren phu de
             ti["y"] = min(980, chin + 170)
 
+# 3c) SFX cho chu: bo Mixkit nhe, MOI CHU 1 TIENG. Muc = 10^((-22 - Mmax)/20): dinh momentary SFX ~ -22 LUFS,
+#     thap hon giong noi (~-14 LUFS, dinh -8) khoang 8 dB -> nghe ro nhung khong lan at giong.
+SFX_M = {"pop-whoosh": -16.7, "bubble-pop": -16.8, "small-sweep": -14.0, "page-chime": -14.0, "correct-tone": -12.2, "short-sweep": -16.0}
+gain = lambda n, extra=0: round(min(1.0, 10 ** ((-22 + extra - SFX_M[n]) / 20)), 2)
+TITLE_SFX = {
+    "zoomPunch": [("pop-whoosh", 0)],
+    "popBounce": [("bubble-pop", 0)],
+    "slideMask": [("small-sweep", -40)],
+    "typewriter": [("page-chime", 700)],
+}
+for ti in titles:
+    cues = list(TITLE_SFX[ti["effect"]])
+    if re.search(r"\d+/10", ti["text"]):
+        cues.append(("correct-tone", 450))  # diem so: tieng "ting" dung
+    ti["sfx"] = [{"sfx": f"mixkit/{n}", "offsetMs": o, "volume": gain(n)} for n, o in cues]
+
 # 4) SFX: whoosh nhe khi vao/ra doan tua nhanh
 sfx = []
 for i, s in enumerate(segs):
     if s["speed"] > 1 and (i == 0 or segs[i - 1]["speed"] == 1):
-        sfx.append({"sfx": "whoosh", "atMs": round(max(0, s["out"] - 0.12) * 1000), "volume": 0.5})
+        sfx.append({"sfx": "mixkit/short-sweep", "atMs": round(max(0, s["out"] - 0.15) * 1000), "volume": gain("short-sweep", -2)})
 
 # an phu de karaoke khi dang co chu hieu ung (tranh 2 khoi chu cung luc); ban chay chu tung chu van giu du
 def busy(c):

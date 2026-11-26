@@ -231,2380 +231,2720 @@
    "startMs": 70,
    "endMs": 780,
    "timestampMs": 70,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 2200
   },
   {
    "text": " là",
    "startMs": 780,
    "endMs": 880,
    "timestampMs": 780,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 2200
   },
   {
    "text": " hạnh",
    "startMs": 880,
    "endMs": 1080,
    "timestampMs": 880,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 2200
   },
   {
    "text": " phúc",
    "startMs": 1080,
    "endMs": 1250,
    "timestampMs": 1080,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 2200
   },
   {
    "text": " nhất",
    "startMs": 1250,
    "endMs": 1480,
    "timestampMs": 1250,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 2200
   },
   {
    "text": " cuộc",
    "startMs": 1480,
    "endMs": 1680,
    "timestampMs": 1480,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 2200
   },
   {
    "text": " đời",
    "startMs": 1680,
    "endMs": 1960,
    "timestampMs": 1680,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 2200
   },
   {
    "text": " Đói",
    "startMs": 1960,
    "endMs": 2200,
    "timestampMs": 1960,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 2200
   },
   {
    "text": " Xin",
    "startMs": 2320,
    "endMs": 2330,
    "timestampMs": 2320,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " chào",
    "startMs": 2330,
    "endMs": 2520,
    "timestampMs": 2330,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " mọi",
    "startMs": 2520,
    "endMs": 2720,
    "timestampMs": 2520,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " người",
    "startMs": 2720,
    "endMs": 3040,
    "timestampMs": 2720,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " nhá,",
    "startMs": 3040,
    "endMs": 3570,
    "timestampMs": 3040,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " hiện",
    "startMs": 3570,
    "endMs": 3820,
    "timestampMs": 3570,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " nay",
    "startMs": 3820,
    "endMs": 4040,
    "timestampMs": 3820,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " thì",
    "startMs": 4040,
    "endMs": 4360,
    "timestampMs": 4040,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " hơn",
    "startMs": 4360,
    "endMs": 4840,
    "timestampMs": 4360,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " 3",
    "startMs": 4840,
    "endMs": 5200,
    "timestampMs": 4840,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " giờ",
    "startMs": 5200,
    "endMs": 5800,
    "timestampMs": 5200,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " rồi",
    "startMs": 5800,
    "endMs": 6420,
    "timestampMs": 5800,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " mình",
    "startMs": 6420,
    "endMs": 6780,
    "timestampMs": 6420,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " bị",
    "startMs": 6780,
    "endMs": 7070,
    "timestampMs": 6780,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " quá",
    "startMs": 7070,
    "endMs": 7340,
    "timestampMs": 7070,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " bữa",
    "startMs": 7340,
    "endMs": 7720,
    "timestampMs": 7340,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " Và",
    "startMs": 7720,
    "endMs": 7860,
    "timestampMs": 7720,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " vừa",
    "startMs": 7860,
    "endMs": 8090,
    "timestampMs": 7860,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " nãy",
    "startMs": 8090,
    "endMs": 8270,
    "timestampMs": 8090,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " mình",
    "startMs": 8270,
    "endMs": 8520,
    "timestampMs": 8270,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " vừa",
    "startMs": 8520,
    "endMs": 8830,
    "timestampMs": 8520,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " phát",
    "startMs": 8830,
    "endMs": 9090,
    "timestampMs": 8830,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " hiện",
    "startMs": 9090,
    "endMs": 9260,
    "timestampMs": 9090,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " ra",
    "startMs": 9260,
    "endMs": 9350,
    "timestampMs": 9260,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " trên",
    "startMs": 9350,
    "endMs": 9640,
    "timestampMs": 9350,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " trục",
    "startMs": 9640,
    "endMs": 9870,
    "timestampMs": 9640,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " Thủy",
    "startMs": 9870,
    "endMs": 10140,
    "timestampMs": 9870,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " Nguyên",
    "startMs": 10140,
    "endMs": 10460,
    "timestampMs": 10140,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " này",
    "startMs": 10460,
    "endMs": 10820,
    "timestampMs": 10460,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " có",
    "startMs": 10820,
    "endMs": 11000,
    "timestampMs": 10820,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " một",
    "startMs": 11000,
    "endMs": 11310,
    "timestampMs": 11000,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " cái",
    "startMs": 11310,
    "endMs": 11560,
    "timestampMs": 11310,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " quán",
    "startMs": 11560,
    "endMs": 11860,
    "timestampMs": 11560,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " mì",
    "startMs": 11860,
    "endMs": 12040,
    "timestampMs": 11860,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " gà",
    "startMs": 12040,
    "endMs": 12220,
    "timestampMs": 12040,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " tần",
    "startMs": 12220,
    "endMs": 12590,
    "timestampMs": 12220,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " này",
    "startMs": 12590,
    "endMs": 12820,
    "timestampMs": 12590,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " bán",
    "startMs": 12820,
    "endMs": 13060,
    "timestampMs": 12820,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " rất",
    "startMs": 13060,
    "endMs": 13370,
    "timestampMs": 13060,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " là",
    "startMs": 13370,
    "endMs": 13750,
    "timestampMs": 13370,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " nhiều",
    "startMs": 13750,
    "endMs": 13990,
    "timestampMs": 13750,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " món",
    "startMs": 13990,
    "endMs": 14240,
    "timestampMs": 13990,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " ngon",
    "startMs": 14240,
    "endMs": 14520,
    "timestampMs": 14240,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " nhá",
    "startMs": 14520,
    "endMs": 14740,
    "timestampMs": 14520,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 14750
   },
   {
    "text": " hầu",
    "startMs": 14750,
    "endMs": 15010,
    "timestampMs": 14750,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " như",
    "startMs": 15010,
    "endMs": 15210,
    "timestampMs": 15010,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " các",
    "startMs": 15210,
    "endMs": 15430,
    "timestampMs": 15210,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " quán",
    "startMs": 15430,
    "endMs": 15690,
    "timestampMs": 15430,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " ăn",
    "startMs": 15690,
    "endMs": 15850,
    "timestampMs": 15690,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " thì",
    "startMs": 15850,
    "endMs": 16060,
    "timestampMs": 15850,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " đều",
    "startMs": 16060,
    "endMs": 16370,
    "timestampMs": 16060,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " đóng",
    "startMs": 16370,
    "endMs": 16670,
    "timestampMs": 16370,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " cửa",
    "startMs": 16670,
    "endMs": 16990,
    "timestampMs": 16670,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " hết",
    "startMs": 16990,
    "endMs": 17220,
    "timestampMs": 16990,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " rồi",
    "startMs": 17220,
    "endMs": 17590,
    "timestampMs": 17220,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 17700
   },
   {
    "text": " đây",
    "startMs": 17740,
    "endMs": 18110,
    "timestampMs": 17740,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " địa",
    "startMs": 18110,
    "endMs": 18550,
    "timestampMs": 18110,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " chỉ",
    "startMs": 18550,
    "endMs": 18910,
    "timestampMs": 18550,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " đây",
    "startMs": 18910,
    "endMs": 19490,
    "timestampMs": 18910,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " là",
    "startMs": 19490,
    "endMs": 19520,
    "timestampMs": 19490,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " số",
    "startMs": 19520,
    "endMs": 19800,
    "timestampMs": 19520,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " 61",
    "startMs": 19800,
    "endMs": 20240,
    "timestampMs": 19800,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " Thủy",
    "startMs": 20240,
    "endMs": 20720,
    "timestampMs": 20240,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " Nguyên",
    "startMs": 20720,
    "endMs": 21240,
    "timestampMs": 20720,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " nhá",
    "startMs": 21240,
    "endMs": 21520,
    "timestampMs": 21240,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " Quán",
    "startMs": 21520,
    "endMs": 22220,
    "timestampMs": 21520,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " ngon",
    "startMs": 22460,
    "endMs": 23210,
    "timestampMs": 22460,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " Eco,",
    "startMs": 23210,
    "endMs": 23970,
    "timestampMs": 23210,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " đây,",
    "startMs": 23970,
    "endMs": 24570,
    "timestampMs": 23970,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 24600
   },
   {
    "text": " mời",
    "startMs": 24770,
    "endMs": 25140,
    "timestampMs": 24770,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " mọi",
    "startMs": 25140,
    "endMs": 25510,
    "timestampMs": 25140,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " người",
    "startMs": 25510,
    "endMs": 26180,
    "timestampMs": 25510,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " theo",
    "startMs": 26180,
    "endMs": 26430,
    "timestampMs": 26180,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " chân",
    "startMs": 26430,
    "endMs": 27130,
    "timestampMs": 26430,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " mình",
    "startMs": 27130,
    "endMs": 27170,
    "timestampMs": 27130,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " vào",
    "startMs": 27170,
    "endMs": 27470,
    "timestampMs": 27170,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " trong",
    "startMs": 27470,
    "endMs": 27850,
    "timestampMs": 27470,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " xem",
    "startMs": 27850,
    "endMs": 28080,
    "timestampMs": 27850,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " menu",
    "startMs": 28080,
    "endMs": 28380,
    "timestampMs": 28080,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " có",
    "startMs": 28380,
    "endMs": 28610,
    "timestampMs": 28380,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " những",
    "startMs": 28610,
    "endMs": 29230,
    "timestampMs": 28610,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " món",
    "startMs": 29230,
    "endMs": 29440,
    "timestampMs": 29230,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " gì",
    "startMs": 29440,
    "endMs": 29670,
    "timestampMs": 29440,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " nhá",
    "startMs": 29670,
    "endMs": 30080,
    "timestampMs": 29670,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 30150
   },
   {
    "text": " menu",
    "startMs": 33725,
    "endMs": 34075,
    "timestampMs": 33725,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " thì",
    "startMs": 34075,
    "endMs": 34425,
    "timestampMs": 34075,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " rất",
    "startMs": 34425,
    "endMs": 34985,
    "timestampMs": 34425,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " nhiều",
    "startMs": 34985,
    "endMs": 35485,
    "timestampMs": 34985,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " món",
    "startMs": 35485,
    "endMs": 35835,
    "timestampMs": 35485,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " nhé",
    "startMs": 35835,
    "endMs": 36175,
    "timestampMs": 35835,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " mọi",
    "startMs": 36175,
    "endMs": 36605,
    "timestampMs": 36175,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " người",
    "startMs": 36605,
    "endMs": 37315,
    "timestampMs": 36605,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " có",
    "startMs": 37315,
    "endMs": 37615,
    "timestampMs": 37315,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " thể",
    "startMs": 37615,
    "endMs": 38015,
    "timestampMs": 37615,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " gọi",
    "startMs": 38015,
    "endMs": 38755,
    "timestampMs": 38015,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " món",
    "startMs": 38755,
    "endMs": 39135,
    "timestampMs": 38755,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " chính",
    "startMs": 39135,
    "endMs": 39835,
    "timestampMs": 39135,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " là",
    "startMs": 40045,
    "endMs": 40495,
    "timestampMs": 40045,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " gà",
    "startMs": 40495,
    "endMs": 40965,
    "timestampMs": 40495,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " tần",
    "startMs": 40965,
    "endMs": 41345,
    "timestampMs": 40965,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " mì",
    "startMs": 41345,
    "endMs": 41475,
    "timestampMs": 41345,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " gà",
    "startMs": 41475,
    "endMs": 41705,
    "timestampMs": 41475,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " tần",
    "startMs": 41705,
    "endMs": 41915,
    "timestampMs": 41705,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " trứng",
    "startMs": 41915,
    "endMs": 42225,
    "timestampMs": 41915,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " lộn",
    "startMs": 42225,
    "endMs": 42745,
    "timestampMs": 42225,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " giá",
    "startMs": 42745,
    "endMs": 43545,
    "timestampMs": 42745,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " thì",
    "startMs": 43545,
    "endMs": 43745,
    "timestampMs": 43545,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " cũng",
    "startMs": 43745,
    "endMs": 44045,
    "timestampMs": 43745,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " chỉ",
    "startMs": 44045,
    "endMs": 44345,
    "timestampMs": 44045,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " giao",
    "startMs": 44345,
    "endMs": 44585,
    "timestampMs": 44345,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " động",
    "startMs": 44585,
    "endMs": 45015,
    "timestampMs": 44585,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " từ",
    "startMs": 45015,
    "endMs": 45255,
    "timestampMs": 45015,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " 20",
    "startMs": 45255,
    "endMs": 45615,
    "timestampMs": 45255,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " đến",
    "startMs": 45615,
    "endMs": 45975,
    "timestampMs": 45615,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " 60.000",
    "startMs": 45975,
    "endMs": 46675,
    "timestampMs": 45975,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " thôi",
    "startMs": 47065,
    "endMs": 47365,
    "timestampMs": 47065,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " đấy",
    "startMs": 47365,
    "endMs": 47725,
    "timestampMs": 47365,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " mà",
    "startMs": 47725,
    "endMs": 47925,
    "timestampMs": 47725,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " tầm",
    "startMs": 47925,
    "endMs": 48205,
    "timestampMs": 47925,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " này",
    "startMs": 48205,
    "endMs": 48435,
    "timestampMs": 48205,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " mà",
    "startMs": 48435,
    "endMs": 48775,
    "timestampMs": 48435,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " được",
    "startMs": 48775,
    "endMs": 49115,
    "timestampMs": 48775,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " ăn",
    "startMs": 49115,
    "endMs": 49295,
    "timestampMs": 49115,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " chất",
    "startMs": 49295,
    "endMs": 49715,
    "timestampMs": 49295,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " lượng",
    "startMs": 49715,
    "endMs": 50135,
    "timestampMs": 49715,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " như",
    "startMs": 50135,
    "endMs": 50385,
    "timestampMs": 50135,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " này",
    "startMs": 50385,
    "endMs": 50635,
    "timestampMs": 50385,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " là",
    "startMs": 50635,
    "endMs": 50945,
    "timestampMs": 50635,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " quá",
    "startMs": 50945,
    "endMs": 51405,
    "timestampMs": 50945,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " là",
    "startMs": 51405,
    "endMs": 51695,
    "timestampMs": 51405,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " hợp",
    "startMs": 51695,
    "endMs": 52175,
    "timestampMs": 51695,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " lý",
    "startMs": 52175,
    "endMs": 52665,
    "timestampMs": 52175,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " rồi",
    "startMs": 52665,
    "endMs": 52955,
    "timestampMs": 52665,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " anh",
    "startMs": 52955,
    "endMs": 53245,
    "timestampMs": 52955,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " em",
    "startMs": 53245,
    "endMs": 53445,
    "timestampMs": 53245,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " nào",
    "startMs": 53445,
    "endMs": 53835,
    "timestampMs": 53445,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " mà",
    "startMs": 53835,
    "endMs": 54165,
    "timestampMs": 53835,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " có",
    "startMs": 54165,
    "endMs": 54415,
    "timestampMs": 54165,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " nhu",
    "startMs": 54415,
    "endMs": 54705,
    "timestampMs": 54415,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " cầu",
    "startMs": 54705,
    "endMs": 55195,
    "timestampMs": 54705,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " ăn",
    "startMs": 55195,
    "endMs": 55485,
    "timestampMs": 55195,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " ở",
    "startMs": 55485,
    "endMs": 55765,
    "timestampMs": 55485,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " trên",
    "startMs": 55765,
    "endMs": 56365,
    "timestampMs": 55765,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " Ecopark",
    "startMs": 56365,
    "endMs": 56945,
    "timestampMs": 56365,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " thì",
    "startMs": 56945,
    "endMs": 57405,
    "timestampMs": 56945,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " ghé",
    "startMs": 57405,
    "endMs": 57725,
    "timestampMs": 57405,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " quán",
    "startMs": 57725,
    "endMs": 58295,
    "timestampMs": 57725,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " 61",
    "startMs": 58295,
    "endMs": 58795,
    "timestampMs": 58295,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " Thủy",
    "startMs": 58795,
    "endMs": 59385,
    "timestampMs": 58795,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " Nguyên",
    "startMs": 59385,
    "endMs": 60075,
    "timestampMs": 59385,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " này",
    "startMs": 60075,
    "endMs": 60455,
    "timestampMs": 60075,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 60475
   },
   {
    "text": " đây",
    "startMs": 60695,
    "endMs": 61395,
    "timestampMs": 60695,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 63275
   },
   {
    "text": " là",
    "startMs": 63375,
    "endMs": 64075,
    "timestampMs": 63375,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " trứng",
    "startMs": 64475,
    "endMs": 65315,
    "timestampMs": 64475,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " hầm",
    "startMs": 65315,
    "endMs": 65615,
    "timestampMs": 65315,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " ngải",
    "startMs": 65615,
    "endMs": 65875,
    "timestampMs": 65615,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " cứu",
    "startMs": 65875,
    "endMs": 66075,
    "timestampMs": 65875,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " này",
    "startMs": 66075,
    "endMs": 66265,
    "timestampMs": 66075,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " và",
    "startMs": 66265,
    "endMs": 67035,
    "timestampMs": 66265,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " một",
    "startMs": 67035,
    "endMs": 67315,
    "timestampMs": 67035,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " suất",
    "startMs": 67315,
    "endMs": 68115,
    "timestampMs": 67315,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " mì",
    "startMs": 68115,
    "endMs": 68435,
    "timestampMs": 68115,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " gà",
    "startMs": 68435,
    "endMs": 68635,
    "timestampMs": 68435,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " tần",
    "startMs": 68635,
    "endMs": 68935,
    "timestampMs": 68635,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " nhé",
    "startMs": 68935,
    "endMs": 69075,
    "timestampMs": 68935,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " Mình",
    "startMs": 69075,
    "endMs": 69425,
    "timestampMs": 69075,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " gọi",
    "startMs": 69425,
    "endMs": 70125,
    "timestampMs": 69425,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " hai",
    "startMs": 70595,
    "endMs": 70835,
    "timestampMs": 70595,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " món",
    "startMs": 70835,
    "endMs": 71435,
    "timestampMs": 70835,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " chính",
    "startMs": 71435,
    "endMs": 71735,
    "timestampMs": 71435,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " thôi",
    "startMs": 71735,
    "endMs": 71915,
    "timestampMs": 71735,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " Bởi",
    "startMs": 71925,
    "endMs": 72235,
    "timestampMs": 71925,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " vì",
    "startMs": 72235,
    "endMs": 72435,
    "timestampMs": 72235,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " mỗi",
    "startMs": 72435,
    "endMs": 72765,
    "timestampMs": 72435,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " mình",
    "startMs": 72765,
    "endMs": 73105,
    "timestampMs": 72765,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " ăn",
    "startMs": 73105,
    "endMs": 73305,
    "timestampMs": 73105,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " thôi",
    "startMs": 73305,
    "endMs": 73655,
    "timestampMs": 73305,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " mà.",
    "startMs": 73655,
    "endMs": 74215,
    "timestampMs": 73655,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " Mình",
    "startMs": 74215,
    "endMs": 74785,
    "timestampMs": 74215,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " thử",
    "startMs": 74785,
    "endMs": 75265,
    "timestampMs": 74785,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " nha.",
    "startMs": 75265,
    "endMs": 75915,
    "timestampMs": 75265,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " Xin",
    "startMs": 75915,
    "endMs": 76195,
    "timestampMs": 75915,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " mời",
    "startMs": 76195,
    "endMs": 76645,
    "timestampMs": 76195,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " mọi",
    "startMs": 76645,
    "endMs": 77045,
    "timestampMs": 76645,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " người.",
    "startMs": 77045,
    "endMs": 77745,
    "timestampMs": 77045,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " Trông",
    "startMs": 78055,
    "endMs": 78645,
    "timestampMs": 78055,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " hấp",
    "startMs": 78645,
    "endMs": 79065,
    "timestampMs": 78645,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " dẫn",
    "startMs": 79065,
    "endMs": 79525,
    "timestampMs": 79065,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " đấy",
    "startMs": 79525,
    "endMs": 80115,
    "timestampMs": 79525,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " nhỉ.",
    "startMs": 80115,
    "endMs": 80675,
    "timestampMs": 80115,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 80675
   },
   {
    "text": " mình",
    "startMs": 97062,
    "endMs": 97762,
    "timestampMs": 97062,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " ăn",
    "startMs": 99772,
    "endMs": 99982,
    "timestampMs": 99772,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " trứng",
    "startMs": 99982,
    "endMs": 100472,
    "timestampMs": 99982,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " với",
    "startMs": 100472,
    "endMs": 100832,
    "timestampMs": 100472,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " lộn",
    "startMs": 100832,
    "endMs": 101212,
    "timestampMs": 100832,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " là",
    "startMs": 101212,
    "endMs": 101302,
    "timestampMs": 101212,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " mình",
    "startMs": 101302,
    "endMs": 101452,
    "timestampMs": 101302,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " phải",
    "startMs": 101452,
    "endMs": 101702,
    "timestampMs": 101452,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " ăn",
    "startMs": 101702,
    "endMs": 101822,
    "timestampMs": 101702,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " đến",
    "startMs": 101822,
    "endMs": 102072,
    "timestampMs": 101822,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " 7",
    "startMs": 102072,
    "endMs": 102192,
    "timestampMs": 102072,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " quả",
    "startMs": 102192,
    "endMs": 102412,
    "timestampMs": 102192,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " một",
    "startMs": 102412,
    "endMs": 102622,
    "timestampMs": 102412,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " lúc",
    "startMs": 102622,
    "endMs": 102792,
    "timestampMs": 102622,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " Bây",
    "startMs": 102792,
    "endMs": 103072,
    "timestampMs": 102792,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " giờ",
    "startMs": 103072,
    "endMs": 103432,
    "timestampMs": 103072,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " gọi",
    "startMs": 103432,
    "endMs": 103782,
    "timestampMs": 103432,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " là",
    "startMs": 103782,
    "endMs": 104002,
    "timestampMs": 103782,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " tiết",
    "startMs": 104002,
    "endMs": 104432,
    "timestampMs": 104002,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " chế",
    "startMs": 104432,
    "endMs": 104772,
    "timestampMs": 104432,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " lại",
    "startMs": 104772,
    "endMs": 105192,
    "timestampMs": 104772,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " rồi",
    "startMs": 105192,
    "endMs": 105372,
    "timestampMs": 105192,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 105492
   },
   {
    "text": " là",
    "startMs": 108668,
    "endMs": 109368,
    "timestampMs": 108668,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 115558
   },
   {
    "text": " mềm,",
    "startMs": 110638,
    "endMs": 111338,
    "timestampMs": 110638,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 115558
   },
   {
    "text": " kiểu",
    "startMs": 111878,
    "endMs": 112578,
    "timestampMs": 111878,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 115558
   },
   {
    "text": " trứng",
    "startMs": 112958,
    "endMs": 113658,
    "timestampMs": 112958,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 115558
   },
   {
    "text": " lộn",
    "startMs": 114008,
    "endMs": 114498,
    "timestampMs": 114008,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 115558
   },
   {
    "text": " vừa",
    "startMs": 114498,
    "endMs": 115308,
    "timestampMs": 114498,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 115558
   },
   {
    "text": " tới",
    "startMs": 115308,
    "endMs": 115558,
    "timestampMs": 115308,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 115558
   },
   {
    "text": " mà",
    "startMs": 120445,
    "endMs": 121145,
    "timestampMs": 120445,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " cái",
    "startMs": 122105,
    "endMs": 122395,
    "timestampMs": 122105,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " món",
    "startMs": 122395,
    "endMs": 122685,
    "timestampMs": 122395,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " này",
    "startMs": 122685,
    "endMs": 122975,
    "timestampMs": 122685,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " rất",
    "startMs": 122975,
    "endMs": 123335,
    "timestampMs": 122975,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " là",
    "startMs": 123335,
    "endMs": 123545,
    "timestampMs": 123335,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " ngon",
    "startMs": 123545,
    "endMs": 123845,
    "timestampMs": 123545,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " và",
    "startMs": 123845,
    "endMs": 123995,
    "timestampMs": 123845,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " hợp",
    "startMs": 123995,
    "endMs": 124245,
    "timestampMs": 123995,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " lý",
    "startMs": 124245,
    "endMs": 124405,
    "timestampMs": 124245,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " đấy",
    "startMs": 124405,
    "endMs": 124605,
    "timestampMs": 124405,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " Các",
    "startMs": 124615,
    "endMs": 124945,
    "timestampMs": 124615,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " bạn",
    "startMs": 124945,
    "endMs": 125365,
    "timestampMs": 124945,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " có",
    "startMs": 125365,
    "endMs": 125665,
    "timestampMs": 125365,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " muốn",
    "startMs": 125665,
    "endMs": 126155,
    "timestampMs": 125665,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " ăn",
    "startMs": 126155,
    "endMs": 126415,
    "timestampMs": 126155,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " buổi",
    "startMs": 126415,
    "endMs": 126925,
    "timestampMs": 126415,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " chiều",
    "startMs": 126925,
    "endMs": 127525,
    "timestampMs": 126925,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " mà",
    "startMs": 127525,
    "endMs": 127785,
    "timestampMs": 127525,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " quá",
    "startMs": 127785,
    "endMs": 128125,
    "timestampMs": 127785,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " bữa",
    "startMs": 128125,
    "endMs": 128605,
    "timestampMs": 128125,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " rồi",
    "startMs": 128605,
    "endMs": 129225,
    "timestampMs": 128605,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " Thì",
    "startMs": 129225,
    "endMs": 129465,
    "timestampMs": 129225,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " hãy",
    "startMs": 129465,
    "endMs": 129715,
    "timestampMs": 129465,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " tìm",
    "startMs": 129715,
    "endMs": 129955,
    "timestampMs": 129715,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " đến",
    "startMs": 129955,
    "endMs": 130335,
    "timestampMs": 129955,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " địa",
    "startMs": 130335,
    "endMs": 130705,
    "timestampMs": 130335,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " chỉ",
    "startMs": 130705,
    "endMs": 131015,
    "timestampMs": 130705,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " 61",
    "startMs": 131015,
    "endMs": 131395,
    "timestampMs": 131015,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " Thủy",
    "startMs": 131395,
    "endMs": 131765,
    "timestampMs": 131395,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " Nguyên",
    "startMs": 131765,
    "endMs": 132285,
    "timestampMs": 131765,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " nhé",
    "startMs": 132285,
    "endMs": 132285,
    "timestampMs": 132285,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " Quán",
    "startMs": 132285,
    "endMs": 132945,
    "timestampMs": 132285,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " ngon",
    "startMs": 132945,
    "endMs": 133495,
    "timestampMs": 132945,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " Eco",
    "startMs": 133495,
    "endMs": 133865,
    "timestampMs": 133495,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " này",
    "startMs": 133865,
    "endMs": 134425,
    "timestampMs": 133865,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 135125
   },
   {
    "text": " Chịu",
    "startMs": 135315,
    "endMs": 136095,
    "timestampMs": 135315,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 137125
   },
   {
    "text": " chết",
    "startMs": 136585,
    "endMs": 137065,
    "timestampMs": 136585,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 137125
   },
   {
    "text": " gà",
    "startMs": 140585,
    "endMs": 140965,
    "timestampMs": 140585,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 141925
   },
   {
    "text": " chất",
    "startMs": 140965,
    "endMs": 141135,
    "timestampMs": 140965,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 141925
   },
   {
    "text": " lượng",
    "startMs": 141135,
    "endMs": 141425,
    "timestampMs": 141135,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 141925
   },
   {
    "text": " đấy",
    "startMs": 141425,
    "endMs": 141585,
    "timestampMs": 141425,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 141925
   },
   {
    "text": " Đúng",
    "startMs": 147848,
    "endMs": 148108,
    "timestampMs": 147848,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 148108
   },
   {
    "text": " ăn",
    "startMs": 148178,
    "endMs": 148888,
    "timestampMs": 148178,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " là",
    "startMs": 148888,
    "endMs": 148988,
    "timestampMs": 148888,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " hạnh",
    "startMs": 148988,
    "endMs": 149188,
    "timestampMs": 148988,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " phúc",
    "startMs": 149188,
    "endMs": 149358,
    "timestampMs": 149188,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " nhất",
    "startMs": 149358,
    "endMs": 149588,
    "timestampMs": 149358,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " cuộc",
    "startMs": 149588,
    "endMs": 149788,
    "timestampMs": 149588,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " đời",
    "startMs": 149788,
    "endMs": 150068,
    "timestampMs": 149788,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " Đói",
    "startMs": 150068,
    "endMs": 150768,
    "timestampMs": 150068,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " run",
    "startMs": 152118,
    "endMs": 152258,
    "timestampMs": 152118,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " hết",
    "startMs": 152258,
    "endMs": 152478,
    "timestampMs": 152258,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " người",
    "startMs": 152478,
    "endMs": 152838,
    "timestampMs": 152478,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " tầm",
    "startMs": 152838,
    "endMs": 153108,
    "timestampMs": 152838,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " này",
    "startMs": 153108,
    "endMs": 153348,
    "timestampMs": 153108,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " Trà",
    "startMs": 153348,
    "endMs": 153608,
    "timestampMs": 153348,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 153608
   },
   {
    "text": " mình",
    "startMs": 168615,
    "endMs": 169295,
    "timestampMs": 168615,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 170675
   },
   {
    "text": " như",
    "startMs": 169295,
    "endMs": 169445,
    "timestampMs": 169295,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 170675
   },
   {
    "text": " này",
    "startMs": 169445,
    "endMs": 169595,
    "timestampMs": 169445,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 170675
   },
   {
    "text": " cũng",
    "startMs": 169595,
    "endMs": 169895,
    "timestampMs": 169595,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 170675
   },
   {
    "text": " khỏe",
    "startMs": 169895,
    "endMs": 170275,
    "timestampMs": 169895,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 170675
   },
   {
    "text": " Sức",
    "startMs": 170275,
    "endMs": 170675,
    "timestampMs": 170275,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 170675
   },
   {
    "text": " Với",
    "startMs": 172462,
    "endMs": 172852,
    "timestampMs": 172462,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " đói",
    "startMs": 172852,
    "endMs": 173262,
    "timestampMs": 172852,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " thì",
    "startMs": 173262,
    "endMs": 173672,
    "timestampMs": 173262,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " thề",
    "startMs": 173672,
    "endMs": 173982,
    "timestampMs": 173672,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " luôn",
    "startMs": 173982,
    "endMs": 174482,
    "timestampMs": 173982,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " nó",
    "startMs": 174482,
    "endMs": 174532,
    "timestampMs": 174482,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " nặng",
    "startMs": 174532,
    "endMs": 174712,
    "timestampMs": 174532,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " hết",
    "startMs": 174712,
    "endMs": 174862,
    "timestampMs": 174712,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " người,",
    "startMs": 174862,
    "endMs": 175262,
    "timestampMs": 174862,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " run",
    "startMs": 175262,
    "endMs": 175442,
    "timestampMs": 175262,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " cầm",
    "startMs": 175442,
    "endMs": 175752,
    "timestampMs": 175442,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " cập",
    "startMs": 175752,
    "endMs": 176102,
    "timestampMs": 175752,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " Giờ",
    "startMs": 176102,
    "endMs": 176502,
    "timestampMs": 176102,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " ăn",
    "startMs": 176502,
    "endMs": 176732,
    "timestampMs": 176502,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " hết",
    "startMs": 176732,
    "endMs": 177152,
    "timestampMs": 176732,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " một",
    "startMs": 177152,
    "endMs": 177562,
    "timestampMs": 177152,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " bát",
    "startMs": 177562,
    "endMs": 177882,
    "timestampMs": 177562,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " cái",
    "startMs": 177882,
    "endMs": 178242,
    "timestampMs": 177882,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " tỉnh",
    "startMs": 178242,
    "endMs": 178662,
    "timestampMs": 178242,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " táo",
    "startMs": 178662,
    "endMs": 178942,
    "timestampMs": 178662,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " cả",
    "startMs": 178942,
    "endMs": 179172,
    "timestampMs": 178942,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " con",
    "startMs": 179172,
    "endMs": 179362,
    "timestampMs": 179172,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " người",
    "startMs": 179362,
    "endMs": 179942,
    "timestampMs": 179362,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " Sướng",
    "startMs": 179942,
    "endMs": 180382,
    "timestampMs": 179942,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " cả",
    "startMs": 180382,
    "endMs": 180612,
    "timestampMs": 180382,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " cái",
    "startMs": 180612,
    "endMs": 180842,
    "timestampMs": 180612,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " thằng",
    "startMs": 180842,
    "endMs": 181232,
    "timestampMs": 180842,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " người",
    "startMs": 181232,
    "endMs": 181742,
    "timestampMs": 181232,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 181742
   },
   {
    "text": " mì",
    "startMs": 182832,
    "endMs": 183042,
    "timestampMs": 182832,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 183892
   },
   {
    "text": " ngon",
    "startMs": 183042,
    "endMs": 183302,
    "timestampMs": 183042,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 183892
   },
   {
    "text": " không?",
    "startMs": 183302,
    "endMs": 183792,
    "timestampMs": 183302,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 183892
   },
   {
    "text": " Ngon",
    "startMs": 186482,
    "endMs": 187182,
    "timestampMs": 186482,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 188032
   },
   {
    "text": " là",
    "startMs": 193612,
    "endMs": 194312,
    "timestampMs": 193612,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " lúc",
    "startMs": 194652,
    "endMs": 195232,
    "timestampMs": 194652,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " đói",
    "startMs": 195232,
    "endMs": 195642,
    "timestampMs": 195232,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " này",
    "startMs": 195642,
    "endMs": 196162,
    "timestampMs": 195642,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " có",
    "startMs": 196162,
    "endMs": 196272,
    "timestampMs": 196162,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " ăn",
    "startMs": 196272,
    "endMs": 196452,
    "timestampMs": 196272,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " này",
    "startMs": 196452,
    "endMs": 196672,
    "timestampMs": 196452,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " là",
    "startMs": 196672,
    "endMs": 196862,
    "timestampMs": 196672,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " tốt",
    "startMs": 196862,
    "endMs": 197152,
    "timestampMs": 196862,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " rồi",
    "startMs": 197152,
    "endMs": 197472,
    "timestampMs": 197152,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " Cũng",
    "startMs": 197472,
    "endMs": 198182,
    "timestampMs": 197472,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " được",
    "startMs": 198552,
    "endMs": 199252,
    "timestampMs": 198552,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " tầm",
    "startMs": 199292,
    "endMs": 200012,
    "timestampMs": 199292,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " 7/10",
    "startMs": 201032,
    "endMs": 201732,
    "timestampMs": 201032,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 202132
   },
   {
    "text": " Em",
    "startMs": 202142,
    "endMs": 202452,
    "timestampMs": 202142,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 205332
   },
   {
    "text": " thanh",
    "startMs": 202452,
    "endMs": 202862,
    "timestampMs": 202452,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 205332
   },
   {
    "text": " toán,",
    "startMs": 202862,
    "endMs": 203532,
    "timestampMs": 202862,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 205332
   },
   {
    "text": " nghìn",
    "startMs": 208062,
    "endMs": 208762,
    "timestampMs": 208062,
-   "confidence": null
+   "confidence": null,
+   "maxEndMs": 211012
   }
  ],
  "titles": [
@@ -2613,130 +2953,198 @@
    "effect": "zoomPunch",
    "startMs": 100,
    "durationMs": 2000,
-   "y": 980
+   "y": 980,
+   "sfx": [
+    {
+     "sfx": "mixkit/pop-whoosh",
+     "offsetMs": 0,
+     "volume": 0.54
+    }
+   ]
   },
   {
    "text": "*3 GIỜ CHIỀU* | VẪN CHƯA ĂN",
    "effect": "popBounce",
    "startMs": 4400,
    "durationMs": 2600,
-   "y": 818
+   "y": 818,
+   "sfx": [
+    {
+     "sfx": "mixkit/bubble-pop",
+     "offsetMs": 0,
+     "volume": 0.55
+    }
+   ]
   },
   {
    "text": "QUÁN *MÌ GÀ TẦN*",
    "effect": "slideMask",
    "startMs": 11600,
    "durationMs": 2600,
-   "y": 478
+   "y": 478,
+   "sfx": [
+    {
+     "sfx": "mixkit/small-sweep",
+     "offsetMs": -40,
+     "volume": 0.4
+    }
+   ]
   },
   {
    "text": "61 THỦY NGUYÊN | QUÁN NGON ECO",
    "effect": "zoomPunch",
    "startMs": 19500,
    "durationMs": 3000,
-   "y": 454
+   "y": 454,
+   "sfx": [
+    {
+     "sfx": "mixkit/pop-whoosh",
+     "offsetMs": 0,
+     "volume": 0.54
+    }
+   ]
   },
   {
    "text": "GIÁ *20K – 60K*",
    "effect": "popBounce",
    "startMs": 45225,
    "durationMs": 2400,
-   "y": 1030
+   "y": 1030,
+   "sfx": [
+    {
+     "sfx": "mixkit/bubble-pop",
+     "offsetMs": 0,
+     "volume": 0.55
+    }
+   ]
   },
   {
    "text": "TRỨNG HẦM *NGẢI CỨU*",
    "effect": "typewriter",
    "startMs": 64475,
    "durationMs": 2600,
-   "y": 980
+   "y": 980,
+   "sfx": [
+    {
+     "sfx": "mixkit/page-chime",
+     "offsetMs": 700,
+     "volume": 0.4
+    }
+   ]
   },
   {
    "text": "7 QUẢ MỘT LÚC",
    "effect": "zoomPunch",
    "startMs": 101692,
    "durationMs": 2000,
-   "y": 980
+   "y": 980,
+   "sfx": [
+    {
+     "sfx": "mixkit/pop-whoosh",
+     "offsetMs": 0,
+     "volume": 0.54
+    }
+   ]
   },
   {
    "text": "ĐÙI GÀ *CHẤT LƯỢNG*",
    "effect": "popBounce",
    "startMs": 140425,
    "durationMs": 1600,
-   "y": 910
+   "y": 910,
+   "sfx": [
+    {
+     "sfx": "mixkit/bubble-pop",
+     "offsetMs": 0,
+     "volume": 0.55
+    }
+   ]
   },
   {
    "text": "CHẤM 7/10",
    "effect": "zoomPunch",
    "startMs": 199732,
    "durationMs": 2200,
-   "y": 980
+   "y": 980,
+   "sfx": [
+    {
+     "sfx": "mixkit/pop-whoosh",
+     "offsetMs": 0,
+     "volume": 0.54
+    },
+    {
+     "sfx": "mixkit/correct-tone",
+     "offsetMs": 450,
+     "volume": 0.32
+    }
+   ]
   }
  ],
  "sfx": [
   {
-   "sfx": "whoosh",
-   "atMs": 30030,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 30000,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 80555,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 80525,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 105372,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 105342,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 115438,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 115408,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 137005,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 136975,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 141805,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 141775,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 153488,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 153458,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 160888,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 160858,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 170555,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 170525,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 181622,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 181592,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 183772,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 183742,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 187912,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 187882,
+   "volume": 0.4
   },
   {
-   "sfx": "whoosh",
-   "atMs": 205212,
-   "volume": 0.5
+   "sfx": "mixkit/short-sweep",
+   "atMs": 205182,
+   "volume": 0.4
   }
  ],
  "captionMode": "wordbyword",

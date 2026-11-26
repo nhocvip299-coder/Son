@@ -3,7 +3,7 @@ import { AbsoluteFill, Sequence, interpolate, spring, useCurrentFrame, useVideoC
 import { FONTS } from "../../../lib/fonts";
 
 /** Phu de "chay chu tung chu": moi lan hien DUNG 1 tu dang noi, nay nhe + phat sang (phong cach preset CapCut). */
-export type WbwWord = { text: string; startMs: number; endMs: number };
+export type WbwWord = { text: string; startMs: number; endMs: number; maxEndMs?: number }; // maxEndMs: khong giu tu qua diem cat
 
 const Word: React.FC<{ w: WbwWord; dur: number; accent: boolean; y: number }> = ({ w, dur, accent, y }) => {
   const f = useCurrentFrame();
@@ -47,7 +47,7 @@ export const WordByWord: React.FC<{ words: WbwWord[]; y?: number; accentRe?: str
         const from = Math.round((w.startMs / 1000) * fps);
         const next = words[i + 1];
         // giu tu den khi tu sau bat dau (toi da +0.6s sau khi noi xong) -> khong nhap nhay
-        const endMs = Math.min(next ? next.startMs : w.endMs + 600, w.endMs + 600);
+        const endMs = Math.min(next ? next.startMs : w.endMs + 600, w.endMs + 600, w.maxEndMs ?? Infinity);
         const dur = Math.max(2, Math.round((endMs / 1000) * fps) - from);
         return (
           <Sequence key={i} from={from} durationInFrames={dur} layout="none" name={`W ${w.text}`}>

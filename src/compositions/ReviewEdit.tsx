@@ -24,7 +24,7 @@ export type ReviewPlan = {
   segments: ReviewSegment[];
   captions: Caption[];
   /** y = tam khoi chu (px @1920) do build_plan dat de tranh mat; mac dinh tam band headline (600). */
-  titles: Array<{ text: string; effect: Exclude<EffectName, "neonGlitch">; startMs: number; durationMs: number; y?: number }>;
+  titles: Array<{ text: string; effect: Exclude<EffectName, "neonGlitch">; startMs: number; durationMs: number; y?: number; sfx?: Array<{ sfx: SfxName; offsetMs: number; volume: number }> }>;
   /** Doi phu de xuong/len (px). */
   captionOffset?: number;
   sfx: Array<{ sfx: SfxName; atMs: number; volume: number }>;
@@ -78,9 +78,14 @@ export const ReviewEdit: React.FC<{ plan: ReviewPlan }> = ({ plan }) => {
   });
   const cues: SfxCue[] = [
     ...plan.sfx.map((s) => ({ frame: toF(s.atMs), sfx: s.sfx, volume: s.volume })),
-    ...plan.titles.flatMap((t) => EFFECTS[t.effect].cues(t.text).map((c) => ({ ...c, frame: toF(t.startMs) + Math.round((c.frame * fps) / 30) }))),
+    // tieu de co sfx rieng (bo SFX nhe da can muc) -> dung thay cho cue mac dinh cua hieu ung (moi tu 1 tieng, qua day)
+    ...plan.titles.flatMap((t) =>
+      t.sfx
+        ? t.sfx.map((c) => ({ frame: Math.max(0, toF(t.startMs + c.offsetMs)), sfx: c.sfx, volume: c.volume }))
+        : EFFECTS[t.effect].cues(t.text).map((c) => ({ ...c, frame: toF(t.startMs) + Math.round((c.frame * fps) / 30) })),
+    ),
   ];
-  const words: WbwWord[] = plan.captions.map((c) => ({ text: c.text.trim(), startMs: c.startMs, endMs: c.endMs }));
+  const words: WbwWord[] = plan.captions.map((c) => ({ text: c.text.trim(), startMs: c.startMs, endMs: c.endMs, maxEndMs: (c as { maxEndMs?: number }).maxEndMs }));
   const mode = plan.captionMode ?? "karaoke";
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>

@@ -43,7 +43,13 @@ export type SfxName =
   | "swish"
   | "shimmer"
   | "ring"
-  | "hit";
+  | "hit"
+  | "shine"
+  | "pops"
+  | "blip8"
+  | "coin"
+  | "positive"
+  | "game";
 
 export type TypoProps = {
   text: string;

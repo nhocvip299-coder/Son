@@ -10,6 +10,8 @@ import { CapcutPageCompare } from "./styles/textPresets/capcut/CapcutPageCompare
 import { CapcutSamples } from "./styles/textPresets/capcut/CapcutSamples";
 import { CapcutEdit, ccPlanDurationMs, type CcEditPlan } from "./styles/textPresets/capcut/CapcutEdit";
 import { HongDangEdit, hdPlanDurationMs, type HdPlan } from "./styles/hongDang/HongDangEdit";
+import { TuanTuDoEdit, ttdPlanDurationMs, type TtdPlan } from "./styles/tuanTuDo/TuanTuDoEdit";
+import { TTD_VERIFY_PLAN } from "./styles/tuanTuDo/Verify";
 import { EMPTY_PLAN, planDurationMs, type EditPlan } from "./compositions/plan";
 
 export const RemotionRoot: React.FC = () => {
@@ -55,6 +57,26 @@ export const RemotionRoot: React.FC = () => {
           fps: props.plan.fps,
           durationInFrames: Math.max(1, Math.round((hdPlanDurationMs(props.plan) / 1000) * props.plan.fps)),
         })}
+      />
+      <Composition
+        id="TuanTuDoEdit"
+        component={TuanTuDoEdit}
+        durationInFrames={60}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{ plan: TTD_VERIFY_PLAN as TtdPlan }}
+        calculateMetadata={({ props }) => ({ fps: props.plan.fps, durationInFrames: Math.max(1, Math.round((ttdPlanDurationMs(props.plan) / 1000) * props.plan.fps)) })}
+      />
+      <Composition
+        id="TuanTuDoVerifyWbw"
+        component={TuanTuDoEdit}
+        durationInFrames={60}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{ plan: { ...TTD_VERIFY_PLAN, captionMode: "wordbyword" } as TtdPlan }}
+        calculateMetadata={({ props }) => ({ fps: props.plan.fps, durationInFrames: Math.max(1, Math.round((ttdPlanDurationMs(props.plan) / 1000) * props.plan.fps)) })}
       />
       <Composition
         id="AutoEdit"

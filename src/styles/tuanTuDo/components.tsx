@@ -12,7 +12,8 @@ export const TTD = {
   yellow: "#F6EC14", // [XM] trung binh mat chu vang 6 video: #f4e91b..#f7e015
   white: "#FFFFFF",
   stroke: "#000000", // [XM] vien den day, khong gradient
-  font: FONTS.rounded, // [XM~] chu tron dau, rat dam (gan Nunito Black)
+  font: FONTS.rounded, // [XM~] chu tron dau, rat dam: so 8 font -> Nunito Black bop ngang 90% khop nhat
+  squeeze: 0.9, // [XM] ti le ngang/doc chu kenh hep hon Nunito ~10%
   captionY: 0.205, // [XM] tam phu de 0.196–0.23 H (median 6 video)
   captionSize: 74, // [XM] chieu cao chu IN HOA ~0.027 H = 52px -> font ~74px @1920
 };
@@ -116,7 +117,7 @@ export const TtdCaptionChunk: React.FC<{
   const base = chunk.other ? size * 0.8 : size;
   // co lon nhat de ca cum vua 86% ngang (chu dam Nunito ~0.68em/ky tu IN HOA)
   const chars = chunk.words.reduce((a, w) => a + w.text.length + 1, 0) + (chunk.other ? 1 : 0);
-  const fit = Math.min(base, (width * 0.86) / (chars * 0.66));
+  const fit = Math.min(base, (width * 0.86) / (chars * 0.66 * TTD.squeeze));
   const shown = chunk.words.filter((w) => reveal === "full" || w.startMs <= tMs + 30);
   const activeIdx = chunk.words.findIndex((w, i) => tMs >= w.startMs - 30 && tMs < (chunk.words[i + 1]?.startMs ?? Infinity));
   return (
@@ -131,7 +132,7 @@ export const TtdCaptionChunk: React.FC<{
         alignItems: "baseline",
         gap: fit * 0.26,
         translate: "0 -50%",
-        scale: pop,
+        scale: `${pop * TTD.squeeze} ${pop}`,
         opacity: out,
       }}
     >
@@ -224,13 +225,13 @@ export const TtdGlowBand: React.FC<{ duration: number; y?: number }> = ({ durati
 export const TtdHookTitle: React.FC<{ text: string; duration: number; y?: number; size?: number }> = ({ text, duration, y = 0.215, size = 84 }) => {
   const f = useFrame30();
   const { height, width } = useVideoConfig();
-  const fit = Math.min(size, (width * 0.86) / ((text.length + 1) * 0.66));
+  const fit = Math.min(size, (width * 0.86) / ((text.length + 1) * 0.66 * TTD.squeeze));
   const inn = spring({ frame: f, fps: 30, config: { damping: 14, stiffness: 220, mass: 0.6 } });
   const out = interpolate(f, [duration - 4, duration], [1, 0], clamp);
   const ghostT = interpolate(f, [0, 22], [0, 1], { ...clamp, easing: easeOut });
   const box: React.CSSProperties = { position: "absolute", top: height * y, left: 0, right: 0, display: "flex", justifyContent: "center", translate: "0 -50%" };
   return (
-    <AbsoluteFill style={{ opacity: out }}>
+    <AbsoluteFill style={{ opacity: out, scale: `${TTD.squeeze} 1` }}>
       {/* bong ma: ban sao phong to 1.0→1.45, mo + nhoe, roi tat [XM] */}
       <div style={{ ...box, scale: 1 + 0.45 * ghostT, opacity: 0.55 * (1 - ghostT) + 0.12, filter: `blur(${2 + 6 * ghostT}px)` }}>
         <Stroked size={fit} color={TTD.yellow}>{text}</Stroked>
@@ -253,7 +254,7 @@ export const TtdNameTag: React.FC<{ line1: string; line2?: string; duration: num
   const out = interpolate(f, [duration - 4, duration], [1, 0], clamp);
   return (
     <AbsoluteFill style={{ opacity: out }}>
-      <div style={{ position: "absolute", top: height * y, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 6 }}>
+      <div style={{ position: "absolute", top: height * y, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 6, scale: `${TTD.squeeze} 1` }}>
         <div style={{ scale: interpolate(a, [0, 1], [0.6, 1]), opacity: Math.min(1, a * 1.4) }}>
           <Stroked size={82} color={TTD.yellow}>{line1}</Stroked>
         </div>
@@ -371,7 +372,7 @@ export const TtdToBeContinued: React.FC<{ duration: number; text?: string; y?: n
   return (
     <AbsoluteFill style={{ opacity: out }}>
       <AbsoluteFill style={{ background: `radial-gradient(ellipse 62% 55% at 50% 48%, rgba(0,0,0,0) 55%, rgba(0,0,0,${0.85 * v}) 100%)` }} />
-      <div style={{ position: "absolute", top: height * y, left: 0, right: 0, display: "flex", justifyContent: "center", translate: "0 -50%", scale: interpolate(p, [0, 1], [0.4, 1]), opacity: Math.min(1, p * 1.6) }}>
+      <div style={{ position: "absolute", top: height * y, left: 0, right: 0, display: "flex", justifyContent: "center", translate: "0 -50%", scale: `${interpolate(p, [0, 1], [0.4, 1]) * TTD.squeeze} ${interpolate(p, [0, 1], [0.4, 1])}`, opacity: Math.min(1, p * 1.6) }}>
         <Stroked size={118} color={TTD.yellow}>
           {text}
           <span style={{ opacity: dots >= 1 ? 1 : 0 }}>.</span>

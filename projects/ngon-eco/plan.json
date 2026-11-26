@@ -2937,14 +2937,6 @@
    "timestampMs": 202862,
    "confidence": null,
    "maxEndMs": 205332
-  },
-  {
-   "text": " nghìn",
-   "startMs": 208062,
-   "endMs": 208762,
-   "timestampMs": 208062,
-   "confidence": null,
-   "maxEndMs": 211012
   }
  ],
  "titles": [
@@ -3015,6 +3007,11 @@
      "sfx": "mixkit/bubble-pop",
      "offsetMs": 0,
      "volume": 0.55
+    },
+    {
+     "sfx": "mixkit/correct-tone",
+     "offsetMs": 450,
+     "volume": 0.32
     }
    ]
   },
@@ -3071,6 +3068,25 @@
      "sfx": "mixkit/pop-whoosh",
      "offsetMs": 0,
      "volume": 0.54
+    },
+    {
+     "sfx": "mixkit/correct-tone",
+     "offsetMs": 450,
+     "volume": 0.32
+    }
+   ]
+  },
+  {
+   "text": "THANH TOÁN *90K*",
+   "effect": "popBounce",
+   "startMs": 207582,
+   "durationMs": 2800,
+   "y": 1190,
+   "sfx": [
+    {
+     "sfx": "mixkit/bubble-pop",
+     "offsetMs": 0,
+     "volume": 0.55
     },
     {
      "sfx": "mixkit/correct-tone",

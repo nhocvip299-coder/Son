@@ -345,6 +345,14 @@
    "dur": 2.2,
    "effect": "zoomPunch",
    "text": "CHẤM *7/10*"
+  },
+  {
+   "clip": "0042",
+   "at": 7.5,
+   "dur": 2.8,
+   "effect": "popBounce",
+   "text": "THANH TOÁN *90K*",
+   "y": 1190
   }
  ],
  "noCaption": [
@@ -365,6 +373,12 @@
    "a": 40.9,
    "b": 48.1,
    "why": "'Nhìn là 2 khách này vượt mờ quá' nghe không rõ"
+  },
+  {
+   "clip": "0042",
+   "a": 7.3,
+   "b": 10.93,
+   "why": "đã có chữ hiệu ứng 'THANH TOÁN 90K'"
   }
  ]
 }

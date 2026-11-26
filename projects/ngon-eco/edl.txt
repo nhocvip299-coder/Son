@@ -41,6 +41,7 @@ Bỏ phụ đề (nghe không rõ):
   clip 0039 46.3–51.4s: 'Trà tươi... Ăn mà không có lỗ bở' nghe không rõ
   clip 0042 1.4–3.2s: 'có em vào tiền chị nhỉ' nghe không rõ
   clip 0031 40.9–48.1s: 'Nhìn là 2 khách này vượt mờ quá' nghe không rõ
+  clip 0042 7.3–10.9s: đã có chữ hiệu ứng 'THANH TOÁN 90K'
 
 Chữ hiệu ứng:
   0:00.1  zoomPunch  HẠNH PHÚC | NHẤT CUỘC ĐỜI  (y=980)
@@ -52,3 +53,4 @@ Chữ hiệu ứng:
   1:41.7  zoomPunch  7 QUẢ MỘT LÚC  (y=980)
   2:20.4  popBounce  ĐÙI GÀ *CHẤT LƯỢNG*  (y=910)
   3:19.7  zoomPunch  CHẤM 7/10  (y=980)
+  3:27.6  popBounce  THANH TOÁN *90K*  (y=1190)

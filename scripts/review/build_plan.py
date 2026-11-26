@@ -62,13 +62,15 @@ for ti in edl["titles"]:
     if o is None:
         print("!! tieu de ngoai doan giu:", ti["text"]); continue
     txt = ti["text"].replace("*", "") if ti["effect"] == "zoomPunch" else ti["text"]  # zoomPunch khong doc dau *
-    titles.append({"text": txt, "effect": ti["effect"], "startMs": round(o * 1000), "durationMs": round(ti["dur"] * 1000)})
+    titles.append({"text": txt, "effect": ti["effect"], "startMs": round(o * 1000), "durationMs": round(ti["dur"] * 1000), **({"yFixed": ti["y"]} if "y" in ti else {})})
 
 # 3b) dat tieu de TRANH MAT: do mat (work/faces.json, Haar) trong luc tieu de hien
 faces_p = work / "faces.json"
 if faces_p.exists():
     faces = json.loads(faces_p.read_text())
     for ti in titles:
+        if "yFixed" in ti:
+            ti["y"] = ti.pop("yFixed"); continue  # vi tri dat tay trong edl
         near = [f for f in faces if ti["startMs"] - 250 <= f[0] <= ti["startMs"] + ti["durationMs"] and f[1] is not None and f[2] - f[1] > 150]
         if not near:
             ti["y"] = 520; continue
@@ -90,7 +92,7 @@ TITLE_SFX = {
 }
 for ti in titles:
     cues = list(TITLE_SFX[ti["effect"]])
-    if re.search(r"\d+/10", ti["text"]):
+    if re.search(r"\d+/10|\d+K\*?$", ti["text"]):
         cues.append(("correct-tone", 450))  # diem so: tieng "ting" dung
     ti["sfx"] = [{"sfx": f"mixkit/{n}", "offsetMs": o, "volume": gain(n)} for n, o in cues]
 

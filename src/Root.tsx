@@ -22,6 +22,7 @@ import { AquaBoard } from "./styles/bdsLuxury/AquaBoard";
 import { VerifyMau, VERIFY_SEC } from "../skills/video-edit-style-master/examples/VerifyMau";
 import { Sb145Vesm, SB145_SEC } from "./styles/vesm/Sb145Vesm";
 import { SaoBienVesm, SAOBIEN_SEC } from "./styles/vesm/SaoBienVesm";
+import { HappyHomeHuyen, HH_HUYEN_SEC } from "./styles/vesm/HappyHomeHuyen";
 import { TextPresetsGallery } from "./styles/textPresets/Gallery";
 import { TextPresetsCatalog40, TextPresetsGallery40 } from "./styles/textPresets/Gallery40";
 import { CapcutCatalog } from "./styles/textPresets/capcut/CapcutCatalog";
@@ -90,6 +91,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition id="VesmVerify" component={VerifyMau} durationInFrames={Math.round(VERIFY_SEC * 30)} fps={30} width={1080} height={1920} />
       <Composition id="Sb145Vesm" component={Sb145Vesm} durationInFrames={SB145_SEC * 60} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
       <Composition id="SaoBienVesm" component={SaoBienVesm} durationInFrames={SAOBIEN_SEC * 60} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
+      <Composition id="HappyHomeHuyen" component={HappyHomeHuyen} durationInFrames={HH_HUYEN_SEC * 60} fps={60} width={1080} height={1920} defaultProps={{ stem: "all" as const }} />
       <Composition id="HongDangVerify" component={HongDangVerify} durationInFrames={240} fps={30} width={1080} height={1920} />
       <Composition
         id="HongDangEdit"

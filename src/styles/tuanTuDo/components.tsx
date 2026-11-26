@@ -12,8 +12,11 @@ export const TTD = {
   yellow: "#F6EC14", // [XM] trung binh mat chu vang 6 video: #f4e91b..#f7e015
   white: "#FFFFFF",
   stroke: "#000000", // [XM] vien den day, khong gradient
-  font: FONTS.rounded, // [XM~] chu tron dau, rat dam: so 8 font -> Nunito Black bop ngang 90% khop nhat
-  squeeze: 0.9, // [XM] ti le ngang/doc chu kenh hep hon Nunito ~10%
+  font: FONTS.phudu, // [XM~] DT Phudu 800 (font phu de CapCut) — so voi chu cat tu video: khop nhat khi gian chu + keo ngang
+  weight: 800,
+  tracking: "0.04em",
+  squeeze: 1.1, // keo ngang 1.1x (Phudu hep hon chu kenh)
+  charW: 0.56, // be rong TB 1 ky tu IN HOA (em) sau tracking, de tinh co chu vua khung
   captionY: 0.205, // [XM] tam phu de 0.196–0.23 H (median 6 video)
   captionSize: 74, // [XM] chieu cao chu IN HOA ~0.027 H = 52px -> font ~74px @1920
 };
@@ -32,12 +35,12 @@ export const Stroked: React.FC<{
   const sw = stroke ?? Math.max(4, size * 0.115);
   const base: React.CSSProperties = {
     fontFamily: TTD.font,
-    fontWeight: 900,
+    fontWeight: TTD.weight,
     fontSize: size,
     lineHeight: 1.12,
     textTransform: "uppercase",
     whiteSpace: "nowrap",
-    letterSpacing: "0.005em",
+    letterSpacing: TTD.tracking,
   };
   return (
     <span style={{ position: "relative", display: "inline-block", ...style }}>
@@ -117,7 +120,7 @@ export const TtdCaptionChunk: React.FC<{
   const base = chunk.other ? size * 0.8 : size;
   // co lon nhat de ca cum vua 86% ngang (chu dam Nunito ~0.68em/ky tu IN HOA)
   const chars = chunk.words.reduce((a, w) => a + w.text.length + 1, 0) + (chunk.other ? 1 : 0);
-  const fit = Math.min(base, (width * 0.86) / (chars * 0.66 * TTD.squeeze));
+  const fit = Math.min(base, (width * 0.86) / (chars * TTD.charW * TTD.squeeze));
   const shown = chunk.words.filter((w) => reveal === "full" || w.startMs <= tMs + 30);
   const activeIdx = chunk.words.findIndex((w, i) => tMs >= w.startMs - 30 && tMs < (chunk.words[i + 1]?.startMs ?? Infinity));
   return (
@@ -225,7 +228,7 @@ export const TtdGlowBand: React.FC<{ duration: number; y?: number }> = ({ durati
 export const TtdHookTitle: React.FC<{ text: string; duration: number; y?: number; size?: number }> = ({ text, duration, y = 0.215, size = 84 }) => {
   const f = useFrame30();
   const { height, width } = useVideoConfig();
-  const fit = Math.min(size, (width * 0.86) / ((text.length + 1) * 0.66 * TTD.squeeze));
+  const fit = Math.min(size, (width * 0.86) / ((text.length + 1) * TTD.charW * TTD.squeeze));
   const inn = spring({ frame: f, fps: 30, config: { damping: 14, stiffness: 220, mass: 0.6 } });
   const out = interpolate(f, [duration - 4, duration], [1, 0], clamp);
   const ghostT = interpolate(f, [0, 22], [0, 1], { ...clamp, easing: easeOut });

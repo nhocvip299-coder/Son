@@ -12,4 +12,5 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 1. Tải video (Drive: `drive.usercontent.google.com/download?id=...&confirm=t`), tạo proxy H.264 1080x1920 (HEVC không giải mã được trong Chromium).
 2. `analyze` + `transcribe` (whisper.cpp large-v3-turbo, đường dẫn tuyệt đối) → sửa lỗi tên riêng bằng `projects/<du-an>/asr-fixes.json`.
 3. Kịch bản neo theo chỉ số từ → plan → preview stills → render 60fps → `master-audio` (-14 LUFS) → `qc`.
-4. Skills: `mau-hong-dang` (phong cách), `text-presets-bds` (40 preset CapCut từ dữ liệu thật).
+4. Font phụ đề mặc định: **DT Phudu** (`FONTS.phudu`) cho phụ đề/chạy chữ từng chữ (`WordByWord`, `theme.fontCaption`).
+5. Skills: `mau-hong-dang` (phong cách), `text-presets-bds` (40 preset CapCut từ dữ liệu thật).

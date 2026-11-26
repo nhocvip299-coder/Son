@@ -29,6 +29,7 @@ const p = CC_PRESETS.find((x) => x.id === "Kobe Text 40")!; // "tri gia 100 Trie
 - Phát sáng "Phát sáng 2": 3 lớp drop-shadow (45/110/220 × size) + brightness(1+lum×0.8).
 - Nghiêng theo dữ liệu (`italic_degree`, mặc định 10°) bằng skewX.
 - Hệ số cỡ theo font thay thế `FONT_MAP.k`: serif Noto 0.82, viết tay Great Vibes 0.8, Playfair 0.88.
+- `DTPhudu-Black` (Kobe 05 "CAPCUT", 09 "50 TRIỆU", 26 "KOBE MEDIA") dùng **font Phudu thật** (`FONTS.phudu`, 900, giãn chữ +0.05em, k 1.06) — đã đối chiếu ảnh bìa. Phudu chỉ có chữ IN HOA.
 - Còn lệch: "1 Căn Hộ", "Không Gian" (font CapCut chưa có bản tương đương).
 
 ## Pipeline (thêm preset CapCut mới)

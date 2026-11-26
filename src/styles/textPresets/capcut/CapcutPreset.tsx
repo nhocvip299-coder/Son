@@ -29,7 +29,7 @@ const FONT_MAP: Record<string, { family: string; weight: number; italic?: boolea
   "ZYVNA Serendipity": { family: FONTS.elegant, weight: 400, k: 0.8 },
   "1FTVVIPClashGrotesk-LightIta": { family: FONTS.grotesk, weight: 300, italic: true },
   "PublicSans-Italic": { family: FONTS.grotesk, weight: 300, italic: true },
-  "DTPhudu-Black": { family: FONTS.geo, weight: 900 },
+  "DTPhudu-Black": { family: FONTS.phudu, weight: 900, spacing: 0.05, k: 1.06 }, // font that (truoc day thay bang Montserrat); ban CapCut rong hon ~10% -> gian chu, doi chieu anh bia 05/09/26
   "1FTV-VIP-Russo-One": { family: FONTS.tech, weight: 700 },
   "SF-Pro-Display-Medium": { family: FONTS.body, weight: 500 },
   Helvetica: { family: FONTS.body, weight: 500 },
@@ -144,7 +144,7 @@ const LayerView: React.FC<{ l: CcLayer; glow: { size: number; lum: number } | nu
     fontStyle: fm.italic ? "italic" : "normal",
     fontSize: px,
     color,
-    letterSpacing: `${l.letterSpacing ?? 0}em`,
+    letterSpacing: `${(l.letterSpacing ?? 0) + (fm.spacing ?? 0)}em`,
     lineHeight: 1 + (l.lineSpacing ?? 0),
     whiteSpace: "pre",
     textShadow: shadowCss(l, px),
@@ -207,7 +207,7 @@ const useUnionBox = (preset: CcPreset, texts?: Record<string, string>) => {
     const st = l.styles[0];
     const fm = fontOf(st.font || l.font);
     const px = (st.size ?? l.fontSize ?? 15) * CC_SIZE_K * (fm.k ?? 1) * (width / 1080);
-    const m = measureText({ text: texts?.[l.text] ?? l.text, fontFamily: fm.family, fontSize: px, fontWeight: String(fm.weight), letterSpacing: `${l.letterSpacing ?? 0}em`, validateFontIsLoaded: false });
+    const m = measureText({ text: texts?.[l.text] ?? l.text, fontFamily: fm.family, fontSize: px, fontWeight: String(fm.weight), letterSpacing: `${(l.letterSpacing ?? 0) + (fm.spacing ?? 0)}em`, validateFontIsLoaded: false });
     const w = m.width * l.scale;
     const h = px * 1.05 * l.scale;
     const cx = width / 2 + (l.x * width) / 2;

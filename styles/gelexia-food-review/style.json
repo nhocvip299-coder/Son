@@ -1,7 +1,7 @@
 {
   "id": "gelexia-food-review", "name": "Gelexia Food Review", "status": "placeholder",
   "description": "KHUNG CHỜ — chưa học từ video mẫu. Mặc định: màu ấm, nhấn món ăn/giá tiền, nhịp nhanh.",
-  "theme": {"fontHeadline":"impact","fontCaption":"body","text":"#FFFFFF","accent":"#FF6B2C","accentText":"#FFFFFF","extrude":"#8A2B06","stroke":"#2B0F00","shadow":"rgba(0,0,0,0.6)","neon":"#FFB703"},
+  "theme": {"fontHeadline":"impact","fontCaption":"phudu","text":"#FFFFFF","accent":"#FF6B2C","accentText":"#FFFFFF","extrude":"#8A2B06","stroke":"#2B0F00","shadow":"rgba(0,0,0,0.6)","neon":"#FFB703"},
   "captions": {"enabled": true, "uppercase": false, "combineMs": 1000},
   "titles": {"effects":["popBounce","typewriter","slideMask"], "hookEffect":"zoomPunch", "maxPerMinute": 10, "minGapMs": 3500, "keywords": ["ngon","giá","k","nghìn","đồng","vị","giòn","béo","cay","ngọt","quán","món"]},
   "pacing": {"cutSilenceMs": 400, "padMs": 110, "jumpZoom": 1.12},

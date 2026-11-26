@@ -16,7 +16,7 @@
 - [XM] Có chữ ở 77–89% số frame. Tâm dọc median 0.196–0.230 H (6/6 video), căn giữa ngang.
 - [XM] Chiều cao chữ IN HOA 0.025–0.027 H → font ~74 px @1920.
 - [XM] Màu vàng mặt chữ `#F4E91B`…`#F7E015` (chọn `#F6EC14`); trắng `#FFF`; viền đen đặc ~0.11 em; bóng tối mờ.
-- [XM] Font: sans tròn đầu, rất đậm, IN HOA, hơi hẹp. So 8 font tròn có tiếng Việt (Nunito, Baloo 2, M PLUS Rounded 1c, Quicksand, Varela Round, Mali, Coiny, Paytone One) với chữ cắt từ video: **Nunito 900 bóp ngang 0.9** khớp nhất (độ tròn, khoảng cách chữ, dấu); Baloo 2 nét giống nhưng chữ quá sát. Viền đen ~0.11 em.
+- [XM] Font: sans tròn đầu, rất đậm, IN HOA, hơi hẹp. So 8 font tròn có tiếng Việt (Nunito, Baloo 2, M PLUS Rounded 1c, Quicksand, Varela Round, Mali, Coiny, Paytone One) với chữ cắt từ video: Nunito 900 bóp ngang 0.9 gần nhất. Sau đó thử **DT Phudu** (font phụ đề CapCut, chỉ có chữ IN HOA, @fontsource/phudu): **Phudu 800 + giãn chữ 0.04em + kéo ngang 1.1x** khớp tốt hơn → dùng làm mặc định. Viền đen ~0.11 em.
 - [XM] Cụm 2–4 từ ("THÌ 100 CUỘC", "NGOÀI NHỮNG THẰNG"), hiện dần từng từ theo lời ("CÓ 140 CỦ MA…" → "…MÀ NHẸ LẮM").
 - [XM] Karaoke: chữ vàng nhảy sang từ đang nói ("VỪA VÀO LÂU", "THÌ BÀ Ở", "NHƯ NÀO NHÁ" — dời từng từ qua các frame liên tiếp).
 - [XM] Từ khóa số/giá: vàng + to hơn ("CÓ 140 CỦ" to vàng, "MÀ NHẸ LẮM" nhỏ trắng).

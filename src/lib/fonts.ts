@@ -17,6 +17,8 @@ import "@fontsource/playfair-display/700.css";
 import "@fontsource/playfair-display/500-italic.css";
 import "@fontsource/oswald/700.css";
 import "@fontsource/nunito/900.css";
+import "@fontsource/phudu/800.css";
+import "@fontsource/phudu/900.css";
 import "@fontsource/nunito/900-italic.css";
 import "@fontsource/nunito/800.css";
 import "@fontsource/great-vibes/400.css";
@@ -36,6 +38,7 @@ export const FONTS = {
   serif: "'Playfair Display'",
   condensed: "'Oswald'",
   rounded: "'Nunito'",
+  phudu: "'Phudu'", // DT Phudu (Duong Tran, OFL) — font phu de CapCut pho bien o VN
   elegant: "'Great Vibes'",
   times: "'Noto Serif'",
   grotesk: "'Public Sans'",
@@ -59,6 +62,8 @@ const SPECS: Array<[number, string, string?]> = [
   [700, "Playfair Display"],
   [700, "Oswald"],
   [900, "Nunito"],
+  [800, "Phudu"],
+  [900, "Phudu"],
   [500, "Playfair Display", "italic"],
   [900, "Nunito", "italic"],
   [800, "Nunito"],

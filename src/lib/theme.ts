@@ -15,7 +15,7 @@ export type Theme = {
 
 export const DEFAULT_THEME: Theme = {
   fontHeadline: "impact",
-  fontCaption: "body",
+  fontCaption: "phudu",
   text: "#FFFFFF",
   accent: "#FFD400",
   accentText: "#111111",

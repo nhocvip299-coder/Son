@@ -1,0 +1,210 @@
+{
+ "_note": "src = ms tren work/ep-1127/all.mp4 (ghep proxy 0103..0109, 30fps). anchor = chi so tu giong.",
+ "endMs": 68600,
+ "segments": [
+  {
+   "anchor": 0,
+   "note": "hook trong quan",
+   "src": [
+    [
+     21000,
+     23600
+    ]
+   ]
+  },
+  {
+   "anchor": 14,
+   "note": "duong lon",
+   "src": [
+    [
+     0,
+     3900
+    ]
+   ]
+  },
+  {
+   "anchor": 30,
+   "note": "bien vang",
+   "src": [
+    [
+     5000,
+     7900
+    ]
+   ]
+  },
+  {
+   "anchor": 43,
+   "note": "quan may tang",
+   "src": [
+    [
+     8000,
+     12100
+    ]
+   ]
+  },
+  {
+   "anchor": 62,
+   "note": "de xe",
+   "src": [
+    [
+     13000,
+     15700
+    ]
+   ]
+  },
+  {
+   "anchor": 74,
+   "note": "ben trong",
+   "src": [
+    [
+     17800,
+     20900
+    ]
+   ]
+  },
+  {
+   "anchor": 87,
+   "note": "khach kin",
+   "src": [
+    [
+     24000,
+     26900
+    ]
+   ]
+  },
+  {
+   "anchor": 100,
+   "note": "menu",
+   "src": [
+    [
+     28700,
+     31500
+    ],
+    [
+     36000,
+     38500
+    ]
+   ]
+  },
+  {
+   "anchor": 122,
+   "note": "ban com nha a",
+   "src": [
+    [
+     26000,
+     28500
+    ]
+   ]
+  },
+  {
+   "anchor": 135,
+   "note": "goi mam",
+   "src": [
+    [
+     40000,
+     41900
+    ]
+   ]
+  },
+  {
+   "anchor": 144,
+   "note": "mam dong",
+   "src": [
+    [
+     45400,
+     48300
+    ]
+   ]
+  },
+  {
+   "anchor": 157,
+   "note": "6 mon",
+   "src": [
+    [
+     60000,
+     64800
+    ]
+   ]
+  },
+  {
+   "anchor": 176,
+   "note": "mam com me nau",
+   "src": [
+    [
+     64800,
+     66800
+    ]
+   ]
+  },
+  {
+   "anchor": 186,
+   "note": "gap - on",
+   "src": [
+    [
+     66800,
+     70700
+    ]
+   ]
+  },
+  {
+   "anchor": 201,
+   "note": "cam mat an",
+   "src": [
+    [
+     48300,
+     52400
+    ]
+   ]
+  },
+  {
+   "anchor": 221,
+   "note": "tinh tien 59K",
+   "src": [
+    [
+     72600,
+     77500
+    ]
+   ]
+  },
+  {
+   "anchor": 240,
+   "note": "mo ca ngay",
+   "src": [
+    [
+     15600,
+     17700
+    ]
+   ]
+  },
+  {
+   "anchor": 250,
+   "note": "cham 9",
+   "src": [
+    [
+     52400,
+     56000
+    ]
+   ]
+  },
+  {
+   "anchor": 268,
+   "note": "CTA mat tien",
+   "src": [
+    [
+     4900,
+     9600
+    ]
+   ]
+  },
+  {
+   "anchor": 289,
+   "note": "comment",
+   "src": [
+    [
+     56000,
+     59600
+    ]
+   ]
+  }
+ ]
+}

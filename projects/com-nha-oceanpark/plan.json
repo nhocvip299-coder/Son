@@ -1,0 +1,130 @@
+{
+ "shots": [
+  {
+   "srcStartMs": 21000,
+   "srcEndMs": 23600,
+   "rate": 1.012,
+   "note": "hook trong quan"
+  },
+  {
+   "srcStartMs": 0,
+   "srcEndMs": 3900,
+   "rate": 0.997,
+   "note": "duong lon"
+  },
+  {
+   "srcStartMs": 5000,
+   "srcEndMs": 7900,
+   "rate": 0.99,
+   "note": "bien vang"
+  },
+  {
+   "srcStartMs": 8000,
+   "srcEndMs": 12100,
+   "rate": 1.007,
+   "note": "quan may tang"
+  },
+  {
+   "srcStartMs": 13000,
+   "srcEndMs": 15700,
+   "rate": 0.985,
+   "note": "de xe"
+  },
+  {
+   "srcStartMs": 17800,
+   "srcEndMs": 20900,
+   "rate": 1,
+   "note": "ben trong"
+  },
+  {
+   "srcStartMs": 24000,
+   "srcEndMs": 26900,
+   "rate": 1.025,
+   "note": "khach kin"
+  },
+  {
+   "srcStartMs": 28700,
+   "srcEndMs": 31500,
+   "rate": 0.994,
+   "note": "menu"
+  },
+  {
+   "srcStartMs": 36000,
+   "srcEndMs": 38500,
+   "rate": 0.994,
+   "note": "menu"
+  },
+  {
+   "srcStartMs": 26000,
+   "srcEndMs": 28500,
+   "rate": 0.996,
+   "note": "ban com nha a"
+  },
+  {
+   "srcStartMs": 40000,
+   "srcEndMs": 41900,
+   "rate": 0.995,
+   "note": "goi mam"
+  },
+  {
+   "srcStartMs": 45400,
+   "srcEndMs": 48300,
+   "rate": 0.986,
+   "note": "mam dong"
+  },
+  {
+   "srcStartMs": 60000,
+   "srcEndMs": 64800,
+   "rate": 1,
+   "note": "6 mon"
+  },
+  {
+   "srcStartMs": 64800,
+   "srcEndMs": 66800,
+   "rate": 1.02,
+   "note": "mam com me nau"
+  },
+  {
+   "srcStartMs": 66800,
+   "srcEndMs": 70700,
+   "rate": 1,
+   "note": "gap - on"
+  },
+  {
+   "srcStartMs": 48300,
+   "srcEndMs": 52400,
+   "rate": 1.01,
+   "note": "cam mat an"
+  },
+  {
+   "srcStartMs": 72600,
+   "srcEndMs": 77500,
+   "rate": 0.996,
+   "note": "tinh tien 59K"
+  },
+  {
+   "srcStartMs": 15600,
+   "srcEndMs": 17700,
+   "rate": 0.938,
+   "note": "mo ca ngay"
+  },
+  {
+   "srcStartMs": 52400,
+   "srcEndMs": 56000,
+   "rate": 1,
+   "note": "cham 9"
+  },
+  {
+   "srcStartMs": 4900,
+   "srcEndMs": 9600,
+   "rate": 1.004,
+   "note": "CTA mat tien"
+  },
+  {
+   "srcStartMs": 56000,
+   "srcEndMs": 59600,
+   "rate": 1,
+   "note": "comment"
+  }
+ ]
+}

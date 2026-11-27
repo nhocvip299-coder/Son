@@ -1,0 +1,15 @@
+{
+ "title": "Mộc Quán Vin 3 — khu Ánh Dương, Nghĩa Trụ, Hưng Yên (mẫu Gelexia)",
+ "info": {"price": "59K/người, mâm 3 người", "dishes": "rau củ luộc, thịt kho tàu, ba chỉ rang, trứng ốp, cá bống kho tiêu, đậu sốt cà chua", "hours": "cả ngày", "parking": "rộng", "route": "Vincom Mega Mall OCP2 → đại lộ Bốn Mùa → đi thẳng, bên tay phải", "note": "không nhắc VAT"},
+ "inputs": [
+  {"role": "footage", "path": "work/ep-1127/IMG_0103..0109.mov", "drive_folder_id": "1h2Exl7i4sQXb1SmA_bGPMTkbR5E6pxtI"},
+  {"role": "voice", "path": "public/inputs/moc-quan/voice.mp3", "note": "ElevenLabs An Vu 68s"}
+ ],
+ "derived": [
+  {"path": "work/ep-1127/all.mp4", "rebuild": "ffmpeg mỗi clip scale=1080:1920,fps=30 -> concat 0103..0109"},
+  {"path": "plan.json + words.json", "rebuild_script": "node scripts/gelexia/build-shots.mjs projects/com-nha-oceanpark"},
+  {"path": "public/inputs/moc-quan/base.mp4", "rebuild_script": "node scripts/gelexia/build-base.mjs projects/com-nha-oceanpark/plan.json work/ep-1127/all.mp4 public/inputs/moc-quan/base.mp4 68600 60"},
+  {"path": "project.json", "rebuild_script": "node scripts/gelexia/build-gelexia-project.mjs projects/com-nha-oceanpark/gelexia-spec.json"}
+ ],
+ "outputs": ["out/moc-quan-vin3.mp4", "out/moc-quan-vin3-chay-chu.mp4"]
+}

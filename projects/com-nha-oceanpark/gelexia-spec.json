@@ -1,0 +1,227 @@
+{
+ "_note": "Moc Quan Vin 3 (Anh Duong, Nghia Tru, Hung Yen), mau Gelexia.",
+ "wordsFrom": "projects/com-nha-oceanpark/words.json",
+ "durationMs": 68600,
+ "fps": 60,
+ "brand": {
+  "name": "MỘC QUÁN VIN 3",
+  "address": "Khu Ánh Dương · Nghĩa Trụ · Hưng Yên",
+  "showAddress": true
+ },
+ "background": {
+  "video": "inputs/moc-quan/base.mp4",
+  "muted": true
+ },
+ "voice": "inputs/moc-quan/voice.mp3",
+ "wordByWord": {
+  "y": 1300,
+  "accentRe": "^(59K|200K|Mộc|Quán|Bốn|Mùa|Vincom|Ánh|Dương|ổn|chém|9|3)"
+ },
+ "pages": [
+  "QUÁN TO THẾ NÀY / TAO ĐÃ CHUẨN BỊ",
+  "TINH THẦN BỊ CHÉM",
+  "AI NGỜ",
+  "TỪ VINCOM MEGA_MALL / OCEAN PARK 2",
+  "CHẠY SANG / ĐẠI LỘ BỐN MÙA",
+  "ĐI THẲNG MỘT ĐOẠN",
+  "NHÌN BÊN TAY PHẢI / THẤY BIỂN VÀNG TO ĐÙNG",
+  "MỘC QUÁN LÀ TỚI",
+  "QUÁN TO TỔ BỐ, / MẤY TẦNG LIỀN",
+  "TẦNG DƯỚI CÒN / BIA HƠI HÀ NỘI",
+  "TỔ CHỨC CẢ SỰ KIỆN",
+  "CHỖ ĐỂ XE / RỘNG THÊNH THANG",
+  "Ô TÔ XE MÁY / THOẢI MÁI",
+  "BƯỚC VÀO TRONG THÌ / RỘNG MÊNH MÔNG",
+  "CỘT VÀNG CHÓE, / BÀN GỖ TO",
+  "KHÁCH NGỒI KÍN MÍT",
+  "NHÌN QUANH TAO ĐÃ / THẤY VÍ MÌNH RUN RUN",
+  "MỞ CÁI MENU / DÀY CỘP RA",
+  "THÌ TOÀN CANH CUA, / CANH CHUA",
+  "THỊT KHO, CÁ KHO, / CƠM NIÊU CHÁY",
+  "XÔI CÁC KIỂU",
+  "Ơ HAY, QUÁN SANG / CHẢNH THẾ NÀY",
+  "MÀ LẠI BÁN / CƠM NHÀ À?",
+  "THÔI KỆ, GỌI LUÔN / MÂM CƠM CHO 3 ĐỨA",
+  "ĐỢI MỘT LÚC / BƯNG RA CÁI MÂM ĐỒNG",
+  "TRÒN VÀNH VẠNH, / BÓNG LOÁNG",
+  "RAU CỦ LUỘC, / THỊT KHO TÀU",
+  "BA CHỈ RANG, / TRỨNG ỐP",
+  "CÁ BỐNG KHO TIÊU, / ĐẬU SỐT CÀ CHUA",
+  "NHÌN Y NHƯ MÂM CƠM / MẸ NẤU Ở NHÀ LUÔN",
+  "GẮP MIẾNG THỊT KHO, ỔN",
+  "GẮP MIẾNG CÁ BỐNG, ỔN",
+  "GẮP MIẾNG ĐẬU / CŨNG ỔN",
+  "MÓN NÀO CŨNG ỔN",
+  "CHẢ CÓ MÓN NÀO ĐỂ CHÊ",
+  "BA ĐỨA CẮM MẶT ĂN",
+  "KHÔNG AI NÓI CÂU NÀO",
+  "ĐẾN LÚC TÍNH TIỀN / MỚI NGÃ NGỬA",
+  "CÓ 59K MỘT NGƯỜI",
+  "BA ĐỨA ĂN NO CĂNG / CHƯA ĐẾN 200K",
+  "QUÁN MỞ CẢ NGÀY",
+  "ĐÓI LÚC NÀO / GHÉ LÚC ĐẤY",
+  "TAO CHẤM 9 ĐIỂM",
+  "TRỪ MỘT ĐIỂM VÌ / ĐỊNH VÀO BẮT LỖI",
+  "MÀ CHẢ BẮT / ĐƯỢC LỖI NÀO",
+  "ĐỨA NÀO Ở OCEAN PARK / THÌ NHỚ",
+  "MỘC QUÁN VIN 3, / KHU ÁNH DƯƠNG",
+  "ĐẠI LỘ BỐN MÙA / BÊN TAY PHẢI",
+  "COMMENT CHO TAO BIẾT / MÂM CƠM CHỖ CHÚNG MÀY",
+  "BAO NHIÊU MỘT NGƯỜI?"
+ ],
+ "callouts": [
+  {
+   "kind": "intro",
+   "startMs": 100,
+   "endMs": 2600,
+   "title": "TƯỞNG BỊ CHÉM…",
+   "subtitle": "Quán to tổ bố"
+  },
+  {
+   "kind": "route",
+   "startMs": 2700,
+   "endMs": 6400,
+   "title": "ĐẠI LỘ BỐN MÙA",
+   "subtitle": "Từ Vincom Mega Mall OCP2"
+  },
+  {
+   "kind": "route",
+   "startMs": 6600,
+   "endMs": 9300,
+   "title": "BÊN TAY PHẢI",
+   "subtitle": "Biển vàng Mộc Quán"
+  },
+  {
+   "kind": "route",
+   "startMs": 13600,
+   "endMs": 16100,
+   "title": "Ô TÔ ĐỖ THOẢI MÁI"
+  },
+  {
+   "kind": "food",
+   "startMs": 22400,
+   "endMs": 25000,
+   "title": "MENU CƠM NHÀ"
+  },
+  {
+   "kind": "food",
+   "startMs": 32700,
+   "endMs": 34800,
+   "title": "MÂM ĐỒNG 6 MÓN"
+  },
+  {
+   "kind": "food",
+   "startMs": 41700,
+   "endMs": 45400,
+   "title": "ỔN – ỔN – ỔN"
+  },
+  {
+   "kind": "food",
+   "startMs": 51200,
+   "endMs": 54400,
+   "title": "AI NGỜ… 59K/NGƯỜI"
+  },
+  {
+   "kind": "route",
+   "startMs": 54600,
+   "endMs": 56600,
+   "title": "MỞ CẢ NGÀY"
+  },
+  {
+   "kind": "food",
+   "startMs": 57000,
+   "endMs": 60200,
+   "title": "CHẤM 9/10"
+  },
+  {
+   "kind": "cta",
+   "startMs": 60400,
+   "endMs": 68600,
+   "title": "MỘC QUÁN VIN 3",
+   "addressMain": "KHU ÁNH DƯƠNG",
+   "addressRest": "Đại lộ Bốn Mùa · bên tay phải"
+  }
+ ],
+ "sfx": [
+  {
+   "atMs": 0,
+   "file": "sfx/cc0/whoosh-ui.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 100,
+   "file": "sfx/cc0/rise-maximize.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 2700,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 2700,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 6600,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 6600,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 13600,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 13600,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 22400,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 32700,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 41700,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 51200,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 54600,
+   "file": "sfx/cc0/whoosh-swipe.wav",
+   "volume": 1.0
+  },
+  {
+   "atMs": 54600,
+   "file": "sfx/cc0/powerup.wav",
+   "volume": 0.9
+  },
+  {
+   "atMs": 57000,
+   "file": "sfx/cc0/sparkle-glass.wav",
+   "volume": 0.8
+  },
+  {
+   "atMs": 60400,
+   "file": "sfx/cc0/select-chime.wav",
+   "volume": 0.8
+  }
+ ]
+}

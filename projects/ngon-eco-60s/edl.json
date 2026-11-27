@@ -16,50 +16,36 @@
  "segments": [
   {
    "clip": "0039",
-   "a": 33.9,
-   "b": 36.1,
+   "a": 33.91,
+   "b": 36.08,
    "speed": 1,
    "note": "HOOK hạnh phúc nhất cuộc đời"
   },
   {
    "clip": "0031",
-   "a": 0.0,
-   "b": 5.4,
+   "a": 0.01,
+   "b": 12.65,
    "speed": 1,
-   "note": "Chào, hơn 3 giờ quá bữa"
+   "note": "Chào, 3 giờ quá bữa, phát hiện quán mì gà tần"
   },
   {
    "clip": "0031",
-   "a": 6.5,
-   "b": 12.55,
-   "speed": 1,
-   "note": "Phát hiện quán mì gà tần trục Thủy Nguyên"
-  },
-  {
-   "clip": "0031",
-   "a": 28.3,
+   "a": 28.07,
    "b": 35.0,
    "speed": 1,
    "note": "Địa chỉ 61 Thủy Nguyên, quán Ngon Eco"
   },
   {
    "clip": "0033",
-   "a": 8.9,
-   "b": 13.4,
+   "a": 8.65,
+   "b": 13.38,
    "speed": 1,
    "note": "Giá 20-60k"
   },
   {
-   "clip": "0033",
-   "a": 14.6,
-   "b": 18.6,
-   "speed": 1,
-   "note": "Chất lượng thế này là hợp lý"
-  },
-  {
    "clip": "0035",
-   "a": 7.6,
-   "b": 12.4,
+   "a": 6.6,
+   "b": 12.2,
    "speed": 1,
    "note": "Trứng hầm ngải cứu + mì gà"
   },
@@ -72,8 +58,8 @@
   },
   {
    "clip": "0036",
-   "a": 19.5,
-   "b": 25.4,
+   "a": 19.1,
+   "b": 25.43,
    "speed": 1,
    "note": "Trước ăn trứng lộn 7 quả, giờ tiết chế"
   },
@@ -86,29 +72,29 @@
   },
   {
    "clip": "0039",
-   "a": 11.6,
-   "b": 13.2,
+   "a": 11.5,
+   "b": 13.44,
    "speed": 1,
    "note": "Đùi gà chất lượng"
   },
   {
    "clip": "0040",
-   "a": 0.3,
-   "b": 3.6,
+   "a": 0.24,
+   "b": 3.58,
    "speed": 1,
    "note": "Đói run cầm cập"
   },
   {
    "clip": "0041",
-   "a": 14.2,
-   "b": 18.3,
+   "a": 14.1,
+   "b": 18.55,
    "speed": 1,
    "note": "Cũng được, tầm 7/10"
   },
   {
    "clip": "0042",
-   "a": 7.3,
-   "b": 10.93,
+   "a": 7.25,
+   "b": 10.89,
    "speed": 1,
    "note": "Thanh toán 90k"
   }

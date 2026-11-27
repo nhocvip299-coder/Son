@@ -14,3 +14,4 @@ Menu: Các món canh 55–165K; Món ăn gia đình (thịt kho tàu 115K, ba ch
 | 72,5–88,8 | 0109 | Canh chua cận, mâm ăn dở, quay trong quán (78–86 nghiêng, bỏ) |
 
 Sơn bổ sung 27/11: tên **Mộc Quán**; đường đi: **Vincom Mega Mall Ocean Park 2 → đại lộ Bốn Mùa → đi thẳng một đoạn → quán bên tay phải**; mâm **3 người, 59K/người**; món nào cũng ổn; chỗ để xe rộng; mở cả ngày; xưng **tao – chúng mày**.
+Sơn bổ sung (Google Maps): **Mộc Quán Vin 3 — Ánh Dương, Nghĩa Trụ, Hưng Yên**, mở cả ngày. **Không nhắc VAT.** Món trong mâm: rau củ luộc, thịt kho tàu, thịt ba chỉ rang, trứng ốp, cá bống kho tiêu, đậu sốt cà chua.

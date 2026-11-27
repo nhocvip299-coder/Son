@@ -14,4 +14,4 @@ Người dùng điều khiển từ iPhone/iPad bằng tiếng Việt. Trả l�
 2. `analyze` + `transcribe` (whisper.cpp large-v3-turbo, đường dẫn tuyệt đối) → sửa lỗi tên riêng bằng `projects/<du-an>/asr-fixes.json`.
 3. Kịch bản neo theo chỉ số từ → plan → preview stills → render 60fps → `master-audio` (-14 LUFS) → `qc`.
 4. Font phụ đề mặc định: **DT Phudu** (`FONTS.phudu`) cho phụ đề/chạy chữ từng chữ (`WordByWord`, `theme.fontCaption`).
-5. Skills: `mau-hong-dang` (phong cách), `text-presets-bds` (40 preset CapCut từ dữ liệu thật).
+5. Skills: `mau-hong-dang` (phong cách), `text-presets-bds` (40 preset CapCut từ dữ liệu thật), `review-quan-an` (review quán ăn: cắt + tua nhanh + phụ đề tránh mặt + giao file cắt phần + thumbnail 4K + caption).
